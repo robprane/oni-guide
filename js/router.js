@@ -43,7 +43,8 @@ export class Router {
         // Update active class on navigation links
         document.querySelectorAll('.nav-link').forEach(link => {
             link.classList.remove('active');
-            if (link.getAttribute('href') === path || (path.startsWith(link.getAttribute('href')) && link.getAttribute('href') !== '/')) {
+            const route = link.getAttribute('data-route');
+            if (route === path || (path.startsWith(route) && route !== '/')) {
                 link.classList.add('active');
             }
         });
@@ -70,12 +71,13 @@ export class Router {
 
     // Navigate programmatically
     navigate(url) {
-        if (url.startsWith('#')) {
-            window.location.hash = url;
+        const newHash = url.startsWith('#') ? url : '#' + url;
+        if (window.location.hash === newHash) {
+            // If the hash isn't changing, hashchange won't fire, so manually handle route
+            this.handleRoute();
         } else {
-            window.location.hash = '#' + url;
+            window.location.hash = newHash;
         }
-        // hashchange event will trigger handleRoute
     }
 
     // Intercept clicks on local links
