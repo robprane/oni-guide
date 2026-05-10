@@ -194,13 +194,13 @@ function showDetailModal(item) {
     modal.style.display = 'flex';
 
     // Update URL without reloading
-    history.pushState(null, null, `/recipes/${item.id}`);
+    history.pushState(null, null, `#/recipes/${item.id}`);
 }
 
 function closeModal() {
     const modal = document.getElementById('detail-modal');
     if (modal) modal.style.display = 'none';
-    history.pushState(null, null, '/recipes');
+    history.pushState(null, null, '#/recipes');
 }
 // Expose for inline onclick
 window.closeModal = closeModal;
