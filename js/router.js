@@ -14,8 +14,8 @@ export class Router {
     constructor() {
         this.appContent = document.getElementById('app-content');
 
-        // Handle popstate events (back/forward browser buttons)
-        window.addEventListener('popstate', this.handleRoute.bind(this));
+        // Handle hashchange events (back/forward browser buttons)
+        window.addEventListener('hashchange', this.handleRoute.bind(this));
 
         // Initialize routing
         this.handleRoute();
@@ -23,7 +23,7 @@ export class Router {
 
     // Handles the actual routing logic based on the current URL
     handleRoute() {
-        let path = window.location.pathname;
+        let path = window.location.hash.slice(1) || '/';
 
         // Basic handler for sub-routes, treating e.g. /recipes/water as /recipes
         let routeHandler = routes[path];
@@ -43,7 +43,8 @@ export class Router {
         // Update active class on navigation links
         document.querySelectorAll('.nav-link').forEach(link => {
             link.classList.remove('active');
-            if (link.getAttribute('href') === path || (path.startsWith(link.getAttribute('href')) && link.getAttribute('href') !== '/')) {
+            const route = link.getAttribute('data-route');
+            if (route === path || (path.startsWith(route) && route !== '/')) {
                 link.classList.add('active');
             }
         });
@@ -70,8 +71,13 @@ export class Router {
 
     // Navigate programmatically
     navigate(url) {
-        history.pushState(null, null, url);
-        this.handleRoute();
+        const newHash = url.startsWith('#') ? url : '#' + url;
+        if (window.location.hash === newHash) {
+            // If the hash isn't changing, hashchange won't fire, so manually handle route
+            this.handleRoute();
+        } else {
+            window.location.hash = newHash;
+        }
     }
 
     // Intercept clicks on local links
@@ -82,9 +88,11 @@ export class Router {
             if (link.dataset.routerAttached) return;
 
             link.addEventListener('click', (e) => {
-                e.preventDefault();
-                const url = link.getAttribute('href');
-                this.navigate(url);
+                const url = link.getAttribute('data-route');
+                if (url) {
+                    e.preventDefault();
+                    this.navigate(url);
+                }
             });
             link.dataset.routerAttached = true;
         });
