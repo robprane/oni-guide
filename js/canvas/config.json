@@ -1,0 +1,17 @@
+{
+    "CELL_SIZE": 32,
+    "COLORS": {
+        "GRID_LINE": "#444444",
+        "BACKGROUND": "#111111",
+        "SOLID_TILE": "#8B4513",
+        "SWEEPER": "#FFA500",
+        "SWEEPER_AREA": "rgba(255, 165, 0, 0.2)",
+        "SWEEPER_BLOCKED": "rgba(255, 0, 0, 0.2)",
+        "PIPE": "#AAAAAA",
+        "BRIDGE": "#DDDDDD",
+        "LIQUID_BLOB": "#4da8da",
+        "BRIDGE_INPUT": "#FFFFFF",
+        "BRIDGE_OUTPUT": "#00FF00"
+    },
+    "SWEEPER_RADIUS": 4
+}
