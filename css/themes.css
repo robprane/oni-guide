@@ -1,0 +1,44 @@
+:root {
+    /* Define CSS variables that will be overridden by themes */
+    --bg-color: #ffffff;
+    --text-color: #333333;
+    --nav-bg: #f8f9fa;
+    --nav-text: #333333;
+    --nav-hover: #e9ecef;
+    --border-color: #dddddd;
+    --primary-color: #3498db;
+    --card-bg: #ffffff;
+    --input-bg: #ffffff;
+    --input-text: #333333;
+    --input-border: #cccccc;
+}
+
+[data-theme="dark"] {
+    --bg-color: #1a1a2e;
+    --text-color: #e6e6e6;
+    --nav-bg: #16213e;
+    --nav-text: #e6e6e6;
+    --nav-hover: #0f3460;
+    --border-color: #2a2a4a;
+    --primary-color: #4da8da;
+    --card-bg: #1f2a40;
+    --input-bg: #16213e;
+    --input-text: #e6e6e6;
+    --input-border: #2a2a4a;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]):not([data-theme="dark"]) {
+        --bg-color: #1a1a2e;
+        --text-color: #e6e6e6;
+        --nav-bg: #16213e;
+        --nav-text: #e6e6e6;
+        --nav-hover: #0f3460;
+        --border-color: #2a2a4a;
+        --primary-color: #4da8da;
+        --card-bg: #1f2a40;
+        --input-bg: #16213e;
+        --input-text: #e6e6e6;
+        --input-border: #2a2a4a;
+    }
+}

@@ -1,0 +1,33 @@
+[
+  {
+    "id": "water_sieve",
+    "name": "Water Sieve",
+    "category": "Plumbing",
+    "inputs": [
+      { "material": "polluted_water", "amount": 5000, "unit": "g/s" },
+      { "material": "sand", "amount": 1000, "unit": "g/s" }
+    ],
+    "outputs": [
+      { "material": "water", "amount": 5000, "unit": "g/s" },
+      { "material": "polluted_dirt", "amount": 200, "unit": "g/s" }
+    ],
+    "power_consumption": 120,
+    "heat_generation": 0,
+    "description": "Purifies Polluted Water into clean Water using a filtration medium."
+  },
+  {
+    "id": "electrolyzer",
+    "name": "Electrolyzer",
+    "category": "Oxygen",
+    "inputs": [
+      { "material": "water", "amount": 1000, "unit": "g/s" }
+    ],
+    "outputs": [
+      { "material": "oxygen", "amount": 888, "unit": "g/s" },
+      { "material": "hydrogen", "amount": 112, "unit": "g/s" }
+    ],
+    "power_consumption": 120,
+    "heat_generation": 1.25,
+    "description": "Separates Water into Oxygen and Hydrogen gases."
+  }
+]

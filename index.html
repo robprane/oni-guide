@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>ONI Guide</title>
+    <link rel="stylesheet" href="css/themes.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#2c3e50">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">ONI Guide</div>
+        <div class="nav-links">
+            <a href="/" class="nav-link" data-route="/">Home</a>
+            <a href="/canvas" class="nav-link" data-route="/canvas">Canvas</a>
+            <a href="/recipes" class="nav-link" data-route="/recipes">Recipes</a>
+            <a href="/docs" class="nav-link" data-route="/docs">Docs</a>
+        </div>
+        <div class="theme-switcher">
+            <label for="theme-select">Theme:</label>
+            <select id="theme-select">
+                <option value="system">System</option>
+                <option value="dark">Dark</option>
+                <option value="light">Light</option>
+            </select>
+        </div>
+    </nav>
+
+    <main id="app-content">
+        <!-- Content will be dynamically injected here by the router -->
+    </main>
+
+    <script src="js/theme.js"></script>
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
