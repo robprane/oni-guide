@@ -295,6 +295,7 @@ function showDetailModal(item) {
 function closeModal() {
     const modal = document.getElementById('detail-modal');
     if (modal) modal.style.display = 'none';
+
 }
 // Expose for inline onclick
 window.closeModal = closeModal;
