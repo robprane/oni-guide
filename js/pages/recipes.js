@@ -1,15 +1,43 @@
-let materialsData = null;
+let elementsData = null;
 let buildingsData = null;
+let crittersData = null;
+let plantsData = null;
+let foodsData = null;
+let recipesData = null;
+let allItems = null;
 
 async function loadData() {
-    if (!materialsData || !buildingsData) {
+    if (!allItems) {
         try {
-            const [materialsRes, buildingsRes] = await Promise.all([
-                fetch('/data/materials.json'),
-                fetch('/data/buildings.json')
+            const [elementsRes, buildingsRes, crittersRes, plantsRes, foodsRes, recipesRes] = await Promise.all([
+                fetch('/data/elements.json'),
+                fetch('/data/buildings.json'),
+                fetch('/data/critters.json'),
+                fetch('/data/plants.json'),
+                fetch('/data/foods.json'),
+                fetch('/data/recipes.json')
             ]);
-            materialsData = await materialsRes.json();
+            elementsData = await elementsRes.json();
             buildingsData = await buildingsRes.json();
+            crittersData = await crittersRes.json();
+            plantsData = await plantsRes.json();
+            foodsData = await foodsRes.json();
+            recipesData = await recipesRes.json();
+
+            allItems = {};
+            const populate = (dataArray, cat) => {
+                dataArray.forEach(item => {
+                    item._type = cat;
+                    allItems[item.id] = item;
+                });
+            };
+
+            populate(elementsData, 'element');
+            populate(buildingsData, 'building');
+            populate(crittersData, 'critter');
+            populate(plantsData, 'plant');
+            populate(foodsData, 'food');
+
         } catch (error) {
             console.error("Failed to load data:", error);
         }
@@ -20,13 +48,16 @@ export async function renderRecipes(container, currentPath) {
     container.innerHTML = `
         <div class="container" style="display: flex; flex-direction: column; gap: 1rem;">
             <h2>Recipes Database</h2>
-            <input type="text" id="recipe-search" placeholder="Search materials or buildings..." style="padding: 0.5rem; border-radius: 4px; border: 1px solid var(--input-border); background: var(--input-bg); color: var(--input-text);">
-            <div style="display: flex; gap: 1rem;">
+            <input type="text" id="recipe-search" placeholder="Search materials, buildings, or recipes..." style="padding: 0.5rem; border-radius: 4px; border: 1px solid var(--input-border); background: var(--input-bg); color: var(--input-text);">
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
                 <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="materials">Materials</button>
-                <button class="filter-btn" data-filter="buildings">Buildings</button>
+                <button class="filter-btn" data-filter="element">Elements</button>
+                <button class="filter-btn" data-filter="building">Buildings</button>
+                <button class="filter-btn" data-filter="critter">Critters</button>
+                <button class="filter-btn" data-filter="plant">Plants</button>
+                <button class="filter-btn" data-filter="food">Foods</button>
             </div>
-            <div id="recipe-results" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1rem;">
+            <div id="recipe-results" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1rem;">
                 Loading...
             </div>
         </div>
@@ -45,22 +76,46 @@ export async function renderRecipes(container, currentPath) {
 
         let results = [];
 
-        if (currentFilter === 'all' || currentFilter === 'materials') {
-            const m = materialsData.filter(item => item.name.toLowerCase().includes(q));
-            results = results.concat(m.map(item => ({...item, _type: 'material'})));
+        // Find items that match the search directly by name
+        let matchedItems = Object.values(allItems).filter(item => {
+            if (currentFilter !== 'all' && item._type !== currentFilter) return false;
+            return item.name.toLowerCase().includes(q);
+        });
+
+        // Also find items that are involved in a recipe containing the search query
+        // E.g. "wat" -> finds "Water". And "Water" is used in "Electrolyzer", so "Electrolyzer" should also appear.
+        if (q.length > 0) {
+            let matchingIdsByRecipe = new Set();
+            recipesData.forEach(recipe => {
+                let textToSearch = "";
+                if (recipe.source && allItems[recipe.source]) textToSearch += allItems[recipe.source].name + " ";
+                (recipe.consumed || []).forEach(c => { if(allItems[c.element]) textToSearch += allItems[c.element].name + " "; });
+                (recipe.produced || []).forEach(p => { if(allItems[p.element]) textToSearch += allItems[p.element].name + " "; });
+
+                if (textToSearch.toLowerCase().includes(q)) {
+                    if (recipe.source) matchingIdsByRecipe.add(recipe.source);
+                    (recipe.consumed || []).forEach(c => matchingIdsByRecipe.add(c.element));
+                    (recipe.produced || []).forEach(p => matchingIdsByRecipe.add(p.element));
+                }
+            });
+
+            Object.values(allItems).forEach(item => {
+                if (currentFilter !== 'all' && item._type !== currentFilter) return;
+                if (matchingIdsByRecipe.has(item.id) && !matchedItems.includes(item)) {
+                    matchedItems.push(item);
+                }
+            });
         }
 
-        if (currentFilter === 'all' || currentFilter === 'buildings') {
-            const b = buildingsData.filter(item => item.name.toLowerCase().includes(q));
-            results = results.concat(b.map(item => ({...item, _type: 'building'})));
-        }
+        // Sort alphabetically
+        matchedItems.sort((a, b) => a.name.localeCompare(b.name));
 
-        if (results.length === 0) {
+        if (matchedItems.length === 0) {
             resultsContainer.innerHTML = '<p>No results found.</p>';
             return;
         }
 
-        results.forEach(item => {
+        matchedItems.forEach(item => {
             const card = document.createElement('div');
             card.style.cssText = `
                 background: var(--card-bg);
@@ -68,21 +123,20 @@ export async function renderRecipes(container, currentPath) {
                 border-radius: 8px;
                 border: 1px solid var(--border-color);
                 cursor: pointer;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                transition: transform 0.2s;
             `;
+            card.onmouseenter = () => card.style.transform = 'scale(1.05)';
+            card.onmouseleave = () => card.style.transform = 'scale(1)';
 
-            if (item._type === 'material') {
-                card.innerHTML = `
-                    <h3>${item.name} <span style="font-size: 0.8rem; color: #888;">(Material)</span></h3>
-                    <p>Type: ${item.type}</p>
-                    <p>${item.description}</p>
-                `;
-            } else {
-                card.innerHTML = `
-                    <h3>${item.name} <span style="font-size: 0.8rem; color: #888;">(Building)</span></h3>
-                    <p>Category: ${item.category}</p>
-                    <p>${item.description}</p>
-                `;
-            }
+            card.innerHTML = `
+                <img src="/images/${item.image}" alt="${item.name}" style="width: 64px; height: 64px; object-fit: contain; margin-bottom: 0.5rem;" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\\'http://www.w3.org/2000/svg\\' width=\\'64\\' height=\\'64\\'><rect width=\\'64\\' height=\\'64\\' fill=\\'%23333\\'/><text x=\\'32\\' y=\\'32\\' fill=\\'white\\' text-anchor=\\'middle\\' dominant-baseline=\\'middle\\'>?</text></svg>'">
+                <h3 style="margin: 0; font-size: 1.1rem;">${item.name}</h3>
+                <span style="font-size: 0.8rem; color: #888; text-transform: capitalize;">${item._type}</span>
+            `;
 
             card.addEventListener('click', () => {
                 showDetailModal(item);
@@ -103,7 +157,6 @@ export async function renderRecipes(container, currentPath) {
         });
     });
 
-    // Add some simple CSS for filter buttons inline for now
     const style = document.createElement('style');
     style.textContent = `
         .filter-btn { padding: 0.5rem 1rem; border: 1px solid var(--border-color); background: var(--card-bg); color: var(--text-color); border-radius: 4px; cursor: pointer; }
@@ -117,16 +170,14 @@ export async function renderRecipes(container, currentPath) {
     const pathParts = currentPath.split('/');
     if (pathParts.length > 2 && pathParts[2]) {
         const id = pathParts[2];
-        const item = materialsData.find(m => m.id === id) || buildingsData.find(b => b.id === id);
+        const item = allItems[id];
         if (item) {
-            item._type = materialsData.find(m => m.id === id) ? 'material' : 'building';
             showDetailModal(item);
         }
     }
 }
 
 function showDetailModal(item) {
-    // A simple modal implementation
     let modal = document.getElementById('detail-modal');
     if (!modal) {
         modal = document.createElement('div');
@@ -140,7 +191,7 @@ function showDetailModal(item) {
         content.id = 'modal-content';
         content.style.cssText = `
             background: var(--bg-color); padding: 2rem; border-radius: 8px;
-            max-width: 600px; width: 90%; max-height: 90vh; overflow-y: auto;
+            max-width: 800px; width: 90%; max-height: 90vh; overflow-y: auto;
             border: 1px solid var(--border-color);
         `;
         modal.appendChild(content);
@@ -155,52 +206,90 @@ function showDetailModal(item) {
     const content = modal.querySelector('#modal-content');
 
     let html = `
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
-            <h2 style="margin: 0;">${item.name}</h2>
-            <button onclick="document.getElementById('detail-modal').style.display='none'" style="cursor:pointer; background:none; border:none; color:var(--text-color); font-size:1.5rem;">&times;</button>
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
+            <div style="display: flex; align-items: center; gap: 1rem;">
+                <img src="/images/${item.image}" alt="${item.name}" style="width: 64px; height: 64px; object-fit: contain;">
+                <div>
+                    <h2 style="margin: 0;">${item.name}</h2>
+                    <span style="font-size: 0.9rem; color: #888; text-transform: capitalize;">${item._type}</span>
+                </div>
+            </div>
+            <button onclick="window.closeModal()" style="cursor:pointer; background:none; border:none; color:var(--text-color); font-size:1.5rem;">&times;</button>
         </div>
-        <p><i>${item.description}</i></p>
+        ${item.description ? `<p><i>${item.description}</i></p>` : ''}
     `;
 
-    if (item._type === 'material') {
-        html += `
-            <div style="margin-top: 1rem;">
-                <p><strong>Type:</strong> ${item.type}</p>
-        `;
-        if (item.freezing_point !== undefined) html += `<p><strong>Freezing Point:</strong> ${item.freezing_point}°C (Forms: ${item.freezing_product})</p>`;
-        if (item.melting_point !== undefined) html += `<p><strong>Melting Point:</strong> ${item.melting_point}°C (Forms: ${item.melting_product})</p>`;
-        if (item.boiling_point !== undefined) html += `<p><strong>Boiling Point:</strong> ${item.boiling_point}°C (Forms: ${item.boiling_product})</p>`;
-        html += `</div>`;
-    } else {
-        html += `
-            <div style="margin-top: 1rem;">
-                <p><strong>Category:</strong> ${item.category}</p>
-                <p><strong>Power:</strong> ${item.power_consumption ? item.power_consumption + ' W' : 'None'}</p>
+    // Show specific properties if available
+    if (item.type) html += `<p><strong>Type:</strong> ${item.type}</p>`;
+    if (item.category && item.category !== 'unknown' && item.category !== item._type) html += `<p><strong>Category:</strong> ${item.category}</p>`;
+    if (item.power_consumption) html += `<p><strong>Power:</strong> ${item.power_consumption} W</p>`;
+    if (item.freezing_point !== undefined) html += `<p><strong>Freezing Point:</strong> ${item.freezing_point}°C (Forms: ${item.freezing_product || '?'})</p>`;
+    if (item.melting_point !== undefined) html += `<p><strong>Melting Point:</strong> ${item.melting_point}°C (Forms: ${item.melting_product || '?'})</p>`;
+    if (item.boiling_point !== undefined) html += `<p><strong>Boiling Point:</strong> ${item.boiling_point}°C (Forms: ${item.boiling_product || '?'})</p>`;
 
-                <h4 style="margin-top: 1rem;">Inputs</h4>
-                <ul>
-                    ${item.inputs ? item.inputs.map(i => `<li>${i.amount} ${i.unit} of ${i.material}</li>`).join('') : 'None'}
-                </ul>
+    // Find related recipes
+    let sourceRecipes = recipesData.filter(r => r.source === item.id);
+    let consumesRecipes = recipesData.filter(r => (r.consumed || []).some(c => c.element === item.id));
+    let producesRecipes = recipesData.filter(r => (r.produced || []).some(p => p.element === item.id));
 
-                <h4 style="margin-top: 1rem;">Outputs</h4>
-                <ul>
-                    ${item.outputs ? item.outputs.map(o => `<li>${o.amount} ${o.unit} of ${o.material}</li>`).join('') : 'None'}
-                </ul>
-            </div>
-        `;
+    const renderRecipe = (r) => {
+        let rHtml = `<div style="background: var(--input-bg); padding: 0.5rem; border-radius: 4px; margin-bottom: 0.5rem; border: 1px solid var(--border-color); display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">`;
+
+        if (r.source) {
+            let src = allItems[r.source];
+            rHtml += `<div style="display:flex; align-items:center; gap:0.2rem;"><img src="/images/${src ? src.image : ''}" style="width:24px; height:24px;" title="${src ? src.name : r.source}"> <strong>${src ? src.name : r.source}</strong></div>`;
+        }
+
+        if (r.consumed && r.consumed.length > 0) {
+            rHtml += `<span style="color:#888;">consumes</span>`;
+            r.consumed.forEach(c => {
+                let el = allItems[c.element];
+                rHtml += `<div style="display:flex; align-items:center; gap:0.2rem; background: rgba(255,0,0,0.1); padding: 0.2rem 0.4rem; border-radius: 4px;"><img src="/images/${el ? el.image : ''}" style="width:16px; height:16px;" title="${el ? el.name : c.element}"> ${c.amount} ${c.unit}/${c.per} ${el ? el.name : c.element}</div>`;
+            });
+        }
+
+        if (r.produced && r.produced.length > 0) {
+            rHtml += `<span style="color:#888;">produces</span>`;
+            r.produced.forEach(p => {
+                let el = allItems[p.element];
+                rHtml += `<div style="display:flex; align-items:center; gap:0.2rem; background: rgba(0,255,0,0.1); padding: 0.2rem 0.4rem; border-radius: 4px;"><img src="/images/${el ? el.image : ''}" style="width:16px; height:16px;" title="${el ? el.name : p.element}"> ${p.amount} ${p.unit}/${p.per} ${el ? el.name : p.element}</div>`;
+            });
+        }
+
+        rHtml += `</div>`;
+        return rHtml;
+    };
+
+    if (sourceRecipes.length > 0) {
+        html += `<h3 style="margin-top: 1.5rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem;">Recipes</h3>`;
+        sourceRecipes.forEach(r => { html += renderRecipe(r); });
+    }
+
+    if (consumesRecipes.length > 0) {
+        html += `<h3 style="margin-top: 1.5rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem;">Used as Ingredient In</h3>`;
+        consumesRecipes.forEach(r => { html += renderRecipe(r); });
+    }
+
+    if (producesRecipes.length > 0) {
+        html += `<h3 style="margin-top: 1.5rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem;">Produced By</h3>`;
+        producesRecipes.forEach(r => { html += renderRecipe(r); });
+    }
+
+    if (sourceRecipes.length === 0 && consumesRecipes.length === 0 && producesRecipes.length === 0) {
+        html += `<p style="margin-top: 1rem; color: #888;">No known recipes.</p>`;
     }
 
     content.innerHTML = html;
     modal.style.display = 'flex';
 
-    // Update URL without reloading
-    history.pushState(null, null, `#/recipes/${item.id}`);
+    // Do not use pushState as requested in guidelines to avoid breaking hash routing,
+    // instead just update the hash manually or leave it.
+    // "Avoid using history.pushState directly, especially for UI states like modals, as it breaks hash routing."
+    // We will just not change the URL for the modal.
 }
 
 function closeModal() {
     const modal = document.getElementById('detail-modal');
     if (modal) modal.style.display = 'none';
-    history.pushState(null, null, '#/recipes');
 }
-// Expose for inline onclick
 window.closeModal = closeModal;
