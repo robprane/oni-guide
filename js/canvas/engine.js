@@ -128,6 +128,8 @@ export class CanvasEngine {
             this.grid.setCell(gridPos.x, gridPos.y, 'bridge_in');
             this.grid.setCell(gridPos.x + 1, gridPos.y, 'pipe');
             this.grid.setCell(gridPos.x + 2, gridPos.y, 'bridge_out');
+        } else if (this.currentTool === 'sweeper') {
+            this.grid.setCell(gridPos.x, gridPos.y, this.currentTool, { orientation: this.currentOrientation || 'horizontal' });
         } else {
             this.grid.setCell(gridPos.x, gridPos.y, this.currentTool);
         }
@@ -138,7 +140,17 @@ export class CanvasEngine {
     }
 
     draw() {
-        this.ctx.fillStyle = this.config.COLORS.BACKGROUND;
+        // Read theme dynamically from document
+        const theme = document.documentElement.getAttribute('data-theme') || 'system';
+        // For system, check prefers-color-scheme
+        let isDark = false;
+        if (theme === 'dark') {
+            isDark = true;
+        } else if (theme === 'system' && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            isDark = true;
+        }
+
+        this.ctx.fillStyle = isDark ? '#001223' : '#ffffff';
         this.ctx.fillRect(0, 0, this.canvas.width, this.canvas.height);
 
         this.ctx.save();
@@ -185,20 +197,73 @@ export class CanvasEngine {
             if (cell.type === 'sweeper') {
                 const [cx, cy] = key.split(',').map(Number);
                 const radius = this.config.SWEEPER_RADIUS || 4;
-                const { coverage, blocked } = calculateSweeperCoverage(cx, cy, radius, this.grid);
+                const { coverage } = calculateSweeperCoverage(cx, cy, radius, this.grid, cell.meta?.orientation);
 
-                this.ctx.fillStyle = this.config.COLORS.SWEEPER_AREA;
+                // Draw greenish transparent fill
+                this.ctx.fillStyle = 'rgba(100, 255, 100, 0.15)';
                 for (const pos of coverage) {
                     const [px, py] = pos.split(',').map(Number);
                     this.ctx.fillRect(px * cs, py * cs, cs, cs);
                 }
 
-                // Optional: visualize blocked areas lightly
-                // this.ctx.fillStyle = this.config.COLORS.SWEEPER_BLOCKED;
-                // for (const pos of blocked) {
-                //     const [px, py] = pos.split(',').map(Number);
-                //     this.ctx.fillRect(px * cs, py * cs, cs, cs);
-                // }
+                // Calculate the outline and dots for the coverage area
+                this.ctx.strokeStyle = '#32cd32';
+                this.ctx.lineWidth = 2;
+                this.ctx.setLineDash([8, 8]); // Dashed gap border
+
+                this.ctx.fillStyle = '#32cd32';
+                const dotRadius = 3;
+
+                // For each cell in coverage, check its 4 neighbors to see if we need an edge border
+                for (const pos of coverage) {
+                    const [px, py] = pos.split(',').map(Number);
+                    const wx = px * cs;
+                    const wy = py * cs;
+
+                    const nTop = coverage.has(`${px},${py - 1}`);
+                    const nBottom = coverage.has(`${px},${py + 1}`);
+                    const nLeft = coverage.has(`${px - 1},${py}`);
+                    const nRight = coverage.has(`${px + 1},${py}`);
+
+                    this.ctx.beginPath();
+                    if (!nTop) {
+                        this.ctx.moveTo(wx, wy);
+                        this.ctx.lineTo(wx + cs, wy);
+                    }
+                    if (!nRight) {
+                        this.ctx.moveTo(wx + cs, wy);
+                        this.ctx.lineTo(wx + cs, wy + cs);
+                    }
+                    if (!nBottom) {
+                        this.ctx.moveTo(wx + cs, wy + cs);
+                        this.ctx.lineTo(wx, wy + cs);
+                    }
+                    if (!nLeft) {
+                        this.ctx.moveTo(wx, wy + cs);
+                        this.ctx.lineTo(wx, wy);
+                    }
+                    this.ctx.stroke();
+
+                    // Draw corner dots if the corner is internal (surrounded by covered cells)
+                    // Basically, if the corner itself is an inner corner where we WOULD have drawn a corner line if it were convex,
+                    // but it's concave, or simply at the corners of any interior cell that touches other covered cells.
+                    // Wait, the prompt said: "Только те углы, где нет контура" (Only those corners where there is no border).
+                    // So we check all 4 corners of the cell. If the corner does not lie on an edge of the coverage, we draw a dot.
+                    // A corner is on the edge if ANY of the 3 adjacent cells (sharing that corner) is NOT in coverage.
+                    // Actually, a corner is shared by 4 cells. If ALL 4 cells are in coverage, it's strictly internal, so no border passes through it.
+                    // Let's just draw dots at corners where all 4 adjacent cells are covered.
+
+                    // Top-Left corner: shared by (px,py), (px-1,py), (px,py-1), (px-1,py-1)
+                    if (coverage.has(`${px - 1},${py}`) && coverage.has(`${px},${py - 1}`) && coverage.has(`${px - 1},${py - 1}`)) {
+                        this.ctx.beginPath();
+                        this.ctx.arc(wx, wy, dotRadius, 0, Math.PI * 2);
+                        this.ctx.fill();
+                    }
+                    // Bottom-Right corner: shared by (px,py), (px+1,py), (px,py+1), (px+1,py+1)
+                    // We only need to check Top-Left for each cell to avoid drawing the same dot 4 times.
+                }
+
+                this.ctx.setLineDash([]); // Reset line dash
             }
         }
 
@@ -215,16 +280,36 @@ export class CanvasEngine {
                 this.ctx.lineWidth = 2;
                 this.ctx.strokeRect(wx, wy, cs, cs);
             } else if (cell.type === 'sweeper') {
+                const orientation = cell.meta?.orientation || 'horizontal';
                 this.ctx.fillStyle = this.config.COLORS.SWEEPER;
-                this.ctx.beginPath();
-                this.ctx.arc(wx + cs/2, wy + cs/2, cs*0.4, 0, Math.PI*2);
-                this.ctx.fill();
+
+                if (orientation === 'horizontal') {
+                    // Central circle
+                    this.ctx.beginPath();
+                    this.ctx.arc(wx + cs/2, wy + cs/2, cs*0.4, 0, Math.PI*2);
+                    this.ctx.fill();
+                    // Left arm
+                    this.ctx.fillRect(wx - cs + cs*0.1, wy + cs*0.3, cs*0.9, cs*0.4);
+                    // Right arm
+                    this.ctx.fillRect(wx + cs*0.5, wy + cs*0.3, cs*0.9, cs*0.4);
+                } else {
+                    // Central circle
+                    this.ctx.beginPath();
+                    this.ctx.arc(wx + cs/2, wy + cs/2, cs*0.4, 0, Math.PI*2);
+                    this.ctx.fill();
+                    // Top arm
+                    this.ctx.fillRect(wx + cs*0.3, wy - cs + cs*0.1, cs*0.4, cs*0.9);
+                    // Bottom arm
+                    this.ctx.fillRect(wx + cs*0.3, wy + cs*0.5, cs*0.4, cs*0.9);
+                }
 
                 // Add center dot
                 this.ctx.fillStyle = '#000';
                 this.ctx.beginPath();
                 this.ctx.arc(wx + cs/2, wy + cs/2, cs*0.1, 0, Math.PI*2);
                 this.ctx.fill();
+            } else if (cell.type === 'sweeper_part') {
+                // Not drawn explicitly, it's drawn by the center 'sweeper' cell
             } else if (cell.type === 'pipe') {
                 this.ctx.fillStyle = this.config.COLORS.PIPE || '#AAAAAA';
                 this.ctx.fillRect(wx + cs*0.25, wy + cs*0.25, cs*0.5, cs*0.5);
