@@ -234,9 +234,9 @@ function showDetailModal(item) {
 
 
     const formatAmount = (item) => {
-        if (!item.per) return `${item.amount} ${item.unit}`;
-        if (item.unit.includes(' ') || item.per.includes(' ')) return `${item.amount} ${item.unit} per ${item.per}`;
-        return `${item.amount} ${item.unit}/${item.per}`;
+        if (!item.per) return `${item.amount}${item.unit.includes('%') ? '' : ' '}${item.unit}`;
+        if (item.unit.includes(' ') || item.per.includes(' ')) return `${item.amount}${item.unit.includes('%') ? '' : ' '}${item.unit} per ${item.per}`;
+        return `${item.amount}${item.unit.includes('%') ? '' : ' '}${item.unit}/${item.per}`;
     };
 
     const renderRecipe = (r) => {
