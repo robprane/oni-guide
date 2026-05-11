@@ -12,6 +12,7 @@ export async function renderCanvas(container) {
                 <button class="tool-btn" data-tool="bridge">Bridge</button>
                 <button class="tool-btn" data-tool="spawn_liquid">Spawn Liquid</button>
                 <button class="tool-btn" data-tool="erase">Eraser</button>
+                <button id="orientation-btn" class="tool-btn" style="display: none; border-color: var(--primary-color);">Rotate (O)</button>
                 <div style="margin-left: auto; display: flex; align-items: center; gap: 10px; font-size: 0.9rem;">
                     <span>Shift+Drag or Middle-Click to pan. Scroll to zoom.</span>
                 </div>
@@ -48,8 +49,43 @@ export async function renderCanvas(container) {
         });
     });
 
+    // Setup orientation logic
+    let currentOrientation = 'horizontal';
+    const orientationBtn = document.getElementById('orientation-btn');
+
+    function toggleOrientation() {
+        currentOrientation = currentOrientation === 'horizontal' ? 'vertical' : 'horizontal';
+        engineInstance.currentOrientation = currentOrientation;
+    }
+
+    orientationBtn.addEventListener('click', toggleOrientation);
+
+    function handleKeydown(e) {
+        if (e.key.toLowerCase() === 'o') {
+            if (engineInstance && engineInstance.currentTool === 'sweeper') {
+                toggleOrientation();
+            }
+        }
+    }
+    window.addEventListener('keydown', handleKeydown);
+
+    engineInstance.currentOrientation = currentOrientation;
+
+    // Extend engineInstance.setTool to show/hide orientation button
+    const originalSetTool = engineInstance.setTool.bind(engineInstance);
+    engineInstance.setTool = function(toolName) {
+        originalSetTool(toolName);
+        if (toolName === 'sweeper') {
+            orientationBtn.style.display = 'block';
+        } else {
+            orientationBtn.style.display = 'none';
+        }
+    };
+    engineInstance.setTool('solid'); // Trigger the UI update for default tool
+
     // Return cleanup function for the router
     return () => {
+        window.removeEventListener('keydown', handleKeydown);
         if (engineInstance) {
             engineInstance.destroy();
             engineInstance = null;
