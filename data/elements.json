@@ -1125,7 +1125,7 @@
   {
     "id": "solid_visco_gel",
     "name": "Solid Visco-Gel",
-    "image": "SolidVisco-Gel.png",
+    "image": "SolidViscoGel.png",
     "category": "element"
   },
   {
@@ -1237,7 +1237,7 @@
   {
     "id": "visco_gel_fluid",
     "name": "Visco-Gel Fluid",
-    "image": "Visco-GelFluid.png",
+    "image": "ViscoGelFluid.png",
     "category": "element"
   },
   {
