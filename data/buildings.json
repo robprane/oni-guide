@@ -20,7 +20,7 @@
   {
     "id": "anti_entropy_thermo_nullifier",
     "name": "Anti Entropy Thermo-Nullifier",
-    "image": "AntiEntropyThermo-Nullifier.png",
+    "image": "AntiEntropyThermoNullifier.png",
     "category": "building"
   },
   {
@@ -266,7 +266,7 @@
   {
     "id": "ice_e_fan",
     "name": "Ice-E Fan",
-    "image": "Ice-EFan.png",
+    "image": "IceEFan.png",
     "category": "building"
   },
   {
