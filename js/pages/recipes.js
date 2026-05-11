@@ -232,6 +232,13 @@ function showDetailModal(item) {
     let consumesRecipes = recipesData.filter(r => (r.consumed || []).some(c => c.element === item.id));
     let producesRecipes = recipesData.filter(r => (r.produced || []).some(p => p.element === item.id));
 
+
+    const formatAmount = (item) => {
+        if (!item.per) return `${item.amount} ${item.unit}`;
+        if (item.unit.includes(' ') || item.per.includes(' ')) return `${item.amount} ${item.unit} per ${item.per}`;
+        return `${item.amount} ${item.unit}/${item.per}`;
+    };
+
     const renderRecipe = (r) => {
         let rHtml = `<div style="background: var(--input-bg); padding: 0.5rem; border-radius: 4px; margin-bottom: 0.5rem; border: 1px solid var(--border-color); display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">`;
 
@@ -244,7 +251,7 @@ function showDetailModal(item) {
             rHtml += `<span style="color:#888;">consumes</span>`;
             r.consumed.forEach(c => {
                 let el = allItems[c.element];
-                rHtml += `<div style="display:flex; align-items:center; gap:0.2rem; background: rgba(255,0,0,0.1); padding: 0.2rem 0.4rem; border-radius: 4px;"><img src="/images/${el ? el.image : ''}" style="width:16px; height:16px;" title="${el ? el.name : c.element}"> ${c.amount} ${c.unit}/${c.per} ${el ? el.name : c.element}</div>`;
+                rHtml += `<div style="display:flex; align-items:center; gap:0.2rem; background: rgba(255,0,0,0.1); padding: 0.2rem 0.4rem; border-radius: 4px;"><img src="/images/${el ? el.image : ''}" style="width:16px; height:16px;" title="${el ? el.name : c.element}"> ${formatAmount(c)} ${el ? el.name : c.element}</div>`;
             });
         }
 
@@ -252,7 +259,7 @@ function showDetailModal(item) {
             rHtml += `<span style="color:#888;">produces</span>`;
             r.produced.forEach(p => {
                 let el = allItems[p.element];
-                rHtml += `<div style="display:flex; align-items:center; gap:0.2rem; background: rgba(0,255,0,0.1); padding: 0.2rem 0.4rem; border-radius: 4px;"><img src="/images/${el ? el.image : ''}" style="width:16px; height:16px;" title="${el ? el.name : p.element}"> ${p.amount} ${p.unit}/${p.per} ${el ? el.name : p.element}</div>`;
+                rHtml += `<div style="display:flex; align-items:center; gap:0.2rem; background: rgba(0,255,0,0.1); padding: 0.2rem 0.4rem; border-radius: 4px;"><img src="/images/${el ? el.image : ''}" style="width:16px; height:16px;" title="${el ? el.name : p.element}"> ${formatAmount(p)} ${el ? el.name : p.element}</div>`;
             });
         }
 
