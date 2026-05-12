@@ -24,10 +24,16 @@ body {
     border-bottom: 1px solid var(--border-color);
 }
 
-.nav-brand {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: var(--primary-color);
+.nav-brand-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.nav-brand-logo img {
+    height: 1.5rem;
+    display: block;
+    width: auto;
 }
 
 .nav-links {
