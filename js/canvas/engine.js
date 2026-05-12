@@ -192,7 +192,70 @@ export class CanvasEngine {
     drawCells() {
         const cs = this.config.CELL_SIZE;
 
-        // Draw Sweeper Coverage areas first so they are behind entities
+        // Draw entities
+        for (const [key, cell] of this.grid.cells.entries()) {
+            const [x, y] = key.split(',').map(Number);
+            const wx = x * cs;
+            const wy = y * cs;
+
+            if (cell.type === 'solid') {
+                this.ctx.fillStyle = this.config.COLORS.SOLID_TILE;
+                this.ctx.fillRect(wx, wy, cs, cs);
+                this.ctx.strokeStyle = '#000';
+                this.ctx.lineWidth = 2;
+                this.ctx.strokeRect(wx, wy, cs, cs);
+            } else if (cell.type === 'sweeper') {
+                const orientation = cell.meta?.orientation || 'horizontal';
+                this.ctx.fillStyle = this.config.COLORS.SWEEPER;
+
+                if (orientation === 'horizontal') {
+                    // Central circle
+                    this.ctx.beginPath();
+                    this.ctx.arc(wx + cs/2, wy + cs/2, cs*0.4, 0, Math.PI*2);
+                    this.ctx.fill();
+                    // Left arm
+                    this.ctx.fillRect(wx - cs + cs*0.1, wy + cs*0.3, cs*0.9, cs*0.4);
+                    // Right arm
+                    this.ctx.fillRect(wx + cs*0.5, wy + cs*0.3, cs*0.9, cs*0.4);
+                } else {
+                    // Central circle
+                    this.ctx.beginPath();
+                    this.ctx.arc(wx + cs/2, wy + cs/2, cs*0.4, 0, Math.PI*2);
+                    this.ctx.fill();
+                    // Top arm
+                    this.ctx.fillRect(wx + cs*0.3, wy - cs + cs*0.1, cs*0.4, cs*0.9);
+                    // Bottom arm
+                    this.ctx.fillRect(wx + cs*0.3, wy + cs*0.5, cs*0.4, cs*0.9);
+                }
+
+                // Add center dot
+                this.ctx.fillStyle = '#000';
+                this.ctx.beginPath();
+                this.ctx.arc(wx + cs/2, wy + cs/2, cs*0.1, 0, Math.PI*2);
+                this.ctx.fill();
+            } else if (cell.type === 'sweeper_part') {
+                // Not drawn explicitly, it's drawn by the center 'sweeper' cell
+            } else if (cell.type === 'pipe') {
+                this.ctx.fillStyle = this.config.COLORS.PIPE || '#AAAAAA';
+                this.ctx.fillRect(wx + cs*0.25, wy + cs*0.25, cs*0.5, cs*0.5);
+            } else if (cell.type === 'bridge_in') {
+                this.ctx.fillStyle = this.config.COLORS.BRIDGE_INPUT || '#FFFFFF';
+                this.ctx.fillRect(wx + cs*0.1, wy + cs*0.1, cs*0.8, cs*0.8);
+            } else if (cell.type === 'bridge_out') {
+                this.ctx.fillStyle = this.config.COLORS.BRIDGE_OUTPUT || '#00FF00';
+                this.ctx.fillRect(wx + cs*0.1, wy + cs*0.1, cs*0.8, cs*0.8);
+            }
+        }
+
+        // Draw liquids
+        for (const [key, liquid] of this.simulation.liquids.entries()) {
+            const [x, y] = key.split(',').map(Number);
+            this.ctx.fillStyle = this.config.COLORS.LIQUID_BLOB || '#4da8da';
+            this.ctx.beginPath();
+            this.ctx.arc(x * cs + cs/2, y * cs + cs/2, cs*0.2, 0, Math.PI*2);
+            this.ctx.fill();
+        }
+
         for (const [key, cell] of this.grid.cells.entries()) {
             if (cell.type === 'sweeper') {
                 const [cx, cy] = key.split(',').map(Number);
@@ -265,70 +328,6 @@ export class CanvasEngine {
 
                 this.ctx.setLineDash([]); // Reset line dash
             }
-        }
-
-        // Draw entities
-        for (const [key, cell] of this.grid.cells.entries()) {
-            const [x, y] = key.split(',').map(Number);
-            const wx = x * cs;
-            const wy = y * cs;
-
-            if (cell.type === 'solid') {
-                this.ctx.fillStyle = this.config.COLORS.SOLID_TILE;
-                this.ctx.fillRect(wx, wy, cs, cs);
-                this.ctx.strokeStyle = '#000';
-                this.ctx.lineWidth = 2;
-                this.ctx.strokeRect(wx, wy, cs, cs);
-            } else if (cell.type === 'sweeper') {
-                const orientation = cell.meta?.orientation || 'horizontal';
-                this.ctx.fillStyle = this.config.COLORS.SWEEPER;
-
-                if (orientation === 'horizontal') {
-                    // Central circle
-                    this.ctx.beginPath();
-                    this.ctx.arc(wx + cs/2, wy + cs/2, cs*0.4, 0, Math.PI*2);
-                    this.ctx.fill();
-                    // Left arm
-                    this.ctx.fillRect(wx - cs + cs*0.1, wy + cs*0.3, cs*0.9, cs*0.4);
-                    // Right arm
-                    this.ctx.fillRect(wx + cs*0.5, wy + cs*0.3, cs*0.9, cs*0.4);
-                } else {
-                    // Central circle
-                    this.ctx.beginPath();
-                    this.ctx.arc(wx + cs/2, wy + cs/2, cs*0.4, 0, Math.PI*2);
-                    this.ctx.fill();
-                    // Top arm
-                    this.ctx.fillRect(wx + cs*0.3, wy - cs + cs*0.1, cs*0.4, cs*0.9);
-                    // Bottom arm
-                    this.ctx.fillRect(wx + cs*0.3, wy + cs*0.5, cs*0.4, cs*0.9);
-                }
-
-                // Add center dot
-                this.ctx.fillStyle = '#000';
-                this.ctx.beginPath();
-                this.ctx.arc(wx + cs/2, wy + cs/2, cs*0.1, 0, Math.PI*2);
-                this.ctx.fill();
-            } else if (cell.type === 'sweeper_part') {
-                // Not drawn explicitly, it's drawn by the center 'sweeper' cell
-            } else if (cell.type === 'pipe') {
-                this.ctx.fillStyle = this.config.COLORS.PIPE || '#AAAAAA';
-                this.ctx.fillRect(wx + cs*0.25, wy + cs*0.25, cs*0.5, cs*0.5);
-            } else if (cell.type === 'bridge_in') {
-                this.ctx.fillStyle = this.config.COLORS.BRIDGE_INPUT || '#FFFFFF';
-                this.ctx.fillRect(wx + cs*0.1, wy + cs*0.1, cs*0.8, cs*0.8);
-            } else if (cell.type === 'bridge_out') {
-                this.ctx.fillStyle = this.config.COLORS.BRIDGE_OUTPUT || '#00FF00';
-                this.ctx.fillRect(wx + cs*0.1, wy + cs*0.1, cs*0.8, cs*0.8);
-            }
-        }
-
-        // Draw liquids
-        for (const [key, liquid] of this.simulation.liquids.entries()) {
-            const [x, y] = key.split(',').map(Number);
-            this.ctx.fillStyle = this.config.COLORS.LIQUID_BLOB || '#4da8da';
-            this.ctx.beginPath();
-            this.ctx.arc(x * cs + cs/2, y * cs + cs/2, cs*0.2, 0, Math.PI*2);
-            this.ctx.fill();
         }
     }
 
