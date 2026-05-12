@@ -27,29 +27,49 @@ export function calculateSweeperCoverage(cx, cy, radius, grid) {
     return { coverage, blocked };
 }
 
-// Bresenham's line algorithm variation for thick LoS checking
-function hasLineOfSight(x0, y0, x1, y1, grid) {
-    let dx = Math.abs(x1 - x0);
-    let dy = Math.abs(y1 - y0);
-    let sx = (x0 < x1) ? 1 : -1;
-    let sy = (y0 < y1) ? 1 : -1;
-    let err = dx - dy;
+// Ported from C# FastTestLineOfSightSolid
+function hasLineOfSight(x, y, x2, y2, grid) {
+    let value = x2 - x;
+    let num = y2 - y;
+    let num2 = 0;
 
-    let cx = x0;
-    let cy = y0;
+    let num3 = Math.sign(value);
+    let num4 = Math.sign(value);
+    let num5 = Math.sign(num);
+    let num6 = Math.abs(value);
+    let num7 = Math.abs(num);
 
-    while (true) {
-        if (cx === x1 && cy === y1) return true;
+    if (num6 <= num7) {
+        num6 = Math.abs(num);
+        num7 = Math.abs(value);
+        if (num < 0) {
+            num2 = -1;
+        } else if (num > 0) {
+            num2 = 1;
+        }
+        num4 = 0;
+    }
 
-        // Don't block on the starting cell itself
-        if ((cx !== x0 || cy !== y0) && isSolid(cx, cy, grid)) {
+    let num8 = num6 >> 1;
+
+    let cx = x;
+    let cy = y;
+
+    for (let i = 1; i < num6; i++) {
+        num8 += num7;
+        if (num8 < num6) {
+            cx += num4;
+            cy += num2;
+        } else {
+            num8 -= num6;
+            cx += num3;
+            cy += num5;
+        }
+        if (isSolid(cx, cy, grid)) {
             return false;
         }
-
-        let e2 = 2 * err;
-        if (e2 > -dy) { err -= dy; cx += sx; }
-        if (e2 < dx) { err += dx; cy += sy; }
     }
+    return true;
 }
 
 function isSolid(x, y, grid) {
