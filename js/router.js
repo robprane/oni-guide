@@ -1,13 +1,11 @@
 import { renderHome } from './pages/home.js';
 import { renderCanvas } from './pages/canvas.js';
 import { renderRecipes } from './pages/recipes.js';
-import { renderDocs } from './pages/docs.js';
 
 const routes = {
     '/': renderHome,
     '/canvas': renderCanvas,
-    '/recipes': renderRecipes,
-    '/docs': renderDocs
+    '/recipes': renderRecipes
 };
 
 export class Router {
