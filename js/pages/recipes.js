@@ -241,18 +241,18 @@ function showDetailModal(item) {
     };
 
     const renderRecipe = (r) => {
-        let rHtml = `<div style="background: var(--input-bg); padding: 0.5rem; border-radius: 4px; margin-bottom: 0.5rem; border: 1px solid var(--border-color); display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">`;
+        let rHtml = `<div style="background: var(--input-bg); padding: 0.5rem; border-radius: .25em; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">`;
 
         if (r.source) {
             let src = allItems[r.source];
-            rHtml += `<div style="display:flex; align-items:center; gap:0.2rem;"><img src="/images/${src ? src.image : ''}" style="width:24px; height:24px;" title="${src ? src.name : r.source}"> <strong>${src ? src.name : r.source}</strong></div>`;
+            rHtml += `<div style="display:flex; align-items:center; gap:0.2rem;"><img src="/images/${src ? src.image : ''}" style="width:1.5em; height:1.5em;" title="${src ? src.name : r.source}"> <strong>${src ? src.name : r.source}</strong></div>`;
         }
 
         if (r.consumed && r.consumed.length > 0) {
             rHtml += `<span style="color:#888;">consumes</span>`;
             r.consumed.forEach(c => {
                 let el = allItems[c.element];
-                rHtml += `<div style="display:flex; align-items:center; gap:0.2rem; background: rgba(255,0,0,0.1); padding: 0.2rem 0.4rem; border-radius: 4px;"><img src="/images/${el ? el.image : ''}" style="width:16px; height:16px;" title="${el ? el.name : c.element}"> ${formatAmount(c)} ${el ? el.name : c.element}</div>`;
+                rHtml += `<div style="display:flex; align-items:center; gap:0.2rem; background: rgba(255,0,0,0.1); padding: 0.2rem 0.4rem; border-radius: .25em;"><img src="/images/${el ? el.image : ''}" style="width:auto; height:1em;" title="${el ? el.name : c.element}"> ${formatAmount(c)} ${el ? el.name : c.element}</div>`;
             });
         }
 
@@ -260,7 +260,7 @@ function showDetailModal(item) {
             rHtml += `<span style="color:#888;">produces</span>`;
             r.produced.forEach(p => {
                 let el = allItems[p.element];
-                rHtml += `<div style="display:flex; align-items:center; gap:0.2rem; background: rgba(0,255,0,0.1); padding: 0.2rem 0.4rem; border-radius: 4px;"><img src="/images/${el ? el.image : ''}" style="width:16px; height:16px;" title="${el ? el.name : p.element}"> ${formatAmount(p)} ${el ? el.name : p.element}</div>`;
+                rHtml += `<div style="display:flex; align-items:center; gap:0.2rem; background: rgba(0,255,0,0.1); padding: 0.2rem 0.4rem; border-radius: .25em;"><img src="/images/${el ? el.image : ''}" style="width:auto; height:1em;" title="${el ? el.name : p.element}"> ${formatAmount(p)} ${el ? el.name : p.element}</div>`;
             });
         }
 
@@ -269,17 +269,17 @@ function showDetailModal(item) {
     };
 
     if (sourceRecipes.length > 0) {
-        html += `<h3 style="margin-top: 1.5rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem;">Recipes</h3>`;
+        html += `<h3 style="margin-top: 1.5rem; padding-bottom: 0.5rem;">Recipes</h3>`;
         sourceRecipes.forEach(r => { html += renderRecipe(r); });
     }
 
     if (consumesRecipes.length > 0) {
-        html += `<h3 style="margin-top: 1.5rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem;">Used as Ingredient In</h3>`;
+        html += `<h3 style="margin-top: 1.5rem; padding-bottom: 0.5rem;">Used as Ingredient In</h3>`;
         consumesRecipes.forEach(r => { html += renderRecipe(r); });
     }
 
     if (producesRecipes.length > 0) {
-        html += `<h3 style="margin-top: 1.5rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem;">Produced By</h3>`;
+        html += `<h3 style="margin-top: 1.5rem; padding-bottom: 0.5rem;">Produced By</h3>`;
         producesRecipes.forEach(r => { html += renderRecipe(r); });
     }
 
