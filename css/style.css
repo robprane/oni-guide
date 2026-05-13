@@ -82,6 +82,18 @@ dialog {
     overscroll-behavior: contain;   
 }
 
+/* Accessibility: Visible focus styles for keyboard navigation */
+:focus-visible {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+    border-radius: 2px;
+}
+
+/* Remove default focus outline if focus-visible is supported */
+:focus:not(:focus-visible) {
+    outline: none;
+}
+
 /* Mobile responsive */
 /* @media (max-width: 768px) {
     .navbar {

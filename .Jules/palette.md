@@ -1,3 +1,3 @@
-## 2026-05-12 - Added Keyboard Navigation to Recipe Cards
-**Learning:** The recipe cards were clickable `div` elements without proper keyboard accessibility, which violates a11y standards. When implementing interactive `div` elements, they must be given `role="button"` and `tabindex="0"` along with keyboard event listeners to match native `<button>` behavior.
-**Action:** Always ensure interactive elements are accessible via keyboard navigation by implementing appropriate ARIA roles, tabindex, and keydown handlers.
+## 2026-05-13 - Focus Styles and Empty States
+**Learning:** Native `dialog` element combined with keyboard focus often exposes lack of explicit focus rings. A global `:focus-visible` style improves accessibility app-wide with very few lines of code.
+**Action:** Always verify keyboard accessibility of interactive elements and ensure empty states provide actionable guidance rather than dead ends.
