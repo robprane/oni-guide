@@ -1,42 +1,29 @@
-let elementsData = null;
-let buildingsData = null;
-let crittersData = null;
-let plantsData = null;
-let foodsData = null;
+let configData = null;
 let recipesData = null;
 let allItems = null;
 
 async function loadData() {
     if (!allItems) {
         try {
-            const [elementsRes, buildingsRes, crittersRes, plantsRes, foodsRes, recipesRes] = await Promise.all([
-                fetch('/data/elements.json'),
-                fetch('/data/buildings.json'),
-                fetch('/data/critters.json'),
-                fetch('/data/plants.json'),
-                fetch('/data/foods.json'),
-                fetch('/data/recipes.json')
-            ]);
-            elementsData = await elementsRes.json();
-            buildingsData = await buildingsRes.json();
-            crittersData = await crittersRes.json();
-            plantsData = await plantsRes.json();
-            foodsData = await foodsRes.json();
-            recipesData = await recipesRes.json();
+            const configRes = await fetch('/data/config.json');
+            configData = await configRes.json();
+
+            const fetchPromises = configData.map(category => fetch(`/data/${category.file}`).then(res => res.json()));
+            const results = await Promise.all(fetchPromises);
 
             allItems = {};
-            const populate = (dataArray, cat) => {
-                dataArray.forEach(item => {
-                    item._type = cat;
-                    allItems[item.id] = item;
-                });
-            };
 
-            populate(elementsData, 'element');
-            populate(buildingsData, 'building');
-            populate(crittersData, 'critter');
-            populate(plantsData, 'plant');
-            populate(foodsData, 'food');
+            configData.forEach((category, index) => {
+                const dataArray = results[index];
+                if (category.id === 'recipe') {
+                    recipesData = dataArray;
+                } else {
+                    dataArray.forEach(item => {
+                        item._type = category.id;
+                        allItems[item.id] = item;
+                    });
+                }
+            });
 
         } catch (error) {
             console.error("Failed to load data:", error);
@@ -45,25 +32,29 @@ async function loadData() {
 }
 
 export async function renderRecipes(container, currentPath) {
+    await loadData();
+
+    let filterButtonsHtml = `<button class="filter-btn active" data-filter="all">All</button>`;
+    if (configData) {
+        configData.forEach(category => {
+            if (category.isFilter) {
+                filterButtonsHtml += `\n                <button class="filter-btn" data-filter="${category.id}">${category.label}</button>`;
+            }
+        });
+    }
+
     container.innerHTML = `
         <div class="container" style="display: flex; flex-direction: column; gap: 1rem;">
             <h2>Recipes Database</h2>
             <input type="text" id="recipe-search" placeholder="Search materials, buildings, or recipes..." style="padding: 0.5rem; border-radius: 4px; border: 1px solid var(--input-border); background: var(--input-bg); color: var(--input-text);">
-            <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
-                <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="element">Elements</button>
-                <button class="filter-btn" data-filter="building">Buildings</button>
-                <button class="filter-btn" data-filter="critter">Critters</button>
-                <button class="filter-btn" data-filter="plant">Plants</button>
-                <button class="filter-btn" data-filter="food">Foods</button>
+            <div id="recipe-filters" style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                ${filterButtonsHtml}
             </div>
             <div id="recipe-results" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1rem;">
                 Loading...
             </div>
         </div>
     `;
-
-    await loadData();
 
     const searchInput = document.getElementById('recipe-search');
     const resultsContainer = document.getElementById('recipe-results');
