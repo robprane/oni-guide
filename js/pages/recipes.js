@@ -129,8 +129,12 @@ export async function renderRecipes(container, currentPath) {
                 text-align: center;
                 transition: transform 0.2s;
             `;
+            card.setAttribute('role', 'button');
+            card.setAttribute('tabindex', '0');
             card.onmouseenter = () => card.style.transform = 'scale(1.05)';
             card.onmouseleave = () => card.style.transform = 'scale(1)';
+            card.onfocus = () => card.style.transform = 'scale(1.05)';
+            card.onblur = () => card.style.transform = 'scale(1)';
 
             card.innerHTML = `
                 <img src="/images/${item.image}" alt="${item.name}" style="width: 64px; height: 64px; object-fit: contain; margin-bottom: 0.5rem;" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\\'http://www.w3.org/2000/svg\\' width=\\'64\\' height=\\'64\\'><rect width=\\'64\\' height=\\'64\\' fill=\\'%23333\\'/><text x=\\'32\\' y=\\'32\\' fill=\\'white\\' text-anchor=\\'middle\\' dominant-baseline=\\'middle\\'>?</text></svg>'">
@@ -140,6 +144,12 @@ export async function renderRecipes(container, currentPath) {
 
             card.addEventListener('click', () => {
                 showDetailModal(item);
+            });
+            card.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    showDetailModal(item);
+                }
             });
 
             resultsContainer.appendChild(card);
@@ -214,7 +224,7 @@ function showDetailModal(item) {
                     <span style="font-size: 0.9rem; color: #888; text-transform: capitalize;">${item._type}</span>
                 </div>
             </div>
-            <button onclick="window.closeModal()" style="cursor:pointer; background:none; border:none; color:var(--text-color); font-size:1.5rem;">&times;</button>
+            <button aria-label="Close modal" onclick="window.closeModal()" style="cursor:pointer; background:none; border:none; color:var(--text-color); font-size:1.5rem;">&times;</button>
         </div>
         ${item.description ? `<p><i>${item.description}</i></p>` : ''}
     `;
