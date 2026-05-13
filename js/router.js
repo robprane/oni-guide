@@ -23,16 +23,17 @@ export class Router {
     handleRoute() {
         let path = window.location.hash.slice(1) || '/';
 
-        // Basic handler for sub-routes, treating e.g. /recipes/water as /recipes
+        // Find base route and handler
         let routeHandler = routes[path];
+        let baseRoute = path;
 
         if (!routeHandler) {
-            // Find base route
-            const baseRoute = Object.keys(routes).find(r => path.startsWith(r) && r !== '/');
+            baseRoute = Object.keys(routes).find(r => path.startsWith(r) && r !== '/');
             if (baseRoute) {
                 routeHandler = routes[baseRoute];
             } else {
                 // Fallback to home
+                baseRoute = '/';
                 routeHandler = routes['/'];
                 path = '/';
             }
@@ -46,6 +47,15 @@ export class Router {
                 link.classList.add('active');
             }
         });
+
+        // If base route is the same, just dispatch a routeupdate event
+        if (this.currentBaseRoute === baseRoute) {
+            const event = new CustomEvent('routeupdate', { detail: { path: path } });
+            window.dispatchEvent(event);
+            return;
+        }
+
+        this.currentBaseRoute = baseRoute;
 
         // Destroy old page resources if any
         if (this.currentCleanup) {
