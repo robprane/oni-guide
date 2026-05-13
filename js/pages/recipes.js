@@ -162,6 +162,7 @@ export async function renderRecipes(container, currentPath) {
     style.textContent = `
         .filter-btn { padding: 0.5rem 1rem; border: 1px solid var(--border-color); background: var(--card-bg); color: var(--text-color); border-radius: 4px; cursor: pointer; }
         .filter-btn.active { background: var(--primary-color); color: white; border-color: var(--primary-color); }
+        #detail-dialog::backdrop { background: rgba(0,0,0,0.5); }
     `;
     container.appendChild(style);
 
@@ -226,16 +227,13 @@ function showDetailModal(item) {
             max-height: 90vh;
             border: 1px solid var(--border-color);
             color: var(--text-color);
+            margin: auto;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
         `;
 
-        // Ensure backdrop styling is consistent
-        const style = document.createElement('style');
-        style.textContent = `
-            #detail-dialog::backdrop {
-                background: rgba(0,0,0,0.5);
-            }
-        `;
-        document.head.appendChild(style);
 
         // Close when clicking outside the dialog or pressing Esc
         dialog.addEventListener('click', (e) => {
