@@ -62,7 +62,7 @@ export async function renderCanvas(container) {
     orientationBtn.addEventListener('click', toggleOrientation);
 
     function handleKeydown(e) {
-        if (e.key.toLowerCase() === 'o') {
+        if (e.code === 'KeyO') {
             if (engineInstance && engineInstance.currentTool === 'sweeper') {
                 toggleOrientation();
             }

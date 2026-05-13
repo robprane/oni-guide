@@ -326,7 +326,7 @@ export class CanvasEngine {
             const wx = hx * cs;
             const wy = hy * cs;
 
-            this.ctx.globalAlpha = 0.75; // 25% transparent
+            this.ctx.globalAlpha = 0.5; 
             if (this.images.tile && this.images.tile.complete) {
                 const bitmask = this.getSolidBitmask(hx, hy);
                 const t = bitmaskToTile[bitmask];
@@ -347,7 +347,7 @@ export class CanvasEngine {
             const wy = hy * cs;
             const orientation = this.currentOrientation || 'horizontal';
 
-            this.ctx.globalAlpha = 0.75;
+            this.ctx.globalAlpha = 0.5;
             if (this.images.sweeper && this.images.sweeper.complete) {
                 this.ctx.save();
                 this.ctx.translate(wx + cs/2, wy + cs/2);
