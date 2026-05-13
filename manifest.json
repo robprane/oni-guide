@@ -3,8 +3,8 @@
   "short_name": "ONI Guide",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#1a1a2e",
-  "theme_color": "#4da8da",
+  "background_color": "#011223",
+  "theme_color": "#011223",
   "description": "Interactive tools and recipes for Oxygen Not Included",
   "icons": [
     {
