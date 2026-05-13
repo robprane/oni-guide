@@ -274,7 +274,7 @@ export class CanvasEngine {
                 if (this.images.tile && this.images.tile.complete) {
                     const bitmask = this.getSolidBitmask(x, y);
                     const t = bitmaskToTile[bitmask];
-                    this.ctx.drawImage(this.images.tile, t.cx * 200, t.cy * 200, 200, 200, wx, wy, cs, cs);
+                    this.ctx.drawImage(this.images.tile, t.cx * 200 - 20, t.cy * 200 - 20, 240, 240, wx - cs * 0.1, wy - cs * 0.1, cs * 1.2, cs * 1.2);
                 } else {
                     this.ctx.fillStyle = this.config.COLORS.SOLID_TILE;
                     this.ctx.fillRect(wx, wy, cs, cs);
@@ -330,7 +330,7 @@ export class CanvasEngine {
             if (this.images.tile && this.images.tile.complete) {
                 const bitmask = this.getSolidBitmask(hx, hy);
                 const t = bitmaskToTile[bitmask];
-                this.ctx.drawImage(this.images.tile, t.cx * 200, t.cy * 200, 200, 200, wx, wy, cs, cs);
+                this.ctx.drawImage(this.images.tile, t.cx * 200 - 20, t.cy * 200 - 20, 240, 240, wx - cs * 0.1, wy - cs * 0.1, cs * 1.2, cs * 1.2);
             } else {
                 this.ctx.fillStyle = this.config.COLORS.SOLID_TILE;
                 this.ctx.fillRect(wx, wy, cs, cs);
