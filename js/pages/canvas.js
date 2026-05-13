@@ -8,9 +8,10 @@ export async function renderCanvas(container) {
             <div id="toolbar" style="padding: 10px; background: var(--nav-bg); border-bottom: 1px solid var(--border-color); display: flex; gap: 10px;">
                 <button class="tool-btn active" data-tool="solid">Solid Tile</button>
                 <button class="tool-btn" data-tool="sweeper">Auto-Sweeper</button>
-                <button class="tool-btn" data-tool="pipe">Pipe</button>
-                <button class="tool-btn" data-tool="bridge">Bridge</button>
-                <button class="tool-btn" data-tool="spawn_liquid">Spawn Liquid</button>
+                <!-- Hidden to focus on Auto-Sweeper -->
+                <button class="tool-btn" data-tool="pipe" style="display: none;">Pipe</button>
+                <button class="tool-btn" data-tool="bridge" style="display: none;">Bridge</button>
+                <button class="tool-btn" data-tool="spawn_liquid" style="display: none;">Spawn Liquid</button>
                 <button class="tool-btn" data-tool="erase">Eraser</button>
                 <button id="orientation-btn" class="tool-btn" style="display: none; border-color: var(--primary-color);">Rotate (O)</button>
                 <div style="margin-left: auto; display: flex; align-items: center; gap: 10px; font-size: 0.9rem;">
@@ -61,7 +62,7 @@ export async function renderCanvas(container) {
     orientationBtn.addEventListener('click', toggleOrientation);
 
     function handleKeydown(e) {
-        if (e.key.toLowerCase() === 'o') {
+        if (e.code === 'KeyO') {
             if (engineInstance && engineInstance.currentTool === 'sweeper') {
                 toggleOrientation();
             }

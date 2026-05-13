@@ -1,5 +1,5 @@
 // Line of sight and coverage calculations
-export function calculateSweeperCoverage(cx, cy, radius, grid) {
+export function calculateSweeperCoverage(cx, cy, radius, grid, hoverState = null) {
     const coverage = new Set();
     const blocked = new Set();
 
@@ -16,7 +16,7 @@ export function calculateSweeperCoverage(cx, cy, radius, grid) {
             }
 
             // Check Line of Sight
-            if (hasLineOfSight(cx, cy, targetX, targetY, grid)) {
+            if (hasLineOfSight(cx, cy, targetX, targetY, grid, hoverState)) {
                 coverage.add(`${targetX},${targetY}`);
             } else {
                 blocked.add(`${targetX},${targetY}`);
@@ -28,7 +28,7 @@ export function calculateSweeperCoverage(cx, cy, radius, grid) {
 }
 
 // Ported from C# FastTestLineOfSightSolid
-function hasLineOfSight(x, y, x2, y2, grid) {
+function hasLineOfSight(x, y, x2, y2, grid, hoverState) {
     let value = x2 - x;
     let num = y2 - y;
     let num2 = 0;
@@ -65,14 +65,18 @@ function hasLineOfSight(x, y, x2, y2, grid) {
             cx += num3;
             cy += num5;
         }
-        if (isSolid(cx, cy, grid)) {
+        if (isSolid(cx, cy, grid, hoverState)) {
             return false;
         }
     }
     return true;
 }
 
-function isSolid(x, y, grid) {
+function isSolid(x, y, grid, hoverState) {
+    if (hoverState && hoverState.x === x && hoverState.y === y) {
+        if (hoverState.tool === 'solid') return true;
+        if (hoverState.tool === 'erase') return false;
+    }
     const cell = grid.getCell(x, y);
     return cell && cell.type === 'solid';
 }
