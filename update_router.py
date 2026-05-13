@@ -1,25 +1,12 @@
-import { renderHome } from './pages/home.js';
-import { renderCanvas } from './pages/canvas.js';
-import { renderRecipes } from './pages/recipes.js';
+import re
 
-const routes = {
-    '/': renderHome,
-    '/canvas': renderCanvas,
-    '/recipes': renderRecipes
-};
+with open('js/router.js', 'r') as f:
+    content = f.read()
 
-export class Router {
-    constructor() {
-        this.appContent = document.getElementById('app-content');
+# We need to add state to remember the current base route
+# and check if the base route is the same as before
 
-        // Handle hashchange events (back/forward browser buttons)
-        window.addEventListener('hashchange', this.handleRoute.bind(this));
-
-        // Initialize routing
-        this.handleRoute();
-    }
-
-    // Handles the actual routing logic based on the current URL
+new_handle_route = """    // Handles the actual routing logic based on the current URL
     handleRoute() {
         let path = window.location.hash.slice(1) || '/';
 
@@ -75,34 +62,9 @@ export class Router {
 
         // Re-attach link event listeners for any new links rendered
         this.attachLinkListeners();
-    }
+    }"""
 
-    // Navigate programmatically
-    navigate(url) {
-        const newHash = url.startsWith('#') ? url : '#' + url;
-        if (window.location.hash === newHash) {
-            // If the hash isn't changing, hashchange won't fire, so manually handle route
-            this.handleRoute();
-        } else {
-            window.location.hash = newHash;
-        }
-    }
+content = re.sub(r"    // Handles the actual routing logic based on the current URL\n    handleRoute\(\) \{.*?\n        this\.attachLinkListeners\(\);\n    \}", new_handle_route, content, flags=re.DOTALL)
 
-    // Intercept clicks on local links
-    attachLinkListeners() {
-        const links = document.querySelectorAll('a[data-route]');
-        links.forEach(link => {
-            // Prevent multiple attachments
-            if (link.dataset.routerAttached) return;
-
-            link.addEventListener('click', (e) => {
-                const url = link.getAttribute('data-route');
-                if (url) {
-                    e.preventDefault();
-                    this.navigate(url);
-                }
-            });
-            link.dataset.routerAttached = true;
-        });
-    }
-}
+with open('js/router.js', 'w') as f:
+    f.write(content)

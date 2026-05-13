@@ -168,43 +168,93 @@ export async function renderRecipes(container, currentPath) {
     renderResults();
 
     // Check if deep linked (e.g., /recipes/water)
-    const pathParts = currentPath.split('/');
-    if (pathParts.length > 2 && pathParts[2]) {
-        const id = pathParts[2];
-        const item = allItems[id];
-        if (item) {
-            showDetailModal(item);
+    const handlePath = (path) => {
+        const pathParts = path.split('/');
+        if (pathParts.length > 2 && pathParts[2]) {
+            const id = pathParts[2];
+            const item = allItems[id];
+            if (item) {
+                showDetailModal(item);
+            } else {
+                closeModal();
+            }
+        } else {
+            closeModal();
         }
-    }
+    };
+
+    handlePath(currentPath);
+
+    const onRouteUpdate = (e) => {
+        if (e.detail.path.startsWith('/recipes')) {
+            handlePath(e.detail.path);
+        }
+    };
+
+    window.addEventListener('routeupdate', onRouteUpdate);
+
+    return () => {
+        window.removeEventListener('routeupdate', onRouteUpdate);
+        const dialog = document.getElementById('detail-dialog');
+        if (dialog) {
+            if (dialog.open) dialog.close();
+            dialog.remove();
+        }
+    };
 }
 
 function showDetailModal(item) {
-    let modal = document.getElementById('detail-modal');
-    if (!modal) {
-        modal = document.createElement('div');
-        modal.id = 'detail-modal';
-        modal.style.cssText = `
-            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(0,0,0,0.5); display: flex; justify-content: center; align-items: center;
-            z-index: 1000;
-        `;
-        const content = document.createElement('div');
-        content.id = 'modal-content';
-        content.style.cssText = `
-            background: var(--bg-color); padding: 2rem; border-radius: 8px;
-            max-width: 800px; width: 90%; max-height: 90vh; overflow-y: auto;
-            border: 1px solid var(--border-color);
-        `;
-        modal.appendChild(content);
-
-        modal.addEventListener('click', (e) => {
-            if (e.target === modal) closeModal();
-        });
-
-        document.body.appendChild(modal);
+    // If the hash is not already for this item, update it. This might trigger routeupdate.
+    if (window.location.hash !== '#/recipes/' + item.id) {
+        window.location.hash = '#/recipes/' + item.id;
+        // Don't return, as we need to render the modal contents now or let the route update do it.
+        // But actually, updating the hash will trigger routeupdate which we will handle to call showDetailModal.
+        // Wait, if it's called from click, updating hash triggers hashchange -> routeupdate -> we call showDetailModal(item).
+        // Let's just render the dialog here. If hash is updated, we do it. If it was already correct, it renders.
     }
 
-    const content = modal.querySelector('#modal-content');
+    let dialog = document.getElementById('detail-dialog');
+    if (!dialog) {
+        dialog = document.createElement('dialog');
+        dialog.id = 'detail-dialog';
+        dialog.style.cssText = `
+            background: var(--bg-color);
+            padding: 2rem;
+            border-radius: 8px;
+            max-width: 800px;
+            width: 90%;
+            max-height: 90vh;
+            border: 1px solid var(--border-color);
+            color: var(--text-color);
+        `;
+
+        // Ensure backdrop styling is consistent
+        const style = document.createElement('style');
+        style.textContent = `
+            #detail-dialog::backdrop {
+                background: rgba(0,0,0,0.5);
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Close when clicking outside the dialog or pressing Esc
+        dialog.addEventListener('click', (e) => {
+            const rect = dialog.getBoundingClientRect();
+            const isInDialog = (rect.top <= e.clientY && e.clientY <= rect.top + rect.height
+                && rect.left <= e.clientX && e.clientX <= rect.left + rect.width);
+            if (!isInDialog) {
+                closeModal();
+            }
+        });
+
+        // The native <dialog> closes on Esc by default. We should intercept it to update the hash.
+        dialog.addEventListener('cancel', (e) => {
+            e.preventDefault(); // Prevent default close so we can update the hash, which will trigger close via routeupdate
+            closeModal();
+        });
+
+        document.body.appendChild(dialog);
+    }
 
     let html = `
         <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
@@ -232,7 +282,6 @@ function showDetailModal(item) {
     let sourceRecipes = recipesData.filter(r => r.source === item.id);
     let consumesRecipes = recipesData.filter(r => (r.consumed || []).some(c => c.element === item.id));
     let producesRecipes = recipesData.filter(r => (r.produced || []).some(p => p.element === item.id));
-
 
     const formatAmount = (item) => {
         if (!item.per) return `${item.amount}${item.unit.includes('%') ? '' : ' '}${item.unit}`;
@@ -287,17 +336,22 @@ function showDetailModal(item) {
         html += `<p style="margin-top: 1rem; color: #888;">No known recipes.</p>`;
     }
 
-    content.innerHTML = html;
-    modal.style.display = 'flex';
-
-    // Do not use pushState as requested in guidelines to avoid breaking hash routing,
-    // instead just update the hash manually or leave it.
-    // "Avoid using history.pushState directly, especially for UI states like modals, as it breaks hash routing."
-    // We will just not change the URL for the modal.
+    dialog.innerHTML = html;
+    if (!dialog.open) {
+        dialog.showModal();
+    }
 }
 
 function closeModal() {
-    const modal = document.getElementById('detail-modal');
-    if (modal) modal.style.display = 'none';
+    if (window.location.hash !== '#/recipes') {
+        window.location.hash = '#/recipes';
+        // When hash changes to #/recipes, routeupdate will close it.
+        // But let's also close it here just in case.
+    }
+
+    const dialog = document.getElementById('detail-dialog');
+    if (dialog && dialog.open) {
+        dialog.close();
+    }
 }
 window.closeModal = closeModal;
