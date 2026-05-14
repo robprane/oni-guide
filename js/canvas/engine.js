@@ -151,16 +151,18 @@ export class CanvasEngine {
         const world = this.screenToWorld(e.clientX, e.clientY);
         const gridPos = this.worldToGrid(world.x, world.y);
 
+        const cell = this.grid.getCell(gridPos.x, gridPos.y);
         if (this.currentTool === 'erase') {
-            const cell = this.grid.getCell(gridPos.x, gridPos.y);
             if (cell) this.grid.removeCell(gridPos.x, gridPos.y, cell.type);
-        } else if (this.currentTool === 'spawn_liquid') {
-            this.simulation.spawnLiquid(gridPos.x, gridPos.y);
-        } else if (this.currentTool === 'bridge') {
-            // A bridge spans 3 tiles horizontally for now: IN, PIPE, OUT
-            this.grid.setCell(gridPos.x, gridPos.y, 'bridge_in');
-            this.grid.setCell(gridPos.x + 1, gridPos.y, 'pipe');
-            this.grid.setCell(gridPos.x + 2, gridPos.y, 'bridge_out');
+        // } else if (this.currentTool === 'spawn_liquid') {
+        //     this.simulation.spawnLiquid(gridPos.x, gridPos.y);
+        // } else if (this.currentTool === 'bridge') {
+        //     // A bridge spans 3 tiles horizontally for now: IN, PIPE, OUT
+        //     this.grid.setCell(gridPos.x, gridPos.y, 'bridge_in');
+        //     this.grid.setCell(gridPos.x + 1, gridPos.y, 'pipe');
+        //     this.grid.setCell(gridPos.x + 2, gridPos.y, 'bridge_out');
+        // } else if (cell?.type === this.currentTool) { 
+        //     this.grid.removeCell(gridPos.x, gridPos.y, cell.type); 
         } else if (this.currentTool === 'sweeper') {
             this.grid.setCell(gridPos.x, gridPos.y, this.currentTool, { orientation: this.currentOrientation || 'horizontal' });
         } else {

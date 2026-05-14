@@ -13,7 +13,7 @@ export async function renderCanvas(container) {
                 <button class="tool-btn" data-tool="bridge" style="display: none;">Bridge</button>
                 <button class="tool-btn" data-tool="spawn_liquid" style="display: none;">Spawn Liquid</button>
                 <button class="tool-btn" data-tool="erase">Eraser</button>
-                <button id="orientation-btn" class="tool-btn" style="display: none; border-color: var(--primary-color);">Rotate (O)</button>
+                <button id="orientation-btn" class="utility-btn" style="display: none;">Rotate (O)</button>
                 <div style="margin-left: auto; display: flex; align-items: center; gap: 10px; font-size: 0.9rem;">
                     <span>Shift+Drag or Middle-Click to pan. Scroll to zoom.</span>
                 </div>
@@ -28,6 +28,7 @@ export async function renderCanvas(container) {
     const style = document.createElement('style');
     style.textContent = `
         .tool-btn { padding: 5px 10px; border: 1px solid var(--border-color); background: var(--card-bg); color: var(--text-color); border-radius: 4px; cursor: pointer; }
+        .utility-btn { padding: 5px 10px; border: 1px solid var(--primary-color); background: var(--card-bg); color: var(--text-color); border-radius: 4px; cursor: pointer; }
         .tool-btn.active { background: var(--primary-color); color: white; border-color: var(--primary-color); }
     `;
     container.appendChild(style);

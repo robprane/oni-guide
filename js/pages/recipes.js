@@ -123,7 +123,7 @@ export async function renderRecipes(container, currentPath) {
             <div id="recipe-filters" style="display: flex; gap: 1rem; flex-wrap: wrap;">
                 ${filterButtonsHtml}
             </div>
-            <div id="recipe-results" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1rem;">
+            <div id="recipe-results" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 1rem;">
                 Loading...
             </div>
         </div>
