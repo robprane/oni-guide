@@ -11,6 +11,8 @@
     --input-bg: #ffffff;
     --input-text: #333333;
     --input-border: #cccccc;
+    --active-bg: rgba(0, 120, 215, 0.1);
+    --active-border: #0078d7;
 }
 
 [data-theme="dark"] {
@@ -25,6 +27,8 @@
     --input-bg: #16213e;
     --input-text: #e6e6e6;
     --input-border: #2a2a4a;
+    --active-bg: rgba(77, 168, 218, 0.2);
+    --active-border: #4da8da;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -40,5 +44,7 @@
         --input-bg: #16213e;
         --input-text: #e6e6e6;
         --input-border: #2a2a4a;
+        --active-bg: rgba(77, 168, 218, 0.2);
+        --active-border: #4da8da;
     }
 }
