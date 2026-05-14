@@ -12,9 +12,11 @@ function applyTheme(theme) {
     if (theme === 'system') {
         htmlEl.removeAttribute('data-theme');
         themeSystemBtn.classList.add('active');
+        themeToggleBtn.classList.remove('active');
         updateSystemThemeIcon();
     } else {
         htmlEl.setAttribute('data-theme', theme);
+        themeToggleBtn.classList.add('active');
         themeSystemBtn.classList.remove('active');
     }
 }

@@ -115,6 +115,10 @@ body {
     font-size: 1.25rem;
 }
 
+#settings-btn > svg {
+    width: 1.5em;
+}
+
 .close-btn {
     background: transparent;
     border: none;
@@ -184,7 +188,7 @@ body {
 .theme-btn .icon {
     width: 40px;
     height: 40px;
-    transition: transform 0.3s ease;
+    /* transition: transform 0.3s ease; */
 }
 
 .theme-btn .icon-a {
@@ -193,9 +197,13 @@ body {
     height: 20px;
 }
 
+.icon-circle-half {
+    transform: scaleX(-1);
+}
+
 [data-theme="dark"] .icon-circle-half,
 html:not([data-theme]) .icon-circle-half.is-dark {
-    transform: scaleX(-1);
+    transform: scaleX(1);
 }
 
 main {

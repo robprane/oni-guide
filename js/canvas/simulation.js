@@ -4,7 +4,7 @@ export class PipeSimulation {
         this.config = config;
         this.liquids = new Map(); // posKey -> { id, element }
         this.lastTick = performance.now();
-        this.tickRate = 500; // ms per tick
+        this.tickRate = 20; // ms per tick
 
         // Let's add a test liquid spawner later if needed
         this.blobCounter = 0;
