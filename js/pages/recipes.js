@@ -31,6 +31,79 @@ async function loadData() {
     }
 }
 
+function levenshtein(a, b) {
+    if (a.length === 0) return b.length;
+    if (b.length === 0) return a.length;
+    let matrix = [];
+    for (let i = 0; i <= b.length; i++) {
+        matrix[i] = [i];
+    }
+    for (let j = 0; j <= a.length; j++) {
+        matrix[0][j] = j;
+    }
+    for (let i = 1; i <= b.length; i++) {
+        for (let j = 1; j <= a.length; j++) {
+            if (b.charAt(i - 1) === a.charAt(j - 1)) {
+                matrix[i][j] = matrix[i - 1][j - 1];
+            } else {
+                matrix[i][j] = Math.min(
+                    matrix[i - 1][j - 1] + 1, // substitution
+                    matrix[i][j - 1] + 1,     // insertion
+                    matrix[i - 1][j] + 1      // deletion
+                );
+            }
+        }
+    }
+    return matrix[b.length][a.length];
+}
+
+function getMatchLevel(q, t) {
+    q = q.toLowerCase();
+    t = t.toLowerCase();
+    if (q === t) return 1;
+    if (t.includes(q)) return 2;
+    if (q.length >= 3) {
+        let maxDist = q.length <= 5 ? 1 : 2;
+        if (levenshtein(q, t) <= maxDist) return 3;
+        let tWords = t.split(/\s+/);
+        for (let word of tWords) {
+            if (word.length >= 3 && levenshtein(q, word) <= maxDist) return 3;
+        }
+    }
+    return Infinity;
+}
+
+function evaluateQuery(q) {
+    let scores = {};
+    let directMatch = {};
+    Object.values(allItems).forEach(item => {
+        let lvl = getMatchLevel(q, item.name);
+        directMatch[item.id] = lvl;
+        scores[item.id] = lvl;
+    });
+
+    recipesData.forEach(recipe => {
+        let bestLvl = Infinity;
+        let itemsInRecipe = [];
+        if (recipe.source && allItems[recipe.source]) itemsInRecipe.push(recipe.source);
+        (recipe.consumed || []).forEach(c => { if(allItems[c.element]) itemsInRecipe.push(c.element); });
+        (recipe.produced || []).forEach(p => { if(allItems[p.element]) itemsInRecipe.push(p.element); });
+
+        itemsInRecipe.forEach(id => {
+            if (directMatch[id] < bestLvl) bestLvl = directMatch[id];
+        });
+
+        if (bestLvl <= 3) {
+            let rLvl = bestLvl + 3;
+            itemsInRecipe.forEach(id => {
+                if (rLvl < scores[id]) scores[id] = rLvl;
+            });
+        }
+    });
+
+    return scores;
+}
+
 export async function renderRecipes(container, currentPath) {
     await loadData();
 
@@ -63,43 +136,55 @@ export async function renderRecipes(container, currentPath) {
 
     function renderResults(query = '') {
         resultsContainer.innerHTML = '';
-        const q = query.toLowerCase();
+        const q = query.trim();
 
-        let results = [];
+        let matchedItems = [];
 
-        // Find items that match the search directly by name
-        let matchedItems = Object.values(allItems).filter(item => {
-            if (currentFilter !== 'all' && item._type !== currentFilter) return false;
-            return item.name.toLowerCase().includes(q);
-        });
+        if (q.length === 0) {
+            matchedItems = Object.values(allItems).filter(item => {
+                return currentFilter === 'all' || item._type === currentFilter;
+            });
+            matchedItems.sort((a, b) => a.name.localeCompare(b.name));
+        } else {
+            let finalScores = {};
+            let fullQueryScores = evaluateQuery(q);
 
-        // Also find items that are involved in a recipe containing the search query
-        // E.g. "wat" -> finds "Water". And "Water" is used in "Electrolyzer", so "Electrolyzer" should also appear.
-        if (q.length > 0) {
-            let matchingIdsByRecipe = new Set();
-            recipesData.forEach(recipe => {
-                let textToSearch = "";
-                if (recipe.source && allItems[recipe.source]) textToSearch += allItems[recipe.source].name + " ";
-                (recipe.consumed || []).forEach(c => { if(allItems[c.element]) textToSearch += allItems[c.element].name + " "; });
-                (recipe.produced || []).forEach(p => { if(allItems[p.element]) textToSearch += allItems[p.element].name + " "; });
-
-                if (textToSearch.toLowerCase().includes(q)) {
-                    if (recipe.source) matchingIdsByRecipe.add(recipe.source);
-                    (recipe.consumed || []).forEach(c => matchingIdsByRecipe.add(c.element));
-                    (recipe.produced || []).forEach(p => matchingIdsByRecipe.add(p.element));
+            Object.keys(allItems).forEach(id => {
+                if (fullQueryScores[id] <= 6) {
+                    finalScores[id] = fullQueryScores[id];
                 }
             });
 
-            Object.values(allItems).forEach(item => {
-                if (currentFilter !== 'all' && item._type !== currentFilter) return;
-                if (matchingIdsByRecipe.has(item.id) && !matchedItems.includes(item)) {
-                    matchedItems.push(item);
+            let words = q.split(/\s+/);
+            if (words.length > 1) {
+                words.forEach((word, wordIndex) => {
+                    let wordScores = evaluateQuery(word);
+                    Object.keys(allItems).forEach(id => {
+                        let wordScore = wordScores[id];
+                        if (wordScore <= 6) {
+                            let adjustedScore = 6 + (wordScore - 1) * words.length + wordIndex + 1;
+                            if (!finalScores[id] || adjustedScore < finalScores[id]) {
+                                finalScores[id] = adjustedScore;
+                            }
+                        }
+                    });
+                });
+            }
+
+            matchedItems = Object.values(allItems).filter(item => {
+                if (currentFilter !== 'all' && item._type !== currentFilter) return false;
+                return finalScores[item.id] !== undefined;
+            });
+
+            matchedItems.sort((a, b) => {
+                let scoreA = finalScores[a.id];
+                let scoreB = finalScores[b.id];
+                if (scoreA !== scoreB) {
+                    return scoreA - scoreB;
                 }
+                return a.name.localeCompare(b.name);
             });
         }
-
-        // Sort alphabetically
-        matchedItems.sort((a, b) => a.name.localeCompare(b.name));
 
         if (matchedItems.length === 0) {
             resultsContainer.innerHTML = `
