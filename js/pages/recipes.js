@@ -107,11 +107,11 @@ function evaluateQuery(q) {
 export async function renderRecipes(container, currentPath) {
     await loadData();
 
-    let filterButtonsHtml = `<button class="filter-btn active" data-filter="all">All</button>`;
+    let filterButtonsHtml = `<button class="filter-btn active" data-filter="all" aria-pressed="true">All</button>`;
     if (configData) {
         configData.forEach(category => {
             if (category.isFilter) {
-                filterButtonsHtml += `\n                <button class="filter-btn" data-filter="${category.id}">${category.label}</button>`;
+                filterButtonsHtml += `\n                <button class="filter-btn" data-filter="${category.id}" aria-pressed="false">${category.label}</button>`;
             }
         });
     }
@@ -119,7 +119,7 @@ export async function renderRecipes(container, currentPath) {
     container.innerHTML = `
         <div class="container" style="display: flex; flex-direction: column; gap: 1rem;">
             <h2>Recipes Database</h2>
-            <input type="text" id="recipe-search" aria-label="Search materials, buildings, or recipes" placeholder="Search materials, buildings, or recipes..." style="padding: 0.5rem; border-radius: 4px; border: 1px solid var(--input-border); background: var(--input-bg); color: var(--input-text);">
+            <input type="search" id="recipe-search" aria-label="Search materials, buildings, or recipes" placeholder="Search materials, buildings, or recipes..." style="padding: 0.5rem; border-radius: 4px; border: 1px solid var(--input-border); background: var(--input-bg); color: var(--input-text);">
             <div id="recipe-filters" style="display: flex; gap: 1rem; flex-wrap: wrap;">
                 ${filterButtonsHtml}
             </div>
@@ -187,13 +187,40 @@ export async function renderRecipes(container, currentPath) {
         }
 
         if (matchedItems.length === 0) {
+            const escapeHtml = (unsafe) => {
+                return unsafe
+                    .replace(/&/g, "&amp;")
+                    .replace(/</g, "&lt;")
+                    .replace(/>/g, "&gt;")
+                    .replace(/"/g, "&quot;")
+                    .replace(/'/g, "&#039;");
+            };
             resultsContainer.innerHTML = `
                 <div style="grid-column: 1 / -1; text-align: center; padding: 3rem 1rem; color: var(--text-color); opacity: 0.7;">
                     <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom: 1rem; opacity: 0.5;"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-                    <p style="font-size: 1.2rem; margin-bottom: 0.5rem;">No results found</p>
-                    <p style="font-size: 0.9rem;">Try adjusting your search term or using a different filter.</p>
+                    <p style="font-size: 1.2rem; margin-bottom: 0.5rem;">No results found ${q ? `for "<strong>${escapeHtml(q)}</strong>"` : ''}</p>
+                    <p style="font-size: 0.9rem; margin-bottom: 1.5rem;">Try adjusting your search term or using a different filter.</p>
+                    <button class="clear-search-btn" style="padding: 0.5rem 1rem; border: 1px solid var(--border-color); background: var(--card-bg); color: var(--text-color); border-radius: 4px; cursor: pointer; transition: background 0.2s;">Clear Search & Filters</button>
                 </div>
             `;
+
+            const clearBtn = resultsContainer.querySelector('.clear-search-btn');
+            if (clearBtn) {
+                clearBtn.addEventListener('click', () => {
+                    searchInput.value = '';
+                    currentFilter = 'all';
+                    filterBtns.forEach(b => {
+                        b.classList.remove('active');
+                        b.setAttribute('aria-pressed', 'false');
+                    });
+                    const allBtn = Array.from(filterBtns).find(b => b.dataset.filter === 'all');
+                    if (allBtn) {
+                        allBtn.classList.add('active');
+                        allBtn.setAttribute('aria-pressed', 'true');
+                    }
+                    renderResults('');
+                });
+            }
             return;
         }
 
@@ -242,8 +269,12 @@ export async function renderRecipes(container, currentPath) {
 
     filterBtns.forEach(btn => {
         btn.addEventListener('click', (e) => {
-            filterBtns.forEach(b => b.classList.remove('active'));
+            filterBtns.forEach(b => {
+                b.classList.remove('active');
+                b.setAttribute('aria-pressed', 'false');
+            });
             e.target.classList.add('active');
+            e.target.setAttribute('aria-pressed', 'true');
             currentFilter = e.target.dataset.filter;
             renderResults(searchInput.value);
         });
@@ -251,7 +282,8 @@ export async function renderRecipes(container, currentPath) {
 
     const style = document.createElement('style');
     style.textContent = `
-        .filter-btn { padding: 0.5rem 1rem; border: 1px solid var(--border-color); background: var(--card-bg); color: var(--text-color); border-radius: 4px; cursor: pointer; }
+        .filter-btn { padding: 0.5rem 1rem; border: 1px solid var(--border-color); background: var(--card-bg); color: var(--text-color); border-radius: 4px; cursor: pointer; transition: background 0.2s; }
+        .filter-btn:hover, .clear-search-btn:hover { background: var(--nav-hover) !important; }
         .filter-btn.active { background: var(--primary-color); color: white; border-color: var(--primary-color); }
         #detail-dialog::backdrop { background: rgba(0,0,0,0.5); }
     `;
