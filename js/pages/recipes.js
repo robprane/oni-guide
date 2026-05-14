@@ -46,7 +46,7 @@ export async function renderRecipes(container, currentPath) {
     container.innerHTML = `
         <div class="container" style="display: flex; flex-direction: column; gap: 1rem;">
             <h2>Recipes Database</h2>
-            <input type="text" id="recipe-search" placeholder="Search materials, buildings, or recipes..." style="padding: 0.5rem; border-radius: 4px; border: 1px solid var(--input-border); background: var(--input-bg); color: var(--input-text);">
+            <input type="text" id="recipe-search" aria-label="Search materials, buildings, or recipes" placeholder="Search materials, buildings, or recipes..." style="padding: 0.5rem; border-radius: 4px; border: 1px solid var(--input-border); background: var(--input-bg); color: var(--input-text);">
             <div id="recipe-filters" style="display: flex; gap: 1rem; flex-wrap: wrap;">
                 ${filterButtonsHtml}
             </div>
@@ -102,7 +102,13 @@ export async function renderRecipes(container, currentPath) {
         matchedItems.sort((a, b) => a.name.localeCompare(b.name));
 
         if (matchedItems.length === 0) {
-            resultsContainer.innerHTML = '<p>No results found.</p>';
+            resultsContainer.innerHTML = `
+                <div style="grid-column: 1 / -1; text-align: center; padding: 3rem 1rem; color: var(--text-color); opacity: 0.7;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom: 1rem; opacity: 0.5;"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                    <p style="font-size: 1.2rem; margin-bottom: 0.5rem;">No results found</p>
+                    <p style="font-size: 0.9rem;">Try adjusting your search term or using a different filter.</p>
+                </div>
+            `;
             return;
         }
 
