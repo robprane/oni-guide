@@ -197,14 +197,14 @@ body {
     height: 20px;
 }
 
-.icon-circle-half {
+/* .icon-circle-half {
     transform: scaleX(-1);
 }
 
 [data-theme="dark"] .icon-circle-half,
 html:not([data-theme]) .icon-circle-half.is-dark {
     transform: scaleX(1);
-}
+} */
 
 main {
     flex: 1;
