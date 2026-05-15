@@ -289,7 +289,9 @@ export class CanvasEngine {
                         // Draw tile centered at intersection (cx * cs, cy * cs)
                         const wx = cx * cs;
                         const wy = cy * cs;
-                        this.ctx.drawImage(this.images.tile, t.cx * 256, t.cy * 256, 256, 256, wx - cs / 2, wy - cs / 2, cs, cs);
+                        const overlap = 0.5; // Slight overlap to prevent subpixel seams
+                        const drawSize = cs + overlap;
+                        this.ctx.drawImage(this.images.tile, t.cx * 256, t.cy * 256, 256, 256, wx - drawSize / 2, wy - drawSize / 2, drawSize, drawSize);
                     }
                 }
             }
@@ -374,7 +376,9 @@ export class CanvasEngine {
                             const t = bitmaskToTile[bitmaskHover];
                             const wx = cx * cs;
                             const wy = cy * cs;
-                            this.ctx.drawImage(this.images.tile, t.cx * 256, t.cy * 256, 256, 256, wx - cs / 2, wy - cs / 2, cs, cs);
+                            const overlap = 0.5;
+                            const drawSize = cs + overlap;
+                            this.ctx.drawImage(this.images.tile, t.cx * 256, t.cy * 256, 256, 256, wx - drawSize / 2, wy - drawSize / 2, drawSize, drawSize);
                         }
                     }
                 }

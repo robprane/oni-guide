@@ -1,5 +1,5 @@
 {
-    "CELL_SIZE": 256,
+    "CELL_SIZE": 32,
     "COLORS": {
         "GRID_LINE": "#444444",
         "BACKGROUND": "#111111",
