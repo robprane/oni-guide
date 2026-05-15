@@ -280,21 +280,34 @@ export class CanvasEngine {
             const endX = Math.ceil(right / cs) + 1;
             const endY = Math.ceil(bottom / cs) + 1;
 
+            this.ctx.save();
+            this.ctx.setTransform(1, 0, 0, 1, 0, 0); // Reset to screen space
+
             // We iterate over intersections (cx, cy)
             for (let cy = startY; cy <= endY; cy++) {
                 for (let cx = startX; cx <= endX; cx++) {
                     const bitmask = this.getSolidBitmask(cx, cy, false);
                     if (bitmask > 0) {
                         const t = bitmaskToTile[bitmask];
-                        // Draw tile centered at intersection (cx * cs, cy * cs)
-                        const wx = cx * cs;
-                        const wy = cy * cs;
-                        const overlap = 0.5; // Slight overlap to prevent subpixel seams
-                        const drawSize = cs + overlap;
-                        this.ctx.drawImage(this.images.tile, t.cx * 256, t.cy * 256, 256, 256, wx - drawSize / 2, wy - drawSize / 2, drawSize, drawSize);
+
+                        const leftWorld = cx * cs - cs / 2;
+                        const topWorld = cy * cs - cs / 2;
+                        const rightWorld = leftWorld + cs;
+                        const bottomWorld = topWorld + cs;
+
+                        const screenLeft = Math.round((leftWorld + this.camera.x) * this.camera.zoom);
+                        const screenTop = Math.round((topWorld + this.camera.y) * this.camera.zoom);
+                        const screenRight = Math.round((rightWorld + this.camera.x) * this.camera.zoom);
+                        const screenBottom = Math.round((bottomWorld + this.camera.y) * this.camera.zoom);
+
+                        const drawW = screenRight - screenLeft;
+                        const drawH = screenBottom - screenTop;
+
+                        this.ctx.drawImage(this.images.tile, t.cx * 256, t.cy * 256, 256, 256, screenLeft, screenTop, drawW, drawH);
                     }
                 }
             }
+            this.ctx.restore();
         } else {
             // Fallback for solid tiles if image not loaded
             for (const [key, cell] of this.grid.cells.entries()) {
@@ -365,6 +378,9 @@ export class CanvasEngine {
                 ];
 
                 if (this.currentTool === 'solid') {
+                    this.ctx.save();
+                    this.ctx.setTransform(1, 0, 0, 1, 0, 0);
+
                     for (const pos of intersections) {
                         const cx = pos.cx;
                         const cy = pos.cy;
@@ -374,13 +390,25 @@ export class CanvasEngine {
                         // If it changed, draw the hovered tile to preview it
                         if (bitmaskHover !== bitmaskBase && bitmaskHover > 0) {
                             const t = bitmaskToTile[bitmaskHover];
-                            const wx = cx * cs;
-                            const wy = cy * cs;
-                            const overlap = 0.5;
-                            const drawSize = cs + overlap;
-                            this.ctx.drawImage(this.images.tile, t.cx * 256, t.cy * 256, 256, 256, wx - drawSize / 2, wy - drawSize / 2, drawSize, drawSize);
+
+                            const leftWorld = cx * cs - cs / 2;
+                            const topWorld = cy * cs - cs / 2;
+                            const rightWorld = leftWorld + cs;
+                            const bottomWorld = topWorld + cs;
+
+                            const screenLeft = Math.round((leftWorld + this.camera.x) * this.camera.zoom);
+                            const screenTop = Math.round((topWorld + this.camera.y) * this.camera.zoom);
+                            const screenRight = Math.round((rightWorld + this.camera.x) * this.camera.zoom);
+                            const screenBottom = Math.round((bottomWorld + this.camera.y) * this.camera.zoom);
+
+                            const drawW = screenRight - screenLeft;
+                            const drawH = screenBottom - screenTop;
+
+                            this.ctx.drawImage(this.images.tile, t.cx * 256, t.cy * 256, 256, 256, screenLeft, screenTop, drawW, drawH);
                         }
                     }
+
+                    this.ctx.restore();
                 }
             } else {
                 const wx = hx * cs;
