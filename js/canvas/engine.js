@@ -33,7 +33,7 @@ export class CanvasEngine {
 
     loadImages() {
         const imageSources = {
-            tile: 'images/tileset/tile.png',
+            tile: 'images/tileset/tilenew.png',
             sweeper: 'images/tileset/autosweeper.png'
         };
 
@@ -225,8 +225,8 @@ export class CanvasEngine {
     }
 
 
-    getSolidBitmask(x, y) {
-        const hoverState = this.hoverGridPos ? { x: this.hoverGridPos.x, y: this.hoverGridPos.y, tool: this.currentTool } : null;
+    getSolidBitmask(cx, cy, includeHover = false) {
+        const hoverState = (includeHover && this.hoverGridPos) ? { x: this.hoverGridPos.x, y: this.hoverGridPos.y, tool: this.currentTool } : null;
 
         const isSolid = (nx, ny) => {
             if (hoverState && hoverState.x === nx && hoverState.y === ny) {
@@ -238,53 +238,84 @@ export class CanvasEngine {
         };
 
         let bitmask = 0;
-        if (isSolid(x, y - 1)) bitmask |= 1; // Top
-        if (isSolid(x + 1, y)) bitmask |= 2; // Right
-        if (isSolid(x, y + 1)) bitmask |= 4; // Bottom
-        if (isSolid(x - 1, y)) bitmask |= 8; // Left
+        if (isSolid(cx - 1, cy - 1)) bitmask |= 1; // NW
+        if (isSolid(cx, cy - 1)) bitmask |= 2; // NE
+        if (isSolid(cx - 1, cy)) bitmask |= 4; // SW
+        if (isSolid(cx, cy)) bitmask |= 8; // SE
         return bitmask;
     }
 
     drawCells() {
         const cs = this.config.CELL_SIZE;
+
         const bitmaskToTile = {
-            0: {cx: 1, cy: 5},
-            1: {cx: 1, cy: 3},
-            2: {cx: 3, cy: 5},
-            3: {cx: 3, cy: 3},
-            4: {cx: 1, cy: 1},
-            5: {cx: 1, cy: 2},
-            6: {cx: 3, cy: 1},
-            7: {cx: 3, cy: 2},
-            8: {cx: 5, cy: 5},
-            9: {cx: 5, cy: 3},
-            10: {cx: 4, cy: 5},
-            11: {cx: 4, cy: 3},
-            12: {cx: 5, cy: 1},
-            13: {cx: 5, cy: 2},
-            14: {cx: 4, cy: 1},
-            15: {cx: 4, cy: 2}
+            0: {cx: 0, cy: 3},
+            1: {cx: 3, cy: 3},
+            2: {cx: 0, cy: 2},
+            3: {cx: 1, cy: 2},
+            4: {cx: 0, cy: 0},
+            5: {cx: 3, cy: 2},
+            6: {cx: 2, cy: 3},
+            7: {cx: 3, cy: 1},
+            8: {cx: 1, cy: 3},
+            9: {cx: 0, cy: 1},
+            10: {cx: 1, cy: 0},
+            11: {cx: 2, cy: 2},
+            12: {cx: 3, cy: 0},
+            13: {cx: 2, cy: 0},
+            14: {cx: 1, cy: 1},
+            15: {cx: 2, cy: 1}
         };
 
-        // Draw entities
-        for (const [key, cell] of this.grid.cells.entries()) {
-            const [x, y] = key.split(',').map(Number);
-            const wx = x * cs;
-            const wy = y * cs;
 
-            if (cell.type === 'solid') {
-                if (this.images.tile && this.images.tile.complete) {
-                    const bitmask = this.getSolidBitmask(x, y);
-                    const t = bitmaskToTile[bitmask];
-                    this.ctx.drawImage(this.images.tile, t.cx * 200 - 20, t.cy * 200 - 20, 240, 240, wx - cs * 0.1, wy - cs * 0.1, cs * 1.2, cs * 1.2);
-                } else {
+        // Draw marching squares for solid tiles
+        if (this.images.tile && this.images.tile.complete) {
+            const left = -this.camera.x;
+            const top = -this.camera.y;
+            const right = left + this.canvas.width / this.camera.zoom;
+            const bottom = top + this.canvas.height / this.camera.zoom;
+
+            const startX = Math.floor(left / cs) - 1;
+            const startY = Math.floor(top / cs) - 1;
+            const endX = Math.ceil(right / cs) + 1;
+            const endY = Math.ceil(bottom / cs) + 1;
+
+            // We iterate over intersections (cx, cy)
+            for (let cy = startY; cy <= endY; cy++) {
+                for (let cx = startX; cx <= endX; cx++) {
+                    const bitmask = this.getSolidBitmask(cx, cy, false);
+                    if (bitmask > 0) {
+                        const t = bitmaskToTile[bitmask];
+                        // Draw tile centered at intersection (cx * cs, cy * cs)
+                        const wx = cx * cs;
+                        const wy = cy * cs;
+                        this.ctx.drawImage(this.images.tile, t.cx * 256, t.cy * 256, 256, 256, wx - cs / 2, wy - cs / 2, cs, cs);
+                    }
+                }
+            }
+        } else {
+            // Fallback for solid tiles if image not loaded
+            for (const [key, cell] of this.grid.cells.entries()) {
+                const [x, y] = key.split(',').map(Number);
+                if (cell.type === 'solid') {
+                    const wx = x * cs;
+                    const wy = y * cs;
                     this.ctx.fillStyle = this.config.COLORS.SOLID_TILE;
                     this.ctx.fillRect(wx, wy, cs, cs);
                     this.ctx.strokeStyle = '#000';
                     this.ctx.lineWidth = 2;
                     this.ctx.strokeRect(wx, wy, cs, cs);
                 }
-            } else if (cell.type === 'sweeper') {
+            }
+        }
+
+        // Draw entities (other than solid tiles)
+        for (const [key, cell] of this.grid.cells.entries()) {
+            const [x, y] = key.split(',').map(Number);
+            const wx = x * cs;
+            const wy = y * cs;
+
+            if (cell.type === 'sweeper') {
                 const orientation = cell.meta?.orientation || 'horizontal';
                 if (this.images.sweeper && this.images.sweeper.complete) {
                     this.ctx.save();
@@ -305,8 +336,6 @@ export class CanvasEngine {
                         this.ctx.fillRect(wx, wy - cs, cs, cs * 3);
                     }
                 }
-            } else if (cell.type === 'sweeper_part') {
-                // Not drawn explicitly, it's drawn by the center 'sweeper' cell
             } else if (cell.type === 'pipe') {
                 this.ctx.fillStyle = this.config.COLORS.PIPE || '#AAAAAA';
                 this.ctx.fillRect(wx + cs*0.25, wy + cs*0.25, cs*0.5, cs*0.5);
@@ -319,27 +348,44 @@ export class CanvasEngine {
             }
         }
 
-
-
-        // Draw hover preview
-        if (this.hoverGridPos && this.currentTool === 'solid') {
+        // Draw hover preview for solid tool
+        if (this.hoverGridPos && (this.currentTool === 'solid' || this.currentTool === 'erase')) {
             const hx = this.hoverGridPos.x;
             const hy = this.hoverGridPos.y;
-            const wx = hx * cs;
-            const wy = hy * cs;
 
             this.ctx.globalAlpha = 0.5; 
             if (this.images.tile && this.images.tile.complete) {
-                const bitmask = this.getSolidBitmask(hx, hy);
-                const t = bitmaskToTile[bitmask];
-                this.ctx.drawImage(this.images.tile, t.cx * 200 - 20, t.cy * 200 - 20, 240, 240, wx - cs * 0.1, wy - cs * 0.1, cs * 1.2, cs * 1.2);
+                const intersections = [
+                    {cx: hx, cy: hy},
+                    {cx: hx + 1, cy: hy},
+                    {cx: hx, cy: hy + 1},
+                    {cx: hx + 1, cy: hy + 1}
+                ];
+
+                if (this.currentTool === 'solid') {
+                    for (const pos of intersections) {
+                        const cx = pos.cx;
+                        const cy = pos.cy;
+                        const bitmaskBase = this.getSolidBitmask(cx, cy, false);
+                        const bitmaskHover = this.getSolidBitmask(cx, cy, true);
+
+                        // If it changed, draw the hovered tile to preview it
+                        if (bitmaskHover !== bitmaskBase && bitmaskHover > 0) {
+                            const t = bitmaskToTile[bitmaskHover];
+                            const wx = cx * cs;
+                            const wy = cy * cs;
+                            this.ctx.drawImage(this.images.tile, t.cx * 256, t.cy * 256, 256, 256, wx - cs / 2, wy - cs / 2, cs, cs);
+                        }
+                    }
+                }
             } else {
+                const wx = hx * cs;
+                const wy = hy * cs;
                 this.ctx.fillStyle = this.config.COLORS.SOLID_TILE;
                 this.ctx.fillRect(wx, wy, cs, cs);
             }
             this.ctx.globalAlpha = 1.0;
         }
-
 
         // Draw sweeper hover preview
         if (this.hoverGridPos && this.currentTool === 'sweeper') {
