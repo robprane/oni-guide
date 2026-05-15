@@ -426,8 +426,26 @@ export class CanvasEngine {
                             const drawH = screenBottom - screenTop;
 
                             if (!canPlace) {
+                                // Draw the base tile first
+                                this.ctx.drawImage(this.images.tile, t.cx * 256, t.cy * 256, 256, 256, screenLeft, screenTop, drawW, drawH);
+
+                                // Clip to the exact hovered cell (hx, hy) to avoid bleeding into adjacent cells
+                                const targetLeft = hx * cs;
+                                const targetTop = hy * cs;
+                                const screenTargetLeft = Math.round((targetLeft + this.camera.x) * this.camera.zoom);
+                                const screenTargetTop = Math.round((targetTop + this.camera.y) * this.camera.zoom);
+                                const screenTargetW = Math.round((targetLeft + cs + this.camera.x) * this.camera.zoom) - screenTargetLeft;
+                                const screenTargetH = Math.round((targetTop + cs + this.camera.y) * this.camera.zoom) - screenTargetTop;
+
+                                this.ctx.save();
+                                this.ctx.beginPath();
+                                this.ctx.rect(screenTargetLeft, screenTargetTop, screenTargetW, screenTargetH);
+                                this.ctx.clip();
+
                                 const tinted = this.tintImage(this.images.tile, 'red', t.cx * 256, t.cy * 256, 256, 256);
                                 this.ctx.drawImage(tinted, 0, 0, 256, 256, screenLeft, screenTop, drawW, drawH);
+
+                                this.ctx.restore();
                             } else {
                                 this.ctx.drawImage(this.images.tile, t.cx * 256, t.cy * 256, 256, 256, screenLeft, screenTop, drawW, drawH);
                             }
@@ -453,7 +471,15 @@ export class CanvasEngine {
             const wy = hy * cs;
             const orientation = this.currentOrientation || 'horizontal';
 
-            const canPlace = this.grid.canPlace(hx, hy, 'sweeper', orientation);
+            let canPlace = this.grid.canPlace(hx, hy, 'sweeper', orientation);
+
+            // Check if we are hovering exactly over an existing sweeper with the same orientation
+            if (!canPlace) {
+                const existingCenter = this.grid.getCell(hx, hy);
+                if (existingCenter && existingCenter.type === 'sweeper' && existingCenter.meta.orientation === orientation) {
+                    canPlace = true;
+                }
+            }
 
             this.ctx.globalAlpha = 0.5;
             if (this.images.sweeper && this.images.sweeper.complete) {
