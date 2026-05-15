@@ -12,6 +12,9 @@ export class CanvasEngine {
         this.isDragging = false;
         this.lastMouse = { x: 0, y: 0 };
 
+        this.tintCanvas = document.createElement('canvas');
+        this.tintCtx = this.tintCanvas.getContext('2d');
+
         this.grid = new Grid(this);
         this.simulation = new PipeSimulation(this.grid, this.config);
         this.currentTool = null;
@@ -33,7 +36,7 @@ export class CanvasEngine {
 
     loadImages() {
         const imageSources = {
-            tile: 'images/tileset/tilenew.png',
+            tile: 'images/tileset/tile.png',
             sweeper: 'images/tileset/autosweeper.png'
         };
 
@@ -154,24 +157,40 @@ export class CanvasEngine {
         const cell = this.grid.getCell(gridPos.x, gridPos.y);
         if (this.currentTool === 'erase') {
             if (cell) this.grid.removeCell(gridPos.x, gridPos.y, cell.type);
-        // } else if (this.currentTool === 'spawn_liquid') {
-        //     this.simulation.spawnLiquid(gridPos.x, gridPos.y);
-        // } else if (this.currentTool === 'bridge') {
-        //     // A bridge spans 3 tiles horizontally for now: IN, PIPE, OUT
-        //     this.grid.setCell(gridPos.x, gridPos.y, 'bridge_in');
-        //     this.grid.setCell(gridPos.x + 1, gridPos.y, 'pipe');
-        //     this.grid.setCell(gridPos.x + 2, gridPos.y, 'bridge_out');
-        // } else if (cell?.type === this.currentTool) { 
-        //     this.grid.removeCell(gridPos.x, gridPos.y, cell.type); 
         } else if (this.currentTool === 'sweeper') {
-            this.grid.setCell(gridPos.x, gridPos.y, this.currentTool, { orientation: this.currentOrientation || 'horizontal' });
+            const orientation = this.currentOrientation || 'horizontal';
+            if (this.grid.canPlace(gridPos.x, gridPos.y, this.currentTool, orientation)) {
+                this.grid.setCell(gridPos.x, gridPos.y, this.currentTool, { orientation });
+            }
         } else {
-            this.grid.setCell(gridPos.x, gridPos.y, this.currentTool);
+            if (this.grid.canPlace(gridPos.x, gridPos.y, this.currentTool)) {
+                this.grid.setCell(gridPos.x, gridPos.y, this.currentTool);
+            }
         }
     }
 
     setTool(toolName) {
         this.currentTool = toolName;
+    }
+
+    tintImage(image, color, x = 0, y = 0, w = image.width, h = image.height) {
+        this.tintCanvas.width = w;
+        this.tintCanvas.height = h;
+
+        this.tintCtx.clearRect(0, 0, w, h);
+
+        // Draw the original image snippet
+        this.tintCtx.drawImage(image, x, y, w, h, 0, 0, w, h);
+
+        // Multiply by red color
+        this.tintCtx.globalCompositeOperation = 'source-atop';
+        this.tintCtx.fillStyle = color;
+        this.tintCtx.fillRect(0, 0, w, h);
+
+        // Reset state
+        this.tintCtx.globalCompositeOperation = 'source-over';
+
+        return this.tintCanvas;
     }
 
     draw() {
@@ -368,7 +387,9 @@ export class CanvasEngine {
             const hx = this.hoverGridPos.x;
             const hy = this.hoverGridPos.y;
 
+            const canPlace = this.currentTool === 'erase' || this.grid.canPlace(hx, hy, 'solid');
             this.ctx.globalAlpha = 0.5; 
+
             if (this.images.tile && this.images.tile.complete) {
                 const intersections = [
                     {cx: hx, cy: hy},
@@ -404,7 +425,12 @@ export class CanvasEngine {
                             const drawW = screenRight - screenLeft;
                             const drawH = screenBottom - screenTop;
 
-                            this.ctx.drawImage(this.images.tile, t.cx * 256, t.cy * 256, 256, 256, screenLeft, screenTop, drawW, drawH);
+                            if (!canPlace) {
+                                const tinted = this.tintImage(this.images.tile, 'red', t.cx * 256, t.cy * 256, 256, 256);
+                                this.ctx.drawImage(tinted, 0, 0, 256, 256, screenLeft, screenTop, drawW, drawH);
+                            } else {
+                                this.ctx.drawImage(this.images.tile, t.cx * 256, t.cy * 256, 256, 256, screenLeft, screenTop, drawW, drawH);
+                            }
                         }
                     }
 
@@ -413,7 +439,7 @@ export class CanvasEngine {
             } else {
                 const wx = hx * cs;
                 const wy = hy * cs;
-                this.ctx.fillStyle = this.config.COLORS.SOLID_TILE;
+                this.ctx.fillStyle = canPlace ? this.config.COLORS.SOLID_TILE : 'red';
                 this.ctx.fillRect(wx, wy, cs, cs);
             }
             this.ctx.globalAlpha = 1.0;
@@ -427,6 +453,8 @@ export class CanvasEngine {
             const wy = hy * cs;
             const orientation = this.currentOrientation || 'horizontal';
 
+            const canPlace = this.grid.canPlace(hx, hy, 'sweeper', orientation);
+
             this.ctx.globalAlpha = 0.5;
             if (this.images.sweeper && this.images.sweeper.complete) {
                 this.ctx.save();
@@ -434,10 +462,17 @@ export class CanvasEngine {
                 if (orientation === 'vertical') {
                     this.ctx.rotate(Math.PI / 2);
                 }
-                this.ctx.drawImage(this.images.sweeper, -cs * 1.5, -cs * 1.5, cs * 3, cs * 3);
+
+                if (!canPlace) {
+                    const tinted = this.tintImage(this.images.sweeper, 'red');
+                    this.ctx.drawImage(tinted, -cs * 1.5, -cs * 1.5, cs * 3, cs * 3);
+                } else {
+                    this.ctx.drawImage(this.images.sweeper, -cs * 1.5, -cs * 1.5, cs * 3, cs * 3);
+                }
+
                 this.ctx.restore();
             } else {
-                this.ctx.fillStyle = this.config.COLORS.SWEEPER || 'orange';
+                this.ctx.fillStyle = canPlace ? (this.config.COLORS.SWEEPER || 'orange') : 'red';
                 if (orientation === 'horizontal') {
                     this.ctx.fillRect(wx - cs, wy, cs * 3, cs);
                 } else {
