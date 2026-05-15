@@ -8,6 +8,31 @@ export class Grid {
         return `${x},${y}`;
     }
 
+    canPlace(x, y, type, orientation = 'horizontal') {
+        if (type === 'sweeper') {
+            const parts = [];
+            if (orientation === 'horizontal') {
+                parts.push({px: x - 1, py: y});
+                parts.push({px: x, py: y});
+                parts.push({px: x + 1, py: y});
+            } else {
+                parts.push({px: x, py: y - 1});
+                parts.push({px: x, py: y});
+                parts.push({px: x, py: y + 1});
+            }
+            // Check if any part is occupied
+            for (const p of parts) {
+                if (this.getCell(p.px, p.py)) {
+                    return false;
+                }
+            }
+            return true;
+        } else {
+            // For other structures, just check the single cell
+            return !this.getCell(x, y);
+        }
+    }
+
     setCell(x, y, type, meta = {}) {
         if (type === 'sweeper') {
             const orientation = meta.orientation || 'horizontal';
