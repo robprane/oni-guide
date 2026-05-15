@@ -5,6 +5,10 @@
 **Learning:** Using `rotate(180deg)` combined with `scaleX(-1)` on a vertically symmetrical icon results in zero visual change, breaking visual indicator logic for dark/light themes. `html:not([data-theme])` effectively targets the 'system' default theme fallback gracefully compared to explicit `[data-theme="system"]`.
 **Action:** Applied `transform: scaleX(-1)` to flip the icon state, and utilized `html:not([data-theme])` for system theme icon styling without polluting the DOM. Moved settings to a `<dialog>` modal to declutter the navbar and support mobile devices better.
 
-## $(date +%Y-%m-%d) - Actionable Empty States
+## 2024-05-15 - Actionable Empty States
 **Learning:** Users often get trapped in "No results found" states when complex filter/search combinations are active. Telling them to "try adjusting" isn't enough.
 **Action:** Added an explicit "Clear Search & Filters" recovery button to the empty state in the recipes view that acts as a quick reset, improving task recovery and preventing frustration. Also improved search a11y by switching to `type="search"` for native clear functionality and adding `aria-pressed` to filter buttons.
+
+## 2024-05-15 - Screen Reader Redundancy for Adjacent Labels
+**Learning:** Images with `alt` text that duplicate the immediately adjacent text label cause screen readers to announce the information twice. Furthermore, images missing an `alt` attribute altogether may cause screen readers to read the raw image filename as a fallback (e.g., "PetroleumGenerator.png"), leading to a confusing and noisy user experience.
+**Action:** When an image serves purely as a visual icon and its meaning is fully conveyed by adjacent text, set `alt="" aria-hidden="true"` to explicitly hide it from assistive technologies. Ensure all non-decorative images have descriptive `alt` text.

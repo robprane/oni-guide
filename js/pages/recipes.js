@@ -246,7 +246,7 @@ export async function renderRecipes(container, currentPath) {
             card.onblur = () => card.style.transform = 'scale(1)';
 
             card.innerHTML = `
-                <img src="/images/${item.image}" alt="${item.name}" style="width: 64px; height: 64px; object-fit: contain; margin-bottom: 0.5rem;" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\\'http://www.w3.org/2000/svg\\' width=\\'64\\' height=\\'64\\'><rect width=\\'64\\' height=\\'64\\' fill=\\'%23333\\'/><text x=\\'32\\' y=\\'32\\' fill=\\'white\\' text-anchor=\\'middle\\' dominant-baseline=\\'middle\\'>?</text></svg>'">
+                <img src="/images/${item.image}" alt="" aria-hidden="true" style="width: 64px; height: 64px; object-fit: contain; margin-bottom: 0.5rem;" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\\'http://www.w3.org/2000/svg\\' width=\\'64\\' height=\\'64\\'><rect width=\\'64\\' height=\\'64\\' fill=\\'%23333\\'/><text x=\\'32\\' y=\\'32\\' fill=\\'white\\' text-anchor=\\'middle\\' dominant-baseline=\\'middle\\'>?</text></svg>'">
                 <h3 style="margin: 0; font-size: 1.1rem;">${item.name}</h3>
                 <span style="font-size: 0.8rem; color: #888; text-transform: capitalize;">${item._type}</span>
             `;
@@ -380,7 +380,7 @@ function showDetailModal(item) {
     let html = `
         <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
             <div style="display: flex; align-items: center; gap: 1rem;">
-                <img src="/images/${item.image}" alt="${item.name}" style="width: 64px; height: 64px; object-fit: contain;">
+                <img src="/images/${item.image}" alt="" aria-hidden="true" style="width: 64px; height: 64px; object-fit: contain;">
                 <div>
                     <h2 style="margin: 0;">${item.name}</h2>
                     <span style="font-size: 0.9rem; color: #888; text-transform: capitalize;">${item._type}</span>
@@ -415,14 +415,14 @@ function showDetailModal(item) {
 
         if (r.source) {
             let src = allItems[r.source];
-            rHtml += `<div style="display:flex; align-items:center; gap:0.2rem;"><img src="/images/${src ? src.image : ''}" style="width:1.5em; height:1.5em;" title="${src ? src.name : r.source}"> <strong>${src ? src.name : r.source}</strong></div>`;
+            rHtml += `<div style="display:flex; align-items:center; gap:0.2rem;"><img src="/images/${src ? src.image : ''}" alt="" aria-hidden="true" style="width:1.5em; height:1.5em;" title="${src ? src.name : r.source}"> <strong>${src ? src.name : r.source}</strong></div>`;
         }
 
         if (r.consumed && r.consumed.length > 0) {
             rHtml += `<span style="color:#888;">consumes</span>`;
             r.consumed.forEach(c => {
                 let el = allItems[c.element];
-                rHtml += `<div style="display:flex; align-items:center; gap:0.2rem; background: rgba(255,0,0,0.1); padding: 0.2rem 0.4rem; border-radius: .25em;"><img src="/images/${el ? el.image : ''}" style="width:auto; height:1em;" title="${el ? el.name : c.element}"> ${formatAmount(c)} ${el ? el.name : c.element}</div>`;
+                rHtml += `<div style="display:flex; align-items:center; gap:0.2rem; background: rgba(255,0,0,0.1); padding: 0.2rem 0.4rem; border-radius: .25em;"><img src="/images/${el ? el.image : ''}" alt="" aria-hidden="true" style="width:auto; height:1em;" title="${el ? el.name : c.element}"> ${formatAmount(c)} ${el ? el.name : c.element}</div>`;
             });
         }
 
@@ -430,7 +430,7 @@ function showDetailModal(item) {
             rHtml += `<span style="color:#888;">produces</span>`;
             r.produced.forEach(p => {
                 let el = allItems[p.element];
-                rHtml += `<div style="display:flex; align-items:center; gap:0.2rem; background: rgba(0,255,0,0.1); padding: 0.2rem 0.4rem; border-radius: .25em;"><img src="/images/${el ? el.image : ''}" style="width:auto; height:1em;" title="${el ? el.name : p.element}"> ${formatAmount(p)} ${el ? el.name : p.element}</div>`;
+                rHtml += `<div style="display:flex; align-items:center; gap:0.2rem; background: rgba(0,255,0,0.1); padding: 0.2rem 0.4rem; border-radius: .25em;"><img src="/images/${el ? el.image : ''}" alt="" aria-hidden="true" style="width:auto; height:1em;" title="${el ? el.name : p.element}"> ${formatAmount(p)} ${el ? el.name : p.element}</div>`;
             });
         }
 
