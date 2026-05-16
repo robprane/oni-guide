@@ -9,8 +9,22 @@ export class CanvasEngine {
         this.config = config;
 
         this.camera = { x: 0, y: 0, zoom: 1 };
-        this.isDragging = false;
-        this.lastMouse = { x: 0, y: 0 };
+
+        // Keyboard panning state
+        this.keys = { w: false, a: false, s: false, d: false, ArrowUp: false, ArrowLeft: false, ArrowDown: false, ArrowRight: false };
+
+        // Pointer state
+        this.pointers = new Map(); // Keep track of active pointers
+        this.isPanning = false; // Are we panning with middle-click/shift+drag or 2 fingers?
+        this.wasMultiTouch = false; // If there were 2 fingers, stay in pan mode until all are released
+        this.lastPanPoint = { x: 0, y: 0 };
+        this.initialPinchDistance = 0;
+        this.initialPinchZoom = 1;
+
+        // Deferred drawing state
+        this.pointerDownEvent = null;
+        this.pointerDownPoint = null;
+        this.isDrawingDrag = false;
 
         this.tintCanvas = document.createElement('canvas');
         this.tintCtx = this.tintCanvas.getContext('2d');
@@ -52,6 +66,8 @@ export class CanvasEngine {
 
     destroy() {
         window.removeEventListener('resize', this.resizeHandler);
+        if (this.handleKeyDown) window.removeEventListener('keydown', this.handleKeyDown);
+        if (this.handleKeyUp) window.removeEventListener('keyup', this.handleKeyUp);
         if (this.animationFrameId) {
             cancelAnimationFrame(this.animationFrameId);
         }
@@ -66,23 +82,61 @@ export class CanvasEngine {
     }
 
     setupEvents() {
-        this.canvas.addEventListener('mousedown', (e) => {
-            if (e.button === 1 || (e.button === 0 && e.shiftKey)) {
-                // Middle click or Shift+Left click to pan
-                this.isDragging = true;
-                this.lastMouse = { x: e.clientX, y: e.clientY };
+        // Disable native touch actions (pan, pinch zoom) on the canvas
+        this.canvas.style.touchAction = 'none';
+
+        // Helper to get midpoint and distance of 2 pointers
+        const getPinchData = () => {
+            if (this.pointers.size < 2) return null;
+            const pts = Array.from(this.pointers.values());
+            const dx = pts[0].x - pts[1].x;
+            const dy = pts[0].y - pts[1].y;
+            const distance = Math.sqrt(dx * dx + dy * dy);
+            const midX = (pts[0].x + pts[1].x) / 2;
+            const midY = (pts[0].y + pts[1].y) / 2;
+            return { distance, midX, midY };
+        };
+
+        this.canvas.addEventListener('pointerdown', (e) => {
+            this.canvas.setPointerCapture(e.pointerId);
+            this.pointers.set(e.pointerId, { x: e.clientX, y: e.clientY });
+
+            if (this.pointers.size === 2) {
+                this.isPanning = true;
+                this.wasMultiTouch = true;
+                this.pointerDownEvent = null;
+                this.pointerDownPoint = null;
+                const pinch = getPinchData();
+                this.initialPinchDistance = pinch.distance;
+                this.initialPinchZoom = this.camera.zoom;
+                this.lastPanPoint = { x: pinch.midX, y: pinch.midY };
                 this.canvas.style.cursor = 'grabbing';
-            } else if (e.button === 0 && this.currentTool) {
-                this.useTool(e);
+            } else if (this.pointers.size === 1) {
+                if (e.button === 1 || (e.button === 0 && e.shiftKey)) {
+                    // Middle click or Shift+Left click to pan (Mouse)
+                    this.isPanning = true;
+                    this.lastPanPoint = { x: e.clientX, y: e.clientY };
+                    this.canvas.style.cursor = 'grabbing';
+                } else if (e.button === 0 && this.currentTool && !this.wasMultiTouch) {
+                    // Defer drawing for touch events, or apply immediately for mouse
+                    if (e.pointerType === 'touch') {
+                        this.pointerDownEvent = e;
+                        this.pointerDownPoint = { x: e.clientX, y: e.clientY };
+                        this.isDrawingDrag = false;
+                    } else {
+                        this.useTool(e);
+                        this.isDrawingDrag = true;
+                    }
+                }
             }
         });
 
-        this.canvas.addEventListener('mouseleave', () => {
-            this.hoverGridPos = null;
-            this.needsRedraw = true;
-        });
+        this.canvas.addEventListener('pointermove', (e) => {
+            if (this.pointers.has(e.pointerId)) {
+                this.pointers.set(e.pointerId, { x: e.clientX, y: e.clientY });
+            }
 
-        this.canvas.addEventListener('mousemove', (e) => {
+            // Always update hover
             const world = this.screenToWorld(e.clientX, e.clientY);
             const gridPos = this.worldToGrid(world.x, world.y);
 
@@ -91,22 +145,97 @@ export class CanvasEngine {
                 this.needsRedraw = true;
             }
 
-            if (this.isDragging) {
-                const dx = e.clientX - this.lastMouse.x;
-                const dy = e.clientY - this.lastMouse.y;
+            if (this.pointers.size === 2) {
+                // Pinch zoom & pan
+                const pinch = getPinchData();
+
+                // Panning
+                const dx = pinch.midX - this.lastPanPoint.x;
+                const dy = pinch.midY - this.lastPanPoint.y;
                 this.camera.x += dx / this.camera.zoom;
                 this.camera.y += dy / this.camera.zoom;
-                this.lastMouse = { x: e.clientX, y: e.clientY };
+                this.lastPanPoint = { x: pinch.midX, y: pinch.midY };
+
+                // Zooming
+                const rect = this.canvas.getBoundingClientRect();
+                const mouseX = pinch.midX - rect.left;
+                const mouseY = pinch.midY - rect.top;
+
+                const worldX = (mouseX / this.camera.zoom) - this.camera.x;
+                const worldY = (mouseY / this.camera.zoom) - this.camera.y;
+
+                const zoomFactor = pinch.distance / this.initialPinchDistance;
+                this.camera.zoom = this.initialPinchZoom * zoomFactor;
+                this.camera.zoom = Math.max(0.2, Math.min(this.camera.zoom, 5));
+
+                this.camera.x = (mouseX / this.camera.zoom) - worldX;
+                this.camera.y = (mouseY / this.camera.zoom) - worldY;
+
                 this.needsRedraw = true;
-            } else if (e.buttons === 1 && this.currentTool && !e.shiftKey) {
+
+            } else if (this.isPanning) {
+                // One finger/mouse pan
+                if (this.pointers.size === 1) {
+                    const dx = e.clientX - this.lastPanPoint.x;
+                    const dy = e.clientY - this.lastPanPoint.y;
+                    this.camera.x += dx / this.camera.zoom;
+                    this.camera.y += dy / this.camera.zoom;
+                    this.lastPanPoint = { x: e.clientX, y: e.clientY };
+                    this.needsRedraw = true;
+                }
+            } else if (this.pointers.size === 1 && e.buttons === 1 && this.currentTool && !e.shiftKey && !this.wasMultiTouch) {
                 // Drag to draw
-                this.useTool(e);
+                if (e.pointerType === 'touch' && this.pointerDownPoint && !this.isDrawingDrag) {
+                    const dx = e.clientX - this.pointerDownPoint.x;
+                    const dy = e.clientY - this.pointerDownPoint.y;
+                    const dist = Math.sqrt(dx * dx + dy * dy);
+                    // Threshold to start drawing on touch (distinguishes from tapping or intent to pan)
+                    if (dist > 10) {
+                        this.isDrawingDrag = true;
+                        if (this.pointerDownEvent) {
+                            this.useTool(this.pointerDownEvent); // draw at start point
+                        }
+                        this.useTool(e); // draw at current point
+                    }
+                } else if (this.isDrawingDrag) {
+                    this.useTool(e);
+                }
             }
         });
 
-        window.addEventListener('mouseup', () => {
-            this.isDragging = false;
-            this.canvas.style.cursor = 'default';
+        const handlePointerEnd = (e) => {
+            this.pointers.delete(e.pointerId);
+
+            // Check if it was a single tap without dragging or multi-touch
+            if (this.pointers.size === 0 && this.pointerDownEvent && !this.isDrawingDrag && !this.wasMultiTouch && this.currentTool) {
+                this.useTool(this.pointerDownEvent);
+            }
+
+            if (this.pointers.size < 2) {
+                // If 1 finger is left after pinch, update lastPanPoint to avoid jumping
+                if (this.pointers.size === 1 && this.isPanning) {
+                    const remainingPointer = Array.from(this.pointers.values())[0];
+                    this.lastPanPoint = { x: remainingPointer.x, y: remainingPointer.y };
+                }
+            }
+
+            if (this.pointers.size === 0) {
+                this.isPanning = false;
+                this.wasMultiTouch = false;
+                this.pointerDownEvent = null;
+                this.pointerDownPoint = null;
+                this.isDrawingDrag = false;
+                this.canvas.style.cursor = 'default';
+            }
+        };
+
+        this.canvas.addEventListener('pointerup', handlePointerEnd);
+        this.canvas.addEventListener('pointercancel', handlePointerEnd);
+
+        this.canvas.addEventListener('pointerleave', (e) => {
+            handlePointerEnd(e);
+            this.hoverGridPos = null;
+            this.needsRedraw = true;
         });
 
         this.canvas.addEventListener('wheel', (e) => {
@@ -134,6 +263,32 @@ export class CanvasEngine {
 
         // Prevent context menu
         this.canvas.addEventListener('contextmenu', e => e.preventDefault());
+
+        // Keyboard panning events
+        const handleKeyDown = (e) => {
+            if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+            if (e.key in this.keys) {
+                this.keys[e.key] = true;
+            } else if (e.key.toLowerCase() in this.keys) {
+                this.keys[e.key.toLowerCase()] = true;
+            }
+        };
+
+        const handleKeyUp = (e) => {
+            if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+            if (e.key in this.keys) {
+                this.keys[e.key] = false;
+            } else if (e.key.toLowerCase() in this.keys) {
+                this.keys[e.key.toLowerCase()] = false;
+            }
+        };
+
+        window.addEventListener('keydown', handleKeyDown);
+        window.addEventListener('keyup', handleKeyUp);
+
+        // Cleanup handlers stored for destroy
+        this.handleKeyDown = handleKeyDown;
+        this.handleKeyUp = handleKeyUp;
     }
 
     screenToWorld(screenX, screenY) {
@@ -599,6 +754,18 @@ export class CanvasEngine {
 
     loop(timestamp) {
         this.simulation.update(timestamp);
+
+        // Handle keyboard panning
+        const panSpeed = 10 / this.camera.zoom;
+        let panned = false;
+        if (this.keys.w || this.keys.ArrowUp) { this.camera.y += panSpeed; panned = true; }
+        if (this.keys.s || this.keys.ArrowDown) { this.camera.y -= panSpeed; panned = true; }
+        if (this.keys.a || this.keys.ArrowLeft) { this.camera.x += panSpeed; panned = true; }
+        if (this.keys.d || this.keys.ArrowRight) { this.camera.x -= panSpeed; panned = true; }
+
+        if (panned) {
+            this.needsRedraw = true;
+        }
 
         if (this.needsRedraw) {
             this.draw();
