@@ -1,0 +1,20 @@
+[
+  {
+    "id": "cool",
+    "name": "cool",
+    "image": "cool.png",
+    "category": "special"
+  },
+  {
+    "id": "emit",
+    "name": "emit",
+    "image": "emit.png",
+    "category": "special"
+  },
+  {
+    "id": "heat",
+    "name": "heat",
+    "image": "heat.png",
+    "category": "special"
+  }
+]

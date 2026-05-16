@@ -1,0 +1,156 @@
+[
+  {
+    "id": "aluminum_gas",
+    "name": "Aluminum Gas",
+    "image": "AluminumGas.png",
+    "category": "gas"
+  },
+  {
+    "id": "carbon_dioxide",
+    "name": "Carbon Dioxide",
+    "image": "CarbonDioxide.png",
+    "category": "gas"
+  },
+  {
+    "id": "carbon_gas",
+    "name": "Carbon Gas",
+    "image": "CarbonGas.png",
+    "category": "gas"
+  },
+  {
+    "id": "chlorine",
+    "name": "Chlorine",
+    "image": "Chlorine.png",
+    "category": "gas"
+  },
+  {
+    "id": "chlorine_gas",
+    "name": "Chlorine Gas",
+    "image": "ChlorineGas.png",
+    "category": "gas"
+  },
+  {
+    "id": "cobalt_gas",
+    "name": "Cobalt Gas",
+    "image": "CobaltGas.png",
+    "category": "gas"
+  },
+  {
+    "id": "copper_gas",
+    "name": "Copper Gas",
+    "image": "CopperGas.png",
+    "category": "gas"
+  },
+  {
+    "id": "ethanol_gas",
+    "name": "Ethanol Gas",
+    "image": "EthanolGas.png",
+    "category": "gas"
+  },
+  {
+    "id": "gold_gas",
+    "name": "Gold Gas",
+    "image": "GoldGas.png",
+    "category": "gas"
+  },
+  {
+    "id": "hydrogen",
+    "name": "Hydrogen",
+    "image": "Hydrogen.png",
+    "category": "gas"
+  },
+  {
+    "id": "iron_gas",
+    "name": "Iron Gas",
+    "image": "IronGas.png",
+    "category": "gas"
+  },
+  {
+    "id": "lead_gas",
+    "name": "Lead Gas",
+    "image": "LeadGas.png",
+    "category": "gas"
+  },
+  {
+    "id": "mercury_gas",
+    "name": "Mercury Gas",
+    "image": "MercuryGas.png",
+    "category": "gas"
+  },
+  {
+    "id": "natural_gas",
+    "name": "Natural Gas",
+    "image": "NaturalGas.png",
+    "category": "gas"
+  },
+  {
+    "id": "niobium_gas",
+    "name": "Niobium Gas",
+    "image": "NiobiumGas.png",
+    "category": "gas"
+  },
+  {
+    "id": "oxygen",
+    "name": "Oxygen",
+    "image": "Oxygen.png",
+    "category": "gas"
+  },
+  {
+    "id": "phosphorus_gas",
+    "name": "Phosphorus Gas",
+    "image": "PhosphorusGas.png",
+    "category": "gas"
+  },
+  {
+    "id": "polluted_oxygen",
+    "name": "Polluted Oxygen",
+    "image": "PollutedOxygen.png",
+    "category": "gas"
+  },
+  {
+    "id": "rock_gas",
+    "name": "Rock Gas",
+    "image": "RockGas.png",
+    "category": "gas"
+  },
+  {
+    "id": "salt_gas",
+    "name": "Salt Gas",
+    "image": "SaltGas.png",
+    "category": "gas"
+  },
+  {
+    "id": "sour_gas",
+    "name": "Sour Gas",
+    "image": "SourGas.png",
+    "category": "gas"
+  },
+  {
+    "id": "steam",
+    "name": "Steam",
+    "image": "Steam.png",
+    "category": "gas",
+    "type": "Gas",
+    "condensation_point": 99.4,
+    "condensation_product": "water",
+    "description": "Water vapor."
+  },
+  {
+    "id": "steel_gas",
+    "name": "Steel Gas",
+    "image": "SteelGas.png",
+    "category": "gas"
+  },
+  {
+    "id": "sulfur_gas",
+    "name": "Sulfur Gas",
+    "image": "SulfurGas.png",
+    "category": "gas"
+  },
+  {
+    "id": "tungsten_gas",
+    "name": "Tungsten Gas",
+    "image": "TungstenGas.png",
+    "category": "gas"
+  }
+]

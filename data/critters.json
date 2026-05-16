@@ -60,9 +60,21 @@
     "category": "critter"
   },
   {
+    "id": "drecko",
+    "name": "Drecko",
+    "image": "Drecko.png",
+    "category": "critter"
+  },
+  {
     "id": "flox",
     "name": "Flox",
     "image": "Flox.png",
+    "category": "critter"
+  },
+  {
+    "id": "glossy_drecko",
+    "name": "Glossy Drecko",
+    "image": "GlossyDrecko.png",
     "category": "critter"
   },
   {

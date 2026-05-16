@@ -144,21 +144,15 @@
     "category": "building"
   },
   {
-    "id": "drecko",
-    "name": "Drecko",
-    "image": "Drecko.png",
-    "category": "building"
-  },
-  {
-    "id": "duplicant",
-    "name": "Duplicant",
-    "image": "Duplicant.png",
-    "category": "building"
-  },
-  {
     "id": "dusk_cap",
     "name": "Dusk Cap",
     "image": "DuskCap.png",
+    "category": "building"
+  },
+  {
+    "id": "egg_cracker",
+    "name": "Egg Cracker",
+    "image": "EggCracker.png",
     "category": "building"
   },
   {
@@ -234,12 +228,6 @@
     "category": "building"
   },
   {
-    "id": "glossy_drecko",
-    "name": "Glossy Drecko",
-    "image": "GlossyDrecko.png",
-    "category": "building"
-  },
-  {
     "id": "gulp_fish",
     "name": "Gulp Fish",
     "image": "GulpFish.png",
@@ -258,15 +246,15 @@
     "category": "building"
   },
   {
-    "id": "ice_maker",
-    "name": "Ice Maker",
-    "image": "IceMaker.png",
-    "category": "building"
-  },
-  {
     "id": "ice_e_fan",
     "name": "Ice-E Fan",
     "image": "IceEFan.png",
+    "category": "building"
+  },
+  {
+    "id": "ice_maker",
+    "name": "Ice Maker",
+    "image": "IceMaker.png",
     "category": "building"
   },
   {
@@ -579,24 +567,6 @@
     "id": "wood_heater",
     "name": "Wood Heater",
     "image": "WoodHeater.png",
-    "category": "building"
-  },
-  {
-    "id": "cool",
-    "name": "cool",
-    "image": "cool.png",
-    "category": "building"
-  },
-  {
-    "id": "emit",
-    "name": "emit",
-    "image": "emit.png",
-    "category": "building"
-  },
-  {
-    "id": "heat",
-    "name": "heat",
-    "image": "heat.png",
     "category": "building"
   }
 ]

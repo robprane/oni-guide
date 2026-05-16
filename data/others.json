@@ -1,0 +1,182 @@
+[
+  {
+    "id": "allergy_medication",
+    "name": "Allergy Medication",
+    "image": "AllergyMedication.png",
+    "category": "other"
+  },
+  {
+    "id": "atmo_suit",
+    "name": "Atmo Suit",
+    "image": "AtmoSuit.png",
+    "category": "other"
+  },
+  {
+    "id": "basic_rad_pill",
+    "name": "Basic Rad Pill",
+    "image": "BasicRadPill.png",
+    "category": "other"
+  },
+  {
+    "id": "brawny_spice",
+    "name": "Brawny Spice",
+    "image": "BrawnySpice.png",
+    "category": "other"
+  },
+  {
+    "id": "curative_tablet",
+    "name": "Curative Tablet",
+    "image": "CurativeTablet.png",
+    "category": "other"
+  },
+  {
+    "id": "data_bank",
+    "name": "Data Bank",
+    "image": "DataBank.png",
+    "category": "other"
+  },
+  {
+    "id": "dream_journal",
+    "name": "Dream Journal",
+    "image": "DreamJournal.png",
+    "category": "other"
+  },
+  {
+    "id": "freshener_spice",
+    "name": "Freshener Spice",
+    "image": "FreshenerSpice.png",
+    "category": "other"
+  },
+  {
+    "id": "immuno_booster",
+    "name": "Immuno Booster",
+    "image": "ImmunoBooster.png",
+    "category": "other"
+  },
+  {
+    "id": "jet_suit",
+    "name": "Jet Suit",
+    "image": "JetSuit.png",
+    "category": "other"
+  },
+  {
+    "id": "lead_suit",
+    "name": "Lead Suit",
+    "image": "LeadSuit.png",
+    "category": "other"
+  },
+  {
+    "id": "machinist_spice",
+    "name": "Machinist Spice",
+    "image": "MachinistSpice.png",
+    "category": "other"
+  },
+  {
+    "id": "oxygen_mask",
+    "name": "Oxygen Mask",
+    "image": "OxygenMask.png",
+    "category": "other"
+  },
+  {
+    "id": "primo_garb",
+    "name": "Primo Garb",
+    "image": "PrimoGarb.png",
+    "category": "other"
+  },
+  {
+    "id": "rad",
+    "name": "Rad",
+    "image": "Rad.png",
+    "category": "other"
+  },
+  {
+    "id": "radbolt",
+    "name": "Radbolt",
+    "image": "Radbolt.png",
+    "category": "other"
+  },
+  {
+    "id": "radium",
+    "name": "Radium",
+    "image": "Radium.png",
+    "category": "other"
+  },
+  {
+    "id": "rocketeer_spice",
+    "name": "Rocketeer Spice",
+    "image": "RocketeerSpice.png",
+    "category": "other"
+  },
+  {
+    "id": "serum_vial",
+    "name": "Serum Vial",
+    "image": "SerumVial.png",
+    "category": "other"
+  },
+  {
+    "id": "sleet_wheat_grain",
+    "name": "Sleet Wheat Grain",
+    "image": "SleetWheatGrain.png",
+    "category": "other"
+  },
+  {
+    "id": "snazzy_suit",
+    "name": "Snazzy Suit",
+    "image": "SnazzySuit.png",
+    "category": "other"
+  },
+  {
+    "id": "solid_super_coolant",
+    "name": "Solid Super Coolant",
+    "image": "SolidSuperCoolant.png",
+    "category": "other"
+  },
+  {
+    "id": "super_coolant",
+    "name": "Super Coolant",
+    "image": "SuperCoolant.png",
+    "category": "other"
+  },
+  {
+    "id": "super_coolant_gas",
+    "name": "Super Coolant Gas",
+    "image": "SuperCoolantGas.png",
+    "category": "other"
+  },
+  {
+    "id": "vitamin_chews",
+    "name": "Vitamin Chews",
+    "image": "VitaminChews.png",
+    "category": "other"
+  },
+  {
+    "id": "warm_coat",
+    "name": "Warm Coat",
+    "image": "WarmCoat.png",
+    "category": "other"
+  },
+  {
+    "id": "worn_atmo_suit",
+    "name": "Worn Atmo Suit",
+    "image": "WornAtmoSuit.png",
+    "category": "other"
+  },
+  {
+    "id": "worn_jet_suit",
+    "name": "Worn Jet Suit",
+    "image": "WornJetSuit.png",
+    "category": "other"
+  },
+  {
+    "id": "worn_lead_suit",
+    "name": "Worn Lead Suit",
+    "image": "WornLeadSuit.png",
+    "category": "other"
+  },
+  {
+    "id": "worn_oxygen_mask",
+    "name": "Worn Oxygen Mask",
+    "image": "WornOxygenMask.png",
+    "category": "other"
+  }
+]

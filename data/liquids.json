@@ -1,0 +1,231 @@
+[
+  {
+    "id": "brine",
+    "name": "Brine",
+    "image": "Brine.png",
+    "category": "liquid"
+  },
+  {
+    "id": "crude_oil",
+    "name": "Crude Oil",
+    "image": "CrudeOil.png",
+    "category": "liquid"
+  },
+  {
+    "id": "ethanol",
+    "name": "Ethanol",
+    "image": "Ethanol.png",
+    "category": "liquid"
+  },
+  {
+    "id": "liquid_carbon",
+    "name": "Liquid Carbon",
+    "image": "LiquidCarbon.png",
+    "category": "liquid"
+  },
+  {
+    "id": "liquid_carbon_dioxide",
+    "name": "Liquid Carbon Dioxide",
+    "image": "LiquidCarbonDioxide.png",
+    "category": "liquid"
+  },
+  {
+    "id": "liquid_chlorine",
+    "name": "Liquid Chlorine",
+    "image": "LiquidChlorine.png",
+    "category": "liquid"
+  },
+  {
+    "id": "liquid_hydrogen",
+    "name": "Liquid Hydrogen",
+    "image": "LiquidHydrogen.png",
+    "category": "liquid"
+  },
+  {
+    "id": "liquid_methane",
+    "name": "Liquid Methane",
+    "image": "LiquidMethane.png",
+    "category": "liquid"
+  },
+  {
+    "id": "liquid_naphtha",
+    "name": "Liquid Naphtha",
+    "image": "LiquidNaphtha.png",
+    "category": "liquid"
+  },
+  {
+    "id": "liquid_nuclear_waste",
+    "name": "Liquid Nuclear Waste",
+    "image": "LiquidNuclearWaste.png",
+    "category": "liquid"
+  },
+  {
+    "id": "liquid_oxygen",
+    "name": "Liquid Oxygen",
+    "image": "LiquidOxygen.png",
+    "category": "liquid"
+  },
+  {
+    "id": "liquid_phosphorus",
+    "name": "Liquid Phosphorus",
+    "image": "LiquidPhosphorus.png",
+    "category": "liquid"
+  },
+  {
+    "id": "liquid_resin",
+    "name": "Liquid Resin",
+    "image": "LiquidResin.png",
+    "category": "liquid"
+  },
+  {
+    "id": "liquid_sucrose",
+    "name": "Liquid Sucrose",
+    "image": "LiquidSucrose.png",
+    "category": "liquid"
+  },
+  {
+    "id": "liquid_sulfur",
+    "name": "Liquid Sulfur",
+    "image": "LiquidSulfur.png",
+    "category": "liquid"
+  },
+  {
+    "id": "liquid_uranium",
+    "name": "Liquid Uranium",
+    "image": "LiquidUranium.png",
+    "category": "liquid"
+  },
+  {
+    "id": "magma",
+    "name": "Magma",
+    "image": "Magma.png",
+    "category": "liquid"
+  },
+  {
+    "id": "molten_aluminum",
+    "name": "Molten Aluminum",
+    "image": "MoltenAluminum.png",
+    "category": "liquid"
+  },
+  {
+    "id": "molten_cobalt",
+    "name": "Molten Cobalt",
+    "image": "MoltenCobalt.png",
+    "category": "liquid"
+  },
+  {
+    "id": "molten_copper",
+    "name": "Molten Copper",
+    "image": "MoltenCopper.png",
+    "category": "liquid"
+  },
+  {
+    "id": "molten_glass",
+    "name": "Molten Glass",
+    "image": "MoltenGlass.png",
+    "category": "liquid"
+  },
+  {
+    "id": "molten_gold",
+    "name": "Molten Gold",
+    "image": "MoltenGold.png",
+    "category": "liquid"
+  },
+  {
+    "id": "molten_iron",
+    "name": "Molten Iron",
+    "image": "MoltenIron.png",
+    "category": "liquid"
+  },
+  {
+    "id": "molten_lead",
+    "name": "Molten Lead",
+    "image": "MoltenLead.png",
+    "category": "liquid"
+  },
+  {
+    "id": "molten_niobium",
+    "name": "Molten Niobium",
+    "image": "MoltenNiobium.png",
+    "category": "liquid"
+  },
+  {
+    "id": "molten_salt",
+    "name": "Molten Salt",
+    "image": "MoltenSalt.png",
+    "category": "liquid"
+  },
+  {
+    "id": "molten_steel",
+    "name": "Molten Steel",
+    "image": "MoltenSteel.png",
+    "category": "liquid"
+  },
+  {
+    "id": "molten_tungsten",
+    "name": "Molten Tungsten",
+    "image": "MoltenTungsten.png",
+    "category": "liquid"
+  },
+  {
+    "id": "mud",
+    "name": "Mud",
+    "image": "Mud.png",
+    "category": "liquid"
+  },
+  {
+    "id": "nectar",
+    "name": "Nectar",
+    "image": "Nectar.png",
+    "category": "liquid"
+  },
+  {
+    "id": "petroleum",
+    "name": "Petroleum",
+    "image": "Petroleum.png",
+    "category": "liquid"
+  },
+  {
+    "id": "polluted_mud",
+    "name": "Polluted Mud",
+    "image": "PollutedMud.png",
+    "category": "liquid"
+  },
+  {
+    "id": "polluted_water",
+    "name": "Polluted Water",
+    "image": "PollutedWater.png",
+    "category": "liquid",
+    "type": "Liquid",
+    "freezing_point": -20.6,
+    "freezing_product": "polluted_ice",
+    "boiling_point": 119.4,
+    "boiling_product": "steam",
+    "boiling_byproduct": "dirt",
+    "description": "Dirty water that needs to be cleaned."
+  },
+  {
+    "id": "salt_water",
+    "name": "Salt Water",
+    "image": "SaltWater.png",
+    "category": "liquid"
+  },
+  {
+    "id": "visco_gel_fluid",
+    "name": "Visco-Gel Fluid",
+    "image": "ViscoGelFluid.png",
+    "category": "liquid"
+  },
+  {
+    "id": "water",
+    "name": "Water",
+    "image": "Water.png",
+    "category": "liquid",
+    "type": "Liquid",
+    "freezing_point": -0.6,
+    "freezing_product": "ice",
+    "boiling_point": 99.4,
+    "boiling_product": "steam",
+    "description": "Clean water, essential for life."
+  }
+]

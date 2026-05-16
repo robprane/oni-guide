@@ -1,0 +1,218 @@
+[
+  {
+    "id": "abyss_nymph_egg",
+    "name": "Abyss Nymph Egg",
+    "image": "AbyssNymphEgg.png",
+    "category": "egg"
+  },
+  {
+    "id": "azure_nymph_egg",
+    "name": "Azure Nymph Egg",
+    "image": "AzureNymphEgg.png",
+    "category": "egg"
+  },
+  {
+    "id": "bammini_egg",
+    "name": "Bammini Egg",
+    "image": "BamminiEgg.png",
+    "category": "egg"
+  },
+  {
+    "id": "coral_nymph_egg",
+    "name": "Coral Nymph Egg",
+    "image": "CoralNymphEgg.png",
+    "category": "egg"
+  },
+  {
+    "id": "cuddle_pip_egg",
+    "name": "Cuddle Pip Egg",
+    "image": "CuddlePipEgg.png",
+    "category": "egg"
+  },
+  {
+    "id": "delecta_vole_egg",
+    "name": "Delecta Vole Egg",
+    "image": "DelectaVoleEgg.png",
+    "category": "egg"
+  },
+  {
+    "id": "dense_puftlet_egg",
+    "name": "Dense Puftlet Egg",
+    "image": "DensePuftletEgg.png",
+    "category": "egg"
+  },
+  {
+    "id": "drecklet_egg",
+    "name": "Drecklet Egg",
+    "image": "DreckletEgg.png",
+    "category": "egg"
+  },
+  {
+    "id": "flox_fawn_egg",
+    "name": "Flox Fawn Egg",
+    "image": "FloxFawnEgg.png",
+    "category": "egg"
+  },
+  {
+    "id": "fry_egg",
+    "name": "Fry Egg",
+    "image": "FryEgg.png",
+    "category": "egg"
+  },
+  {
+    "id": "glossy_drecklet_egg",
+    "name": "Glossy Drecklet Egg",
+    "image": "GlossyDreckletEgg.png",
+    "category": "egg"
+  },
+  {
+    "id": "grubgrub_egg",
+    "name": "Grubgrub Egg",
+    "image": "GrubgrubEgg.png",
+    "category": "egg"
+  },
+  {
+    "id": "gulp_fry_egg",
+    "name": "Gulp Fry Egg",
+    "image": "GulpFryEgg.png",
+    "category": "egg"
+  },
+  {
+    "id": "hatchling_egg",
+    "name": "Hatchling Egg",
+    "image": "HatchlingEgg.png",
+    "category": "egg"
+  },
+  {
+    "id": "larva_egg",
+    "name": "Larva Egg",
+    "image": "LarvaEgg.png",
+    "category": "egg"
+  },
+  {
+    "id": "longhair_larva_egg",
+    "name": "Longhair Larva Egg",
+    "image": "LonghairLarvaEgg.png",
+    "category": "egg"
+  },
+  {
+    "id": "molten_larva_egg",
+    "name": "Molten Larva Egg",
+    "image": "MoltenLarvaEgg.png",
+    "category": "egg"
+  },
+  {
+    "id": "pip_egg",
+    "name": "Pip Egg",
+    "image": "PipEgg.png",
+    "category": "egg"
+  },
+  {
+    "id": "puftlet_egg",
+    "name": "Puftlet Egg",
+    "image": "PuftletEgg.png",
+    "category": "egg"
+  },
+  {
+    "id": "puftlet_prince_egg",
+    "name": "Puftlet Prince Egg",
+    "image": "PuftletPrinceEgg.png",
+    "category": "egg"
+  },
+  {
+    "id": "radiant_nymph_egg",
+    "name": "Radiant Nymph Egg",
+    "image": "RadiantNymphEgg.png",
+    "category": "egg"
+  },
+  {
+    "id": "regal_bammini_egg",
+    "name": "Regal Bammini Egg",
+    "image": "RegalBamminiEgg.png",
+    "category": "egg"
+  },
+  {
+    "id": "royal_nymph_egg",
+    "name": "Royal Nymph Egg",
+    "image": "RoyalNymphEgg.png",
+    "category": "egg"
+  },
+  {
+    "id": "sage_hatchling_egg",
+    "name": "Sage Hatchling Egg",
+    "image": "SageHatchlingEgg.png",
+    "category": "egg"
+  },
+  {
+    "id": "shine_nymph_egg",
+    "name": "Shine Nymph Egg",
+    "image": "ShineNymphEgg.png",
+    "category": "egg"
+  },
+  {
+    "id": "shove_vole_egg",
+    "name": "Shove Vole Egg",
+    "image": "ShoveVoleEgg.png",
+    "category": "egg"
+  },
+  {
+    "id": "slug_egg",
+    "name": "Slug Egg",
+    "image": "SlugEgg.png",
+    "category": "egg"
+  },
+  {
+    "id": "smog_slug_egg",
+    "name": "Smog Slug Egg",
+    "image": "SmogSlugEgg.png",
+    "category": "egg"
+  },
+  {
+    "id": "smooth_hatchling_egg",
+    "name": "Smooth Hatchling Egg",
+    "image": "SmoothHatchlingEgg.png",
+    "category": "egg"
+  },
+  {
+    "id": "spigot_pup_egg",
+    "name": "Spigot Pup Egg",
+    "image": "SpigotPupEgg.png",
+    "category": "egg"
+  },
+  {
+    "id": "sponge_slug_egg",
+    "name": "Sponge Slug Egg",
+    "image": "SpongeSlugEgg.png",
+    "category": "egg"
+  },
+  {
+    "id": "squeaky_puftlet_egg",
+    "name": "Squeaky Puftlet Egg",
+    "image": "SqueakyPuftletEgg.png",
+    "category": "egg"
+  },
+  {
+    "id": "stone_hatchling_egg",
+    "name": "Stone Hatchling Egg",
+    "image": "StoneHatchlingEgg.png",
+    "category": "egg"
+  },
+  {
+    "id": "sun_nymph_egg",
+    "name": "Sun Nymph Egg",
+    "image": "SunNymphEgg.png",
+    "category": "egg"
+  },
+  {
+    "id": "sweetle_egg",
+    "name": "Sweetle Egg",
+    "image": "SweetleEgg.png",
+    "category": "egg"
+  },
+  {
+    "id": "tropical_fry_egg",
+    "name": "Tropical Fry Egg",
+    "image": "TropicalFryEgg.png",
+    "category": "egg"
+  }
+]

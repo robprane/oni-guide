@@ -1,0 +1,92 @@
+[
+  {
+    "id": "alveo_vera_seed",
+    "name": "Alveo Vera Seed",
+    "image": "AlveoVeraSeed.png",
+    "category": "seed"
+  },
+  {
+    "id": "balm_lily_seed",
+    "name": "Balm Lily Seed",
+    "image": "BalmLilySeed.png",
+    "category": "seed"
+  },
+  {
+    "id": "blossom_seed",
+    "name": "Blossom Seed",
+    "image": "BlossomSeed.png",
+    "category": "seed"
+  },
+  {
+    "id": "bog_bucket_seed",
+    "name": "Bog Bucket Seed",
+    "image": "BogBucketSeed.png",
+    "category": "seed"
+  },
+  {
+    "id": "bonbon_tree_seed",
+    "name": "Bonbon Tree Seed",
+    "image": "BonbonTreeSeed.png",
+    "category": "seed"
+  },
+  {
+    "id": "dasha_saltvine_seed",
+    "name": "Dasha Saltvine Seed",
+    "image": "DashaSaltvineSeed.png",
+    "category": "seed"
+  },
+  {
+    "id": "gas_grass_seed",
+    "name": "Gas Grass Seed",
+    "image": "GasGrassSeed.png",
+    "category": "seed"
+  },
+  {
+    "id": "grubfruit_seed",
+    "name": "Grubfruit Seed",
+    "image": "GrubfruitSeed.png",
+    "category": "seed"
+  },
+  {
+    "id": "mealwood_seed",
+    "name": "Mealwood Seed",
+    "image": "MealwoodSeed.png",
+    "category": "seed"
+  },
+  {
+    "id": "pikeapple_bush_seed",
+    "name": "Pikeapple Bush Seed",
+    "image": "PikeappleBushSeed.png",
+    "category": "seed"
+  },
+  {
+    "id": "pincha_pepper_seed",
+    "name": "Pincha Pepper Seed",
+    "image": "PinchaPepperSeed.png",
+    "category": "seed"
+  },
+  {
+    "id": "plant_seeds",
+    "name": "Plant seeds",
+    "image": "Plantseeds.png",
+    "category": "seed"
+  },
+  {
+    "id": "plume_squash_seed",
+    "name": "Plume Squash Seed",
+    "image": "PlumeSquashSeed.png",
+    "category": "seed"
+  },
+  {
+    "id": "thimble_reed_seed",
+    "name": "Thimble Reed Seed",
+    "image": "ThimbleReedSeed.png",
+    "category": "seed"
+  },
+  {
+    "id": "waterweed_seed",
+    "name": "Waterweed Seed",
+    "image": "WaterweedSeed.png",
+    "category": "seed"
+  }
+]
