@@ -1,296 +1,172 @@
 [
   {
-    "id": "alveo_vera_seed",
-    "name": "Alveo Vera Seed",
-    "image": "AlveoVeraSeed.png",
-    "category": "plant"
-  },
-  {
     "id": "arbor_tree",
     "name": "Arbor Tree",
-    "image": "ArborTree.png",
-    "category": "plant"
+    "image": "ArborTree.png"
   },
   {
     "id": "balm_lily",
     "name": "Balm Lily",
-    "image": "BalmLily.png",
-    "category": "plant"
+    "image": "BalmLily.png"
   },
   {
     "id": "balm_lily_flower",
     "name": "Balm Lily Flower",
-    "image": "BalmLilyFlower.png",
-    "category": "plant"
-  },
-  {
-    "id": "balm_lily_seed",
-    "name": "Balm Lily Seed",
-    "image": "BalmLilySeed.png",
-    "category": "plant"
-  },
-  {
-    "id": "blossom_seed",
-    "name": "Blossom Seed",
-    "image": "BlossomSeed.png",
-    "category": "plant"
-  },
-  {
-    "id": "bog_bucket_seed",
-    "name": "Bog Bucket Seed",
-    "image": "BogBucketSeed.png",
-    "category": "plant"
+    "image": "BalmLilyFlower.png"
   },
   {
     "id": "bonbon_tree",
     "name": "Bonbon Tree",
-    "image": "BonbonTree.png",
-    "category": "plant"
-  },
-  {
-    "id": "bonbon_tree_seed",
-    "name": "Bonbon Tree Seed",
-    "image": "BonbonTreeSeed.png",
-    "category": "plant"
+    "image": "BonbonTree.png"
   },
   {
     "id": "bristle_berry",
     "name": "Bristle Berry",
-    "image": "BristleBerry.png",
-    "category": "plant"
+    "image": "BristleBerry.png"
   },
   {
     "id": "bristle_blossom",
     "name": "Bristle Blossom",
-    "image": "BristleBlossom.png",
-    "category": "plant"
-  },
-  {
-    "id": "dasha_saltvine_seed",
-    "name": "Dasha Saltvine Seed",
-    "image": "DashaSaltvineSeed.png",
-    "category": "plant"
+    "image": "BristleBlossom.png"
   },
   {
     "id": "dried_mushroom_wrap",
     "name": "Dried Mushroom Wrap",
-    "image": "DriedMushroomWrap.png",
-    "category": "plant"
+    "image": "DriedMushroomWrap.png"
   },
   {
     "id": "dried_stuffed_berry",
     "name": "Dried Stuffed Berry",
-    "image": "DriedStuffedBerry.png",
-    "category": "plant"
+    "image": "DriedStuffedBerry.png"
   },
   {
     "id": "fried_mushroom",
     "name": "Fried Mushroom",
-    "image": "FriedMushroom.png",
-    "category": "plant"
-  },
-  {
-    "id": "gas_grass_seed",
-    "name": "Gas Grass Seed",
-    "image": "GasGrassSeed.png",
-    "category": "plant"
+    "image": "FriedMushroom.png"
   },
   {
     "id": "gristle_berry",
     "name": "Gristle Berry",
-    "image": "GristleBerry.png",
-    "category": "plant"
+    "image": "GristleBerry.png"
   },
   {
     "id": "grubfruit",
     "name": "Grubfruit",
-    "image": "Grubfruit.png",
-    "category": "plant"
+    "image": "Grubfruit.png"
   },
   {
     "id": "grubfruit_plant",
     "name": "Grubfruit Plant",
-    "image": "GrubfruitPlant.png",
-    "category": "plant"
+    "image": "GrubfruitPlant.png"
   },
   {
     "id": "grubfruit_preserve",
     "name": "Grubfruit Preserve",
-    "image": "GrubfruitPreserve.png",
-    "category": "plant"
-  },
-  {
-    "id": "grubfruit_seed",
-    "name": "Grubfruit Seed",
-    "image": "GrubfruitSeed.png",
-    "category": "plant"
+    "image": "GrubfruitPreserve.png"
   },
   {
     "id": "hexalent",
     "name": "Hexalent",
-    "image": "Hexalent.png",
-    "category": "plant"
+    "image": "Hexalent.png"
   },
   {
     "id": "hexalent_fruit",
     "name": "Hexalent Fruit",
-    "image": "HexalentFruit.png",
-    "category": "plant"
-  },
-  {
-    "id": "mealwood_seed",
-    "name": "Mealwood Seed",
-    "image": "MealwoodSeed.png",
-    "category": "plant"
+    "image": "HexalentFruit.png"
   },
   {
     "id": "mushroom",
     "name": "Mushroom",
-    "image": "Mushroom.png",
-    "category": "plant"
+    "image": "Mushroom.png"
   },
   {
     "id": "mushroom_wrap",
     "name": "Mushroom Wrap",
-    "image": "MushroomWrap.png",
-    "category": "plant"
+    "image": "MushroomWrap.png"
   },
   {
     "id": "nosh_bean",
     "name": "Nosh Bean",
-    "image": "NoshBean.png",
-    "category": "plant"
+    "image": "NoshBean.png"
   },
   {
     "id": "nosh_noms",
     "name": "Nosh Noms",
-    "image": "NoshNoms.png",
-    "category": "plant"
+    "image": "NoshNoms.png"
   },
   {
     "id": "nosh_sprout",
     "name": "Nosh Sprout",
-    "image": "NoshSprout.png",
-    "category": "plant"
+    "image": "NoshSprout.png"
   },
   {
     "id": "oxyfern",
     "name": "Oxyfern",
-    "image": "Oxyfern.png",
-    "category": "plant"
-  },
-  {
-    "id": "pikeapple_bush_seed",
-    "name": "Pikeapple Bush Seed",
-    "image": "PikeappleBushSeed.png",
-    "category": "plant"
-  },
-  {
-    "id": "pincha_pepper_seed",
-    "name": "Pincha Pepper Seed",
-    "image": "PinchaPepperSeed.png",
-    "category": "plant"
+    "image": "Oxyfern.png"
   },
   {
     "id": "plant_pulverizer",
     "name": "Plant Pulverizer",
-    "image": "PlantPulverizer.png",
-    "category": "plant"
-  },
-  {
-    "id": "plant_seeds",
-    "name": "Plant seeds",
-    "image": "Plantseeds.png",
-    "category": "plant"
+    "image": "PlantPulverizer.png"
   },
   {
     "id": "plume_squash_plant",
     "name": "Plume Squash Plant",
-    "image": "PlumeSquashPlant.png",
-    "category": "plant"
-  },
-  {
-    "id": "plume_squash_seed",
-    "name": "Plume Squash Seed",
-    "image": "PlumeSquashSeed.png",
-    "category": "plant"
+    "image": "PlumeSquashPlant.png"
   },
   {
     "id": "reed_fiber",
     "name": "Reed Fiber",
-    "image": "ReedFiber.png",
-    "category": "plant"
+    "image": "ReedFiber.png"
   },
   {
     "id": "saturn_critter_trap",
     "name": "Saturn Critter Trap",
-    "image": "SaturnCritterTrap.png",
-    "category": "plant"
+    "image": "SaturnCritterTrap.png"
   },
   {
     "id": "sherberry_plant",
     "name": "Sherberry Plant",
-    "image": "SherberryPlant.png",
-    "category": "plant"
+    "image": "SherberryPlant.png"
   },
   {
     "id": "spindly_grubfruit",
     "name": "Spindly Grubfruit",
-    "image": "SpindlyGrubfruit.png",
-    "category": "plant"
+    "image": "SpindlyGrubfruit.png"
   },
   {
     "id": "spindly_grubfruit_plant",
     "name": "Spindly Grubfruit Plant",
-    "image": "SpindlyGrubfruitPlant.png",
-    "category": "plant"
+    "image": "SpindlyGrubfruitPlant.png"
   },
   {
     "id": "sporechid",
     "name": "Sporechid",
-    "image": "Sporechid.png",
-    "category": "plant"
+    "image": "Sporechid.png"
   },
   {
     "id": "stuffed_berry",
     "name": "Stuffed Berry",
-    "image": "StuffedBerry.png",
-    "category": "plant"
+    "image": "StuffedBerry.png"
   },
   {
     "id": "thimble_reed",
     "name": "Thimble Reed",
-    "image": "ThimbleReed.png",
-    "category": "plant"
-  },
-  {
-    "id": "thimble_reed_seed",
-    "name": "Thimble Reed Seed",
-    "image": "ThimbleReedSeed.png",
-    "category": "plant"
+    "image": "ThimbleReed.png"
   },
   {
     "id": "tonic_root",
     "name": "Tonic Root",
-    "image": "TonicRoot.png",
-    "category": "plant"
+    "image": "TonicRoot.png"
   },
   {
     "id": "waterweed",
     "name": "Waterweed",
-    "image": "Waterweed.png",
-    "category": "plant"
-  },
-  {
-    "id": "waterweed_seed",
-    "name": "Waterweed Seed",
-    "image": "WaterweedSeed.png",
-    "category": "plant"
+    "image": "Waterweed.png"
   },
   {
     "id": "wheezewort",
     "name": "Wheezewort",
-    "image": "Wheezewort.png",
-    "category": "plant"
+    "image": "Wheezewort.png"
   }
 ]

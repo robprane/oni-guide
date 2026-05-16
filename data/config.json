@@ -1,8 +1,15 @@
 [
-  { "id": "element", "label": "Elements", "file": "elements.json", "isFilter": true },
-  { "id": "building", "label": "Buildings", "file": "buildings.json", "isFilter": true },
+  { "id": "duplicant", "label": "Duplicants", "file": "duplicants.json", "isFilter": true },
   { "id": "critter", "label": "Critters", "file": "critters.json", "isFilter": true },
-  { "id": "plant", "label": "Plants", "file": "plants.json", "isFilter": true },
+  { "id": "building", "label": "Buildings", "file": "buildings.json", "isFilter": true },
   { "id": "food", "label": "Foods", "file": "foods.json", "isFilter": true },
+  { "id": "plant", "label": "Plants", "file": "plants.json", "isFilter": true },
+  { "id": "seed", "label": "Seeds", "file": "seeds.json", "isFilter": true },
+  { "id": "egg", "label": "Eggs", "file": "eggs.json", "isFilter": true },
+  { "id": "gas", "label": "Gases", "file": "gases.json", "isFilter": true },
+  { "id": "liquid", "label": "Liquids", "file": "liquids.json", "isFilter": true },
+  { "id": "solid", "label": "Solids", "file": "solids.json", "isFilter": true },
+  { "id": "other", "label": "Others", "file": "others.json", "isFilter": true },
+  { "id": "special", "label": "Others", "file": "special.json", "isFilter": false },
   { "id": "recipe", "label": "Recipes", "file": "recipes.json", "isFilter": false }
 ]

@@ -1,0 +1,127 @@
+[
+  {
+    "id": "allergy_medication",
+    "name": "Allergy Medication",
+    "image": "AllergyMedication.png"
+  },
+  {
+    "id": "atmo_suit",
+    "name": "Atmo Suit",
+    "image": "AtmoSuit.png"
+  },
+  {
+    "id": "basic_rad_pill",
+    "name": "Basic Rad Pill",
+    "image": "BasicRadPill.png"
+  },
+  {
+    "id": "brawny_spice",
+    "name": "Brawny Spice",
+    "image": "BrawnySpice.png"
+  },
+  {
+    "id": "curative_tablet",
+    "name": "Curative Tablet",
+    "image": "CurativeTablet.png"
+  },
+  {
+    "id": "data_bank",
+    "name": "Data Bank",
+    "image": "DataBank.png"
+  },
+  {
+    "id": "dream_journal",
+    "name": "Dream Journal",
+    "image": "DreamJournal.png"
+  },
+  {
+    "id": "freshener_spice",
+    "name": "Freshener Spice",
+    "image": "FreshenerSpice.png"
+  },
+  {
+    "id": "immuno_booster",
+    "name": "Immuno Booster",
+    "image": "ImmunoBooster.png"
+  },
+  {
+    "id": "jet_suit",
+    "name": "Jet Suit",
+    "image": "JetSuit.png"
+  },
+  {
+    "id": "lead_suit",
+    "name": "Lead Suit",
+    "image": "LeadSuit.png"
+  },
+  {
+    "id": "machinist_spice",
+    "name": "Machinist Spice",
+    "image": "MachinistSpice.png"
+  },
+  {
+    "id": "oxygen_mask",
+    "name": "Oxygen Mask",
+    "image": "OxygenMask.png"
+  },
+  {
+    "id": "primo_garb",
+    "name": "Primo Garb",
+    "image": "PrimoGarb.png"
+  },
+  {
+    "id": "rad",
+    "name": "Rad",
+    "image": "Rad.png"
+  },
+  {
+    "id": "radbolt",
+    "name": "Radbolt",
+    "image": "Radbolt.png"
+  },
+  {
+    "id": "rocketeer_spice",
+    "name": "Rocketeer Spice",
+    "image": "RocketeerSpice.png"
+  },
+  {
+    "id": "serum_vial",
+    "name": "Serum Vial",
+    "image": "SerumVial.png"
+  },
+  {
+    "id": "snazzy_suit",
+    "name": "Snazzy Suit",
+    "image": "SnazzySuit.png"
+  },
+  {
+    "id": "vitamin_chews",
+    "name": "Vitamin Chews",
+    "image": "VitaminChews.png"
+  },
+  {
+    "id": "warm_coat",
+    "name": "Warm Coat",
+    "image": "WarmCoat.png"
+  },
+  {
+    "id": "worn_atmo_suit",
+    "name": "Worn Atmo Suit",
+    "image": "WornAtmoSuit.png"
+  },
+  {
+    "id": "worn_jet_suit",
+    "name": "Worn Jet Suit",
+    "image": "WornJetSuit.png"
+  },
+  {
+    "id": "worn_lead_suit",
+    "name": "Worn Lead Suit",
+    "image": "WornLeadSuit.png"
+  },
+  {
+    "id": "worn_oxygen_mask",
+    "name": "Worn Oxygen Mask",
+    "image": "WornOxygenMask.png"
+  }
+]
