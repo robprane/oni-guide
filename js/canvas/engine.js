@@ -136,13 +136,20 @@ export class CanvasEngine {
                 this.pointers.set(e.pointerId, { x: e.clientX, y: e.clientY });
             }
 
-            // Always update hover
-            const world = this.screenToWorld(e.clientX, e.clientY);
-            const gridPos = this.worldToGrid(world.x, world.y);
+            if (this.isPanning || this.pointers.size >= 2) {
+                if (this.hoverGridPos !== null) {
+                    this.hoverGridPos = null;
+                    this.needsRedraw = true;
+                }
+            } else {
+                // Update hover when not panning/zooming
+                const world = this.screenToWorld(e.clientX, e.clientY);
+                const gridPos = this.worldToGrid(world.x, world.y);
 
-            if (!this.hoverGridPos || this.hoverGridPos.x !== gridPos.x || this.hoverGridPos.y !== gridPos.y) {
-                this.hoverGridPos = gridPos;
-                this.needsRedraw = true;
+                if (!this.hoverGridPos || this.hoverGridPos.x !== gridPos.x || this.hoverGridPos.y !== gridPos.y) {
+                    this.hoverGridPos = gridPos;
+                    this.needsRedraw = true;
+                }
             }
 
             if (this.pointers.size === 2) {
@@ -226,6 +233,14 @@ export class CanvasEngine {
                 this.pointerDownPoint = null;
                 this.isDrawingDrag = false;
                 this.canvas.style.cursor = 'default';
+
+                // Restore hover preview for mouse if panning ended without movement
+                if (e.pointerType === 'mouse') {
+                    const world = this.screenToWorld(e.clientX, e.clientY);
+                    const gridPos = this.worldToGrid(world.x, world.y);
+                    this.hoverGridPos = gridPos;
+                    this.needsRedraw = true;
+                }
             }
         };
 
