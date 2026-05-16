@@ -168,12 +168,6 @@
     "category": "liquid"
   },
   {
-    "id": "mud",
-    "name": "Mud",
-    "image": "Mud.png",
-    "category": "liquid"
-  },
-  {
     "id": "nectar",
     "name": "Nectar",
     "image": "Nectar.png",
@@ -183,12 +177,6 @@
     "id": "petroleum",
     "name": "Petroleum",
     "image": "Petroleum.png",
-    "category": "liquid"
-  },
-  {
-    "id": "polluted_mud",
-    "name": "Polluted Mud",
-    "image": "PollutedMud.png",
     "category": "liquid"
   },
   {
@@ -208,6 +196,12 @@
     "id": "salt_water",
     "name": "Salt Water",
     "image": "SaltWater.png",
+    "category": "liquid"
+  },
+  {
+    "id": "super_coolant",
+    "name": "Super Coolant",
+    "image": "SuperCoolant.png",
     "category": "liquid"
   },
   {

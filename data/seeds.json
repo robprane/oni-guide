@@ -78,6 +78,12 @@
     "category": "seed"
   },
   {
+    "id": "sleet_wheat_grain",
+    "name": "Sleet Wheat Grain",
+    "image": "SleetWheatGrain.png",
+    "category": "seed"
+  },
+  {
     "id": "thimble_reed_seed",
     "name": "Thimble Reed Seed",
     "image": "ThimbleReedSeed.png",

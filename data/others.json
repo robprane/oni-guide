@@ -96,12 +96,6 @@
     "category": "other"
   },
   {
-    "id": "radium",
-    "name": "Radium",
-    "image": "Radium.png",
-    "category": "other"
-  },
-  {
     "id": "rocketeer_spice",
     "name": "Rocketeer Spice",
     "image": "RocketeerSpice.png",
@@ -114,33 +108,9 @@
     "category": "other"
   },
   {
-    "id": "sleet_wheat_grain",
-    "name": "Sleet Wheat Grain",
-    "image": "SleetWheatGrain.png",
-    "category": "other"
-  },
-  {
     "id": "snazzy_suit",
     "name": "Snazzy Suit",
     "image": "SnazzySuit.png",
-    "category": "other"
-  },
-  {
-    "id": "solid_super_coolant",
-    "name": "Solid Super Coolant",
-    "image": "SolidSuperCoolant.png",
-    "category": "other"
-  },
-  {
-    "id": "super_coolant",
-    "name": "Super Coolant",
-    "image": "SuperCoolant.png",
-    "category": "other"
-  },
-  {
-    "id": "super_coolant_gas",
-    "name": "Super Coolant Gas",
-    "image": "SuperCoolantGas.png",
     "category": "other"
   },
   {

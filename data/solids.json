@@ -320,6 +320,12 @@
     "category": "solid"
   },
   {
+    "id": "mud",
+    "name": "Mud",
+    "image": "Mud.png",
+    "category": "solid"
+  },
+  {
     "id": "neutronium",
     "name": "Neutronium",
     "image": "Neutronium.png",
@@ -392,9 +398,21 @@
     "category": "solid"
   },
   {
+    "id": "polluted_mud",
+    "name": "Polluted Mud",
+    "image": "PollutedMud.png",
+    "category": "solid"
+  },
+  {
     "id": "pyrite",
     "name": "Pyrite",
     "image": "Pyrite.png",
+    "category": "solid"
+  },
+  {
+    "id": "radium",
+    "name": "Radium",
+    "image": "Radium.png",
     "category": "solid"
   },
   {
@@ -531,6 +549,12 @@
     "id": "solid_resin",
     "name": "Solid Resin",
     "image": "SolidResin.png",
+    "category": "solid"
+  },
+  {
+    "id": "solid_super_coolant",
+    "name": "Solid Super Coolant",
+    "image": "SolidSuperCoolant.png",
     "category": "solid"
   },
   {

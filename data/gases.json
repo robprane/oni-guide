@@ -148,6 +148,12 @@
     "category": "gas"
   },
   {
+    "id": "super_coolant_gas",
+    "name": "Super Coolant Gas",
+    "image": "SuperCoolantGas.png",
+    "category": "gas"
+  },
+  {
     "id": "tungsten_gas",
     "name": "Tungsten Gas",
     "image": "TungstenGas.png",
