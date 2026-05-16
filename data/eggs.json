@@ -85,6 +85,16 @@
     "image": "MoltenLarvaEgg.png"
   },
   {
+    "id": "oak_pinch_roe",
+    "name": "Oak Pinch Roe",
+    "image": "OakPinchRoe.png"
+  },
+  {
+    "id": "pinch_roe",
+    "name": "Pinch Roe",
+    "image": "PinchRoe.png"
+  },
+  {
     "id": "pip_egg",
     "name": "Pip Egg",
     "image": "PipEgg.png"
@@ -118,6 +128,11 @@
     "id": "sage_hatchling_egg",
     "name": "Sage Hatchling Egg",
     "image": "SageHatchlingEgg.png"
+  },
+  {
+    "id": "sani_pinch_roe",
+    "name": "Sani Pinch Roe",
+    "image": "SaniPinchRoe.png"
   },
   {
     "id": "shine_nymph_egg",

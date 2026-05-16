@@ -1,5 +1,10 @@
 [
   {
+    "id": "alveo_vera",
+    "name": "Alveo Vera",
+    "image": "AlveoVera.png"
+  },
+  {
     "id": "arbor_tree",
     "name": "Arbor Tree",
     "image": "ArborTree.png"
@@ -10,9 +15,9 @@
     "image": "BalmLily.png"
   },
   {
-    "id": "balm_lily_flower",
-    "name": "Balm Lily Flower",
-    "image": "BalmLilyFlower.png"
+    "id": "bog_bucket",
+    "name": "Bog Bucket",
+    "image": "BogBucket.png"
   },
   {
     "id": "bonbon_tree",
@@ -20,39 +25,29 @@
     "image": "BonbonTree.png"
   },
   {
-    "id": "bristle_berry",
-    "name": "Bristle Berry",
-    "image": "BristleBerry.png"
-  },
-  {
     "id": "bristle_blossom",
     "name": "Bristle Blossom",
     "image": "BristleBlossom.png"
   },
   {
-    "id": "dried_mushroom_wrap",
-    "name": "Dried Mushroom Wrap",
-    "image": "DriedMushroomWrap.png"
+    "id": "buried_muckroot",
+    "name": "Buried Muckroot",
+    "image": "BuriedMuckroot.png"
   },
   {
-    "id": "dried_stuffed_berry",
-    "name": "Dried Stuffed Berry",
-    "image": "DriedStuffedBerry.png"
+    "id": "dasha_saltvine",
+    "name": "Dasha Saltvine",
+    "image": "DashaSaltvine.png"
   },
   {
-    "id": "fried_mushroom",
-    "name": "Fried Mushroom",
-    "image": "FriedMushroom.png"
+    "id": "dusk_cap",
+    "name": "Dusk Cap",
+    "image": "DuskCap.png"
   },
   {
-    "id": "gristle_berry",
-    "name": "Gristle Berry",
-    "image": "GristleBerry.png"
-  },
-  {
-    "id": "grubfruit",
-    "name": "Grubfruit",
-    "image": "Grubfruit.png"
+    "id": "gas_grass",
+    "name": "Gas Grass",
+    "image": "GasGrass.png"
   },
   {
     "id": "grubfruit_plant",
@@ -60,39 +55,14 @@
     "image": "GrubfruitPlant.png"
   },
   {
-    "id": "grubfruit_preserve",
-    "name": "Grubfruit Preserve",
-    "image": "GrubfruitPreserve.png"
-  },
-  {
     "id": "hexalent",
     "name": "Hexalent",
     "image": "Hexalent.png"
   },
   {
-    "id": "hexalent_fruit",
-    "name": "Hexalent Fruit",
-    "image": "HexalentFruit.png"
-  },
-  {
-    "id": "mushroom",
-    "name": "Mushroom",
-    "image": "Mushroom.png"
-  },
-  {
-    "id": "mushroom_wrap",
-    "name": "Mushroom Wrap",
-    "image": "MushroomWrap.png"
-  },
-  {
-    "id": "nosh_bean",
-    "name": "Nosh Bean",
-    "image": "NoshBean.png"
-  },
-  {
-    "id": "nosh_noms",
-    "name": "Nosh Noms",
-    "image": "NoshNoms.png"
+    "id": "mealwood",
+    "name": "Mealwood",
+    "image": "Mealwood.png"
   },
   {
     "id": "nosh_sprout",
@@ -105,19 +75,9 @@
     "image": "Oxyfern.png"
   },
   {
-    "id": "plant_pulverizer",
-    "name": "Plant Pulverizer",
-    "image": "PlantPulverizer.png"
-  },
-  {
     "id": "plume_squash_plant",
     "name": "Plume Squash Plant",
     "image": "PlumeSquashPlant.png"
-  },
-  {
-    "id": "reed_fiber",
-    "name": "Reed Fiber",
-    "image": "ReedFiber.png"
   },
   {
     "id": "saturn_critter_trap",
@@ -130,9 +90,19 @@
     "image": "SherberryPlant.png"
   },
   {
-    "id": "spindly_grubfruit",
-    "name": "Spindly Grubfruit",
-    "image": "SpindlyGrubfruit.png"
+    "id": "pikeapple_bush",
+    "name": "Pikeapple Bush",
+    "image": "PikeappleBush.png"
+  },
+  {
+    "id": "pincha_pepperplant",
+    "name": "Pincha Pepperplant",
+    "image": "PinchaPepperplant.png"
+  },
+  {
+    "id": "sleet_wheat",
+    "name": "Sleet Wheat",
+    "image": "SleetWheat.png"
   },
   {
     "id": "spindly_grubfruit_plant",
@@ -145,19 +115,14 @@
     "image": "Sporechid.png"
   },
   {
-    "id": "stuffed_berry",
-    "name": "Stuffed Berry",
-    "image": "StuffedBerry.png"
+    "id": "swamp_chard",
+    "name": "Swamp Chard",
+    "image": "SwampChard.png"
   },
   {
     "id": "thimble_reed",
     "name": "Thimble Reed",
     "image": "ThimbleReed.png"
-  },
-  {
-    "id": "tonic_root",
-    "name": "Tonic Root",
-    "image": "TonicRoot.png"
   },
   {
     "id": "waterweed",

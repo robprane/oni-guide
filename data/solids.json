@@ -20,29 +20,9 @@
     "image": "AluminumOre.png"
   },
   {
-    "id": "biobot",
-    "name": "Biobot",
-    "image": "Biobot.png"
-  },
-  {
-    "id": "blastshot",
-    "name": "Blastshot",
-    "image": "Blastshot.png"
-  },
-  {
     "id": "bleach_stone",
     "name": "Bleach Stone",
     "image": "BleachStone.png"
-  },
-  {
-    "id": "bog_jelly",
-    "name": "Bog Jelly",
-    "image": "BogJelly.png"
-  },
-  {
-    "id": "brackene",
-    "name": "Brackene",
-    "image": "Brackene.png"
   },
   {
     "id": "brackwax",
@@ -164,11 +144,6 @@
     "image": "Fullerene.png"
   },
   {
-    "id": "fungal_spore",
-    "name": "Fungal Spore",
-    "image": "FungalSpore.png"
-  },
-  {
     "id": "glass",
     "name": "Glass",
     "image": "Glass.png"
@@ -194,18 +169,9 @@
     "image": "Graphite.png"
   },
   {
-    "id": "harvested_gas_grass",
-    "name": "Harvested Gas Grass",
-    "image": "HarvestedGasGrass.png"
-  },
-  {
     "id": "ice",
     "name": "Ice",
-    "image": "Ice.png",
-    "type": "Solid",
-    "melting_point": -0.6,
-    "melting_product": "water",
-    "description": "Frozen water."
+    "image": "Ice.png"
   },
   {
     "id": "igneous_rock",
@@ -238,11 +204,6 @@
     "image": "Isoresin.png"
   },
   {
-    "id": "land_critter",
-    "name": "Land Critter",
-    "image": "LandCritter.png"
-  },
-  {
     "id": "lead",
     "name": "Lead",
     "image": "Lead.png"
@@ -263,11 +224,6 @@
     "image": "MedicalPack.png"
   },
   {
-    "id": "mercury",
-    "name": "Mercury",
-    "image": "Mercury.png"
-  },
-  {
     "id": "mud",
     "name": "Mud",
     "image": "Mud.png"
@@ -281,16 +237,6 @@
     "id": "niobium",
     "name": "Niobium",
     "image": "Niobium.png"
-  },
-  {
-    "id": "nuclear_fallout",
-    "name": "Nuclear Fallout",
-    "image": "NuclearFallout.png"
-  },
-  {
-    "id": "nuclear_waste",
-    "name": "Nuclear Waste",
-    "image": "NuclearWaste.png"
   },
   {
     "id": "obsidian",
@@ -316,11 +262,6 @@
     "id": "plastium",
     "name": "Plastium",
     "image": "Plastium.png"
-  },
-  {
-    "id": "plume_squash",
-    "name": "Plume Squash",
-    "image": "PlumeSquash.png"
   },
   {
     "id": "polluted_dirt",
@@ -375,11 +316,7 @@
   {
     "id": "sand",
     "name": "Sand",
-    "image": "Sand.png",
-    "type": "Solid",
-    "melting_point": 1712.8,
-    "melting_product": "glass",
-    "description": "Fine particles of rock."
+    "image": "Sand.png"
   },
   {
     "id": "sandstone",
@@ -487,9 +424,9 @@
     "image": "Sulfur.png"
   },
   {
-    "id": "table_salt",
-    "name": "Table Salt",
-    "image": "TableSalt.png"
+    "id": "tallow",
+    "name": "Tallow",
+    "image": "Tallow.png"
   },
   {
     "id": "thermium",
@@ -510,15 +447,5 @@
     "id": "wolframite",
     "name": "Wolframite",
     "image": "Wolframite.png"
-  },
-  {
-    "id": "wood",
-    "name": "Wood",
-    "image": "Wood.png"
-  },
-  {
-    "id": "zombie_spores",
-    "name": "Zombie Spores",
-    "image": "ZombieSpores.png"
   }
 ]

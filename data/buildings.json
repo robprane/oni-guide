@@ -10,11 +10,6 @@
     "image": "AlgaeTerrarium.png"
   },
   {
-    "id": "alveo_vera",
-    "name": "Alveo Vera",
-    "image": "AlveoVera.png"
-  },
-  {
     "id": "anti_entropy_thermo_nullifier",
     "name": "Anti Entropy Thermo-Nullifier",
     "image": "AntiEntropyThermoNullifier.png"
@@ -40,19 +35,9 @@
     "image": "BleachStoneHopper.png"
   },
   {
-    "id": "bog_bucket",
-    "name": "Bog Bucket",
-    "image": "BogBucket.png"
-  },
-  {
     "id": "brackwax_gleaner",
     "name": "Brackwax Gleaner",
     "image": "BrackwaxGleaner.png"
-  },
-  {
-    "id": "buried_muckroot",
-    "name": "Buried Muckroot",
-    "image": "BuriedMuckroot.png"
   },
   {
     "id": "carbon_skimmer",
@@ -85,14 +70,14 @@
     "image": "CritterFountain.png"
   },
   {
-    "id": "dasha_saltvine",
-    "name": "Dasha Saltvine",
-    "image": "DashaSaltvine.png"
-  },
-  {
     "id": "decontamination_shower",
     "name": "Decontamination Shower",
     "image": "DecontaminationShower.png"
+  },
+  {
+    "id": "deep_fryer",
+    "name": "Deep Fryer",
+    "image": "DeepFryer.png"
   },
   {
     "id": "dehydrator",
@@ -118,11 +103,6 @@
     "id": "disease_clinic",
     "name": "Disease Clinic",
     "image": "DiseaseClinic.png"
-  },
-  {
-    "id": "dusk_cap",
-    "name": "Dusk Cap",
-    "image": "DuskCap.png"
   },
   {
     "id": "egg_cracker",
@@ -170,29 +150,14 @@
     "image": "FossilQuarry.png"
   },
   {
-    "id": "gas_grass",
-    "name": "Gas Grass",
-    "image": "GasGrass.png"
-  },
-  {
     "id": "gas_range",
     "name": "Gas Range",
     "image": "GasRange.png"
   },
   {
-    "id": "gassy_moo",
-    "name": "Gassy Moo",
-    "image": "GassyMoo.png"
-  },
-  {
     "id": "glass_forge",
     "name": "Glass Forge",
     "image": "GlassForge.png"
-  },
-  {
-    "id": "gulp_fish",
-    "name": "Gulp Fish",
-    "image": "GulpFish.png"
   },
   {
     "id": "hand_sanitizer",
@@ -238,11 +203,6 @@
     "id": "materials_study_terminal",
     "name": "Materials Study Terminal",
     "image": "MaterialsStudyTerminal.png"
-  },
-  {
-    "id": "mealwood",
-    "name": "Mealwood",
-    "image": "Mealwood.png"
   },
   {
     "id": "mercury_ceiling_light",
@@ -315,16 +275,6 @@
     "image": "PetroleumGenerator.png"
   },
   {
-    "id": "pikeapple_bush",
-    "name": "Pikeapple Bush",
-    "image": "PikeappleBush.png"
-  },
-  {
-    "id": "pincha_pepperplant",
-    "name": "Pincha Pepperplant",
-    "image": "PinchaPepperplant.png"
-  },
-  {
     "id": "polymer_press",
     "name": "Polymer Press",
     "image": "PolymerPress.png"
@@ -390,14 +340,19 @@
     "image": "Sink.png"
   },
   {
-    "id": "sleet_wheat",
-    "name": "Sleet Wheat",
-    "image": "SleetWheat.png"
+    "id": "sludge_press",
+    "name": "Sludge Press",
+    "image": "SludgePress.png"
   },
   {
     "id": "soda_fountain",
     "name": "Soda Fountain",
     "image": "SodaFountain.png"
+  },
+  {
+    "id": "plant_pulverizer",
+    "name": "Plant Pulverizer",
+    "image": "PlantPulverizer.png"
   },
   {
     "id": "somnium_synthesizer",
@@ -423,11 +378,6 @@
     "id": "super_computer",
     "name": "Super Computer",
     "image": "SuperComputer.png"
-  },
-  {
-    "id": "swamp_chard",
-    "name": "Swamp Chard",
-    "image": "SwampChard.png"
   },
   {
     "id": "textile_loom",

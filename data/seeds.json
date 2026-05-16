@@ -70,9 +70,19 @@
     "image": "SleetWheatGrain.png"
   },
   {
+    "id": "fungal_spore",
+    "name": "Fungal Spore",
+    "image": "FungalSpore.png"
+  },
+  {
     "id": "thimble_reed_seed",
     "name": "Thimble Reed Seed",
     "image": "ThimbleReedSeed.png"
+  },
+  {
+    "id": "nosh_bean",
+    "name": "Nosh Bean",
+    "image": "NoshBean.png"
   },
   {
     "id": "waterweed_seed",

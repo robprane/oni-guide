@@ -15,14 +15,14 @@
     "image": "Bammoth.png"
   },
   {
-    "id": "bammoth_patty",
-    "name": "Bammoth Patty",
-    "image": "BammothPatty.png"
-  },
-  {
     "id": "beeta_hive",
     "name": "Beeta Hive",
     "image": "BeetaHive.png"
+  },
+  {
+    "id": "land_critter",
+    "name": "Land Critter",
+    "image": "LandCritter.png"
   },
   {
     "id": "coral_bug",
@@ -33,11 +33,6 @@
     "id": "cuddle_pip",
     "name": "Cuddle Pip",
     "image": "CuddlePip.png"
-  },
-  {
-    "id": "deep_fryer",
-    "name": "Deep Fryer",
-    "image": "DeepFryer.png"
   },
   {
     "id": "delecta_vole",
@@ -60,6 +55,11 @@
     "image": "Flox.png"
   },
   {
+    "id": "gassy_moo",
+    "name": "Gassy Moo",
+    "image": "GassyMoo.png"
+  },
+  {
     "id": "glossy_drecko",
     "name": "Glossy Drecko",
     "image": "GlossyDrecko.png"
@@ -68,6 +68,11 @@
     "id": "grubgrub",
     "name": "Grubgrub",
     "image": "Grubgrub.png"
+  },
+  {
+    "id": "gulp_fish",
+    "name": "Gulp Fish",
+    "image": "GulpFish.png"
   },
   {
     "id": "hatch",
@@ -85,19 +90,9 @@
     "image": "MoltenSlickster.png"
   },
   {
-    "id": "mush_fry",
-    "name": "Mush Fry",
-    "image": "MushFry.png"
-  },
-  {
     "id": "oakshell",
     "name": "Oakshell",
     "image": "Oakshell.png"
-  },
-  {
-    "id": "oakshell_molt",
-    "name": "Oakshell Molt",
-    "image": "OakshellMolt.png"
   },
   {
     "id": "pacu",
@@ -120,11 +115,6 @@
     "image": "Pokeshell.png"
   },
   {
-    "id": "pokeshell_molt",
-    "name": "Pokeshell Molt",
-    "image": "PokeshellMolt.png"
-  },
-  {
     "id": "puft",
     "name": "Puft",
     "image": "Puft.png"
@@ -143,11 +133,6 @@
     "id": "regal_bammoth",
     "name": "Regal Bammoth",
     "image": "RegalBammoth.png"
-  },
-  {
-    "id": "regal_bammoth_crest",
-    "name": "Regal Bammoth Crest",
-    "image": "RegalBammothCrest.png"
   },
   {
     "id": "royal_bug",
@@ -178,16 +163,6 @@
     "id": "slickster",
     "name": "Slickster",
     "image": "Slickster.png"
-  },
-  {
-    "id": "small_oakshell_molt",
-    "name": "Small Oakshell Molt",
-    "image": "SmallOakshellMolt.png"
-  },
-  {
-    "id": "small_pokeshell_molt",
-    "name": "Small Pokeshell Molt",
-    "image": "SmallPokeshellMolt.png"
   },
   {
     "id": "smog_slug",

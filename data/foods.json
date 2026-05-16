@@ -10,6 +10,11 @@
     "image": "BerrySludge.png"
   },
   {
+    "id": "bog_jelly",
+    "name": "Bog Jelly",
+    "image": "BogJelly.png"
+  },
+  {
     "id": "cooked_seafood",
     "name": "Cooked Seafood",
     "image": "CookedSeafood.png"
@@ -55,9 +60,54 @@
     "image": "DriedSurfnTurf.png"
   },
   {
-    "id": "egg_shell",
-    "name": "Egg Shell",
-    "image": "EggShell.png"
+    "id": "dried_mushroom_wrap",
+    "name": "Dried Mushroom Wrap",
+    "image": "DriedMushroomWrap.png"
+  },
+  {
+    "id": "dried_stuffed_berry",
+    "name": "Dried Stuffed Berry",
+    "image": "DriedStuffedBerry.png"
+  },
+  {
+    "id": "bristle_berry",
+    "name": "Bristle Berry",
+    "image": "BristleBerry.png"
+  },
+  {
+    "id": "fried_mushroom",
+    "name": "Fried Mushroom",
+    "image": "FriedMushroom.png"
+  },
+  {
+    "id": "gristle_berry",
+    "name": "Gristle Berry",
+    "image": "GristleBerry.png"
+  },
+  {
+    "id": "grubfruit",
+    "name": "Grubfruit",
+    "image": "Grubfruit.png"
+  },
+  {
+    "id": "grubfruit_preserve",
+    "name": "Grubfruit Preserve",
+    "image": "GrubfruitPreserve.png"
+  },
+  {
+    "id": "hexalent_fruit",
+    "name": "Hexalent Fruit",
+    "image": "HexalentFruit.png"
+  },
+  {
+    "id": "mushroom",
+    "name": "Mushroom",
+    "image": "Mushroom.png"
+  },
+  {
+    "id": "mushroom_wrap",
+    "name": "Mushroom Wrap",
+    "image": "MushroomWrap.png"
   },
   {
     "id": "fish_taco",
@@ -115,6 +165,11 @@
     "image": "MushBar.png"
   },
   {
+    "id": "mush_fry",
+    "name": "Mush Fry",
+    "image": "MushFry.png"
+  },
+  {
     "id": "mushroom_quiche",
     "name": "Mushroom Quiche",
     "image": "MushroomQuiche.png"
@@ -123,11 +178,6 @@
     "id": "nutrient_bar",
     "name": "Nutrient Bar",
     "image": "NutrientBar.png"
-  },
-  {
-    "id": "oak_pinch_roe",
-    "name": "Oak Pinch Roe",
-    "image": "OakPinchRoe.png"
   },
   {
     "id": "omelette",
@@ -155,6 +205,11 @@
     "image": "PickledMeal.png"
   },
   {
+    "id": "nosh_noms",
+    "name": "Nosh Noms",
+    "image": "NoshNoms.png"
+  },
+  {
     "id": "pikeapple",
     "name": "Pikeapple",
     "image": "Pikeapple.png"
@@ -165,11 +220,6 @@
     "image": "PikeappleSkewer.png"
   },
   {
-    "id": "pinch_roe",
-    "name": "Pinch Roe",
-    "image": "PinchRoe.png"
-  },
-  {
     "id": "pincha_peppernut",
     "name": "Pincha Peppernut",
     "image": "PinchaPeppernut.png"
@@ -178,6 +228,21 @@
     "id": "plant_meat",
     "name": "Plant Meat",
     "image": "PlantMeat.png"
+  },
+  {
+    "id": "stuffed_berry",
+    "name": "Stuffed Berry",
+    "image": "StuffedBerry.png"
+  },
+  {
+    "id": "spindly_grubfruit",
+    "name": "Spindly Grubfruit",
+    "image": "SpindlyGrubfruit.png"
+  },
+  {
+    "id": "plume_squash",
+    "name": "Plume Squash",
+    "image": "PlumeSquash.png"
   },
   {
     "id": "raw_egg",
@@ -195,16 +260,6 @@
     "image": "RoastGrubfruitNut.png"
   },
   {
-    "id": "rot_pile",
-    "name": "Rot Pile",
-    "image": "RotPile.png"
-  },
-  {
-    "id": "sani_pinch_roe",
-    "name": "Sani Pinch Roe",
-    "image": "SaniPinchRoe.png"
-  },
-  {
     "id": "shellfish_tempura",
     "name": "Shellfish Tempura",
     "image": "ShellfishTempura.png"
@@ -213,11 +268,6 @@
     "id": "sherberry",
     "name": "Sherberry",
     "image": "Sherberry.png"
-  },
-  {
-    "id": "sludge_press",
-    "name": "Sludge Press",
-    "image": "SludgePress.png"
   },
   {
     "id": "souffl_pancakes",
@@ -248,11 +298,6 @@
     "id": "swampy_delights",
     "name": "Swampy Delights",
     "image": "SwampyDelights.png"
-  },
-  {
-    "id": "tallow",
-    "name": "Tallow",
-    "image": "Tallow.png"
   },
   {
     "id": "tofu",

@@ -10,9 +10,29 @@
     "image": "AtmoSuit.png"
   },
   {
+    "id": "balm_lily_flower",
+    "name": "Balm Lily Flower",
+    "image": "BalmLilyFlower.png"
+  },
+  {
+    "id": "bammoth_patty",
+    "name": "Bammoth Patty",
+    "image": "BammothPatty.png"
+  },
+  {
     "id": "basic_rad_pill",
     "name": "Basic Rad Pill",
     "image": "BasicRadPill.png"
+  },
+  {
+    "id": "biobot",
+    "name": "Biobot",
+    "image": "Biobot.png"
+  },
+  {
+    "id": "blastshot",
+    "name": "Blastshot",
+    "image": "Blastshot.png"
   },
   {
     "id": "brawny_spice",
@@ -33,6 +53,11 @@
     "id": "dream_journal",
     "name": "Dream Journal",
     "image": "DreamJournal.png"
+  },
+  {
+    "id": "egg_shell",
+    "name": "Egg Shell",
+    "image": "EggShell.png"
   },
   {
     "id": "freshener_spice",
@@ -60,9 +85,19 @@
     "image": "MachinistSpice.png"
   },
   {
+    "id": "oakshell_molt",
+    "name": "Oakshell Molt",
+    "image": "OakshellMolt.png"
+  },
+  {
     "id": "oxygen_mask",
     "name": "Oxygen Mask",
     "image": "OxygenMask.png"
+  },
+  {
+    "id": "pokeshell_molt",
+    "name": "Pokeshell Molt",
+    "image": "PokeshellMolt.png"
   },
   {
     "id": "primo_garb",
@@ -80,9 +115,19 @@
     "image": "Radbolt.png"
   },
   {
+    "id": "regal_bammoth_crest",
+    "name": "Regal Bammoth Crest",
+    "image": "RegalBammothCrest.png"
+  },
+  {
     "id": "rocketeer_spice",
     "name": "Rocketeer Spice",
     "image": "RocketeerSpice.png"
+  },
+  {
+    "id": "rot_pile",
+    "name": "Rot Pile",
+    "image": "RotPile.png"
   },
   {
     "id": "serum_vial",
@@ -90,9 +135,49 @@
     "image": "SerumVial.png"
   },
   {
+    "id": "small_oakshell_molt",
+    "name": "Small Oakshell Molt",
+    "image": "SmallOakshellMolt.png"
+  },
+  {
+    "id": "small_pokeshell_molt",
+    "name": "Small Pokeshell Molt",
+    "image": "SmallPokeshellMolt.png"
+  },
+  {
+    "id": "reed_fiber",
+    "name": "Reed Fiber",
+    "image": "ReedFiber.png"
+  },
+  {
+    "id": "wood",
+    "name": "Wood",
+    "image": "Wood.png"
+  },
+  {
+    "id": "zombie_spores",
+    "name": "Zombie Spores",
+    "image": "ZombieSpores.png"
+  },
+  {
+    "id": "harvested_gas_grass",
+    "name": "Harvested Gas Grass",
+    "image": "HarvestedGasGrass.png"
+  },
+  {
+    "id": "tonic_root",
+    "name": "Tonic Root",
+    "image": "TonicRoot.png"
+  },
+  {
     "id": "snazzy_suit",
     "name": "Snazzy Suit",
     "image": "SnazzySuit.png"
+  },
+  {
+    "id": "table_salt",
+    "name": "Table Salt",
+    "image": "TableSalt.png"
   },
   {
     "id": "vitamin_chews",

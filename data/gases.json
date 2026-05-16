@@ -107,11 +107,7 @@
   {
     "id": "steam",
     "name": "Steam",
-    "image": "Steam.png",
-    "type": "Gas",
-    "condensation_point": 99.4,
-    "condensation_product": "water",
-    "description": "Water vapor."
+    "image": "Steam.png"
   },
   {
     "id": "steel_gas",
@@ -127,6 +123,11 @@
     "id": "super_coolant_gas",
     "name": "Super Coolant Gas",
     "image": "SuperCoolantGas.png"
+  },
+  {
+    "id": "nuclear_fallout",
+    "name": "Nuclear Fallout",
+    "image": "NuclearFallout.png"
   },
   {
     "id": "tungsten_gas",

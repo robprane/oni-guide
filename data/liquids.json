@@ -1,5 +1,10 @@
 [
   {
+    "id": "brackene",
+    "name": "Brackene",
+    "image": "Brackene.png"
+  },
+  {
     "id": "brine",
     "name": "Brine",
     "image": "Brine.png"
@@ -152,14 +157,7 @@
   {
     "id": "polluted_water",
     "name": "Polluted Water",
-    "image": "PollutedWater.png",
-    "type": "Liquid",
-    "freezing_point": -20.6,
-    "freezing_product": "polluted_ice",
-    "boiling_point": 119.4,
-    "boiling_product": "steam",
-    "boiling_byproduct": "dirt",
-    "description": "Dirty water that needs to be cleaned."
+    "image": "PollutedWater.png"
   },
   {
     "id": "salt_water",
@@ -177,14 +175,18 @@
     "image": "ViscoGelFluid.png"
   },
   {
+    "id": "mercury",
+    "name": "Mercury",
+    "image": "Mercury.png"
+  },
+  {
+    "id": "nuclear_waste",
+    "name": "Nuclear Waste",
+    "image": "NuclearWaste.png"
+  },
+  {
     "id": "water",
     "name": "Water",
-    "image": "Water.png",
-    "type": "Liquid",
-    "freezing_point": -0.6,
-    "freezing_product": "ice",
-    "boiling_point": 99.4,
-    "boiling_product": "steam",
-    "description": "Clean water, essential for life."
+    "image": "Water.png"
   }
 ]
