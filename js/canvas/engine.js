@@ -21,6 +21,11 @@ export class CanvasEngine {
         this.initialPinchDistance = 0;
         this.initialPinchZoom = 1;
 
+        // Deferred drawing state
+        this.pointerDownEvent = null;
+        this.pointerDownPoint = null;
+        this.isDrawingDrag = false;
+
         this.tintCanvas = document.createElement('canvas');
         this.tintCtx = this.tintCanvas.getContext('2d');
 
@@ -99,6 +104,8 @@ export class CanvasEngine {
             if (this.pointers.size === 2) {
                 this.isPanning = true;
                 this.wasMultiTouch = true;
+                this.pointerDownEvent = null;
+                this.pointerDownPoint = null;
                 const pinch = getPinchData();
                 this.initialPinchDistance = pinch.distance;
                 this.initialPinchZoom = this.camera.zoom;
@@ -111,8 +118,15 @@ export class CanvasEngine {
                     this.lastPanPoint = { x: e.clientX, y: e.clientY };
                     this.canvas.style.cursor = 'grabbing';
                 } else if (e.button === 0 && this.currentTool && !this.wasMultiTouch) {
-                    // Draw if not panning and not after multi-touch release
-                    this.useTool(e);
+                    // Defer drawing for touch events, or apply immediately for mouse
+                    if (e.pointerType === 'touch') {
+                        this.pointerDownEvent = e;
+                        this.pointerDownPoint = { x: e.clientX, y: e.clientY };
+                        this.isDrawingDrag = false;
+                    } else {
+                        this.useTool(e);
+                        this.isDrawingDrag = true;
+                    }
                 }
             }
         });
@@ -171,12 +185,31 @@ export class CanvasEngine {
                 }
             } else if (this.pointers.size === 1 && e.buttons === 1 && this.currentTool && !e.shiftKey && !this.wasMultiTouch) {
                 // Drag to draw
-                this.useTool(e);
+                if (e.pointerType === 'touch' && this.pointerDownPoint && !this.isDrawingDrag) {
+                    const dx = e.clientX - this.pointerDownPoint.x;
+                    const dy = e.clientY - this.pointerDownPoint.y;
+                    const dist = Math.sqrt(dx * dx + dy * dy);
+                    // Threshold to start drawing on touch (distinguishes from tapping or intent to pan)
+                    if (dist > 10) {
+                        this.isDrawingDrag = true;
+                        if (this.pointerDownEvent) {
+                            this.useTool(this.pointerDownEvent); // draw at start point
+                        }
+                        this.useTool(e); // draw at current point
+                    }
+                } else if (this.isDrawingDrag) {
+                    this.useTool(e);
+                }
             }
         });
 
         const handlePointerEnd = (e) => {
             this.pointers.delete(e.pointerId);
+
+            // Check if it was a single tap without dragging or multi-touch
+            if (this.pointers.size === 0 && this.pointerDownEvent && !this.isDrawingDrag && !this.wasMultiTouch && this.currentTool) {
+                this.useTool(this.pointerDownEvent);
+            }
 
             if (this.pointers.size < 2) {
                 // If 1 finger is left after pinch, update lastPanPoint to avoid jumping
@@ -189,6 +222,9 @@ export class CanvasEngine {
             if (this.pointers.size === 0) {
                 this.isPanning = false;
                 this.wasMultiTouch = false;
+                this.pointerDownEvent = null;
+                this.pointerDownPoint = null;
+                this.isDrawingDrag = false;
                 this.canvas.style.cursor = 'default';
             }
         };
