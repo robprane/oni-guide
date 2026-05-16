@@ -2,313 +2,261 @@
   {
     "id": "barbeque",
     "name": "Barbeque",
-    "image": "Barbeque.png",
-    "category": "food"
+    "image": "Barbeque.png"
   },
   {
     "id": "berry_sludge",
     "name": "Berry Sludge",
-    "image": "BerrySludge.png",
-    "category": "food"
+    "image": "BerrySludge.png"
   },
   {
     "id": "cooked_seafood",
     "name": "Cooked Seafood",
-    "image": "CookedSeafood.png",
-    "category": "food"
+    "image": "CookedSeafood.png"
   },
   {
     "id": "curried_beans",
     "name": "Curried Beans",
-    "image": "CurriedBeans.png",
-    "category": "food"
+    "image": "CurriedBeans.png"
   },
   {
     "id": "dried_berry_pie",
     "name": "Dried Berry Pie",
-    "image": "DriedBerryPie.png",
-    "category": "food"
+    "image": "DriedBerryPie.png"
   },
   {
     "id": "dried_curried_beans",
     "name": "Dried Curried Beans",
-    "image": "DriedCurriedBeans.png",
-    "category": "food"
+    "image": "DriedCurriedBeans.png"
   },
   {
     "id": "dried_frost_burger",
     "name": "Dried Frost Burger",
-    "image": "DriedFrostBurger.png",
-    "category": "food"
+    "image": "DriedFrostBurger.png"
   },
   {
     "id": "dried_mushroom_quiche",
     "name": "Dried Mushroom Quiche",
-    "image": "DriedMushroomQuiche.png",
-    "category": "food"
+    "image": "DriedMushroomQuiche.png"
   },
   {
     "id": "dried_pepper_bread",
     "name": "Dried Pepper Bread",
-    "image": "DriedPepperBread.png",
-    "category": "food"
+    "image": "DriedPepperBread.png"
   },
   {
     "id": "dried_spicy_tofu",
     "name": "Dried Spicy Tofu",
-    "image": "DriedSpicyTofu.png",
-    "category": "food"
+    "image": "DriedSpicyTofu.png"
   },
   {
     "id": "dried_surf_n_turf",
     "name": "Dried Surf'n'Turf",
-    "image": "DriedSurfnTurf.png",
-    "category": "food"
+    "image": "DriedSurfnTurf.png"
   },
   {
     "id": "egg_shell",
     "name": "Egg Shell",
-    "image": "EggShell.png",
-    "category": "food"
+    "image": "EggShell.png"
   },
   {
     "id": "fish_taco",
     "name": "Fish Taco",
-    "image": "FishTaco.png",
-    "category": "food"
+    "image": "FishTaco.png"
   },
   {
     "id": "food",
     "name": "Food",
-    "image": "Food.png",
-    "category": "food"
+    "image": "Food.png"
   },
   {
     "id": "frost_bun",
     "name": "Frost Bun",
-    "image": "FrostBun.png",
-    "category": "food"
+    "image": "FrostBun.png"
   },
   {
     "id": "frost_burger",
     "name": "Frost Burger",
-    "image": "FrostBurger.png",
-    "category": "food"
+    "image": "FrostBurger.png"
   },
   {
     "id": "lettuce",
     "name": "Lettuce",
-    "image": "Lettuce.png",
-    "category": "food"
+    "image": "Lettuce.png"
   },
   {
     "id": "liceloaf",
     "name": "Liceloaf",
-    "image": "Liceloaf.png",
-    "category": "food"
+    "image": "Liceloaf.png"
   },
   {
     "id": "meal_lice",
     "name": "Meal Lice",
-    "image": "MealLice.png",
-    "category": "food"
+    "image": "MealLice.png"
   },
   {
     "id": "meat",
     "name": "Meat",
-    "image": "Meat.png",
-    "category": "food"
+    "image": "Meat.png"
   },
   {
     "id": "mixed_berry_pie",
     "name": "Mixed Berry Pie",
-    "image": "MixedBerryPie.png",
-    "category": "food"
+    "image": "MixedBerryPie.png"
   },
   {
     "id": "muckroot",
     "name": "Muckroot",
-    "image": "Muckroot.png",
-    "category": "food"
+    "image": "Muckroot.png"
   },
   {
     "id": "mush_bar",
     "name": "Mush Bar",
-    "image": "MushBar.png",
-    "category": "food"
+    "image": "MushBar.png"
   },
   {
     "id": "mushroom_quiche",
     "name": "Mushroom Quiche",
-    "image": "MushroomQuiche.png",
-    "category": "food"
+    "image": "MushroomQuiche.png"
   },
   {
     "id": "nutrient_bar",
     "name": "Nutrient Bar",
-    "image": "NutrientBar.png",
-    "category": "food"
+    "image": "NutrientBar.png"
   },
   {
     "id": "oak_pinch_roe",
     "name": "Oak Pinch Roe",
-    "image": "OakPinchRoe.png",
-    "category": "food"
+    "image": "OakPinchRoe.png"
   },
   {
     "id": "omelette",
     "name": "Omelette",
-    "image": "Omelette.png",
-    "category": "food"
+    "image": "Omelette.png"
   },
   {
     "id": "pacu_fillet",
     "name": "Pacu Fillet",
-    "image": "PacuFillet.png",
-    "category": "food"
+    "image": "PacuFillet.png"
   },
   {
     "id": "pemmican",
     "name": "Pemmican",
-    "image": "Pemmican.png",
-    "category": "food"
+    "image": "Pemmican.png"
   },
   {
     "id": "pepper_bread",
     "name": "Pepper Bread",
-    "image": "PepperBread.png",
-    "category": "food"
+    "image": "PepperBread.png"
   },
   {
     "id": "pickled_meal",
     "name": "Pickled Meal",
-    "image": "PickledMeal.png",
-    "category": "food"
+    "image": "PickledMeal.png"
   },
   {
     "id": "pikeapple",
     "name": "Pikeapple",
-    "image": "Pikeapple.png",
-    "category": "food"
+    "image": "Pikeapple.png"
   },
   {
     "id": "pikeapple_skewer",
     "name": "Pikeapple Skewer",
-    "image": "PikeappleSkewer.png",
-    "category": "food"
+    "image": "PikeappleSkewer.png"
   },
   {
     "id": "pinch_roe",
     "name": "Pinch Roe",
-    "image": "PinchRoe.png",
-    "category": "food"
+    "image": "PinchRoe.png"
   },
   {
     "id": "pincha_peppernut",
     "name": "Pincha Peppernut",
-    "image": "PinchaPeppernut.png",
-    "category": "food"
+    "image": "PinchaPeppernut.png"
   },
   {
     "id": "plant_meat",
     "name": "Plant Meat",
-    "image": "PlantMeat.png",
-    "category": "food"
+    "image": "PlantMeat.png"
   },
   {
     "id": "raw_egg",
     "name": "Raw Egg",
-    "image": "RawEgg.png",
-    "category": "food"
+    "image": "RawEgg.png"
   },
   {
     "id": "raw_shellfish",
     "name": "Raw Shellfish",
-    "image": "RawShellfish.png",
-    "category": "food"
+    "image": "RawShellfish.png"
   },
   {
     "id": "roast_grubfruit_nut",
     "name": "Roast Grubfruit Nut",
-    "image": "RoastGrubfruitNut.png",
-    "category": "food"
+    "image": "RoastGrubfruitNut.png"
   },
   {
     "id": "rot_pile",
     "name": "Rot Pile",
-    "image": "RotPile.png",
-    "category": "food"
+    "image": "RotPile.png"
   },
   {
     "id": "sani_pinch_roe",
     "name": "Sani Pinch Roe",
-    "image": "SaniPinchRoe.png",
-    "category": "food"
+    "image": "SaniPinchRoe.png"
   },
   {
     "id": "shellfish_tempura",
     "name": "Shellfish Tempura",
-    "image": "ShellfishTempura.png",
-    "category": "food"
+    "image": "ShellfishTempura.png"
   },
   {
     "id": "sherberry",
     "name": "Sherberry",
-    "image": "Sherberry.png",
-    "category": "food"
+    "image": "Sherberry.png"
   },
   {
     "id": "sludge_press",
     "name": "Sludge Press",
-    "image": "SludgePress.png",
-    "category": "food"
+    "image": "SludgePress.png"
   },
   {
     "id": "souffl_pancakes",
     "name": "Souffl\u00e9 Pancakes",
-    "image": "SoufflPancakes.png",
-    "category": "food"
+    "image": "SoufflPancakes.png"
   },
   {
     "id": "spicy_tofu",
     "name": "Spicy Tofu",
-    "image": "SpicyTofu.png",
-    "category": "food"
+    "image": "SpicyTofu.png"
   },
   {
     "id": "squash_fries",
     "name": "Squash Fries",
-    "image": "SquashFries.png",
-    "category": "food"
+    "image": "SquashFries.png"
   },
   {
     "id": "surf_n_turf",
     "name": "Surf'n'Turf",
-    "image": "SurfnTurf.png",
-    "category": "food"
+    "image": "SurfnTurf.png"
   },
   {
     "id": "swamp_chard_heart",
     "name": "Swamp Chard Heart",
-    "image": "SwampChardHeart.png",
-    "category": "food"
+    "image": "SwampChardHeart.png"
   },
   {
     "id": "swampy_delights",
     "name": "Swampy Delights",
-    "image": "SwampyDelights.png",
-    "category": "food"
+    "image": "SwampyDelights.png"
   },
   {
     "id": "tallow",
     "name": "Tallow",
-    "image": "Tallow.png",
-    "category": "food"
+    "image": "Tallow.png"
   },
   {
     "id": "tofu",
     "name": "Tofu",
-    "image": "Tofu.png",
-    "category": "food"
+    "image": "Tofu.png"
   }
 ]

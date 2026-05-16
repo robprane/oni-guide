@@ -2,19 +2,16 @@
   {
     "id": "cool",
     "name": "cool",
-    "image": "cool.png",
-    "category": "special"
+    "image": "cool.png"
   },
   {
     "id": "emit",
     "name": "emit",
-    "image": "emit.png",
-    "category": "special"
+    "image": "emit.png"
   },
   {
     "id": "heat",
     "name": "heat",
-    "image": "heat.png",
-    "category": "special"
+    "image": "heat.png"
   }
 ]

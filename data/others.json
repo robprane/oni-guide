@@ -2,151 +2,126 @@
   {
     "id": "allergy_medication",
     "name": "Allergy Medication",
-    "image": "AllergyMedication.png",
-    "category": "other"
+    "image": "AllergyMedication.png"
   },
   {
     "id": "atmo_suit",
     "name": "Atmo Suit",
-    "image": "AtmoSuit.png",
-    "category": "other"
+    "image": "AtmoSuit.png"
   },
   {
     "id": "basic_rad_pill",
     "name": "Basic Rad Pill",
-    "image": "BasicRadPill.png",
-    "category": "other"
+    "image": "BasicRadPill.png"
   },
   {
     "id": "brawny_spice",
     "name": "Brawny Spice",
-    "image": "BrawnySpice.png",
-    "category": "other"
+    "image": "BrawnySpice.png"
   },
   {
     "id": "curative_tablet",
     "name": "Curative Tablet",
-    "image": "CurativeTablet.png",
-    "category": "other"
+    "image": "CurativeTablet.png"
   },
   {
     "id": "data_bank",
     "name": "Data Bank",
-    "image": "DataBank.png",
-    "category": "other"
+    "image": "DataBank.png"
   },
   {
     "id": "dream_journal",
     "name": "Dream Journal",
-    "image": "DreamJournal.png",
-    "category": "other"
+    "image": "DreamJournal.png"
   },
   {
     "id": "freshener_spice",
     "name": "Freshener Spice",
-    "image": "FreshenerSpice.png",
-    "category": "other"
+    "image": "FreshenerSpice.png"
   },
   {
     "id": "immuno_booster",
     "name": "Immuno Booster",
-    "image": "ImmunoBooster.png",
-    "category": "other"
+    "image": "ImmunoBooster.png"
   },
   {
     "id": "jet_suit",
     "name": "Jet Suit",
-    "image": "JetSuit.png",
-    "category": "other"
+    "image": "JetSuit.png"
   },
   {
     "id": "lead_suit",
     "name": "Lead Suit",
-    "image": "LeadSuit.png",
-    "category": "other"
+    "image": "LeadSuit.png"
   },
   {
     "id": "machinist_spice",
     "name": "Machinist Spice",
-    "image": "MachinistSpice.png",
-    "category": "other"
+    "image": "MachinistSpice.png"
   },
   {
     "id": "oxygen_mask",
     "name": "Oxygen Mask",
-    "image": "OxygenMask.png",
-    "category": "other"
+    "image": "OxygenMask.png"
   },
   {
     "id": "primo_garb",
     "name": "Primo Garb",
-    "image": "PrimoGarb.png",
-    "category": "other"
+    "image": "PrimoGarb.png"
   },
   {
     "id": "rad",
     "name": "Rad",
-    "image": "Rad.png",
-    "category": "other"
+    "image": "Rad.png"
   },
   {
     "id": "radbolt",
     "name": "Radbolt",
-    "image": "Radbolt.png",
-    "category": "other"
+    "image": "Radbolt.png"
   },
   {
     "id": "rocketeer_spice",
     "name": "Rocketeer Spice",
-    "image": "RocketeerSpice.png",
-    "category": "other"
+    "image": "RocketeerSpice.png"
   },
   {
     "id": "serum_vial",
     "name": "Serum Vial",
-    "image": "SerumVial.png",
-    "category": "other"
+    "image": "SerumVial.png"
   },
   {
     "id": "snazzy_suit",
     "name": "Snazzy Suit",
-    "image": "SnazzySuit.png",
-    "category": "other"
+    "image": "SnazzySuit.png"
   },
   {
     "id": "vitamin_chews",
     "name": "Vitamin Chews",
-    "image": "VitaminChews.png",
-    "category": "other"
+    "image": "VitaminChews.png"
   },
   {
     "id": "warm_coat",
     "name": "Warm Coat",
-    "image": "WarmCoat.png",
-    "category": "other"
+    "image": "WarmCoat.png"
   },
   {
     "id": "worn_atmo_suit",
     "name": "Worn Atmo Suit",
-    "image": "WornAtmoSuit.png",
-    "category": "other"
+    "image": "WornAtmoSuit.png"
   },
   {
     "id": "worn_jet_suit",
     "name": "Worn Jet Suit",
-    "image": "WornJetSuit.png",
-    "category": "other"
+    "image": "WornJetSuit.png"
   },
   {
     "id": "worn_lead_suit",
     "name": "Worn Lead Suit",
-    "image": "WornLeadSuit.png",
-    "category": "other"
+    "image": "WornLeadSuit.png"
   },
   {
     "id": "worn_oxygen_mask",
     "name": "Worn Oxygen Mask",
-    "image": "WornOxygenMask.png",
-    "category": "other"
+    "image": "WornOxygenMask.png"
   }
 ]

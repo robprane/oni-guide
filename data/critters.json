@@ -2,283 +2,236 @@
   {
     "id": "abyss_bug",
     "name": "Abyss Bug",
-    "image": "AbyssBug.png",
-    "category": "critter"
+    "image": "AbyssBug.png"
   },
   {
     "id": "azure_bug",
     "name": "Azure Bug",
-    "image": "AzureBug.png",
-    "category": "critter"
+    "image": "AzureBug.png"
   },
   {
     "id": "bammoth",
     "name": "Bammoth",
-    "image": "Bammoth.png",
-    "category": "critter"
+    "image": "Bammoth.png"
   },
   {
     "id": "bammoth_patty",
     "name": "Bammoth Patty",
-    "image": "BammothPatty.png",
-    "category": "critter"
+    "image": "BammothPatty.png"
   },
   {
     "id": "beeta_hive",
     "name": "Beeta Hive",
-    "image": "BeetaHive.png",
-    "category": "critter"
+    "image": "BeetaHive.png"
   },
   {
     "id": "coral_bug",
     "name": "Coral Bug",
-    "image": "CoralBug.png",
-    "category": "critter"
+    "image": "CoralBug.png"
   },
   {
     "id": "cuddle_pip",
     "name": "Cuddle Pip",
-    "image": "CuddlePip.png",
-    "category": "critter"
+    "image": "CuddlePip.png"
   },
   {
     "id": "deep_fryer",
     "name": "Deep Fryer",
-    "image": "DeepFryer.png",
-    "category": "critter"
+    "image": "DeepFryer.png"
   },
   {
     "id": "delecta_vole",
     "name": "Delecta Vole",
-    "image": "DelectaVole.png",
-    "category": "critter"
+    "image": "DelectaVole.png"
   },
   {
     "id": "dense_puft",
     "name": "Dense Puft",
-    "image": "DensePuft.png",
-    "category": "critter"
+    "image": "DensePuft.png"
   },
   {
     "id": "drecko",
     "name": "Drecko",
-    "image": "Drecko.png",
-    "category": "critter"
+    "image": "Drecko.png"
   },
   {
     "id": "flox",
     "name": "Flox",
-    "image": "Flox.png",
-    "category": "critter"
+    "image": "Flox.png"
   },
   {
     "id": "glossy_drecko",
     "name": "Glossy Drecko",
-    "image": "GlossyDrecko.png",
-    "category": "critter"
+    "image": "GlossyDrecko.png"
   },
   {
     "id": "grubgrub",
     "name": "Grubgrub",
-    "image": "Grubgrub.png",
-    "category": "critter"
+    "image": "Grubgrub.png"
   },
   {
     "id": "hatch",
     "name": "Hatch",
-    "image": "Hatch.png",
-    "category": "critter"
+    "image": "Hatch.png"
   },
   {
     "id": "longhair_slickster",
     "name": "Longhair Slickster",
-    "image": "LonghairSlickster.png",
-    "category": "critter"
+    "image": "LonghairSlickster.png"
   },
   {
     "id": "molten_slickster",
     "name": "Molten Slickster",
-    "image": "MoltenSlickster.png",
-    "category": "critter"
+    "image": "MoltenSlickster.png"
   },
   {
     "id": "mush_fry",
     "name": "Mush Fry",
-    "image": "MushFry.png",
-    "category": "critter"
+    "image": "MushFry.png"
   },
   {
     "id": "oakshell",
     "name": "Oakshell",
-    "image": "Oakshell.png",
-    "category": "critter"
+    "image": "Oakshell.png"
   },
   {
     "id": "oakshell_molt",
     "name": "Oakshell Molt",
-    "image": "OakshellMolt.png",
-    "category": "critter"
+    "image": "OakshellMolt.png"
   },
   {
     "id": "pacu",
     "name": "Pacu",
-    "image": "Pacu.png",
-    "category": "critter"
+    "image": "Pacu.png"
   },
   {
     "id": "pip",
     "name": "Pip",
-    "image": "Pip.png",
-    "category": "critter"
+    "image": "Pip.png"
   },
   {
     "id": "plug_slug",
     "name": "Plug Slug",
-    "image": "PlugSlug.png",
-    "category": "critter"
+    "image": "PlugSlug.png"
   },
   {
     "id": "pokeshell",
     "name": "Pokeshell",
-    "image": "Pokeshell.png",
-    "category": "critter"
+    "image": "Pokeshell.png"
   },
   {
     "id": "pokeshell_molt",
     "name": "Pokeshell Molt",
-    "image": "PokeshellMolt.png",
-    "category": "critter"
+    "image": "PokeshellMolt.png"
   },
   {
     "id": "puft",
     "name": "Puft",
-    "image": "Puft.png",
-    "category": "critter"
+    "image": "Puft.png"
   },
   {
     "id": "puft_prince",
     "name": "Puft Prince",
-    "image": "PuftPrince.png",
-    "category": "critter"
+    "image": "PuftPrince.png"
   },
   {
     "id": "radiant_bug",
     "name": "Radiant Bug",
-    "image": "RadiantBug.png",
-    "category": "critter"
+    "image": "RadiantBug.png"
   },
   {
     "id": "regal_bammoth",
     "name": "Regal Bammoth",
-    "image": "RegalBammoth.png",
-    "category": "critter"
+    "image": "RegalBammoth.png"
   },
   {
     "id": "regal_bammoth_crest",
     "name": "Regal Bammoth Crest",
-    "image": "RegalBammothCrest.png",
-    "category": "critter"
+    "image": "RegalBammothCrest.png"
   },
   {
     "id": "royal_bug",
     "name": "Royal Bug",
-    "image": "RoyalBug.png",
-    "category": "critter"
+    "image": "RoyalBug.png"
   },
   {
     "id": "sage_hatch",
     "name": "Sage Hatch",
-    "image": "SageHatch.png",
-    "category": "critter"
+    "image": "SageHatch.png"
   },
   {
     "id": "sanishell",
     "name": "Sanishell",
-    "image": "Sanishell.png",
-    "category": "critter"
+    "image": "Sanishell.png"
   },
   {
     "id": "shine_bug",
     "name": "Shine Bug",
-    "image": "ShineBug.png",
-    "category": "critter"
+    "image": "ShineBug.png"
   },
   {
     "id": "shove_vole",
     "name": "Shove Vole",
-    "image": "ShoveVole.png",
-    "category": "critter"
+    "image": "ShoveVole.png"
   },
   {
     "id": "slickster",
     "name": "Slickster",
-    "image": "Slickster.png",
-    "category": "critter"
+    "image": "Slickster.png"
   },
   {
     "id": "small_oakshell_molt",
     "name": "Small Oakshell Molt",
-    "image": "SmallOakshellMolt.png",
-    "category": "critter"
+    "image": "SmallOakshellMolt.png"
   },
   {
     "id": "small_pokeshell_molt",
     "name": "Small Pokeshell Molt",
-    "image": "SmallPokeshellMolt.png",
-    "category": "critter"
+    "image": "SmallPokeshellMolt.png"
   },
   {
     "id": "smog_slug",
     "name": "Smog Slug",
-    "image": "SmogSlug.png",
-    "category": "critter"
+    "image": "SmogSlug.png"
   },
   {
     "id": "smooth_hatch",
     "name": "Smooth Hatch",
-    "image": "SmoothHatch.png",
-    "category": "critter"
+    "image": "SmoothHatch.png"
   },
   {
     "id": "spigot_seal",
     "name": "Spigot Seal",
-    "image": "SpigotSeal.png",
-    "category": "critter"
+    "image": "SpigotSeal.png"
   },
   {
     "id": "sponge_slug",
     "name": "Sponge Slug",
-    "image": "SpongeSlug.png",
-    "category": "critter"
+    "image": "SpongeSlug.png"
   },
   {
     "id": "squeaky_puft",
     "name": "Squeaky Puft",
-    "image": "SqueakyPuft.png",
-    "category": "critter"
+    "image": "SqueakyPuft.png"
   },
   {
     "id": "stone_hatch",
     "name": "Stone Hatch",
-    "image": "StoneHatch.png",
-    "category": "critter"
+    "image": "StoneHatch.png"
   },
   {
     "id": "sun_bug",
     "name": "Sun Bug",
-    "image": "SunBug.png",
-    "category": "critter"
+    "image": "SunBug.png"
   },
   {
     "id": "sweetle",
     "name": "Sweetle",
-    "image": "Sweetle.png",
-    "category": "critter"
+    "image": "Sweetle.png"
   },
   {
     "id": "tropical_pacu",
     "name": "Tropical Pacu",
-    "image": "TropicalPacu.png",
-    "category": "critter"
+    "image": "TropicalPacu.png"
   }
 ]

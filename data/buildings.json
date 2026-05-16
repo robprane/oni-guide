@@ -2,571 +2,476 @@
   {
     "id": "algae_distiller",
     "name": "Algae Distiller",
-    "image": "AlgaeDistiller.png",
-    "category": "building"
+    "image": "AlgaeDistiller.png"
   },
   {
     "id": "algae_terrarium",
     "name": "Algae Terrarium",
-    "image": "AlgaeTerrarium.png",
-    "category": "building"
+    "image": "AlgaeTerrarium.png"
   },
   {
     "id": "alveo_vera",
     "name": "Alveo Vera",
-    "image": "AlveoVera.png",
-    "category": "building"
+    "image": "AlveoVera.png"
   },
   {
     "id": "anti_entropy_thermo_nullifier",
     "name": "Anti Entropy Thermo-Nullifier",
-    "image": "AntiEntropyThermoNullifier.png",
-    "category": "building"
+    "image": "AntiEntropyThermoNullifier.png"
   },
   {
     "id": "apothecary",
     "name": "Apothecary",
-    "image": "Apothecary.png",
-    "category": "building"
+    "image": "Apothecary.png"
   },
   {
     "id": "biobot_builder",
     "name": "Biobot Builder",
-    "image": "BiobotBuilder.png",
-    "category": "building"
+    "image": "BiobotBuilder.png"
   },
   {
     "id": "blastshot_maker",
     "name": "Blastshot Maker",
-    "image": "BlastshotMaker.png",
-    "category": "building"
+    "image": "BlastshotMaker.png"
   },
   {
     "id": "bleach_stone_hopper",
     "name": "Bleach Stone Hopper",
-    "image": "BleachStoneHopper.png",
-    "category": "building"
+    "image": "BleachStoneHopper.png"
   },
   {
     "id": "bog_bucket",
     "name": "Bog Bucket",
-    "image": "BogBucket.png",
-    "category": "building"
+    "image": "BogBucket.png"
   },
   {
     "id": "brackwax_gleaner",
     "name": "Brackwax Gleaner",
-    "image": "BrackwaxGleaner.png",
-    "category": "building"
+    "image": "BrackwaxGleaner.png"
   },
   {
     "id": "buried_muckroot",
     "name": "Buried Muckroot",
-    "image": "BuriedMuckroot.png",
-    "category": "building"
+    "image": "BuriedMuckroot.png"
   },
   {
     "id": "carbon_skimmer",
     "name": "Carbon Skimmer",
-    "image": "CarbonSkimmer.png",
-    "category": "building"
+    "image": "CarbonSkimmer.png"
   },
   {
     "id": "clothing_refashionator",
     "name": "Clothing Refashionator",
-    "image": "ClothingRefashionator.png",
-    "category": "building"
+    "image": "ClothingRefashionator.png"
   },
   {
     "id": "coal_generator",
     "name": "Coal Generator",
-    "image": "CoalGenerator.png",
-    "category": "building"
+    "image": "CoalGenerator.png"
   },
   {
     "id": "compost",
     "name": "Compost",
-    "image": "Compost.png",
-    "category": "building"
+    "image": "Compost.png"
   },
   {
     "id": "crafting_station",
     "name": "Crafting Station",
-    "image": "CraftingStation.png",
-    "category": "building"
+    "image": "CraftingStation.png"
   },
   {
     "id": "critter_fountain",
     "name": "Critter Fountain",
-    "image": "CritterFountain.png",
-    "category": "building"
+    "image": "CritterFountain.png"
   },
   {
     "id": "dasha_saltvine",
     "name": "Dasha Saltvine",
-    "image": "DashaSaltvine.png",
-    "category": "building"
+    "image": "DashaSaltvine.png"
   },
   {
     "id": "decontamination_shower",
     "name": "Decontamination Shower",
-    "image": "DecontaminationShower.png",
-    "category": "building"
+    "image": "DecontaminationShower.png"
   },
   {
     "id": "dehydrator",
     "name": "Dehydrator",
-    "image": "Dehydrator.png",
-    "category": "building"
+    "image": "Dehydrator.png"
   },
   {
     "id": "deodorizer",
     "name": "Deodorizer",
-    "image": "Deodorizer.png",
-    "category": "building"
+    "image": "Deodorizer.png"
   },
   {
     "id": "desalinator",
     "name": "Desalinator",
-    "image": "Desalinator.png",
-    "category": "building"
+    "image": "Desalinator.png"
   },
   {
     "id": "diamond_press",
     "name": "Diamond Press",
-    "image": "DiamondPress.png",
-    "category": "building"
+    "image": "DiamondPress.png"
   },
   {
     "id": "disease_clinic",
     "name": "Disease Clinic",
-    "image": "DiseaseClinic.png",
-    "category": "building"
+    "image": "DiseaseClinic.png"
   },
   {
     "id": "dusk_cap",
     "name": "Dusk Cap",
-    "image": "DuskCap.png",
-    "category": "building"
+    "image": "DuskCap.png"
   },
   {
     "id": "egg_cracker",
     "name": "Egg Cracker",
-    "image": "EggCracker.png",
-    "category": "building"
+    "image": "EggCracker.png"
   },
   {
     "id": "electric_grill",
     "name": "Electric Grill",
-    "image": "ElectricGrill.png",
-    "category": "building"
+    "image": "ElectricGrill.png"
   },
   {
     "id": "electrolyzer",
     "name": "Electrolyzer",
-    "image": "Electrolyzer.png",
-    "category": "building"
+    "image": "Electrolyzer.png"
   },
   {
     "id": "espresso_machine",
     "name": "Espresso Machine",
-    "image": "EspressoMachine.png",
-    "category": "building"
+    "image": "EspressoMachine.png"
   },
   {
     "id": "ethanol_distiller",
     "name": "Ethanol Distiller",
-    "image": "EthanolDistiller.png",
-    "category": "building"
+    "image": "EthanolDistiller.png"
   },
   {
     "id": "exosuit_forge",
     "name": "Exosuit Forge",
-    "image": "ExosuitForge.png",
-    "category": "building"
+    "image": "ExosuitForge.png"
   },
   {
     "id": "farm_station",
     "name": "Farm Station",
-    "image": "FarmStation.png",
-    "category": "building"
+    "image": "FarmStation.png"
   },
   {
     "id": "fertilizer_synthesizer",
     "name": "Fertilizer Synthesizer",
-    "image": "FertilizerSynthesizer.png",
-    "category": "building"
+    "image": "FertilizerSynthesizer.png"
   },
   {
     "id": "fossil_quarry",
     "name": "Fossil Quarry",
-    "image": "FossilQuarry.png",
-    "category": "building"
+    "image": "FossilQuarry.png"
   },
   {
     "id": "gas_grass",
     "name": "Gas Grass",
-    "image": "GasGrass.png",
-    "category": "building"
+    "image": "GasGrass.png"
   },
   {
     "id": "gas_range",
     "name": "Gas Range",
-    "image": "GasRange.png",
-    "category": "building"
+    "image": "GasRange.png"
   },
   {
     "id": "gassy_moo",
     "name": "Gassy Moo",
-    "image": "GassyMoo.png",
-    "category": "building"
+    "image": "GassyMoo.png"
   },
   {
     "id": "glass_forge",
     "name": "Glass Forge",
-    "image": "GlassForge.png",
-    "category": "building"
+    "image": "GlassForge.png"
   },
   {
     "id": "gulp_fish",
     "name": "Gulp Fish",
-    "image": "GulpFish.png",
-    "category": "building"
+    "image": "GulpFish.png"
   },
   {
     "id": "hand_sanitizer",
     "name": "Hand Sanitizer",
-    "image": "HandSanitizer.png",
-    "category": "building"
+    "image": "HandSanitizer.png"
   },
   {
     "id": "hydrogen_generator",
     "name": "Hydrogen Generator",
-    "image": "HydrogenGenerator.png",
-    "category": "building"
+    "image": "HydrogenGenerator.png"
   },
   {
     "id": "ice_e_fan",
     "name": "Ice-E Fan",
-    "image": "IceEFan.png",
-    "category": "building"
+    "image": "IceEFan.png"
   },
   {
     "id": "ice_maker",
     "name": "Ice Maker",
-    "image": "IceMaker.png",
-    "category": "building"
+    "image": "IceMaker.png"
   },
   {
     "id": "juicer",
     "name": "Juicer",
-    "image": "Juicer.png",
-    "category": "building"
+    "image": "Juicer.png"
   },
   {
     "id": "kiln",
     "name": "Kiln",
-    "image": "Kiln.png",
-    "category": "building"
+    "image": "Kiln.png"
   },
   {
     "id": "lavatory",
     "name": "Lavatory",
-    "image": "Lavatory.png",
-    "category": "building"
+    "image": "Lavatory.png"
   },
   {
     "id": "manual_radbolt_generator",
     "name": "Manual Radbolt Generator",
-    "image": "ManualRadboltGenerator.png",
-    "category": "building"
+    "image": "ManualRadboltGenerator.png"
   },
   {
     "id": "materials_study_terminal",
     "name": "Materials Study Terminal",
-    "image": "MaterialsStudyTerminal.png",
-    "category": "building"
+    "image": "MaterialsStudyTerminal.png"
   },
   {
     "id": "mealwood",
     "name": "Mealwood",
-    "image": "Mealwood.png",
-    "category": "building"
+    "image": "Mealwood.png"
   },
   {
     "id": "mercury_ceiling_light",
     "name": "Mercury Ceiling Light",
-    "image": "MercuryCeilingLight.png",
-    "category": "building"
+    "image": "MercuryCeilingLight.png"
   },
   {
     "id": "metal_refinery",
     "name": "Metal Refinery",
-    "image": "MetalRefinery.png",
-    "category": "building"
+    "image": "MetalRefinery.png"
   },
   {
     "id": "microbe_musher",
     "name": "Microbe Musher",
-    "image": "MicrobeMusher.png",
-    "category": "building"
+    "image": "MicrobeMusher.png"
   },
   {
     "id": "milking_station",
     "name": "Milking Station",
-    "image": "MilkingStation.png",
-    "category": "building"
+    "image": "MilkingStation.png"
   },
   {
     "id": "molecular_forge",
     "name": "Molecular Forge",
-    "image": "MolecularForge.png",
-    "category": "building"
+    "image": "MolecularForge.png"
   },
   {
     "id": "natural_gas_generator",
     "name": "Natural Gas Generator",
-    "image": "NaturalGasGenerator.png",
-    "category": "building"
+    "image": "NaturalGasGenerator.png"
   },
   {
     "id": "oil_refinery",
     "name": "Oil Refinery",
-    "image": "OilRefinery.png",
-    "category": "building"
+    "image": "OilRefinery.png"
   },
   {
     "id": "oil_well",
     "name": "Oil Well",
-    "image": "OilWell.png",
-    "category": "building"
+    "image": "OilWell.png"
   },
   {
     "id": "orbital_data_collection_lab",
     "name": "Orbital Data Collection Lab",
-    "image": "OrbitalDataCollectionLab.png",
-    "category": "building"
+    "image": "OrbitalDataCollectionLab.png"
   },
   {
     "id": "ore_scrubber",
     "name": "Ore Scrubber",
-    "image": "OreScrubber.png",
-    "category": "building"
+    "image": "OreScrubber.png"
   },
   {
     "id": "outhouse",
     "name": "Outhouse",
-    "image": "Outhouse.png",
-    "category": "building"
+    "image": "Outhouse.png"
   },
   {
     "id": "oxygen_diffuser",
     "name": "Oxygen Diffuser",
-    "image": "OxygenDiffuser.png",
-    "category": "building"
+    "image": "OxygenDiffuser.png"
   },
   {
     "id": "oxylite_refinery",
     "name": "Oxylite Refinery",
-    "image": "OxyliteRefinery.png",
-    "category": "building"
+    "image": "OxyliteRefinery.png"
   },
   {
     "id": "petroleum_generator",
     "name": "Petroleum Generator",
-    "image": "PetroleumGenerator.png",
-    "category": "building"
+    "image": "PetroleumGenerator.png"
   },
   {
     "id": "pikeapple_bush",
     "name": "Pikeapple Bush",
-    "image": "PikeappleBush.png",
-    "category": "building"
+    "image": "PikeappleBush.png"
   },
   {
     "id": "pincha_pepperplant",
     "name": "Pincha Pepperplant",
-    "image": "PinchaPepperplant.png",
-    "category": "building"
+    "image": "PinchaPepperplant.png"
   },
   {
     "id": "polymer_press",
     "name": "Polymer Press",
-    "image": "PolymerPress.png",
-    "category": "building"
+    "image": "PolymerPress.png"
   },
   {
     "id": "power_control_station",
     "name": "Power Control Station",
-    "image": "PowerControlStation.png",
-    "category": "building"
+    "image": "PowerControlStation.png"
   },
   {
     "id": "radbolt_generator",
     "name": "Radbolt Generator",
-    "image": "RadboltGenerator.png",
-    "category": "building"
+    "image": "RadboltGenerator.png"
   },
   {
     "id": "radiation_lamp",
     "name": "Radiation Lamp",
-    "image": "RadiationLamp.png",
-    "category": "building"
+    "image": "RadiationLamp.png"
   },
   {
     "id": "rehydrator",
     "name": "Rehydrator",
-    "image": "Rehydrator.png",
-    "category": "building"
+    "image": "Rehydrator.png"
   },
   {
     "id": "research_reactor",
     "name": "Research Reactor",
-    "image": "ResearchReactor.png",
-    "category": "building"
+    "image": "ResearchReactor.png"
   },
   {
     "id": "research_station",
     "name": "Research Station",
-    "image": "ResearchStation.png",
-    "category": "building"
+    "image": "ResearchStation.png"
   },
   {
     "id": "rock_crusher",
     "name": "Rock Crusher",
-    "image": "RockCrusher.png",
-    "category": "building"
+    "image": "RockCrusher.png"
   },
   {
     "id": "rust_deoxidizer",
     "name": "Rust Deoxidizer",
-    "image": "RustDeoxidizer.png",
-    "category": "building"
+    "image": "RustDeoxidizer.png"
   },
   {
     "id": "sauna",
     "name": "Sauna",
-    "image": "Sauna.png",
-    "category": "building"
+    "image": "Sauna.png"
   },
   {
     "id": "shearing_station",
     "name": "Shearing Station",
-    "image": "ShearingStation.png",
-    "category": "building"
+    "image": "ShearingStation.png"
   },
   {
     "id": "shower",
     "name": "Shower",
-    "image": "Shower.png",
-    "category": "building"
+    "image": "Shower.png"
   },
   {
     "id": "sink",
     "name": "Sink",
-    "image": "Sink.png",
-    "category": "building"
+    "image": "Sink.png"
   },
   {
     "id": "sleet_wheat",
     "name": "Sleet Wheat",
-    "image": "SleetWheat.png",
-    "category": "building"
+    "image": "SleetWheat.png"
   },
   {
     "id": "soda_fountain",
     "name": "Soda Fountain",
-    "image": "SodaFountain.png",
-    "category": "building"
+    "image": "SodaFountain.png"
   },
   {
     "id": "somnium_synthesizer",
     "name": "Somnium Synthesizer",
-    "image": "SomniumSynthesizer.png",
-    "category": "building"
+    "image": "SomniumSynthesizer.png"
   },
   {
     "id": "spice_grinder",
     "name": "Spice Grinder",
-    "image": "SpiceGrinder.png",
-    "category": "building"
+    "image": "SpiceGrinder.png"
   },
   {
     "id": "steam_turbine",
     "name": "Steam Turbine",
-    "image": "SteamTurbine.png",
-    "category": "building"
+    "image": "SteamTurbine.png"
   },
   {
     "id": "sublimation_station",
     "name": "Sublimation Station",
-    "image": "SublimationStation.png",
-    "category": "building"
+    "image": "SublimationStation.png"
   },
   {
     "id": "super_computer",
     "name": "Super Computer",
-    "image": "SuperComputer.png",
-    "category": "building"
+    "image": "SuperComputer.png"
   },
   {
     "id": "swamp_chard",
     "name": "Swamp Chard",
-    "image": "SwampChard.png",
-    "category": "building"
+    "image": "SwampChard.png"
   },
   {
     "id": "textile_loom",
     "name": "Textile Loom",
-    "image": "TextileLoom.png",
-    "category": "building"
+    "image": "TextileLoom.png"
   },
   {
     "id": "uranium_centrifuge",
     "name": "Uranium Centrifuge",
-    "image": "UraniumCentrifuge.png",
-    "category": "building"
+    "image": "UraniumCentrifuge.png"
   },
   {
     "id": "virtual_planetarium",
     "name": "Virtual Planetarium",
-    "image": "VirtualPlanetarium.png",
-    "category": "building"
+    "image": "VirtualPlanetarium.png"
   },
   {
     "id": "wall_toilet",
     "name": "Wall Toilet",
-    "image": "WallToilet.png",
-    "category": "building"
+    "image": "WallToilet.png"
   },
   {
     "id": "wash_basin",
     "name": "Wash Basin",
-    "image": "WashBasin.png",
-    "category": "building"
+    "image": "WashBasin.png"
   },
   {
     "id": "water_cooler",
     "name": "Water Cooler",
-    "image": "WaterCooler.png",
-    "category": "building"
+    "image": "WaterCooler.png"
   },
   {
     "id": "water_sieve",
     "name": "Water Sieve",
-    "image": "WaterSieve.png",
-    "category": "building"
+    "image": "WaterSieve.png"
   },
   {
     "id": "wood_burner",
     "name": "Wood Burner",
-    "image": "WoodBurner.png",
-    "category": "building"
+    "image": "WoodBurner.png"
   },
   {
     "id": "wood_heater",
     "name": "Wood Heater",
-    "image": "WoodHeater.png",
-    "category": "building"
+    "image": "WoodHeater.png"
   }
 ]

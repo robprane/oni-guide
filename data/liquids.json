@@ -2,188 +2,157 @@
   {
     "id": "brine",
     "name": "Brine",
-    "image": "Brine.png",
-    "category": "liquid"
+    "image": "Brine.png"
   },
   {
     "id": "crude_oil",
     "name": "Crude Oil",
-    "image": "CrudeOil.png",
-    "category": "liquid"
+    "image": "CrudeOil.png"
   },
   {
     "id": "ethanol",
     "name": "Ethanol",
-    "image": "Ethanol.png",
-    "category": "liquid"
+    "image": "Ethanol.png"
   },
   {
     "id": "liquid_carbon",
     "name": "Liquid Carbon",
-    "image": "LiquidCarbon.png",
-    "category": "liquid"
+    "image": "LiquidCarbon.png"
   },
   {
     "id": "liquid_carbon_dioxide",
     "name": "Liquid Carbon Dioxide",
-    "image": "LiquidCarbonDioxide.png",
-    "category": "liquid"
+    "image": "LiquidCarbonDioxide.png"
   },
   {
     "id": "liquid_chlorine",
     "name": "Liquid Chlorine",
-    "image": "LiquidChlorine.png",
-    "category": "liquid"
+    "image": "LiquidChlorine.png"
   },
   {
     "id": "liquid_hydrogen",
     "name": "Liquid Hydrogen",
-    "image": "LiquidHydrogen.png",
-    "category": "liquid"
+    "image": "LiquidHydrogen.png"
   },
   {
     "id": "liquid_methane",
     "name": "Liquid Methane",
-    "image": "LiquidMethane.png",
-    "category": "liquid"
+    "image": "LiquidMethane.png"
   },
   {
     "id": "liquid_naphtha",
     "name": "Liquid Naphtha",
-    "image": "LiquidNaphtha.png",
-    "category": "liquid"
+    "image": "LiquidNaphtha.png"
   },
   {
     "id": "liquid_nuclear_waste",
     "name": "Liquid Nuclear Waste",
-    "image": "LiquidNuclearWaste.png",
-    "category": "liquid"
+    "image": "LiquidNuclearWaste.png"
   },
   {
     "id": "liquid_oxygen",
     "name": "Liquid Oxygen",
-    "image": "LiquidOxygen.png",
-    "category": "liquid"
+    "image": "LiquidOxygen.png"
   },
   {
     "id": "liquid_phosphorus",
     "name": "Liquid Phosphorus",
-    "image": "LiquidPhosphorus.png",
-    "category": "liquid"
+    "image": "LiquidPhosphorus.png"
   },
   {
     "id": "liquid_resin",
     "name": "Liquid Resin",
-    "image": "LiquidResin.png",
-    "category": "liquid"
+    "image": "LiquidResin.png"
   },
   {
     "id": "liquid_sucrose",
     "name": "Liquid Sucrose",
-    "image": "LiquidSucrose.png",
-    "category": "liquid"
+    "image": "LiquidSucrose.png"
   },
   {
     "id": "liquid_sulfur",
     "name": "Liquid Sulfur",
-    "image": "LiquidSulfur.png",
-    "category": "liquid"
+    "image": "LiquidSulfur.png"
   },
   {
     "id": "liquid_uranium",
     "name": "Liquid Uranium",
-    "image": "LiquidUranium.png",
-    "category": "liquid"
+    "image": "LiquidUranium.png"
   },
   {
     "id": "magma",
     "name": "Magma",
-    "image": "Magma.png",
-    "category": "liquid"
+    "image": "Magma.png"
   },
   {
     "id": "molten_aluminum",
     "name": "Molten Aluminum",
-    "image": "MoltenAluminum.png",
-    "category": "liquid"
+    "image": "MoltenAluminum.png"
   },
   {
     "id": "molten_cobalt",
     "name": "Molten Cobalt",
-    "image": "MoltenCobalt.png",
-    "category": "liquid"
+    "image": "MoltenCobalt.png"
   },
   {
     "id": "molten_copper",
     "name": "Molten Copper",
-    "image": "MoltenCopper.png",
-    "category": "liquid"
+    "image": "MoltenCopper.png"
   },
   {
     "id": "molten_glass",
     "name": "Molten Glass",
-    "image": "MoltenGlass.png",
-    "category": "liquid"
+    "image": "MoltenGlass.png"
   },
   {
     "id": "molten_gold",
     "name": "Molten Gold",
-    "image": "MoltenGold.png",
-    "category": "liquid"
+    "image": "MoltenGold.png"
   },
   {
     "id": "molten_iron",
     "name": "Molten Iron",
-    "image": "MoltenIron.png",
-    "category": "liquid"
+    "image": "MoltenIron.png"
   },
   {
     "id": "molten_lead",
     "name": "Molten Lead",
-    "image": "MoltenLead.png",
-    "category": "liquid"
+    "image": "MoltenLead.png"
   },
   {
     "id": "molten_niobium",
     "name": "Molten Niobium",
-    "image": "MoltenNiobium.png",
-    "category": "liquid"
+    "image": "MoltenNiobium.png"
   },
   {
     "id": "molten_salt",
     "name": "Molten Salt",
-    "image": "MoltenSalt.png",
-    "category": "liquid"
+    "image": "MoltenSalt.png"
   },
   {
     "id": "molten_steel",
     "name": "Molten Steel",
-    "image": "MoltenSteel.png",
-    "category": "liquid"
+    "image": "MoltenSteel.png"
   },
   {
     "id": "molten_tungsten",
     "name": "Molten Tungsten",
-    "image": "MoltenTungsten.png",
-    "category": "liquid"
+    "image": "MoltenTungsten.png"
   },
   {
     "id": "nectar",
     "name": "Nectar",
-    "image": "Nectar.png",
-    "category": "liquid"
+    "image": "Nectar.png"
   },
   {
     "id": "petroleum",
     "name": "Petroleum",
-    "image": "Petroleum.png",
-    "category": "liquid"
+    "image": "Petroleum.png"
   },
   {
     "id": "polluted_water",
     "name": "Polluted Water",
     "image": "PollutedWater.png",
-    "category": "liquid",
     "type": "Liquid",
     "freezing_point": -20.6,
     "freezing_product": "polluted_ice",
@@ -195,26 +164,22 @@
   {
     "id": "salt_water",
     "name": "Salt Water",
-    "image": "SaltWater.png",
-    "category": "liquid"
+    "image": "SaltWater.png"
   },
   {
     "id": "super_coolant",
     "name": "Super Coolant",
-    "image": "SuperCoolant.png",
-    "category": "liquid"
+    "image": "SuperCoolant.png"
   },
   {
     "id": "visco_gel_fluid",
     "name": "Visco-Gel Fluid",
-    "image": "ViscoGelFluid.png",
-    "category": "liquid"
+    "image": "ViscoGelFluid.png"
   },
   {
     "id": "water",
     "name": "Water",
     "image": "Water.png",
-    "category": "liquid",
     "type": "Liquid",
     "freezing_point": -0.6,
     "freezing_product": "ice",
