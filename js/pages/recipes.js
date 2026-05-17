@@ -255,7 +255,7 @@ export async function renderRecipes(container, currentPath) {
                 showDetailModal(item);
             });
             card.addEventListener('keydown', (e) => {
-                if (e.key === 'Enter' || e.key === ' ') {
+                if (e.code === 'Enter' || e.code === 'Space') {
                     e.preventDefault();
                     showDetailModal(item);
                 }

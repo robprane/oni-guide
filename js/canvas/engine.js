@@ -11,7 +11,7 @@ export class CanvasEngine {
         this.camera = { x: 0, y: 0, zoom: 1 };
 
         // Keyboard panning state
-        this.keys = { w: false, a: false, s: false, d: false, ArrowUp: false, ArrowLeft: false, ArrowDown: false, ArrowRight: false };
+        this.keys = { KeyW: false, KeyA: false, KeyS: false, KeyD: false, ArrowUp: false, ArrowLeft: false, ArrowDown: false, ArrowRight: false };
 
         // Pointer state
         this.pointers = new Map(); // Keep track of active pointers
@@ -267,19 +267,15 @@ export class CanvasEngine {
         // Keyboard panning events
         const handleKeyDown = (e) => {
             if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
-            if (e.key in this.keys) {
-                this.keys[e.key] = true;
-            } else if (e.key.toLowerCase() in this.keys) {
-                this.keys[e.key.toLowerCase()] = true;
+            if (e.code in this.keys) {
+                this.keys[e.code] = true;
             }
         };
 
         const handleKeyUp = (e) => {
             if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
-            if (e.key in this.keys) {
-                this.keys[e.key] = false;
-            } else if (e.key.toLowerCase() in this.keys) {
-                this.keys[e.key.toLowerCase()] = false;
+            if (e.code in this.keys) {
+                this.keys[e.code] = false;
             }
         };
 
@@ -756,12 +752,12 @@ export class CanvasEngine {
         this.simulation.update(timestamp);
 
         // Handle keyboard panning
-        const panSpeed = 10 / this.camera.zoom;
+        const panSpeed = 20 / this.camera.zoom;
         let panned = false;
-        if (this.keys.w || this.keys.ArrowUp) { this.camera.y += panSpeed; panned = true; }
-        if (this.keys.s || this.keys.ArrowDown) { this.camera.y -= panSpeed; panned = true; }
-        if (this.keys.a || this.keys.ArrowLeft) { this.camera.x += panSpeed; panned = true; }
-        if (this.keys.d || this.keys.ArrowRight) { this.camera.x -= panSpeed; panned = true; }
+        if (this.keys.KeyW || this.keys.ArrowUp) { this.camera.y += panSpeed; panned = true; }
+        if (this.keys.KeyS || this.keys.ArrowDown) { this.camera.y -= panSpeed; panned = true; }
+        if (this.keys.KeyA || this.keys.ArrowLeft) { this.camera.x += panSpeed; panned = true; }
+        if (this.keys.KeyD || this.keys.ArrowRight) { this.camera.x -= panSpeed; panned = true; }
 
         if (panned) {
             this.needsRedraw = true;
