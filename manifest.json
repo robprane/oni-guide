@@ -1,7 +1,9 @@
 {
   "name": "ONI Guide",
   "short_name": "ONI Guide",
+  "id": "/",
   "start_url": "/",
+  "scope": "/",
   "display": "standalone",
   "background_color": "#011223",
   "theme_color": "#011223",
