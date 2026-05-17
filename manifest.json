@@ -8,8 +8,26 @@
   "description": "Interactive tools and recipes for Oxygen Not Included",
   "icons": [
     {
+      "src": "assets/logo-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/logo-384.png",
+      "sizes": "384x384",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
       "src": "assets/logo-512.png",
       "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/logo-1024.png",
+      "sizes": "1024x1024",
       "type": "image/png",
       "purpose": "any"
     },
