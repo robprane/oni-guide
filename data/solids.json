@@ -219,11 +219,6 @@
     "image": "MaficRock.png"
   },
   {
-    "id": "medical_pack",
-    "name": "Medical Pack",
-    "image": "MedicalPack.png"
-  },
-  {
     "id": "mud",
     "name": "Mud",
     "image": "Mud.png"

@@ -1,7 +1,9 @@
 {
-  "name": "ONI Guide",
-  "short_name": "ONI Guide",
+  "name": "ONI.guide",
+  "short_name": "ONI.guide",
+  "id": "/",
   "start_url": "/",
+  "scope": "/",
   "display": "standalone",
   "background_color": "#011223",
   "theme_color": "#011223",
@@ -36,6 +38,32 @@
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Recipes",
+      "short_name": "Recipes",
+      "description": "Browse ONI recipes",
+      "url": "/#/recipes",
+      "icons": [
+        {
+          "src": "assets/logo-512.png",
+          "sizes": "512x512"
+        }
+      ]
+    },
+    {
+      "name": "Canvas",
+      "short_name": "Canvas",
+      "description": "Interactive layout canvas",
+      "url": "/#/canvas",
+      "icons": [
+        {
+          "src": "assets/logo-512.png",
+          "sizes": "512x512"
+        }
+      ]
     }
   ]
 }

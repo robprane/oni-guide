@@ -13,10 +13,7 @@ export async function renderCanvas(container) {
                 <button class="tool-btn" data-tool="bridge" style="display: none;">Bridge</button>
                 <button class="tool-btn" data-tool="spawn_liquid" style="display: none;">Spawn Liquid</button>
                 <button class="tool-btn" data-tool="erase">Eraser</button>
-                <button id="orientation-btn" class="utility-btn" style="display: none;">Rotate (O)</button>
-                <div style="margin-left: auto; display: flex; align-items: center; gap: 10px; font-size: 0.9rem;">
-                    <span>Shift+Drag or Middle-Click to pan. Scroll to zoom.</span>
-                </div>
+                <button id="orientation-btn" class="utility-btn" style="display: none;">Rotate</button>
             </div>
             <div style="flex: 1; position: relative; overflow: hidden;">
                 <canvas id="oni-canvas" style="display: block; width: 100%; height: 100%;"></canvas>
@@ -45,9 +42,12 @@ export async function renderCanvas(container) {
     const btns = container.querySelectorAll('.tool-btn');
     btns.forEach(btn => {
         btn.addEventListener('click', (e) => {
-            btns.forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-            engineInstance.setTool(btn.dataset.tool);
+            const toolName = btn.dataset.tool;
+            if (engineInstance.currentTool !== 'erase' && toolName === 'erase') {
+                previousTool = engineInstance.currentTool;
+            }
+            setActiveToolBtn(toolName);
+            engineInstance.setTool(toolName);
         });
     });
 
@@ -62,10 +62,35 @@ export async function renderCanvas(container) {
 
     orientationBtn.addEventListener('click', toggleOrientation);
 
+    let previousTool = 'solid';
+
+    function setActiveToolBtn(toolName) {
+        btns.forEach(b => {
+            if (b.dataset.tool === toolName) {
+                b.classList.add('active');
+            } else {
+                b.classList.remove('active');
+            }
+        });
+    }
+
     function handleKeydown(e) {
+        if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+
         if (e.code === 'KeyO') {
             if (engineInstance && engineInstance.currentTool === 'sweeper') {
                 toggleOrientation();
+            }
+        } else if (e.code === 'KeyC' || e.code === 'KeyX') {
+            if (engineInstance && engineInstance.currentTool !== 'erase') {
+                previousTool = engineInstance.currentTool;
+                engineInstance.setTool('erase');
+                setActiveToolBtn('erase');
+            }
+        } else if (e.code === 'KeyB') {
+            if (engineInstance && engineInstance.currentTool === 'erase') {
+                engineInstance.setTool(previousTool);
+                setActiveToolBtn(previousTool);
             }
         }
     }

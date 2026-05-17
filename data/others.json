@@ -5,6 +5,11 @@
     "image": "AllergyMedication.png"
   },
   {
+    "id": "medical_pack",
+    "name": "Medical Pack",
+    "image": "MedicalPack.png"
+  },
+  {
     "id": "atmo_suit",
     "name": "Atmo Suit",
     "image": "AtmoSuit.png"
