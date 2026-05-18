@@ -240,23 +240,31 @@ export class CanvasEngine {
 
         this.canvas.addEventListener('wheel', (e) => {
             e.preventDefault();
-            const zoomAmount = e.deltaY > 0 ? 0.9 : 1.1;
 
-            // Zoom towards mouse position
-            const rect = this.canvas.getBoundingClientRect();
-            const mouseX = e.clientX - rect.left;
-            const mouseY = e.clientY - rect.top;
+            if (e.ctrlKey) {
+                // Zoom
+                const zoomAmount = e.deltaY > 0 ? 0.9 : 1.1;
 
-            // Convert screen to world
-            const worldX = (mouseX / this.camera.zoom) - this.camera.x;
-            const worldY = (mouseY / this.camera.zoom) - this.camera.y;
+                // Zoom towards mouse position
+                const rect = this.canvas.getBoundingClientRect();
+                const mouseX = e.clientX - rect.left;
+                const mouseY = e.clientY - rect.top;
 
-            this.camera.zoom *= zoomAmount;
-            this.camera.zoom = Math.max(0.2, Math.min(this.camera.zoom, 5));
+                // Convert screen to world
+                const worldX = (mouseX / this.camera.zoom) - this.camera.x;
+                const worldY = (mouseY / this.camera.zoom) - this.camera.y;
 
-            // Adjust camera to keep mouse over same world point
-            this.camera.x = (mouseX / this.camera.zoom) - worldX;
-            this.camera.y = (mouseY / this.camera.zoom) - worldY;
+                this.camera.zoom *= zoomAmount;
+                this.camera.zoom = Math.max(0.2, Math.min(this.camera.zoom, 5));
+
+                // Adjust camera to keep mouse over same world point
+                this.camera.x = (mouseX / this.camera.zoom) - worldX;
+                this.camera.y = (mouseY / this.camera.zoom) - worldY;
+            } else {
+                // Pan
+                this.camera.x -= e.deltaX / this.camera.zoom;
+                this.camera.y -= e.deltaY / this.camera.zoom;
+            }
 
             this.needsRedraw = true;
         }, { passive: false });
