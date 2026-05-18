@@ -286,6 +286,8 @@ export async function renderRecipes(container, currentPath) {
         .filter-btn:hover, .clear-search-btn:hover { background: var(--nav-hover) !important; }
         .filter-btn.active { background: var(--primary-color); color: white; border-color: var(--primary-color); }
         #detail-dialog::backdrop { background: rgba(0,0,0,0.5); }
+        .recipe-link { cursor: pointer; transition: opacity 0.2s; }
+        .recipe-link:hover { opacity: 0.7; text-decoration: underline !important; }
     `;
     container.appendChild(style);
 
@@ -415,14 +417,22 @@ function showDetailModal(item) {
 
         if (r.source) {
             let src = allItems[r.source];
-            rHtml += `<div style="display:flex; align-items:center; gap:0.2rem;"><img src="/images/${src ? src.image : ''}" style="width:1.5em; height:1.5em;" title="${src ? src.name : r.source}"> <strong>${src ? src.name : r.source}</strong></div>`;
+            if (src) {
+                rHtml += `<a href="#/recipes/${src.id}" class="recipe-link" style="display:flex; align-items:center; gap:0.2rem; color:inherit; text-decoration:none;"><img src="/images/${src.image}" style="width:1.5em; height:1.5em;" title="${src.name}"> <strong>${src.name}</strong></a>`;
+            } else {
+                rHtml += `<div style="display:flex; align-items:center; gap:0.2rem;"><strong>${r.source}</strong></div>`;
+            }
         }
 
         if (r.consumed && r.consumed.length > 0) {
             rHtml += `<span style="color:#888;">consumes</span>`;
             r.consumed.forEach(c => {
                 let el = allItems[c.element];
-                rHtml += `<div style="display:flex; align-items:center; gap:0.2rem; background: rgba(255,0,0,0.1); padding: 0.2rem 0.4rem; border-radius: .25em;"><img src="/images/${el ? el.image : ''}" style="width:auto; height:1em;" title="${el ? el.name : c.element}"> ${formatAmount(c)} ${el ? el.name : c.element}</div>`;
+                if (el) {
+                    rHtml += `<a href="#/recipes/${el.id}" class="recipe-link" style="display:flex; align-items:center; gap:0.2rem; background: rgba(255,0,0,0.1); padding: 0.2rem 0.4rem; border-radius: .25em; color:inherit; text-decoration:none;"><img src="/images/${el.image}" style="width:auto; height:1em;" title="${el.name}"> ${formatAmount(c)} ${el.name}</a>`;
+                } else {
+                    rHtml += `<div style="display:flex; align-items:center; gap:0.2rem; background: rgba(255,0,0,0.1); padding: 0.2rem 0.4rem; border-radius: .25em;">${formatAmount(c)} ${c.element}</div>`;
+                }
             });
         }
 
@@ -430,7 +440,11 @@ function showDetailModal(item) {
             rHtml += `<span style="color:#888;">produces</span>`;
             r.produced.forEach(p => {
                 let el = allItems[p.element];
-                rHtml += `<div style="display:flex; align-items:center; gap:0.2rem; background: rgba(0,255,0,0.1); padding: 0.2rem 0.4rem; border-radius: .25em;"><img src="/images/${el ? el.image : ''}" style="width:auto; height:1em;" title="${el ? el.name : p.element}"> ${formatAmount(p)} ${el ? el.name : p.element}</div>`;
+                if (el) {
+                    rHtml += `<a href="#/recipes/${el.id}" class="recipe-link" style="display:flex; align-items:center; gap:0.2rem; background: rgba(0,255,0,0.1); padding: 0.2rem 0.4rem; border-radius: .25em; color:inherit; text-decoration:none;"><img src="/images/${el.image}" style="width:auto; height:1em;" title="${el.name}"> ${formatAmount(p)} ${el.name}</a>`;
+                } else {
+                    rHtml += `<div style="display:flex; align-items:center; gap:0.2rem; background: rgba(0,255,0,0.1); padding: 0.2rem 0.4rem; border-radius: .25em;">${formatAmount(p)} ${p.element}</div>`;
+                }
             });
         }
 
