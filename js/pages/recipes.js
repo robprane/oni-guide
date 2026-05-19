@@ -294,7 +294,6 @@ export async function renderRecipes(container, currentPath) {
             background: var(--card-bg);
             border: 1px solid var(--border-color);
             border-radius: 8px;
-            margin-bottom: 1rem;
             overflow: hidden;
             container-type: inline-size;
         }
@@ -309,10 +308,12 @@ export async function renderRecipes(container, currentPath) {
         }
         .recipe-items-block {
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
+            justify-content: space-evenly;
             gap: 0.5rem;
             align-items: center;
             flex: 1;
+            flex-wrap: wrap;
         }
         .recipe-source-block {
             display: flex;
@@ -335,7 +336,7 @@ export async function renderRecipes(container, currentPath) {
             fill: currentColor;
             transition: transform 0.3s;
         }
-        @container (max-width: 500px) {
+        @container (max-width: 300px) {
             .recipe-layout {
                 flex-direction: column;
             }
@@ -350,6 +351,7 @@ export async function renderRecipes(container, currentPath) {
             text-decoration: none;
             color: inherit;
             text-align: center;
+            min-width: 4em;
         }
         .recipe-item-link:hover {
             opacity: 0.8;
@@ -437,11 +439,11 @@ function showDetailModal(item) {
         dialog.id = 'detail-dialog';
         dialog.style.cssText = `
             background: var(--bg-color);
-            padding: 2rem;
+            padding: 1rem;
             border-radius: 8px;
-            max-width: 800px;
+            max-width: 90dvw;
             width: 90%;
-            max-height: 90vh;
+            max-height: 90dvh;
             border: 1px solid var(--border-color);
             color: var(--text-color);
             margin: auto;
@@ -472,7 +474,7 @@ function showDetailModal(item) {
     }
 
     let html = `
-        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start;">
             <div style="display: flex; align-items: center; gap: 1rem;">
                 <img src="/images/${item.image}" alt="${item.name}" style="width: 64px; height: 64px; object-fit: contain;">
                 <div>
@@ -649,9 +651,9 @@ function showDetailModal(item) {
 
     const renderCategory = (title, recipes) => {
         if (recipes.length === 0) return '';
-        let catHtml = `<div style="margin-top: 1.5rem; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 8px; overflow: hidden;">
+        let catHtml = `<div style="background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 8px; overflow: hidden;">
             <h3 class="recipe-category-title">${title}</h3>
-            <div style="padding: 1rem 1rem 0 1rem;">`;
+            <div style="padding: .5rem; display: flex; flex-direction: column; gap: .5em;">`;
         recipes.forEach(r => { catHtml += renderRecipe(r); });
         catHtml += `</div></div>`;
         return catHtml;
@@ -665,6 +667,8 @@ function showDetailModal(item) {
     if (allRelatedRecipes.length === 0) {
         html += `<p style="margin-top: 1rem; color: #888;">No known recipes.</p>`;
     }
+
+    html = `<div style="display:flex;flex-direction:column;gap:1em;">${html}</div>`;
 
     dialog.innerHTML = html;
     if (!dialog.open) {
