@@ -589,49 +589,53 @@ function showDetailModal(item) {
                 rHtml += renderRecipeItem(c, false);
             });
             rHtml += `</div>`;
-            rHtml += arrowSvg;
         }
 
         // Center: Source
-        rHtml += `<div class="recipe-source-block">`;
-        let src = allItems[r.source];
-        if (src) {
-            if (r.source === 'heat' || r.source === 'cool') {
-                if (r.temp !== undefined) {
-                    rHtml += `<span style="font-size: 1.1rem; font-weight: bold; color: #555; background: #eee; padding: 0.2rem 0.5rem; border-radius: 4px; border: 1px solid #ccc;">${formatAmountNumber(r.temp)} °C</span>`;
-                } else {
-                     // Fallback just in case temp is missing
-                    rHtml += `<span style="font-size: 1.1rem; font-weight: bold; color: #555; background: #eee; padding: 0.2rem 0.5rem; border-radius: 4px; border: 1px solid #ccc;">Phase Change</span>`;
-                }
-            } else if (r.source === 'emit') {
-                rHtml += `<a href="#/recipes/${src.id}" class="recipe-item-link">
-                    <img src="/images/${src.image}" class="recipe-item-img" title="${src.name}">
-                </a>`;
-            } else {
-                rHtml += `<a href="#/recipes/${src.id}" class="recipe-item-link">
-                    <img src="/images/${src.image}" class="recipe-item-img" title="${src.name}">
-                    <span class="recipe-item-name" style="font-size: 0.85rem; margin-top: 0.2rem; margin-bottom: 0.2rem; text-align: center; line-height: 1.1; color: var(--text-color);">${src.name}</span>
-                </a>`;
+        if (r.source !== 'emit') {
+            if (r.consumed && r.consumed.length > 0) {
+                rHtml += arrowSvg;
             }
-        } else {
-            if (r.source === 'heat' || r.source === 'cool') {
-                if (r.temp !== undefined) {
-                    rHtml += `<span style="font-size: 1.1rem; font-weight: bold; color: #555; background: #eee; padding: 0.2rem 0.5rem; border-radius: 4px; border: 1px solid #ccc;">${formatAmountNumber(r.temp)} °C</span>`;
+            rHtml += `<div class="recipe-source-block">`;
+            let src = allItems[r.source];
+            if (src) {
+                if (r.source === 'heat' || r.source === 'cool') {
+                    rHtml += `<div class="recipe-item-link" style="cursor: default; text-decoration: none;">
+                        <img src="/images/${src.image}" class="recipe-item-img" title="${src.name}">`;
+                    if (r.temp !== undefined) {
+                        rHtml += `<span class="recipe-item-name" style="font-size: 0.85rem; margin-top: 0.2rem; margin-bottom: 0.2rem; text-align: center; line-height: 1.1; color: var(--text-color);">${formatAmountNumber(r.temp)} °C</span>`;
+                    } else {
+                        rHtml += `<span class="recipe-item-name" style="font-size: 0.85rem; margin-top: 0.2rem; margin-bottom: 0.2rem; text-align: center; line-height: 1.1; color: var(--text-color);">Phase Change</span>`;
+                    }
+                    rHtml += `</div>`;
                 } else {
-                    rHtml += `<span style="font-size: 1.1rem; font-weight: bold; color: #555; background: #eee; padding: 0.2rem 0.5rem; border-radius: 4px; border: 1px solid #ccc;">Phase Change</span>`;
+                    rHtml += `<a href="#/recipes/${src.id}" class="recipe-item-link">
+                        <img src="/images/${src.image}" class="recipe-item-img" title="${src.name}">
+                        <span class="recipe-item-name" style="font-size: 0.85rem; margin-top: 0.2rem; margin-bottom: 0.2rem; text-align: center; line-height: 1.1; color: var(--text-color);">${src.name}</span>
+                    </a>`;
                 }
-            } else if (r.source === 'emit') {
-                // If emit not found in allItems, display a placeholder icon
-                rHtml += `<div class="recipe-item-link"><div style="width: 48px; height: 48px; background: #888; border-radius: 50%;"></div></div>`;
             } else {
-                rHtml += `<div class="recipe-item-link"><div style="width: 48px; height: 48px; background: #888;"></div><span style="font-size: 0.85rem; margin-top: 0.2rem; text-align: center;">${r.source}</span></div>`;
+                if (r.source === 'heat' || r.source === 'cool') {
+                    rHtml += `<div class="recipe-item-link" style="cursor: default; text-decoration: none;">
+                        <div style="width: 48px; height: 48px; background: #888; margin-bottom: 0.25rem;"></div>`;
+                    if (r.temp !== undefined) {
+                        rHtml += `<span class="recipe-item-name" style="font-size: 0.85rem; margin-top: 0.2rem; margin-bottom: 0.2rem; text-align: center; line-height: 1.1; color: var(--text-color);">${formatAmountNumber(r.temp)} °C</span>`;
+                    } else {
+                        rHtml += `<span class="recipe-item-name" style="font-size: 0.85rem; margin-top: 0.2rem; margin-bottom: 0.2rem; text-align: center; line-height: 1.1; color: var(--text-color);">Phase Change</span>`;
+                    }
+                    rHtml += `</div>`;
+                } else {
+                    rHtml += `<div class="recipe-item-link"><div style="width: 48px; height: 48px; background: #888; margin-bottom: 0.25rem;"></div><span class="recipe-item-name" style="font-size: 0.85rem; margin-top: 0.2rem; margin-bottom: 0.2rem; text-align: center; line-height: 1.1; color: var(--text-color);">${r.source}</span></div>`;
+                }
             }
+            rHtml += `</div>`;
         }
-        rHtml += `</div>`;
 
         // Right: Produced
         if (r.produced && r.produced.length > 0) {
-            rHtml += arrowSvg;
+            if ((r.consumed && r.consumed.length > 0) || r.source !== 'emit') {
+                rHtml += arrowSvg;
+            }
             rHtml += `<div class="recipe-items-block">`;
             r.produced.forEach(p => {
                 rHtml += renderRecipeItem(p, true);
