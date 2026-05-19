@@ -282,12 +282,104 @@ export async function renderRecipes(container, currentPath) {
 
     const style = document.createElement('style');
     style.textContent = `
+
         .filter-btn { padding: 0.5rem 1rem; border: 1px solid var(--border-color); background: var(--card-bg); color: var(--text-color); border-radius: 4px; cursor: pointer; transition: background 0.2s; }
         .filter-btn:hover, .clear-search-btn:hover { background: var(--nav-hover) !important; }
         .filter-btn.active { background: var(--primary-color); color: white; border-color: var(--primary-color); }
         #detail-dialog::backdrop { background: rgba(0,0,0,0.5); }
         .recipe-link { cursor: pointer; transition: opacity 0.2s; }
         .recipe-link:hover { opacity: 0.7; text-decoration: underline !important; }
+
+        .recipe-container {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            overflow: hidden;
+            container-type: inline-size;
+        }
+        .recipe-layout {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            padding: 1rem;
+            background: var(--input-bg);
+        }
+        .recipe-items-block {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            align-items: center;
+            flex: 1;
+        }
+        .recipe-source-block {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            flex: 1;
+        }
+        .recipe-arrow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-color);
+            opacity: 0.5;
+        }
+        .recipe-arrow svg {
+            width: 24px;
+            height: 24px;
+            fill: currentColor;
+            transition: transform 0.3s;
+        }
+        @container (max-width: 500px) {
+            .recipe-layout {
+                flex-direction: column;
+            }
+            .recipe-arrow svg {
+                transform: rotate(90deg);
+            }
+        }
+        .recipe-item-link {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            color: inherit;
+            text-align: center;
+        }
+        .recipe-item-link:hover {
+            opacity: 0.8;
+        }
+        .recipe-item-img {
+            width: 48px;
+            height: 48px;
+            object-fit: contain;
+            margin-bottom: 0.25rem;
+        }
+        .recipe-item-name {
+            font-size: 0.85rem;
+            color: #888;
+            margin-bottom: 0.1rem;
+        }
+        .recipe-item-amount {
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+        .amount-positive { color: #4caf50; }
+        .amount-negative { color: #f44336; }
+        .recipe-category-title {
+            background: rgba(136, 136, 136, 0.2);
+            padding: 0.5rem;
+            margin: 0;
+            font-size: 1rem;
+            text-align: center;
+            border-bottom: 1px solid var(--border-color);
+        }
+
     `;
     container.appendChild(style);
 
@@ -402,72 +494,175 @@ function showDetailModal(item) {
     if (item.boiling_point !== undefined) html += `<p><strong>Boiling Point:</strong> ${item.boiling_point}°C (Forms: ${item.boiling_product || '?'})</p>`;
 
     // Find related recipes
-    let sourceRecipes = recipesData.filter(r => r.source === item.id);
-    let consumesRecipes = recipesData.filter(r => (r.consumed || []).some(c => c.element === item.id));
-    let producesRecipes = recipesData.filter(r => (r.produced || []).some(p => p.element === item.id));
+    let allRelatedRecipes = recipesData.filter(r =>
+        r.source === item.id ||
+        (r.consumed || []).some(c => c.element === item.id) ||
+        (r.produced || []).some(p => p.element === item.id)
+    );
 
-    const formatAmount = (item) => {
-        if (!item.per) return `${item.amount}${item.unit.includes('%') ? '' : ' '}${item.unit}`;
-        if (item.unit.includes(' ') || item.per.includes(' ')) return `${item.amount}${item.unit.includes('%') ? '' : ' '}${item.unit} per ${item.per}`;
-        return `${item.amount}${item.unit.includes('%') ? '' : ' '}${item.unit}/${item.per}`;
+    // Categorize
+    let stateTransitions = [];
+    let emissions = [];
+    let produced = [];
+    let consumed = [];
+
+    // Filter recipes where current item is produced or consumed
+    const isProduced = (r) => (r.produced || []).some(p => p.element === item.id);
+    const isConsumed = (r) => (r.consumed || []).some(c => c.element === item.id);
+
+    allRelatedRecipes.forEach(r => {
+        if (r.source === 'heat' || r.source === 'cool') {
+            stateTransitions.push(r);
+        } else if (r.source === 'emit') {
+            emissions.push(r);
+        } else if (isProduced(r)) {
+            produced.push(r);
+        } else if (isConsumed(r) || r.source === item.id) {
+            consumed.push(r);
+        }
+    });
+
+    const formatAmountNumber = (num) => {
+        if (num === 0) return '0';
+        let absNum = Math.abs(num);
+        if (absNum < 0.01) {
+            let mag = Math.floor(Math.log10(absNum));
+            let factor = Math.pow(10, -mag);
+            let rounded = Math.round((num + Math.sign(num) * Number.EPSILON) * factor) / factor;
+            return rounded.toFixed(20).replace(/\.?0+$/, '');
+        }
+        return (Math.round((num + Math.sign(num) * Number.EPSILON) * 100) / 100).toString();
+    };
+
+    const formatAmount = (itemData, isProducedFlag) => {
+        let amountText = '';
+        let numStr = formatAmountNumber(itemData.amount);
+        let sign = isProducedFlag ? '+' : '-';
+        if (itemData.amount > 0) amountText = sign + numStr;
+        else if (itemData.amount < 0) amountText = isProducedFlag ? numStr : numStr; // Already has sign if negative? Wait, if negative produced, it's negative.
+        else amountText = '0';
+
+        let unitText = `${itemData.unit.includes('%') ? '' : ' '}${itemData.unit}`;
+        if (itemData.per) {
+            if (itemData.unit.includes(' ') || itemData.per.includes(' ')) {
+                unitText += ` per ${itemData.per}`;
+            } else {
+                unitText += `/${itemData.per}`;
+            }
+        }
+        return `${amountText}${unitText}`;
+    };
+
+    const arrowSvg = `<div class="recipe-arrow"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></div>`;
+
+    const renderRecipeItem = (data, isProducedFlag) => {
+        let el = allItems[data.element];
+        let amountStr = formatAmount(data, isProducedFlag);
+        let amountClass = isProducedFlag ? 'amount-positive' : 'amount-negative';
+
+        if (el) {
+            return `
+                <a href="#/recipes/${el.id}" class="recipe-item-link">
+                    <img src="/images/${el.image}" class="recipe-item-img" title="${el.name}">
+                    <span class="recipe-item-name" style="font-size: 0.85rem; margin-top: 0.2rem; margin-bottom: 0.2rem; text-align: center; line-height: 1.1; color: var(--text-color);">${el.name}</span>
+                    <span class="recipe-item-amount ${amountClass}">${amountStr}</span>
+                </a>
+            `;
+        } else {
+            return `
+                <div class="recipe-item-link">
+                    <div style="width: 48px; height: 48px; background: #888; margin-bottom: 0.25rem;"></div>
+                    <span class="recipe-item-name" style="font-size: 0.85rem; margin-top: 0.2rem; margin-bottom: 0.2rem; text-align: center; line-height: 1.1; color: var(--text-color);">Unknown</span>
+                    <span class="recipe-item-amount ${amountClass}">${amountStr}</span>
+                </div>
+            `;
+        }
     };
 
     const renderRecipe = (r) => {
-        let rHtml = `<div style="background: var(--input-bg); padding: 0.5rem; border-radius: .25em; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">`;
+        let rHtml = `<div class="recipe-container"><div class="recipe-layout">`;
 
-        if (r.source) {
+        // Left: Consumed
+        if (r.consumed && r.consumed.length > 0) {
+            rHtml += `<div class="recipe-items-block">`;
+            r.consumed.forEach(c => {
+                rHtml += renderRecipeItem(c, false);
+            });
+            rHtml += `</div>`;
+        }
+
+        // Center: Source
+        if (r.source !== 'emit') {
+            if (r.consumed && r.consumed.length > 0) {
+                rHtml += arrowSvg;
+            }
+            rHtml += `<div class="recipe-source-block">`;
             let src = allItems[r.source];
             if (src) {
-                rHtml += `<a href="#/recipes/${src.id}" class="recipe-link" style="display:flex; align-items:center; gap:0.2rem; color:inherit; text-decoration:none;"><img src="/images/${src.image}" style="width:1.5em; height:1.5em;" title="${src.name}"> <strong>${src.name}</strong></a>`;
+                if (r.source === 'heat' || r.source === 'cool') {
+                    rHtml += `<div class="recipe-item-link" style="cursor: default; text-decoration: none;">
+                        <img src="/images/${src.image}" class="recipe-item-img" title="${src.name}">`;
+                    if (r.temp !== undefined) {
+                        rHtml += `<span class="recipe-item-name" style="font-size: 0.85rem; margin-top: 0.2rem; margin-bottom: 0.2rem; text-align: center; line-height: 1.1; color: var(--text-color);">${formatAmountNumber(r.temp)} °C</span>`;
+                    } else {
+                        rHtml += `<span class="recipe-item-name" style="font-size: 0.85rem; margin-top: 0.2rem; margin-bottom: 0.2rem; text-align: center; line-height: 1.1; color: var(--text-color);">Phase Change</span>`;
+                    }
+                    rHtml += `</div>`;
+                } else {
+                    rHtml += `<a href="#/recipes/${src.id}" class="recipe-item-link">
+                        <img src="/images/${src.image}" class="recipe-item-img" title="${src.name}">
+                        <span class="recipe-item-name" style="font-size: 0.85rem; margin-top: 0.2rem; margin-bottom: 0.2rem; text-align: center; line-height: 1.1; color: var(--text-color);">${src.name}</span>
+                    </a>`;
+                }
             } else {
-                rHtml += `<div style="display:flex; align-items:center; gap:0.2rem;"><strong>${r.source}</strong></div>`;
+                if (r.source === 'heat' || r.source === 'cool') {
+                    rHtml += `<div class="recipe-item-link" style="cursor: default; text-decoration: none;">
+                        <div style="width: 48px; height: 48px; background: #888; margin-bottom: 0.25rem;"></div>`;
+                    if (r.temp !== undefined) {
+                        rHtml += `<span class="recipe-item-name" style="font-size: 0.85rem; margin-top: 0.2rem; margin-bottom: 0.2rem; text-align: center; line-height: 1.1; color: var(--text-color);">${formatAmountNumber(r.temp)} °C</span>`;
+                    } else {
+                        rHtml += `<span class="recipe-item-name" style="font-size: 0.85rem; margin-top: 0.2rem; margin-bottom: 0.2rem; text-align: center; line-height: 1.1; color: var(--text-color);">Phase Change</span>`;
+                    }
+                    rHtml += `</div>`;
+                } else {
+                    rHtml += `<div class="recipe-item-link"><div style="width: 48px; height: 48px; background: #888; margin-bottom: 0.25rem;"></div><span class="recipe-item-name" style="font-size: 0.85rem; margin-top: 0.2rem; margin-bottom: 0.2rem; text-align: center; line-height: 1.1; color: var(--text-color);">${r.source}</span></div>`;
+                }
             }
+            rHtml += `</div>`;
         }
 
-        if (r.consumed && r.consumed.length > 0) {
-            rHtml += `<span style="color:#888;">consumes</span>`;
-            r.consumed.forEach(c => {
-                let el = allItems[c.element];
-                if (el) {
-                    rHtml += `<a href="#/recipes/${el.id}" class="recipe-link" style="display:flex; align-items:center; gap:0.2rem; background: rgba(255,0,0,0.1); padding: 0.2rem 0.4rem; border-radius: .25em; color:inherit; text-decoration:none;"><img src="/images/${el.image}" style="width:auto; height:1em;" title="${el.name}"> ${formatAmount(c)} ${el.name}</a>`;
-                } else {
-                    rHtml += `<div style="display:flex; align-items:center; gap:0.2rem; background: rgba(255,0,0,0.1); padding: 0.2rem 0.4rem; border-radius: .25em;">${formatAmount(c)} ${c.element}</div>`;
-                }
-            });
-        }
-
+        // Right: Produced
         if (r.produced && r.produced.length > 0) {
-            rHtml += `<span style="color:#888;">produces</span>`;
+            if ((r.consumed && r.consumed.length > 0) || r.source !== 'emit') {
+                rHtml += arrowSvg;
+            }
+            rHtml += `<div class="recipe-items-block">`;
             r.produced.forEach(p => {
-                let el = allItems[p.element];
-                if (el) {
-                    rHtml += `<a href="#/recipes/${el.id}" class="recipe-link" style="display:flex; align-items:center; gap:0.2rem; background: rgba(0,255,0,0.1); padding: 0.2rem 0.4rem; border-radius: .25em; color:inherit; text-decoration:none;"><img src="/images/${el.image}" style="width:auto; height:1em;" title="${el.name}"> ${formatAmount(p)} ${el.name}</a>`;
-                } else {
-                    rHtml += `<div style="display:flex; align-items:center; gap:0.2rem; background: rgba(0,255,0,0.1); padding: 0.2rem 0.4rem; border-radius: .25em;">${formatAmount(p)} ${p.element}</div>`;
-                }
+                rHtml += renderRecipeItem(p, true);
             });
+            rHtml += `</div>`;
         }
 
-        rHtml += `</div>`;
+        rHtml += `</div></div>`;
         return rHtml;
     };
 
-    if (sourceRecipes.length > 0) {
-        html += `<h3 style="margin-top: 1.5rem; padding-bottom: 0.5rem;">Recipes</h3>`;
-        sourceRecipes.forEach(r => { html += renderRecipe(r); });
-    }
+    const renderCategory = (title, recipes) => {
+        if (recipes.length === 0) return '';
+        let catHtml = `<div style="margin-top: 1.5rem; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 8px; overflow: hidden;">
+            <h3 class="recipe-category-title">${title}</h3>
+            <div style="padding: 1rem 1rem 0 1rem;">`;
+        recipes.forEach(r => { catHtml += renderRecipe(r); });
+        catHtml += `</div></div>`;
+        return catHtml;
+    };
 
-    if (consumesRecipes.length > 0) {
-        html += `<h3 style="margin-top: 1.5rem; padding-bottom: 0.5rem;">Used as Ingredient In</h3>`;
-        consumesRecipes.forEach(r => { html += renderRecipe(r); });
-    }
+    html += renderCategory('State Transitions', stateTransitions);
+    html += renderCategory('Emission', emissions);
+    html += renderCategory('Produced', produced);
+    html += renderCategory('Consumed', consumed);
 
-    if (producesRecipes.length > 0) {
-        html += `<h3 style="margin-top: 1.5rem; padding-bottom: 0.5rem;">Produced By</h3>`;
-        producesRecipes.forEach(r => { html += renderRecipe(r); });
-    }
-
-    if (sourceRecipes.length === 0 && consumesRecipes.length === 0 && producesRecipes.length === 0) {
+    if (allRelatedRecipes.length === 0) {
         html += `<p style="margin-top: 1rem; color: #888;">No known recipes.</p>`;
     }
 
