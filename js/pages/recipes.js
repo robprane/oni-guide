@@ -1,3 +1,5 @@
+import { createElement } from '../utils.js';
+
 let configData = null;
 let recipesData = null;
 let allItems = null;
@@ -107,35 +109,57 @@ function evaluateQuery(q) {
 export async function renderRecipes(container, currentPath) {
     await loadData();
 
-    let filterButtonsHtml = `<button class="filter-btn active" data-filter="all" aria-pressed="true">All</button>`;
+    container.textContent = ''; // Clear container
+
+    const filterBtnsContainer = createElement('div', { id: 'recipe-filters', class: 'recipe-filters' });
+
+    // Add "All" button
+    const allBtn = createElement('button', {
+        class: 'filter-btn active',
+        dataset: { filter: 'all' },
+        'aria-pressed': 'true',
+        textContent: 'All'
+    });
+    filterBtnsContainer.appendChild(allBtn);
+
     if (configData) {
         configData.forEach(category => {
             if (category.isFilter) {
-                filterButtonsHtml += `\n                <button class="filter-btn" data-filter="${category.id}" aria-pressed="false">${category.label}</button>`;
+                const btn = createElement('button', {
+                    class: 'filter-btn',
+                    dataset: { filter: category.id },
+                    'aria-pressed': 'false',
+                    textContent: category.label
+                });
+                filterBtnsContainer.appendChild(btn);
             }
         });
     }
 
-    container.innerHTML = `
-        <div class="container" style="display: flex; flex-direction: column; gap: 1rem;">
-            <h2>Recipes Database</h2>
-            <input type="search" id="recipe-search" aria-label="Search materials, buildings, or recipes" placeholder="Search materials, buildings, or recipes..." style="padding: 0.5rem; border-radius: 4px; border: 1px solid var(--input-border); background: var(--input-bg); color: var(--input-text);">
-            <div id="recipe-filters" style="display: flex; gap: 1rem; flex-wrap: wrap;">
-                ${filterButtonsHtml}
-            </div>
-            <div id="recipe-results" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 1rem;">
-                Loading...
-            </div>
-        </div>
-    `;
+    const searchInput = createElement('input', {
+        type: 'search',
+        id: 'recipe-search',
+        'aria-label': 'Search materials, buildings, or recipes',
+        placeholder: 'Search materials, buildings, or recipes...',
+        class: 'recipe-search-input'
+    });
 
-    const searchInput = document.getElementById('recipe-search');
-    const resultsContainer = document.getElementById('recipe-results');
-    const filterBtns = document.querySelectorAll('.filter-btn');
+    const resultsContainer = createElement('div', { id: 'recipe-results', class: 'recipe-results', textContent: 'Loading...' });
+
+    const layout = createElement('div', { class: 'container recipes-container' }, [
+        createElement('h2', { textContent: 'Recipes Database' }),
+        searchInput,
+        filterBtnsContainer,
+        resultsContainer
+    ]);
+
+    container.appendChild(layout);
+
+    const filterBtns = filterBtnsContainer.querySelectorAll('.filter-btn');
     let currentFilter = 'all';
 
     function renderResults(query = '') {
-        resultsContainer.innerHTML = '';
+        resultsContainer.textContent = '';
         const q = query.trim();
 
         let matchedItems = [];
@@ -187,69 +211,58 @@ export async function renderRecipes(container, currentPath) {
         }
 
         if (matchedItems.length === 0) {
-            const escapeHtml = (unsafe) => {
-                return unsafe
-                    .replace(/&/g, "&amp;")
-                    .replace(/</g, "&lt;")
-                    .replace(/>/g, "&gt;")
-                    .replace(/"/g, "&quot;")
-                    .replace(/'/g, "&#039;");
-            };
-            resultsContainer.innerHTML = `
-                <div style="grid-column: 1 / -1; text-align: center; padding: 3rem 1rem; color: var(--text-color); opacity: 0.7;">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom: 1rem; opacity: 0.5;"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-                    <p style="font-size: 1.2rem; margin-bottom: 0.5rem;">No results found ${q ? `for "<strong>${escapeHtml(q)}</strong>"` : ''}</p>
-                    <p style="font-size: 0.9rem; margin-bottom: 1.5rem;">Try adjusting your search term or using a different filter.</p>
-                    <button class="clear-search-btn" style="padding: 0.5rem 1rem; border: 1px solid var(--border-color); background: var(--card-bg); color: var(--text-color); border-radius: 4px; cursor: pointer; transition: background 0.2s;">Clear Search & Filters</button>
-                </div>
-            `;
-
-            const clearBtn = resultsContainer.querySelector('.clear-search-btn');
-            if (clearBtn) {
-                clearBtn.addEventListener('click', () => {
-                    searchInput.value = '';
-                    currentFilter = 'all';
-                    filterBtns.forEach(b => {
-                        b.classList.remove('active');
-                        b.setAttribute('aria-pressed', 'false');
-                    });
-                    const allBtn = Array.from(filterBtns).find(b => b.dataset.filter === 'all');
-                    if (allBtn) {
-                        allBtn.classList.add('active');
-                        allBtn.setAttribute('aria-pressed', 'true');
-                    }
-                    renderResults('');
-                });
+            const noResultsTitle = createElement('p', { class: 'no-results-title' }, ['No results found']);
+            if (q) {
+                noResultsTitle.appendChild(document.createTextNode(' for "'));
+                noResultsTitle.appendChild(createElement('strong', { textContent: q }));
+                noResultsTitle.appendChild(document.createTextNode('"'));
             }
+
+            const clearBtn = createElement('button', { class: 'clear-search-btn', textContent: 'Clear Search & Filters' });
+
+            clearBtn.addEventListener('click', () => {
+                searchInput.value = '';
+                currentFilter = 'all';
+                filterBtns.forEach(b => {
+                    b.classList.remove('active');
+                    b.setAttribute('aria-pressed', 'false');
+                });
+                const allBtnNode = Array.from(filterBtns).find(b => b.dataset.filter === 'all');
+                if (allBtnNode) {
+                    allBtnNode.classList.add('active');
+                    allBtnNode.setAttribute('aria-pressed', 'true');
+                }
+                renderResults('');
+            });
+
+            const noResults = createElement('div', { class: 'no-results' }, [
+                createElement('div', { class: 'no-results-icon' }),
+                createElement('div', { class: 'no-results-text-group' }, [
+                    noResultsTitle,
+                    createElement('p', { class: 'no-results-subtitle', textContent: 'Try adjusting your search term or using a different filter.' })
+                ]),
+                clearBtn
+            ]);
+
+            resultsContainer.appendChild(noResults);
             return;
         }
 
         matchedItems.forEach(item => {
-            const card = document.createElement('div');
-            card.style.cssText = `
-                background: var(--card-bg);
-                padding: 1rem;
-                border-radius: 8px;
-                border: 1px solid var(--border-color);
-                cursor: pointer;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-                transition: transform 0.2s;
-            `;
-            card.setAttribute('role', 'button');
-            card.setAttribute('tabindex', '0');
-            card.onmouseenter = () => card.style.transform = 'scale(1.05)';
-            card.onmouseleave = () => card.style.transform = 'scale(1)';
-            card.onfocus = () => card.style.transform = 'scale(1.05)';
-            card.onblur = () => card.style.transform = 'scale(1)';
+            const img = createElement('img', {
+                src: `/images/${item.image}`,
+                alt: item.name,
+                class: 'recipe-card-img'
+            });
+            img.onerror = () => {
+                img.src = "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='64' height='64'><rect width='64' height='64' fill='%23333'/><text x='32' y='32' fill='white' text-anchor='middle' dominant-baseline='middle'>?</text></svg>";
+            };
 
-            card.innerHTML = `
-                <img src="/images/${item.image}" alt="${item.name}" style="width: 64px; height: 64px; object-fit: contain; margin-bottom: 0.5rem;" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\\'http://www.w3.org/2000/svg\\' width=\\'64\\' height=\\'64\\'><rect width=\\'64\\' height=\\'64\\' fill=\\'%23333\\'/><text x=\\'32\\' y=\\'32\\' fill=\\'white\\' text-anchor=\\'middle\\' dominant-baseline=\\'middle\\'>?</text></svg>'">
-                <h3 style="margin: 0; font-size: 1.1rem;">${item.name}</h3>
-                <span style="font-size: 0.8rem; color: #888; text-transform: capitalize;">${item._type}</span>
-            `;
+            const card = createElement('div', { class: 'recipe-card', role: 'button', tabindex: '0' }, [
+                img,
+                createElement('h3', { class: 'recipe-card-title', textContent: item.name }),
+                createElement('span', { class: 'recipe-card-type', textContent: item._type })
+            ]);
 
             card.addEventListener('click', () => {
                 showDetailModal(item);
@@ -279,111 +292,6 @@ export async function renderRecipes(container, currentPath) {
             renderResults(searchInput.value);
         });
     });
-
-    const style = document.createElement('style');
-    style.textContent = `
-
-        .filter-btn { padding: 0.5rem 1rem; border: 1px solid var(--border-color); background: var(--card-bg); color: var(--text-color); border-radius: 4px; cursor: pointer; transition: background 0.2s; }
-        .filter-btn:hover, .clear-search-btn:hover { background: var(--nav-hover) !important; }
-        .filter-btn.active { background: var(--primary-color); color: white; border-color: var(--primary-color); }
-        #detail-dialog::backdrop { background: rgba(0,0,0,0.5); }
-        .recipe-link { cursor: pointer; transition: opacity 0.2s; }
-        .recipe-link:hover { opacity: 0.7; text-decoration: underline !important; }
-
-        .recipe-container {
-            background: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            overflow: hidden;
-            container-type: inline-size;
-        }
-        .recipe-layout {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
-            gap: 1rem;
-            padding: 1rem;
-            background: var(--input-bg);
-        }
-        .recipe-items-block {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-evenly;
-            gap: 0.5rem;
-            align-items: center;
-            flex: 1;
-            flex-wrap: wrap;
-        }
-        .recipe-source-block {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            flex: 1;
-        }
-        .recipe-arrow {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--text-color);
-            opacity: 0.5;
-        }
-        .recipe-arrow svg {
-            width: 24px;
-            height: 24px;
-            fill: currentColor;
-            transition: transform 0.3s;
-        }
-        @container (max-width: 300px) {
-            .recipe-layout {
-                flex-direction: column;
-            }
-            .recipe-arrow svg {
-                transform: rotate(90deg);
-            }
-        }
-        .recipe-item-link {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-decoration: none;
-            color: inherit;
-            text-align: center;
-            min-width: 4em;
-        }
-        .recipe-item-link:hover {
-            opacity: 0.8;
-        }
-        .recipe-item-img {
-            width: 48px;
-            height: 48px;
-            object-fit: contain;
-            margin-bottom: 0.25rem;
-        }
-        .recipe-item-name {
-            font-size: 0.85rem;
-            color: #888;
-            margin-bottom: 0.1rem;
-        }
-        .recipe-item-amount {
-            font-size: 0.9rem;
-            font-weight: bold;
-        }
-        .amount-positive { color: #4caf50; }
-        .amount-negative { color: #f44336; }
-        .recipe-category-title {
-            background: rgba(136, 136, 136, 0.2);
-            padding: 0.5rem;
-            margin: 0;
-            font-size: 1rem;
-            text-align: center;
-            border-bottom: 1px solid var(--border-color);
-        }
-
-    `;
-    container.appendChild(style);
 
     renderResults();
 
@@ -424,37 +332,14 @@ export async function renderRecipes(container, currentPath) {
 }
 
 function showDetailModal(item) {
-    // If the hash is not already for this item, update it. This might trigger routeupdate.
     if (window.location.hash !== '#/recipes/' + item.id) {
         window.location.hash = '#/recipes/' + item.id;
-        // Don't return, as we need to render the modal contents now or let the route update do it.
-        // But actually, updating the hash will trigger routeupdate which we will handle to call showDetailModal.
-        // Wait, if it's called from click, updating hash triggers hashchange -> routeupdate -> we call showDetailModal(item).
-        // Let's just render the dialog here. If hash is updated, we do it. If it was already correct, it renders.
     }
 
     let dialog = document.getElementById('detail-dialog');
     if (!dialog) {
-        dialog = document.createElement('dialog');
-        dialog.id = 'detail-dialog';
-        dialog.style.cssText = `
-            background: var(--bg-color);
-            padding: 1rem;
-            border-radius: 8px;
-            max-width: 90dvw;
-            width: 90%;
-            max-height: 90dvh;
-            border: 1px solid var(--border-color);
-            color: var(--text-color);
-            margin: auto;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-        `;
+        dialog = createElement('dialog', { id: 'detail-dialog', class: 'detail-dialog-content' });
 
-
-        // Close when clicking outside the dialog or pressing Esc
         dialog.addEventListener('click', (e) => {
             const rect = dialog.getBoundingClientRect();
             const isInDialog = (rect.top <= e.clientY && e.clientY <= rect.top + rect.height
@@ -464,36 +349,54 @@ function showDetailModal(item) {
             }
         });
 
-        // The native <dialog> closes on Esc by default. We should intercept it to update the hash.
         dialog.addEventListener('cancel', (e) => {
-            e.preventDefault(); // Prevent default close so we can update the hash, which will trigger close via routeupdate
+            e.preventDefault();
             closeModal();
         });
 
         document.body.appendChild(dialog);
     }
 
-    let html = `
-        <div style="display: flex; justify-content: space-between; align-items: flex-start;">
-            <div style="display: flex; align-items: center; gap: 1rem;">
-                <img src="/images/${item.image}" alt="${item.name}" style="width: 64px; height: 64px; object-fit: contain;">
-                <div>
-                    <h2 style="margin: 0;">${item.name}</h2>
-                    <span style="font-size: 0.9rem; color: #888; text-transform: capitalize;">${item._type}</span>
-                </div>
-            </div>
-            <button aria-label="Close modal" onclick="window.closeModal()" style="cursor:pointer; background:none; border:none; color:var(--text-color); font-size:1.5rem;">&times;</button>
-        </div>
-        ${item.description ? `<p><i>${item.description}</i></p>` : ''}
-    `;
+    dialog.textContent = ''; // clear
 
-    // Show specific properties if available
-    if (item.type) html += `<p><strong>Type:</strong> ${item.type}</p>`;
-    if (item.category && item.category !== 'unknown' && item.category !== item._type) html += `<p><strong>Category:</strong> ${item.category}</p>`;
-    if (item.power_consumption) html += `<p><strong>Power:</strong> ${item.power_consumption} W</p>`;
-    if (item.freezing_point !== undefined) html += `<p><strong>Freezing Point:</strong> ${item.freezing_point}°C (Forms: ${item.freezing_product || '?'})</p>`;
-    if (item.melting_point !== undefined) html += `<p><strong>Melting Point:</strong> ${item.melting_point}°C (Forms: ${item.melting_product || '?'})</p>`;
-    if (item.boiling_point !== undefined) html += `<p><strong>Boiling Point:</strong> ${item.boiling_point}°C (Forms: ${item.boiling_product || '?'})</p>`;
+    const header = createElement('div', { class: 'detail-header' }, [
+        createElement('div', { class: 'detail-title-group' }, [
+            createElement('img', { src: `/images/${item.image}`, alt: item.name, class: 'recipe-card-img' }),
+            createElement('div', {}, [
+                createElement('h2', { textContent: item.name }),
+                createElement('span', { class: 'recipe-card-type', textContent: item._type })
+            ])
+        ]),
+        createElement('button', {
+            class: 'detail-close-btn',
+            'aria-label': 'Close modal',
+            textContent: '×',
+            onclick: () => window.closeModal()
+        })
+    ]);
+
+    dialog.appendChild(header);
+
+    if (item.description) {
+        const iEl = createElement('i', { textContent: item.description });
+        dialog.appendChild(createElement('p', {}, [iEl]));
+    }
+
+    const contentWrapper = createElement('div', { class: 'detail-properties' });
+
+    const addProp = (label, value) => {
+        const p = createElement('p');
+        p.appendChild(createElement('strong', { textContent: label + ': ' }));
+        p.appendChild(document.createTextNode(value));
+        contentWrapper.appendChild(p);
+    };
+
+    if (item.type) addProp('Type', item.type);
+    if (item.category && item.category !== 'unknown' && item.category !== item._type) addProp('Category', item.category);
+    if (item.power_consumption) addProp('Power', item.power_consumption + ' W');
+    if (item.freezing_point !== undefined) addProp('Freezing Point', `${item.freezing_point}°C (Forms: ${item.freezing_product || '?'})`);
+    if (item.melting_point !== undefined) addProp('Melting Point', `${item.melting_point}°C (Forms: ${item.melting_product || '?'})`);
+    if (item.boiling_point !== undefined) addProp('Boiling Point', `${item.boiling_point}°C (Forms: ${item.boiling_product || '?'})`);
 
     // Find related recipes
     let allRelatedRecipes = recipesData.filter(r =>
@@ -502,13 +405,11 @@ function showDetailModal(item) {
         (r.produced || []).some(p => p.element === item.id)
     );
 
-    // Categorize
     let stateTransitions = [];
     let emissions = [];
     let produced = [];
     let consumed = [];
 
-    // Filter recipes where current item is produced or consumed
     const isProduced = (r) => (r.produced || []).some(p => p.element === item.id);
     const isConsumed = (r) => (r.consumed || []).some(c => c.element === item.id);
 
@@ -541,7 +442,7 @@ function showDetailModal(item) {
         let numStr = formatAmountNumber(itemData.amount);
         let sign = isProducedFlag ? '+' : '-';
         if (itemData.amount > 0) amountText = sign + numStr;
-        else if (itemData.amount < 0) amountText = isProducedFlag ? numStr : numStr; // Already has sign if negative? Wait, if negative produced, it's negative.
+        else if (itemData.amount < 0) amountText = isProducedFlag ? numStr : numStr;
         else amountText = '0';
 
         let unitText = `${itemData.unit.includes('%') ? '' : ' '}${itemData.unit}`;
@@ -555,122 +456,116 @@ function showDetailModal(item) {
         return `${amountText}${unitText}`;
     };
 
-    const arrowSvg = `<div class="recipe-arrow"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></div>`;
-
     const renderRecipeItem = (data, isProducedFlag) => {
         let el = allItems[data.element];
         let amountStr = formatAmount(data, isProducedFlag);
         let amountClass = isProducedFlag ? 'amount-positive' : 'amount-negative';
 
         if (el) {
-            return `
-                <a href="#/recipes/${el.id}" class="recipe-item-link">
-                    <img src="/images/${el.image}" class="recipe-item-img" title="${el.name}">
-                    <span class="recipe-item-name" style="font-size: 0.85rem; margin-top: 0.2rem; margin-bottom: 0.2rem; text-align: center; line-height: 1.1; color: var(--text-color);">${el.name}</span>
-                    <span class="recipe-item-amount ${amountClass}">${amountStr}</span>
-                </a>
-            `;
+            return createElement('a', { href: `#/recipes/${el.id}`, class: 'recipe-item-link' }, [
+                createElement('img', { src: `/images/${el.image}`, class: 'recipe-item-img', title: el.name }),
+                createElement('span', { class: 'recipe-item-name muted', textContent: el.name }),
+                createElement('span', { class: `recipe-item-amount ${amountClass}`, textContent: amountStr })
+            ]);
         } else {
-            return `
-                <div class="recipe-item-link">
-                    <div style="width: 48px; height: 48px; background: #888; margin-bottom: 0.25rem;"></div>
-                    <span class="recipe-item-name" style="font-size: 0.85rem; margin-top: 0.2rem; margin-bottom: 0.2rem; text-align: center; line-height: 1.1; color: var(--text-color);">Unknown</span>
-                    <span class="recipe-item-amount ${amountClass}">${amountStr}</span>
-                </div>
-            `;
+            return createElement('div', { class: 'recipe-item-link no-hover' }, [
+                createElement('div', { class: 'recipe-item-placeholder' }),
+                createElement('span', { class: 'recipe-item-name muted', textContent: 'Unknown' }),
+                createElement('span', { class: `recipe-item-amount ${amountClass}`, textContent: amountStr })
+            ]);
         }
     };
 
+    const createArrow = () => createElement('div', { class: 'recipe-arrow' });
+
     const renderRecipe = (r) => {
-        let rHtml = `<div class="recipe-container"><div class="recipe-layout">`;
+        const layoutChildren = [];
 
         // Left: Consumed
         if (r.consumed && r.consumed.length > 0) {
-            rHtml += `<div class="recipe-items-block">`;
-            r.consumed.forEach(c => {
-                rHtml += renderRecipeItem(c, false);
-            });
-            rHtml += `</div>`;
+            const consumedItems = r.consumed.map(c => renderRecipeItem(c, false));
+            layoutChildren.push(createElement('div', { class: 'recipe-items-block' }, consumedItems));
         }
 
         // Center: Source
         if (r.source !== 'emit') {
             if (r.consumed && r.consumed.length > 0) {
-                rHtml += arrowSvg;
+                layoutChildren.push(createArrow());
             }
-            rHtml += `<div class="recipe-source-block">`;
+
             let src = allItems[r.source];
+            let sourceLink;
             if (src) {
                 if (r.source === 'heat' || r.source === 'cool') {
-                    rHtml += `<div class="recipe-item-link" style="cursor: default; text-decoration: none;">
-                        <img src="/images/${src.image}" class="recipe-item-img" title="${src.name}">`;
-                    if (r.temp !== undefined) {
-                        rHtml += `<span class="recipe-item-name" style="font-size: 0.85rem; margin-top: 0.2rem; margin-bottom: 0.2rem; text-align: center; line-height: 1.1; color: var(--text-color);">${formatAmountNumber(r.temp)} °C</span>`;
-                    } else {
-                        rHtml += `<span class="recipe-item-name" style="font-size: 0.85rem; margin-top: 0.2rem; margin-bottom: 0.2rem; text-align: center; line-height: 1.1; color: var(--text-color);">Phase Change</span>`;
-                    }
-                    rHtml += `</div>`;
+                    const text = r.temp !== undefined ? `${formatAmountNumber(r.temp)} °C` : 'Phase Change';
+                    sourceLink = createElement('div', { class: 'recipe-item-link no-hover' }, [
+                        createElement('img', { src: `/images/${src.image}`, class: 'recipe-item-img', title: src.name }),
+                        createElement('span', { class: 'recipe-item-name', textContent: text })
+                    ]);
                 } else {
-                    rHtml += `<a href="#/recipes/${src.id}" class="recipe-item-link">
-                        <img src="/images/${src.image}" class="recipe-item-img" title="${src.name}">
-                        <span class="recipe-item-name" style="font-size: 0.85rem; margin-top: 0.2rem; margin-bottom: 0.2rem; text-align: center; line-height: 1.1; color: var(--text-color);">${src.name}</span>
-                    </a>`;
+                    sourceLink = createElement('a', { href: `#/recipes/${src.id}`, class: 'recipe-item-link' }, [
+                        createElement('img', { src: `/images/${src.image}`, class: 'recipe-item-img', title: src.name }),
+                        createElement('span', { class: 'recipe-item-name', textContent: src.name })
+                    ]);
                 }
             } else {
                 if (r.source === 'heat' || r.source === 'cool') {
-                    rHtml += `<div class="recipe-item-link" style="cursor: default; text-decoration: none;">
-                        <div style="width: 48px; height: 48px; background: #888; margin-bottom: 0.25rem;"></div>`;
-                    if (r.temp !== undefined) {
-                        rHtml += `<span class="recipe-item-name" style="font-size: 0.85rem; margin-top: 0.2rem; margin-bottom: 0.2rem; text-align: center; line-height: 1.1; color: var(--text-color);">${formatAmountNumber(r.temp)} °C</span>`;
-                    } else {
-                        rHtml += `<span class="recipe-item-name" style="font-size: 0.85rem; margin-top: 0.2rem; margin-bottom: 0.2rem; text-align: center; line-height: 1.1; color: var(--text-color);">Phase Change</span>`;
-                    }
-                    rHtml += `</div>`;
+                    const text = r.temp !== undefined ? `${formatAmountNumber(r.temp)} °C` : 'Phase Change';
+                    sourceLink = createElement('div', { class: 'recipe-item-link no-hover' }, [
+                        createElement('div', { class: 'recipe-item-placeholder' }),
+                        createElement('span', { class: 'recipe-item-name', textContent: text })
+                    ]);
                 } else {
-                    rHtml += `<div class="recipe-item-link"><div style="width: 48px; height: 48px; background: #888; margin-bottom: 0.25rem;"></div><span class="recipe-item-name" style="font-size: 0.85rem; margin-top: 0.2rem; margin-bottom: 0.2rem; text-align: center; line-height: 1.1; color: var(--text-color);">${r.source}</span></div>`;
+                    sourceLink = createElement('div', { class: 'recipe-item-link no-hover' }, [
+                        createElement('div', { class: 'recipe-item-placeholder' }),
+                        createElement('span', { class: 'recipe-item-name', textContent: r.source })
+                    ]);
                 }
             }
-            rHtml += `</div>`;
+
+            layoutChildren.push(createElement('div', { class: 'recipe-source-block' }, [sourceLink]));
         }
 
         // Right: Produced
         if (r.produced && r.produced.length > 0) {
             if ((r.consumed && r.consumed.length > 0) || r.source !== 'emit') {
-                rHtml += arrowSvg;
+                layoutChildren.push(createArrow());
             }
-            rHtml += `<div class="recipe-items-block">`;
-            r.produced.forEach(p => {
-                rHtml += renderRecipeItem(p, true);
-            });
-            rHtml += `</div>`;
+            const producedItems = r.produced.map(p => renderRecipeItem(p, true));
+            layoutChildren.push(createElement('div', { class: 'recipe-items-block' }, producedItems));
         }
 
-        rHtml += `</div></div>`;
-        return rHtml;
+        return createElement('div', { class: 'recipe-container' }, [
+            createElement('div', { class: 'recipe-layout' }, layoutChildren)
+        ]);
     };
 
     const renderCategory = (title, recipes) => {
-        if (recipes.length === 0) return '';
-        let catHtml = `<div style="background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 8px; overflow: hidden;">
-            <h3 class="recipe-category-title">${title}</h3>
-            <div style="padding: .5rem; display: flex; flex-direction: column; gap: .5em;">`;
-        recipes.forEach(r => { catHtml += renderRecipe(r); });
-        catHtml += `</div></div>`;
-        return catHtml;
+        if (recipes.length === 0) return null;
+
+        const list = createElement('div', { class: 'recipe-category-list' }, recipes.map(renderRecipe));
+
+        return createElement('div', { class: 'recipe-category-card' }, [
+            createElement('h3', { class: 'recipe-category-title', textContent: title }),
+            list
+        ]);
     };
 
-    html += renderCategory('State Transitions', stateTransitions);
-    html += renderCategory('Emission', emissions);
-    html += renderCategory('Produced', produced);
-    html += renderCategory('Consumed', consumed);
+    dialog.appendChild(contentWrapper);
+
+    const categoriesContainer = createElement('div', { class: 'recipe-categories-container' }, [
+        renderCategory('State Transitions', stateTransitions),
+        renderCategory('Emission', emissions),
+        renderCategory('Produced', produced),
+        renderCategory('Consumed', consumed)
+    ]);
+
+    dialog.appendChild(categoriesContainer);
 
     if (allRelatedRecipes.length === 0) {
-        html += `<p style="margin-top: 1rem; color: #888;">No known recipes.</p>`;
+        dialog.appendChild(createElement('p', { class: 'muted', textContent: 'No known recipes.' }));
     }
 
-    html = `<div style="display:flex;flex-direction:column;gap:1em;">${html}</div>`;
-
-    dialog.innerHTML = html;
     if (!dialog.open) {
         dialog.showModal();
     }
@@ -679,8 +574,6 @@ function showDetailModal(item) {
 function closeModal() {
     if (window.location.hash !== '#/recipes') {
         window.location.hash = '#/recipes';
-        // When hash changes to #/recipes, routeupdate will close it.
-        // But let's also close it here just in case.
     }
 
     const dialog = document.getElementById('detail-dialog');

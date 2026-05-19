@@ -1,40 +1,33 @@
 import { CanvasEngine } from '../canvas/engine.js';
+import { createElement } from '../utils.js';
 
 let engineInstance = null;
 
 export async function renderCanvas(container) {
-    container.innerHTML = `
-        <div style="display: flex; flex-direction: column; height: calc(100vh - 60px); width: 100%;">
-            <div id="toolbar" style="padding: 10px; background: var(--nav-bg); border-bottom: 1px solid var(--border-color); display: flex; gap: 10px;">
-                <button class="tool-btn active" data-tool="solid">Solid Tile</button>
-                <button class="tool-btn" data-tool="sweeper">Auto-Sweeper</button>
-                <!-- Hidden to focus on Auto-Sweeper -->
-                <button class="tool-btn" data-tool="pipe" style="display: none;">Pipe</button>
-                <button class="tool-btn" data-tool="bridge" style="display: none;">Bridge</button>
-                <button class="tool-btn" data-tool="spawn_liquid" style="display: none;">Spawn Liquid</button>
-                <button class="tool-btn" data-tool="erase">Eraser</button>
-                <button id="orientation-btn" class="utility-btn" style="display: none;">Rotate</button>
-            </div>
-            <div style="flex: 1; position: relative; overflow: hidden;">
-                <canvas id="oni-canvas" style="display: block; width: 100%; height: 100%;"></canvas>
-            </div>
-        </div>
-    `;
+    container.textContent = ''; // Clear container
 
-    // Add basic styles for toolbar buttons
-    const style = document.createElement('style');
-    style.textContent = `
-        .tool-btn { padding: 5px 10px; border: 1px solid var(--border-color); background: var(--card-bg); color: var(--text-color); border-radius: 4px; cursor: pointer; }
-        .utility-btn { padding: 5px 10px; border: 1px solid var(--primary-color); background: var(--card-bg); color: var(--text-color); border-radius: 4px; cursor: pointer; }
-        .tool-btn.active { background: var(--primary-color); color: white; border-color: var(--primary-color); }
-    `;
-    container.appendChild(style);
+    const toolbar = createElement('div', { id: 'toolbar', class: 'canvas-toolbar' }, [
+        createElement('button', { class: 'tool-btn active', dataset: { tool: 'solid' }, textContent: 'Solid Tile' }),
+        createElement('button', { class: 'tool-btn', dataset: { tool: 'sweeper' }, textContent: 'Auto-Sweeper' }),
+        // Hidden to focus on Auto-Sweeper
+        createElement('button', { class: 'tool-btn hidden', dataset: { tool: 'pipe' }, textContent: 'Pipe' }),
+        createElement('button', { class: 'tool-btn hidden', dataset: { tool: 'bridge' }, textContent: 'Bridge' }),
+        createElement('button', { class: 'tool-btn hidden', dataset: { tool: 'spawn_liquid' }, textContent: 'Spawn Liquid' }),
+        createElement('button', { class: 'tool-btn', dataset: { tool: 'erase' }, textContent: 'Eraser' }),
+        createElement('button', { id: 'orientation-btn', class: 'utility-btn hidden', textContent: 'Rotate' })
+    ]);
+
+    const canvasEl = createElement('canvas', { id: 'oni-canvas', class: 'oni-canvas' });
+    const canvasContainer = createElement('div', { class: 'canvas-container' }, [canvasEl]);
+
+    const wrapper = createElement('div', { class: 'canvas-wrapper' }, [toolbar, canvasContainer]);
+
+    container.appendChild(wrapper);
 
     // Load config
     const configRes = await fetch('/js/canvas/config.json');
     const config = await configRes.json();
 
-    const canvasEl = document.getElementById('oni-canvas');
     engineInstance = new CanvasEngine(canvasEl, config);
     engineInstance.setTool('solid'); // Default tool
 
@@ -103,9 +96,9 @@ export async function renderCanvas(container) {
     engineInstance.setTool = function(toolName) {
         originalSetTool(toolName);
         if (toolName === 'sweeper') {
-            orientationBtn.style.display = 'block';
+            orientationBtn.classList.remove('hidden');
         } else {
-            orientationBtn.style.display = 'none';
+            orientationBtn.classList.add('hidden');
         }
     };
     engineInstance.setTool('solid'); // Trigger the UI update for default tool
