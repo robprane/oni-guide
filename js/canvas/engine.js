@@ -83,7 +83,7 @@ export class CanvasEngine {
 
     setupEvents() {
         // Disable native touch actions (pan, pinch zoom) on the canvas
-        this.canvas.style.touchAction = 'none';
+        this.canvas.classList.add('oni-canvas');
 
         // Helper to get midpoint and distance of 2 pointers
         const getPinchData = () => {
@@ -110,13 +110,13 @@ export class CanvasEngine {
                 this.initialPinchDistance = pinch.distance;
                 this.initialPinchZoom = this.camera.zoom;
                 this.lastPanPoint = { x: pinch.midX, y: pinch.midY };
-                this.canvas.style.cursor = 'grabbing';
+                this.canvas.classList.add('grabbing');
             } else if (this.pointers.size === 1) {
                 if (e.button === 1 || (e.button === 0 && e.shiftKey)) {
                     // Middle click or Shift+Left click to pan (Mouse)
                     this.isPanning = true;
                     this.lastPanPoint = { x: e.clientX, y: e.clientY };
-                    this.canvas.style.cursor = 'grabbing';
+                    this.canvas.classList.add('grabbing');
                 } else if (e.button === 0 && this.currentTool && !this.wasMultiTouch) {
                     // Defer drawing for touch events, or apply immediately for mouse
                     if (e.pointerType === 'touch') {
@@ -225,7 +225,7 @@ export class CanvasEngine {
                 this.pointerDownEvent = null;
                 this.pointerDownPoint = null;
                 this.isDrawingDrag = false;
-                this.canvas.style.cursor = 'default';
+                this.canvas.classList.remove('grabbing');
             }
         };
 
