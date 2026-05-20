@@ -1,0 +1,37 @@
+[
+  {
+    "name": "Liquid",
+    "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Liquid"
+  },
+  {
+    "name": "Liquid Propane",
+    "Chemical Formula": "C3H8",
+    "Vaporization Point": "-42.15 °C / -43.87 °F",
+    "Vaporizes into": "Propane Gas (SHC: 2.4)",
+    "Freezing Point": "-188.15 °C / -306.67 °F",
+    "Freezes into": "Solid Propane (SHC: 2.4)",
+    "Specific Heat Capacity": "2.4 DTUg∘C / 1.33 DTUg∘F",
+    "Thermal Conductivity": "0.1 DTUms∘C / 0.06 DTUms∘F",
+    "Light Absorption Factor": "100%",
+    "Radiation Absorption Factor": "75%",
+    "Molar Mass": "44.1 gmol",
+    "Default Mass": "600 kg",
+    "Max  Mass": "1000 kg",
+    "Properties": "Liquid",
+    "elementId": "LiquidPropane",
+    "localizationID": "STRINGS.ELEMENTS.LIQUIDPROPANE.NAME",
+    "imageUrl": "https://oxygennotincluded.wiki.gg/images/Liquid_Propane.png",
+    "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Liquid_Propane"
+  },
+  {
+    "name": "Air Systems",
+    "Category": "Liquids",
+    "Tier": "2",
+    "Novice Research": "20",
+    "Requires": "Plumbing",
+    "Needed For": "Liquid-Based Refinement Processes",
+    "description": "Maintain clean, breathable air in the colony.",
+    "imageUrl": "https://oxygennotincluded.wiki.gg/images/thumb/Electrolyzer.png/80px-Electrolyzer.png",
+    "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Air_Systems"
+  }
+]
