@@ -492,14 +492,22 @@ dialog {
     border: 1px solid var(--border-color);
     color: var(--text-color);
     margin: auto;
-    position: fixed;
+    /* position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     overflow-y: auto;
     display: flex;
     flex-direction: column;
+    gap: 1rem; */
+}
+
+.detail-container {
+    display: flex;
+    flex-direction: column;
     gap: 1rem;
+    /* max-height: 80vh;
+    overflow-y: auto; */
 }
 
 .detail-header {

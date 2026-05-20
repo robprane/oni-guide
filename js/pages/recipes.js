@@ -359,6 +359,10 @@ function showDetailModal(item) {
 
     dialog.textContent = ''; // clear
 
+    const container = createElement('div', { class: 'detail-container' });
+
+    dialog.appendChild(container);
+
     const header = createElement('div', { class: 'detail-header' }, [
         createElement('div', { class: 'detail-title-group' }, [
             createElement('img', { src: `/images/${item.image}`, alt: item.name, class: 'recipe-card-img' }),
@@ -375,11 +379,11 @@ function showDetailModal(item) {
         })
     ]);
 
-    dialog.appendChild(header);
+    container.appendChild(header);
 
     if (item.description) {
         const iEl = createElement('i', { textContent: item.description });
-        dialog.appendChild(createElement('p', {}, [iEl]));
+        container.appendChild(createElement('p', {}, [iEl]));
     }
 
     const contentWrapper = createElement('div', { class: 'detail-properties' });
@@ -551,7 +555,7 @@ function showDetailModal(item) {
         ]);
     };
 
-    dialog.appendChild(contentWrapper);
+    container.appendChild(contentWrapper);
 
     const categoriesContainer = createElement('div', { class: 'recipe-categories-container' }, [
         renderCategory('State Transitions', stateTransitions),
@@ -560,10 +564,10 @@ function showDetailModal(item) {
         renderCategory('Consumed', consumed)
     ]);
 
-    dialog.appendChild(categoriesContainer);
+    container.appendChild(categoriesContainer);
 
     if (allRelatedRecipes.length === 0) {
-        dialog.appendChild(createElement('p', { class: 'muted', textContent: 'No known recipes.' }));
+        container.appendChild(createElement('p', { class: 'muted', textContent: 'No known recipes.' }));
     }
 
     if (!dialog.open) {
