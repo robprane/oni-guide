@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Morale",
+    "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Morale"
+  },
+  {
+    "name": "Food Quality",
+    "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Food_Quality"
+  },
+  {
+    "name": "Stress",
+    "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Stress"
+  },
+  {
+    "name": "Health",
+    "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Health"
+  },
+  {
+    "name": "Incapacitated",
+    "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Incapacitated"
+  },
+  {
+    "name": "Skills",
+    "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Skills"
+  },
+  {
+    "name": "Movement & Reach",
+    "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Movement_%26_Reach"
+  },
+  {
+    "name": "Body Temperature",
+    "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Body_Temperature"
+  },
+  {
+    "name": "Gravitas",
+    "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Gravitas"
+  },
+  {
+    "name": "Duplicant",
+    "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Duplicant"
+  }
+]

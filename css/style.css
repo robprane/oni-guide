@@ -47,7 +47,7 @@ body {
     color: var(--nav-text);
     text-decoration: none;
     padding: 0.5rem 1rem;
-    border-radius: 4px;
+    border-radius: 0.25rem;
     transition: background-color 0.2s;
 }
 
@@ -73,8 +73,8 @@ body {
 }
 
 .nav-btn .icon {
-    width: 24px;
-    height: 24px;
+    width: 1.5rem;
+    height: 1.5rem;
 }
 
 /* Modal styles */
@@ -82,7 +82,7 @@ body {
     border: none;
     background: transparent;
     margin: auto;
-    max-width: 500px;
+    max-width: 31.25rem;
     width: 90%;
     padding: 0;
 }
@@ -96,8 +96,8 @@ body {
     background-color: var(--card-bg);
     color: var(--text-color);
     border: 1px solid var(--border-color);
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+    box-shadow: 0 0.25rem 0.375rem rgba(0, 0, 0, 0.1);
     overflow: hidden;
 }
 
@@ -128,7 +128,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 4px;
+    border-radius: 0.25rem;
     transition: background-color 0.2s;
 }
 
@@ -137,8 +137,8 @@ body {
 }
 
 .close-btn .icon {
-    width: 20px;
-    height: 20px;
+    width: 1.25rem;
+    height: 1.25rem;
 }
 
 .modal-body {
@@ -168,7 +168,7 @@ body {
 .theme-btn {
     background-color: var(--input-bg);
     border: 2px solid transparent;
-    border-radius: 12px;
+    border-radius: 0.75rem;
     padding: 1rem;
     cursor: pointer;
     display: flex;
@@ -176,8 +176,8 @@ body {
     justify-content: center;
     color: var(--text-color);
     transition: all 0.2s ease;
-    width: 80px;
-    height: 80px;
+    width: 5rem;
+    height: 5rem;
     position: relative;
 }
 
@@ -191,15 +191,15 @@ body {
 }
 
 .theme-btn .icon {
-    width: 40px;
-    height: 40px;
+    width: 2.5rem;
+    height: 2.5rem;
     /* transition: transform 0.3s ease; */
 }
 
 .theme-btn .icon-a {
     position: absolute;
-    width: 20px;
-    height: 20px;
+    width: 1.25rem;
+    height: 1.25rem;
 }
 
 /* .icon-circle-half {
@@ -221,7 +221,7 @@ main {
 
 .container {
     padding: 2rem;
-    max-width: 1200px;
+    max-width: 75rem;
     margin: 0 auto;
     width: 100%;
 }
@@ -243,7 +243,7 @@ dialog {
 }
 
 /* Mobile responsive */
-/* @media (max-width: 768px) {
+/* @media (max-width: 48rem) {
     .navbar {
         flex-direction: column;
         gap: 1rem;
@@ -267,14 +267,14 @@ dialog {
 
 .home-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr));
     gap: 2rem;
 }
 
 .home-card {
     background: var(--card-bg);
     padding: 2rem;
-    border-radius: 8px;
+    border-radius: 0.5rem;
     border: 1px solid var(--border-color);
     display: flex;
     flex-direction: column;
@@ -295,16 +295,16 @@ dialog {
 .canvas-wrapper {
     display: flex;
     flex-direction: column;
-    height: calc(100vh - 60px);
+    height: calc(100vh - 3.75rem);
     width: 100%;
 }
 
 .canvas-toolbar {
-    padding: 10px;
+    padding: 0.625rem;
     background: var(--nav-bg);
     border-bottom: 1px solid var(--border-color);
     display: flex;
-    gap: 10px;
+    gap: 0.625rem;
 }
 
 .canvas-container {
@@ -320,11 +320,11 @@ dialog {
 }
 
 .tool-btn, .utility-btn {
-    padding: 5px 10px;
+    padding: 0.3125rem 0.625rem;
     border: 1px solid var(--border-color);
     background: var(--card-bg);
     color: var(--text-color);
-    border-radius: 4px;
+    border-radius: 0.25rem;
     cursor: pointer;
 }
 
@@ -355,7 +355,7 @@ dialog {
 
 .recipe-search-input {
     padding: 0.5rem;
-    border-radius: 4px;
+    border-radius: 0.25rem;
     border: 1px solid var(--input-border);
     background: var(--input-bg);
     color: var(--input-text);
@@ -372,7 +372,7 @@ dialog {
     border: 1px solid var(--border-color);
     background: var(--card-bg);
     color: var(--text-color);
-    border-radius: 4px;
+    border-radius: 0.25rem;
     cursor: pointer;
     transition: background 0.2s;
 }
@@ -389,14 +389,14 @@ dialog {
 
 .recipe-results {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
     gap: 1rem;
 }
 
 .recipe-card {
     background: var(--card-bg);
     padding: 1rem;
-    border-radius: 8px;
+    border-radius: 0.5rem;
     border: 1px solid var(--border-color);
     cursor: pointer;
     display: flex;
@@ -411,8 +411,8 @@ dialog {
 }
 
 .recipe-card-img {
-    width: 64px;
-    height: 64px;
+    width: 4rem;
+    height: 4rem;
     object-fit: contain;
 }
 
@@ -446,8 +446,8 @@ dialog {
 }
 
 .no-results-icon {
-    width: 48px;
-    height: 48px;
+    width: 3rem;
+    height: 3rem;
     opacity: 0.5;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'%3E%3C/circle%3E%3Cline x1='21' y1='21' x2='16.65' y2='16.65'%3E%3C/line%3E%3C/svg%3E");
     background-size: contain;
@@ -472,7 +472,7 @@ dialog {
     border: 1px solid var(--border-color);
     background: var(--card-bg);
     color: var(--text-color);
-    border-radius: 4px;
+    border-radius: 0.25rem;
     cursor: pointer;
     transition: background 0.2s;
 }
@@ -485,7 +485,7 @@ dialog {
 .detail-dialog-content {
     background: var(--bg-color);
     padding: 1rem;
-    border-radius: 8px;
+    border-radius: 0.5rem;
     max-width: 90dvw;
     width: 90%;
     max-height: 90dvh;
@@ -546,7 +546,7 @@ dialog {
 .recipe-category-card {
     background: var(--card-bg);
     border: 1px solid var(--border-color);
-    border-radius: 8px;
+    border-radius: 0.5rem;
     overflow: hidden;
 }
 
@@ -569,7 +569,7 @@ dialog {
 .recipe-container {
     background: var(--card-bg);
     border: 1px solid var(--border-color);
-    border-radius: 8px;
+    border-radius: 0.5rem;
     overflow: hidden;
     container-type: inline-size;
 }
@@ -619,7 +619,7 @@ dialog {
     transition: transform 0.3s;
 }
 
-@container (max-width: 300px) {
+@container (max-width: 18.75rem) {
     .recipe-layout {
         flex-direction: column;
     }
@@ -655,14 +655,14 @@ a.recipe-item-link:hover {
 }
 
 .recipe-item-img {
-    width: 48px;
-    height: 48px;
+    width: 3rem;
+    height: 3rem;
     object-fit: contain;
 }
 
 .recipe-item-placeholder {
-    width: 48px;
-    height: 48px;
+    width: 3rem;
+    height: 3rem;
     background: var(--text-muted, #888);
 }
 
