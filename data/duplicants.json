@@ -3,5 +3,10 @@
     "id": "duplicant",
     "name": "Duplicant",
     "image": "Duplicant.png"
+  },
+  {
+    "id": "bionic_duplicant",
+    "name": "Bionic Duplicant",
+    "image": "BionicDuplicant.png"
   }
 ]
