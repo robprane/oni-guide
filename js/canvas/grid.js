@@ -2,6 +2,15 @@ export class Grid {
     constructor(engine) {
         this.engine = engine;
         this.cells = new Map(); // key: "x,y", value: { type, meta }
+        this.topologyVersion = 0;
+    }
+
+    _notifyChange() {
+        this.topologyVersion++;
+        this.engine.needsRedraw = true;
+        if (this.engine.canvas) {
+            this.engine.canvas.dispatchEvent(new CustomEvent('grid-updated'));
+        }
     }
 
     getKey(x, y) {
@@ -68,7 +77,7 @@ export class Grid {
         } else {
             this.cells.set(this.getKey(x, y), { type, meta });
         }
-        this.engine.needsRedraw = true;
+        this._notifyChange();
     }
 
     getCell(x, y) {
@@ -103,10 +112,10 @@ export class Grid {
                 // Fallback in case state is corrupted
                 this.cells.delete(key);
             }
-            this.engine.needsRedraw = true;
+            this._notifyChange();
         } else if (cell.type === type) {
             this.cells.delete(key);
-            this.engine.needsRedraw = true;
+            this._notifyChange();
         } else if (Array.isArray(cell.type)) {
             // Future-proofing for multi-layer
         }
@@ -114,6 +123,52 @@ export class Grid {
 
     clear() {
         this.cells.clear();
-        this.engine.needsRedraw = true;
+        this._notifyChange();
+    }
+
+    serialize() {
+        // Only serialize core objects to keep size minimal.
+        // We exclude 'sweeper_part' because it's derived from 'sweeper'.
+        const data = [];
+        for (const [key, cell] of this.cells.entries()) {
+            if (cell.type === 'sweeper_part') continue;
+
+            const [x, y] = key.split(',').map(Number);
+            // Compact structure: [x, y, type_code, orientation_code(optional)]
+            // Using 1 for solid, 2 for sweeper to save space, but let's keep it simple with strings or short strings first.
+            // Actually, we can just use an array: [x, y, type, orientation]
+            const item = [x, y, cell.type];
+            if (cell.type === 'sweeper' && cell.meta && cell.meta.orientation) {
+                item.push(cell.meta.orientation === 'horizontal' ? 'h' : 'v');
+            }
+            data.push(item);
+        }
+        return data;
+    }
+
+    deserialize(data) {
+        this.cells.clear();
+        if (!Array.isArray(data)) return;
+
+        // Ensure we suppress notifyChange until the end
+        const originalNotify = this._notifyChange;
+        let needsRedraw = false;
+        this._notifyChange = () => { needsRedraw = true; };
+
+        for (const item of data) {
+            if (Array.isArray(item) && item.length >= 3) {
+                const [x, y, type, orientationCode] = item;
+                const meta = {};
+                if (type === 'sweeper') {
+                    meta.orientation = orientationCode === 'v' ? 'vertical' : 'horizontal';
+                }
+                this.setCell(x, y, type, meta);
+            }
+        }
+
+        this._notifyChange = originalNotify;
+        if (needsRedraw) {
+            this._notifyChange();
+        }
     }
 }
