@@ -468,10 +468,7 @@ function showDetailModal(item) {
         if (num === 0) return '0';
         let absNum = Math.abs(num);
         if (absNum < 0.01) {
-            let mag = Math.floor(Math.log10(absNum));
-            let factor = Math.pow(10, -mag);
-            let rounded = Math.round((num + Math.sign(num) * Number.EPSILON) * factor) / factor;
-            return rounded.toFixed(20).replace(/\.?0+$/, '');
+            return Number(Number(num).toPrecision(2)).toString();
         }
         return (Math.round((num + Math.sign(num) * Number.EPSILON) * 100) / 100).toString();
     };
