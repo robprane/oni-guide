@@ -3,7 +3,7 @@ import { renderCanvas } from './pages/canvas.js';
 import { renderRecipes } from './pages/recipes.js';
 
 const routes = {
-    '/': renderHome,
+    '/': renderRecipes,
     '/canvas': renderCanvas,
     '/recipes': renderRecipes
 };
