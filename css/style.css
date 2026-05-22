@@ -322,6 +322,7 @@ dialog {
 
 .tool-btn, .utility-btn {
     padding: 0.3125rem 0.625rem;
+    width: min-content;
     border: 1px solid var(--border-color);
     background: var(--card-bg);
     color: var(--text-color);

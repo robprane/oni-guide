@@ -210,6 +210,10 @@ export async function renderRecipes(container, currentPath) {
             });
         }
 
+        matchedItems = matchedItems.filter(item => {
+            return item._type !== 'special';
+        });
+
         if (matchedItems.length === 0) {
             const noResultsTitle = createElement('p', { class: 'no-results-title' }, ['No results found']);
             if (q) {
