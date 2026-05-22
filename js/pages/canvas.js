@@ -105,9 +105,11 @@ export async function renderCanvas(container, path) {
     };
     engineInstance.setTool('solid'); // Trigger the UI update for default tool
 
+    // console.log(path);
+
     // Handle initial state from URL
-    if (path && path.startsWith('canvas/')) {
-        const encodedState = path.substring('canvas/'.length);
+    if (path && path.startsWith('/canvas/')) {
+        const encodedState = path.substring('/canvas/'.length);
         if (encodedState) {
             try {
                 // Support base64url decoding
