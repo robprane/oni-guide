@@ -1,212 +1,416 @@
 [
-  {
-    "id": "abyss_bug",
-    "name": "Abyss Bug",
-    "image": "AbyssBug.png"
-  },
-  {
-    "id": "azure_bug",
-    "name": "Azure Bug",
-    "image": "AzureBug.png"
-  },
-  {
-    "id": "bammoth",
-    "name": "Bammoth",
-    "image": "Bammoth.png"
-  },
-  {
-    "id": "beeta_hive",
-    "name": "Beeta Hive",
-    "image": "BeetaHive.png"
-  },
-  {
-    "id": "land_critter",
-    "name": "Land Critter",
-    "image": "LandCritter.png"
-  },
-  {
-    "id": "coral_bug",
-    "name": "Coral Bug",
-    "image": "CoralBug.png"
-  },
-  {
-    "id": "cuddle_pip",
-    "name": "Cuddle Pip",
-    "image": "CuddlePip.png"
-  },
-  {
-    "id": "delecta_vole",
-    "name": "Delecta Vole",
-    "image": "DelectaVole.png"
-  },
-  {
-    "id": "dense_puft",
-    "name": "Dense Puft",
-    "image": "DensePuft.png"
-  },
-  {
-    "id": "drecko",
-    "name": "Drecko",
-    "image": "Drecko.png"
-  },
-  {
-    "id": "flox",
-    "name": "Flox",
-    "image": "Flox.png"
-  },
-  {
-    "id": "gassy_moo",
-    "name": "Gassy Moo",
-    "image": "GassyMoo.png"
-  },
-  {
-    "id": "glossy_drecko",
-    "name": "Glossy Drecko",
-    "image": "GlossyDrecko.png"
-  },
-  {
-    "id": "grubgrub",
-    "name": "Grubgrub",
-    "image": "Grubgrub.png"
-  },
-  {
-    "id": "gulp_fish",
-    "name": "Gulp Fish",
-    "image": "GulpFish.png"
-  },
-  {
-    "id": "hatch",
-    "name": "Hatch",
-    "image": "Hatch.png"
-  },
-  {
-    "id": "longhair_slickster",
-    "name": "Longhair Slickster",
-    "image": "LonghairSlickster.png"
-  },
-  {
-    "id": "molten_slickster",
-    "name": "Molten Slickster",
-    "image": "MoltenSlickster.png"
-  },
-  {
-    "id": "oakshell",
-    "name": "Oakshell",
-    "image": "Oakshell.png"
-  },
-  {
-    "id": "pacu",
-    "name": "Pacu",
-    "image": "Pacu.png"
-  },
-  {
-    "id": "pip",
-    "name": "Pip",
-    "image": "Pip.png"
-  },
-  {
-    "id": "plug_slug",
-    "name": "Plug Slug",
-    "image": "PlugSlug.png"
-  },
-  {
-    "id": "pokeshell",
-    "name": "Pokeshell",
-    "image": "Pokeshell.png"
-  },
-  {
-    "id": "puft",
-    "name": "Puft",
-    "image": "Puft.png"
-  },
-  {
-    "id": "puft_prince",
-    "name": "Puft Prince",
-    "image": "PuftPrince.png"
-  },
-  {
-    "id": "radiant_bug",
-    "name": "Radiant Bug",
-    "image": "RadiantBug.png"
-  },
-  {
-    "id": "regal_bammoth",
-    "name": "Regal Bammoth",
-    "image": "RegalBammoth.png"
-  },
-  {
-    "id": "royal_bug",
-    "name": "Royal Bug",
-    "image": "RoyalBug.png"
-  },
-  {
-    "id": "sage_hatch",
-    "name": "Sage Hatch",
-    "image": "SageHatch.png"
-  },
-  {
-    "id": "sanishell",
-    "name": "Sanishell",
-    "image": "Sanishell.png"
-  },
-  {
-    "id": "shine_bug",
-    "name": "Shine Bug",
-    "image": "ShineBug.png"
-  },
-  {
-    "id": "shove_vole",
-    "name": "Shove Vole",
-    "image": "ShoveVole.png"
-  },
-  {
-    "id": "slickster",
-    "name": "Slickster",
-    "image": "Slickster.png"
-  },
-  {
-    "id": "smog_slug",
-    "name": "Smog Slug",
-    "image": "SmogSlug.png"
-  },
-  {
-    "id": "smooth_hatch",
-    "name": "Smooth Hatch",
-    "image": "SmoothHatch.png"
-  },
-  {
-    "id": "spigot_seal",
-    "name": "Spigot Seal",
-    "image": "SpigotSeal.png"
-  },
-  {
-    "id": "sponge_slug",
-    "name": "Sponge Slug",
-    "image": "SpongeSlug.png"
-  },
-  {
-    "id": "squeaky_puft",
-    "name": "Squeaky Puft",
-    "image": "SqueakyPuft.png"
-  },
-  {
-    "id": "stone_hatch",
-    "name": "Stone Hatch",
-    "image": "StoneHatch.png"
-  },
-  {
-    "id": "sun_bug",
-    "name": "Sun Bug",
-    "image": "SunBug.png"
-  },
-  {
-    "id": "sweetle",
-    "name": "Sweetle",
-    "image": "Sweetle.png"
-  },
-  {
-    "id": "tropical_pacu",
-    "name": "Tropical Pacu",
-    "image": "TropicalPacu.png"
-  }
+    {
+        "id": "abyss_bug",
+        "name": "Abyss Bug",
+        "image": "AbyssBug.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Abyss_Bug"
+    },
+    {
+        "id": "azure_bug",
+        "name": "Azure Bug",
+        "image": "AzureBug.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Azure_Bug"
+    },
+    {
+        "id": "bammoth",
+        "name": "Bammoth",
+        "image": "Bammoth.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Bammoth"
+    },
+    {
+        "id": "beeta_hive",
+        "name": "Beeta Hive",
+        "image": "BeetaHive.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Beeta_Hive"
+    },
+    {
+        "id": "land_critter",
+        "name": "Land Critter",
+        "image": "LandCritter.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Land_Critter"
+    },
+    {
+        "id": "coral_bug",
+        "name": "Coral Bug",
+        "image": "CoralBug.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Coral_Bug"
+    },
+    {
+        "id": "cuddle_pip",
+        "name": "Cuddle Pip",
+        "image": "CuddlePip.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Cuddle_Pip"
+    },
+    {
+        "id": "delecta_vole",
+        "name": "Delecta Vole",
+        "image": "DelectaVole.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Delecta_Vole"
+    },
+    {
+        "id": "dense_puft",
+        "name": "Dense Puft",
+        "image": "DensePuft.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Dense_Puft"
+    },
+    {
+        "id": "drecko",
+        "name": "Drecko",
+        "image": "Drecko.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Drecko"
+    },
+    {
+        "id": "flox",
+        "name": "Flox",
+        "image": "Flox.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Flox"
+    },
+    {
+        "id": "gassy_moo",
+        "name": "Gassy Moo",
+        "image": "GassyMoo.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Gassy_Moo"
+    },
+    {
+        "id": "glossy_drecko",
+        "name": "Glossy Drecko",
+        "image": "GlossyDrecko.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Glossy_Drecko"
+    },
+    {
+        "id": "grubgrub",
+        "name": "Grubgrub",
+        "image": "Grubgrub.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Grubgrub"
+    },
+    {
+        "id": "gulp_fish",
+        "name": "Gulp Fish",
+        "image": "GulpFish.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Gulp_Fish"
+    },
+    {
+        "id": "hatch",
+        "name": "Hatch",
+        "image": "Hatch.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Hatch"
+    },
+    {
+        "id": "longhair_slickster",
+        "name": "Longhair Slickster",
+        "image": "LonghairSlickster.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Longhair_Slickster"
+    },
+    {
+        "id": "molten_slickster",
+        "name": "Molten Slickster",
+        "image": "MoltenSlickster.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Molten_Slickster"
+    },
+    {
+        "id": "oakshell",
+        "name": "Oakshell",
+        "image": "Oakshell.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Oakshell"
+    },
+    {
+        "id": "pacu",
+        "name": "Pacu",
+        "image": "Pacu.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Pacu"
+    },
+    {
+        "id": "pip",
+        "name": "Pip",
+        "image": "Pip.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Pip"
+    },
+    {
+        "id": "plug_slug",
+        "name": "Plug Slug",
+        "image": "PlugSlug.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Plug_Slug"
+    },
+    {
+        "id": "pokeshell",
+        "name": "Pokeshell",
+        "image": "Pokeshell.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Pokeshell"
+    },
+    {
+        "id": "puft",
+        "name": "Puft",
+        "image": "Puft.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Puft"
+    },
+    {
+        "id": "puft_prince",
+        "name": "Puft Prince",
+        "image": "PuftPrince.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Puft_Prince"
+    },
+    {
+        "id": "radiant_bug",
+        "name": "Radiant Bug",
+        "image": "RadiantBug.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Radiant_Bug"
+    },
+    {
+        "id": "regal_bammoth",
+        "name": "Regal Bammoth",
+        "image": "RegalBammoth.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Regal_Bammoth"
+    },
+    {
+        "id": "royal_bug",
+        "name": "Royal Bug",
+        "image": "RoyalBug.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Royal_Bug"
+    },
+    {
+        "id": "sage_hatch",
+        "name": "Sage Hatch",
+        "image": "SageHatch.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Sage_Hatch"
+    },
+    {
+        "id": "sanishell",
+        "name": "Sanishell",
+        "image": "Sanishell.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Sanishell"
+    },
+    {
+        "id": "shine_bug",
+        "name": "Shine Bug",
+        "image": "ShineBug.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Shine_Bug"
+    },
+    {
+        "id": "shove_vole",
+        "name": "Shove Vole",
+        "image": "ShoveVole.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Shove_Vole"
+    },
+    {
+        "id": "slickster",
+        "name": "Slickster",
+        "image": "Slickster.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Slickster"
+    },
+    {
+        "id": "smog_slug",
+        "name": "Smog Slug",
+        "image": "SmogSlug.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Smog_Slug"
+    },
+    {
+        "id": "smooth_hatch",
+        "name": "Smooth Hatch",
+        "image": "SmoothHatch.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Smooth_Hatch"
+    },
+    {
+        "id": "spigot_seal",
+        "name": "Spigot Seal",
+        "image": "SpigotSeal.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Spigot_Seal"
+    },
+    {
+        "id": "sponge_slug",
+        "name": "Sponge Slug",
+        "image": "SpongeSlug.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Sponge_Slug"
+    },
+    {
+        "id": "squeaky_puft",
+        "name": "Squeaky Puft",
+        "image": "SqueakyPuft.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Squeaky_Puft"
+    },
+    {
+        "id": "stone_hatch",
+        "name": "Stone Hatch",
+        "image": "StoneHatch.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Stone_Hatch"
+    },
+    {
+        "id": "sun_bug",
+        "name": "Sun Bug",
+        "image": "SunBug.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Sun_Bug"
+    },
+    {
+        "id": "sweetle",
+        "name": "Sweetle",
+        "image": "Sweetle.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Sweetle"
+    },
+    {
+        "id": "tropical_pacu",
+        "name": "Tropical Pacu",
+        "image": "TropicalPacu.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Tropical_Pacu"
+    },
+    {
+        "id": "morb",
+        "name": "Morb",
+        "image": "Morb.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Morb"
+    },
+    {
+        "id": "dartle",
+        "name": "Dartle",
+        "image": "Dartle.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Dartle"
+    },
+    {
+        "id": "hatches",
+        "name": "Hatches",
+        "image": "Hatches.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Hatch"
+    },
+    {
+        "id": "floxes",
+        "name": "Floxes",
+        "image": "Floxes.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Flox"
+    },
+    {
+        "id": "bammoths",
+        "name": "Bammoths",
+        "image": "Bammoths.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Bammoth"
+    },
+    {
+        "id": "jawbo",
+        "name": "Jawbo",
+        "image": "Jawbo.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Jawbo"
+    },
+    {
+        "id": "dreckos",
+        "name": "Dreckos",
+        "image": "Dreckos.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Drecko"
+    },
+    {
+        "id": "egg",
+        "name": "Egg",
+        "image": "Egg.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Egg"
+    },
+    {
+        "id": "lumbs",
+        "name": "Lumbs",
+        "image": "Lumbs.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Lumb"
+    },
+    {
+        "id": "moos",
+        "name": "Moos",
+        "image": "Moos.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Gassy_Moo"
+    },
+    {
+        "id": "rover",
+        "name": "Rover",
+        "image": "Rover.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Rover"
+    },
+    {
+        "id": "rhex",
+        "name": "Rhex",
+        "image": "Rhex.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Rhex"
+    },
+    {
+        "id": "pacus",
+        "name": "Pacus",
+        "image": "Pacus.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Pacu"
+    },
+    {
+        "id": "mimika",
+        "name": "Mimika",
+        "image": "Mimika.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Mimika"
+    },
+    {
+        "id": "gnit",
+        "name": "Gnit",
+        "image": "Gnit.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Gnit"
+    },
+    {
+        "id": "shine_bugs",
+        "name": "Shine Bugs",
+        "image": "ShineBugs.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Shine_Bug"
+    },
+    {
+        "id": "pufts",
+        "name": "Pufts",
+        "image": "Pufts.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Puft"
+    },
+    {
+        "id": "pips",
+        "name": "Pips",
+        "image": "Pips.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Pip"
+    },
+    {
+        "id": "divergents",
+        "name": "Divergents",
+        "image": "Divergents.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Divergent"
+    },
+    {
+        "id": "critter_morphs",
+        "name": "Critter Morphs",
+        "image": "CritterMorphs.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Critter_Morphs"
+    },
+    {
+        "id": "slicksters",
+        "name": "Slicksters",
+        "image": "Slicksters.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Slickster"
+    },
+    {
+        "id": "pokeshells",
+        "name": "Pokeshells",
+        "image": "Pokeshells.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Pokeshell"
+    },
+    {
+        "id": "plug_slugs",
+        "name": "Plug Slugs",
+        "image": "PlugSlugs.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Plug_Slug"
+    },
+    {
+        "id": "cramped",
+        "name": "Cramped",
+        "image": "Cramped.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Cramped"
+    },
+    {
+        "id": "shove_voles",
+        "name": "Shove Voles",
+        "image": "ShoveVoles.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Shove_Vole"
+    },
+    {
+        "id": "critter",
+        "name": "Critter",
+        "image": "Critter.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Critter"
+    },
+    {
+        "id": "beeta",
+        "name": "Beeta",
+        "image": "Beeta.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Beeta"
+    }
 ]

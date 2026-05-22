@@ -367,7 +367,35 @@ function showDetailModal(item) {
         createElement('div', { class: 'detail-title-group' }, [
             createElement('img', { src: `/images/${item.image}`, alt: item.name, class: 'recipe-card-img' }),
             createElement('div', {}, [
-                createElement('h2', { textContent: item.name }),
+                createElement('div', { class: 'header-title-wrapper' }, [
+                    createElement('h2', {
+                        textContent: item.name,
+                        style: 'cursor: pointer;',
+                        onclick: (e) => {
+                            const btn = e.target.nextSibling;
+                            if (btn) btn.click();
+                        }
+                    }),
+                    createElement('button', {
+                        class: 'copy-link-btn',
+                        title: 'Copy link',
+                        'aria-label': 'Copy link',
+                        onclick: (e) => {
+                            const btn = e.currentTarget;
+                            const icon = btn.firstChild;
+                            navigator.clipboard.writeText(window.location.href).then(() => {
+                                icon.className = 'copy-link-icon check';
+                                btn.title = 'Link copied!';
+                                setTimeout(() => {
+                                    icon.className = 'copy-link-icon link';
+                                    btn.title = 'Copy link';
+                                }, 2000);
+                            });
+                        }
+                    }, [
+                        createElement('span', { class: 'copy-link-icon link' })
+                    ])
+                ]),
                 createElement('span', { class: 'recipe-card-type', textContent: item._type })
             ])
         ]),
@@ -556,6 +584,20 @@ function showDetailModal(item) {
     };
 
     container.appendChild(contentWrapper);
+
+    if (item.wikiUrl) {
+        contentWrapper.appendChild(
+            createElement('a', {
+                class: 'wiki-link',
+                href: item.wikiUrl,
+                target: '_blank',
+                rel: 'noopener noreferrer'
+            }, [
+                createElement('span', { class: 'wiki-icon' }),
+                createElement('span', { textContent: 'View on wiki.gg' })
+            ])
+        );
+    }
 
     const categoriesContainer = createElement('div', { class: 'recipe-categories-container' }, [
         renderCategory('State Transitions', stateTransitions),

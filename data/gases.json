@@ -1,137 +1,284 @@
 [
-  {
-    "id": "aluminum_gas",
-    "name": "Aluminum Gas",
-    "image": "AluminumGas.png"
-  },
-  {
-    "id": "carbon_dioxide",
-    "name": "Carbon Dioxide",
-    "image": "CarbonDioxide.png"
-  },
-  {
-    "id": "carbon_gas",
-    "name": "Carbon Gas",
-    "image": "CarbonGas.png"
-  },
-  {
-    "id": "chlorine",
-    "name": "Chlorine",
-    "image": "Chlorine.png"
-  },
-  {
-    "id": "chlorine_gas",
-    "name": "Chlorine Gas",
-    "image": "ChlorineGas.png"
-  },
-  {
-    "id": "cobalt_gas",
-    "name": "Cobalt Gas",
-    "image": "CobaltGas.png"
-  },
-  {
-    "id": "copper_gas",
-    "name": "Copper Gas",
-    "image": "CopperGas.png"
-  },
-  {
-    "id": "ethanol_gas",
-    "name": "Ethanol Gas",
-    "image": "EthanolGas.png"
-  },
-  {
-    "id": "gold_gas",
-    "name": "Gold Gas",
-    "image": "GoldGas.png"
-  },
-  {
-    "id": "hydrogen",
-    "name": "Hydrogen",
-    "image": "Hydrogen.png"
-  },
-  {
-    "id": "iron_gas",
-    "name": "Iron Gas",
-    "image": "IronGas.png"
-  },
-  {
-    "id": "lead_gas",
-    "name": "Lead Gas",
-    "image": "LeadGas.png"
-  },
-  {
-    "id": "mercury_gas",
-    "name": "Mercury Gas",
-    "image": "MercuryGas.png"
-  },
-  {
-    "id": "natural_gas",
-    "name": "Natural Gas",
-    "image": "NaturalGas.png"
-  },
-  {
-    "id": "niobium_gas",
-    "name": "Niobium Gas",
-    "image": "NiobiumGas.png"
-  },
-  {
-    "id": "oxygen",
-    "name": "Oxygen",
-    "image": "Oxygen.png"
-  },
-  {
-    "id": "phosphorus_gas",
-    "name": "Phosphorus Gas",
-    "image": "PhosphorusGas.png"
-  },
-  {
-    "id": "polluted_oxygen",
-    "name": "Polluted Oxygen",
-    "image": "PollutedOxygen.png"
-  },
-  {
-    "id": "rock_gas",
-    "name": "Rock Gas",
-    "image": "RockGas.png"
-  },
-  {
-    "id": "salt_gas",
-    "name": "Salt Gas",
-    "image": "SaltGas.png"
-  },
-  {
-    "id": "sour_gas",
-    "name": "Sour Gas",
-    "image": "SourGas.png"
-  },
-  {
-    "id": "steam",
-    "name": "Steam",
-    "image": "Steam.png"
-  },
-  {
-    "id": "steel_gas",
-    "name": "Steel Gas",
-    "image": "SteelGas.png"
-  },
-  {
-    "id": "sulfur_gas",
-    "name": "Sulfur Gas",
-    "image": "SulfurGas.png"
-  },
-  {
-    "id": "super_coolant_gas",
-    "name": "Super Coolant Gas",
-    "image": "SuperCoolantGas.png"
-  },
-  {
-    "id": "nuclear_fallout",
-    "name": "Nuclear Fallout",
-    "image": "NuclearFallout.png"
-  },
-  {
-    "id": "tungsten_gas",
-    "name": "Tungsten Gas",
-    "image": "TungstenGas.png"
-  }
+    {
+        "id": "aluminum_gas",
+        "name": "Aluminum Gas",
+        "image": "AluminumGas.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Aluminum_Gas"
+    },
+    {
+        "id": "carbon_dioxide",
+        "name": "Carbon Dioxide",
+        "image": "CarbonDioxide.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Carbon_Dioxide"
+    },
+    {
+        "id": "carbon_gas",
+        "name": "Carbon Gas",
+        "image": "CarbonGas.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Carbon_Gas"
+    },
+    {
+        "id": "chlorine",
+        "name": "Chlorine",
+        "image": "Chlorine.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Chlorine"
+    },
+    {
+        "id": "chlorine_gas",
+        "name": "Chlorine Gas",
+        "image": "ChlorineGas.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Chlorine_Gas"
+    },
+    {
+        "id": "cobalt_gas",
+        "name": "Cobalt Gas",
+        "image": "CobaltGas.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Cobalt_Gas"
+    },
+    {
+        "id": "copper_gas",
+        "name": "Copper Gas",
+        "image": "CopperGas.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Copper_Gas"
+    },
+    {
+        "id": "ethanol_gas",
+        "name": "Ethanol Gas",
+        "image": "EthanolGas.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Ethanol_Gas"
+    },
+    {
+        "id": "gold_gas",
+        "name": "Gold Gas",
+        "image": "GoldGas.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Gold_Gas"
+    },
+    {
+        "id": "hydrogen",
+        "name": "Hydrogen",
+        "image": "Hydrogen.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Hydrogen"
+    },
+    {
+        "id": "iron_gas",
+        "name": "Iron Gas",
+        "image": "IronGas.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Iron_Gas"
+    },
+    {
+        "id": "lead_gas",
+        "name": "Lead Gas",
+        "image": "LeadGas.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Lead_Gas"
+    },
+    {
+        "id": "mercury_gas",
+        "name": "Mercury Gas",
+        "image": "MercuryGas.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Mercury_Gas"
+    },
+    {
+        "id": "natural_gas",
+        "name": "Natural Gas",
+        "image": "NaturalGas.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Natural_Gas"
+    },
+    {
+        "id": "niobium_gas",
+        "name": "Niobium Gas",
+        "image": "NiobiumGas.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Niobium_Gas"
+    },
+    {
+        "id": "oxygen",
+        "name": "Oxygen",
+        "image": "Oxygen.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Oxygen"
+    },
+    {
+        "id": "phosphorus_gas",
+        "name": "Phosphorus Gas",
+        "image": "PhosphorusGas.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Phosphorus_Gas"
+    },
+    {
+        "id": "polluted_oxygen",
+        "name": "Polluted Oxygen",
+        "image": "PollutedOxygen.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Polluted_Oxygen"
+    },
+    {
+        "id": "rock_gas",
+        "name": "Rock Gas",
+        "image": "RockGas.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Rock_Gas"
+    },
+    {
+        "id": "salt_gas",
+        "name": "Salt Gas",
+        "image": "SaltGas.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Salt_Gas"
+    },
+    {
+        "id": "sour_gas",
+        "name": "Sour Gas",
+        "image": "SourGas.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Sour_Gas"
+    },
+    {
+        "id": "steam",
+        "name": "Steam",
+        "image": "Steam.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Steam"
+    },
+    {
+        "id": "steel_gas",
+        "name": "Steel Gas",
+        "image": "SteelGas.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Steel_Gas"
+    },
+    {
+        "id": "sulfur_gas",
+        "name": "Sulfur Gas",
+        "image": "SulfurGas.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Sulfur_Gas"
+    },
+    {
+        "id": "super_coolant_gas",
+        "name": "Super Coolant Gas",
+        "image": "SuperCoolantGas.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Super_Coolant_Gas"
+    },
+    {
+        "id": "nuclear_fallout",
+        "name": "Nuclear Fallout",
+        "image": "NuclearFallout.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Nuclear_Fallout"
+    },
+    {
+        "id": "tungsten_gas",
+        "name": "Tungsten Gas",
+        "image": "TungstenGas.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Tungsten_Gas"
+    },
+    {
+        "id": "hvac",
+        "name": "HVAC",
+        "image": "HVAC.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/HVAC"
+    },
+    {
+        "id": "electrum",
+        "name": "Electrum",
+        "image": "Electrum.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Unreleased_Content"
+    },
+    {
+        "id": "temperature_modulation",
+        "name": "Temperature Modulation",
+        "image": "TemperatureModulation.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Temperature_Modulation"
+    },
+    {
+        "id": "gas_distribution",
+        "name": "Gas Distribution",
+        "image": "GasDistribution.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Gas_Distribution"
+    },
+    {
+        "id": "portable_gases",
+        "name": "Portable Gases",
+        "image": "PortableGases.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Portable_Gases"
+    },
+    {
+        "id": "gas",
+        "name": "Gas",
+        "image": "Gas.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Gas"
+    },
+    {
+        "id": "helium",
+        "name": "Helium",
+        "image": "Helium.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Helium"
+    },
+    {
+        "id": "propane_gas",
+        "name": "Propane Gas",
+        "image": "PropaneGas.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Propane_Gas"
+    },
+    {
+        "id": "breathable_gas",
+        "name": "Breathable Gas",
+        "image": "BreathableGas.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Breathable_Gas"
+    },
+    {
+        "id": "hydrogen_gas",
+        "name": "Hydrogen Gas",
+        "image": "HydrogenGas.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Hydrogen_Gas"
+    },
+    {
+        "id": "pressure_management",
+        "name": "Pressure Management",
+        "image": "PressureManagement.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Pressure_Management"
+    },
+    {
+        "id": "nickel_gas",
+        "name": "Nickel Gas",
+        "image": "NickelGas.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Nickel_Gas"
+    },
+    {
+        "id": "atmospheric_pressure",
+        "name": "Atmospheric Pressure",
+        "image": "AtmosphericPressure.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Atmospheric_Pressure"
+    },
+    {
+        "id": "advanced_gas_flow",
+        "name": "Advanced Gas Flow",
+        "image": "AdvancedGasFlow.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Advanced_Gas_Flow"
+    },
+    {
+        "id": "decontamination",
+        "name": "Decontamination",
+        "image": "Decontamination.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Decontamination"
+    },
+    {
+        "id": "improved_ventilation",
+        "name": "Improved Ventilation",
+        "image": "ImprovedVentilation.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Improved_Ventilation"
+    },
+    {
+        "id": "synthesis_gas",
+        "name": "Synthesis Gas",
+        "image": "SynthesisGas.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Synthesis_Gas"
+    },
+    {
+        "id": "iridium_gas",
+        "name": "Iridium Gas",
+        "image": "IridiumGas.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Iridium_Gas"
+    },
+    {
+        "id": "catalytics",
+        "name": "Catalytics",
+        "image": "Catalytics.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Catalytics"
+    },
+    {
+        "id": "ventilation",
+        "name": "Ventilation",
+        "image": "Ventilation.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Ventilation_%28Research%29"
+    }
 ]

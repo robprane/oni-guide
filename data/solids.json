@@ -1,446 +1,696 @@
 [
-  {
-    "id": "abyssalite",
-    "name": "Abyssalite",
-    "image": "Abyssalite.png"
-  },
-  {
-    "id": "algae",
-    "name": "Algae",
-    "image": "Algae.png"
-  },
-  {
-    "id": "aluminum",
-    "name": "Aluminum",
-    "image": "Aluminum.png"
-  },
-  {
-    "id": "aluminum_ore",
-    "name": "Aluminum Ore",
-    "image": "AluminumOre.png"
-  },
-  {
-    "id": "bleach_stone",
-    "name": "Bleach Stone",
-    "image": "BleachStone.png"
-  },
-  {
-    "id": "brackwax",
-    "name": "Brackwax",
-    "image": "Brackwax.png"
-  },
-  {
-    "id": "brine_ice",
-    "name": "Brine Ice",
-    "image": "BrineIce.png"
-  },
-  {
-    "id": "ceramic",
-    "name": "Ceramic",
-    "image": "Ceramic.png"
-  },
-  {
-    "id": "cinnabar_ore",
-    "name": "Cinnabar Ore",
-    "image": "CinnabarOre.png"
-  },
-  {
-    "id": "clay",
-    "name": "Clay",
-    "image": "Clay.png"
-  },
-  {
-    "id": "coal",
-    "name": "Coal",
-    "image": "Coal.png"
-  },
-  {
-    "id": "cobalt",
-    "name": "Cobalt",
-    "image": "Cobalt.png"
-  },
-  {
-    "id": "cobalt_ore",
-    "name": "Cobalt Ore",
-    "image": "CobaltOre.png"
-  },
-  {
-    "id": "copper",
-    "name": "Copper",
-    "image": "Copper.png"
-  },
-  {
-    "id": "copper_ore",
-    "name": "Copper Ore",
-    "image": "CopperOre.png"
-  },
-  {
-    "id": "corium",
-    "name": "Corium",
-    "image": "Corium.png"
-  },
-  {
-    "id": "crashed_rock",
-    "name": "Crashed Rock",
-    "image": "CrashedRock.png"
-  },
-  {
-    "id": "crushed_ice",
-    "name": "Crushed Ice",
-    "image": "CrushedIce.png"
-  },
-  {
-    "id": "crushed_rock",
-    "name": "Crushed Rock",
-    "image": "CrushedRock.png"
-  },
-  {
-    "id": "depleted_uranium",
-    "name": "Depleted Uranium",
-    "image": "DepletedUranium.png"
-  },
-  {
-    "id": "diamond",
-    "name": "Diamond",
-    "image": "Diamond.png"
-  },
-  {
-    "id": "dirt",
-    "name": "Dirt",
-    "image": "Dirt.png",
-    "type": "Solid",
-    "melting_point": 326.8,
-    "melting_product": "sand",
-    "description": "Basic soil."
-  },
-  {
-    "id": "electrum",
-    "name": "Electrum",
-    "image": "Electrum.png"
-  },
-  {
-    "id": "enriched_uranium",
-    "name": "Enriched Uranium",
-    "image": "EnrichedUranium.png"
-  },
-  {
-    "id": "fertilizer",
-    "name": "Fertilizer",
-    "image": "Fertilizer.png"
-  },
-  {
-    "id": "fossil",
-    "name": "Fossil",
-    "image": "Fossil.png"
-  },
-  {
-    "id": "frozen_brackene",
-    "name": "Frozen Brackene",
-    "image": "FrozenBrackene.png"
-  },
-  {
-    "id": "fullerene",
-    "name": "Fullerene",
-    "image": "Fullerene.png"
-  },
-  {
-    "id": "glass",
-    "name": "Glass",
-    "image": "Glass.png"
-  },
-  {
-    "id": "gold",
-    "name": "Gold",
-    "image": "Gold.png"
-  },
-  {
-    "id": "gold_amalgam",
-    "name": "Gold Amalgam",
-    "image": "GoldAmalgam.png"
-  },
-  {
-    "id": "granite",
-    "name": "Granite",
-    "image": "Granite.png"
-  },
-  {
-    "id": "graphite",
-    "name": "Graphite",
-    "image": "Graphite.png"
-  },
-  {
-    "id": "ice",
-    "name": "Ice",
-    "image": "Ice.png"
-  },
-  {
-    "id": "igneous_rock",
-    "name": "Igneous Rock",
-    "image": "IgneousRock.png"
-  },
-  {
-    "id": "insulation",
-    "name": "Insulation",
-    "image": "Insulation.png"
-  },
-  {
-    "id": "insulite",
-    "name": "Insulite",
-    "image": "Insulite.png"
-  },
-  {
-    "id": "iron",
-    "name": "Iron",
-    "image": "Iron.png"
-  },
-  {
-    "id": "iron_ore",
-    "name": "Iron Ore",
-    "image": "IronOre.png"
-  },
-  {
-    "id": "isoresin",
-    "name": "Isoresin",
-    "image": "Isoresin.png"
-  },
-  {
-    "id": "lead",
-    "name": "Lead",
-    "image": "Lead.png"
-  },
-  {
-    "id": "lime",
-    "name": "Lime",
-    "image": "Lime.png"
-  },
-  {
-    "id": "mafic_rock",
-    "name": "Mafic Rock",
-    "image": "MaficRock.png"
-  },
-  {
-    "id": "mud",
-    "name": "Mud",
-    "image": "Mud.png"
-  },
-  {
-    "id": "neutronium",
-    "name": "Neutronium",
-    "image": "Neutronium.png"
-  },
-  {
-    "id": "niobium",
-    "name": "Niobium",
-    "image": "Niobium.png"
-  },
-  {
-    "id": "obsidian",
-    "name": "Obsidian",
-    "image": "Obsidian.png"
-  },
-  {
-    "id": "oxylite",
-    "name": "Oxylite",
-    "image": "Oxylite.png"
-  },
-  {
-    "id": "phosphorite",
-    "name": "Phosphorite",
-    "image": "Phosphorite.png"
-  },
-  {
-    "id": "plastic",
-    "name": "Plastic",
-    "image": "Plastic.png"
-  },
-  {
-    "id": "plastium",
-    "name": "Plastium",
-    "image": "Plastium.png"
-  },
-  {
-    "id": "polluted_dirt",
-    "name": "Polluted Dirt",
-    "image": "PollutedDirt.png"
-  },
-  {
-    "id": "polluted_ice",
-    "name": "Polluted Ice",
-    "image": "PollutedIce.png"
-  },
-  {
-    "id": "polluted_mud",
-    "name": "Polluted Mud",
-    "image": "PollutedMud.png"
-  },
-  {
-    "id": "pyrite",
-    "name": "Pyrite",
-    "image": "Pyrite.png"
-  },
-  {
-    "id": "radium",
-    "name": "Radium",
-    "image": "Radium.png"
-  },
-  {
-    "id": "refined_carbon",
-    "name": "Refined Carbon",
-    "image": "RefinedCarbon.png"
-  },
-  {
-    "id": "refined_phosphorus",
-    "name": "Refined Phosphorus",
-    "image": "RefinedPhosphorus.png"
-  },
-  {
-    "id": "regolith",
-    "name": "Regolith",
-    "image": "Regolith.png"
-  },
-  {
-    "id": "rust",
-    "name": "Rust",
-    "image": "Rust.png"
-  },
-  {
-    "id": "salt",
-    "name": "Salt",
-    "image": "Salt.png"
-  },
-  {
-    "id": "sand",
-    "name": "Sand",
-    "image": "Sand.png"
-  },
-  {
-    "id": "sandstone",
-    "name": "Sandstone",
-    "image": "Sandstone.png"
-  },
-  {
-    "id": "sedimentary_rock",
-    "name": "Sedimentary Rock",
-    "image": "SedimentaryRock.png"
-  },
-  {
-    "id": "slime",
-    "name": "Slime",
-    "image": "Slime.png"
-  },
-  {
-    "id": "snow",
-    "name": "Snow",
-    "image": "Snow.png"
-  },
-  {
-    "id": "solid_carbon_dioxide",
-    "name": "Solid Carbon Dioxide",
-    "image": "SolidCarbonDioxide.png"
-  },
-  {
-    "id": "solid_chlorine",
-    "name": "Solid Chlorine",
-    "image": "SolidChlorine.png"
-  },
-  {
-    "id": "solid_crude_oil",
-    "name": "Solid Crude Oil",
-    "image": "SolidCrudeOil.png"
-  },
-  {
-    "id": "solid_ethanol",
-    "name": "Solid Ethanol",
-    "image": "SolidEthanol.png"
-  },
-  {
-    "id": "solid_hydrogen",
-    "name": "Solid Hydrogen",
-    "image": "SolidHydrogen.png"
-  },
-  {
-    "id": "solid_mercury",
-    "name": "Solid Mercury",
-    "image": "SolidMercury.png"
-  },
-  {
-    "id": "solid_methane",
-    "name": "Solid Methane",
-    "image": "SolidMethane.png"
-  },
-  {
-    "id": "solid_naphtha",
-    "name": "Solid Naphtha",
-    "image": "SolidNaphtha.png"
-  },
-  {
-    "id": "solid_nuclear_waste",
-    "name": "Solid Nuclear Waste",
-    "image": "SolidNuclearWaste.png"
-  },
-  {
-    "id": "solid_oxygen",
-    "name": "Solid Oxygen",
-    "image": "SolidOxygen.png"
-  },
-  {
-    "id": "solid_petroleum",
-    "name": "Solid Petroleum",
-    "image": "SolidPetroleum.png"
-  },
-  {
-    "id": "solid_resin",
-    "name": "Solid Resin",
-    "image": "SolidResin.png"
-  },
-  {
-    "id": "solid_super_coolant",
-    "name": "Solid Super Coolant",
-    "image": "SolidSuperCoolant.png"
-  },
-  {
-    "id": "solid_visco_gel",
-    "name": "Solid Visco-Gel",
-    "image": "SolidViscoGel.png"
-  },
-  {
-    "id": "steel",
-    "name": "Steel",
-    "image": "Steel.png"
-  },
-  {
-    "id": "sucrose",
-    "name": "Sucrose",
-    "image": "Sucrose.png"
-  },
-  {
-    "id": "sulfur",
-    "name": "Sulfur",
-    "image": "Sulfur.png"
-  },
-  {
-    "id": "tallow",
-    "name": "Tallow",
-    "image": "Tallow.png"
-  },
-  {
-    "id": "thermium",
-    "name": "Thermium",
-    "image": "Thermium.png"
-  },
-  {
-    "id": "tungsten",
-    "name": "Tungsten",
-    "image": "Tungsten.png"
-  },
-  {
-    "id": "uranium_ore",
-    "name": "Uranium Ore",
-    "image": "UraniumOre.png"
-  },
-  {
-    "id": "wolframite",
-    "name": "Wolframite",
-    "image": "Wolframite.png"
-  }
+    {
+        "id": "abyssalite",
+        "name": "Abyssalite",
+        "image": "Abyssalite.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Abyssalite"
+    },
+    {
+        "id": "algae",
+        "name": "Algae",
+        "image": "Algae.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Algae"
+    },
+    {
+        "id": "aluminum",
+        "name": "Aluminum",
+        "image": "Aluminum.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Aluminum"
+    },
+    {
+        "id": "aluminum_ore",
+        "name": "Aluminum Ore",
+        "image": "AluminumOre.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Aluminum_Ore"
+    },
+    {
+        "id": "bleach_stone",
+        "name": "Bleach Stone",
+        "image": "BleachStone.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Bleach_Stone"
+    },
+    {
+        "id": "brackwax",
+        "name": "Brackwax",
+        "image": "Brackwax.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Brackwax"
+    },
+    {
+        "id": "brine_ice",
+        "name": "Brine Ice",
+        "image": "BrineIce.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Brine_Ice"
+    },
+    {
+        "id": "ceramic",
+        "name": "Ceramic",
+        "image": "Ceramic.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Ceramic"
+    },
+    {
+        "id": "cinnabar_ore",
+        "name": "Cinnabar Ore",
+        "image": "CinnabarOre.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Cinnabar_Ore"
+    },
+    {
+        "id": "clay",
+        "name": "Clay",
+        "image": "Clay.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Clay"
+    },
+    {
+        "id": "coal",
+        "name": "Coal",
+        "image": "Coal.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Coal"
+    },
+    {
+        "id": "cobalt",
+        "name": "Cobalt",
+        "image": "Cobalt.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Cobalt"
+    },
+    {
+        "id": "cobalt_ore",
+        "name": "Cobalt Ore",
+        "image": "CobaltOre.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Cobalt_Ore"
+    },
+    {
+        "id": "copper",
+        "name": "Copper",
+        "image": "Copper.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Copper"
+    },
+    {
+        "id": "copper_ore",
+        "name": "Copper Ore",
+        "image": "CopperOre.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Copper_Ore"
+    },
+    {
+        "id": "corium",
+        "name": "Corium",
+        "image": "Corium.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Corium"
+    },
+    {
+        "id": "crashed_rock",
+        "name": "Crashed Rock",
+        "image": "CrashedRock.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Crashed_Rock"
+    },
+    {
+        "id": "crushed_ice",
+        "name": "Crushed Ice",
+        "image": "CrushedIce.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Crushed_Ice"
+    },
+    {
+        "id": "crushed_rock",
+        "name": "Crushed Rock",
+        "image": "CrushedRock.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Crushed_Rock"
+    },
+    {
+        "id": "depleted_uranium",
+        "name": "Depleted Uranium",
+        "image": "DepletedUranium.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Depleted_Uranium"
+    },
+    {
+        "id": "diamond",
+        "name": "Diamond",
+        "image": "Diamond.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Diamond"
+    },
+    {
+        "id": "dirt",
+        "name": "Dirt",
+        "image": "Dirt.png",
+        "type": "Solid",
+        "melting_point": 326.8,
+        "melting_product": "sand",
+        "description": "Basic soil.",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Dirt"
+    },
+    {
+        "id": "electrum",
+        "name": "Electrum",
+        "image": "Electrum.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Electrum"
+    },
+    {
+        "id": "enriched_uranium",
+        "name": "Enriched Uranium",
+        "image": "EnrichedUranium.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Enriched_Uranium"
+    },
+    {
+        "id": "fertilizer",
+        "name": "Fertilizer",
+        "image": "Fertilizer.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Fertilizer"
+    },
+    {
+        "id": "fossil",
+        "name": "Fossil",
+        "image": "Fossil.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Fossil"
+    },
+    {
+        "id": "frozen_brackene",
+        "name": "Frozen Brackene",
+        "image": "FrozenBrackene.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Frozen_Brackene"
+    },
+    {
+        "id": "fullerene",
+        "name": "Fullerene",
+        "image": "Fullerene.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Fullerene"
+    },
+    {
+        "id": "glass",
+        "name": "Glass",
+        "image": "Glass.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Glass"
+    },
+    {
+        "id": "gold",
+        "name": "Gold",
+        "image": "Gold.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Gold"
+    },
+    {
+        "id": "gold_amalgam",
+        "name": "Gold Amalgam",
+        "image": "GoldAmalgam.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Gold_Amalgam"
+    },
+    {
+        "id": "granite",
+        "name": "Granite",
+        "image": "Granite.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Granite"
+    },
+    {
+        "id": "graphite",
+        "name": "Graphite",
+        "image": "Graphite.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Graphite"
+    },
+    {
+        "id": "ice",
+        "name": "Ice",
+        "image": "Ice.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Ice"
+    },
+    {
+        "id": "igneous_rock",
+        "name": "Igneous Rock",
+        "image": "IgneousRock.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Igneous_Rock"
+    },
+    {
+        "id": "insulation",
+        "name": "Insulation",
+        "image": "Insulation.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Insulation"
+    },
+    {
+        "id": "insulite",
+        "name": "Insulite",
+        "image": "Insulite.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Insulite"
+    },
+    {
+        "id": "iron",
+        "name": "Iron",
+        "image": "Iron.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Iron"
+    },
+    {
+        "id": "iron_ore",
+        "name": "Iron Ore",
+        "image": "IronOre.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Iron_Ore"
+    },
+    {
+        "id": "isoresin",
+        "name": "Isoresin",
+        "image": "Isoresin.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Isoresin"
+    },
+    {
+        "id": "lead",
+        "name": "Lead",
+        "image": "Lead.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Lead"
+    },
+    {
+        "id": "lime",
+        "name": "Lime",
+        "image": "Lime.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Lime"
+    },
+    {
+        "id": "mafic_rock",
+        "name": "Mafic Rock",
+        "image": "MaficRock.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Mafic_Rock"
+    },
+    {
+        "id": "mud",
+        "name": "Mud",
+        "image": "Mud.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Mud"
+    },
+    {
+        "id": "neutronium",
+        "name": "Neutronium",
+        "image": "Neutronium.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Neutronium"
+    },
+    {
+        "id": "niobium",
+        "name": "Niobium",
+        "image": "Niobium.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Niobium"
+    },
+    {
+        "id": "obsidian",
+        "name": "Obsidian",
+        "image": "Obsidian.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Obsidian"
+    },
+    {
+        "id": "oxylite",
+        "name": "Oxylite",
+        "image": "Oxylite.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Oxylite"
+    },
+    {
+        "id": "phosphorite",
+        "name": "Phosphorite",
+        "image": "Phosphorite.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Phosphorite"
+    },
+    {
+        "id": "plastic",
+        "name": "Plastic",
+        "image": "Plastic.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Plastic"
+    },
+    {
+        "id": "plastium",
+        "name": "Plastium",
+        "image": "Plastium.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Plastium"
+    },
+    {
+        "id": "polluted_dirt",
+        "name": "Polluted Dirt",
+        "image": "PollutedDirt.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Polluted_Dirt"
+    },
+    {
+        "id": "polluted_ice",
+        "name": "Polluted Ice",
+        "image": "PollutedIce.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Polluted_Ice"
+    },
+    {
+        "id": "polluted_mud",
+        "name": "Polluted Mud",
+        "image": "PollutedMud.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Polluted_Mud"
+    },
+    {
+        "id": "pyrite",
+        "name": "Pyrite",
+        "image": "Pyrite.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Pyrite"
+    },
+    {
+        "id": "radium",
+        "name": "Radium",
+        "image": "Radium.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Radium"
+    },
+    {
+        "id": "refined_carbon",
+        "name": "Refined Carbon",
+        "image": "RefinedCarbon.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Refined_Carbon"
+    },
+    {
+        "id": "refined_phosphorus",
+        "name": "Refined Phosphorus",
+        "image": "RefinedPhosphorus.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Refined_Phosphorus"
+    },
+    {
+        "id": "regolith",
+        "name": "Regolith",
+        "image": "Regolith.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Regolith"
+    },
+    {
+        "id": "rust",
+        "name": "Rust",
+        "image": "Rust.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Rust"
+    },
+    {
+        "id": "salt",
+        "name": "Salt",
+        "image": "Salt.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Salt"
+    },
+    {
+        "id": "sand",
+        "name": "Sand",
+        "image": "Sand.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Sand"
+    },
+    {
+        "id": "sandstone",
+        "name": "Sandstone",
+        "image": "Sandstone.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Sandstone"
+    },
+    {
+        "id": "sedimentary_rock",
+        "name": "Sedimentary Rock",
+        "image": "SedimentaryRock.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Sedimentary_Rock"
+    },
+    {
+        "id": "slime",
+        "name": "Slime",
+        "image": "Slime.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Slime"
+    },
+    {
+        "id": "snow",
+        "name": "Snow",
+        "image": "Snow.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Snow"
+    },
+    {
+        "id": "solid_carbon_dioxide",
+        "name": "Solid Carbon Dioxide",
+        "image": "SolidCarbonDioxide.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Solid_Carbon_Dioxide"
+    },
+    {
+        "id": "solid_chlorine",
+        "name": "Solid Chlorine",
+        "image": "SolidChlorine.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Solid_Chlorine"
+    },
+    {
+        "id": "solid_crude_oil",
+        "name": "Solid Crude Oil",
+        "image": "SolidCrudeOil.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Solid_Crude_Oil"
+    },
+    {
+        "id": "solid_ethanol",
+        "name": "Solid Ethanol",
+        "image": "SolidEthanol.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Solid_Ethanol"
+    },
+    {
+        "id": "solid_hydrogen",
+        "name": "Solid Hydrogen",
+        "image": "SolidHydrogen.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Solid_Hydrogen"
+    },
+    {
+        "id": "solid_mercury",
+        "name": "Solid Mercury",
+        "image": "SolidMercury.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Solid_Mercury"
+    },
+    {
+        "id": "solid_methane",
+        "name": "Solid Methane",
+        "image": "SolidMethane.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Solid_Methane"
+    },
+    {
+        "id": "solid_naphtha",
+        "name": "Solid Naphtha",
+        "image": "SolidNaphtha.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Solid_Naphtha"
+    },
+    {
+        "id": "solid_nuclear_waste",
+        "name": "Solid Nuclear Waste",
+        "image": "SolidNuclearWaste.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Solid_Nuclear_Waste"
+    },
+    {
+        "id": "solid_oxygen",
+        "name": "Solid Oxygen",
+        "image": "SolidOxygen.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Solid_Oxygen"
+    },
+    {
+        "id": "solid_petroleum",
+        "name": "Solid Petroleum",
+        "image": "SolidPetroleum.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Solid_Petroleum"
+    },
+    {
+        "id": "solid_resin",
+        "name": "Solid Resin",
+        "image": "SolidResin.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Solid_Resin"
+    },
+    {
+        "id": "solid_super_coolant",
+        "name": "Solid Super Coolant",
+        "image": "SolidSuperCoolant.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Solid_Super_Coolant"
+    },
+    {
+        "id": "solid_visco_gel",
+        "name": "Solid Visco-Gel",
+        "image": "SolidViscoGel.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Solid_Visco-Gel"
+    },
+    {
+        "id": "steel",
+        "name": "Steel",
+        "image": "Steel.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Steel"
+    },
+    {
+        "id": "sucrose",
+        "name": "Sucrose",
+        "image": "Sucrose.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Sucrose"
+    },
+    {
+        "id": "sulfur",
+        "name": "Sulfur",
+        "image": "Sulfur.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Sulfur"
+    },
+    {
+        "id": "tallow",
+        "name": "Tallow",
+        "image": "Tallow.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Tallow"
+    },
+    {
+        "id": "thermium",
+        "name": "Thermium",
+        "image": "Thermium.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Thermium"
+    },
+    {
+        "id": "tungsten",
+        "name": "Tungsten",
+        "image": "Tungsten.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Tungsten"
+    },
+    {
+        "id": "uranium_ore",
+        "name": "Uranium Ore",
+        "image": "UraniumOre.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Uranium_Ore"
+    },
+    {
+        "id": "wolframite",
+        "name": "Wolframite",
+        "image": "Wolframite.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Wolframite"
+    },
+    {
+        "id": "yellowcake",
+        "name": "Yellowcake",
+        "image": "Yellowcake.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Yellowcake"
+    },
+    {
+        "id": "carbon_fiber",
+        "name": "Carbon Fiber",
+        "image": "CarbonFiber.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Carbon_Fiber"
+    },
+    {
+        "id": "isosap",
+        "name": "Isosap",
+        "image": "Isosap.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Isosap"
+    },
+    {
+        "id": "packed_snow",
+        "name": "Packed Snow",
+        "image": "PackedSnow.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Packed_Snow"
+    },
+    {
+        "id": "plywood",
+        "name": "Plywood",
+        "image": "Plywood.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Plywood"
+    },
+    {
+        "id": "shale",
+        "name": "Shale",
+        "image": "Shale.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Shale"
+    },
+    {
+        "id": "solid",
+        "name": "Solid",
+        "image": "Solid.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Solid"
+    },
+    {
+        "id": "solid_sap",
+        "name": "Solid Sap",
+        "image": "SolidSap.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Solid_Sap"
+    },
+    {
+        "id": "solid_propane",
+        "name": "Solid Propane",
+        "image": "SolidPropane.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Solid_Propane"
+    },
+    {
+        "id": "amber",
+        "name": "Amber",
+        "image": "Amber.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Amber"
+    },
+    {
+        "id": "solid_synthesis_gas",
+        "name": "Solid Synthesis Gas",
+        "image": "SolidSynthesisGas.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Solid_Synthesis_Gas"
+    },
+    {
+        "id": "iridium",
+        "name": "Iridium",
+        "image": "Iridium.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Iridium"
+    },
+    {
+        "id": "sand_cement",
+        "name": "Sand Cement",
+        "image": "SandCement.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Sand_Cement"
+    },
+    {
+        "id": "cement",
+        "name": "Cement",
+        "image": "Cement.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Cement"
+    },
+    {
+        "id": "phosphate_nodules",
+        "name": "Phosphate Nodules",
+        "image": "PhosphateNodules.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Phosphate_Nodules"
+    },
+    {
+        "id": "genetic_ooze",
+        "name": "Genetic Ooze",
+        "image": "GeneticOoze.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Genetic_Ooze"
+    },
+    {
+        "id": "cement_mix",
+        "name": "Cement Mix",
+        "image": "CementMix.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Cement_Mix"
+    },
+    {
+        "id": "bitumen",
+        "name": "Bitumen",
+        "image": "Bitumen.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Bitumen"
+    },
+    {
+        "id": "peat",
+        "name": "Peat",
+        "image": "Peat.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Peat"
+    },
+    {
+        "id": "nickel_ore",
+        "name": "Nickel Ore",
+        "image": "NickelOre.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Nickel_Ore"
+    },
+    {
+        "id": "frozen_phyto_oil",
+        "name": "Frozen Phyto Oil",
+        "image": "FrozenPhytoOil.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Frozen_Phyto_Oil"
+    },
+    {
+        "id": "building_slab",
+        "name": "Building Slab",
+        "image": "BuildingSlab.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Building_Slab"
+    },
+    {
+        "id": "aerogel",
+        "name": "Aerogel",
+        "image": "Aerogel.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Aerogel"
+    },
+    {
+        "id": "nickel",
+        "name": "Nickel",
+        "image": "Nickel.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Nickel"
+    },
+    {
+        "id": "brick",
+        "name": "Brick",
+        "image": "Brick.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Brick"
+    },
+    {
+        "id": "solid_gunk",
+        "name": "Solid Gunk",
+        "image": "SolidGunk.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Solid_Gunk"
+    },
+    {
+        "id": "wood",
+        "name": "Wood",
+        "image": "Wood.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Wood"
+    }
 ]

@@ -1,92 +1,110 @@
 [
-  {
-    "id": "alveo_vera_seed",
-    "name": "Alveo Vera Seed",
-    "image": "AlveoVeraSeed.png"
-  },
-  {
-    "id": "balm_lily_seed",
-    "name": "Balm Lily Seed",
-    "image": "BalmLilySeed.png"
-  },
-  {
-    "id": "blossom_seed",
-    "name": "Blossom Seed",
-    "image": "BlossomSeed.png"
-  },
-  {
-    "id": "bog_bucket_seed",
-    "name": "Bog Bucket Seed",
-    "image": "BogBucketSeed.png"
-  },
-  {
-    "id": "bonbon_tree_seed",
-    "name": "Bonbon Tree Seed",
-    "image": "BonbonTreeSeed.png"
-  },
-  {
-    "id": "dasha_saltvine_seed",
-    "name": "Dasha Saltvine Seed",
-    "image": "DashaSaltvineSeed.png"
-  },
-  {
-    "id": "gas_grass_seed",
-    "name": "Gas Grass Seed",
-    "image": "GasGrassSeed.png"
-  },
-  {
-    "id": "grubfruit_seed",
-    "name": "Grubfruit Seed",
-    "image": "GrubfruitSeed.png"
-  },
-  {
-    "id": "mealwood_seed",
-    "name": "Mealwood Seed",
-    "image": "MealwoodSeed.png"
-  },
-  {
-    "id": "pikeapple_bush_seed",
-    "name": "Pikeapple Bush Seed",
-    "image": "PikeappleBushSeed.png"
-  },
-  {
-    "id": "pincha_pepper_seed",
-    "name": "Pincha Pepper Seed",
-    "image": "PinchaPepperSeed.png"
-  },
-  {
-    "id": "plant_seeds",
-    "name": "Plant seeds",
-    "image": "Plantseeds.png"
-  },
-  {
-    "id": "plume_squash_seed",
-    "name": "Plume Squash Seed",
-    "image": "PlumeSquashSeed.png"
-  },
-  {
-    "id": "sleet_wheat_grain",
-    "name": "Sleet Wheat Grain",
-    "image": "SleetWheatGrain.png"
-  },
-  {
-    "id": "fungal_spore",
-    "name": "Fungal Spore",
-    "image": "FungalSpore.png"
-  },
-  {
-    "id": "thimble_reed_seed",
-    "name": "Thimble Reed Seed",
-    "image": "ThimbleReedSeed.png"
-  },
-  {
-    "id": "nosh_bean",
-    "name": "Nosh Bean",
-    "image": "NoshBean.png"
-  },
-  {
-    "id": "waterweed_seed",
-    "name": "Waterweed Seed",
-    "image": "WaterweedSeed.png"
-  }
+    {
+        "id": "alveo_vera_seed",
+        "name": "Alveo Vera Seed",
+        "image": "AlveoVeraSeed.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Alveo_Vera_Seed"
+    },
+    {
+        "id": "balm_lily_seed",
+        "name": "Balm Lily Seed",
+        "image": "BalmLilySeed.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Balm_Lily_Seed"
+    },
+    {
+        "id": "blossom_seed",
+        "name": "Blossom Seed",
+        "image": "BlossomSeed.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Blossom_Seed"
+    },
+    {
+        "id": "bog_bucket_seed",
+        "name": "Bog Bucket Seed",
+        "image": "BogBucketSeed.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Bog_Bucket_Seed"
+    },
+    {
+        "id": "bonbon_tree_seed",
+        "name": "Bonbon Tree Seed",
+        "image": "BonbonTreeSeed.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Bonbon_Tree_Seed"
+    },
+    {
+        "id": "dasha_saltvine_seed",
+        "name": "Dasha Saltvine Seed",
+        "image": "DashaSaltvineSeed.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Dasha_Saltvine_Seed"
+    },
+    {
+        "id": "gas_grass_seed",
+        "name": "Gas Grass Seed",
+        "image": "GasGrassSeed.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Gas_Grass_Seed"
+    },
+    {
+        "id": "grubfruit_seed",
+        "name": "Grubfruit Seed",
+        "image": "GrubfruitSeed.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Grubfruit_Seed"
+    },
+    {
+        "id": "mealwood_seed",
+        "name": "Mealwood Seed",
+        "image": "MealwoodSeed.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Mealwood_Seed"
+    },
+    {
+        "id": "pikeapple_bush_seed",
+        "name": "Pikeapple Bush Seed",
+        "image": "PikeappleBushSeed.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Pikeapple_Bush_Seed"
+    },
+    {
+        "id": "pincha_pepper_seed",
+        "name": "Pincha Pepper Seed",
+        "image": "PinchaPepperSeed.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Pincha_Pepper_Seed"
+    },
+    {
+        "id": "plant_seeds",
+        "name": "Plant seeds",
+        "image": "Plantseeds.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Plant_seeds"
+    },
+    {
+        "id": "plume_squash_seed",
+        "name": "Plume Squash Seed",
+        "image": "PlumeSquashSeed.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Plume_Squash_Seed"
+    },
+    {
+        "id": "sleet_wheat_grain",
+        "name": "Sleet Wheat Grain",
+        "image": "SleetWheatGrain.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Sleet_Wheat_Grain"
+    },
+    {
+        "id": "fungal_spore",
+        "name": "Fungal Spore",
+        "image": "FungalSpore.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Fungal_Spore"
+    },
+    {
+        "id": "thimble_reed_seed",
+        "name": "Thimble Reed Seed",
+        "image": "ThimbleReedSeed.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Thimble_Reed_Seed"
+    },
+    {
+        "id": "nosh_bean",
+        "name": "Nosh Bean",
+        "image": "NoshBean.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Nosh_Bean"
+    },
+    {
+        "id": "waterweed_seed",
+        "name": "Waterweed Seed",
+        "image": "WaterweedSeed.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Waterweed_Seed"
+    }
 ]

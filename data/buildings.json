@@ -1,427 +1,896 @@
 [
-  {
-    "id": "algae_distiller",
-    "name": "Algae Distiller",
-    "image": "AlgaeDistiller.png"
-  },
-  {
-    "id": "algae_terrarium",
-    "name": "Algae Terrarium",
-    "image": "AlgaeTerrarium.png"
-  },
-  {
-    "id": "anti_entropy_thermo_nullifier",
-    "name": "Anti Entropy Thermo-Nullifier",
-    "image": "AntiEntropyThermoNullifier.png"
-  },
-  {
-    "id": "apothecary",
-    "name": "Apothecary",
-    "image": "Apothecary.png"
-  },
-  {
-    "id": "biobot_builder",
-    "name": "Biobot Builder",
-    "image": "BiobotBuilder.png"
-  },
-  {
-    "id": "blastshot_maker",
-    "name": "Blastshot Maker",
-    "image": "BlastshotMaker.png"
-  },
-  {
-    "id": "bleach_stone_hopper",
-    "name": "Bleach Stone Hopper",
-    "image": "BleachStoneHopper.png"
-  },
-  {
-    "id": "brackwax_gleaner",
-    "name": "Brackwax Gleaner",
-    "image": "BrackwaxGleaner.png"
-  },
-  {
-    "id": "carbon_skimmer",
-    "name": "Carbon Skimmer",
-    "image": "CarbonSkimmer.png"
-  },
-  {
-    "id": "clothing_refashionator",
-    "name": "Clothing Refashionator",
-    "image": "ClothingRefashionator.png"
-  },
-  {
-    "id": "coal_generator",
-    "name": "Coal Generator",
-    "image": "CoalGenerator.png"
-  },
-  {
-    "id": "compost",
-    "name": "Compost",
-    "image": "Compost.png"
-  },
-  {
-    "id": "crafting_station",
-    "name": "Crafting Station",
-    "image": "CraftingStation.png"
-  },
-  {
-    "id": "critter_fountain",
-    "name": "Critter Fountain",
-    "image": "CritterFountain.png"
-  },
-  {
-    "id": "decontamination_shower",
-    "name": "Decontamination Shower",
-    "image": "DecontaminationShower.png"
-  },
-  {
-    "id": "deep_fryer",
-    "name": "Deep Fryer",
-    "image": "DeepFryer.png"
-  },
-  {
-    "id": "dehydrator",
-    "name": "Dehydrator",
-    "image": "Dehydrator.png"
-  },
-  {
-    "id": "deodorizer",
-    "name": "Deodorizer",
-    "image": "Deodorizer.png"
-  },
-  {
-    "id": "desalinator",
-    "name": "Desalinator",
-    "image": "Desalinator.png"
-  },
-  {
-    "id": "diamond_press",
-    "name": "Diamond Press",
-    "image": "DiamondPress.png"
-  },
-  {
-    "id": "disease_clinic",
-    "name": "Disease Clinic",
-    "image": "DiseaseClinic.png"
-  },
-  {
-    "id": "egg_cracker",
-    "name": "Egg Cracker",
-    "image": "EggCracker.png"
-  },
-  {
-    "id": "electric_grill",
-    "name": "Electric Grill",
-    "image": "ElectricGrill.png"
-  },
-  {
-    "id": "electrolyzer",
-    "name": "Electrolyzer",
-    "image": "Electrolyzer.png"
-  },
-  {
-    "id": "espresso_machine",
-    "name": "Espresso Machine",
-    "image": "EspressoMachine.png"
-  },
-  {
-    "id": "ethanol_distiller",
-    "name": "Ethanol Distiller",
-    "image": "EthanolDistiller.png"
-  },
-  {
-    "id": "exosuit_forge",
-    "name": "Exosuit Forge",
-    "image": "ExosuitForge.png"
-  },
-  {
-    "id": "farm_station",
-    "name": "Farm Station",
-    "image": "FarmStation.png"
-  },
-  {
-    "id": "fertilizer_synthesizer",
-    "name": "Fertilizer Synthesizer",
-    "image": "FertilizerSynthesizer.png"
-  },
-  {
-    "id": "fossil_quarry",
-    "name": "Fossil Quarry",
-    "image": "FossilQuarry.png"
-  },
-  {
-    "id": "gas_range",
-    "name": "Gas Range",
-    "image": "GasRange.png"
-  },
-  {
-    "id": "glass_forge",
-    "name": "Glass Forge",
-    "image": "GlassForge.png"
-  },
-  {
-    "id": "hand_sanitizer",
-    "name": "Hand Sanitizer",
-    "image": "HandSanitizer.png"
-  },
-  {
-    "id": "hydrogen_generator",
-    "name": "Hydrogen Generator",
-    "image": "HydrogenGenerator.png"
-  },
-  {
-    "id": "ice_e_fan",
-    "name": "Ice-E Fan",
-    "image": "IceEFan.png"
-  },
-  {
-    "id": "ice_maker",
-    "name": "Ice Maker",
-    "image": "IceMaker.png"
-  },
-  {
-    "id": "juicer",
-    "name": "Juicer",
-    "image": "Juicer.png"
-  },
-  {
-    "id": "kiln",
-    "name": "Kiln",
-    "image": "Kiln.png"
-  },
-  {
-    "id": "lavatory",
-    "name": "Lavatory",
-    "image": "Lavatory.png"
-  },
-  {
-    "id": "manual_radbolt_generator",
-    "name": "Manual Radbolt Generator",
-    "image": "ManualRadboltGenerator.png"
-  },
-  {
-    "id": "materials_study_terminal",
-    "name": "Materials Study Terminal",
-    "image": "MaterialsStudyTerminal.png"
-  },
-  {
-    "id": "mercury_ceiling_light",
-    "name": "Mercury Ceiling Light",
-    "image": "MercuryCeilingLight.png"
-  },
-  {
-    "id": "metal_refinery",
-    "name": "Metal Refinery",
-    "image": "MetalRefinery.png"
-  },
-  {
-    "id": "microbe_musher",
-    "name": "Microbe Musher",
-    "image": "MicrobeMusher.png"
-  },
-  {
-    "id": "milking_station",
-    "name": "Milking Station",
-    "image": "MilkingStation.png"
-  },
-  {
-    "id": "molecular_forge",
-    "name": "Molecular Forge",
-    "image": "MolecularForge.png"
-  },
-  {
-    "id": "natural_gas_generator",
-    "name": "Natural Gas Generator",
-    "image": "NaturalGasGenerator.png"
-  },
-  {
-    "id": "oil_refinery",
-    "name": "Oil Refinery",
-    "image": "OilRefinery.png"
-  },
-  {
-    "id": "oil_well",
-    "name": "Oil Well",
-    "image": "OilWell.png"
-  },
-  {
-    "id": "orbital_data_collection_lab",
-    "name": "Orbital Data Collection Lab",
-    "image": "OrbitalDataCollectionLab.png"
-  },
-  {
-    "id": "ore_scrubber",
-    "name": "Ore Scrubber",
-    "image": "OreScrubber.png"
-  },
-  {
-    "id": "outhouse",
-    "name": "Outhouse",
-    "image": "Outhouse.png"
-  },
-  {
-    "id": "oxygen_diffuser",
-    "name": "Oxygen Diffuser",
-    "image": "OxygenDiffuser.png"
-  },
-  {
-    "id": "oxylite_refinery",
-    "name": "Oxylite Refinery",
-    "image": "OxyliteRefinery.png"
-  },
-  {
-    "id": "petroleum_generator",
-    "name": "Petroleum Generator",
-    "image": "PetroleumGenerator.png"
-  },
-  {
-    "id": "polymer_press",
-    "name": "Polymer Press",
-    "image": "PolymerPress.png"
-  },
-  {
-    "id": "power_control_station",
-    "name": "Power Control Station",
-    "image": "PowerControlStation.png"
-  },
-  {
-    "id": "radbolt_generator",
-    "name": "Radbolt Generator",
-    "image": "RadboltGenerator.png"
-  },
-  {
-    "id": "radiation_lamp",
-    "name": "Radiation Lamp",
-    "image": "RadiationLamp.png"
-  },
-  {
-    "id": "rehydrator",
-    "name": "Rehydrator",
-    "image": "Rehydrator.png"
-  },
-  {
-    "id": "research_reactor",
-    "name": "Research Reactor",
-    "image": "ResearchReactor.png"
-  },
-  {
-    "id": "research_station",
-    "name": "Research Station",
-    "image": "ResearchStation.png"
-  },
-  {
-    "id": "rock_crusher",
-    "name": "Rock Crusher",
-    "image": "RockCrusher.png"
-  },
-  {
-    "id": "rust_deoxidizer",
-    "name": "Rust Deoxidizer",
-    "image": "RustDeoxidizer.png"
-  },
-  {
-    "id": "sauna",
-    "name": "Sauna",
-    "image": "Sauna.png"
-  },
-  {
-    "id": "shearing_station",
-    "name": "Shearing Station",
-    "image": "ShearingStation.png"
-  },
-  {
-    "id": "shower",
-    "name": "Shower",
-    "image": "Shower.png"
-  },
-  {
-    "id": "sink",
-    "name": "Sink",
-    "image": "Sink.png"
-  },
-  {
-    "id": "sludge_press",
-    "name": "Sludge Press",
-    "image": "SludgePress.png"
-  },
-  {
-    "id": "soda_fountain",
-    "name": "Soda Fountain",
-    "image": "SodaFountain.png"
-  },
-  {
-    "id": "plant_pulverizer",
-    "name": "Plant Pulverizer",
-    "image": "PlantPulverizer.png"
-  },
-  {
-    "id": "somnium_synthesizer",
-    "name": "Somnium Synthesizer",
-    "image": "SomniumSynthesizer.png"
-  },
-  {
-    "id": "spice_grinder",
-    "name": "Spice Grinder",
-    "image": "SpiceGrinder.png"
-  },
-  {
-    "id": "steam_turbine",
-    "name": "Steam Turbine",
-    "image": "SteamTurbine.png"
-  },
-  {
-    "id": "sublimation_station",
-    "name": "Sublimation Station",
-    "image": "SublimationStation.png"
-  },
-  {
-    "id": "super_computer",
-    "name": "Super Computer",
-    "image": "SuperComputer.png"
-  },
-  {
-    "id": "textile_loom",
-    "name": "Textile Loom",
-    "image": "TextileLoom.png"
-  },
-  {
-    "id": "uranium_centrifuge",
-    "name": "Uranium Centrifuge",
-    "image": "UraniumCentrifuge.png"
-  },
-  {
-    "id": "virtual_planetarium",
-    "name": "Virtual Planetarium",
-    "image": "VirtualPlanetarium.png"
-  },
-  {
-    "id": "wall_toilet",
-    "name": "Wall Toilet",
-    "image": "WallToilet.png"
-  },
-  {
-    "id": "wash_basin",
-    "name": "Wash Basin",
-    "image": "WashBasin.png"
-  },
-  {
-    "id": "water_cooler",
-    "name": "Water Cooler",
-    "image": "WaterCooler.png"
-  },
-  {
-    "id": "water_sieve",
-    "name": "Water Sieve",
-    "image": "WaterSieve.png"
-  },
-  {
-    "id": "wood_burner",
-    "name": "Wood Burner",
-    "image": "WoodBurner.png"
-  },
-  {
-    "id": "wood_heater",
-    "name": "Wood Heater",
-    "image": "WoodHeater.png"
-  }
+    {
+        "id": "algae_distiller",
+        "name": "Algae Distiller",
+        "image": "AlgaeDistiller.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Algae_Distiller"
+    },
+    {
+        "id": "algae_terrarium",
+        "name": "Algae Terrarium",
+        "image": "AlgaeTerrarium.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Algae_Terrarium"
+    },
+    {
+        "id": "anti_entropy_thermo_nullifier",
+        "name": "Anti Entropy Thermo-Nullifier",
+        "image": "AntiEntropyThermoNullifier.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Anti_Entropy_Thermo-Nullifier"
+    },
+    {
+        "id": "apothecary",
+        "name": "Apothecary",
+        "image": "Apothecary.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Apothecary"
+    },
+    {
+        "id": "biobot_builder",
+        "name": "Biobot Builder",
+        "image": "BiobotBuilder.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Biobot_Builder"
+    },
+    {
+        "id": "blastshot_maker",
+        "name": "Blastshot Maker",
+        "image": "BlastshotMaker.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Blastshot_Maker"
+    },
+    {
+        "id": "bleach_stone_hopper",
+        "name": "Bleach Stone Hopper",
+        "image": "BleachStoneHopper.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Bleach_Stone_Hopper"
+    },
+    {
+        "id": "brackwax_gleaner",
+        "name": "Brackwax Gleaner",
+        "image": "BrackwaxGleaner.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Brackwax_Gleaner"
+    },
+    {
+        "id": "carbon_skimmer",
+        "name": "Carbon Skimmer",
+        "image": "CarbonSkimmer.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Carbon_Skimmer"
+    },
+    {
+        "id": "clothing_refashionator",
+        "name": "Clothing Refashionator",
+        "image": "ClothingRefashionator.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Clothing_Refashionator"
+    },
+    {
+        "id": "coal_generator",
+        "name": "Coal Generator",
+        "image": "CoalGenerator.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Coal_Generator"
+    },
+    {
+        "id": "compost",
+        "name": "Compost",
+        "image": "Compost.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Compost"
+    },
+    {
+        "id": "crafting_station",
+        "name": "Crafting Station",
+        "image": "CraftingStation.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Crafting_Station"
+    },
+    {
+        "id": "critter_fountain",
+        "name": "Critter Fountain",
+        "image": "CritterFountain.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Critter_Fountain"
+    },
+    {
+        "id": "decontamination_shower",
+        "name": "Decontamination Shower",
+        "image": "DecontaminationShower.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Decontamination_Shower"
+    },
+    {
+        "id": "deep_fryer",
+        "name": "Deep Fryer",
+        "image": "DeepFryer.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Deep_Fryer"
+    },
+    {
+        "id": "dehydrator",
+        "name": "Dehydrator",
+        "image": "Dehydrator.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Dehydrator"
+    },
+    {
+        "id": "deodorizer",
+        "name": "Deodorizer",
+        "image": "Deodorizer.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Deodorizer"
+    },
+    {
+        "id": "desalinator",
+        "name": "Desalinator",
+        "image": "Desalinator.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Desalinator"
+    },
+    {
+        "id": "diamond_press",
+        "name": "Diamond Press",
+        "image": "DiamondPress.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Diamond_Press"
+    },
+    {
+        "id": "disease_clinic",
+        "name": "Disease Clinic",
+        "image": "DiseaseClinic.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Disease_Clinic"
+    },
+    {
+        "id": "egg_cracker",
+        "name": "Egg Cracker",
+        "image": "EggCracker.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Egg_Cracker"
+    },
+    {
+        "id": "electric_grill",
+        "name": "Electric Grill",
+        "image": "ElectricGrill.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Electric_Grill"
+    },
+    {
+        "id": "electrolyzer",
+        "name": "Electrolyzer",
+        "image": "Electrolyzer.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Electrolyzer"
+    },
+    {
+        "id": "espresso_machine",
+        "name": "Espresso Machine",
+        "image": "EspressoMachine.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Espresso_Machine"
+    },
+    {
+        "id": "ethanol_distiller",
+        "name": "Ethanol Distiller",
+        "image": "EthanolDistiller.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Ethanol_Distiller"
+    },
+    {
+        "id": "exosuit_forge",
+        "name": "Exosuit Forge",
+        "image": "ExosuitForge.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Exosuit_Forge"
+    },
+    {
+        "id": "farm_station",
+        "name": "Farm Station",
+        "image": "FarmStation.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Farm_Station"
+    },
+    {
+        "id": "fertilizer_synthesizer",
+        "name": "Fertilizer Synthesizer",
+        "image": "FertilizerSynthesizer.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Fertilizer_Synthesizer"
+    },
+    {
+        "id": "fossil_quarry",
+        "name": "Fossil Quarry",
+        "image": "FossilQuarry.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Fossil_Quarry"
+    },
+    {
+        "id": "gas_range",
+        "name": "Gas Range",
+        "image": "GasRange.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Gas_Range"
+    },
+    {
+        "id": "glass_forge",
+        "name": "Glass Forge",
+        "image": "GlassForge.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Glass_Forge"
+    },
+    {
+        "id": "hand_sanitizer",
+        "name": "Hand Sanitizer",
+        "image": "HandSanitizer.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Hand_Sanitizer"
+    },
+    {
+        "id": "hydrogen_generator",
+        "name": "Hydrogen Generator",
+        "image": "HydrogenGenerator.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Hydrogen_Generator"
+    },
+    {
+        "id": "ice_e_fan",
+        "name": "Ice-E Fan",
+        "image": "IceEFan.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Ice-E_Fan"
+    },
+    {
+        "id": "ice_maker",
+        "name": "Ice Maker",
+        "image": "IceMaker.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Ice_Maker"
+    },
+    {
+        "id": "juicer",
+        "name": "Juicer",
+        "image": "Juicer.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Juicer"
+    },
+    {
+        "id": "kiln",
+        "name": "Kiln",
+        "image": "Kiln.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Kiln"
+    },
+    {
+        "id": "lavatory",
+        "name": "Lavatory",
+        "image": "Lavatory.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Lavatory"
+    },
+    {
+        "id": "manual_radbolt_generator",
+        "name": "Manual Radbolt Generator",
+        "image": "ManualRadboltGenerator.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Manual_Radbolt_Generator"
+    },
+    {
+        "id": "materials_study_terminal",
+        "name": "Materials Study Terminal",
+        "image": "MaterialsStudyTerminal.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Materials_Study_Terminal"
+    },
+    {
+        "id": "mercury_ceiling_light",
+        "name": "Mercury Ceiling Light",
+        "image": "MercuryCeilingLight.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Mercury_Ceiling_Light"
+    },
+    {
+        "id": "metal_refinery",
+        "name": "Metal Refinery",
+        "image": "MetalRefinery.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Metal_Refinery"
+    },
+    {
+        "id": "microbe_musher",
+        "name": "Microbe Musher",
+        "image": "MicrobeMusher.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Microbe_Musher"
+    },
+    {
+        "id": "milking_station",
+        "name": "Milking Station",
+        "image": "MilkingStation.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Milking_Station"
+    },
+    {
+        "id": "molecular_forge",
+        "name": "Molecular Forge",
+        "image": "MolecularForge.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Molecular_Forge"
+    },
+    {
+        "id": "natural_gas_generator",
+        "name": "Natural Gas Generator",
+        "image": "NaturalGasGenerator.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Natural_Gas_Generator"
+    },
+    {
+        "id": "oil_refinery",
+        "name": "Oil Refinery",
+        "image": "OilRefinery.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Oil_Refinery"
+    },
+    {
+        "id": "oil_well",
+        "name": "Oil Well",
+        "image": "OilWell.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Oil_Well"
+    },
+    {
+        "id": "orbital_data_collection_lab",
+        "name": "Orbital Data Collection Lab",
+        "image": "OrbitalDataCollectionLab.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Orbital_Data_Collection_Lab"
+    },
+    {
+        "id": "ore_scrubber",
+        "name": "Ore Scrubber",
+        "image": "OreScrubber.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Ore_Scrubber"
+    },
+    {
+        "id": "outhouse",
+        "name": "Outhouse",
+        "image": "Outhouse.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Outhouse"
+    },
+    {
+        "id": "oxygen_diffuser",
+        "name": "Oxygen Diffuser",
+        "image": "OxygenDiffuser.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Oxygen_Diffuser"
+    },
+    {
+        "id": "oxylite_refinery",
+        "name": "Oxylite Refinery",
+        "image": "OxyliteRefinery.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Oxylite_Refinery"
+    },
+    {
+        "id": "petroleum_generator",
+        "name": "Petroleum Generator",
+        "image": "PetroleumGenerator.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Petroleum_Generator"
+    },
+    {
+        "id": "polymer_press",
+        "name": "Polymer Press",
+        "image": "PolymerPress.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Polymer_Press"
+    },
+    {
+        "id": "power_control_station",
+        "name": "Power Control Station",
+        "image": "PowerControlStation.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Power_Control_Station"
+    },
+    {
+        "id": "radbolt_generator",
+        "name": "Radbolt Generator",
+        "image": "RadboltGenerator.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Radbolt_Generator"
+    },
+    {
+        "id": "radiation_lamp",
+        "name": "Radiation Lamp",
+        "image": "RadiationLamp.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Radiation_Lamp"
+    },
+    {
+        "id": "rehydrator",
+        "name": "Rehydrator",
+        "image": "Rehydrator.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Rehydrator"
+    },
+    {
+        "id": "research_reactor",
+        "name": "Research Reactor",
+        "image": "ResearchReactor.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Research_Reactor"
+    },
+    {
+        "id": "research_station",
+        "name": "Research Station",
+        "image": "ResearchStation.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Research_Station"
+    },
+    {
+        "id": "rock_crusher",
+        "name": "Rock Crusher",
+        "image": "RockCrusher.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Rock_Crusher"
+    },
+    {
+        "id": "rust_deoxidizer",
+        "name": "Rust Deoxidizer",
+        "image": "RustDeoxidizer.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Rust_Deoxidizer"
+    },
+    {
+        "id": "sauna",
+        "name": "Sauna",
+        "image": "Sauna.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Sauna"
+    },
+    {
+        "id": "shearing_station",
+        "name": "Shearing Station",
+        "image": "ShearingStation.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Shearing_Station"
+    },
+    {
+        "id": "shower",
+        "name": "Shower",
+        "image": "Shower.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Shower"
+    },
+    {
+        "id": "sink",
+        "name": "Sink",
+        "image": "Sink.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Sink"
+    },
+    {
+        "id": "sludge_press",
+        "name": "Sludge Press",
+        "image": "SludgePress.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Sludge_Press"
+    },
+    {
+        "id": "soda_fountain",
+        "name": "Soda Fountain",
+        "image": "SodaFountain.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Soda_Fountain"
+    },
+    {
+        "id": "plant_pulverizer",
+        "name": "Plant Pulverizer",
+        "image": "PlantPulverizer.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Plant_Pulverizer"
+    },
+    {
+        "id": "somnium_synthesizer",
+        "name": "Somnium Synthesizer",
+        "image": "SomniumSynthesizer.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Somnium_Synthesizer"
+    },
+    {
+        "id": "spice_grinder",
+        "name": "Spice Grinder",
+        "image": "SpiceGrinder.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Spice_Grinder"
+    },
+    {
+        "id": "steam_turbine",
+        "name": "Steam Turbine",
+        "image": "SteamTurbine.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Steam_Turbine"
+    },
+    {
+        "id": "sublimation_station",
+        "name": "Sublimation Station",
+        "image": "SublimationStation.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Sublimation_Station"
+    },
+    {
+        "id": "super_computer",
+        "name": "Super Computer",
+        "image": "SuperComputer.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Super_Computer"
+    },
+    {
+        "id": "textile_loom",
+        "name": "Textile Loom",
+        "image": "TextileLoom.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Textile_Loom"
+    },
+    {
+        "id": "uranium_centrifuge",
+        "name": "Uranium Centrifuge",
+        "image": "UraniumCentrifuge.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Uranium_Centrifuge"
+    },
+    {
+        "id": "virtual_planetarium",
+        "name": "Virtual Planetarium",
+        "image": "VirtualPlanetarium.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Virtual_Planetarium_%28Spaced_Out%29"
+    },
+    {
+        "id": "wall_toilet",
+        "name": "Wall Toilet",
+        "image": "WallToilet.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Wall_Toilet"
+    },
+    {
+        "id": "wash_basin",
+        "name": "Wash Basin",
+        "image": "WashBasin.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Wash_Basin"
+    },
+    {
+        "id": "water_cooler",
+        "name": "Water Cooler",
+        "image": "WaterCooler.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Water_Cooler"
+    },
+    {
+        "id": "water_sieve",
+        "name": "Water Sieve",
+        "image": "WaterSieve.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Water_Sieve"
+    },
+    {
+        "id": "wood_burner",
+        "name": "Wood Burner",
+        "image": "WoodBurner.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Wood_Burner"
+    },
+    {
+        "id": "wood_heater",
+        "name": "Wood Heater",
+        "image": "WoodHeater.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Wood_Heater"
+    },
+    {
+        "id": "plumbing_(building)",
+        "name": "Plumbing (Building)",
+        "image": "Plumbing(Building).png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Plumbing_%28Building%29"
+    },
+    {
+        "id": "refinement_(building)",
+        "name": "Refinement (Building)",
+        "image": "Refinement(Building).png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Refinement_%28Building%29"
+    },
+    {
+        "id": "solid_rocket_port_unloader",
+        "name": "Solid Rocket Port Unloader",
+        "image": "SolidRocketPortUnloader.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Solid_Rocket_Port_Unloader"
+    },
+    {
+        "id": "automation_broadcaster",
+        "name": "Automation Broadcaster",
+        "image": "AutomationBroadcaster.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Automation_Broadcaster"
+    },
+    {
+        "id": "radiation_sensor",
+        "name": "Radiation Sensor",
+        "image": "RadiationSensor.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Radiation_Sensor"
+    },
+    {
+        "id": "automation_receiver",
+        "name": "Automation Receiver",
+        "image": "AutomationReceiver.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Automation_Receiver"
+    },
+    {
+        "id": "wicker_door",
+        "name": "Wicker Door",
+        "image": "WickerDoor.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Wicker_Door"
+    },
+    {
+        "id": "conveyor_receptacle_fitting",
+        "name": "Conveyor Receptacle Fitting",
+        "image": "ConveyorReceptacleFitting.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Conveyor_Receptacle_Fitting"
+    },
+    {
+        "id": "shipping_(building)",
+        "name": "Shipping (Building)",
+        "image": "Shipping(Building).png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Shipping_%28Building%29"
+    },
+    {
+        "id": "furniture_(building)",
+        "name": "Furniture (Building)",
+        "image": "Furniture(Building).png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Furniture_%28Building%29"
+    },
+    {
+        "id": "liquid_rocket_port_loader",
+        "name": "Liquid Rocket Port Loader",
+        "image": "LiquidRocketPortLoader.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Liquid_Rocket_Port_Loader"
+    },
+    {
+        "id": "telescope",
+        "name": "Telescope",
+        "image": "Telescope.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Telescope_%28Spaced_Out%29"
+    },
+    {
+        "id": "targeting_beacon",
+        "name": "Targeting Beacon",
+        "image": "TargetingBeacon.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Targeting_Beacon"
+    },
+    {
+        "id": "utilities_(building)",
+        "name": "Utilities (Building)",
+        "image": "Utilities(Building).png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Utilities_%28Building%29"
+    },
+    {
+        "id": "rocket_port_extension",
+        "name": "Rocket Port Extension",
+        "image": "RocketPortExtension.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Rocket_Port_Extension"
+    },
+    {
+        "id": "payload_opener",
+        "name": "Payload Opener",
+        "image": "PayloadOpener.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Payload_Opener"
+    },
+    {
+        "id": "wood_tile",
+        "name": "Wood Tile",
+        "image": "WoodTile.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Wood_Tile"
+    },
+    {
+        "id": "research_portal",
+        "name": "Research Portal",
+        "image": "ResearchPortal.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Research_Portal"
+    },
+    {
+        "id": "oxylite_sconce",
+        "name": "Oxylite Sconce",
+        "image": "OxyliteSconce.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Oxylite_Sconce"
+    },
+    {
+        "id": "solid_rocket_port_loader",
+        "name": "Solid Rocket Port Loader",
+        "image": "SolidRocketPortLoader.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Solid_Rocket_Port_Loader"
+    },
+    {
+        "id": "ice_liquefier",
+        "name": "Ice Liquefier",
+        "image": "IceLiquefier.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Ice_Liquefier"
+    },
+    {
+        "id": "interplanetary_launcher",
+        "name": "Interplanetary Launcher",
+        "image": "InterplanetaryLauncher.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Interplanetary_Launcher"
+    },
+    {
+        "id": "gas_intake_fitting",
+        "name": "Gas Intake Fitting",
+        "image": "GasIntakeFitting.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Gas_Intake_Fitting"
+    },
+    {
+        "id": "gas_output_fitting",
+        "name": "Gas Output Fitting",
+        "image": "GasOutputFitting.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Gas_Output_Fitting"
+    },
+    {
+        "id": "liquid_output_fitting",
+        "name": "Liquid Output Fitting",
+        "image": "LiquidOutputFitting.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Liquid_Output_Fitting"
+    },
+    {
+        "id": "starmap_location_sensor",
+        "name": "Starmap Location Sensor",
+        "image": "StarmapLocationSensor.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Starmap_Location_Sensor"
+    },
+    {
+        "id": "power_outlet_fitting",
+        "name": "Power Outlet Fitting",
+        "image": "PowerOutletFitting.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Power_Outlet_Fitting"
+    },
+    {
+        "id": "lead_suit_checkpoint",
+        "name": "Lead Suit Checkpoint",
+        "image": "LeadSuitCheckpoint.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Lead_Suit_Checkpoint"
+    },
+    {
+        "id": "power_(building)",
+        "name": "Power (Building)",
+        "image": "Power(Building).png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Power_%28Building%29"
+    },
+    {
+        "id": "rocket",
+        "name": "Rocket",
+        "image": "Rocket.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Rocket"
+    },
+    {
+        "id": "automation_(building)",
+        "name": "Automation (Building)",
+        "image": "Automation(Building).png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Automation_%28Building%29"
+    },
+    {
+        "id": "piping",
+        "name": "Piping",
+        "image": "Piping.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Piping"
+    },
+    {
+        "id": "printing_pod",
+        "name": "Printing Pod",
+        "image": "PrintingPod.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Printing_Pod"
+    },
+    {
+        "id": "snow_tile",
+        "name": "Snow Tile",
+        "image": "SnowTile.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Snow_Tile"
+    },
+    {
+        "id": "stations_(building)",
+        "name": "Stations (Building)",
+        "image": "Stations(Building).png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Stations_%28Building%29"
+    },
+    {
+        "id": "artifact_analysis_station",
+        "name": "Artifact Analysis Station",
+        "image": "ArtifactAnalysisStation.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Artifact_Analysis_Station"
+    },
+    {
+        "id": "rocket_platform",
+        "name": "Rocket Platform",
+        "image": "RocketPlatform.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Rocket_Platform"
+    },
+    {
+        "id": "radbolt_joint_plate",
+        "name": "Radbolt Joint Plate",
+        "image": "RadboltJointPlate.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Radbolt_Joint_Plate"
+    },
+    {
+        "id": "cell_of_interest",
+        "name": "Cell of Interest",
+        "image": "CellofInterest.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Cell_of_Interest"
+    },
+    {
+        "id": "radbolt_reflector",
+        "name": "Radbolt Reflector",
+        "image": "RadboltReflector.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Radbolt_Reflector"
+    },
+    {
+        "id": "gas_rocket_port_unloader",
+        "name": "Gas Rocket Port Unloader",
+        "image": "GasRocketPortUnloader.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Gas_Rocket_Port_Unloader"
+    },
+    {
+        "id": "base_(building)",
+        "name": "Base (Building)",
+        "image": "Base(Building).png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Base_%28Building%29"
+    },
+    {
+        "id": "building",
+        "name": "Building",
+        "image": "Building.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Building"
+    },
+    {
+        "id": "botanical_analyzer",
+        "name": "Botanical Analyzer",
+        "image": "BotanicalAnalyzer.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Botanical_Analyzer"
+    },
+    {
+        "id": "decor",
+        "name": "Decor",
+        "image": "Decor.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Decor"
+    },
+    {
+        "id": "ventilation_(building)",
+        "name": "Ventilation (Building)",
+        "image": "Ventilation(Building).png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Ventilation_%28Building%29"
+    },
+    {
+        "id": "mini-pod",
+        "name": "Mini-Pod",
+        "image": "Mini-Pod.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Mini-Pod"
+    },
+    {
+        "id": "lead_suit_dock",
+        "name": "Lead Suit Dock",
+        "image": "LeadSuitDock.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Lead_Suit_Dock"
+    },
+    {
+        "id": "gas_rocket_port_loader",
+        "name": "Gas Rocket Port Loader",
+        "image": "GasRocketPortLoader.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Gas_Rocket_Port_Loader"
+    },
+    {
+        "id": "liquid_intake_fitting",
+        "name": "Liquid Intake Fitting",
+        "image": "LiquidIntakeFitting.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Liquid_Intake_Fitting"
+    },
+    {
+        "id": "rocket_control_station",
+        "name": "Rocket Control Station",
+        "image": "RocketControlStation.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Rocket_Control_Station"
+    },
+    {
+        "id": "flooding",
+        "name": "Flooding",
+        "image": "Flooding.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Flooding"
+    },
+    {
+        "id": "party_line_phone",
+        "name": "Party Line Phone",
+        "image": "PartyLinePhone.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Party_Line_Phone"
+    },
+    {
+        "id": "rocketry_(building)",
+        "name": "Rocketry (Building)",
+        "image": "Rocketry(Building).png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Rocketry_%28Building%29"
+    },
+    {
+        "id": "liquid_rocket_port_unloader",
+        "name": "Liquid Rocket Port Unloader",
+        "image": "LiquidRocketPortUnloader.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Liquid_Rocket_Port_Unloader"
+    },
+    {
+        "id": "ladder_bed",
+        "name": "Ladder Bed",
+        "image": "LadderBed.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Ladder_Bed"
+    },
+    {
+        "id": "wood_pile",
+        "name": "Wood Pile",
+        "image": "WoodPile.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Wood_Pile"
+    },
+    {
+        "id": "enclosed_telescope",
+        "name": "Enclosed Telescope",
+        "image": "EnclosedTelescope.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Enclosed_Telescope"
+    },
+    {
+        "id": "wood_block",
+        "name": "Wood Block",
+        "image": "WoodBlock.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Wood_Block"
+    },
+    {
+        "id": "conveyor_loader_fitting",
+        "name": "Conveyor Loader Fitting",
+        "image": "ConveyorLoaderFitting.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Conveyor_Loader_Fitting"
+    },
+    {
+        "id": "radbolt_chamber",
+        "name": "Radbolt Chamber",
+        "image": "RadboltChamber.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Radbolt_Chamber"
+    },
+    {
+        "id": "great_monument",
+        "name": "Great Monument",
+        "image": "GreatMonument.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Great_Monument"
+    },
+    {
+        "id": "overheating",
+        "name": "Overheating",
+        "image": "Overheating.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Overheating"
+    },
+    {
+        "id": "radbolt_sensor",
+        "name": "Radbolt Sensor",
+        "image": "RadboltSensor.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Radbolt_Sensor"
+    }
 ]

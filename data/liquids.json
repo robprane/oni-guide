@@ -1,192 +1,248 @@
 [
-  {
-    "id": "brackene",
-    "name": "Brackene",
-    "image": "Brackene.png"
-  },
-  {
-    "id": "brine",
-    "name": "Brine",
-    "image": "Brine.png"
-  },
-  {
-    "id": "crude_oil",
-    "name": "Crude Oil",
-    "image": "CrudeOil.png"
-  },
-  {
-    "id": "ethanol",
-    "name": "Ethanol",
-    "image": "Ethanol.png"
-  },
-  {
-    "id": "liquid_carbon",
-    "name": "Liquid Carbon",
-    "image": "LiquidCarbon.png"
-  },
-  {
-    "id": "liquid_carbon_dioxide",
-    "name": "Liquid Carbon Dioxide",
-    "image": "LiquidCarbonDioxide.png"
-  },
-  {
-    "id": "liquid_chlorine",
-    "name": "Liquid Chlorine",
-    "image": "LiquidChlorine.png"
-  },
-  {
-    "id": "liquid_hydrogen",
-    "name": "Liquid Hydrogen",
-    "image": "LiquidHydrogen.png"
-  },
-  {
-    "id": "liquid_methane",
-    "name": "Liquid Methane",
-    "image": "LiquidMethane.png"
-  },
-  {
-    "id": "liquid_naphtha",
-    "name": "Liquid Naphtha",
-    "image": "LiquidNaphtha.png"
-  },
-  {
-    "id": "liquid_nuclear_waste",
-    "name": "Liquid Nuclear Waste",
-    "image": "LiquidNuclearWaste.png"
-  },
-  {
-    "id": "liquid_oxygen",
-    "name": "Liquid Oxygen",
-    "image": "LiquidOxygen.png"
-  },
-  {
-    "id": "liquid_phosphorus",
-    "name": "Liquid Phosphorus",
-    "image": "LiquidPhosphorus.png"
-  },
-  {
-    "id": "liquid_resin",
-    "name": "Liquid Resin",
-    "image": "LiquidResin.png"
-  },
-  {
-    "id": "liquid_sucrose",
-    "name": "Liquid Sucrose",
-    "image": "LiquidSucrose.png"
-  },
-  {
-    "id": "liquid_sulfur",
-    "name": "Liquid Sulfur",
-    "image": "LiquidSulfur.png"
-  },
-  {
-    "id": "liquid_uranium",
-    "name": "Liquid Uranium",
-    "image": "LiquidUranium.png"
-  },
-  {
-    "id": "magma",
-    "name": "Magma",
-    "image": "Magma.png"
-  },
-  {
-    "id": "molten_aluminum",
-    "name": "Molten Aluminum",
-    "image": "MoltenAluminum.png"
-  },
-  {
-    "id": "molten_cobalt",
-    "name": "Molten Cobalt",
-    "image": "MoltenCobalt.png"
-  },
-  {
-    "id": "molten_copper",
-    "name": "Molten Copper",
-    "image": "MoltenCopper.png"
-  },
-  {
-    "id": "molten_glass",
-    "name": "Molten Glass",
-    "image": "MoltenGlass.png"
-  },
-  {
-    "id": "molten_gold",
-    "name": "Molten Gold",
-    "image": "MoltenGold.png"
-  },
-  {
-    "id": "molten_iron",
-    "name": "Molten Iron",
-    "image": "MoltenIron.png"
-  },
-  {
-    "id": "molten_lead",
-    "name": "Molten Lead",
-    "image": "MoltenLead.png"
-  },
-  {
-    "id": "molten_niobium",
-    "name": "Molten Niobium",
-    "image": "MoltenNiobium.png"
-  },
-  {
-    "id": "molten_salt",
-    "name": "Molten Salt",
-    "image": "MoltenSalt.png"
-  },
-  {
-    "id": "molten_steel",
-    "name": "Molten Steel",
-    "image": "MoltenSteel.png"
-  },
-  {
-    "id": "molten_tungsten",
-    "name": "Molten Tungsten",
-    "image": "MoltenTungsten.png"
-  },
-  {
-    "id": "nectar",
-    "name": "Nectar",
-    "image": "Nectar.png"
-  },
-  {
-    "id": "petroleum",
-    "name": "Petroleum",
-    "image": "Petroleum.png"
-  },
-  {
-    "id": "polluted_water",
-    "name": "Polluted Water",
-    "image": "PollutedWater.png"
-  },
-  {
-    "id": "salt_water",
-    "name": "Salt Water",
-    "image": "SaltWater.png"
-  },
-  {
-    "id": "super_coolant",
-    "name": "Super Coolant",
-    "image": "SuperCoolant.png"
-  },
-  {
-    "id": "visco_gel_fluid",
-    "name": "Visco-Gel Fluid",
-    "image": "ViscoGelFluid.png"
-  },
-  {
-    "id": "mercury",
-    "name": "Mercury",
-    "image": "Mercury.png"
-  },
-  {
-    "id": "nuclear_waste",
-    "name": "Nuclear Waste",
-    "image": "NuclearWaste.png"
-  },
-  {
-    "id": "water",
-    "name": "Water",
-    "image": "Water.png"
-  }
+    {
+        "id": "brackene",
+        "name": "Brackene",
+        "image": "Brackene.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Brackene"
+    },
+    {
+        "id": "brine",
+        "name": "Brine",
+        "image": "Brine.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Brine"
+    },
+    {
+        "id": "crude_oil",
+        "name": "Crude Oil",
+        "image": "CrudeOil.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Crude_Oil"
+    },
+    {
+        "id": "ethanol",
+        "name": "Ethanol",
+        "image": "Ethanol.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Ethanol"
+    },
+    {
+        "id": "liquid_carbon",
+        "name": "Liquid Carbon",
+        "image": "LiquidCarbon.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Liquid_Carbon"
+    },
+    {
+        "id": "liquid_carbon_dioxide",
+        "name": "Liquid Carbon Dioxide",
+        "image": "LiquidCarbonDioxide.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Liquid_Carbon_Dioxide"
+    },
+    {
+        "id": "liquid_chlorine",
+        "name": "Liquid Chlorine",
+        "image": "LiquidChlorine.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Liquid_Chlorine"
+    },
+    {
+        "id": "liquid_hydrogen",
+        "name": "Liquid Hydrogen",
+        "image": "LiquidHydrogen.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Liquid_Hydrogen"
+    },
+    {
+        "id": "liquid_methane",
+        "name": "Liquid Methane",
+        "image": "LiquidMethane.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Liquid_Methane"
+    },
+    {
+        "id": "liquid_naphtha",
+        "name": "Liquid Naphtha",
+        "image": "LiquidNaphtha.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Liquid_Naphtha"
+    },
+    {
+        "id": "liquid_nuclear_waste",
+        "name": "Liquid Nuclear Waste",
+        "image": "LiquidNuclearWaste.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Liquid_Nuclear_Waste"
+    },
+    {
+        "id": "liquid_oxygen",
+        "name": "Liquid Oxygen",
+        "image": "LiquidOxygen.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Liquid_Oxygen"
+    },
+    {
+        "id": "liquid_phosphorus",
+        "name": "Liquid Phosphorus",
+        "image": "LiquidPhosphorus.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Liquid_Phosphorus"
+    },
+    {
+        "id": "liquid_resin",
+        "name": "Liquid Resin",
+        "image": "LiquidResin.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Liquid_Resin"
+    },
+    {
+        "id": "liquid_sucrose",
+        "name": "Liquid Sucrose",
+        "image": "LiquidSucrose.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Liquid_Sucrose"
+    },
+    {
+        "id": "liquid_sulfur",
+        "name": "Liquid Sulfur",
+        "image": "LiquidSulfur.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Liquid_Sulfur"
+    },
+    {
+        "id": "liquid_uranium",
+        "name": "Liquid Uranium",
+        "image": "LiquidUranium.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Liquid_Uranium"
+    },
+    {
+        "id": "magma",
+        "name": "Magma",
+        "image": "Magma.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Magma"
+    },
+    {
+        "id": "molten_aluminum",
+        "name": "Molten Aluminum",
+        "image": "MoltenAluminum.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Molten_Aluminum"
+    },
+    {
+        "id": "molten_cobalt",
+        "name": "Molten Cobalt",
+        "image": "MoltenCobalt.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Molten_Cobalt"
+    },
+    {
+        "id": "molten_copper",
+        "name": "Molten Copper",
+        "image": "MoltenCopper.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Molten_Copper"
+    },
+    {
+        "id": "molten_glass",
+        "name": "Molten Glass",
+        "image": "MoltenGlass.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Molten_Glass"
+    },
+    {
+        "id": "molten_gold",
+        "name": "Molten Gold",
+        "image": "MoltenGold.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Molten_Gold"
+    },
+    {
+        "id": "molten_iron",
+        "name": "Molten Iron",
+        "image": "MoltenIron.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Molten_Iron"
+    },
+    {
+        "id": "molten_lead",
+        "name": "Molten Lead",
+        "image": "MoltenLead.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Molten_Lead"
+    },
+    {
+        "id": "molten_niobium",
+        "name": "Molten Niobium",
+        "image": "MoltenNiobium.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Molten_Niobium"
+    },
+    {
+        "id": "molten_salt",
+        "name": "Molten Salt",
+        "image": "MoltenSalt.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Molten_Salt"
+    },
+    {
+        "id": "molten_steel",
+        "name": "Molten Steel",
+        "image": "MoltenSteel.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Molten_Steel"
+    },
+    {
+        "id": "molten_tungsten",
+        "name": "Molten Tungsten",
+        "image": "MoltenTungsten.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Molten_Tungsten"
+    },
+    {
+        "id": "nectar",
+        "name": "Nectar",
+        "image": "Nectar.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Nectar"
+    },
+    {
+        "id": "petroleum",
+        "name": "Petroleum",
+        "image": "Petroleum.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Petroleum"
+    },
+    {
+        "id": "polluted_water",
+        "name": "Polluted Water",
+        "image": "PollutedWater.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Polluted_Water"
+    },
+    {
+        "id": "salt_water",
+        "name": "Salt Water",
+        "image": "SaltWater.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Salt_Water"
+    },
+    {
+        "id": "super_coolant",
+        "name": "Super Coolant",
+        "image": "SuperCoolant.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Super_Coolant"
+    },
+    {
+        "id": "visco_gel_fluid",
+        "name": "Visco-Gel Fluid",
+        "image": "ViscoGelFluid.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Visco-Gel_Fluid"
+    },
+    {
+        "id": "mercury",
+        "name": "Mercury",
+        "image": "Mercury.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Mercury"
+    },
+    {
+        "id": "nuclear_waste",
+        "name": "Nuclear Waste",
+        "image": "NuclearWaste.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Nuclear_Waste"
+    },
+    {
+        "id": "water",
+        "name": "Water",
+        "image": "Water.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Water"
+    },
+    {
+        "id": "liquid",
+        "name": "Liquid",
+        "image": "Liquid.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Liquid"
+    },
+    {
+        "id": "liquid_propane",
+        "name": "Liquid Propane",
+        "image": "LiquidPropane.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Liquid_Propane"
+    },
+    {
+        "id": "air_systems",
+        "name": "Air Systems",
+        "image": "AirSystems.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Air_Systems"
+    }
 ]

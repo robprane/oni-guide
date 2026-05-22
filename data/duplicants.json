@@ -1,12 +1,68 @@
 [
-  {
-    "id": "duplicant",
-    "name": "Duplicant",
-    "image": "Duplicant.png"
-  },
-  {
-    "id": "bionic_duplicant",
-    "name": "Bionic Duplicant",
-    "image": "BionicDuplicant.png"
-  }
+    {
+        "id": "duplicant",
+        "name": "Duplicant",
+        "image": "Duplicant.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Duplicant"
+    },
+    {
+        "id": "bionic_duplicant",
+        "name": "Bionic Duplicant",
+        "image": "BionicDuplicant.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Bionic_Duplicant"
+    },
+    {
+        "id": "morale",
+        "name": "Morale",
+        "image": "Morale.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Morale"
+    },
+    {
+        "id": "food_quality",
+        "name": "Food Quality",
+        "image": "FoodQuality.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Food_Quality"
+    },
+    {
+        "id": "stress",
+        "name": "Stress",
+        "image": "Stress.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Stress"
+    },
+    {
+        "id": "health",
+        "name": "Health",
+        "image": "Health.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Health"
+    },
+    {
+        "id": "incapacitated",
+        "name": "Incapacitated",
+        "image": "Incapacitated.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Incapacitated"
+    },
+    {
+        "id": "skills",
+        "name": "Skills",
+        "image": "Skills.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Skills"
+    },
+    {
+        "id": "movement_&_reach",
+        "name": "Movement & Reach",
+        "image": "Movement&Reach.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Movement_%26_Reach"
+    },
+    {
+        "id": "body_temperature",
+        "name": "Body Temperature",
+        "image": "BodyTemperature.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Body_Temperature"
+    },
+    {
+        "id": "gravitas",
+        "name": "Gravitas",
+        "image": "Gravitas.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Gravitas"
+    }
 ]

@@ -1,137 +1,170 @@
 [
-  {
-    "id": "alveo_vera",
-    "name": "Alveo Vera",
-    "image": "AlveoVera.png"
-  },
-  {
-    "id": "arbor_tree",
-    "name": "Arbor Tree",
-    "image": "ArborTree.png"
-  },
-  {
-    "id": "balm_lily",
-    "name": "Balm Lily",
-    "image": "BalmLily.png"
-  },
-  {
-    "id": "bog_bucket",
-    "name": "Bog Bucket",
-    "image": "BogBucket.png"
-  },
-  {
-    "id": "bonbon_tree",
-    "name": "Bonbon Tree",
-    "image": "BonbonTree.png"
-  },
-  {
-    "id": "bristle_blossom",
-    "name": "Bristle Blossom",
-    "image": "BristleBlossom.png"
-  },
-  {
-    "id": "buried_muckroot",
-    "name": "Buried Muckroot",
-    "image": "BuriedMuckroot.png"
-  },
-  {
-    "id": "dasha_saltvine",
-    "name": "Dasha Saltvine",
-    "image": "DashaSaltvine.png"
-  },
-  {
-    "id": "dusk_cap",
-    "name": "Dusk Cap",
-    "image": "DuskCap.png"
-  },
-  {
-    "id": "gas_grass",
-    "name": "Gas Grass",
-    "image": "GasGrass.png"
-  },
-  {
-    "id": "grubfruit_plant",
-    "name": "Grubfruit Plant",
-    "image": "GrubfruitPlant.png"
-  },
-  {
-    "id": "hexalent",
-    "name": "Hexalent",
-    "image": "Hexalent.png"
-  },
-  {
-    "id": "mealwood",
-    "name": "Mealwood",
-    "image": "Mealwood.png"
-  },
-  {
-    "id": "nosh_sprout",
-    "name": "Nosh Sprout",
-    "image": "NoshSprout.png"
-  },
-  {
-    "id": "oxyfern",
-    "name": "Oxyfern",
-    "image": "Oxyfern.png"
-  },
-  {
-    "id": "plume_squash_plant",
-    "name": "Plume Squash Plant",
-    "image": "PlumeSquashPlant.png"
-  },
-  {
-    "id": "saturn_critter_trap",
-    "name": "Saturn Critter Trap",
-    "image": "SaturnCritterTrap.png"
-  },
-  {
-    "id": "sherberry_plant",
-    "name": "Sherberry Plant",
-    "image": "SherberryPlant.png"
-  },
-  {
-    "id": "pikeapple_bush",
-    "name": "Pikeapple Bush",
-    "image": "PikeappleBush.png"
-  },
-  {
-    "id": "pincha_pepperplant",
-    "name": "Pincha Pepperplant",
-    "image": "PinchaPepperplant.png"
-  },
-  {
-    "id": "sleet_wheat",
-    "name": "Sleet Wheat",
-    "image": "SleetWheat.png"
-  },
-  {
-    "id": "spindly_grubfruit_plant",
-    "name": "Spindly Grubfruit Plant",
-    "image": "SpindlyGrubfruitPlant.png"
-  },
-  {
-    "id": "sporechid",
-    "name": "Sporechid",
-    "image": "Sporechid.png"
-  },
-  {
-    "id": "swamp_chard",
-    "name": "Swamp Chard",
-    "image": "SwampChard.png"
-  },
-  {
-    "id": "thimble_reed",
-    "name": "Thimble Reed",
-    "image": "ThimbleReed.png"
-  },
-  {
-    "id": "waterweed",
-    "name": "Waterweed",
-    "image": "Waterweed.png"
-  },
-  {
-    "id": "wheezewort",
-    "name": "Wheezewort",
-    "image": "Wheezewort.png"
-  }
+    {
+        "id": "alveo_vera",
+        "name": "Alveo Vera",
+        "image": "AlveoVera.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Alveo_Vera"
+    },
+    {
+        "id": "arbor_tree",
+        "name": "Arbor Tree",
+        "image": "ArborTree.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Arbor_Tree"
+    },
+    {
+        "id": "balm_lily",
+        "name": "Balm Lily",
+        "image": "BalmLily.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Balm_Lily"
+    },
+    {
+        "id": "bog_bucket",
+        "name": "Bog Bucket",
+        "image": "BogBucket.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Bog_Bucket"
+    },
+    {
+        "id": "bonbon_tree",
+        "name": "Bonbon Tree",
+        "image": "BonbonTree.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Bonbon_Tree"
+    },
+    {
+        "id": "bristle_blossom",
+        "name": "Bristle Blossom",
+        "image": "BristleBlossom.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Bristle_Blossom"
+    },
+    {
+        "id": "buried_muckroot",
+        "name": "Buried Muckroot",
+        "image": "BuriedMuckroot.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Buried_Muckroot"
+    },
+    {
+        "id": "dasha_saltvine",
+        "name": "Dasha Saltvine",
+        "image": "DashaSaltvine.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Dasha_Saltvine"
+    },
+    {
+        "id": "dusk_cap",
+        "name": "Dusk Cap",
+        "image": "DuskCap.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Dusk_Cap"
+    },
+    {
+        "id": "gas_grass",
+        "name": "Gas Grass",
+        "image": "GasGrass.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Gas_Grass"
+    },
+    {
+        "id": "grubfruit_plant",
+        "name": "Grubfruit Plant",
+        "image": "GrubfruitPlant.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Grubfruit_Plant"
+    },
+    {
+        "id": "hexalent",
+        "name": "Hexalent",
+        "image": "Hexalent.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Hexalent"
+    },
+    {
+        "id": "mealwood",
+        "name": "Mealwood",
+        "image": "Mealwood.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Mealwood"
+    },
+    {
+        "id": "nosh_sprout",
+        "name": "Nosh Sprout",
+        "image": "NoshSprout.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Nosh_Sprout"
+    },
+    {
+        "id": "oxyfern",
+        "name": "Oxyfern",
+        "image": "Oxyfern.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Oxyfern"
+    },
+    {
+        "id": "plume_squash_plant",
+        "name": "Plume Squash Plant",
+        "image": "PlumeSquashPlant.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Plume_Squash_Plant"
+    },
+    {
+        "id": "saturn_critter_trap",
+        "name": "Saturn Critter Trap",
+        "image": "SaturnCritterTrap.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Saturn_Critter_Trap"
+    },
+    {
+        "id": "sherberry_plant",
+        "name": "Sherberry Plant",
+        "image": "SherberryPlant.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Sherberry_Plant"
+    },
+    {
+        "id": "pikeapple_bush",
+        "name": "Pikeapple Bush",
+        "image": "PikeappleBush.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Pikeapple_Bush"
+    },
+    {
+        "id": "pincha_pepperplant",
+        "name": "Pincha Pepperplant",
+        "image": "PinchaPepperplant.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Pincha_Pepperplant"
+    },
+    {
+        "id": "sleet_wheat",
+        "name": "Sleet Wheat",
+        "image": "SleetWheat.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Sleet_Wheat"
+    },
+    {
+        "id": "spindly_grubfruit_plant",
+        "name": "Spindly Grubfruit Plant",
+        "image": "SpindlyGrubfruitPlant.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Spindly_Grubfruit_Plant"
+    },
+    {
+        "id": "sporechid",
+        "name": "Sporechid",
+        "image": "Sporechid.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Sporechid"
+    },
+    {
+        "id": "swamp_chard",
+        "name": "Swamp Chard",
+        "image": "SwampChard.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Swamp_Chard"
+    },
+    {
+        "id": "thimble_reed",
+        "name": "Thimble Reed",
+        "image": "ThimbleReed.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Thimble_Reed"
+    },
+    {
+        "id": "waterweed",
+        "name": "Waterweed",
+        "image": "Waterweed.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Waterweed"
+    },
+    {
+        "id": "wheezewort",
+        "name": "Wheezewort",
+        "image": "Wheezewort.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Wheezewort"
+    },
+    {
+        "id": "bliss_burst",
+        "name": "Bliss Burst",
+        "image": "BlissBurst.png",
+        "wikiUrl": "https://oxygennotincluded.wiki.gg/wiki/Bliss_Burst"
+    }
 ]
