@@ -13378,9 +13378,9 @@
     "produced": [
       {
         "element": "gassy_moo",
-        "unit": "g",
+        "unit": "unit",
         "per": "s",
-        "amount": 0.0001033335
+        "amount": 0.000104167
       }
     ]
   },
@@ -13475,9 +13475,9 @@
     "produced": [
       {
         "element": "husky_moo",
-        "unit": "g",
+        "unit": "unit",
         "per": "s",
-        "amount": 0.0001033335
+        "amount": 0.000104167
       }
     ]
   },
@@ -13486,9 +13486,9 @@
     "produced": [
       {
         "element": "husky_moo",
-        "unit": "g",
+        "unit": "unit",
         "per": "s",
-        "amount": 0.0001033335
+        "amount": 0.000104167
       }
     ]
   },
@@ -13497,9 +13497,9 @@
     "produced": [
       {
         "element": "gassy_moo",
-        "unit": "g",
+        "unit": "unit",
         "per": "s",
-        "amount": 0.0001033335
+        "amount": 0.000104167
       }
     ]
   },
