@@ -27,26 +27,6 @@ async function loadData() {
                 }
             });
 
-            // Calculate kcalPerKg for foods based on duplicant consumption
-            if (recipesData && allItems) {
-                recipesData.forEach(recipe => {
-                    if (recipe.source === 'duplicant' && recipe.consumed) {
-                        recipe.consumed.forEach(consumedItem => {
-                            if (consumedItem.unit === 'g' && consumedItem.per === 's' && consumedItem.amount > 0) {
-                                // Duplicant consumes 1000 kcal per cycle (600s)
-                                // amount in g/s * 600s = amount * 600 grams per cycle
-                                // amount * 0.6 kg per cycle
-                                // kcalPerKg = 1000 kcal / (amount * 0.6 kg)
-                                const kcalPerKg = 1000 / (consumedItem.amount * 0.6);
-                                if (allItems[consumedItem.element]) {
-                                    allItems[consumedItem.element].kcalPerKg = kcalPerKg;
-                                }
-                            }
-                        });
-                    }
-                });
-            }
-
         } catch (error) {
             console.error("Failed to load data:", error);
         }

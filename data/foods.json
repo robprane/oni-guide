@@ -2,27 +2,32 @@
   {
     "id": "barbeque",
     "name": "Barbeque",
-    "image": "Barbeque.png"
+    "image": "Barbeque.png",
+    "kcalPerKg": 4000
   },
   {
     "id": "berry_sludge",
     "name": "Berry Sludge",
-    "image": "BerrySludge.png"
+    "image": "BerrySludge.png",
+    "kcalPerKg": 4000
   },
   {
     "id": "bog_jelly",
     "name": "Bog Jelly",
-    "image": "BogJelly.png"
+    "image": "BogJelly.png",
+    "kcalPerKg": 1840
   },
   {
     "id": "cooked_seafood",
     "name": "Cooked Seafood",
-    "image": "CookedSeafood.png"
+    "image": "CookedSeafood.png",
+    "kcalPerKg": 1600
   },
   {
     "id": "curried_beans",
     "name": "Curried Beans",
-    "image": "CurriedBeans.png"
+    "image": "CurriedBeans.png",
+    "kcalPerKg": 5000
   },
   {
     "id": "dried_berry_pie",
@@ -72,47 +77,56 @@
   {
     "id": "bristle_berry",
     "name": "Bristle Berry",
-    "image": "BristleBerry.png"
+    "image": "BristleBerry.png",
+    "kcalPerKg": 1600
   },
   {
     "id": "fried_mushroom",
     "name": "Fried Mushroom",
-    "image": "FriedMushroom.png"
+    "image": "FriedMushroom.png",
+    "kcalPerKg": 2800
   },
   {
     "id": "gristle_berry",
     "name": "Gristle Berry",
-    "image": "GristleBerry.png"
+    "image": "GristleBerry.png",
+    "kcalPerKg": 2000
   },
   {
     "id": "grubfruit",
     "name": "Grubfruit",
-    "image": "Grubfruit.png"
+    "image": "Grubfruit.png",
+    "kcalPerKg": 250
   },
   {
     "id": "grubfruit_preserve",
     "name": "Grubfruit Preserve",
-    "image": "GrubfruitPreserve.png"
+    "image": "GrubfruitPreserve.png",
+    "kcalPerKg": 2400
   },
   {
     "id": "hexalent_fruit",
     "name": "Hexalent Fruit",
-    "image": "HexalentFruit.png"
+    "image": "HexalentFruit.png",
+    "kcalPerKg": 6400
   },
   {
     "id": "mushroom",
     "name": "Mushroom",
-    "image": "Mushroom.png"
+    "image": "Mushroom.png",
+    "kcalPerKg": 2400
   },
   {
     "id": "mushroom_wrap",
     "name": "Mushroom Wrap",
-    "image": "MushroomWrap.png"
+    "image": "MushroomWrap.png",
+    "kcalPerKg": 4800
   },
   {
     "id": "fish_taco",
     "name": "Fish Taco",
-    "image": "FishTaco.png"
+    "image": "FishTaco.png",
+    "kcalPerKg": 4200
   },
   {
     "id": "food",
@@ -122,102 +136,122 @@
   {
     "id": "frost_bun",
     "name": "Frost Bun",
-    "image": "FrostBun.png"
+    "image": "FrostBun.png",
+    "kcalPerKg": 1200
   },
   {
     "id": "frost_burger",
     "name": "Frost Burger",
-    "image": "FrostBurger.png"
+    "image": "FrostBurger.png",
+    "kcalPerKg": 6000
   },
   {
     "id": "lettuce",
     "name": "Lettuce",
-    "image": "Lettuce.png"
+    "image": "Lettuce.png",
+    "kcalPerKg": 400
   },
   {
     "id": "liceloaf",
     "name": "Liceloaf",
-    "image": "Liceloaf.png"
+    "image": "Liceloaf.png",
+    "kcalPerKg": 1700
   },
   {
     "id": "meal_lice",
     "name": "Meal Lice",
-    "image": "MealLice.png"
+    "image": "MealLice.png",
+    "kcalPerKg": 600
   },
   {
     "id": "meat",
     "name": "Meat",
-    "image": "Meat.png"
+    "image": "Meat.png",
+    "kcalPerKg": 1600
   },
   {
     "id": "mixed_berry_pie",
     "name": "Mixed Berry Pie",
-    "image": "MixedBerryPie.png"
+    "image": "MixedBerryPie.png",
+    "kcalPerKg": 4200
   },
   {
     "id": "muckroot",
     "name": "Muckroot",
-    "image": "Muckroot.png"
+    "image": "Muckroot.png",
+    "kcalPerKg": 800
   },
   {
     "id": "mush_bar",
     "name": "Mush Bar",
-    "image": "MushBar.png"
+    "image": "MushBar.png",
+    "kcalPerKg": 800
   },
   {
     "id": "mush_fry",
     "name": "Mush Fry",
-    "image": "MushFry.png"
+    "image": "MushFry.png",
+    "kcalPerKg": 1050
   },
   {
     "id": "mushroom_quiche",
     "name": "Mushroom Quiche",
-    "image": "MushroomQuiche.png"
+    "image": "MushroomQuiche.png",
+    "kcalPerKg": 6400
   },
   {
     "id": "nutrient_bar",
     "name": "Nutrient Bar",
-    "image": "NutrientBar.png"
+    "image": "NutrientBar.png",
+    "kcalPerKg": 800
   },
   {
     "id": "omelette",
     "name": "Omelette",
-    "image": "Omelette.png"
+    "image": "Omelette.png",
+    "kcalPerKg": 2800
   },
   {
     "id": "pacu_fillet",
     "name": "Pacu Fillet",
-    "image": "PacuFillet.png"
+    "image": "PacuFillet.png",
+    "kcalPerKg": 1000
   },
   {
     "id": "pemmican",
     "name": "Pemmican",
-    "image": "Pemmican.png"
+    "image": "Pemmican.png",
+    "kcalPerKg": 2600
   },
   {
     "id": "pepper_bread",
     "name": "Pepper Bread",
-    "image": "PepperBread.png"
+    "image": "PepperBread.png",
+    "kcalPerKg": 4000
   },
   {
     "id": "pickled_meal",
     "name": "Pickled Meal",
-    "image": "PickledMeal.png"
+    "image": "PickledMeal.png",
+    "kcalPerKg": 1800
   },
   {
     "id": "nosh_noms",
     "name": "Nosh Noms",
-    "image": "NoshNoms.png"
+    "image": "NoshNoms.png",
+    "kcalPerKg": 5000
   },
   {
     "id": "pikeapple",
     "name": "Pikeapple",
-    "image": "Pikeapple.png"
+    "image": "Pikeapple.png",
+    "kcalPerKg": 800
   },
   {
     "id": "pikeapple_skewer",
     "name": "Pikeapple Skewer",
-    "image": "PikeappleSkewer.png"
+    "image": "PikeappleSkewer.png",
+    "kcalPerKg": 1200
   },
   {
     "id": "pincha_peppernut",
@@ -227,81 +261,97 @@
   {
     "id": "plant_meat",
     "name": "Plant Meat",
-    "image": "PlantMeat.png"
+    "image": "PlantMeat.png",
+    "kcalPerKg": 1200
   },
   {
     "id": "stuffed_berry",
     "name": "Stuffed Berry",
-    "image": "StuffedBerry.png"
+    "image": "StuffedBerry.png",
+    "kcalPerKg": 4400
   },
   {
     "id": "spindly_grubfruit",
     "name": "Spindly Grubfruit",
-    "image": "SpindlyGrubfruit.png"
+    "image": "SpindlyGrubfruit.png",
+    "kcalPerKg": 800
   },
   {
     "id": "plume_squash",
     "name": "Plume Squash",
-    "image": "PlumeSquash.png"
+    "image": "PlumeSquash.png",
+    "kcalPerKg": 4000
   },
   {
     "id": "raw_egg",
     "name": "Raw Egg",
-    "image": "RawEgg.png"
+    "image": "RawEgg.png",
+    "kcalPerKg": 1600
   },
   {
     "id": "raw_shellfish",
     "name": "Raw Shellfish",
-    "image": "RawShellfish.png"
+    "image": "RawShellfish.png",
+    "kcalPerKg": 1000
   },
   {
     "id": "roast_grubfruit_nut",
     "name": "Roast Grubfruit Nut",
-    "image": "RoastGrubfruitNut.png"
+    "image": "RoastGrubfruitNut.png",
+    "kcalPerKg": 1200
   },
   {
     "id": "shellfish_tempura",
     "name": "Shellfish Tempura",
-    "image": "ShellfishTempura.png"
+    "image": "ShellfishTempura.png",
+    "kcalPerKg": 4200
   },
   {
     "id": "sherberry",
     "name": "Sherberry",
-    "image": "Sherberry.png"
+    "image": "Sherberry.png",
+    "kcalPerKg": 800
   },
   {
     "id": "souffl_pancakes",
-    "name": "Souffl\u00e9 Pancakes",
-    "image": "SoufflPancakes.png"
+    "name": "Soufflé Pancakes",
+    "image": "SoufflPancakes.png",
+    "kcalPerKg": 3600
   },
   {
     "id": "spicy_tofu",
     "name": "Spicy Tofu",
-    "image": "SpicyTofu.png"
+    "image": "SpicyTofu.png",
+    "kcalPerKg": 4000
   },
   {
     "id": "squash_fries",
     "name": "Squash Fries",
-    "image": "SquashFries.png"
+    "image": "SquashFries.png",
+    "kcalPerKg": 5400
   },
   {
     "id": "surf_n_turf",
     "name": "Surf'n'Turf",
-    "image": "SurfnTurf.png"
+    "image": "SurfnTurf.png",
+    "kcalPerKg": 6000
   },
   {
     "id": "swamp_chard_heart",
     "name": "Swamp Chard Heart",
-    "image": "SwampChardHeart.png"
+    "image": "SwampChardHeart.png",
+    "kcalPerKg": 2400
   },
   {
     "id": "swampy_delights",
     "name": "Swampy Delights",
-    "image": "SwampyDelights.png"
+    "image": "SwampyDelights.png",
+    "kcalPerKg": 2240
   },
   {
     "id": "tofu",
     "name": "Tofu",
-    "image": "Tofu.png"
+    "image": "Tofu.png",
+    "kcalPerKg": 3600
   }
 ]
