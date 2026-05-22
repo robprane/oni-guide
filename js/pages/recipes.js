@@ -27,6 +27,26 @@ async function loadData() {
                 }
             });
 
+            // Calculate kcalPerKg for foods based on duplicant consumption
+            if (recipesData && allItems) {
+                recipesData.forEach(recipe => {
+                    if (recipe.source === 'duplicant' && recipe.consumed) {
+                        recipe.consumed.forEach(consumedItem => {
+                            if (consumedItem.unit === 'g' && consumedItem.per === 's' && consumedItem.amount > 0) {
+                                // Duplicant consumes 1000 kcal per cycle (600s)
+                                // amount in g/s * 600s = amount * 600 grams per cycle
+                                // amount * 0.6 kg per cycle
+                                // kcalPerKg = 1000 kcal / (amount * 0.6 kg)
+                                const kcalPerKg = 1000 / (consumedItem.amount * 0.6);
+                                if (allItems[consumedItem.element]) {
+                                    allItems[consumedItem.element].kcalPerKg = kcalPerKg;
+                                }
+                            }
+                        });
+                    }
+                });
+            }
+
         } catch (error) {
             console.error("Failed to load data:", error);
         }
@@ -319,10 +339,25 @@ export async function renderRecipes(container, currentPath) {
         }
     };
 
+
     window.addEventListener('routeupdate', onRouteUpdate);
 
+    const onSettingsUpdate = () => {
+        renderResults(document.querySelector('.recipe-filters-container input')?.value || '');
+        const dialog = document.getElementById('detail-dialog');
+        if (dialog && dialog.open) {
+            const currentItem = allItems[window.location.hash.split('/')[2]];
+            if (currentItem) showDetailModal(currentItem);
+        }
+    };
+    window.addEventListener('settingsupdated', onSettingsUpdate);
+
+
     return () => {
+
         window.removeEventListener('routeupdate', onRouteUpdate);
+        window.removeEventListener('settingsupdated', onSettingsUpdate);
+
         const dialog = document.getElementById('detail-dialog');
         if (dialog) {
             if (dialog.open) dialog.close();
@@ -441,20 +476,48 @@ function showDetailModal(item) {
         return (Math.round((num + Math.sign(num) * Number.EPSILON) * 100) / 100).toString();
     };
 
-    const formatAmount = (itemData, isProducedFlag) => {
+        const formatAmount = (itemData, isProducedFlag) => {
+        let amount = itemData.amount;
+        let unit = itemData.unit;
+        let per = itemData.per;
+
+        // Apply settings transformations
+        if (window.unitSettings) {
+            // Mass: g -> kg
+            if (window.unitSettings.mass === 'kg' && unit === 'g') {
+                amount = amount / 1000;
+                unit = 'kg';
+            }
+
+            // Food: Mass -> kcal
+            if (window.unitSettings.food === 'kcal' && itemData.unit === 'g' && itemData.element && allItems[itemData.element] && allItems[itemData.element].kcalPerKg) {
+                const item = allItems[itemData.element];
+                // the raw amount is in g
+                const amountInKg = itemData.amount / 1000;
+                amount = amountInKg * item.kcalPerKg;
+                unit = 'kcal';
+            }
+
+            // Time: s -> cycle
+            if (window.unitSettings.time === 'cycle' && per === 's') {
+                amount = amount * 600;
+                per = 'cycle';
+            }
+        }
+
         let amountText = '';
-        let numStr = formatAmountNumber(itemData.amount);
+        let numStr = formatAmountNumber(amount);
         let sign = isProducedFlag ? '+' : '-';
-        if (itemData.amount > 0) amountText = sign + numStr;
-        else if (itemData.amount < 0) amountText = isProducedFlag ? numStr : numStr;
+        if (amount > 0) amountText = sign + numStr;
+        else if (amount < 0) amountText = isProducedFlag ? numStr : numStr;
         else amountText = '0';
 
-        let unitText = `${itemData.unit.includes('%') ? '' : ' '}${itemData.unit}`;
-        if (itemData.per) {
-            if (itemData.unit.includes(' ') || itemData.per.includes(' ')) {
-                unitText += ` per ${itemData.per}`;
+        let unitText = `${unit.includes('%') ? '' : ' '}${unit}`;
+        if (per) {
+            if (unit.includes(' ') || per.includes(' ')) {
+                unitText += ` per ${per}`;
             } else {
-                unitText += `/${itemData.per}`;
+                unitText += `/${per}`;
             }
         }
         return `${amountText}${unitText}`;
@@ -501,10 +564,19 @@ function showDetailModal(item) {
             let sourceLink;
             if (src) {
                 if (r.source === 'heat' || r.source === 'cool') {
-                    const text = r.temp !== undefined ? `${formatAmountNumber(r.temp)} °C` : 'Phase Change';
+                                        let tempText = 'Phase Change';
+                    if (r.temp !== undefined) {
+                        let displayTemp = r.temp;
+                        let unit = '°C';
+                        if (window.unitSettings && window.unitSettings.temp === 'F') {
+                            displayTemp = (displayTemp * 9/5) + 32;
+                            unit = '°F';
+                        }
+                        tempText = `${(Math.round(displayTemp * 10) / 10).toString()} ${unit}`;
+                    }
                     sourceLink = createElement('div', { class: 'recipe-item-link no-hover' }, [
                         createElement('img', { src: `/images/${src.image}`, class: 'recipe-item-img', title: src.name }),
-                        createElement('span', { class: 'recipe-item-name', textContent: text })
+                        createElement('span', { class: 'recipe-item-name', textContent: tempText })
                     ]);
                 } else {
                     sourceLink = createElement('a', { href: `#/recipes/${src.id}`, class: 'recipe-item-link' }, [
@@ -514,10 +586,19 @@ function showDetailModal(item) {
                 }
             } else {
                 if (r.source === 'heat' || r.source === 'cool') {
-                    const text = r.temp !== undefined ? `${formatAmountNumber(r.temp)} °C` : 'Phase Change';
+                                        let tempText = 'Phase Change';
+                    if (r.temp !== undefined) {
+                        let displayTemp = r.temp;
+                        let unit = '°C';
+                        if (window.unitSettings && window.unitSettings.temp === 'F') {
+                            displayTemp = (displayTemp * 9/5) + 32;
+                            unit = '°F';
+                        }
+                        tempText = `${(Math.round(displayTemp * 10) / 10).toString()} ${unit}`;
+                    }
                     sourceLink = createElement('div', { class: 'recipe-item-link no-hover' }, [
                         createElement('div', { class: 'recipe-item-placeholder' }),
-                        createElement('span', { class: 'recipe-item-name', textContent: text })
+                        createElement('span', { class: 'recipe-item-name', textContent: tempText })
                     ]);
                 } else {
                     sourceLink = createElement('div', { class: 'recipe-item-link no-hover' }, [

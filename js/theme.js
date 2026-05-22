@@ -80,3 +80,57 @@ settingsDialog.addEventListener('click', (e) => {
         settingsDialog.close();
     }
 });
+// Unit Settings Management
+window.unitSettings = {
+    temp: localStorage.getItem('unit_temp') || 'C',
+    time: localStorage.getItem('unit_time') || 's',
+    mass: localStorage.getItem('unit_mass') || 'g',
+    food: localStorage.getItem('unit_food') || 'mass'
+};
+
+function initUnitSettings() {
+    const categories = ['temp', 'time', 'mass', 'food'];
+
+    categories.forEach(category => {
+        updateUnitButtons(category, window.unitSettings[category]);
+    });
+
+    // Setup event listeners
+    document.getElementById('unit-temp-c-btn').addEventListener('click', () => setUnit('temp', 'C'));
+    document.getElementById('unit-temp-f-btn').addEventListener('click', () => setUnit('temp', 'F'));
+
+    document.getElementById('unit-time-s-btn').addEventListener('click', () => setUnit('time', 's'));
+    document.getElementById('unit-time-cycle-btn').addEventListener('click', () => setUnit('time', 'cycle'));
+
+    document.getElementById('unit-mass-g-btn').addEventListener('click', () => setUnit('mass', 'g'));
+    document.getElementById('unit-mass-kg-btn').addEventListener('click', () => setUnit('mass', 'kg'));
+
+    document.getElementById('unit-food-mass-btn').addEventListener('click', () => setUnit('food', 'mass'));
+    document.getElementById('unit-food-kcal-btn').addEventListener('click', () => setUnit('food', 'kcal'));
+}
+
+function setUnit(category, value) {
+    window.unitSettings[category] = value;
+    localStorage.setItem(`unit_${category}`, value);
+    updateUnitButtons(category, value);
+    window.dispatchEvent(new Event('settingsupdated'));
+}
+
+function updateUnitButtons(category, value) {
+    const container = document.getElementById(`unit-${category}-container`);
+    if (!container) return;
+
+    const buttons = container.querySelectorAll('.theme-btn');
+    buttons.forEach(btn => btn.classList.remove('active'));
+
+    let activeBtnId = '';
+    if (category === 'temp') activeBtnId = value === 'C' ? 'unit-temp-c-btn' : 'unit-temp-f-btn';
+    else if (category === 'time') activeBtnId = value === 's' ? 'unit-time-s-btn' : 'unit-time-cycle-btn';
+    else if (category === 'mass') activeBtnId = value === 'g' ? 'unit-mass-g-btn' : 'unit-mass-kg-btn';
+    else if (category === 'food') activeBtnId = value === 'mass' ? 'unit-food-mass-btn' : 'unit-food-kcal-btn';
+
+    const activeBtn = document.getElementById(activeBtnId);
+    if (activeBtn) activeBtn.classList.add('active');
+}
+
+initUnitSettings();

@@ -36,7 +36,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                <div class="settings-group">
+                                <div class="settings-group">
                     <h3>Theme</h3>
                     <div class="theme-switcher-buttons">
                         <button id="theme-toggle-btn" class="theme-btn" aria-label="Toggle Light/Dark Theme" title="Toggle Light/Dark Theme">
@@ -45,6 +45,54 @@
                         <button id="theme-system-btn" class="theme-btn" aria-label="Use System Theme" title="Use System Theme">
                             <svg class="icon icon-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256z"/></svg>
                             <svg class="icon icon-a" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M221.5 51.7C216.6 39.8 204.9 32 192 32s-24.6 7.8-29.5 19.7l-120 288-40 96c-6.8 16.3 .9 35 17.2 41.8s35-.9 41.8-17.2L93.3 384H290.7l31.8 76.3c6.8 16.3 25.5 24 41.8 17.2s24-25.5 17.2-41.8l-40-96-120-288zM264 320H120l72-172.8L264 320z"/></svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="settings-group">
+                    <h3>Temperature</h3>
+                    <div class="theme-switcher-buttons" id="unit-temp-container">
+                        <button id="unit-temp-c-btn" class="theme-btn active" aria-label="Celsius" title="Celsius">
+                            <span style="font-size: 1.5rem; font-weight: bold;">°C</span>
+                        </button>
+                        <button id="unit-temp-f-btn" class="theme-btn" aria-label="Fahrenheit" title="Fahrenheit">
+                            <span style="font-size: 1.5rem; font-weight: bold;">°F</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="settings-group">
+                    <h3>Time</h3>
+                    <div class="theme-switcher-buttons" id="unit-time-container">
+                        <button id="unit-time-s-btn" class="theme-btn active" aria-label="Seconds" title="Seconds">
+                            <span style="font-size: 1.2rem; font-weight: bold;">Sec</span>
+                        </button>
+                        <button id="unit-time-cycle-btn" class="theme-btn" aria-label="Cycles" title="Cycles">
+                            <span style="font-size: 1.2rem; font-weight: bold;">Cycle</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="settings-group">
+                    <h3>Mass</h3>
+                    <div class="theme-switcher-buttons" id="unit-mass-container">
+                        <button id="unit-mass-g-btn" class="theme-btn active" aria-label="Grams" title="Grams">
+                            <span style="font-size: 1.5rem; font-weight: bold;">g</span>
+                        </button>
+                        <button id="unit-mass-kg-btn" class="theme-btn" aria-label="Kilograms" title="Kilograms">
+                            <span style="font-size: 1.5rem; font-weight: bold;">kg</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="settings-group">
+                    <h3>Food</h3>
+                    <div class="theme-switcher-buttons" id="unit-food-container">
+                        <button id="unit-food-mass-btn" class="theme-btn active" aria-label="Mass" title="Mass">
+                            <span style="font-size: 1.2rem; font-weight: bold;">Mass</span>
+                        </button>
+                        <button id="unit-food-kcal-btn" class="theme-btn" aria-label="Kcal" title="Kcal">
+                            <span style="font-size: 1.2rem; font-weight: bold;">kcal</span>
                         </button>
                     </div>
                 </div>
