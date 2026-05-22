@@ -133,5 +133,15 @@
     "id": "tungsten_gas",
     "name": "Tungsten Gas",
     "image": "TungstenGas.png"
-  }
+  },
+  {
+    "id": "iridium_gas",
+    "name": "Iridium Gas",
+    "image": "Iridium_Gas.png"
+  },
+  {
+    "id": "nickel_gas",
+    "name": "Nickel Gas",
+    "image": "Nickel_Gas.png"
+   }
 ]

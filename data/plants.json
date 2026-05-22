@@ -133,5 +133,10 @@
     "id": "wheezewort",
     "name": "Wheezewort",
     "image": "Wheezewort.png"
+  },
+  {
+    "id": "seakomb",
+    "name": "Seakomb",
+    "image": "Seakomb.png"
   }
 ]

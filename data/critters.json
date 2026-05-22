@@ -208,5 +208,10 @@
     "id": "tropical_pacu",
     "name": "Tropical Pacu",
     "image": "TropicalPacu.png"
+  },
+  {
+    "id": "husky_moo",
+    "name": "Husky Moo",
+    "image": "Husky_Moo.png"
   }
 ]

@@ -188,5 +188,30 @@
     "id": "water",
     "name": "Water",
     "image": "Water.png"
+  },
+  {
+    "id": "molten_iridium",
+    "name": "Molten Iridium",
+    "image": "Molten_Iridium.png"
+  },
+  {
+    "id": "molten_nickel",
+    "name": "Molten Nickel",
+    "image": "Molten_Nickel.png"
+  },
+  {
+    "id": "gunk",
+    "name": "Gunk",
+    "image": "Gunk.png"
+  },
+  {
+    "id": "phyto_oil",
+    "name": "Phyto Oil",
+    "image": "Phyto_Oil.png"
+  },
+  {
+    "id": "biodiesel",
+    "name": "Biodiesel",
+    "image": "Biodiesel.png"
   }
 ]

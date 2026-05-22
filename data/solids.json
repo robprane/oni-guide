@@ -200,7 +200,7 @@
   },
   {
     "id": "isoresin",
-    "name": "Isoresin",
+    "name": "Isosap",
     "image": "Isoresin.png"
   },
   {
@@ -442,5 +442,30 @@
     "id": "wolframite",
     "name": "Wolframite",
     "image": "Wolframite.png"
+  },
+  {
+    "id": "iridium",
+    "name": "Iridium",
+    "image": "Iridium.png"
+  },
+  {
+    "id": "nickel",
+    "name": "Nickel",
+    "image": "Nickel.png"
+  },
+  {
+    "id": "nickel_ore",
+    "name": "Nickel Ore",
+    "image": "Nickel_Ore.png"
+  },
+  {
+    "id": "solid_gunk",
+    "name": "Solid Gunk",
+    "image": "Solid_Gunk.png"
+  },
+  {
+    "id": "frozen_phyto_oil",
+    "name": "Frozen Phyto Oil",
+    "image": "Frozen_Phyto_Oil.png"
   }
 ]

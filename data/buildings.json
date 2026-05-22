@@ -423,5 +423,30 @@
     "id": "wood_heater",
     "name": "Wood Heater",
     "image": "WoodHeater.png"
+  },
+  {
+    "id": "power_control_station",
+    "name": "Power Control Station",
+    "image": "Power_Control_Station.png"
+  },
+  {
+    "id": "gunk_extractor",
+    "name": "Gunk Extractor",
+    "image": "Gunk_Extractor.png"
+  },
+  {
+    "id": "plywood_press",
+    "name": "Plywood Press",
+    "image": "Plywood_Press.png"
+  },
+  {
+    "id": "soldering_station",
+    "name": "Soldering Station",
+    "image": "Soldering_Station.png"
+  },
+  {
+    "id": "smoker",
+    "name": "Smoker",
+    "image": "Smoker.png"
   }
 ]

@@ -160,6 +160,11 @@
     "image": "Wood.png"
   },
   {
+    "id": "plywood",
+    "name": "Plywood",
+    "image": "Plywood.png"
+  },
+  {
     "id": "zombie_spores",
     "name": "Zombie Spores",
     "image": "ZombieSpores.png"
@@ -213,5 +218,145 @@
     "id": "worn_oxygen_mask",
     "name": "Worn Oxygen Mask",
     "image": "WornOxygenMask.png"
+  },
+  {
+    "id": "microchip",
+    "name": "Microchip",
+    "image": "Microchip.png"
+  },
+  {
+    "id": "researching_booster",
+    "name": "Researching Booster",
+    "image": "Researching_Booster.png"
+  },
+  {
+    "id": "advanced_medical_booster",
+    "name": "Advanced Medical Booster",
+    "image": "Advanced_Medical_Booster.png"
+  },
+  {
+    "id": "digging_booster",
+    "name": "Digging Booster",
+    "image": "Digging_Booster.png"
+  },
+  {
+    "id": "construction_booster",
+    "name": "Construction Booster",
+    "image": "Construction_Booster.png"
+  },
+  {
+    "id": "strength_booster",
+    "name": "Strength Booster",
+    "image": "Strength_Booster.png"
+  },
+  {
+    "id": "uranium_ore_power_bank",
+    "name": "Uranium Ore Power Bank",
+    "image": "Uranium_Ore_Power_Bank.png"
+  },
+  {
+    "id": "metal_power_bank",
+    "name": "Metal Power Bank",
+    "image": "Metal_Power_Bank.png"
+  },
+  {
+    "id": "tidying_booster",
+    "name": "Tidying Booster",
+    "image": "Tidying_Booster.png"
+  },
+  {
+    "id": "suit_training_booster",
+    "name": "Suit Training Booster",
+    "image": "Suit_Training_Booster.png"
+  },
+  {
+    "id": "applied_sciences_booster",
+    "name": "Applied Sciences Booster",
+    "image": "Applied_Sciences_Booster.png"
+  },
+  {
+    "id": "astronomy_booster",
+    "name": "Astronomy Booster",
+    "image": "Astronomy_Booster.png"
+  },
+  {
+    "id": "ranching_booster",
+    "name": "Ranching Booster",
+    "image": "Ranching_Booster.png"
+  },
+  {
+    "id": "rocketry_booster",
+    "name": "Rocketry Booster",
+    "image": "Rocketry_Booster.png"
+  },
+  {
+    "id": "piloting_booster",
+    "name": "Piloting Booster",
+    "image": "Piloting_Booster.png"
+  },
+  {
+    "id": "mechatronics_engineering_booster",
+    "name": "Mechatronics Engineering Booster",
+    "image": "Mechatronics_Engineering_Booster.png"
+  },
+  {
+    "id": "electrical_engineering_booster",
+    "name": "Electrical Engineering Booster",
+    "image": "Electrical_Engineering_Booster.png"
+  },
+  {
+    "id": "crop_tending_booster",
+    "name": "Crop Tending Booster",
+    "image": "Crop_Tending_Booster.png"
+  },
+  {
+    "id": "extreme_digging_booster",
+    "name": "Extreme Digging Booster",
+    "image": "Extreme_Digging_Booster.png"
+  },
+  {
+    "id": "grilling_booster",
+    "name": "Grilling Booster",
+    "image": "Grilling_Booster.png"
+  },
+  {
+    "id": "masterworks_art_booster",
+    "name": "Masterworks Art Booster",
+    "image": "Masterworks_Art_Booster.png"
+  },
+  {
+    "id": "flydo",
+    "name": "Flydo",
+    "image": "Flydo.png"
+  },
+  {
+    "id": "power_bank_scrap",
+    "name": "Power Bank Scrap",
+    "image": "Power_Bank_Scrap.png"
+  },
+  {
+    "id": "eco_power_bank",
+    "name": "Eco Power Bank",
+    "image": "Eco_Power_Bank.png"
+  },
+  {
+    "id": "gear_balm",
+    "name": "Gear Balm",
+    "image": "Gear_Balm.png"
+  },
+  {
+    "id": "tallow_gear_balm",
+    "name": "Tallow Gear Balm",
+    "image": "Tallow_Gear_Balm.png"
+  },
+  {
+    "id": "seakomb_leaf",
+    "name": "Seakomb Leaf",
+    "image": "Seakomb_Leaf.png"
+  },
+  {
+    "id": "plant_husk",
+    "name": "Plant Husk",
+    "image": "Plant_Husk.png"
   }
 ]

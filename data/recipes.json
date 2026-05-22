@@ -1196,6 +1196,25 @@
     "source": "compost",
     "consumed": [
       {
+        "element": "plant_husk",
+        "unit": "g",
+        "per": "s",
+        "amount": 100
+      }
+    ],
+    "produced": [
+      {
+        "element": "dirt",
+        "unit": "g",
+        "per": "s",
+        "amount": 100
+      }
+    ]
+  },
+  {
+    "source": "compost",
+    "consumed": [
+      {
         "element": "rot_pile",
         "unit": "g",
         "per": "s",
@@ -2752,6 +2771,77 @@
     "produced": [
       {
         "element": "allergy_medication",
+        "unit": "unit",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "source": "apothecary",
+    "consumed": [
+      {
+        "element": "seakomb_leaf",
+        "unit": "g",
+        "amount": 10000
+      },
+      {
+        "element": "dirt",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "allergy_medication",
+        "unit": "unit",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "source": "apothecary",
+    "consumed": [
+      {
+        "element": "water",
+        "unit": "g",
+        "amount": 200000
+      },
+      {
+        "element": "gunk",
+        "unit": "g",
+        "amount": 80000
+      }
+    ],
+    "produced": [
+      {
+        "element": "gear_balm",
+        "unit": "unit",
+        "amount": 1
+      },
+      {
+        "element": "polluted_water",
+        "unit": "g",
+        "amount": 200000
+      }
+    ]
+  },
+  {
+    "source": "apothecary",
+    "consumed": [
+      {
+        "element": "water",
+        "unit": "g",
+        "amount": 70000
+      },
+      {
+        "element": "tallow",
+        "unit": "g",
+        "amount": 10000
+      }
+    ],
+    "produced": [
+      {
+        "element": "tallow_gear_balm",
         "unit": "unit",
         "amount": 1
       }
@@ -6892,6 +6982,24 @@
   },
   {
     "source": "heat",
+    "temp": 600,
+    "consumed": [
+      {
+        "element": "plywood",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "carbon_dioxide",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
     "temp": 80,
     "consumed": [
       {
@@ -6902,7 +7010,7 @@
     ],
     "produced": [
       {
-        "element": "crude_oil",
+        "element": "biodiesel",
         "unit": "g",
         "amount": 1000
       }
@@ -13277,6 +13385,125 @@
     ]
   },
   {
+    "source": "husky_moo",
+    "consumed": [
+      {
+        "element": "gas_grass",
+        "unit": "% growth",
+        "per": "s",
+        "amount": 0.0833333333
+      }
+    ],
+    "produced": [
+      {
+        "element": "carbon_dioxide",
+        "unit": "g",
+        "per": "s",
+        "amount": 16.6666666667
+      }
+    ]
+  },
+  {
+    "source": "husky_moo",
+    "consumed": [
+      {
+        "element": "plant_husk",
+        "unit": "unit",
+        "per": "s",
+        "amount": 0.3333333333
+      }
+    ],
+    "produced": [
+      {
+        "element": "carbon_dioxide",
+        "unit": "g",
+        "per": "s",
+        "amount": 16.6666666667
+      }
+    ]
+  },
+  {
+    "source": "gassy_moo",
+    "consumed": [
+      {
+        "element": "plant_husk",
+        "unit": "unit",
+        "per": "s",
+        "amount": 0.3333333333
+      }
+    ],
+    "produced": [
+      {
+        "element": "carbon_dioxide",
+        "unit": "g",
+        "per": "s",
+        "amount": 16.6666666667
+      }
+    ]
+  },
+  {
+    "source": "husky_moo",
+    "produced": [
+      {
+        "element": "meat",
+        "unit": "g",
+        "per": "s",
+        "amount": 0.2222222222
+      }
+    ]
+  },
+  {
+    "source": "milking_station",
+    "consumed": [
+      {
+        "element": "husky_moo",
+        "unit": "unit",
+        "amount": 1
+      }
+    ],
+    "produced": [
+      {
+        "element": "biodiesel",
+        "unit": "g",
+        "per": "s",
+        "amount": 333.3333333333
+      }
+    ]
+  },
+  {
+    "source": "husky_moo",
+    "produced": [
+      {
+        "element": "husky_moo",
+        "unit": "g",
+        "per": "s",
+        "amount": 0.0001033335
+      }
+    ]
+  },
+  {
+    "source": "gassy_moo",
+    "produced": [
+      {
+        "element": "husky_moo",
+        "unit": "g",
+        "per": "s",
+        "amount": 0.0001033335
+      }
+    ]
+  },
+  {
+    "source": "husky_moo",
+    "produced": [
+      {
+        "element": "gassy_moo",
+        "unit": "g",
+        "per": "s",
+        "amount": 0.0001033335
+      }
+    ]
+  },
+  {
     "source": "pacu",
     "consumed": [
       {
@@ -17406,6 +17633,1113 @@
         "unit": "g",
         "per": "s",
         "amount": 0.5555555556
+      }
+    ]
+  },
+  {
+    "source": "bionic_duplicant",
+    "produced": [
+      {
+        "element": "microchip",
+        "unit": "unit",
+        "per": "s",
+        "amount": 0.0066666667
+      }
+    ]
+  },
+  {
+    "source": "power_control_station",
+    "consumed": [
+      {
+        "element": "aluminum",
+        "unit": "g",
+        "amount": 5000
+      }
+    ],
+    "produced": [
+      {
+        "element": "microchip",
+        "unit": "unit",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "source": "power_control_station",
+    "consumed": [
+      {
+        "element": "cobalt",
+        "unit": "g",
+        "amount": 5000
+      }
+    ],
+    "produced": [
+      {
+        "element": "microchip",
+        "unit": "unit",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "source": "power_control_station",
+    "consumed": [
+      {
+        "element": "copper",
+        "unit": "g",
+        "amount": 5000
+      }
+    ],
+    "produced": [
+      {
+        "element": "microchip",
+        "unit": "unit",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "source": "power_control_station",
+    "consumed": [
+      {
+        "element": "depleted_uranium",
+        "unit": "g",
+        "amount": 5000
+      }
+    ],
+    "produced": [
+      {
+        "element": "microchip",
+        "unit": "unit",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "source": "power_control_station",
+    "consumed": [
+      {
+        "element": "gold",
+        "unit": "g",
+        "amount": 5000
+      }
+    ],
+    "produced": [
+      {
+        "element": "microchip",
+        "unit": "unit",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "source": "power_control_station",
+    "consumed": [
+      {
+        "element": "iridium",
+        "unit": "g",
+        "amount": 5000
+      }
+    ],
+    "produced": [
+      {
+        "element": "microchip",
+        "unit": "unit",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 2445.85,
+    "consumed": [
+      {
+        "element": "iridium",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "molten_iridium",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 4129.85,
+    "consumed": [
+      {
+        "element": "molten_iridium",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "iridium_gas",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "cool",
+    "temp": 4129.85,
+    "consumed": [
+      {
+        "element": "iridium_gas",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "molten_iridium",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "cool",
+    "temp": 2445.85,
+    "consumed": [
+      {
+        "element": "molten_iridium",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "iridium",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "power_control_station",
+    "consumed": [
+      {
+        "element": "iron",
+        "unit": "g",
+        "amount": 5000
+      }
+    ],
+    "produced": [
+      {
+        "element": "microchip",
+        "unit": "unit",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "source": "power_control_station",
+    "consumed": [
+      {
+        "element": "lead",
+        "unit": "g",
+        "amount": 5000
+      }
+    ],
+    "produced": [
+      {
+        "element": "microchip",
+        "unit": "unit",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "source": "power_control_station",
+    "consumed": [
+      {
+        "element": "solid_mercury",
+        "unit": "g",
+        "amount": 5000
+      }
+    ],
+    "produced": [
+      {
+        "element": "microchip",
+        "unit": "unit",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "source": "power_control_station",
+    "consumed": [
+      {
+        "element": "tungsten",
+        "unit": "g",
+        "amount": 5000
+      }
+    ],
+    "produced": [
+      {
+        "element": "microchip",
+        "unit": "unit",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "source": "power_control_station",
+    "consumed": [
+      {
+        "element": "nickel",
+        "unit": "g",
+        "amount": 5000
+      }
+    ],
+    "produced": [
+      {
+        "element": "microchip",
+        "unit": "unit",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 1454.85,
+    "consumed": [
+      {
+        "element": "nickel",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "molten_nickel",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 1454.85,
+    "consumed": [
+      {
+        "element": "nickel_ore",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "molten_nickel",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 2729.85,
+    "consumed": [
+      {
+        "element": "molten_nickel",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "nickel_gas",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "cool",
+    "temp": 2729.85,
+    "consumed": [
+      {
+        "element": "nickel_gas",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "molten_nickel",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "cool",
+    "temp": 1454.85,
+    "consumed": [
+      {
+        "element": "molten_nickel",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "nickel",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "crafting_station",
+    "consumed": [
+      {
+        "element": "uranium_ore",
+        "unit": "g",
+        "amount": 10000
+      }
+    ],
+    "produced": [
+      {
+        "element": "uranium_ore_power_bank",
+        "unit": "unit",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "source": "crafting_station",
+    "consumed": [
+      {
+        "element": "copper_ore",
+        "unit": "g",
+        "amount": 200000
+      }
+    ],
+    "produced": [
+      {
+        "element": "metal_power_bank",
+        "unit": "unit",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "source": "crafting_station",
+    "consumed": [
+      {
+        "element": "aluminum_ore",
+        "unit": "g",
+        "amount": 200000
+      }
+    ],
+    "produced": [
+      {
+        "element": "metal_power_bank",
+        "unit": "unit",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "source": "crafting_station",
+    "consumed": [
+      {
+        "element": "iron_ore",
+        "unit": "g",
+        "amount": 200000
+      }
+    ],
+    "produced": [
+      {
+        "element": "metal_power_bank",
+        "unit": "unit",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "source": "crafting_station",
+    "consumed": [
+      {
+        "element": "cobalt_ore",
+        "unit": "g",
+        "amount": 200000
+      }
+    ],
+    "produced": [
+      {
+        "element": "metal_power_bank",
+        "unit": "unit",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "source": "crafting_station",
+    "consumed": [
+      {
+        "element": "cinnabar_ore",
+        "unit": "g",
+        "amount": 200000
+      }
+    ],
+    "produced": [
+      {
+        "element": "metal_power_bank",
+        "unit": "unit",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "source": "crafting_station",
+    "consumed": [
+      {
+        "element": "nickel_ore",
+        "unit": "g",
+        "amount": 200000
+      }
+    ],
+    "produced": [
+      {
+        "element": "metal_power_bank",
+        "unit": "unit",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "source": "crafting_station",
+    "consumed": [
+      {
+        "element": "microchip",
+        "unit": "unit",
+        "amount": 2
+      }
+    ],
+    "produced": [
+      {
+        "element": "strength_booster",
+        "unit": "unit",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "source": "crafting_station",
+    "consumed": [
+      {
+        "element": "microchip",
+        "unit": "unit",
+        "amount": 2
+      }
+    ],
+    "produced": [
+      {
+        "element": "construction_booster",
+        "unit": "unit",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "source": "crafting_station",
+    "consumed": [
+      {
+        "element": "microchip",
+        "unit": "unit",
+        "amount": 2
+      }
+    ],
+    "produced": [
+      {
+        "element": "digging_booster",
+        "unit": "unit",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "source": "crafting_station",
+    "consumed": [
+      {
+        "element": "microchip",
+        "unit": "unit",
+        "amount": 2
+      }
+    ],
+    "produced": [
+      {
+        "element": "advanced_medical_booster",
+        "unit": "unit",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "source": "crafting_station",
+    "consumed": [
+      {
+        "element": "microchip",
+        "unit": "unit",
+        "amount": 2
+      }
+    ],
+    "produced": [
+      {
+        "element": "researching_booster",
+        "unit": "unit",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": -8.15,
+    "consumed": [
+      {
+        "element": "solid_gunk",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "gunk",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 447.85,
+    "consumed": [
+      {
+        "element": "gunk",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "petroleum",
+        "unit": "g",
+        "amount": 920
+      },
+      {
+        "element": "sulfur",
+        "unit": "g",
+        "amount": 80
+      }
+    ]
+  },
+  {
+    "source": "cool",
+    "temp": -8.15,
+    "consumed": [
+      {
+        "element": "gunk",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "solid_gunk",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "cool",
+    "temp": -33.15,
+    "consumed": [
+      {
+        "element": "phyto_oil",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "frozen_phyto_oil",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": -33.15,
+    "consumed": [
+      {
+        "element": "frozen_phyto_oil",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "phyto_oil",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 75,
+    "consumed": [
+      {
+        "element": "phyto_oil",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "algae",
+        "unit": "g",
+        "amount": 666.6666667
+      },
+      {
+        "element": "carbon_dioxide",
+        "unit": "g",
+        "amount": 333.3333333
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": -33.15,
+    "consumed": [
+      {
+        "element": "frozen_phyto_oil",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "phyto_oil",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "bionic_duplicant",
+    "consumed": [
+      {
+        "element": "gear_balm",
+        "unit": "unit",
+        "per": "s",
+        "amount": 0.000416667
+      }
+    ]
+  },
+  {
+    "source": "bionic_duplicant",
+    "consumed": [
+      {
+        "element": "tallow_gear_balm",
+        "unit": "unit",
+        "per": "s",
+        "amount": 0.000416667
+      }
+    ]
+  },
+  {
+    "source": "bionic_duplicant",
+    "consumed": [
+      {
+        "element": "oxygen",
+        "unit": "g",
+        "per": "s",
+        "amount": 100
+      }
+    ]
+  },
+  {
+    "source": "bionic_duplicant",
+    "consumed": [
+      {
+        "element": "metal_power_bank",
+        "unit": "unit",
+        "per": "s",
+        "amount": 0.00166667
+      }
+    ]
+  },
+  {
+    "source": "bionic_duplicant",
+    "consumed": [
+      {
+        "element": "uranium_ore_power_bank",
+        "unit": "unit",
+        "per": "s",
+        "amount": 0.00166667
+      }
+    ]
+  },
+  {
+    "source": "bionic_duplicant",
+    "consumed": [
+      {
+        "element": "eco_power_bank",
+        "unit": "unit",
+        "per": "s",
+        "amount": 0.00166667
+      }
+    ]
+  },
+  {
+    "source": "bionic_duplicant",
+    "consumed": [
+      {
+        "element": "eco_power_bank",
+        "unit": "unit",
+        "per": "s",
+        "amount": 0.00166667
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 180,
+    "consumed": [
+      {
+        "element": "biodiesel",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "carbon_dioxide",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "cool",
+    "temp": -10,
+    "consumed": [
+      {
+        "element": "biodiesel",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "tallow",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "plywood_press",
+    "consumed": [
+      {
+        "element": "plant_husk",
+        "unit": "g",
+        "amount": 90000
+      },
+      {
+        "element": "resin",
+        "unit": "g",
+        "amount": 10000
+      }
+    ],
+    "produced": [
+      {
+        "element": "plywood",
+        "unit": "g",
+        "amount": 100000
+      }
+    ]
+  },
+  {
+    "source": "soldering_station",
+    "consumed": [
+      {
+        "element": "abyssalite",
+        "unit": "g",
+        "amount": 200000
+      }
+    ],
+    "produced": [
+      {
+        "element": "eco_power_bank",
+        "unit": "unit",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "source": "soldering_station",
+    "consumed": [
+      {
+        "element": "plastic",
+        "unit": "g",
+        "amount": 200000
+      }
+    ],
+    "produced": [
+      {
+        "element": "flydo",
+        "unit": "unit",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "source": "soldering_station",
+    "consumed": [
+      {
+        "element": "plastium",
+        "unit": "g",
+        "amount": 200000
+      }
+    ],
+    "produced": [
+      {
+        "element": "flydo",
+        "unit": "unit",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "source": "soldering_station",
+    "consumed": [
+      {
+        "element": "microchip",
+        "unit": "unit",
+        "amount": 8
+      }
+    ],
+    "produced": [
+      {
+        "element": "masterworks_art_booster",
+        "unit": "unit",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "source": "soldering_station",
+    "consumed": [
+      {
+        "element": "microchip",
+        "unit": "unit",
+        "amount": 8
+      }
+    ],
+    "produced": [
+      {
+        "element": "grilling_booster",
+        "unit": "unit",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "source": "soldering_station",
+    "consumed": [
+      {
+        "element": "microchip",
+        "unit": "unit",
+        "amount": 8
+      }
+    ],
+    "produced": [
+      {
+        "element": "extreme_digging_booster",
+        "unit": "unit",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "source": "soldering_station",
+    "consumed": [
+      {
+        "element": "microchip",
+        "unit": "unit",
+        "amount": 8
+      }
+    ],
+    "produced": [
+      {
+        "element": "crop_tending_booster",
+        "unit": "unit",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "source": "soldering_station",
+    "consumed": [
+      {
+        "element": "microchip",
+        "unit": "unit",
+        "amount": 8
+      }
+    ],
+    "produced": [
+      {
+        "element": "electrical_engineering_booster",
+        "unit": "unit",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "source": "soldering_station",
+    "consumed": [
+      {
+        "element": "microchip",
+        "unit": "unit",
+        "amount": 8
+      }
+    ],
+    "produced": [
+      {
+        "element": "electrical_engineering_booster",
+        "unit": "unit",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "source": "soldering_station",
+    "consumed": [
+      {
+        "element": "microchip",
+        "unit": "unit",
+        "amount": 8
+      }
+    ],
+    "produced": [
+      {
+        "element": "piloting_booster",
+        "unit": "unit",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "source": "soldering_station",
+    "consumed": [
+      {
+        "element": "microchip",
+        "unit": "unit",
+        "amount": 8
+      }
+    ],
+    "produced": [
+      {
+        "element": "rocketry_booster",
+        "unit": "unit",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "source": "soldering_station",
+    "consumed": [
+      {
+        "element": "microchip",
+        "unit": "unit",
+        "amount": 8
+      }
+    ],
+    "produced": [
+      {
+        "element": "ranching_booster",
+        "unit": "unit",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "source": "soldering_station",
+    "consumed": [
+      {
+        "element": "microchip",
+        "unit": "unit",
+        "amount": 8
+      }
+    ],
+    "produced": [
+      {
+        "element": "astronomy_booster",
+        "unit": "unit",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "source": "soldering_station",
+    "consumed": [
+      {
+        "element": "microchip",
+        "unit": "unit",
+        "amount": 8
+      }
+    ],
+    "produced": [
+      {
+        "element": "applied_sciences_booster",
+        "unit": "unit",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "source": "soldering_station",
+    "consumed": [
+      {
+        "element": "microchip",
+        "unit": "unit",
+        "amount": 8
+      }
+    ],
+    "produced": [
+      {
+        "element": "suit_training_booster",
+        "unit": "unit",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "source": "soldering_station",
+    "consumed": [
+      {
+        "element": "microchip",
+        "unit": "unit",
+        "amount": 8
+      }
+    ],
+    "produced": [
+      {
+        "element": "tidying_booster",
+        "unit": "unit",
+        "amount": 1
       }
     ]
   }
