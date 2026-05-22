@@ -106,8 +106,8 @@ export async function renderCanvas(container, path) {
     engineInstance.setTool('solid'); // Trigger the UI update for default tool
 
     // Handle initial state from URL
-    if (path && path.startsWith('/canvas/')) {
-        const encodedState = path.substring('/canvas/'.length);
+    if (path && path.startsWith('canvas/')) {
+        const encodedState = path.substring('canvas/'.length);
         if (encodedState) {
             try {
                 // Support base64url decoding
@@ -128,7 +128,7 @@ export async function renderCanvas(container, path) {
         updateUrlTimeout = setTimeout(() => {
             if (!engineInstance || !engineInstance.grid) return;
             const data = engineInstance.grid.serialize();
-            if (data && data.length > 0) {
+            if (data && Object.keys(data).length > 0) {
                 const jsonState = JSON.stringify(data);
                 // Create base64url string to be URL-safe and avoid slashes
                 const encodedState = btoa(jsonState).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
