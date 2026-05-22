@@ -2,6 +2,15 @@ export class Grid {
     constructor(engine) {
         this.engine = engine;
         this.cells = new Map(); // key: "x,y", value: { type, meta }
+        this.topologyVersion = 0;
+    }
+
+    _notifyChange() {
+        this.topologyVersion++;
+        this.engine.needsRedraw = true;
+        if (this.engine.canvas) {
+            this.engine.canvas.dispatchEvent(new CustomEvent('grid-updated'));
+        }
     }
 
     getKey(x, y) {
@@ -68,7 +77,7 @@ export class Grid {
         } else {
             this.cells.set(this.getKey(x, y), { type, meta });
         }
-        this.engine.needsRedraw = true;
+        this._notifyChange();
     }
 
     getCell(x, y) {
@@ -103,10 +112,10 @@ export class Grid {
                 // Fallback in case state is corrupted
                 this.cells.delete(key);
             }
-            this.engine.needsRedraw = true;
+            this._notifyChange();
         } else if (cell.type === type) {
             this.cells.delete(key);
-            this.engine.needsRedraw = true;
+            this._notifyChange();
         } else if (Array.isArray(cell.type)) {
             // Future-proofing for multi-layer
         }
@@ -114,6 +123,134 @@ export class Grid {
 
     clear() {
         this.cells.clear();
-        this.engine.needsRedraw = true;
+        this._notifyChange();
+    }
+
+    serialize() {
+        const data = {};
+        const solidCells = [];
+        const sweeperCells = [];
+
+        for (const [key, cell] of this.cells.entries()) {
+            if (cell.type === 'sweeper_part') continue;
+            const [x, y] = key.split(',').map(Number);
+            if (cell.type === 'solid') {
+                solidCells.push({x, y});
+            } else if (cell.type === 'sweeper') {
+                const orientation = cell.meta && cell.meta.orientation === 'vertical' ? 'v' : undefined;
+                if (orientation) sweeperCells.push([x, y, orientation]);
+                else sweeperCells.push([x, y]);
+            }
+        }
+
+        if (solidCells.length > 0) {
+            solidCells.sort((a, b) => a.y !== b.y ? a.y - b.y : a.x - b.x);
+
+            const lines = [];
+            let currentLine = null;
+            for (const c of solidCells) {
+                if (!currentLine) {
+                    currentLine = {x1: c.x, x2: c.x, y: c.y};
+                } else if (c.y === currentLine.y && c.x === currentLine.x2 + 1) {
+                    currentLine.x2 = c.x;
+                } else {
+                    lines.push(currentLine);
+                    currentLine = {x1: c.x, x2: c.x, y: c.y};
+                }
+            }
+            if (currentLine) lines.push(currentLine);
+
+            const rects = [];
+            const usedLines = new Set();
+
+            for (let i = 0; i < lines.length; i++) {
+                if (usedLines.has(i)) continue;
+                const line = lines[i];
+                let currentRect = {x1: line.x1, y1: line.y, x2: line.x2, y2: line.y};
+                usedLines.add(i);
+
+                let nextY = line.y + 1;
+                while (true) {
+                    let foundMatch = false;
+                    for (let j = i + 1; j < lines.length; j++) {
+                        if (usedLines.has(j)) continue;
+                        const nextLine = lines[j];
+                        if (nextLine.y > nextY) break;
+                        if (nextLine.y === nextY && nextLine.x1 === currentRect.x1 && nextLine.x2 === currentRect.x2) {
+                            currentRect.y2 = nextY;
+                            usedLines.add(j);
+                            nextY++;
+                            foundMatch = true;
+                            break;
+                        }
+                    }
+                    if (!foundMatch) break;
+                }
+
+                if (currentRect.x1 === currentRect.x2 && currentRect.y1 === currentRect.y2) {
+                    rects.push([currentRect.x1, currentRect.y1]);
+                } else {
+                    rects.push([currentRect.x1, currentRect.y1, currentRect.x2, currentRect.y2]);
+                }
+            }
+            data.s = rects;
+        }
+
+        if (sweeperCells.length > 0) {
+            data.w = sweeperCells;
+        }
+
+        return data;
+    }
+
+    deserialize(data) {
+        this.cells.clear();
+        if (!data) return;
+
+        const originalNotify = this._notifyChange;
+        let needsRedraw = false;
+        this._notifyChange = () => { needsRedraw = true; };
+
+        // Legacy support (Array format)
+        if (Array.isArray(data)) {
+            for (const item of data) {
+                if (Array.isArray(item) && item.length >= 3) {
+                    const [x, y, type, orientationCode] = item;
+                    const meta = {};
+                    if (type === 'sweeper') {
+                        meta.orientation = orientationCode === 'v' ? 'vertical' : 'horizontal';
+                    }
+                    this.setCell(x, y, type, meta);
+                }
+            }
+        } else {
+            // New dictionary format
+            if (data.s) {
+                for (const rect of data.s) {
+                    if (rect.length === 2) {
+                        this.setCell(rect[0], rect[1], 'solid', {});
+                    } else if (rect.length === 4) {
+                        for (let y = rect[1]; y <= rect[3]; y++) {
+                            for (let x = rect[0]; x <= rect[2]; x++) {
+                                this.setCell(x, y, 'solid', {});
+                            }
+                        }
+                    }
+                }
+            }
+            if (data.w) {
+                for (const sweep of data.w) {
+                    const x = sweep[0];
+                    const y = sweep[1];
+                    const orientation = sweep[2] === 'v' ? 'vertical' : 'horizontal';
+                    this.setCell(x, y, 'sweeper', {orientation});
+                }
+            }
+        }
+
+        this._notifyChange = originalNotify;
+        if (needsRedraw) {
+            this._notifyChange();
+        }
     }
 }

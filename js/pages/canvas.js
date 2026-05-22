@@ -3,7 +3,7 @@ import { createElement } from '../utils.js';
 
 let engineInstance = null;
 
-export async function renderCanvas(container) {
+export async function renderCanvas(container, path) {
     container.textContent = ''; // Clear container
 
     const toolbar = createElement('div', { id: 'toolbar', class: 'canvas-toolbar' }, [
@@ -14,7 +14,9 @@ export async function renderCanvas(container) {
         createElement('button', { class: 'tool-btn hidden', dataset: { tool: 'bridge' }, textContent: 'Bridge' }),
         createElement('button', { class: 'tool-btn hidden', dataset: { tool: 'spawn_liquid' }, textContent: 'Spawn Liquid' }),
         createElement('button', { class: 'tool-btn', dataset: { tool: 'erase' }, textContent: 'Eraser' }),
-        createElement('button', { id: 'orientation-btn', class: 'utility-btn hidden', textContent: 'Rotate' })
+        createElement('button', { id: 'orientation-btn', class: 'utility-btn hidden', textContent: 'Rotate' }),
+        createElement('div', { class: 'toolbar-spacer', style: 'flex-grow: 1;' }),
+        createElement('button', { id: 'copy-link-btn', class: 'utility-btn', textContent: 'Copy Link' })
     ]);
 
     const canvasEl = createElement('canvas', { id: 'oni-canvas', class: 'oni-canvas' });
@@ -103,9 +105,70 @@ export async function renderCanvas(container) {
     };
     engineInstance.setTool('solid'); // Trigger the UI update for default tool
 
+    // console.log(path);
+
+    // Handle initial state from URL
+    if (path && path.startsWith('/canvas/')) {
+        const encodedState = path.substring('/canvas/'.length);
+        if (encodedState) {
+            try {
+                // Support base64url decoding
+                const base64 = encodedState.replace(/-/g, '+').replace(/_/g, '/');
+                const jsonState = atob(base64);
+                const data = JSON.parse(jsonState);
+                engineInstance.grid.deserialize(data);
+            } catch (e) {
+                console.error("Failed to decode canvas state from URL", e);
+            }
+        }
+    }
+
+    // URL Update Logic on Canvas Changes
+    let updateUrlTimeout = null;
+    function handleGridUpdated() {
+        if (updateUrlTimeout) clearTimeout(updateUrlTimeout);
+        updateUrlTimeout = setTimeout(() => {
+            if (!engineInstance || !engineInstance.grid) return;
+            const data = engineInstance.grid.serialize();
+            if (data && Object.keys(data).length > 0) {
+                const jsonState = JSON.stringify(data);
+                // Create base64url string to be URL-safe and avoid slashes
+                const encodedState = btoa(jsonState).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
+                const newHash = `#/canvas/${encodedState}`;
+                if (window.location.hash !== newHash) {
+                    history.replaceState(null, '', newHash);
+                }
+            } else {
+                const newHash = `#/canvas`;
+                if (window.location.hash !== newHash) {
+                    history.replaceState(null, '', newHash);
+                }
+            }
+        }, 500); // 500ms debounce
+    }
+    canvasEl.addEventListener('grid-updated', handleGridUpdated);
+
+    // Setup Copy Link button
+    const copyBtn = toolbar.querySelector('#copy-link-btn');
+    if (copyBtn) {
+        copyBtn.addEventListener('click', () => {
+            navigator.clipboard.writeText(window.location.href).then(() => {
+                const originalText = copyBtn.textContent;
+                copyBtn.textContent = 'Copied!';
+                setTimeout(() => {
+                    copyBtn.textContent = originalText;
+                }, 2000);
+            }).catch(err => {
+                console.error("Failed to copy link", err);
+            });
+        });
+    }
+
     // Return cleanup function for the router
     return () => {
         window.removeEventListener('keydown', handleKeydown);
+        canvasEl.removeEventListener('grid-updated', handleGridUpdated);
+        if (updateUrlTimeout) clearTimeout(updateUrlTimeout);
         if (engineInstance) {
             engineInstance.destroy();
             engineInstance = null;
