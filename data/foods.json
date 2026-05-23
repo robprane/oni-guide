@@ -3,13 +3,21 @@
     "id": "barbeque",
     "name": "Barbeque",
     "image": "Barbeque.png",
-    "kcalPerKg": 4000
+    "kcalPerKg": 4000,
+    "categories": [
+      "barbeque_group",
+      "abyssalite_group",
+      "barbeque_group_2"
+    ]
   },
   {
     "id": "berry_sludge",
     "name": "Berry Sludge",
     "image": "BerrySludge.png",
-    "kcalPerKg": 4000
+    "kcalPerKg": 4000,
+    "categories": [
+      "barbeque_group"
+    ]
   },
   {
     "id": "bog_jelly",
@@ -21,13 +29,19 @@
     "id": "cooked_seafood",
     "name": "Cooked Seafood",
     "image": "CookedSeafood.png",
-    "kcalPerKg": 1600
+    "kcalPerKg": 1600,
+    "categories": [
+      "bristle_berry_group"
+    ]
   },
   {
     "id": "curried_beans",
     "name": "Curried Beans",
     "image": "CurriedBeans.png",
-    "kcalPerKg": 5000
+    "kcalPerKg": 5000,
+    "categories": [
+      "curried_beans_group"
+    ]
   },
   {
     "id": "dried_berry_pie",
@@ -78,19 +92,36 @@
     "id": "bristle_berry",
     "name": "Bristle Berry",
     "image": "BristleBerry.png",
-    "kcalPerKg": 1600
+    "kcalPerKg": 1600,
+    "categories": [
+      "farm_fertilizer",
+      "bristle_berry_group",
+      "bristle_berry_group_2"
+    ]
   },
   {
     "id": "fried_mushroom",
     "name": "Fried Mushroom",
     "image": "FriedMushroom.png",
-    "kcalPerKg": 2800
+    "kcalPerKg": 2800,
+    "categories": [
+      "farm_fertilizer",
+      "fried_mushroom_group",
+      "fried_mushroom_group_2",
+      "fried_mushroom_group_3"
+    ]
   },
   {
     "id": "gristle_berry",
     "name": "Gristle Berry",
     "image": "GristleBerry.png",
-    "kcalPerKg": 2000
+    "kcalPerKg": 2000,
+    "categories": [
+      "farm_fertilizer",
+      "fried_mushroom_group",
+      "fried_mushroom_group_2",
+      "bristle_berry_group_2"
+    ]
   },
   {
     "id": "grubfruit",
@@ -102,19 +133,29 @@
     "id": "grubfruit_preserve",
     "name": "Grubfruit Preserve",
     "image": "GrubfruitPreserve.png",
-    "kcalPerKg": 2400
+    "kcalPerKg": 2400,
+    "categories": [
+      "grubfruit_preserve_group"
+    ]
   },
   {
     "id": "hexalent_fruit",
     "name": "Hexalent Fruit",
     "image": "HexalentFruit.png",
-    "kcalPerKg": 6400
+    "kcalPerKg": 6400,
+    "categories": [
+      "hexalent_fruit_group"
+    ]
   },
   {
     "id": "mushroom",
     "name": "Mushroom",
     "image": "Mushroom.png",
-    "kcalPerKg": 2400
+    "kcalPerKg": 2400,
+    "categories": [
+      "fried_mushroom_group_2",
+      "grubfruit_preserve_group"
+    ]
   },
   {
     "id": "mushroom_wrap",
@@ -126,24 +167,36 @@
     "id": "fish_taco",
     "name": "Fish Taco",
     "image": "FishTaco.png",
-    "kcalPerKg": 4200
+    "kcalPerKg": 4200,
+    "categories": [
+      "fish_taco_group"
+    ]
   },
   {
     "id": "food",
     "name": "Food",
-    "image": "Food.png"
+    "image": "Food.png",
+    "categories": [
+      "compostable"
+    ]
   },
   {
     "id": "frost_bun",
     "name": "Frost Bun",
     "image": "FrostBun.png",
-    "kcalPerKg": 1200
+    "kcalPerKg": 1200,
+    "categories": [
+      "frost_bun_group"
+    ]
   },
   {
     "id": "frost_burger",
     "name": "Frost Burger",
     "image": "FrostBurger.png",
-    "kcalPerKg": 6000
+    "kcalPerKg": 6000,
+    "categories": [
+      "frost_burger_group"
+    ]
   },
   {
     "id": "lettuce",
@@ -167,25 +220,38 @@
     "id": "meat",
     "name": "Meat",
     "image": "Meat.png",
-    "kcalPerKg": 1600
+    "kcalPerKg": 1600,
+    "categories": [
+      "abyssalite_group",
+      "bristle_berry_group"
+    ]
   },
   {
     "id": "mixed_berry_pie",
     "name": "Mixed Berry Pie",
     "image": "MixedBerryPie.png",
-    "kcalPerKg": 4200
+    "kcalPerKg": 4200,
+    "categories": [
+      "fish_taco_group"
+    ]
   },
   {
     "id": "muckroot",
     "name": "Muckroot",
     "image": "Muckroot.png",
-    "kcalPerKg": 800
+    "kcalPerKg": 800,
+    "categories": [
+      "raw_food"
+    ]
   },
   {
     "id": "mush_bar",
     "name": "Mush Bar",
     "image": "MushBar.png",
-    "kcalPerKg": 800
+    "kcalPerKg": 800,
+    "categories": [
+      "raw_food"
+    ]
   },
   {
     "id": "mush_fry",
@@ -197,25 +263,37 @@
     "id": "mushroom_quiche",
     "name": "Mushroom Quiche",
     "image": "MushroomQuiche.png",
-    "kcalPerKg": 6400
+    "kcalPerKg": 6400,
+    "categories": [
+      "hexalent_fruit_group"
+    ]
   },
   {
     "id": "nutrient_bar",
     "name": "Nutrient Bar",
     "image": "NutrientBar.png",
-    "kcalPerKg": 800
+    "kcalPerKg": 800,
+    "categories": [
+      "raw_food"
+    ]
   },
   {
     "id": "omelette",
     "name": "Omelette",
     "image": "Omelette.png",
-    "kcalPerKg": 2800
+    "kcalPerKg": 2800,
+    "categories": [
+      "fried_mushroom_group_3"
+    ]
   },
   {
     "id": "pacu_fillet",
     "name": "Pacu Fillet",
     "image": "PacuFillet.png",
-    "kcalPerKg": 1000
+    "kcalPerKg": 1000,
+    "categories": [
+      "pacu_fillet_group"
+    ]
   },
   {
     "id": "pemmican",
@@ -227,7 +305,13 @@
     "id": "pepper_bread",
     "name": "Pepper Bread",
     "image": "PepperBread.png",
-    "kcalPerKg": 4000
+    "kcalPerKg": 4000,
+    "categories": [
+      "farm_fertilizer",
+      "barbeque_group",
+      "fried_mushroom_group",
+      "pepper_bread_group"
+    ]
   },
   {
     "id": "pickled_meal",
@@ -239,90 +323,137 @@
     "id": "nosh_noms",
     "name": "Nosh Noms",
     "image": "NoshNoms.png",
-    "kcalPerKg": 5000
+    "kcalPerKg": 5000,
+    "categories": [
+      "curried_beans_group"
+    ]
   },
   {
     "id": "pikeapple",
     "name": "Pikeapple",
     "image": "Pikeapple.png",
-    "kcalPerKg": 800
+    "kcalPerKg": 800,
+    "categories": [
+      "raw_food"
+    ]
   },
   {
     "id": "pikeapple_skewer",
     "name": "Pikeapple Skewer",
     "image": "PikeappleSkewer.png",
-    "kcalPerKg": 1200
+    "kcalPerKg": 1200,
+    "categories": [
+      "frost_bun_group"
+    ]
   },
   {
     "id": "pincha_peppernut",
     "name": "Pincha Peppernut",
-    "image": "PinchaPeppernut.png"
+    "image": "PinchaPeppernut.png",
+    "categories": [
+      "fried_mushroom_group"
+    ]
   },
   {
     "id": "plant_meat",
     "name": "Plant Meat",
     "image": "PlantMeat.png",
-    "kcalPerKg": 1200
+    "kcalPerKg": 1200,
+    "categories": [
+      "frost_bun_group"
+    ]
   },
   {
     "id": "stuffed_berry",
     "name": "Stuffed Berry",
     "image": "StuffedBerry.png",
-    "kcalPerKg": 4400
+    "kcalPerKg": 4400,
+    "categories": [
+      "farm_fertilizer",
+      "abyssalite_group",
+      "pepper_bread_group"
+    ]
   },
   {
     "id": "spindly_grubfruit",
     "name": "Spindly Grubfruit",
     "image": "SpindlyGrubfruit.png",
-    "kcalPerKg": 800
+    "kcalPerKg": 800,
+    "categories": [
+      "raw_food"
+    ]
   },
   {
     "id": "plume_squash",
     "name": "Plume Squash",
     "image": "PlumeSquash.png",
-    "kcalPerKg": 4000
+    "kcalPerKg": 4000,
+    "categories": [
+      "barbeque_group"
+    ]
   },
   {
     "id": "raw_egg",
     "name": "Raw Egg",
     "image": "RawEgg.png",
-    "kcalPerKg": 1600
+    "kcalPerKg": 1600,
+    "categories": [
+      "bristle_berry_group"
+    ]
   },
   {
     "id": "raw_shellfish",
     "name": "Raw Shellfish",
     "image": "RawShellfish.png",
-    "kcalPerKg": 1000
+    "kcalPerKg": 1000,
+    "categories": [
+      "pacu_fillet_group"
+    ]
   },
   {
     "id": "roast_grubfruit_nut",
     "name": "Roast Grubfruit Nut",
     "image": "RoastGrubfruitNut.png",
-    "kcalPerKg": 1200
+    "kcalPerKg": 1200,
+    "categories": [
+      "frost_bun_group"
+    ]
   },
   {
     "id": "shellfish_tempura",
     "name": "Shellfish Tempura",
     "image": "ShellfishTempura.png",
-    "kcalPerKg": 4200
+    "kcalPerKg": 4200,
+    "categories": [
+      "fish_taco_group"
+    ]
   },
   {
     "id": "sherberry",
     "name": "Sherberry",
     "image": "Sherberry.png",
-    "kcalPerKg": 800
+    "kcalPerKg": 800,
+    "categories": [
+      "raw_food"
+    ]
   },
   {
     "id": "souffl_pancakes",
-    "name": "Soufflé Pancakes",
+    "name": "Souffl\u00e9 Pancakes",
     "image": "SoufflPancakes.png",
-    "kcalPerKg": 3600
+    "kcalPerKg": 3600,
+    "categories": [
+      "souffl_pancakes_group"
+    ]
   },
   {
     "id": "spicy_tofu",
     "name": "Spicy Tofu",
     "image": "SpicyTofu.png",
-    "kcalPerKg": 4000
+    "kcalPerKg": 4000,
+    "categories": [
+      "barbeque_group"
+    ]
   },
   {
     "id": "squash_fries",
@@ -334,13 +465,19 @@
     "id": "surf_n_turf",
     "name": "Surf'n'Turf",
     "image": "SurfnTurf.png",
-    "kcalPerKg": 6000
+    "kcalPerKg": 6000,
+    "categories": [
+      "frost_burger_group"
+    ]
   },
   {
     "id": "swamp_chard_heart",
     "name": "Swamp Chard Heart",
     "image": "SwampChardHeart.png",
-    "kcalPerKg": 2400
+    "kcalPerKg": 2400,
+    "categories": [
+      "grubfruit_preserve_group"
+    ]
   },
   {
     "id": "swampy_delights",
@@ -352,6 +489,9 @@
     "id": "tofu",
     "name": "Tofu",
     "image": "Tofu.png",
-    "kcalPerKg": 3600
+    "kcalPerKg": 3600,
+    "categories": [
+      "souffl_pancakes_group"
+    ]
   }
 ]

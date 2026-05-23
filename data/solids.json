@@ -2,22 +2,42 @@
   {
     "id": "abyssalite",
     "name": "Abyssalite",
-    "image": "Abyssalite.png"
+    "image": "Abyssalite.png",
+    "categories": [
+      "abyssalite_group",
+      "abyssalite_group_2"
+    ]
   },
   {
     "id": "algae",
     "name": "Algae",
-    "image": "Algae.png"
+    "image": "Algae.png",
+    "categories": [
+      "algae_group",
+      "algae_group_2"
+    ]
   },
   {
     "id": "aluminum",
     "name": "Aluminum",
-    "image": "Aluminum.png"
+    "image": "Aluminum.png",
+    "categories": [
+      "crushable_metal_ore",
+      "refined_metal",
+      "refined_metal_variant_1",
+      "aluminum_group"
+    ]
   },
   {
     "id": "aluminum_ore",
     "name": "Aluminum Ore",
-    "image": "AluminumOre.png"
+    "image": "AluminumOre.png",
+    "categories": [
+      "crushable_metal_ore",
+      "rock_crusher_metal_ore",
+      "raw_metal_ore",
+      "ore"
+    ]
   },
   {
     "id": "bleach_stone",
@@ -27,7 +47,10 @@
   {
     "id": "brackwax",
     "name": "Brackwax",
-    "image": "Brackwax.png"
+    "image": "Brackwax.png",
+    "categories": [
+      "brackwax_group"
+    ]
   },
   {
     "id": "brine_ice",
@@ -37,42 +60,84 @@
   {
     "id": "ceramic",
     "name": "Ceramic",
-    "image": "Ceramic.png"
+    "image": "Ceramic.png",
+    "categories": [
+      "construction_material"
+    ]
   },
   {
     "id": "cinnabar_ore",
     "name": "Cinnabar Ore",
-    "image": "CinnabarOre.png"
+    "image": "CinnabarOre.png",
+    "categories": [
+      "crushable_metal_ore",
+      "rock_crusher_metal_ore",
+      "ore"
+    ]
   },
   {
     "id": "clay",
     "name": "Clay",
-    "image": "Clay.png"
+    "image": "Clay.png",
+    "categories": [
+      "filtration_medium"
+    ]
   },
   {
     "id": "coal",
     "name": "Coal",
-    "image": "Coal.png"
+    "image": "Coal.png",
+    "categories": [
+      "coal_group"
+    ]
   },
   {
     "id": "cobalt",
     "name": "Cobalt",
-    "image": "Cobalt.png"
+    "image": "Cobalt.png",
+    "categories": [
+      "crushable_metal_ore",
+      "refined_metal",
+      "refined_metal_variant_1",
+      "aluminum_group",
+      "cobalt"
+    ]
   },
   {
     "id": "cobalt_ore",
     "name": "Cobalt Ore",
-    "image": "CobaltOre.png"
+    "image": "CobaltOre.png",
+    "categories": [
+      "crushable_metal_ore",
+      "rock_crusher_metal_ore",
+      "raw_metal_ore",
+      "ore",
+      "cobalt"
+    ]
   },
   {
     "id": "copper",
     "name": "Copper",
-    "image": "Copper.png"
+    "image": "Copper.png",
+    "categories": [
+      "crushable_metal_ore",
+      "refined_metal",
+      "refined_metal_variant_1",
+      "aluminum_group",
+      "copper"
+    ]
   },
   {
     "id": "copper_ore",
     "name": "Copper Ore",
-    "image": "CopperOre.png"
+    "image": "CopperOre.png",
+    "categories": [
+      "crushable_metal_ore",
+      "rock_crusher_metal_ore",
+      "raw_metal_ore",
+      "ore",
+      "copper"
+    ]
   },
   {
     "id": "corium",
@@ -82,27 +147,46 @@
   {
     "id": "crashed_rock",
     "name": "Crashed Rock",
-    "image": "CrashedRock.png"
+    "image": "CrashedRock.png",
+    "categories": [
+      "filtration_medium"
+    ]
   },
   {
     "id": "crushed_ice",
     "name": "Crushed Ice",
-    "image": "CrushedIce.png"
+    "image": "CrushedIce.png",
+    "categories": [
+      "crushed_ice_group"
+    ]
   },
   {
     "id": "crushed_rock",
     "name": "Crushed Rock",
-    "image": "CrushedRock.png"
+    "image": "CrushedRock.png",
+    "categories": [
+      "crushed_rock_group"
+    ]
   },
   {
     "id": "depleted_uranium",
     "name": "Depleted Uranium",
-    "image": "DepletedUranium.png"
+    "image": "DepletedUranium.png",
+    "categories": [
+      "crushable_metal_ore",
+      "refined_metal",
+      "refined_metal_variant_1",
+      "uranium"
+    ]
   },
   {
     "id": "diamond",
     "name": "Diamond",
-    "image": "Diamond.png"
+    "image": "Diamond.png",
+    "categories": [
+      "diamond_group",
+      "barbeque_group_2"
+    ]
   },
   {
     "id": "dirt",
@@ -111,12 +195,20 @@
     "type": "Solid",
     "melting_point": 326.8,
     "melting_product": "sand",
-    "description": "Basic soil."
+    "description": "Basic soil.",
+    "categories": [
+      "filtration_medium",
+      "algae_group"
+    ]
   },
   {
     "id": "electrum",
     "name": "Electrum",
-    "image": "Electrum.png"
+    "image": "Electrum.png",
+    "categories": [
+      "electrum_group",
+      "electrum_group_2"
+    ]
   },
   {
     "id": "enriched_uranium",
@@ -126,7 +218,11 @@
   {
     "id": "fertilizer",
     "name": "Fertilizer",
-    "image": "Fertilizer.png"
+    "image": "Fertilizer.png",
+    "categories": [
+      "algae_group",
+      "algae_group_2"
+    ]
   },
   {
     "id": "fossil",
@@ -141,7 +237,10 @@
   {
     "id": "fullerene",
     "name": "Fullerene",
-    "image": "Fullerene.png"
+    "image": "Fullerene.png",
+    "categories": [
+      "diamond_group"
+    ]
   },
   {
     "id": "glass",
@@ -151,37 +250,68 @@
   {
     "id": "gold",
     "name": "Gold",
-    "image": "Gold.png"
+    "image": "Gold.png",
+    "categories": [
+      "crushable_metal_ore",
+      "refined_metal",
+      "refined_metal_variant_1",
+      "electrum_group"
+    ]
   },
   {
     "id": "gold_amalgam",
     "name": "Gold Amalgam",
-    "image": "GoldAmalgam.png"
+    "image": "GoldAmalgam.png",
+    "categories": [
+      "crushable_metal_ore",
+      "raw_metal_ore",
+      "electrum_group",
+      "electrum_group_2"
+    ]
   },
   {
     "id": "granite",
     "name": "Granite",
-    "image": "Granite.png"
+    "image": "Granite.png",
+    "categories": [
+      "construction_material",
+      "granite_group"
+    ]
   },
   {
     "id": "graphite",
     "name": "Graphite",
-    "image": "Graphite.png"
+    "image": "Graphite.png",
+    "categories": [
+      "coal_group"
+    ]
   },
   {
     "id": "ice",
     "name": "Ice",
-    "image": "Ice.png"
+    "image": "Ice.png",
+    "categories": [
+      "crushed_ice_group",
+      "ice_group"
+    ]
   },
   {
     "id": "igneous_rock",
     "name": "Igneous Rock",
-    "image": "IgneousRock.png"
+    "image": "IgneousRock.png",
+    "categories": [
+      "construction_material",
+      "crushed_rock_group",
+      "granite_group"
+    ]
   },
   {
     "id": "insulation",
     "name": "Insulation",
-    "image": "Insulation.png"
+    "image": "Insulation.png",
+    "categories": [
+      "construction_material"
+    ]
   },
   {
     "id": "insulite",
@@ -191,12 +321,27 @@
   {
     "id": "iron",
     "name": "Iron",
-    "image": "Iron.png"
+    "image": "Iron.png",
+    "categories": [
+      "crushable_metal_ore",
+      "refined_metal",
+      "refined_metal_variant_1",
+      "aluminum_group",
+      "iron_group"
+    ]
   },
   {
     "id": "iron_ore",
     "name": "Iron Ore",
-    "image": "IronOre.png"
+    "image": "IronOre.png",
+    "categories": [
+      "crushable_metal_ore",
+      "rock_crusher_metal_ore",
+      "raw_metal_ore",
+      "ore",
+      "iron_group",
+      "iron_ore_group"
+    ]
   },
   {
     "id": "isoresin",
@@ -206,7 +351,12 @@
   {
     "id": "lead",
     "name": "Lead",
-    "image": "Lead.png"
+    "image": "Lead.png",
+    "categories": [
+      "crushable_metal_ore",
+      "refined_metal",
+      "refined_metal_variant_1"
+    ]
   },
   {
     "id": "lime",
@@ -216,7 +366,10 @@
   {
     "id": "mafic_rock",
     "name": "Mafic Rock",
-    "image": "MaficRock.png"
+    "image": "MaficRock.png",
+    "categories": [
+      "crushed_rock_group"
+    ]
   },
   {
     "id": "mud",
@@ -231,37 +384,68 @@
   {
     "id": "niobium",
     "name": "Niobium",
-    "image": "Niobium.png"
+    "image": "Niobium.png",
+    "categories": [
+      "refined_metal"
+    ]
   },
   {
     "id": "obsidian",
     "name": "Obsidian",
-    "image": "Obsidian.png"
+    "image": "Obsidian.png",
+    "categories": [
+      "construction_material",
+      "granite_group"
+    ]
   },
   {
     "id": "oxylite",
     "name": "Oxylite",
-    "image": "Oxylite.png"
+    "image": "Oxylite.png",
+    "categories": [
+      "crushed_rock_group"
+    ]
   },
   {
     "id": "phosphorite",
     "name": "Phosphorite",
-    "image": "Phosphorite.png"
+    "image": "Phosphorite.png",
+    "categories": [
+      "farm_fertilizer",
+      "fried_mushroom_group",
+      "pepper_bread_group",
+      "fried_mushroom_group_2",
+      "bristle_berry_group_2"
+    ]
   },
   {
     "id": "plastic",
     "name": "Plastic",
-    "image": "Plastic.png"
+    "image": "Plastic.png",
+    "categories": [
+      "plastic_group",
+      "brackwax_group"
+    ]
   },
   {
     "id": "plastium",
     "name": "Plastium",
-    "image": "Plastium.png"
+    "image": "Plastium.png",
+    "categories": [
+      "plastic_group"
+    ]
   },
   {
     "id": "polluted_dirt",
     "name": "Polluted Dirt",
-    "image": "PollutedDirt.png"
+    "image": "PollutedDirt.png",
+    "categories": [
+      "compostable",
+      "algae_group",
+      "polluted_dirt_group",
+      "polluted_dirt_group_2",
+      "polluted_dirt_group_3"
+    ]
   },
   {
     "id": "polluted_ice",
@@ -276,7 +460,10 @@
   {
     "id": "pyrite",
     "name": "Pyrite",
-    "image": "Pyrite.png"
+    "image": "Pyrite.png",
+    "categories": [
+      "iron_ore_group"
+    ]
   },
   {
     "id": "radium",
@@ -291,17 +478,28 @@
   {
     "id": "refined_phosphorus",
     "name": "Refined Phosphorus",
-    "image": "RefinedPhosphorus.png"
+    "image": "RefinedPhosphorus.png",
+    "categories": [
+      "abyssalite_group",
+      "pepper_bread_group"
+    ]
   },
   {
     "id": "regolith",
     "name": "Regolith",
-    "image": "Regolith.png"
+    "image": "Regolith.png",
+    "categories": [
+      "crushed_rock_group",
+      "regolith_group"
+    ]
   },
   {
     "id": "rust",
     "name": "Rust",
-    "image": "Rust.png"
+    "image": "Rust.png",
+    "categories": [
+      "iron_group"
+    ]
   },
   {
     "id": "salt",
@@ -311,27 +509,52 @@
   {
     "id": "sand",
     "name": "Sand",
-    "image": "Sand.png"
+    "image": "Sand.png",
+    "categories": [
+      "filtration_medium",
+      "regolith_group",
+      "polluted_dirt_group_2"
+    ]
   },
   {
     "id": "sandstone",
     "name": "Sandstone",
-    "image": "Sandstone.png"
+    "image": "Sandstone.png",
+    "categories": [
+      "construction_material",
+      "filtration_medium",
+      "sandstone_group"
+    ]
   },
   {
     "id": "sedimentary_rock",
     "name": "Sedimentary Rock",
-    "image": "SedimentaryRock.png"
+    "image": "SedimentaryRock.png",
+    "categories": [
+      "construction_material",
+      "filtration_medium",
+      "granite_group",
+      "sandstone_group"
+    ]
   },
   {
     "id": "slime",
     "name": "Slime",
-    "image": "Slime.png"
+    "image": "Slime.png",
+    "categories": [
+      "algae_group",
+      "polluted_dirt_group",
+      "algae_group_2"
+    ]
   },
   {
     "id": "snow",
     "name": "Snow",
-    "image": "Snow.png"
+    "image": "Snow.png",
+    "categories": [
+      "crushed_ice_group",
+      "ice_group"
+    ]
   },
   {
     "id": "solid_carbon_dioxide",
@@ -361,7 +584,12 @@
   {
     "id": "solid_mercury",
     "name": "Solid Mercury",
-    "image": "SolidMercury.png"
+    "image": "SolidMercury.png",
+    "categories": [
+      "crushable_metal_ore",
+      "refined_metal",
+      "refined_metal_variant_1"
+    ]
   },
   {
     "id": "solid_methane",
@@ -406,7 +634,10 @@
   {
     "id": "steel",
     "name": "Steel",
-    "image": "Steel.png"
+    "image": "Steel.png",
+    "categories": [
+      "refined_metal"
+    ]
   },
   {
     "id": "sucrose",
@@ -426,37 +657,63 @@
   {
     "id": "thermium",
     "name": "Thermium",
-    "image": "Thermium.png"
+    "image": "Thermium.png",
+    "categories": [
+      "refined_metal"
+    ]
   },
   {
     "id": "tungsten",
     "name": "Tungsten",
-    "image": "Tungsten.png"
+    "image": "Tungsten.png",
+    "categories": [
+      "crushable_metal_ore",
+      "refined_metal",
+      "refined_metal_variant_1",
+      "abyssalite_group_2"
+    ]
   },
   {
     "id": "uranium_ore",
     "name": "Uranium Ore",
-    "image": "UraniumOre.png"
+    "image": "UraniumOre.png",
+    "categories": [
+      "uranium"
+    ]
   },
   {
     "id": "wolframite",
     "name": "Wolframite",
-    "image": "Wolframite.png"
+    "image": "Wolframite.png",
+    "categories": [
+      "raw_metal_ore"
+    ]
   },
   {
     "id": "iridium",
     "name": "Iridium",
-    "image": "Iridium.png"
+    "image": "Iridium.png",
+    "categories": [
+      "refined_metal_variant_1"
+    ]
   },
   {
     "id": "nickel",
     "name": "Nickel",
-    "image": "Nickel.png"
+    "image": "Nickel.png",
+    "categories": [
+      "refined_metal_variant_1",
+      "nickel"
+    ]
   },
   {
     "id": "nickel_ore",
     "name": "Nickel Ore",
-    "image": "Nickel_Ore.png"
+    "image": "Nickel_Ore.png",
+    "categories": [
+      "rock_crusher_metal_ore",
+      "nickel"
+    ]
   },
   {
     "id": "solid_gunk",

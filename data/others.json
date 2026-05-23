@@ -17,7 +17,10 @@
   {
     "id": "balm_lily_flower",
     "name": "Balm Lily Flower",
-    "image": "BalmLilyFlower.png"
+    "image": "BalmLilyFlower.png",
+    "categories": [
+      "compostable"
+    ]
   },
   {
     "id": "bammoth_patty",
@@ -27,7 +30,10 @@
   {
     "id": "basic_rad_pill",
     "name": "Basic Rad Pill",
-    "image": "BasicRadPill.png"
+    "image": "BasicRadPill.png",
+    "categories": [
+      "basic_rad_pill_group"
+    ]
   },
   {
     "id": "biobot",
@@ -62,7 +68,10 @@
   {
     "id": "egg_shell",
     "name": "Egg Shell",
-    "image": "EggShell.png"
+    "image": "EggShell.png",
+    "categories": [
+      "compostable"
+    ]
   },
   {
     "id": "freshener_spice",
@@ -92,7 +101,10 @@
   {
     "id": "oakshell_molt",
     "name": "Oakshell Molt",
-    "image": "OakshellMolt.png"
+    "image": "OakshellMolt.png",
+    "categories": [
+      "molt_oakshell"
+    ]
   },
   {
     "id": "oxygen_mask",
@@ -102,7 +114,10 @@
   {
     "id": "pokeshell_molt",
     "name": "Pokeshell Molt",
-    "image": "PokeshellMolt.png"
+    "image": "PokeshellMolt.png",
+    "categories": [
+      "molt_pokeshell"
+    ]
   },
   {
     "id": "primo_garb",
@@ -132,7 +147,12 @@
   {
     "id": "rot_pile",
     "name": "Rot Pile",
-    "image": "RotPile.png"
+    "image": "RotPile.png",
+    "categories": [
+      "compostable",
+      "polluted_dirt_group",
+      "polluted_dirt_group_3"
+    ]
   },
   {
     "id": "serum_vial",
@@ -142,12 +162,18 @@
   {
     "id": "small_oakshell_molt",
     "name": "Small Oakshell Molt",
-    "image": "SmallOakshellMolt.png"
+    "image": "SmallOakshellMolt.png",
+    "categories": [
+      "molt_oakshell"
+    ]
   },
   {
     "id": "small_pokeshell_molt",
     "name": "Small Pokeshell Molt",
-    "image": "SmallPokeshellMolt.png"
+    "image": "SmallPokeshellMolt.png",
+    "categories": [
+      "molt_pokeshell"
+    ]
   },
   {
     "id": "reed_fiber",
@@ -157,12 +183,18 @@
   {
     "id": "wood",
     "name": "Wood",
-    "image": "Wood.png"
+    "image": "Wood.png",
+    "categories": [
+      "plywood_group"
+    ]
   },
   {
     "id": "plywood",
     "name": "Plywood",
-    "image": "Plywood.png"
+    "image": "Plywood.png",
+    "categories": [
+      "plywood_group"
+    ]
   },
   {
     "id": "zombie_spores",
@@ -182,7 +214,10 @@
   {
     "id": "snazzy_suit",
     "name": "Snazzy Suit",
-    "image": "SnazzySuit.png"
+    "image": "SnazzySuit.png",
+    "categories": [
+      "snazzy_suit_group"
+    ]
   },
   {
     "id": "table_salt",
@@ -192,12 +227,18 @@
   {
     "id": "vitamin_chews",
     "name": "Vitamin Chews",
-    "image": "VitaminChews.png"
+    "image": "VitaminChews.png",
+    "categories": [
+      "basic_rad_pill_group"
+    ]
   },
   {
     "id": "warm_coat",
     "name": "Warm Coat",
-    "image": "WarmCoat.png"
+    "image": "WarmCoat.png",
+    "categories": [
+      "snazzy_suit_group"
+    ]
   },
   {
     "id": "worn_atmo_suit",
@@ -227,72 +268,114 @@
   {
     "id": "researching_booster",
     "name": "Researching Booster",
-    "image": "Researching_Booster.png"
+    "image": "Researching_Booster.png",
+    "categories": [
+      "booster_2"
+    ]
   },
   {
     "id": "advanced_medical_booster",
     "name": "Advanced Medical Booster",
-    "image": "Advanced_Medical_Booster.png"
+    "image": "Advanced_Medical_Booster.png",
+    "categories": [
+      "booster_2"
+    ]
   },
   {
     "id": "digging_booster",
     "name": "Digging Booster",
-    "image": "Digging_Booster.png"
+    "image": "Digging_Booster.png",
+    "categories": [
+      "booster_2"
+    ]
   },
   {
     "id": "construction_booster",
     "name": "Construction Booster",
-    "image": "Construction_Booster.png"
+    "image": "Construction_Booster.png",
+    "categories": [
+      "booster_2"
+    ]
   },
   {
     "id": "strength_booster",
     "name": "Strength Booster",
-    "image": "Strength_Booster.png"
+    "image": "Strength_Booster.png",
+    "categories": [
+      "booster_2"
+    ]
   },
   {
     "id": "uranium_ore_power_bank",
     "name": "Uranium Ore Power Bank",
-    "image": "Uranium_Ore_Power_Bank.png"
+    "image": "Uranium_Ore_Power_Bank.png",
+    "categories": [
+      "bank_power"
+    ]
   },
   {
     "id": "metal_power_bank",
     "name": "Metal Power Bank",
-    "image": "Metal_Power_Bank.png"
+    "image": "Metal_Power_Bank.png",
+    "categories": [
+      "bank_power"
+    ]
   },
   {
     "id": "tidying_booster",
     "name": "Tidying Booster",
-    "image": "Tidying_Booster.png"
+    "image": "Tidying_Booster.png",
+    "categories": [
+      "booster"
+    ]
   },
   {
     "id": "suit_training_booster",
     "name": "Suit Training Booster",
-    "image": "Suit_Training_Booster.png"
+    "image": "Suit_Training_Booster.png",
+    "categories": [
+      "booster"
+    ]
   },
   {
     "id": "applied_sciences_booster",
     "name": "Applied Sciences Booster",
-    "image": "Applied_Sciences_Booster.png"
+    "image": "Applied_Sciences_Booster.png",
+    "categories": [
+      "booster"
+    ]
   },
   {
     "id": "astronomy_booster",
     "name": "Astronomy Booster",
-    "image": "Astronomy_Booster.png"
+    "image": "Astronomy_Booster.png",
+    "categories": [
+      "booster"
+    ]
   },
   {
     "id": "ranching_booster",
     "name": "Ranching Booster",
-    "image": "Ranching_Booster.png"
+    "image": "Ranching_Booster.png",
+    "categories": [
+      "booster"
+    ]
   },
   {
     "id": "rocketry_booster",
     "name": "Rocketry Booster",
-    "image": "Rocketry_Booster.png"
+    "image": "Rocketry_Booster.png",
+    "categories": [
+      "booster"
+    ]
   },
   {
     "id": "piloting_booster",
     "name": "Piloting Booster",
-    "image": "Piloting_Booster.png"
+    "image": "Piloting_Booster.png",
+    "categories": [
+      "booster"
+    ]
   },
   {
     "id": "mechatronics_engineering_booster",
@@ -302,27 +385,42 @@
   {
     "id": "electrical_engineering_booster",
     "name": "Electrical Engineering Booster",
-    "image": "Electrical_Engineering_Booster.png"
+    "image": "Electrical_Engineering_Booster.png",
+    "categories": [
+      "booster"
+    ]
   },
   {
     "id": "crop_tending_booster",
     "name": "Crop Tending Booster",
-    "image": "Crop_Tending_Booster.png"
+    "image": "Crop_Tending_Booster.png",
+    "categories": [
+      "booster"
+    ]
   },
   {
     "id": "extreme_digging_booster",
     "name": "Extreme Digging Booster",
-    "image": "Extreme_Digging_Booster.png"
+    "image": "Extreme_Digging_Booster.png",
+    "categories": [
+      "booster"
+    ]
   },
   {
     "id": "grilling_booster",
     "name": "Grilling Booster",
-    "image": "Grilling_Booster.png"
+    "image": "Grilling_Booster.png",
+    "categories": [
+      "booster"
+    ]
   },
   {
     "id": "masterworks_art_booster",
     "name": "Masterworks Art Booster",
-    "image": "Masterworks_Art_Booster.png"
+    "image": "Masterworks_Art_Booster.png",
+    "categories": [
+      "booster"
+    ]
   },
   {
     "id": "flydo",
@@ -337,17 +435,26 @@
   {
     "id": "eco_power_bank",
     "name": "Eco Power Bank",
-    "image": "Eco_Power_Bank.png"
+    "image": "Eco_Power_Bank.png",
+    "categories": [
+      "bank_power"
+    ]
   },
   {
     "id": "gear_balm",
     "name": "Gear Balm",
-    "image": "Gear_Balm.png"
+    "image": "Gear_Balm.png",
+    "categories": [
+      "balm_gear"
+    ]
   },
   {
     "id": "tallow_gear_balm",
     "name": "Tallow Gear Balm",
-    "image": "Tallow_Gear_Balm.png"
+    "image": "Tallow_Gear_Balm.png",
+    "categories": [
+      "balm_gear"
+    ]
   },
   {
     "id": "seakomb_leaf",
@@ -357,6 +464,9 @@
   {
     "id": "plant_husk",
     "name": "Plant Husk",
-    "image": "Plant_Husk.png"
+    "image": "Plant_Husk.png",
+    "categories": [
+      "compostable"
+    ]
   }
 ]

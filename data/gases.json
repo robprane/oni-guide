@@ -77,7 +77,10 @@
   {
     "id": "oxygen",
     "name": "Oxygen",
-    "image": "Oxygen.png"
+    "image": "Oxygen.png",
+    "categories": [
+      "oxygen"
+    ]
   },
   {
     "id": "phosphorus_gas",
@@ -87,7 +90,10 @@
   {
     "id": "polluted_oxygen",
     "name": "Polluted Oxygen",
-    "image": "PollutedOxygen.png"
+    "image": "PollutedOxygen.png",
+    "categories": [
+      "oxygen"
+    ]
   },
   {
     "id": "rock_gas",
@@ -143,5 +149,5 @@
     "id": "nickel_gas",
     "name": "Nickel Gas",
     "image": "Nickel_Gas.png"
-   }
+  }
 ]

@@ -2,7 +2,10 @@
   {
     "id": "brackene",
     "name": "Brackene",
-    "image": "Brackene.png"
+    "image": "Brackene.png",
+    "categories": [
+      "brackene_group"
+    ]
   },
   {
     "id": "brine",
@@ -17,7 +20,10 @@
   {
     "id": "ethanol",
     "name": "Ethanol",
-    "image": "Ethanol.png"
+    "image": "Ethanol.png",
+    "categories": [
+      "ethanol_group"
+    ]
   },
   {
     "id": "liquid_carbon",
@@ -47,7 +53,10 @@
   {
     "id": "liquid_naphtha",
     "name": "Liquid Naphtha",
-    "image": "LiquidNaphtha.png"
+    "image": "LiquidNaphtha.png",
+    "categories": [
+      "liquid_naphtha_group"
+    ]
   },
   {
     "id": "liquid_nuclear_waste",
@@ -87,7 +96,10 @@
   {
     "id": "magma",
     "name": "Magma",
-    "image": "Magma.png"
+    "image": "Magma.png",
+    "categories": [
+      "magma_group"
+    ]
   },
   {
     "id": "molten_aluminum",
@@ -107,7 +119,10 @@
   {
     "id": "molten_glass",
     "name": "Molten Glass",
-    "image": "MoltenGlass.png"
+    "image": "MoltenGlass.png",
+    "categories": [
+      "magma_group"
+    ]
   },
   {
     "id": "molten_gold",
@@ -147,12 +162,20 @@
   {
     "id": "nectar",
     "name": "Nectar",
-    "image": "Nectar.png"
+    "image": "Nectar.png",
+    "categories": [
+      "nectar_group"
+    ]
   },
   {
     "id": "petroleum",
     "name": "Petroleum",
-    "image": "Petroleum.png"
+    "image": "Petroleum.png",
+    "categories": [
+      "nectar_group",
+      "ethanol_group",
+      "liquid_naphtha_group"
+    ]
   },
   {
     "id": "polluted_water",
@@ -187,7 +210,10 @@
   {
     "id": "water",
     "name": "Water",
-    "image": "Water.png"
+    "image": "Water.png",
+    "categories": [
+      "brackene_group"
+    ]
   },
   {
     "id": "molten_iridium",

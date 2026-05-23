@@ -2,196 +2,365 @@
   {
     "id": "abyss_nymph_egg",
     "name": "Abyss Nymph Egg",
-    "image": "AbyssNymphEgg.png"
+    "image": "AbyssNymphEgg.png",
+    "categories": [
+      "nymph_egg",
+      "egg_nymph_2",
+      "egg_nymph_5"
+    ]
   },
   {
     "id": "azure_nymph_egg",
     "name": "Azure Nymph Egg",
-    "image": "AzureNymphEgg.png"
+    "image": "AzureNymphEgg.png",
+    "categories": [
+      "nymph_egg",
+      "egg_nymph",
+      "egg_nymph_2",
+      "egg_nymph_5"
+    ]
   },
   {
     "id": "bammini_egg",
     "name": "Bammini Egg",
-    "image": "BamminiEgg.png"
+    "image": "BamminiEgg.png",
+    "categories": [
+      "bammini_egg"
+    ]
   },
   {
     "id": "coral_nymph_egg",
     "name": "Coral Nymph Egg",
-    "image": "CoralNymphEgg.png"
+    "image": "CoralNymphEgg.png",
+    "categories": [
+      "nymph_egg",
+      "egg_nymph",
+      "egg_nymph_3",
+      "egg_nymph_5"
+    ]
   },
   {
     "id": "cuddle_pip_egg",
     "name": "Cuddle Pip Egg",
-    "image": "CuddlePipEgg.png"
+    "image": "CuddlePipEgg.png",
+    "categories": [
+      "critter_egg",
+      "egg_pip"
+    ]
   },
   {
     "id": "delecta_vole_egg",
     "name": "Delecta Vole Egg",
-    "image": "DelectaVoleEgg.png"
+    "image": "DelectaVoleEgg.png",
+    "categories": [
+      "critter_egg",
+      "egg_vole"
+    ]
   },
   {
     "id": "dense_puftlet_egg",
     "name": "Dense Puftlet Egg",
-    "image": "DensePuftletEgg.png"
+    "image": "DensePuftletEgg.png",
+    "categories": [
+      "egg_puftlet",
+      "egg_puftlet_2"
+    ]
   },
   {
     "id": "drecklet_egg",
     "name": "Drecklet Egg",
-    "image": "DreckletEgg.png"
+    "image": "DreckletEgg.png",
+    "categories": [
+      "critter_egg",
+      "drecklet_egg"
+    ]
   },
   {
     "id": "flox_fawn_egg",
     "name": "Flox Fawn Egg",
-    "image": "FloxFawnEgg.png"
+    "image": "FloxFawnEgg.png",
+    "categories": [
+      "critter_egg"
+    ]
   },
   {
     "id": "fry_egg",
     "name": "Fry Egg",
-    "image": "FryEgg.png"
+    "image": "FryEgg.png",
+    "categories": [
+      "egg_fry"
+    ]
   },
   {
     "id": "glossy_drecklet_egg",
     "name": "Glossy Drecklet Egg",
-    "image": "GlossyDreckletEgg.png"
+    "image": "GlossyDreckletEgg.png",
+    "categories": [
+      "critter_egg",
+      "drecklet_egg"
+    ]
   },
   {
     "id": "grubgrub_egg",
     "name": "Grubgrub Egg",
-    "image": "GrubgrubEgg.png"
+    "image": "GrubgrubEgg.png",
+    "categories": [
+      "critter_egg",
+      "egg"
+    ]
   },
   {
     "id": "gulp_fry_egg",
     "name": "Gulp Fry Egg",
-    "image": "GulpFryEgg.png"
+    "image": "GulpFryEgg.png",
+    "categories": [
+      "egg_fry"
+    ]
   },
   {
     "id": "hatchling_egg",
     "name": "Hatchling Egg",
-    "image": "HatchlingEgg.png"
+    "image": "HatchlingEgg.png",
+    "categories": [
+      "critter_egg",
+      "egg_hatchling",
+      "egg_hatchling_2",
+      "egg_hatchling_3"
+    ]
   },
   {
     "id": "larva_egg",
     "name": "Larva Egg",
-    "image": "LarvaEgg.png"
+    "image": "LarvaEgg.png",
+    "categories": [
+      "critter_egg",
+      "egg_larva"
+    ]
   },
   {
     "id": "longhair_larva_egg",
     "name": "Longhair Larva Egg",
-    "image": "LonghairLarvaEgg.png"
+    "image": "LonghairLarvaEgg.png",
+    "categories": [
+      "critter_egg",
+      "egg_larva"
+    ]
   },
   {
     "id": "molten_larva_egg",
     "name": "Molten Larva Egg",
-    "image": "MoltenLarvaEgg.png"
+    "image": "MoltenLarvaEgg.png",
+    "categories": [
+      "critter_egg",
+      "egg_larva"
+    ]
   },
   {
     "id": "oak_pinch_roe",
     "name": "Oak Pinch Roe",
-    "image": "OakPinchRoe.png"
+    "image": "OakPinchRoe.png",
+    "categories": [
+      "critter_egg",
+      "pinch_roe"
+    ]
   },
   {
     "id": "pinch_roe",
     "name": "Pinch Roe",
-    "image": "PinchRoe.png"
+    "image": "PinchRoe.png",
+    "categories": [
+      "critter_egg",
+      "pinch_roe"
+    ]
   },
   {
     "id": "pip_egg",
     "name": "Pip Egg",
-    "image": "PipEgg.png"
+    "image": "PipEgg.png",
+    "categories": [
+      "critter_egg",
+      "egg_pip"
+    ]
   },
   {
     "id": "puftlet_egg",
     "name": "Puftlet Egg",
-    "image": "PuftletEgg.png"
+    "image": "PuftletEgg.png",
+    "categories": [
+      "egg_puftlet",
+      "egg_puftlet_2",
+      "egg_puftlet_3",
+      "egg_puftlet_4"
+    ]
   },
   {
     "id": "puftlet_prince_egg",
     "name": "Puftlet Prince Egg",
-    "image": "PuftletPrinceEgg.png"
+    "image": "PuftletPrinceEgg.png",
+    "categories": [
+      "egg_puftlet",
+      "egg_puftlet_2",
+      "egg_puftlet_3",
+      "egg_puftlet_4"
+    ]
   },
   {
     "id": "radiant_nymph_egg",
     "name": "Radiant Nymph Egg",
-    "image": "RadiantNymphEgg.png"
+    "image": "RadiantNymphEgg.png",
+    "categories": [
+      "nymph_egg",
+      "egg_nymph_2",
+      "egg_nymph_6"
+    ]
   },
   {
     "id": "regal_bammini_egg",
     "name": "Regal Bammini Egg",
-    "image": "RegalBamminiEgg.png"
+    "image": "RegalBamminiEgg.png",
+    "categories": [
+      "bammini_egg"
+    ]
   },
   {
     "id": "royal_nymph_egg",
     "name": "Royal Nymph Egg",
-    "image": "RoyalNymphEgg.png"
+    "image": "RoyalNymphEgg.png",
+    "categories": [
+      "nymph_egg",
+      "egg_nymph",
+      "egg_nymph_3",
+      "egg_nymph_4"
+    ]
   },
   {
     "id": "sage_hatchling_egg",
     "name": "Sage Hatchling Egg",
-    "image": "SageHatchlingEgg.png"
+    "image": "SageHatchlingEgg.png",
+    "categories": [
+      "critter_egg",
+      "egg_hatchling",
+      "egg_hatchling_3"
+    ]
   },
   {
     "id": "sani_pinch_roe",
     "name": "Sani Pinch Roe",
-    "image": "SaniPinchRoe.png"
+    "image": "SaniPinchRoe.png",
+    "categories": [
+      "critter_egg",
+      "pinch_roe"
+    ]
   },
   {
     "id": "shine_nymph_egg",
     "name": "Shine Nymph Egg",
-    "image": "ShineNymphEgg.png"
+    "image": "ShineNymphEgg.png",
+    "categories": [
+      "nymph_egg",
+      "egg_nymph_4",
+      "egg_nymph_6",
+      "egg_nymph_7"
+    ]
   },
   {
     "id": "shove_vole_egg",
     "name": "Shove Vole Egg",
-    "image": "ShoveVoleEgg.png"
+    "image": "ShoveVoleEgg.png",
+    "categories": [
+      "critter_egg",
+      "egg_vole"
+    ]
   },
   {
     "id": "slug_egg",
     "name": "Slug Egg",
-    "image": "SlugEgg.png"
+    "image": "SlugEgg.png",
+    "categories": [
+      "critter_egg",
+      "egg_slug"
+    ]
   },
   {
     "id": "smog_slug_egg",
     "name": "Smog Slug Egg",
-    "image": "SmogSlugEgg.png"
+    "image": "SmogSlugEgg.png",
+    "categories": [
+      "critter_egg",
+      "egg_slug"
+    ]
   },
   {
     "id": "smooth_hatchling_egg",
     "name": "Smooth Hatchling Egg",
-    "image": "SmoothHatchlingEgg.png"
+    "image": "SmoothHatchlingEgg.png",
+    "categories": [
+      "critter_egg",
+      "egg_hatchling_2"
+    ]
   },
   {
     "id": "spigot_pup_egg",
     "name": "Spigot Pup Egg",
-    "image": "SpigotPupEgg.png"
+    "image": "SpigotPupEgg.png",
+    "categories": [
+      "critter_egg"
+    ]
   },
   {
     "id": "sponge_slug_egg",
     "name": "Sponge Slug Egg",
-    "image": "SpongeSlugEgg.png"
+    "image": "SpongeSlugEgg.png",
+    "categories": [
+      "critter_egg",
+      "egg_slug"
+    ]
   },
   {
     "id": "squeaky_puftlet_egg",
     "name": "Squeaky Puftlet Egg",
-    "image": "SqueakyPuftletEgg.png"
+    "image": "SqueakyPuftletEgg.png",
+    "categories": [
+      "egg_puftlet",
+      "egg_puftlet_3"
+    ]
   },
   {
     "id": "stone_hatchling_egg",
     "name": "Stone Hatchling Egg",
-    "image": "StoneHatchlingEgg.png"
+    "image": "StoneHatchlingEgg.png",
+    "categories": [
+      "critter_egg",
+      "egg_hatchling",
+      "egg_hatchling_2"
+    ]
   },
   {
     "id": "sun_nymph_egg",
     "name": "Sun Nymph Egg",
-    "image": "SunNymphEgg.png"
+    "image": "SunNymphEgg.png",
+    "categories": [
+      "nymph_egg",
+      "egg_nymph_3",
+      "egg_nymph_4",
+      "egg_nymph_7"
+    ]
   },
   {
     "id": "sweetle_egg",
     "name": "Sweetle Egg",
-    "image": "SweetleEgg.png"
+    "image": "SweetleEgg.png",
+    "categories": [
+      "critter_egg",
+      "egg"
+    ]
   },
   {
     "id": "tropical_fry_egg",
     "name": "Tropical Fry Egg",
-    "image": "TropicalFryEgg.png"
+    "image": "TropicalFryEgg.png",
+    "categories": [
+      "egg_fry"
+    ]
   }
 ]
