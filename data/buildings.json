@@ -337,7 +337,10 @@
   {
     "id": "sink",
     "name": "Sink",
-    "image": "Sink.png"
+    "image": "Sink.png",
+    "categories": [
+      "sink_group"
+    ]
   },
   {
     "id": "sludge_press",
@@ -402,7 +405,10 @@
   {
     "id": "wash_basin",
     "name": "Wash Basin",
-    "image": "WashBasin.png"
+    "image": "WashBasin.png",
+    "categories": [
+      "sink_group"
+    ]
   },
   {
     "id": "water_cooler",

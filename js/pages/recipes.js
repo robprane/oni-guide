@@ -27,6 +27,86 @@ async function loadData() {
                 }
             });
 
+            // Expand recipes with categories
+            let expandedRecipes = [];
+
+            // Helper to get all items by category
+            const getItemsByCategory = (catName) => {
+                return Object.values(allItems).filter(item => item.categories && item.categories.includes(catName));
+            };
+
+            recipesData.forEach(r => {
+                // Determine source variations
+                let sourceVariations = [r.source];
+                if (r.sourceCategory) {
+                    sourceVariations = getItemsByCategory(r.sourceCategory).map(i => i.id);
+                }
+
+                // Determine consumed variations
+                let consumedVariations = [[]];
+                if (r.consumed) {
+                    r.consumed.forEach(c => {
+                        if (c.category) {
+                            const catItems = getItemsByCategory(c.category).map(i => i.id);
+                            let nextVariations = [];
+                            consumedVariations.forEach(cv => {
+                                catItems.forEach(ci => {
+                                    const newC = { ...c, element: ci };
+                                    delete newC.category;
+                                    nextVariations.push([...cv, newC]);
+                                });
+                            });
+                            consumedVariations = nextVariations;
+                        } else {
+                            consumedVariations.forEach(cv => cv.push(c));
+                        }
+                    });
+                } else {
+                    consumedVariations = [null];
+                }
+
+                // Determine produced variations
+                let producedVariations = [[]];
+                if (r.produced) {
+                    r.produced.forEach(p => {
+                        if (p.category) {
+                            const catItems = getItemsByCategory(p.category).map(i => i.id);
+                            let nextVariations = [];
+                            producedVariations.forEach(pv => {
+                                catItems.forEach(pi => {
+                                    const newP = { ...p, element: pi };
+                                    delete newP.category;
+                                    nextVariations.push([...pv, newP]);
+                                });
+                            });
+                            producedVariations = nextVariations;
+                        } else {
+                            producedVariations.forEach(pv => pv.push(p));
+                        }
+                    });
+                } else {
+                    producedVariations = [null];
+                }
+
+                // Cartesian product of variations
+                sourceVariations.forEach(sv => {
+                    consumedVariations.forEach(cv => {
+                        producedVariations.forEach(pv => {
+                            let newRecipe = { ...r };
+                            if (sv !== undefined) newRecipe.source = sv;
+                            delete newRecipe.sourceCategory;
+
+                            if (cv !== null) newRecipe.consumed = cv;
+                            if (pv !== null) newRecipe.produced = pv;
+
+                            expandedRecipes.push(newRecipe);
+                        });
+                    });
+                });
+            });
+
+            recipesData = expandedRecipes;
+
         } catch (error) {
             console.error("Failed to load data:", error);
         }

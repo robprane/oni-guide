@@ -2,17 +2,31 @@
   {
     "id": "abyss_bug",
     "name": "Abyss Bug",
-    "image": "AbyssBug.png"
+    "image": "AbyssBug.png",
+    "categories": [
+      "bug_2",
+      "bug_7",
+      "bug_9"
+    ]
   },
   {
     "id": "azure_bug",
     "name": "Azure Bug",
-    "image": "AzureBug.png"
+    "image": "AzureBug.png",
+    "categories": [
+      "bug",
+      "bug_2",
+      "bug_5",
+      "bug_9"
+    ]
   },
   {
     "id": "bammoth",
     "name": "Bammoth",
-    "image": "Bammoth.png"
+    "image": "Bammoth.png",
+    "categories": [
+      "bammoth"
+    ]
   },
   {
     "id": "beeta_hive",
@@ -27,152 +41,273 @@
   {
     "id": "coral_bug",
     "name": "Coral Bug",
-    "image": "CoralBug.png"
+    "image": "CoralBug.png",
+    "categories": [
+      "bug",
+      "bug_2",
+      "bug_4",
+      "bug_5",
+      "bug_8"
+    ]
   },
   {
     "id": "cuddle_pip",
     "name": "Cuddle Pip",
-    "image": "CuddlePip.png"
+    "image": "CuddlePip.png",
+    "categories": [
+      "cuddle_pip_group",
+      "pip"
+    ]
   },
   {
     "id": "delecta_vole",
     "name": "Delecta Vole",
-    "image": "DelectaVole.png"
+    "image": "DelectaVole.png",
+    "categories": [
+      "vole"
+    ]
   },
   {
     "id": "dense_puft",
     "name": "Dense Puft",
-    "image": "DensePuft.png"
+    "image": "DensePuft.png",
+    "categories": [
+      "ranchable_critter",
+      "puft",
+      "puft_2"
+    ]
   },
   {
     "id": "drecko",
     "name": "Drecko",
-    "image": "Drecko.png"
+    "image": "Drecko.png",
+    "categories": [
+      "ranchable_critter",
+      "drecko"
+    ]
   },
   {
     "id": "flox",
     "name": "Flox",
-    "image": "Flox.png"
+    "image": "Flox.png",
+    "categories": [
+      "cuddle_pip_group"
+    ]
   },
   {
     "id": "gassy_moo",
     "name": "Gassy Moo",
-    "image": "GassyMoo.png"
+    "image": "GassyMoo.png",
+    "categories": [
+      "moo"
+    ]
   },
   {
     "id": "glossy_drecko",
     "name": "Glossy Drecko",
-    "image": "GlossyDrecko.png"
+    "image": "GlossyDrecko.png",
+    "categories": [
+      "ranchable_critter",
+      "drecko"
+    ]
   },
   {
     "id": "grubgrub",
     "name": "Grubgrub",
-    "image": "Grubgrub.png"
+    "image": "Grubgrub.png",
+    "categories": [
+      "slug_critter"
+    ]
   },
   {
     "id": "gulp_fish",
     "name": "Gulp Fish",
-    "image": "GulpFish.png"
+    "image": "GulpFish.png",
+    "categories": [
+      "gulp_fish_group"
+    ]
   },
   {
     "id": "hatch",
     "name": "Hatch",
-    "image": "Hatch.png"
+    "image": "Hatch.png",
+    "categories": [
+      "hatch",
+      "hatch_2",
+      "hatch_3",
+      "hatch_5"
+    ]
   },
   {
     "id": "longhair_slickster",
     "name": "Longhair Slickster",
-    "image": "LonghairSlickster.png"
+    "image": "LonghairSlickster.png",
+    "categories": [
+      "ranchable_critter"
+    ]
   },
   {
     "id": "molten_slickster",
     "name": "Molten Slickster",
-    "image": "MoltenSlickster.png"
+    "image": "MoltenSlickster.png",
+    "categories": [
+      "slug_critter",
+      "slickster"
+    ]
   },
   {
     "id": "oakshell",
     "name": "Oakshell",
-    "image": "Oakshell.png"
+    "image": "Oakshell.png",
+    "categories": [
+      "oakshell_group"
+    ]
   },
   {
     "id": "pacu",
     "name": "Pacu",
-    "image": "Pacu.png"
+    "image": "Pacu.png",
+    "categories": [
+      "gulp_fish_group"
+    ]
   },
   {
     "id": "pip",
     "name": "Pip",
-    "image": "Pip.png"
+    "image": "Pip.png",
+    "categories": [
+      "cuddle_pip_group",
+      "pip"
+    ]
   },
   {
     "id": "plug_slug",
     "name": "Plug Slug",
-    "image": "PlugSlug.png"
+    "image": "PlugSlug.png",
+    "categories": [
+      "slug_critter",
+      "slug"
+    ]
   },
   {
     "id": "pokeshell",
     "name": "Pokeshell",
-    "image": "Pokeshell.png"
+    "image": "Pokeshell.png",
+    "categories": [
+      "oakshell_group",
+      "pokeshell_group"
+    ]
   },
   {
     "id": "puft",
     "name": "Puft",
-    "image": "Puft.png"
+    "image": "Puft.png",
+    "categories": [
+      "ranchable_critter",
+      "puft",
+      "puft_2",
+      "puft_3"
+    ]
   },
   {
     "id": "puft_prince",
     "name": "Puft Prince",
-    "image": "PuftPrince.png"
+    "image": "PuftPrince.png",
+    "categories": [
+      "ranchable_critter",
+      "puft"
+    ]
   },
   {
     "id": "radiant_bug",
     "name": "Radiant Bug",
-    "image": "RadiantBug.png"
+    "image": "RadiantBug.png",
+    "categories": [
+      "bug_7"
+    ]
   },
   {
     "id": "regal_bammoth",
     "name": "Regal Bammoth",
-    "image": "RegalBammoth.png"
+    "image": "RegalBammoth.png",
+    "categories": [
+      "bammoth"
+    ]
   },
   {
     "id": "royal_bug",
     "name": "Royal Bug",
-    "image": "RoyalBug.png"
+    "image": "RoyalBug.png",
+    "categories": [
+      "bug",
+      "bug_3",
+      "bug_4",
+      "bug_8"
+    ]
   },
   {
     "id": "sage_hatch",
     "name": "Sage Hatch",
-    "image": "SageHatch.png"
+    "image": "SageHatch.png",
+    "categories": [
+      "hatch",
+      "hatch_3"
+    ]
   },
   {
     "id": "sanishell",
     "name": "Sanishell",
-    "image": "Sanishell.png"
+    "image": "Sanishell.png",
+    "categories": [
+      "oakshell_group",
+      "pokeshell_group"
+    ]
   },
   {
     "id": "shine_bug",
     "name": "Shine Bug",
-    "image": "ShineBug.png"
+    "image": "ShineBug.png",
+    "categories": [
+      "bug_3",
+      "bug_6"
+    ]
   },
   {
     "id": "shove_vole",
     "name": "Shove Vole",
-    "image": "ShoveVole.png"
+    "image": "ShoveVole.png",
+    "categories": [
+      "vole"
+    ]
   },
   {
     "id": "slickster",
     "name": "Slickster",
-    "image": "Slickster.png"
+    "image": "Slickster.png",
+    "categories": [
+      "slug_critter",
+      "slickster"
+    ]
   },
   {
     "id": "smog_slug",
     "name": "Smog Slug",
-    "image": "SmogSlug.png"
+    "image": "SmogSlug.png",
+    "categories": [
+      "slug_critter",
+      "slug",
+      "slug_2"
+    ]
   },
   {
     "id": "smooth_hatch",
     "name": "Smooth Hatch",
-    "image": "SmoothHatch.png"
+    "image": "SmoothHatch.png",
+    "categories": [
+      "hatch",
+      "hatch_2",
+      "hatch_4"
+    ]
   },
   {
     "id": "spigot_seal",
@@ -182,36 +317,66 @@
   {
     "id": "sponge_slug",
     "name": "Sponge Slug",
-    "image": "SpongeSlug.png"
+    "image": "SpongeSlug.png",
+    "categories": [
+      "slug_critter",
+      "slug",
+      "slug_2"
+    ]
   },
   {
     "id": "squeaky_puft",
     "name": "Squeaky Puft",
-    "image": "SqueakyPuft.png"
+    "image": "SqueakyPuft.png",
+    "categories": [
+      "ranchable_critter",
+      "puft",
+      "puft_3"
+    ]
   },
   {
     "id": "stone_hatch",
     "name": "Stone Hatch",
-    "image": "StoneHatch.png"
+    "image": "StoneHatch.png",
+    "categories": [
+      "hatch",
+      "hatch_2",
+      "hatch_4",
+      "hatch_5"
+    ]
   },
   {
     "id": "sun_bug",
     "name": "Sun Bug",
-    "image": "SunBug.png"
+    "image": "SunBug.png",
+    "categories": [
+      "bug_3",
+      "bug_4",
+      "bug_6"
+    ]
   },
   {
     "id": "sweetle",
     "name": "Sweetle",
-    "image": "Sweetle.png"
+    "image": "Sweetle.png",
+    "categories": [
+      "ranchable_critter"
+    ]
   },
   {
     "id": "tropical_pacu",
     "name": "Tropical Pacu",
-    "image": "TropicalPacu.png"
+    "image": "TropicalPacu.png",
+    "categories": [
+      "gulp_fish_group"
+    ]
   },
   {
     "id": "husky_moo",
     "name": "Husky Moo",
-    "image": "Husky_Moo.png"
+    "image": "Husky_Moo.png",
+    "categories": [
+      "moo"
+    ]
   }
 ]

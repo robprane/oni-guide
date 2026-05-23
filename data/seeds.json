@@ -2,91 +2,145 @@
   {
     "id": "alveo_vera_seed",
     "name": "Alveo Vera Seed",
-    "image": "AlveoVeraSeed.png"
+    "image": "AlveoVeraSeed.png",
+    "categories": [
+      "seed"
+    ]
   },
   {
     "id": "balm_lily_seed",
     "name": "Balm Lily Seed",
-    "image": "BalmLilySeed.png"
+    "image": "BalmLilySeed.png",
+    "categories": [
+      "seed"
+    ]
   },
   {
     "id": "blossom_seed",
     "name": "Blossom Seed",
-    "image": "BlossomSeed.png"
+    "image": "BlossomSeed.png",
+    "categories": [
+      "seed"
+    ]
   },
   {
     "id": "bog_bucket_seed",
     "name": "Bog Bucket Seed",
-    "image": "BogBucketSeed.png"
+    "image": "BogBucketSeed.png",
+    "categories": [
+      "seed"
+    ]
   },
   {
     "id": "bonbon_tree_seed",
     "name": "Bonbon Tree Seed",
-    "image": "BonbonTreeSeed.png"
+    "image": "BonbonTreeSeed.png",
+    "categories": [
+      "seed"
+    ]
   },
   {
     "id": "dasha_saltvine_seed",
     "name": "Dasha Saltvine Seed",
-    "image": "DashaSaltvineSeed.png"
+    "image": "DashaSaltvineSeed.png",
+    "categories": [
+      "seed"
+    ]
   },
   {
     "id": "gas_grass_seed",
     "name": "Gas Grass Seed",
-    "image": "GasGrassSeed.png"
+    "image": "GasGrassSeed.png",
+    "categories": [
+      "seed"
+    ]
   },
   {
     "id": "grubfruit_seed",
     "name": "Grubfruit Seed",
-    "image": "GrubfruitSeed.png"
+    "image": "GrubfruitSeed.png",
+    "categories": [
+      "seed"
+    ]
   },
   {
     "id": "mealwood_seed",
     "name": "Mealwood Seed",
-    "image": "MealwoodSeed.png"
+    "image": "MealwoodSeed.png",
+    "categories": [
+      "seed"
+    ]
   },
   {
     "id": "pikeapple_bush_seed",
     "name": "Pikeapple Bush Seed",
-    "image": "PikeappleBushSeed.png"
+    "image": "PikeappleBushSeed.png",
+    "categories": [
+      "seed"
+    ]
   },
   {
     "id": "pincha_pepper_seed",
     "name": "Pincha Pepper Seed",
-    "image": "PinchaPepperSeed.png"
+    "image": "PinchaPepperSeed.png",
+    "categories": [
+      "seed"
+    ]
   },
   {
     "id": "plant_seeds",
     "name": "Plant seeds",
-    "image": "Plantseeds.png"
+    "image": "Plantseeds.png",
+    "categories": [
+      "compostable"
+    ]
   },
   {
     "id": "plume_squash_seed",
     "name": "Plume Squash Seed",
-    "image": "PlumeSquashSeed.png"
+    "image": "PlumeSquashSeed.png",
+    "categories": [
+      "seed"
+    ]
   },
   {
     "id": "sleet_wheat_grain",
     "name": "Sleet Wheat Grain",
-    "image": "SleetWheatGrain.png"
+    "image": "SleetWheatGrain.png",
+    "categories": [
+      "seed"
+    ]
   },
   {
     "id": "fungal_spore",
     "name": "Fungal Spore",
-    "image": "FungalSpore.png"
+    "image": "FungalSpore.png",
+    "categories": [
+      "seed"
+    ]
   },
   {
     "id": "thimble_reed_seed",
     "name": "Thimble Reed Seed",
-    "image": "ThimbleReedSeed.png"
+    "image": "ThimbleReedSeed.png",
+    "categories": [
+      "seed"
+    ]
   },
   {
     "id": "nosh_bean",
     "name": "Nosh Bean",
-    "image": "NoshBean.png"
+    "image": "NoshBean.png",
+    "categories": [
+      "seed"
+    ]
   },
   {
     "id": "waterweed_seed",
     "name": "Waterweed Seed",
-    "image": "WaterweedSeed.png"
+    "image": "WaterweedSeed.png",
+    "categories": [
+      "seed"
+    ]
   }
 ]
