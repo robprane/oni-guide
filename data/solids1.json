@@ -1,0 +1,486 @@
+[
+  {
+    "id": "abyssalite",
+    "name": "Abyssalite",
+    "image": "Abyssalite.png"
+  },
+  {
+    "id": "algae",
+    "name": "Algae",
+    "image": "Algae.png"
+  },
+  {
+    "id": "aluminum",
+    "name": "Aluminum",
+    "image": "Aluminum.png"
+  },
+  {
+    "id": "aluminum_ore",
+    "name": "Aluminum Ore",
+    "image": "AluminumOre.png"
+  },
+  {
+    "id": "bleach_stone",
+    "name": "Bleach Stone",
+    "image": "BleachStone.png"
+  },
+  {
+    "id": "brackwax",
+    "name": "Brackwax",
+    "image": "Brackwax.png"
+  },
+  {
+    "id": "brine_ice",
+    "name": "Brine Ice",
+    "image": "BrineIce.png"
+  },
+  {
+    "id": "ceramic",
+    "name": "Ceramic",
+    "image": "Ceramic.png"
+  },
+  {
+    "id": "cinnabar_ore",
+    "name": "Cinnabar Ore",
+    "image": "CinnabarOre.png"
+  },
+  {
+    "id": "clay",
+    "name": "Clay",
+    "image": "Clay.png"
+  },
+  {
+    "id": "coal",
+    "name": "Coal",
+    "image": "Coal.png"
+  },
+  {
+    "id": "cobalt",
+    "name": "Cobalt",
+    "image": "Cobalt.png"
+  },
+  {
+    "id": "cobalt_ore",
+    "name": "Cobalt Ore",
+    "image": "CobaltOre.png"
+  },
+  {
+    "id": "copper",
+    "name": "Copper",
+    "image": "Copper.png"
+  },
+  {
+    "id": "copper_ore",
+    "name": "Copper Ore",
+    "image": "CopperOre.png"
+  },
+  {
+    "id": "corium",
+    "name": "Corium",
+    "image": "Corium.png"
+  },
+  {
+    "id": "crashed_rock",
+    "name": "Crashed Rock",
+    "image": "CrashedRock.png"
+  },
+  {
+    "id": "crushed_ice",
+    "name": "Crushed Ice",
+    "image": "CrushedIce.png"
+  },
+  {
+    "id": "crushed_rock",
+    "name": "Crushed Rock",
+    "image": "CrushedRock.png"
+  },
+  {
+    "id": "depleted_uranium",
+    "name": "Depleted Uranium",
+    "image": "DepletedUranium.png"
+  },
+  {
+    "id": "diamond",
+    "name": "Diamond",
+    "image": "Diamond.png"
+  },
+  {
+    "id": "dirt",
+    "name": "Dirt",
+    "image": "Dirt.png",
+    "type": "Solid",
+    "melting_point": 326.8,
+    "melting_product": "sand",
+    "description": "Basic soil."
+  },
+  {
+    "id": "electrum",
+    "name": "Electrum",
+    "image": "Electrum.png"
+  },
+  {
+    "id": "enriched_uranium",
+    "name": "Enriched Uranium",
+    "image": "EnrichedUranium.png"
+  },
+  {
+    "id": "fertilizer",
+    "name": "Fertilizer",
+    "image": "Fertilizer.png"
+  },
+  {
+    "id": "fossil",
+    "name": "Fossil",
+    "image": "Fossil.png"
+  },
+  {
+    "id": "frozen_brackene",
+    "name": "Frozen Brackene",
+    "image": "FrozenBrackene.png"
+  },
+  {
+    "id": "fullerene",
+    "name": "Fullerene",
+    "image": "Fullerene.png"
+  },
+  {
+    "id": "glass",
+    "name": "Glass",
+    "image": "Glass.png"
+  },
+  {
+    "id": "gold",
+    "name": "Gold",
+    "image": "Gold.png"
+  },
+  {
+    "id": "gold_amalgam",
+    "name": "Gold Amalgam",
+    "image": "GoldAmalgam.png"
+  },
+  {
+    "id": "granite",
+    "name": "Granite",
+    "image": "Granite.png"
+  },
+  {
+    "id": "graphite",
+    "name": "Graphite",
+    "image": "Graphite.png"
+  },
+  {
+    "id": "ice",
+    "name": "Ice",
+    "image": "Ice.png"
+  },
+  {
+    "id": "igneous_rock",
+    "name": "Igneous Rock",
+    "image": "IgneousRock.png"
+  },
+  {
+    "id": "insulation",
+    "name": "Insulation",
+    "image": "Insulation.png"
+  },
+  {
+    "id": "insulite",
+    "name": "Insulite",
+    "image": "Insulite.png"
+  },
+  {
+    "id": "iron",
+    "name": "Iron",
+    "image": "Iron.png"
+  },
+  {
+    "id": "iron_ore",
+    "name": "Iron Ore",
+    "image": "IronOre.png"
+  },
+  {
+    "id": "isosap",
+    "name": "Isosap",
+    "image": "Isosap.png"
+  },
+  {
+    "id": "solid_sap",
+    "name": "Solid Sap",
+    "image": "Isosap.png"
+  },
+  {
+    "id": "lead",
+    "name": "Lead",
+    "image": "Lead.png"
+  },
+  {
+    "id": "zinc",
+    "name": "Zinc",
+    "image": "Zinc.png"
+  },
+  {
+    "id": "zinc_ore",
+    "name": "Zinc Ore",
+    "image": "ZincOre.png"
+  },
+  {
+    "id": "lime",
+    "name": "Lime",
+    "image": "Lime.png"
+  },
+  {
+    "id": "mafic_rock",
+    "name": "Mafic Rock",
+    "image": "MaficRock.png"
+  },
+  {
+    "id": "mud",
+    "name": "Mud",
+    "image": "Mud.png"
+  },
+  {
+    "id": "neutronium",
+    "name": "Neutronium",
+    "image": "Neutronium.png"
+  },
+  {
+    "id": "niobium",
+    "name": "Niobium",
+    "image": "Niobium.png"
+  },
+  {
+    "id": "obsidian",
+    "name": "Obsidian",
+    "image": "Obsidian.png"
+  },
+  {
+    "id": "oxylite",
+    "name": "Oxylite",
+    "image": "Oxylite.png"
+  },
+  {
+    "id": "phosphorite",
+    "name": "Phosphorite",
+    "image": "Phosphorite.png"
+  },
+  {
+    "id": "plastic",
+    "name": "Plastic",
+    "image": "Plastic.png"
+  },
+  {
+    "id": "plastium",
+    "name": "Plastium",
+    "image": "Plastium.png"
+  },
+  {
+    "id": "polluted_dirt",
+    "name": "Polluted Dirt",
+    "image": "PollutedDirt.png"
+  },
+  {
+    "id": "polluted_ice",
+    "name": "Polluted Ice",
+    "image": "PollutedIce.png"
+  },
+  {
+    "id": "polluted_mud",
+    "name": "Polluted Mud",
+    "image": "PollutedMud.png"
+  },
+  {
+    "id": "pyrite",
+    "name": "Pyrite",
+    "image": "Pyrite.png"
+  },
+  {
+    "id": "radium",
+    "name": "Radium",
+    "image": "Radium.png"
+  },
+  {
+    "id": "refined_carbon",
+    "name": "Refined Carbon",
+    "image": "RefinedCarbon.png"
+  },
+  {
+    "id": "refined_phosphorus",
+    "name": "Refined Phosphorus",
+    "image": "RefinedPhosphorus.png"
+  },
+  {
+    "id": "regolith",
+    "name": "Regolith",
+    "image": "Regolith.png"
+  },
+  {
+    "id": "rust",
+    "name": "Rust",
+    "image": "Rust.png"
+  },
+  {
+    "id": "salt",
+    "name": "Salt",
+    "image": "Salt.png"
+  },
+  {
+    "id": "sand",
+    "name": "Sand",
+    "image": "Sand.png"
+  },
+  {
+    "id": "sandstone",
+    "name": "Sandstone",
+    "image": "Sandstone.png"
+  },
+  {
+    "id": "sedimentary_rock",
+    "name": "Sedimentary Rock",
+    "image": "SedimentaryRock.png"
+  },
+  {
+    "id": "slime",
+    "name": "Slime",
+    "image": "Slime.png"
+  },
+  {
+    "id": "snow",
+    "name": "Snow",
+    "image": "Snow.png"
+  },
+  {
+    "id": "solid_carbon_dioxide",
+    "name": "Solid Carbon Dioxide",
+    "image": "SolidCarbonDioxide.png"
+  },
+  {
+    "id": "solid_chlorine",
+    "name": "Solid Chlorine",
+    "image": "SolidChlorine.png"
+  },
+  {
+    "id": "solid_crude_oil",
+    "name": "Solid Crude Oil",
+    "image": "SolidCrudeOil.png"
+  },
+  {
+    "id": "solid_ethanol",
+    "name": "Solid Ethanol",
+    "image": "SolidEthanol.png"
+  },
+  {
+    "id": "solid_hydrogen",
+    "name": "Solid Hydrogen",
+    "image": "SolidHydrogen.png"
+  },
+  {
+    "id": "solid_mercury",
+    "name": "Solid Mercury",
+    "image": "SolidMercury.png"
+  },
+  {
+    "id": "solid_methane",
+    "name": "Solid Methane",
+    "image": "SolidMethane.png"
+  },
+  {
+    "id": "solid_naphtha",
+    "name": "Solid Naphtha",
+    "image": "SolidNaphtha.png"
+  },
+  {
+    "id": "solid_nuclear_waste",
+    "name": "Solid Nuclear Waste",
+    "image": "SolidNuclearWaste.png"
+  },
+  {
+    "id": "solid_oxygen",
+    "name": "Solid Oxygen",
+    "image": "SolidOxygen.png"
+  },
+  {
+    "id": "solid_petroleum",
+    "name": "Solid Petroleum",
+    "image": "SolidPetroleum.png"
+  },
+  {
+    "id": "solid_resin",
+    "name": "Solid Resin",
+    "image": "SolidResin.png"
+  },
+  {
+    "id": "solid_super_coolant",
+    "name": "Solid Super Coolant",
+    "image": "SolidSuperCoolant.png"
+  },
+  {
+    "id": "solid_visco_gel",
+    "name": "Solid Visco-Gel",
+    "image": "SolidViscoGel.png"
+  },
+  {
+    "id": "steel",
+    "name": "Steel",
+    "image": "Steel.png"
+  },
+  {
+    "id": "sucrose",
+    "name": "Sucrose",
+    "image": "Sucrose.png"
+  },
+  {
+    "id": "sulfur",
+    "name": "Sulfur",
+    "image": "Sulfur.png"
+  },
+  {
+    "id": "tallow",
+    "name": "Tallow",
+    "image": "Tallow.png"
+  },
+  {
+    "id": "thermium",
+    "name": "Thermium",
+    "image": "Thermium.png"
+  },
+  {
+    "id": "tungsten",
+    "name": "Tungsten",
+    "image": "Tungsten.png"
+  },
+  {
+    "id": "uranium_ore",
+    "name": "Uranium Ore",
+    "image": "UraniumOre.png"
+  },
+  {
+    "id": "wolframite",
+    "name": "Wolframite",
+    "image": "Wolframite.png"
+  },
+  {
+    "id": "iridium",
+    "name": "Iridium",
+    "image": "Iridium.png"
+  },
+  {
+    "id": "nickel",
+    "name": "Nickel",
+    "image": "Nickel.png"
+  },
+  {
+    "id": "nickel_ore",
+    "name": "Nickel Ore",
+    "image": "Nickel_Ore.png"
+  },
+  {
+    "id": "solid_gunk",
+    "name": "Solid Gunk",
+    "image": "Solid_Gunk.png"
+  },
+  {
+    "id": "frozen_phyto_oil",
+    "name": "Frozen Phyto Oil",
+    "image": "Frozen_Phyto_Oil.png"
+  }
+]

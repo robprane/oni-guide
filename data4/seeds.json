@@ -1,0 +1,217 @@
+[
+  {
+    "id": "basic_single_harvest_plant_seed",
+    "name": "Mealwood Seed",
+    "image": "MealwoodSeed.png"
+  },
+  {
+    "id": "bean_plant_seed",
+    "name": "bean_plant_seed",
+    "image": "BeanPlantSeed.png"
+  },
+  {
+    "id": "blue_grass_seed",
+    "name": "blue_grass_seed",
+    "image": "BlueGrassSeed.png"
+  },
+  {
+    "id": "bulbloom_seed",
+    "name": "Bulbloom Seed",
+    "image": "BulbloomSeed.png"
+  },
+  {
+    "id": "bulb_plant_seed",
+    "name": "Buddy Bud Seed",
+    "image": "BulbPlantSeed.png"
+  },
+  {
+    "id": "butterfly_plant_seed",
+    "name": "butterfly_plant_seed",
+    "image": "ButterflyPlantSeed.png"
+  },
+  {
+    "id": "cactus_plant_seed",
+    "name": "Joya Seed",
+    "image": "CactusPlantSeed.png"
+  },
+  {
+    "id": "carrot_plant_seed",
+    "name": "Plume Squash Seed",
+    "image": "PlumeSquashSeed.png"
+  },
+  {
+    "id": "clam_seed",
+    "name": "Clampum Seed",
+    "image": "ClamSeed.png"
+  },
+  {
+    "id": "cold_breather_seed",
+    "name": "Wort Seed",
+    "image": "ColdBreatherSeed.png"
+  },
+  {
+    "id": "cold_wheat_seed",
+    "name": "Sleet Wheat Grain",
+    "image": "SleetWheatGrain.png"
+  },
+  {
+    "id": "cylindrica_seed",
+    "name": "Bliss Burst Seed",
+    "image": "CylindricaSeed.png"
+  },
+  {
+    "id": "dew_dripper_plant_seed",
+    "name": "Dew Seed",
+    "image": "Dew_Seed.png"
+  },
+  {
+    "id": "dinofern_seed",
+    "name": "Megafrond Spore",
+    "image": "DinofernSeed.png"
+  },
+  {
+    "id": "evil_flower_seed",
+    "name": "Sporechid Seed",
+    "image": "EvilFlowerSeed.png"
+  },
+  {
+    "id": "filter_plant_seed",
+    "name": "Hydrocactus Seed",
+    "image": "FilterPlantSeed.png"
+  },
+  {
+    "id": "fly_trap_plant_seed",
+    "name": "Lura Seed",
+    "image": "FlyTrapPlantSeed.png"
+  },
+  {
+    "id": "forest_tree_seed",
+    "name": "forest_tree_seed",
+    "image": "ForestTreeSeed.png"
+  },
+  {
+    "id": "garden_decor_plant_seed",
+    "name": "Rosebush Seed",
+    "image": "Rosebush_Seed.png"
+  },
+  {
+    "id": "garden_food_plant_seed",
+    "name": "Sweatcorn Seed",
+    "image": "GardenFoodPlantSeed.png"
+  },
+  {
+    "id": "gas_grass_seed",
+    "name": "Gas Grass Seed",
+    "image": "GasGrassSeed.png"
+  },
+  {
+    "id": "hard_skin_berry_plant_seed",
+    "name": "Pikeapple Bush Seed",
+    "image": "PikeappleBushSeed.png"
+  },
+  {
+    "id": "ice_flower_seed",
+    "name": "Idylla Seed",
+    "image": "IceFlowerSeed.png"
+  },
+  {
+    "id": "kelp_plant_seed",
+    "name": "Seakomb Seed",
+    "image": "Seakomb_Seed.png"
+  },
+  {
+    "id": "leafy_plant_seed",
+    "name": "Mirth Leaf Seed",
+    "image": "LeafyPlantSeed.png"
+  },
+  {
+    "id": "mushroom_seed",
+    "name": "Fungal Spore",
+    "image": "FungalSpore.png"
+  },
+  {
+    "id": "oxy_coral_seed",
+    "name": "Flue Coral Seed",
+    "image": "OxyCoralSeed.png"
+  },
+  {
+    "id": "oxyfern_seed",
+    "name": "Oxyfern Seed",
+    "image": "OxyfernSeed.png"
+  },
+  {
+    "id": "plankton_coral_seed",
+    "name": "Starnacle Seed",
+    "image": "PlanktonCoralSeed.png"
+  },
+  {
+    "id": "prickle_flower_seed",
+    "name": "Blossom Seed",
+    "image": "BlossomSeed.png"
+  },
+  {
+    "id": "prickle_grass_seed",
+    "name": "Briar Seed",
+    "image": "PrickleGrassSeed.png"
+  },
+  {
+    "id": "salt_plant_seed",
+    "name": "Dasha Saltvine Seed",
+    "image": "DashaSaltvineSeed.png"
+  },
+  {
+    "id": "salty_sticks_plant_seed",
+    "name": "Sodicane Seed",
+    "image": "SaltySticksPlantSeed.png"
+  },
+  {
+    "id": "sea_tree_seed",
+    "name": "Tower Kelp Seed",
+    "image": "SeaTreeSeed.png"
+  },
+  {
+    "id": "space_tree_seed",
+    "name": "Bonbon Tree Seed",
+    "image": "BonbonTreeSeed.png"
+  },
+  {
+    "id": "spice_vine_seed",
+    "name": "spice_vine_seed",
+    "image": "SpiceVineSeed.png"
+  },
+  {
+    "id": "swamp_harvest_plant_seed",
+    "name": "Bog Bucket Seed",
+    "image": "BogBucketSeed.png"
+  },
+  {
+    "id": "toe_plant_seed",
+    "name": "Tranquil Toe Seed",
+    "image": "ToePlantSeed.png"
+  },
+  {
+    "id": "tube_worm_seed",
+    "name": "Tublia Seed",
+    "image": "TubeWormSeed.png"
+  },
+  {
+    "id": "urchin_plant_seed",
+    "name": "Pinpoket Seed",
+    "image": "UrchinPlantSeed.png"
+  },
+  {
+    "id": "vine_mother_seed",
+    "name": "Ovagro Node Seed",
+    "image": "VineMotherSeed.png"
+  },
+  {
+    "id": "wine_cups_seed",
+    "name": "Mallow Seed",
+    "image": "WineCupsSeed.png"
+  },
+  {
+    "id": "worm_plant_seed",
+    "name": "Grubfruit Seed",
+    "image": "GrubfruitSeed.png"
+  }
+]

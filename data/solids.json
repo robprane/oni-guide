@@ -199,14 +199,29 @@
     "image": "IronOre.png"
   },
   {
-    "id": "isoresin",
+    "id": "isosap",
     "name": "Isosap",
-    "image": "Isoresin.png"
+    "image": "Isosap.png"
+  },
+  {
+    "id": "solid_sap",
+    "name": "Solid Sap",
+    "image": "Isosap.png"
   },
   {
     "id": "lead",
     "name": "Lead",
     "image": "Lead.png"
+  },
+  {
+    "id": "zinc",
+    "name": "Zinc",
+    "image": "Zinc.png"
+  },
+  {
+    "id": "zinc_ore",
+    "name": "Zinc Ore",
+    "image": "ZincOre.png"
   },
   {
     "id": "lime",
@@ -467,5 +482,80 @@
     "id": "frozen_phyto_oil",
     "name": "Frozen Phyto Oil",
     "image": "Frozen_Phyto_Oil.png"
+  },
+  {
+    "id": "pearl",
+    "name": "Pearl",
+    "image": "Pearl.png"
+  },
+  {
+    "id": "murky_brine_ice",
+    "name": "Polluted Brine Ice",
+    "image": "MurkyBrineIce.png"
+  },
+  {
+    "id": "fish_milk_ice",
+    "name": "Frozen Ovolene",
+    "image": "FishMilkIce.png"
+  },
+  {
+    "id": "peat",
+    "name": "Peat",
+    "image": "Peat.png"
+  },
+  {
+    "id": "frozen_ink",
+    "name": "Frozen Ink",
+    "image": "FrozenInk.png"
+  },
+  {
+    "id": "rubber",
+    "name": "Rubber",
+    "image": "Rubber.png"
+  },
+  {
+    "id": "shale",
+    "name": "Shale",
+    "image": "Shale.png"
+  },
+  {
+    "id": "amber",
+    "name": "Amber",
+    "image": "Amber.png"
+  },
+  {
+    "id": "silt_stone",
+    "name": "Siltstone",
+    "image": "SiltStone.png"
+  },
+  {
+    "id": "solid_mucus",
+    "name": "Frozen Mucin",
+    "image": "SolidMucus.png"
+  },
+  {
+    "id": "corallium",
+    "name": "Corallium",
+    "image": "Corallium.png"
+  },
+  {
+    "id": "coquina",
+    "name": "Coquina",
+    "image": "Coquina.png"
+  },
+  {
+    "id": "basalt",
+    "name": "Basalt",
+    "image": "Basalt.png"
+  },
+  {
+    "id": "gum_wood",
+    "name": "Gum Wood",
+    "image": "PalmWood.png"
+  },
+  {
+    "id": "galena",
+    "name": "Galena",
+    "image": "Galena.png"
   }
 ]

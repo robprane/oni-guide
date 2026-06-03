@@ -60,6 +60,11 @@
     "image": "LeadGas.png"
   },
   {
+    "id": "zinc_gas",
+    "name": "Zinc Gas",
+    "image": "ZincGas.png"
+  },
+  {
     "id": "mercury_gas",
     "name": "Mercury Gas",
     "image": "MercuryGas.png"
@@ -143,5 +148,10 @@
     "id": "nickel_gas",
     "name": "Nickel Gas",
     "image": "Nickel_Gas.png"
-   }
+  },
+  {
+    "id": "hydrogen",
+    "name": "Hydrogen Gas",
+    "image": "Hydrogen.png"
+  }
 ]

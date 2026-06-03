@@ -155,6 +155,11 @@
     "image": "ReedFiber.png"
   },
   {
+    "id": "feather_fiber",
+    "name": "Feather Fiber",
+    "image": "FeatherFiber.png"
+  },
+  {
     "id": "wood",
     "name": "Wood",
     "image": "Wood.png"
@@ -258,6 +263,11 @@
     "id": "metal_power_bank",
     "name": "Metal Power Bank",
     "image": "Metal_Power_Bank.png"
+  },
+  {
+    "id": "atomic_power_bank",
+    "name": "Atomic Power Bank",
+    "image": "Atomic_Power_Bank.png"
   },
   {
     "id": "tidying_booster",

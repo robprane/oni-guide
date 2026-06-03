@@ -1,0 +1,12 @@
+[
+  {
+    "id": "duplicant",
+    "name": "Duplicant",
+    "image": "Duplicant.png"
+  },
+  {
+    "id": "bionic_minion",
+    "name": "Bionic Duplicant",
+    "image": "BionicDuplicant.png"
+  }
+]

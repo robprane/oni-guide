@@ -1,9 +1,18 @@
 export function createElement(tag, attributes = {}, children = []) {
-    const el = document.createElement(tag);
+    const svgTags = ['svg', 'path', 'circle', 'rect', 'line', 'polyline', 'polygon', 'g', 'defs'];
+    const isSvg = svgTags.includes(tag);
+    
+    const el = isSvg 
+        ? document.createElementNS('http://www.w3.org/2000/svg', tag) 
+        : document.createElement(tag);
 
     for (const [key, value] of Object.entries(attributes || {})) {
         if (key === 'className' || key === 'class') {
-            el.className = value;
+            if (isSvg) {
+                el.setAttribute('class', value);
+            } else {
+                el.className = value;
+            }
         } else if (key === 'dataset') {
             for (const [dKey, dValue] of Object.entries(value)) {
                 el.dataset[dKey] = dValue;

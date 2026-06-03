@@ -138,5 +138,40 @@
     "id": "seakomb",
     "name": "Seakomb",
     "image": "Seakomb.png"
+  },
+  {
+    "id": "mimika_bud",
+    "name": "Mimika Bud",
+    "image": "Mimika_Bud.png"
+  },
+  {
+    "id": "sweatcorn_stalk",
+    "name": "Sweatcorn Stalk",
+    "image": "Sweatcorn_Stalk.png"
+  },
+  {
+    "id": "ovagro_node",
+    "name": "Ovagro Node",
+    "image": "Ovagro_Node.png"
+  },
+  {
+    "id": "snactus",
+    "name": "Snactus",
+    "image": "Snactus.png"
+  },
+  {
+    "id": "dew_dripper",
+    "name": "Dew Dripper",
+    "image": "Dew_Dripper.png"
+  },
+  {
+    "id": "megafrond",
+    "name": "Megafrond",
+    "image": "Megafrond.png"
+  },
+  {
+    "id": "lura_plant",
+    "name": "Lura Plant",
+    "image": "Lura_Plant.png"
   }
 ]

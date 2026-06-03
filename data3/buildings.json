@@ -1,0 +1,2172 @@
+[
+  {
+    "id": "advanced_apothecary",
+    "name": "Nuclear Apothecary",
+    "image": "AdvancedApothecary.png"
+  },
+  {
+    "id": "advanced_crafting_table",
+    "name": "Soldering Station",
+    "image": "Soldering_Station.png"
+  },
+  {
+    "id": "advanced_doctor_station",
+    "name": "Disease Clinic",
+    "image": "DiseaseClinic.png"
+  },
+  {
+    "id": "advanced_research_center",
+    "name": "Super Computer",
+    "image": "SuperComputer.png"
+  },
+  {
+    "id": "airborne_creature_lure",
+    "name": "Airborne Critter Lure",
+    "image": "AirborneCreatureLure.png"
+  },
+  {
+    "id": "air_borne_critter_condo",
+    "name": "Airborne Critter Condo",
+    "image": "AirBorneCritterCondo.png"
+  },
+  {
+    "id": "air_conditioner",
+    "name": "Thermo Regulator",
+    "image": "AirConditioner.png"
+  },
+  {
+    "id": "air_filter",
+    "name": "Deodorizer",
+    "image": "Deodorizer.png"
+  },
+  {
+    "id": "creature_air_trap",
+    "name": "Airborne Critter Trap",
+    "image": "CreatureAirTrap.png"
+  },
+  {
+    "id": "algae_distillery",
+    "name": "Algae Distiller",
+    "image": "AlgaeDistiller.png"
+  },
+  {
+    "id": "algae_habitat",
+    "name": "Algae Terrarium",
+    "image": "AlgaeTerrarium.png"
+  },
+  {
+    "id": "apothecary",
+    "name": "Apothecary",
+    "image": "Apothecary.png"
+  },
+  {
+    "id": "arcade_machine",
+    "name": "Arcade Cabinet",
+    "image": "ArcadeMachine.png"
+  },
+  {
+    "id": "artifact_analysis_station",
+    "name": "Artifact Analysis Station",
+    "image": "ArtifactAnalysisStation.png"
+  },
+  {
+    "id": "artifact_cargo_bay",
+    "name": "Artifact Transport Module",
+    "image": "ArtifactCargoBay.png"
+  },
+  {
+    "id": "astronaut_training_center",
+    "name": "Space Cadet Centrifuge",
+    "image": "AstronautTrainingCenter.png"
+  },
+  {
+    "id": "atomic_garden",
+    "name": "atomic_garden",
+    "image": "AtomicGarden.png"
+  },
+  {
+    "id": "auto_miner",
+    "name": "Robo-Miner",
+    "image": "AutoMiner.png"
+  },
+  {
+    "id": "battery",
+    "name": "Battery",
+    "image": "Battery.png"
+  },
+  {
+    "id": "battery_medium",
+    "name": "Jumbo Battery",
+    "image": "BatteryMedium.png"
+  },
+  {
+    "id": "battery_module",
+    "name": "Battery Module",
+    "image": "BatteryModule.png"
+  },
+  {
+    "id": "battery_smart",
+    "name": "Smart Battery",
+    "image": "BatterySmart.png"
+  },
+  {
+    "id": "beach_chair",
+    "name": "Beach Chair",
+    "image": "BeachChair.png"
+  },
+  {
+    "id": "bed",
+    "name": "Cot",
+    "image": "Bed.png"
+  },
+  {
+    "id": "biodiesel_engine_cluster",
+    "name": "Biodiesel Engine",
+    "image": "BiodieselEngineCluster.png"
+  },
+  {
+    "id": "biodiesel_engine",
+    "name": "Biodiesel Engine",
+    "image": "BiodieselEngine.png"
+  },
+  {
+    "id": "bottle_emptier_conduit_gas",
+    "name": "Canister Drainer",
+    "image": "BottleEmptierConduitGas.png"
+  },
+  {
+    "id": "bottle_emptier_conduit_liquid",
+    "name": "Bottle Drainer",
+    "image": "BottleEmptierConduitLiquid.png"
+  },
+  {
+    "id": "bottle_emptier",
+    "name": "Bottle Emptier",
+    "image": "BottleEmptier.png"
+  },
+  {
+    "id": "bottle_emptier_gas",
+    "name": "Canister Emptier",
+    "image": "BottleEmptierGas.png"
+  },
+  {
+    "id": "bunker_door",
+    "name": "Bunker Door",
+    "image": "BunkerDoor.png"
+  },
+  {
+    "id": "bunker_tile",
+    "name": "Bunker Tile",
+    "image": "BunkerTile.png"
+  },
+  {
+    "id": "campfire",
+    "name": "Wood Heater",
+    "image": "WoodHeater.png"
+  },
+  {
+    "id": "canvas",
+    "name": "Blank Canvas",
+    "image": "Canvas.png"
+  },
+  {
+    "id": "canvas_tall",
+    "name": "Portrait Canvas",
+    "image": "CanvasTall.png"
+  },
+  {
+    "id": "canvas_wide",
+    "name": "Landscape Canvas",
+    "image": "CanvasWide.png"
+  },
+  {
+    "id": "carpet_tile",
+    "name": "Carpeted Tile",
+    "image": "CarpetTile.png"
+  },
+  {
+    "id": "ceiling_fossil_sculpture",
+    "name": "Hanging Fossil Block",
+    "image": "CeilingFossilSculpture.png"
+  },
+  {
+    "id": "ceiling_light",
+    "name": "Ceiling Light",
+    "image": "CeilingLight.png"
+  },
+  {
+    "id": "checkpoint",
+    "name": "Duplicant Checkpoint",
+    "image": "Checkpoint.png"
+  },
+  {
+    "id": "chemical_refinery",
+    "name": "Emulsifier",
+    "image": "ChemicalRefinery.png"
+  },
+  {
+    "id": "chlorinator",
+    "name": "Bleach Stone Hopper",
+    "image": "BleachStoneHopper.png"
+  },
+  {
+    "id": "clothing_alteration_station",
+    "name": "Clothing Refashionator",
+    "image": "ClothingRefashionator.png"
+  },
+  {
+    "id": "clothing_fabricator",
+    "name": "Textile Loom",
+    "image": "TextileLoom.png"
+  },
+  {
+    "id": "cluster_telescope",
+    "name": "Telescope",
+    "image": "ClusterTelescope.png"
+  },
+  {
+    "id": "cluster_telescope_enclosed",
+    "name": "Enclosed Telescope",
+    "image": "ClusterTelescopeEnclosed.png"
+  },
+  {
+    "id": "co2_engine",
+    "name": "Carbon Dioxide Engine",
+    "image": "Co2Engine.png"
+  },
+  {
+    "id": "co2_scrubber",
+    "name": "Carbon Skimmer",
+    "image": "CarbonSkimmer.png"
+  },
+  {
+    "id": "command_module",
+    "name": "Command Capsule",
+    "image": "CommandModule.png"
+  },
+  {
+    "id": "compost",
+    "name": "Compost",
+    "image": "Compost.png"
+  },
+  {
+    "id": "contact_conductive_pipe_bridge",
+    "name": "Conduction Panel",
+    "image": "ContactConductivePipeBridge.png"
+  },
+  {
+    "id": "cooking_station",
+    "name": "Electric Grill",
+    "image": "ElectricGrill.png"
+  },
+  {
+    "id": "corner_moulding",
+    "name": "Corner Trim",
+    "image": "CornerMoulding.png"
+  },
+  {
+    "id": "cosmic_research_center",
+    "name": "Virtual Planetarium",
+    "image": "VirtualPlanetarium.png"
+  },
+  {
+    "id": "crafting_table",
+    "name": "Crafting Station",
+    "image": "Crafting_Station.png"
+  },
+  {
+    "id": "creature_delivery_point",
+    "name": "Critter Drop-Off",
+    "image": "CreatureDeliveryPoint.png"
+  },
+  {
+    "id": "creature_feeder",
+    "name": "Critter Feeder",
+    "image": "CreatureFeeder.png"
+  },
+  {
+    "id": "creature_trap",
+    "name": "Critter Trap",
+    "image": "CreatureTrap.png"
+  },
+  {
+    "id": "crew_capsule",
+    "name": "crew_capsule",
+    "image": "CrewCapsule.png"
+  },
+  {
+    "id": "critter_condo",
+    "name": "Critter Condo",
+    "image": "CritterCondo.png"
+  },
+  {
+    "id": "critter_drop_off",
+    "name": "Critter Drop-Off",
+    "image": "CritterDropOff.png"
+  },
+  {
+    "id": "critter_pick_up",
+    "name": "Critter Pick-Up",
+    "image": "CritterPickUp.png"
+  },
+  {
+    "id": "crown_moulding",
+    "name": "Ceiling Trim",
+    "image": "CrownMoulding.png"
+  },
+  {
+    "id": "data_miner",
+    "name": "Data Miner",
+    "image": "Data_Miner.png"
+  },
+  {
+    "id": "decontamination_shower",
+    "name": "Decontamination Shower",
+    "image": "DecontaminationShower.png"
+  },
+  {
+    "id": "deepfryer",
+    "name": "Deep Fryer",
+    "image": "DeepFryer.png"
+  },
+  {
+    "id": "desalinator",
+    "name": "Desalinator",
+    "image": "Desalinator.png"
+  },
+  {
+    "id": "dev_generator",
+    "name": "Dev Generator",
+    "image": "DevGenerator.png"
+  },
+  {
+    "id": "dev_heater",
+    "name": "Dev Heater",
+    "image": "DevHeater.png"
+  },
+  {
+    "id": "dev_hep_spawner",
+    "name": "Dev Radbolt Generator",
+    "image": "RadboltGenerator.png"
+  },
+  {
+    "id": "dev_life_support",
+    "name": "Dev Life Support",
+    "image": "DevLifeSupport.png"
+  },
+  {
+    "id": "dev_light_generator",
+    "name": "Dev Light Source",
+    "image": "DevLightGenerator.png"
+  },
+  {
+    "id": "dev_pump_gas",
+    "name": "Dev Pump Gas",
+    "image": "DevPumpGas.png"
+  },
+  {
+    "id": "dev_pump_liquid",
+    "name": "Dev Pump Liquid",
+    "image": "DevPumpLiquid.png"
+  },
+  {
+    "id": "dev_pump_solid",
+    "name": "Dev Pump Solid",
+    "image": "DevPumpSolid.png"
+  },
+  {
+    "id": "dev_radiation_generator",
+    "name": "Dev Radiation Emitter",
+    "image": "DevRadiationGenerator.png"
+  },
+  {
+    "id": "diamond_press",
+    "name": "Diamond Press",
+    "image": "DiamondPress.png"
+  },
+  {
+    "id": "dining_table",
+    "name": "Mess Table",
+    "image": "DiningTable.png"
+  },
+  {
+    "id": "dlc1_cosmic_research_center",
+    "name": "Virtual Planetarium",
+    "image": "VirtualPlanetarium.png"
+  },
+  {
+    "id": "doctor_station",
+    "name": "Sick Bay",
+    "image": "DoctorStation.png"
+  },
+  {
+    "id": "door",
+    "name": "Pneumatic Door",
+    "image": "Door.png"
+  },
+  {
+    "id": "egg_cracker",
+    "name": "Egg Cracker",
+    "image": "EggCracker.png"
+  },
+  {
+    "id": "egg_incubator",
+    "name": "Incubator",
+    "image": "EggIncubator.png"
+  },
+  {
+    "id": "electrobank_charger",
+    "name": "Power Bank Charger",
+    "image": "Power_Bank_Charger.png"
+  },
+  {
+    "id": "electrolyzer",
+    "name": "Electrolyzer",
+    "image": "Electrolyzer.png"
+  },
+  {
+    "id": "espresso_machine",
+    "name": "Espresso Machine",
+    "image": "EspressoMachine.png"
+  },
+  {
+    "id": "ethanol_distillery",
+    "name": "Ethanol Distiller",
+    "image": "EthanolDistiller.png"
+  },
+  {
+    "id": "exobase_headquarters",
+    "name": "Mini-Pod",
+    "image": "ExobaseHeadquarters.png"
+  },
+  {
+    "id": "exterior_wall",
+    "name": "Drywall",
+    "image": "ExteriorWall.png"
+  },
+  {
+    "id": "fabricated_wood_maker",
+    "name": "Plywood Press",
+    "image": "Plywood_Press.png"
+  },
+  {
+    "id": "facility_back_wall_window",
+    "name": "Window",
+    "image": "FacilityBackWallWindow.png"
+  },
+  {
+    "id": "farm_station",
+    "name": "Farm Station",
+    "image": "FarmStation.png"
+  },
+  {
+    "id": "farm_tile",
+    "name": "Farm Tile",
+    "image": "FarmTile.png"
+  },
+  {
+    "id": "fertilizer_maker",
+    "name": "Fertilizer Synthesizer",
+    "image": "FertilizerSynthesizer.png"
+  },
+  {
+    "id": "fire_pole",
+    "name": "Fire Pole",
+    "image": "FirePole.png"
+  },
+  {
+    "id": "fish_delivery_point",
+    "name": "Fish Release",
+    "image": "FishDeliveryPoint.png"
+  },
+  {
+    "id": "fish_feeder",
+    "name": "Fish Feeder",
+    "image": "FishFeeder.png"
+  },
+  {
+    "id": "fish_pick_up",
+    "name": "Fish Pick-Up",
+    "image": "FishPickUp.png"
+  },
+  {
+    "id": "fish_trap",
+    "name": "Fish Trap",
+    "image": "FishTrap.png"
+  },
+  {
+    "id": "floor_lamp",
+    "name": "Lamp",
+    "image": "FloorLamp.png"
+  },
+  {
+    "id": "floor_switch",
+    "name": "Weight Plate",
+    "image": "FloorSwitch.png"
+  },
+  {
+    "id": "flower_vase",
+    "name": "Flower Pot",
+    "image": "FlowerVase.png"
+  },
+  {
+    "id": "flower_vase_hanging",
+    "name": "Hanging Pot",
+    "image": "FlowerVaseHanging.png"
+  },
+  {
+    "id": "flower_vase_hanging_fancy",
+    "name": "Aero Pot",
+    "image": "FlowerVaseHangingFancy.png"
+  },
+  {
+    "id": "flower_vase_wall",
+    "name": "Wall Pot",
+    "image": "FlowerVaseWall.png"
+  },
+  {
+    "id": "flush_toilet",
+    "name": "Lavatory",
+    "image": "Lavatory.png"
+  },
+  {
+    "id": "flying_creature_bait",
+    "name": "Airborne Critter Bait",
+    "image": "FlyingCreatureBait.png"
+  },
+  {
+    "id": "food_dehydrator",
+    "name": "Dehydrator",
+    "image": "Dehydrator.png"
+  },
+  {
+    "id": "food_rehydrator",
+    "name": "Rehydrator",
+    "image": "Rehydrator.png"
+  },
+  {
+    "id": "fossil_dig",
+    "name": "Ancient Specimen",
+    "image": "FossilDig.png"
+  },
+  {
+    "id": "fossil_sculpture",
+    "name": "Fossil Block",
+    "image": "FossilSculpture.png"
+  },
+  {
+    "id": "gantry",
+    "name": "Gantry",
+    "image": "Gantry.png"
+  },
+  {
+    "id": "gas_bottler",
+    "name": "Canister Filler",
+    "image": "GasBottler.png"
+  },
+  {
+    "id": "gas_cargo_bay_cluster",
+    "name": "Large Gas Cargo Canister",
+    "image": "GasCargoBayCluster.png"
+  },
+  {
+    "id": "gas_cargo_bay",
+    "name": "Gas Cargo Canister",
+    "image": "GasCargoBay.png"
+  },
+  {
+    "id": "gas_cargo_bay_small",
+    "name": "Gas Cargo Canister",
+    "image": "GasCargoBaySmall.png"
+  },
+  {
+    "id": "gas_conduit_bridge",
+    "name": "Gas Bridge",
+    "image": "GasConduitBridge.png"
+  },
+  {
+    "id": "gas_conduit",
+    "name": "Gas Pipe",
+    "image": "GasConduit.png"
+  },
+  {
+    "id": "gas_conduit_overflow",
+    "name": "Gas Overflow Valve",
+    "image": "GasConduitOverflow.png"
+  },
+  {
+    "id": "gas_conduit_preferential_flow",
+    "name": "Priority Gas Flow",
+    "image": "GasConduitPreferentialFlow.png"
+  },
+  {
+    "id": "gas_conduit_radiant",
+    "name": "Radiant Gas Pipe",
+    "image": "GasConduitRadiant.png"
+  },
+  {
+    "id": "gas_filter",
+    "name": "Gas Filter",
+    "image": "GasFilter.png"
+  },
+  {
+    "id": "gas_limit_valve",
+    "name": "Gas Meter Valve",
+    "image": "GasLimitValve.png"
+  },
+  {
+    "id": "gas_logic_valve",
+    "name": "Gas Shutoff",
+    "image": "GasLogicValve.png"
+  },
+  {
+    "id": "gas_mini_pump",
+    "name": "Mini Gas Pump",
+    "image": "GasMiniPump.png"
+  },
+  {
+    "id": "gas_permeable_membrane",
+    "name": "Airflow Tile",
+    "image": "GasPermeableMembrane.png"
+  },
+  {
+    "id": "gas_pump",
+    "name": "Gas Pump",
+    "image": "GasPump.png"
+  },
+  {
+    "id": "gas_reservoir",
+    "name": "Gas Reservoir",
+    "image": "GasReservoir.png"
+  },
+  {
+    "id": "gas_valve",
+    "name": "Gas Valve",
+    "image": "GasValve.png"
+  },
+  {
+    "id": "gas_vent",
+    "name": "Gas Vent",
+    "image": "GasVent.png"
+  },
+  {
+    "id": "gas_vent_high_pressure",
+    "name": "High Pressure Gas Vent",
+    "image": "GasVentHighPressure.png"
+  },
+  {
+    "id": "generator",
+    "name": "Coal Generator",
+    "image": "CoalGenerator.png"
+  },
+  {
+    "id": "generic_fabricator",
+    "name": "Omniprinter",
+    "image": "GenericFabricator.png"
+  },
+  {
+    "id": "genetic_analysis_station",
+    "name": "Botanical Analyzer",
+    "image": "GeneticAnalysisStation.png"
+  },
+  {
+    "id": "geo_tuner",
+    "name": "Geotuner",
+    "image": "GeoTuner.png"
+  },
+  {
+    "id": "glass_ceiling_light",
+    "name": "Glass Ceiling Light",
+    "image": "GlassCeilingLight.png"
+  },
+  {
+    "id": "glass_exterior_wall",
+    "name": "Glass Backwall",
+    "image": "GlassExteriorWall.png"
+  },
+  {
+    "id": "glass_forge",
+    "name": "Glass Forge",
+    "image": "GlassForge.png"
+  },
+  {
+    "id": "glass_tile",
+    "name": "Window Tile",
+    "image": "GlassTile.png"
+  },
+  {
+    "id": "gourmet_cooking_station",
+    "name": "Gas Range",
+    "image": "GasRange.png"
+  },
+  {
+    "id": "grave",
+    "name": "Tasteful Memorial",
+    "image": "Grave.png"
+  },
+  {
+    "id": "gravitas_bathroom_stall",
+    "name": "Toilet",
+    "image": "GravitasBathroomStall.png"
+  },
+  {
+    "id": "gravitas_container",
+    "name": "Pajama Cubby",
+    "image": "GravitasContainer.png"
+  },
+  {
+    "id": "gravitas_creature_manipulator",
+    "name": "Critter Flux-O-Matic",
+    "image": "GravitasCreatureManipulator.png"
+  },
+  {
+    "id": "gravitas_door",
+    "name": "Gravitas Door",
+    "image": "GravitasDoor.png"
+  },
+  {
+    "id": "gravitas_lab_light",
+    "name": "LED Light",
+    "image": "GravitasLabLight.png"
+  },
+  {
+    "id": "gravitas_pedestal",
+    "name": "Gravitas Pedestal",
+    "image": "GravitasPedestal.png"
+  },
+  {
+    "id": "creature_ground_trap",
+    "name": "Critter Trap",
+    "image": "CreatureGroundTrap.png"
+  },
+  {
+    "id": "gunk_emptier",
+    "name": "Gunk Extractor",
+    "image": "Gunk_Extractor.png"
+  },
+  {
+    "id": "habitat_module_medium",
+    "name": "Spacefarer Module",
+    "image": "HabitatModuleMedium.png"
+  },
+  {
+    "id": "habitat_module_small",
+    "name": "Solo Spacefarer Nosecone",
+    "image": "HabitatModuleSmall.png"
+  },
+  {
+    "id": "hand_sanitizer",
+    "name": "Hand Sanitizer",
+    "image": "HandSanitizer.png"
+  },
+  {
+    "id": "headquarters",
+    "name": "Printing Pod",
+    "image": "Headquarters.png"
+  },
+  {
+    "id": "heat_compressor",
+    "name": "Liquid Heatquilizer",
+    "image": "HeatCompressor.png"
+  },
+  {
+    "id": "hep_battery",
+    "name": "Radbolt Chamber",
+    "image": "HepBattery.png"
+  },
+  {
+    "id": "hep_bridge_tile",
+    "name": "Radbolt Joint Plate",
+    "image": "HepBridgeTile.png"
+  },
+  {
+    "id": "hep_engine",
+    "name": "Radbolt Engine",
+    "image": "HepEngine.png"
+  },
+  {
+    "id": "high_energy_particle_redirector",
+    "name": "Radbolt Reflector",
+    "image": "HighEnergyParticleRedirector.png"
+  },
+  {
+    "id": "high_energy_particle_spawner",
+    "name": "Radbolt Generator",
+    "image": "RadboltGenerator.png"
+  },
+  {
+    "id": "hijacked_headquarters",
+    "name": "Printerceptor",
+    "image": "HijackedHeadquarters.png"
+  },
+  {
+    "id": "hot_tub",
+    "name": "Hot Tub",
+    "image": "HotTub.png"
+  },
+  {
+    "id": "hydrogen_engine_cluster",
+    "name": "Hydrogen Engine",
+    "image": "HydrogenEngineCluster.png"
+  },
+  {
+    "id": "hydrogen_engine",
+    "name": "Hydrogen Engine",
+    "image": "HydrogenEngine.png"
+  },
+  {
+    "id": "hydrogen_generator",
+    "name": "Hydrogen Generator",
+    "image": "HydrogenGenerator.png"
+  },
+  {
+    "id": "hydroponic_farm",
+    "name": "Hydroponic Farm",
+    "image": "HydroponicFarm.png"
+  },
+  {
+    "id": "ice_cooled_fan",
+    "name": "Ice-E Fan",
+    "image": "IceEFan.png"
+  },
+  {
+    "id": "ice_kettle",
+    "name": "Ice Liquefier",
+    "image": "IceKettle.png"
+  },
+  {
+    "id": "ice_machine",
+    "name": "Ice Maker",
+    "image": "IceMaker.png"
+  },
+  {
+    "id": "ice_sculpture",
+    "name": "Ice Block",
+    "image": "IceSculpture.png"
+  },
+  {
+    "id": "insulated_door",
+    "name": "Insulated Door",
+    "image": "InsulatedDoor.png"
+  },
+  {
+    "id": "insulated_gas_conduit",
+    "name": "Insulated Gas Pipe",
+    "image": "InsulatedGasConduit.png"
+  },
+  {
+    "id": "insulated_liquid_conduit",
+    "name": "Insulated Liquid Pipe",
+    "image": "InsulatedLiquidConduit.png"
+  },
+  {
+    "id": "insulation_tile",
+    "name": "Insulated Tile",
+    "image": "InsulationTile.png"
+  },
+  {
+    "id": "item_pedestal",
+    "name": "Pedestal",
+    "image": "ItemPedestal.png"
+  },
+  {
+    "id": "jet_suit_locker",
+    "name": "Jet Suit Dock",
+    "image": "JetSuitLocker.png"
+  },
+  {
+    "id": "jet_suit_marker",
+    "name": "Jet Suit Checkpoint",
+    "image": "JetSuitMarker.png"
+  },
+  {
+    "id": "juicer",
+    "name": "Juicer",
+    "image": "Juicer.png"
+  },
+  {
+    "id": "kerosene_engine_cluster",
+    "name": "Petroleum Engine",
+    "image": "KeroseneEngineCluster.png"
+  },
+  {
+    "id": "kerosene_engine_cluster_small",
+    "name": "Small Petroleum Engine",
+    "image": "KeroseneEngineClusterSmall.png"
+  },
+  {
+    "id": "kerosene_engine",
+    "name": "Petroleum Engine",
+    "image": "KeroseneEngine.png"
+  },
+  {
+    "id": "kiln",
+    "name": "Kiln",
+    "image": "Kiln.png"
+  },
+  {
+    "id": "ladder",
+    "name": "Ladder",
+    "image": "Ladder.png"
+  },
+  {
+    "id": "ladder_fast",
+    "name": "Plastic Ladder",
+    "image": "LadderFast.png"
+  },
+  {
+    "id": "landing_beacon",
+    "name": "Targeting Beacon",
+    "image": "LandingBeacon.png"
+  },
+  {
+    "id": "large_backwall_farm",
+    "name": "Wall Planter",
+    "image": "LargeBackwallFarm.png"
+  },
+  {
+    "id": "large_electrobank_discharger",
+    "name": "Large Discharger",
+    "image": "Large_Discharger.png"
+  },
+  {
+    "id": "launch_pad",
+    "name": "Rocket Platform",
+    "image": "LaunchPad.png"
+  },
+  {
+    "id": "lead_suit_locker",
+    "name": "Lead Suit Dock",
+    "image": "LeadSuitLocker.png"
+  },
+  {
+    "id": "lead_suit_marker",
+    "name": "Lead Suit Checkpoint",
+    "image": "LeadSuitMarker.png"
+  },
+  {
+    "id": "liquid_bottler",
+    "name": "Bottle Filler",
+    "image": "LiquidBottler.png"
+  },
+  {
+    "id": "liquid_cargo_bay_cluster",
+    "name": "Large Liquid Cargo Tank",
+    "image": "LiquidCargoBayCluster.png"
+  },
+  {
+    "id": "liquid_cargo_bay",
+    "name": "Liquid Cargo Tank",
+    "image": "LiquidCargoBay.png"
+  },
+  {
+    "id": "liquid_cargo_bay_small",
+    "name": "Liquid Cargo Tank",
+    "image": "LiquidCargoBaySmall.png"
+  },
+  {
+    "id": "liquid_conditioner",
+    "name": "Thermo Aquatuner",
+    "image": "LiquidConditioner.png"
+  },
+  {
+    "id": "liquid_conduit_bridge",
+    "name": "Liquid Bridge",
+    "image": "LiquidConduitBridge.png"
+  },
+  {
+    "id": "liquid_conduit",
+    "name": "Liquid Pipe",
+    "image": "LiquidConduit.png"
+  },
+  {
+    "id": "liquid_conduit_overflow",
+    "name": "Liquid Overflow Valve",
+    "image": "LiquidConduitOverflow.png"
+  },
+  {
+    "id": "liquid_conduit_preferential_flow",
+    "name": "Priority Liquid Flow",
+    "image": "LiquidConduitPreferentialFlow.png"
+  },
+  {
+    "id": "liquid_conduit_radiant",
+    "name": "Radiant Liquid Pipe",
+    "image": "LiquidConduitRadiant.png"
+  },
+  {
+    "id": "liquid_cooled_fan",
+    "name": "Hydrofan",
+    "image": "LiquidCooledFan.png"
+  },
+  {
+    "id": "liquid_filter",
+    "name": "Liquid Filter",
+    "image": "LiquidFilter.png"
+  },
+  {
+    "id": "liquid_fuel_tank_cluster",
+    "name": "Large Liquid Fuel Tank",
+    "image": "LiquidFuelTankCluster.png"
+  },
+  {
+    "id": "liquid_fuel_tank",
+    "name": "Liquid Fuel Tank",
+    "image": "LiquidFuelTank.png"
+  },
+  {
+    "id": "liquid_heater",
+    "name": "Liquid Tepidizer",
+    "image": "LiquidHeater.png"
+  },
+  {
+    "id": "liquid_limit_valve",
+    "name": "Liquid Meter Valve",
+    "image": "LiquidLimitValve.png"
+  },
+  {
+    "id": "liquid_logic_valve",
+    "name": "Liquid Shutoff",
+    "image": "LiquidLogicValve.png"
+  },
+  {
+    "id": "liquid_mini_pump",
+    "name": "Mini Liquid Pump",
+    "image": "LiquidMiniPump.png"
+  },
+  {
+    "id": "liquid_pump",
+    "name": "Liquid Pump",
+    "image": "LiquidPump.png"
+  },
+  {
+    "id": "liquid_pumping_station",
+    "name": "Pitcher Pump",
+    "image": "LiquidPumpingStation.png"
+  },
+  {
+    "id": "liquid_reservoir",
+    "name": "Liquid Reservoir",
+    "image": "LiquidReservoir.png"
+  },
+  {
+    "id": "liquid_valve",
+    "name": "Liquid Valve",
+    "image": "LiquidValve.png"
+  },
+  {
+    "id": "liquid_vent",
+    "name": "Liquid Vent",
+    "image": "LiquidVent.png"
+  },
+  {
+    "id": "logic_duplicant_sensor",
+    "name": "Duplicant Motion Sensor",
+    "image": "LogicDuplicantSensor.png"
+  },
+  {
+    "id": "logic_gate_and",
+    "name": "AND Gate",
+    "image": "LogicGateAnd.png"
+  },
+  {
+    "id": "logic_gate_buffer",
+    "name": "BUFFER Gate",
+    "image": "LogicGateBuffer.png"
+  },
+  {
+    "id": "logic_gate_demultiplexer",
+    "name": "Signal Distributor",
+    "image": "LogicGateDemultiplexer.png"
+  },
+  {
+    "id": "logic_gate_filter",
+    "name": "FILTER Gate",
+    "image": "LogicGateFilter.png"
+  },
+  {
+    "id": "logic_gate_multiplexer",
+    "name": "Signal Selector",
+    "image": "LogicGateMultiplexer.png"
+  },
+  {
+    "id": "logic_gate_not",
+    "name": "NOT Gate",
+    "image": "LogicGateNot.png"
+  },
+  {
+    "id": "logic_gate_or",
+    "name": "OR Gate",
+    "image": "LogicGateOr.png"
+  },
+  {
+    "id": "logic_gate_xor",
+    "name": "XOR Gate",
+    "image": "LogicGateXor.png"
+  },
+  {
+    "id": "logic_interasteroid_receiver",
+    "name": "Automation Receiver",
+    "image": "LogicInterasteroidReceiver.png"
+  },
+  {
+    "id": "logic_interasteroid_sender",
+    "name": "Automation Broadcaster",
+    "image": "LogicInterasteroidSender.png"
+  },
+  {
+    "id": "logic_ribbon_bridge",
+    "name": "Automation Ribbon Bridge",
+    "image": "LogicRibbonBridge.png"
+  },
+  {
+    "id": "logic_ribbon",
+    "name": "Automation Ribbon",
+    "image": "LogicRibbon.png"
+  },
+  {
+    "id": "logic_wire_bridge",
+    "name": "Automation Wire Bridge",
+    "image": "LogicWireBridge.png"
+  },
+  {
+    "id": "logic_wire",
+    "name": "Automation Wire",
+    "image": "LogicWire.png"
+  },
+  {
+    "id": "lonely_minion_house",
+    "name": "Gravitas Shipping Container",
+    "image": "LonelyMinionHouse.png"
+  },
+  {
+    "id": "lonely_mail_box",
+    "name": "Mailbox",
+    "image": "LonelyMailBox.png"
+  },
+  {
+    "id": "luxury_bed",
+    "name": "Comfy Bed",
+    "image": "LuxuryBed.png"
+  },
+  {
+    "id": "machine_shop",
+    "name": "Mechanics Station",
+    "image": "MachineShop.png"
+  },
+  {
+    "id": "manual_generator",
+    "name": "Manual Generator",
+    "image": "ManualGenerator.png"
+  },
+  {
+    "id": "manual_high_energy_particle_spawner",
+    "name": "Manual Radbolt Generator",
+    "image": "ManualRadboltGenerator.png"
+  },
+  {
+    "id": "manual_pressure_door",
+    "name": "Manual Airlock",
+    "image": "ManualPressureDoor.png"
+  },
+  {
+    "id": "marble_sculpture",
+    "name": "Marble Block",
+    "image": "MarbleSculpture.png"
+  },
+  {
+    "id": "massage_table",
+    "name": "Massage Table",
+    "image": "MassageTable.png"
+  },
+  {
+    "id": "massive_heat_sink",
+    "name": "Anti Entropy Thermo-Nullifier",
+    "image": "AntiEntropyThermoNullifier.png"
+  },
+  {
+    "id": "mechanical_surfboard",
+    "name": "Mechanical Surfboard",
+    "image": "MechanicalSurfboard.png"
+  },
+  {
+    "id": "medical_cot",
+    "name": "Triage Cot",
+    "image": "MedicalCot.png"
+  },
+  {
+    "id": "mega_brain_tank",
+    "name": "Somnium Synthesizer",
+    "image": "SomniumSynthesizer.png"
+  },
+  {
+    "id": "mercury_ceiling_light",
+    "name": "Mercury Ceiling Light",
+    "image": "MercuryCeilingLight.png"
+  },
+  {
+    "id": "mesh_tile",
+    "name": "Mesh Tile",
+    "image": "MeshTile.png"
+  },
+  {
+    "id": "metal_refinery",
+    "name": "Metal Refinery",
+    "image": "MetalRefinery.png"
+  },
+  {
+    "id": "metal_sculpture",
+    "name": "Metal Block",
+    "image": "MetalSculpture.png"
+  },
+  {
+    "id": "metal_tile",
+    "name": "Metal Tile",
+    "image": "MetalTile.png"
+  },
+  {
+    "id": "methane_generator",
+    "name": "Natural Gas Generator",
+    "image": "NaturalGasGenerator.png"
+  },
+  {
+    "id": "microbe_musher",
+    "name": "Microbe Musher",
+    "image": "MicrobeMusher.png"
+  },
+  {
+    "id": "milk_fat_separator",
+    "name": "Gleaner",
+    "image": "MilkFatSeparator.png"
+  },
+  {
+    "id": "milk_feeder",
+    "name": "Critter Fountain",
+    "image": "CritterFountain.png"
+  },
+  {
+    "id": "milking_station",
+    "name": "Milking Station",
+    "image": "MilkingStation.png"
+  },
+  {
+    "id": "milk_press",
+    "name": "Plant Pulverizer",
+    "image": "PlantPulverizer.png"
+  },
+  {
+    "id": "mineral_deoxidizer",
+    "name": "Oxygen Diffuser",
+    "image": "OxygenDiffuser.png"
+  },
+  {
+    "id": "mini_fridge",
+    "name": "Mini Fridge",
+    "image": "MiniFridge.png"
+  },
+  {
+    "id": "missile_fabricator",
+    "name": "Blastshot Maker",
+    "image": "BlastshotMaker.png"
+  },
+  {
+    "id": "missile_launcher",
+    "name": "Meteor Blaster",
+    "image": "MissileLauncher.png"
+  },
+  {
+    "id": "mission_control_cluster",
+    "name": "Mission Control Station",
+    "image": "MissionControlCluster.png"
+  },
+  {
+    "id": "mission_control",
+    "name": "Mission Control Station",
+    "image": "MissionControl.png"
+  },
+  {
+    "id": "modular_launchpad_port_bridge",
+    "name": "Rocket Port Extension",
+    "image": "ModularLaunchpadPortBridge.png"
+  },
+  {
+    "id": "modular_launchpad_port_gas",
+    "name": "Gas Rocket Port Loader",
+    "image": "ModularLaunchpadPortGas.png"
+  },
+  {
+    "id": "modular_launchpad_port_gas_unloader",
+    "name": "Gas Rocket Port Unloader",
+    "image": "ModularLaunchpadPortGasUnloader.png"
+  },
+  {
+    "id": "modular_launchpad_port_liquid",
+    "name": "Liquid Rocket Port Loader",
+    "image": "ModularLaunchpadPortLiquid.png"
+  },
+  {
+    "id": "modular_launchpad_port_liquid_unloader",
+    "name": "Liquid Rocket Port Unloader",
+    "image": "ModularLaunchpadPortLiquidUnloader.png"
+  },
+  {
+    "id": "modular_launchpad_port_solid",
+    "name": "Solid Rocket Port Loader",
+    "image": "ModularLaunchpadPortSolid.png"
+  },
+  {
+    "id": "modular_launchpad_port_solid_unloader",
+    "name": "Solid Rocket Port Unloader",
+    "image": "ModularLaunchpadPortSolidUnloader.png"
+  },
+  {
+    "id": "monument_bottom",
+    "name": "Monument Base",
+    "image": "MonumentBottom.png"
+  },
+  {
+    "id": "monument_middle",
+    "name": "Monument Midsection",
+    "image": "MonumentMiddle.png"
+  },
+  {
+    "id": "monument_top",
+    "name": "Monument Top",
+    "image": "MonumentTop.png"
+  },
+  {
+    "id": "morb_rover_maker",
+    "name": "Biobot Builder",
+    "image": "BiobotBuilder.png"
+  },
+  {
+    "id": "moulding_tile",
+    "name": "Trimming Tile",
+    "image": "MouldingTile.png"
+  },
+  {
+    "id": "multi_minion_dining_table",
+    "name": "Communal Table",
+    "image": "MultiMinionDiningTable.png"
+  },
+  {
+    "id": "nosecone_basic",
+    "name": "Basic Nosecone",
+    "image": "NoseconeBasic.png"
+  },
+  {
+    "id": "nosecone_harvest",
+    "name": "Drillcone",
+    "image": "NoseconeHarvest.png"
+  },
+  {
+    "id": "nuclear_reactor",
+    "name": "Research Reactor",
+    "image": "ResearchReactor.png"
+  },
+  {
+    "id": "nuclear_research_center",
+    "name": "Materials Study Terminal",
+    "image": "MaterialsStudyTerminal.png"
+  },
+  {
+    "id": "object_dispenser",
+    "name": "Automatic Dispenser",
+    "image": "ObjectDispenser.png"
+  },
+  {
+    "id": "oil_changer",
+    "name": "Lubrication Station",
+    "image": "Lubrication_Station.png"
+  },
+  {
+    "id": "oil_refinery",
+    "name": "Oil Refinery",
+    "image": "OilRefinery.png"
+  },
+  {
+    "id": "oil_well_cap",
+    "name": "Oil Well",
+    "image": "OilWell.png"
+  },
+  {
+    "id": "orbital_cargo_module",
+    "name": "Orbital Cargo Module",
+    "image": "OrbitalCargoModule.png"
+  },
+  {
+    "id": "orbital_research_center",
+    "name": "Orbital Data Collection Lab",
+    "image": "OrbitalDataCollectionLab.png"
+  },
+  {
+    "id": "ore_scrubber",
+    "name": "Ore Scrubber",
+    "image": "OreScrubber.png"
+  },
+  {
+    "id": "outhouse",
+    "name": "Outhouse",
+    "image": "Outhouse.png"
+  },
+  {
+    "id": "oxidizer_tank_cluster",
+    "name": "Large Solid Oxidizer Tank",
+    "image": "OxidizerTankCluster.png"
+  },
+  {
+    "id": "oxidizer_tank",
+    "name": "Solid Oxidizer Tank",
+    "image": "OxidizerTank.png"
+  },
+  {
+    "id": "oxidizer_tank_liquid_cluster",
+    "name": "Liquid Oxidizer Tank",
+    "image": "OxidizerTankLiquidCluster.png"
+  },
+  {
+    "id": "oxidizer_tank_liquid",
+    "name": "Liquid Oxidizer Tank",
+    "image": "OxidizerTankLiquid.png"
+  },
+  {
+    "id": "oxygen_mask_locker",
+    "name": "Oxygen Mask Dock",
+    "image": "OxygenMaskLocker.png"
+  },
+  {
+    "id": "oxygen_mask_marker",
+    "name": "Oxygen Mask Checkpoint",
+    "image": "OxygenMaskMarker.png"
+  },
+  {
+    "id": "oxygen_mask_station",
+    "name": "Oxygen Mask Station",
+    "image": "OxygenMaskStation.png"
+  },
+  {
+    "id": "oxylite_refinery",
+    "name": "Oxylite Refinery",
+    "image": "OxyliteRefinery.png"
+  },
+  {
+    "id": "oxysconce",
+    "name": "Oxylite Sconce",
+    "image": "Oxysconce.png"
+  },
+  {
+    "id": "park_sign",
+    "name": "Park Sign",
+    "image": "ParkSign.png"
+  },
+  {
+    "id": "peat_generator",
+    "name": "Peat Burner",
+    "image": "Peat_Burner.png"
+  },
+  {
+    "id": "petroleum_generator",
+    "name": "Petroleum Generator",
+    "image": "PetroleumGenerator.png"
+  },
+  {
+    "id": "phonobox",
+    "name": "Jukebot",
+    "image": "Phonobox.png"
+  },
+  {
+    "id": "pioneer_module",
+    "name": "Trailblazer Module",
+    "image": "PioneerModule.png"
+  },
+  {
+    "id": "planter_box",
+    "name": "Planter Box",
+    "image": "PlanterBox.png"
+  },
+  {
+    "id": "plastic_tile",
+    "name": "Plastic Tile",
+    "image": "PlasticTile.png"
+  },
+  {
+    "id": "poi_bunker_exterior_door",
+    "name": "Security Door",
+    "image": "PoiBunkerExteriorDoor.png"
+  },
+  {
+    "id": "poi_dlc2_showroom_door",
+    "name": "Showroom Doors",
+    "image": "PoiDlc2ShowroomDoor.png"
+  },
+  {
+    "id": "poi_facility_door",
+    "name": "Lobby Doors",
+    "image": "PoiFacilityDoor.png"
+  },
+  {
+    "id": "polymerizer",
+    "name": "Polymer Press",
+    "image": "PolymerPress.png"
+  },
+  {
+    "id": "power_control_station",
+    "name": "Power Control Station",
+    "image": "Power_Control_Station.png"
+  },
+  {
+    "id": "power_transformer",
+    "name": "Large Power Transformer",
+    "image": "PowerTransformer.png"
+  },
+  {
+    "id": "power_transformer_small",
+    "name": "Power Transformer",
+    "image": "PowerTransformerSmall.png"
+  },
+  {
+    "id": "pressure_door",
+    "name": "Mechanized Airlock",
+    "image": "PressureDoor.png"
+  },
+  {
+    "id": "prop_beach_chair",
+    "name": "Tattered Beach Chair",
+    "image": "PropBeachChair.png"
+  },
+  {
+    "id": "prop_gravitas_lab_wall",
+    "name": "Lab Wall",
+    "image": "PropGravitasLabWall.png"
+  },
+  {
+    "id": "prop_gravitas_lab_window",
+    "name": "Lab Window",
+    "image": "PropGravitasLabWindow.png"
+  },
+  {
+    "id": "prop_gravitas_lab_window_horizontal",
+    "name": "Lab Window",
+    "image": "PropGravitasLabWindowHorizontal.png"
+  },
+  {
+    "id": "prop_gravitas_wall",
+    "name": "Wall",
+    "image": "PropGravitasWall.png"
+  },
+  {
+    "id": "prop_gravitas_wall_purple",
+    "name": "Wall",
+    "image": "PropGravitasWallPurple.png"
+  },
+  {
+    "id": "prop_gravitas_wall_purple_white_diagonal",
+    "name": "Wall",
+    "image": "PropGravitasWallPurpleWhiteDiagonal.png"
+  },
+  {
+    "id": "radiation_light",
+    "name": "Radiation Lamp",
+    "image": "RadiationLamp.png"
+  },
+  {
+    "id": "rail_gun",
+    "name": "Interplanetary Launcher",
+    "image": "RailGun.png"
+  },
+  {
+    "id": "rail_gun_payload_opener",
+    "name": "Payload Opener",
+    "image": "RailGunPayloadOpener.png"
+  },
+  {
+    "id": "ranch_station",
+    "name": "Grooming Station",
+    "image": "RanchStation.png"
+  },
+  {
+    "id": "ration_box",
+    "name": "Ration Box",
+    "image": "RationBox.png"
+  },
+  {
+    "id": "reef_generator",
+    "name": "Tidal Turbine",
+    "image": "ReefGenerator.png"
+  },
+  {
+    "id": "refrigerator",
+    "name": "Refrigerator",
+    "image": "Refrigerator.png"
+  },
+  {
+    "id": "research_center",
+    "name": "Research Station",
+    "image": "ResearchStation.png"
+  },
+  {
+    "id": "research_cluster_module",
+    "name": "Research Module",
+    "image": "ResearchClusterModule.png"
+  },
+  {
+    "id": "research_module",
+    "name": "Research Module",
+    "image": "ResearchModule.png"
+  },
+  {
+    "id": "reset_skills_station",
+    "name": "Skill Scrubber",
+    "image": "ResetSkillsStation.png"
+  },
+  {
+    "id": "robo_pilot_command_module",
+    "name": "Robo-Pilot Capsule",
+    "image": "RoboPilotCommandModule.png"
+  },
+  {
+    "id": "robo_pilot_module",
+    "name": "Robo-Pilot Module",
+    "image": "Robo-Pilot_Module.png"
+  },
+  {
+    "id": "rock_crusher",
+    "name": "Rock Crusher",
+    "image": "RockCrusher.png"
+  },
+  {
+    "id": "rocket_envelope_window_tile",
+    "name": "Rocket Window",
+    "image": "RocketEnvelopeWindowTile.png"
+  },
+  {
+    "id": "rocket_interior_gas_input",
+    "name": "Gas Intake Fitting",
+    "image": "RocketInteriorGasInput.png"
+  },
+  {
+    "id": "rocket_interior_gas_input_port",
+    "name": "Gas Spacefarer Input Port",
+    "image": "RocketInteriorGasInputPort.png"
+  },
+  {
+    "id": "rocket_interior_gas_output",
+    "name": "Gas Output Fitting",
+    "image": "RocketInteriorGasOutput.png"
+  },
+  {
+    "id": "rocket_interior_gas_output_port",
+    "name": "Gas Spacefarer Output Port",
+    "image": "RocketInteriorGasOutputPort.png"
+  },
+  {
+    "id": "rocket_interior_liquid_input",
+    "name": "Liquid Intake Fitting",
+    "image": "RocketInteriorLiquidInput.png"
+  },
+  {
+    "id": "rocket_interior_liquid_input_port",
+    "name": "Liquid Spacefarer Input Port",
+    "image": "RocketInteriorLiquidInputPort.png"
+  },
+  {
+    "id": "rocket_interior_liquid_output",
+    "name": "Liquid Output Fitting",
+    "image": "RocketInteriorLiquidOutput.png"
+  },
+  {
+    "id": "rocket_interior_liquid_output_port",
+    "name": "Liquid Spacefarer Output Port",
+    "image": "RocketInteriorLiquidOutputPort.png"
+  },
+  {
+    "id": "rocket_interior_power_plug",
+    "name": "Power Outlet Fitting",
+    "image": "RocketInteriorPowerPlug.png"
+  },
+  {
+    "id": "rocket_interior_solid_input",
+    "name": "Conveyor Receptacle Fitting",
+    "image": "RocketInteriorSolidInput.png"
+  },
+  {
+    "id": "rocket_interior_solid_output",
+    "name": "Conveyor Loader Fitting",
+    "image": "RocketInteriorSolidOutput.png"
+  },
+  {
+    "id": "rocket_wall_tile",
+    "name": "Rocket Wall",
+    "image": "RocketWallTile.png"
+  },
+  {
+    "id": "role_station",
+    "name": "Skills Board",
+    "image": "RoleStation.png"
+  },
+  {
+    "id": "rubber_maker",
+    "name": "Vulcanizer",
+    "image": "RubberMaker.png"
+  },
+  {
+    "id": "rust_deoxidizer",
+    "name": "Rust Deoxidizer",
+    "image": "RustDeoxidizer.png"
+  },
+  {
+    "id": "sauna",
+    "name": "Sauna",
+    "image": "Sauna.png"
+  },
+  {
+    "id": "scanner_module",
+    "name": "Cartographic Module",
+    "image": "ScannerModule.png"
+  },
+  {
+    "id": "scout_module",
+    "name": "Rover's Module",
+    "image": "ScoutModule.png"
+  },
+  {
+    "id": "sculpture",
+    "name": "Large Sculpting Block",
+    "image": "Sculpture.png"
+  },
+  {
+    "id": "shearing_station",
+    "name": "Shearing Station",
+    "image": "ShearingStation.png"
+  },
+  {
+    "id": "shelf",
+    "name": "Display Shelf",
+    "image": "Shelf.png"
+  },
+  {
+    "id": "sludge_press",
+    "name": "Sludge Press",
+    "image": "SludgePress.png"
+  },
+  {
+    "id": "small_electrobank_discharger",
+    "name": "Compact Discharger",
+    "image": "Compact_Discharger.png"
+  },
+  {
+    "id": "small_oxidizer_tank",
+    "name": "Small Solid Oxidizer Tank",
+    "image": "SmallOxidizerTank.png"
+  },
+  {
+    "id": "small_sculpture",
+    "name": "Sculpting Block",
+    "image": "SmallSculpture.png"
+  },
+  {
+    "id": "smoker",
+    "name": "Smoker",
+    "image": "Smoker.png"
+  },
+  {
+    "id": "snow_tile",
+    "name": "Snow Tile",
+    "image": "SnowTile.png"
+  },
+  {
+    "id": "soda_fountain",
+    "name": "Soda Fountain",
+    "image": "SodaFountain.png"
+  },
+  {
+    "id": "solar_panel",
+    "name": "Solar Panel",
+    "image": "SolarPanel.png"
+  },
+  {
+    "id": "solar_panel_module",
+    "name": "Solar Panel Module",
+    "image": "SolarPanelModule.png"
+  },
+  {
+    "id": "solid_booster",
+    "name": "Solid Fuel Thruster",
+    "image": "SolidBooster.png"
+  },
+  {
+    "id": "cargo_bay_cluster",
+    "name": "Large Cargo Bay",
+    "image": "CargoBayCluster.png"
+  },
+  {
+    "id": "cargo_bay",
+    "name": "Cargo Bay",
+    "image": "CargoBay.png"
+  },
+  {
+    "id": "solid_cargo_bay_small",
+    "name": "Cargo Bay",
+    "image": "SolidCargoBaySmall.png"
+  },
+  {
+    "id": "solid_conduit_bridge",
+    "name": "Conveyor Bridge",
+    "image": "SolidConduitBridge.png"
+  },
+  {
+    "id": "solid_conduit",
+    "name": "Conveyor Rail",
+    "image": "SolidConduit.png"
+  },
+  {
+    "id": "solid_conduit_inbox",
+    "name": "Conveyor Loader",
+    "image": "SolidConduitInbox.png"
+  },
+  {
+    "id": "solid_conduit_outbox",
+    "name": "Conveyor Receptacle",
+    "image": "SolidConduitOutbox.png"
+  },
+  {
+    "id": "solid_filter",
+    "name": "Solid Filter",
+    "image": "SolidFilter.png"
+  },
+  {
+    "id": "solid_limit_valve",
+    "name": "Conveyor Meter",
+    "image": "SolidLimitValve.png"
+  },
+  {
+    "id": "solid_logic_valve",
+    "name": "Conveyor Shutoff",
+    "image": "SolidLogicValve.png"
+  },
+  {
+    "id": "solid_transfer_arm",
+    "name": "Auto-Sweeper",
+    "image": "SolidTransferArm.png"
+  },
+  {
+    "id": "solid_vent",
+    "name": "Conveyor Chute",
+    "image": "SolidVent.png"
+  },
+  {
+    "id": "space_heater",
+    "name": "Space Heater",
+    "image": "SpaceHeater.png"
+  },
+  {
+    "id": "special_cargo_bay_cluster",
+    "name": "Critter Cargo Bay",
+    "image": "SpecialCargoBayCluster.png"
+  },
+  {
+    "id": "special_cargo_bay",
+    "name": "Biological Cargo Bay",
+    "image": "SpecialCargoBay.png"
+  },
+  {
+    "id": "spice_grinder",
+    "name": "Spice Grinder",
+    "image": "SpiceGrinder.png"
+  },
+  {
+    "id": "staterpillar_gas_connector",
+    "name": "staterpillar_gas_connector",
+    "image": "StaterpillarGasConnector.png"
+  },
+  {
+    "id": "staterpillar_generator",
+    "name": "Plug Slug",
+    "image": "PlugSlug.png"
+  },
+  {
+    "id": "staterpillar_liquid_connector",
+    "name": "staterpillar_liquid_connector",
+    "image": "StaterpillarLiquidConnector.png"
+  },
+  {
+    "id": "steam_engine_cluster",
+    "name": "Steam Engine",
+    "image": "SteamEngineCluster.png"
+  },
+  {
+    "id": "steam_engine",
+    "name": "Steam Engine",
+    "image": "SteamEngine.png"
+  },
+  {
+    "id": "steam_turbine",
+    "name": "[DEPRECATED] Steam Turbine",
+    "image": "SteamTurbine.png"
+  },
+  {
+    "id": "steam_turbine2",
+    "name": "Steam Turbine",
+    "image": "SteamTurbine.png"
+  },
+  {
+    "id": "storage_locker",
+    "name": "Storage Bin",
+    "image": "StorageLocker.png"
+  },
+  {
+    "id": "storage_locker_smart",
+    "name": "Smart Storage Bin",
+    "image": "StorageLockerSmart.png"
+  },
+  {
+    "id": "storage_tile",
+    "name": "Storage Tile",
+    "image": "StorageTile.png"
+  },
+  {
+    "id": "sublimation_station",
+    "name": "Sublimation Station",
+    "image": "SublimationStation.png"
+  },
+  {
+    "id": "sugar_engine",
+    "name": "Sugar Engine",
+    "image": "SugarEngine.png"
+  },
+  {
+    "id": "suit_fabricator",
+    "name": "Exosuit Forge",
+    "image": "ExosuitForge.png"
+  },
+  {
+    "id": "suit_locker",
+    "name": "Atmo Suit Dock",
+    "image": "SuitLocker.png"
+  },
+  {
+    "id": "suit_marker",
+    "name": "Atmo Suit Checkpoint",
+    "image": "SuitMarker.png"
+  },
+  {
+    "id": "sun_lamp",
+    "name": "Sun Lamp",
+    "image": "SunLamp.png"
+  },
+  {
+    "id": "supermaterial_refinery",
+    "name": "Molecular Forge",
+    "image": "MolecularForge.png"
+  },
+  {
+    "id": "sushi_bar",
+    "name": "Sushi Bar",
+    "image": "SushiBar.png"
+  },
+  {
+    "id": "sweep_bot_station",
+    "name": "Sweepy's Dock",
+    "image": "SweepBotStation.png"
+  },
+  {
+    "id": "telephone",
+    "name": "Party Line Phone",
+    "image": "Telephone.png"
+  },
+  {
+    "id": "teleportal_pad",
+    "name": "Teleporter Pad",
+    "image": "TeleportalPad.png"
+  },
+  {
+    "id": "telescope",
+    "name": "Telescope",
+    "image": "Telescope.png"
+  },
+  {
+    "id": "temporal_tear_opener",
+    "name": "Temporal Tear Opener",
+    "image": "TemporalTearOpener.png"
+  },
+  {
+    "id": "thermal_block",
+    "name": "Tempshift Plate",
+    "image": "ThermalBlock.png"
+  },
+  {
+    "id": "tile",
+    "name": "Tile",
+    "image": "Tile.png"
+  },
+  {
+    "id": "tourist_module",
+    "name": "Sight-Seeing Module",
+    "image": "TouristModule.png"
+  },
+  {
+    "id": "travel_tube",
+    "name": "Transit Tube",
+    "image": "TravelTube.png"
+  },
+  {
+    "id": "travel_tube_entrance",
+    "name": "Transit Tube Access",
+    "image": "TravelTubeEntrance.png"
+  },
+  {
+    "id": "travel_tube_wall_bridge",
+    "name": "Transit Tube Crossing",
+    "image": "TravelTubeWallBridge.png"
+  },
+  {
+    "id": "underwater_breathing_station",
+    "name": "Breathing Station",
+    "image": "UnderwaterBreathingStation.png"
+  },
+  {
+    "id": "underwater_critter_condo",
+    "name": "Aquatic Critter Condo",
+    "image": "UnderwaterCritterCondo.png"
+  },
+  {
+    "id": "underwater_milk_feeder",
+    "name": "Aquatic Critter Fountain",
+    "image": "UnderwaterMilkFeeder.png"
+  },
+  {
+    "id": "underwater_milking_station",
+    "name": "Aquatic Milking Station",
+    "image": "UnderwaterMilkingStation.png"
+  },
+  {
+    "id": "underwater_ranch_station",
+    "name": "Aquatic Grooming Station",
+    "image": "UnderwaterRanchStation.png"
+  },
+  {
+    "id": "underwater_shearing_station",
+    "name": "Aquatic Shearing Station",
+    "image": "UnderwaterShearingStation.png"
+  },
+  {
+    "id": "underwater_vent_drill",
+    "name": "Marine Drill",
+    "image": "UnderwaterVentDrill.png"
+  },
+  {
+    "id": "uranium_centrifuge",
+    "name": "Uranium Centrifuge",
+    "image": "UraniumCentrifuge.png"
+  },
+  {
+    "id": "vertical_wind_tunnel",
+    "name": "Vertical Wind Tunnel",
+    "image": "VerticalWindTunnel.png"
+  },
+  {
+    "id": "wall_toilet",
+    "name": "Wall Toilet",
+    "image": "WallToilet.png"
+  },
+  {
+    "id": "warp_conduit_receiver",
+    "name": "Supply Teleporter Output",
+    "image": "WarpConduitReceiver.png"
+  },
+  {
+    "id": "warp_conduit_sender",
+    "name": "Supply Teleporter Input",
+    "image": "WarpConduitSender.png"
+  },
+  {
+    "id": "wash_basin",
+    "name": "Wash Basin",
+    "image": "WashBasin.png"
+  },
+  {
+    "id": "wash_sink",
+    "name": "Sink",
+    "image": "Sink.png"
+  },
+  {
+    "id": "water_cooler",
+    "name": "Water Cooler",
+    "image": "WaterCooler.png"
+  },
+  {
+    "id": "water_purifier",
+    "name": "Water Sieve",
+    "image": "WaterSieve.png"
+  },
+  {
+    "id": "water_trap",
+    "name": "Fish Trap",
+    "image": "WaterTrap.png"
+  },
+  {
+    "id": "wide_farm_tile",
+    "name": "Wide Hydroponic Farm",
+    "image": "WideFarmTile.png"
+  },
+  {
+    "id": "wire_bridge",
+    "name": "Wire Bridge",
+    "image": "WireBridge.png"
+  },
+  {
+    "id": "wire_bridge_high_wattage",
+    "name": "Heavi-Watt Joint Plate",
+    "image": "WireBridgeHighWattage.png"
+  },
+  {
+    "id": "wire",
+    "name": "Wire",
+    "image": "Wire.png"
+  },
+  {
+    "id": "high_wattage_wire",
+    "name": "Heavi-Watt Wire",
+    "image": "HighWattageWire.png"
+  },
+  {
+    "id": "wire_refined",
+    "name": "Conductive Wire",
+    "image": "WireRefined.png"
+  },
+  {
+    "id": "wire_refined_high_wattage",
+    "name": "Heavi-Watt Conductive Wire",
+    "image": "WireRefinedHighWattage.png"
+  },
+  {
+    "id": "wire_rubber",
+    "name": "Insulated Conductive Wire",
+    "image": "WireRubber.png"
+  },
+  {
+    "id": "wooden_door",
+    "name": "Wicker Door",
+    "image": "WoodenDoor.png"
+  },
+  {
+    "id": "wood_gas_generator",
+    "name": "Wood Burner",
+    "image": "WoodBurner.png"
+  },
+  {
+    "id": "wood_sculpture",
+    "name": "Wood Block",
+    "image": "WoodSculpture.png"
+  },
+  {
+    "id": "wood_storage",
+    "name": "Wood Pile",
+    "image": "WoodStorage.png"
+  },
+  {
+    "id": "wood_tile",
+    "name": "Wood Tile",
+    "image": "WoodTile.png"
+  }
+]

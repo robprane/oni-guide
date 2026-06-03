@@ -1,0 +1,265 @@
+[
+  {
+    "id": "brine",
+    "name": "Brine",
+    "image": "Brine.png"
+  },
+  {
+    "id": "murky_brine",
+    "name": "Polluted Brine",
+    "image": "MurkyBrine.png"
+  },
+  {
+    "id": "chlorine",
+    "name": "Liquid Chlorine",
+    "image": "Chlorine.png"
+  },
+  {
+    "id": "crude_oil",
+    "name": "Crude Oil",
+    "image": "CrudeOil.png"
+  },
+  {
+    "id": "dirty_water",
+    "name": "Polluted Water",
+    "image": "PollutedWater.png"
+  },
+  {
+    "id": "liquid_carbon_dioxide",
+    "name": "Liquid Carbon Dioxide",
+    "image": "LiquidCarbonDioxide.png"
+  },
+  {
+    "id": "liquid_gunk",
+    "name": "Gunk",
+    "image": "Gunk.png"
+  },
+  {
+    "id": "liquid_helium",
+    "name": "Helium",
+    "image": "LiquidHelium.png",
+    "is_disabled": true
+  },
+  {
+    "id": "liquid_hydrogen",
+    "name": "Liquid Hydrogen",
+    "image": "LiquidHydrogen.png"
+  },
+  {
+    "id": "liquid_methane",
+    "name": "Liquid Methane",
+    "image": "LiquidMethane.png"
+  },
+  {
+    "id": "liquid_oxygen",
+    "name": "Liquid Oxygen",
+    "image": "LiquidOxygen.png"
+  },
+  {
+    "id": "liquid_phosphorus",
+    "name": "Liquid Phosphorus",
+    "image": "LiquidPhosphorus.png"
+  },
+  {
+    "id": "liquid_propane",
+    "name": "Liquid Propane",
+    "image": "LiquidPropane.png",
+    "is_hidden": true
+  },
+  {
+    "id": "liquid_sulfur",
+    "name": "Liquid Sulfur",
+    "image": "LiquidSulfur.png"
+  },
+  {
+    "id": "milk",
+    "name": "Brackene",
+    "image": "Brackene.png"
+  },
+  {
+    "id": "fish_milk",
+    "name": "Ovolene",
+    "image": "FishMilk.png"
+  },
+  {
+    "id": "magma",
+    "name": "Magma",
+    "image": "Magma.png"
+  },
+  {
+    "id": "mercury",
+    "name": "Mercury",
+    "image": "Mercury.png"
+  },
+  {
+    "id": "molten_aluminum",
+    "name": "Molten Aluminum",
+    "image": "MoltenAluminum.png"
+  },
+  {
+    "id": "molten_carbon",
+    "name": "Liquid Carbon",
+    "image": "LiquidCarbon.png"
+  },
+  {
+    "id": "molten_copper",
+    "name": "Molten Copper",
+    "image": "MoltenCopper.png"
+  },
+  {
+    "id": "molten_glass",
+    "name": "Molten Glass",
+    "image": "MoltenGlass.png"
+  },
+  {
+    "id": "molten_gold",
+    "name": "Molten Gold",
+    "image": "MoltenGold.png"
+  },
+  {
+    "id": "molten_iron",
+    "name": "Molten Iron",
+    "image": "MoltenIron.png"
+  },
+  {
+    "id": "molten_cobalt",
+    "name": "Molten Cobalt",
+    "image": "MoltenCobalt.png"
+  },
+  {
+    "id": "molten_lead",
+    "name": "Molten Lead",
+    "image": "MoltenLead.png"
+  },
+  {
+    "id": "molten_niobium",
+    "name": "Molten Niobium",
+    "image": "MoltenNiobium.png"
+  },
+  {
+    "id": "molten_salt",
+    "name": "Molten Salt",
+    "image": "MoltenSalt.png"
+  },
+  {
+    "id": "molten_steel",
+    "name": "Molten Steel",
+    "image": "MoltenSteel.png"
+  },
+  {
+    "id": "molten_tungsten",
+    "name": "Molten Tungsten",
+    "image": "MoltenTungsten.png"
+  },
+  {
+    "id": "molten_uranium",
+    "name": "Liquid Uranium",
+    "image": "LiquidUranium.png"
+  },
+  {
+    "id": "naphtha",
+    "name": "Liquid Naphtha",
+    "image": "LiquidNaphtha.png"
+  },
+  {
+    "id": "nuclear_waste",
+    "name": "Liquid Nuclear Waste",
+    "image": "NuclearWaste.png"
+  },
+  {
+    "id": "petroleum",
+    "name": "Petroleum",
+    "image": "Petroleum.png"
+  },
+  {
+    "id": "natural_resin",
+    "name": "Resin",
+    "image": "Resin.png"
+  },
+  {
+    "id": "resin",
+    "name": "Sap",
+    "image": "Resin.png"
+  },
+  {
+    "id": "salt_water",
+    "name": "Salt Water",
+    "image": "SaltWater.png"
+  },
+  {
+    "id": "sugar_water",
+    "name": "Nectar",
+    "image": "Nectar.png"
+  },
+  {
+    "id": "super_coolant",
+    "name": "Super Coolant",
+    "image": "SuperCoolant.png"
+  },
+  {
+    "id": "visco_gel",
+    "name": "Visco-Gel Fluid",
+    "image": "ViscoGelFluid.png"
+  },
+  {
+    "id": "water",
+    "name": "Water",
+    "image": "Water.png"
+  },
+  {
+    "id": "ink",
+    "name": "Squid Ink",
+    "image": "Ink.png"
+  },
+  {
+    "id": "ethanol",
+    "name": "Ethanol",
+    "image": "Ethanol.png"
+  },
+  {
+    "id": "molten_syngas",
+    "name": "Molten Synthesis Gas",
+    "image": "MoltenSyngas.png",
+    "is_disabled": true
+  },
+  {
+    "id": "phyto_oil",
+    "name": "Phyto Oil",
+    "image": "Phyto_Oil.png"
+  },
+  {
+    "id": "refined_lipid",
+    "name": "Biodiesel",
+    "image": "Biodiesel.png"
+  },
+  {
+    "id": "molten_sucrose",
+    "name": "Liquid Sucrose",
+    "image": "LiquidSucrose.png"
+  },
+  {
+    "id": "molten_nickel",
+    "name": "Molten Nickel",
+    "image": "Molten_Nickel.png"
+  },
+  {
+    "id": "molten_iridium",
+    "name": "Molten Iridium",
+    "image": "Molten_Iridium.png"
+  },
+  {
+    "id": "latex",
+    "name": "Latex",
+    "image": "Latex.png"
+  },
+  {
+    "id": "mucus",
+    "name": "Mucin",
+    "image": "Mucus.png"
+  },
+  {
+    "id": "molten_zinc",
+    "name": "Molten Zinc",
+    "image": "MoltenZinc.png"
+  }
+]

@@ -212,6 +212,8 @@ export async function renderRecipes(container, currentPath) {
 
         matchedItems = matchedItems.filter(item => {
             return item._type !== 'special';
+        }).filter(item => {
+            return item.is_disabled !== true && item.is_hidden !== true;
         });
 
         if (matchedItems.length === 0) {
@@ -391,11 +393,22 @@ function showDetailModal(item) {
             ])
         ]),
         createElement('button', {
-            class: 'detail-close-btn',
+            "class": 'close-btn',
             'aria-label': 'Close modal',
-            textContent: '×',
-            onclick: () => window.closeModal()
-        })
+            // textContent: '×',
+            "onclick": () => window.closeModal()
+        },
+        [
+            createElement('svg', { 
+                "class": "icon", 
+                "xmlns": "http://www.w3.org/2000/svg", 
+                "viewBox": "0 0 384 512" }, [
+                createElement('path', { 
+                    "fill": "currentColor", 
+                    "d": "M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" 
+                })
+            ])
+        ])
     ]);
 
     container.appendChild(header);
@@ -546,8 +559,8 @@ function showDetailModal(item) {
             if (src) {
                 if (r.source === 'heat' || r.source === 'cool') {
                                         let tempText = 'Phase Change';
-                    if (r.temp !== undefined) {
-                        let displayTemp = r.temp;
+                    if (r.temp !== undefined || r.temperature !== undefined) {
+                        let displayTemp = r.temp || r.temperature;
                         let unit = '°C';
                         if (window.unitSettings && window.unitSettings.temp === 'F') {
                             displayTemp = (displayTemp * 9/5) + 32;
@@ -568,8 +581,8 @@ function showDetailModal(item) {
             } else {
                 if (r.source === 'heat' || r.source === 'cool') {
                                         let tempText = 'Phase Change';
-                    if (r.temp !== undefined) {
-                        let displayTemp = r.temp;
+                    if (r.temp !== undefined || r.temperature !== undefined) {
+                        let displayTemp = r.temp || r.temperature;
                         let unit = '°C';
                         if (window.unitSettings && window.unitSettings.temp === 'F') {
                             displayTemp = (displayTemp * 9/5) + 32;

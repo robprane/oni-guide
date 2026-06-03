@@ -353,5 +353,17 @@
     "name": "Tofu",
     "image": "Tofu.png",
     "kcalPerKg": 3600
+  },
+  {
+    "id": "sweatcorn",
+    "name": "Sweatcorn",
+    "image": "Sweatcorn.png",
+    "kcalPerKg": 800
+  },
+  {
+    "id": "veggie_poppers",
+    "name": "Veggie Poppers",
+    "image": "Veggie_Poppers.png",
+    "kcalPerKg": 2862.5
   }
 ]

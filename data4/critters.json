@@ -1,0 +1,272 @@
+[
+  {
+    "id": "algae_stego",
+    "name": "algae_stego",
+    "image": "AlgaeStego.png"
+  },
+  {
+    "id": "bee_hive",
+    "name": "Beeta Hive",
+    "image": "BeetaHive.png"
+  },
+  {
+    "id": "chameleon",
+    "name": "Dartle",
+    "image": "Dartle.png"
+  },
+  {
+    "id": "crab",
+    "name": "Pokeshell",
+    "image": "Pokeshell.png"
+  },
+  {
+    "id": "crab_fresh_water",
+    "name": "crab_fresh_water",
+    "image": "CrabFreshWater.png"
+  },
+  {
+    "id": "crab_wood",
+    "name": "crab_wood",
+    "image": "CrabWood.png"
+  },
+  {
+    "id": "divergent_beetle",
+    "name": "divergent_beetle",
+    "image": "DivergentBeetle.png"
+  },
+  {
+    "id": "divergent_worm",
+    "name": "divergent_worm",
+    "image": "DivergentWorm.png"
+  },
+  {
+    "id": "drecko",
+    "name": "Drecko",
+    "image": "Drecko.png"
+  },
+  {
+    "id": "drecko_plastic",
+    "name": "drecko_plastic",
+    "image": "DreckoPlastic.png"
+  },
+  {
+    "id": "glass_deer",
+    "name": "Shatter Flox",
+    "image": "GlassDeer.png"
+  },
+  {
+    "id": "gold_belly",
+    "name": "gold_belly",
+    "image": "GoldBelly.png"
+  },
+  {
+    "id": "hatch",
+    "name": "Hatch",
+    "image": "Hatch.png"
+  },
+  {
+    "id": "hatch_hard",
+    "name": "hatch_hard",
+    "image": "HatchHard.png"
+  },
+  {
+    "id": "hatch_metal",
+    "name": "hatch_metal",
+    "image": "HatchMetal.png"
+  },
+  {
+    "id": "hatch_veggie",
+    "name": "hatch_veggie",
+    "image": "HatchVeggie.png"
+  },
+  {
+    "id": "ice_belly",
+    "name": "Bammoth",
+    "image": "Bammoth.png"
+  },
+  {
+    "id": "light_bug_black",
+    "name": "light_bug_black",
+    "image": "LightBugBlack.png"
+  },
+  {
+    "id": "light_bug_blue",
+    "name": "light_bug_blue",
+    "image": "LightBugBlue.png"
+  },
+  {
+    "id": "light_bug",
+    "name": "Shine Bug",
+    "image": "ShineBug.png"
+  },
+  {
+    "id": "light_bug_crystal",
+    "name": "light_bug_crystal",
+    "image": "LightBugCrystal.png"
+  },
+  {
+    "id": "light_bug_orange",
+    "name": "light_bug_orange",
+    "image": "LightBugOrange.png"
+  },
+  {
+    "id": "light_bug_pink",
+    "name": "light_bug_pink",
+    "image": "LightBugPink.png"
+  },
+  {
+    "id": "light_bug_purple",
+    "name": "light_bug_purple",
+    "image": "LightBugPurple.png"
+  },
+  {
+    "id": "mole",
+    "name": "Shove Vole",
+    "image": "ShoveVole.png"
+  },
+  {
+    "id": "mole_delicacy",
+    "name": "mole_delicacy",
+    "image": "MoleDelicacy.png"
+  },
+  {
+    "id": "mosquito",
+    "name": "Gnit",
+    "image": "Gnit.png"
+  },
+  {
+    "id": "oilfloater",
+    "name": "Slickster",
+    "image": "Slickster.png"
+  },
+  {
+    "id": "oilfloater_decor",
+    "name": "oilfloater_decor",
+    "image": "OilfloaterDecor.png"
+  },
+  {
+    "id": "oilfloater_high_temp",
+    "name": "oilfloater_high_temp",
+    "image": "OilfloaterHighTemp.png"
+  },
+  {
+    "id": "pacu_cleaner",
+    "name": "pacu_cleaner",
+    "image": "PacuCleaner.png"
+  },
+  {
+    "id": "pacu",
+    "name": "Pacu",
+    "image": "Pacu.png"
+  },
+  {
+    "id": "pacu_tropical",
+    "name": "pacu_tropical",
+    "image": "PacuTropical.png"
+  },
+  {
+    "id": "parrot_fish",
+    "name": "Beakon",
+    "image": "ParrotFish.png"
+  },
+  {
+    "id": "prehistoric_pacu",
+    "name": "Jawbo",
+    "image": "Jawbo.png"
+  },
+  {
+    "id": "puffer_fish",
+    "name": "Blowter",
+    "image": "PufferFish.png"
+  },
+  {
+    "id": "puft_alpha",
+    "name": "puft_alpha",
+    "image": "PuftAlpha.png"
+  },
+  {
+    "id": "puft_bleachstone",
+    "name": "puft_bleachstone",
+    "image": "PuftBleachstone.png"
+  },
+  {
+    "id": "puft",
+    "name": "Puft",
+    "image": "Puft.png"
+  },
+  {
+    "id": "puft_oxylite",
+    "name": "puft_oxylite",
+    "image": "PuftOxylite.png"
+  },
+  {
+    "id": "raptor",
+    "name": "Rhex",
+    "image": "Rhex.png"
+  },
+  {
+    "id": "sea_horse",
+    "name": "Seaquine",
+    "image": "SeaHorse.png"
+  },
+  {
+    "id": "seal",
+    "name": "Spigot Seal",
+    "image": "SpigotSeal.png"
+  },
+  {
+    "id": "sea_turtle",
+    "name": "Orehull",
+    "image": "SeaTurtle.png"
+  },
+  {
+    "id": "snail",
+    "name": "Slogo",
+    "image": "Snail.png"
+  },
+  {
+    "id": "snail_iron",
+    "name": "snail_iron",
+    "image": "SnailIron.png"
+  },
+  {
+    "id": "squid",
+    "name": "Glo Squid",
+    "image": "Squid.png"
+  },
+  {
+    "id": "squirrel",
+    "name": "Pip",
+    "image": "Pip.png"
+  },
+  {
+    "id": "squirrel_hug",
+    "name": "squirrel_hug",
+    "image": "SquirrelHug.png"
+  },
+  {
+    "id": "staterpillar",
+    "name": "Plug Slug",
+    "image": "PlugSlug.png"
+  },
+  {
+    "id": "staterpillar_gas",
+    "name": "staterpillar_gas",
+    "image": "StaterpillarGas.png"
+  },
+  {
+    "id": "staterpillar_liquid",
+    "name": "staterpillar_liquid",
+    "image": "StaterpillarLiquid.png"
+  },
+  {
+    "id": "stego",
+    "name": "Lumb",
+    "image": "Lumb.png"
+  },
+  {
+    "id": "wood_deer",
+    "name": "Flox",
+    "image": "Flox.png"
+  }
+]

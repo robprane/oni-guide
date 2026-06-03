@@ -65,8 +65,8 @@
     "image": "LiquidPhosphorus.png"
   },
   {
-    "id": "liquid_resin",
-    "name": "Liquid Resin",
+    "id": "sap",
+    "name": "Sap",
     "image": "LiquidResin.png"
   },
   {
@@ -123,6 +123,11 @@
     "id": "molten_lead",
     "name": "Molten Lead",
     "image": "MoltenLead.png"
+  },
+  {
+    "id": "molten_zinc",
+    "name": "Molten Zinc",
+    "image": "MoltenZinc.png"
   },
   {
     "id": "molten_niobium",
@@ -213,5 +218,35 @@
     "id": "biodiesel",
     "name": "Biodiesel",
     "image": "Biodiesel.png"
+  },
+  {
+    "id": "murky_brine",
+    "name": "Polluted Brine",
+    "image": "MurkyBrine.png"
+  },
+  {
+    "id": "fish_milk",
+    "name": "Ovolene",
+    "image": "FishMilk.png"
+  },
+  {
+    "id": "resin",
+    "name": "Resin",
+    "image": "Resin.png"
+  },
+  {
+    "id": "ink",
+    "name": "Squid Ink",
+    "image": "Ink.png"
+  },
+  {
+    "id": "latex",
+    "name": "Latex",
+    "image": "Latex.png"
+  },
+  {
+    "id": "mucus",
+    "name": "Mucin",
+    "image": "Mucus.png"
   }
 ]

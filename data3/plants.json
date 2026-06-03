@@ -1,0 +1,257 @@
+[
+  {
+    "id": "basic_single_harvest_plant",
+    "name": "Mealwood",
+    "image": "Mealwood.png"
+  },
+  {
+    "id": "bean_plant",
+    "name": "bean_plant",
+    "image": "BeanPlant.png"
+  },
+  {
+    "id": "blue_grass",
+    "name": "blue_grass",
+    "image": "BlueGrass.png"
+  },
+  {
+    "id": "bulbloom",
+    "name": "Bulbloom",
+    "image": "Bulbloom.png"
+  },
+  {
+    "id": "bulb_plant",
+    "name": "Buddy Bud",
+    "image": "BulbPlant.png"
+  },
+  {
+    "id": "butterfly_plant",
+    "name": "Mimika Bud",
+    "image": "Mimika_Bud.png"
+  },
+  {
+    "id": "cactus_plant",
+    "name": "Jumping Joya",
+    "image": "CactusPlant.png"
+  },
+  {
+    "id": "carrot_plant",
+    "name": "Plume Squash Plant",
+    "image": "PlumeSquashPlant.png"
+  },
+  {
+    "id": "clam",
+    "name": "Clampum",
+    "image": "Clam.png"
+  },
+  {
+    "id": "cold_breather",
+    "name": "Wheezewort",
+    "image": "Wheezewort.png"
+  },
+  {
+    "id": "cold_wheat",
+    "name": "Sleet Wheat",
+    "image": "SleetWheat.png"
+  },
+  {
+    "id": "critter_trap_plant",
+    "name": "Saturn Critter Trap",
+    "image": "SaturnCritterTrap.png"
+  },
+  {
+    "id": "cylindrica",
+    "name": "Bliss Burst",
+    "image": "Cylindrica.png"
+  },
+  {
+    "id": "dew_dripper_plant",
+    "name": "Dew Dripper",
+    "image": "Dew_Dripper.png"
+  },
+  {
+    "id": "dew_palm",
+    "name": "Gum Palm",
+    "image": "DewPalm.png"
+  },
+  {
+    "id": "dinofern",
+    "name": "Megafrond",
+    "image": "Dinofern.png"
+  },
+  {
+    "id": "evil_flower",
+    "name": "Sporechid",
+    "image": "Sporechid.png"
+  },
+  {
+    "id": "filament_plant",
+    "name": "Petta Pouf",
+    "image": "FilamentPlant.png"
+  },
+  {
+    "id": "filter_plant",
+    "name": "Hydrocactus",
+    "image": "FilterPlant.png"
+  },
+  {
+    "id": "fly_trap_plant",
+    "name": "Lura Plant",
+    "image": "Lura_Plant.png"
+  },
+  {
+    "id": "forest_tree_branch",
+    "name": "forest_tree_branch",
+    "image": "ForestTreeBranch.png"
+  },
+  {
+    "id": "forest_tree",
+    "name": "forest_tree",
+    "image": "ForestTree.png"
+  },
+  {
+    "id": "garden_decor_plant",
+    "name": "Ring Rosebush",
+    "image": "Ring_Rosebush.png"
+  },
+  {
+    "id": "garden_food_plant",
+    "name": "Sweatcorn Stalk",
+    "image": "GardenFoodPlant.png"
+  },
+  {
+    "id": "gas_grass",
+    "name": "Gas Grass",
+    "image": "GasGrass.png"
+  },
+  {
+    "id": "hard_skin_berry_plant",
+    "name": "Pikeapple Bush",
+    "image": "PikeappleBush.png"
+  },
+  {
+    "id": "ice_flower",
+    "name": "Idylla Flower",
+    "image": "IceFlower.png"
+  },
+  {
+    "id": "kelp_plant",
+    "name": "Seakomb",
+    "image": "Seakomb.png"
+  },
+  {
+    "id": "leafy_plant",
+    "name": "Mirth Leaf",
+    "image": "LeafyPlant.png"
+  },
+  {
+    "id": "mushroom_plant",
+    "name": "Dusk Cap",
+    "image": "DuskCap.png"
+  },
+  {
+    "id": "oxy_coral",
+    "name": "Flue Coral",
+    "image": "OxyCoral.png"
+  },
+  {
+    "id": "oxyfern",
+    "name": "Oxyfern",
+    "image": "Oxyfern.png"
+  },
+  {
+    "id": "plankton_coral",
+    "name": "Starnacle",
+    "image": "PlanktonCoral.png"
+  },
+  {
+    "id": "prickle_flower",
+    "name": "Bristle Blossom",
+    "image": "BristleBlossom.png"
+  },
+  {
+    "id": "prickle_grass",
+    "name": "Bluff Briar",
+    "image": "PrickleGrass.png"
+  },
+  {
+    "id": "salt_plant",
+    "name": "Dasha Saltvine",
+    "image": "DashaSaltvine.png"
+  },
+  {
+    "id": "salty_sticks_plant",
+    "name": "Sodicane",
+    "image": "SaltySticksPlant.png"
+  },
+  {
+    "id": "sea_tree_branch",
+    "name": "Tower Kelp",
+    "image": "SeaTreeBranch.png"
+  },
+  {
+    "id": "sea_tree",
+    "name": "Tower Kelp",
+    "image": "SeaTree.png"
+  },
+  {
+    "id": "space_tree_branch",
+    "name": "space_tree_branch",
+    "image": "SpaceTreeBranch.png"
+  },
+  {
+    "id": "space_tree",
+    "name": "Bonbon Tree",
+    "image": "BonbonTree.png"
+  },
+  {
+    "id": "spice_vine",
+    "name": "spice_vine",
+    "image": "SpiceVine.png"
+  },
+  {
+    "id": "super_worm_plant",
+    "name": "Grubfruit Plant",
+    "image": "GrubfruitPlant.png"
+  },
+  {
+    "id": "swamp_harvest_plant",
+    "name": "Bog Bucket",
+    "image": "BogBucket.png"
+  },
+  {
+    "id": "toe_plant",
+    "name": "Tranquil Toes",
+    "image": "ToePlant.png"
+  },
+  {
+    "id": "tube_worm",
+    "name": "Tublia",
+    "image": "TubeWorm.png"
+  },
+  {
+    "id": "urchin_plant",
+    "name": "Pinpoket",
+    "image": "UrchinPlant.png"
+  },
+  {
+    "id": "vine_branch",
+    "name": "Ovagro Vine",
+    "image": "VineBranch.png"
+  },
+  {
+    "id": "vine_mother",
+    "name": "Ovagro Node",
+    "image": "VineMother.png"
+  },
+  {
+    "id": "wine_cups",
+    "name": "Mellow Mallow",
+    "image": "WineCups.png"
+  },
+  {
+    "id": "worm_plant",
+    "name": "Spindly Grubfruit Plant",
+    "image": "SpindlyGrubfruitPlant.png"
+  }
+]

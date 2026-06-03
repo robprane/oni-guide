@@ -1,0 +1,152 @@
+[
+  {
+    "id": "aluminum_gas",
+    "name": "Aluminum Gas",
+    "image": "AluminumGas.png"
+  },
+  {
+    "id": "carbon_dioxide",
+    "name": "Carbon Dioxide",
+    "image": "CarbonDioxide.png"
+  },
+  {
+    "id": "carbon_gas",
+    "name": "Carbon Gas",
+    "image": "CarbonGas.png"
+  },
+  {
+    "id": "chlorine",
+    "name": "Chlorine",
+    "image": "Chlorine.png"
+  },
+  {
+    "id": "chlorine_gas",
+    "name": "Chlorine Gas",
+    "image": "ChlorineGas.png"
+  },
+  {
+    "id": "cobalt_gas",
+    "name": "Cobalt Gas",
+    "image": "CobaltGas.png"
+  },
+  {
+    "id": "copper_gas",
+    "name": "Copper Gas",
+    "image": "CopperGas.png"
+  },
+  {
+    "id": "ethanol_gas",
+    "name": "Ethanol Gas",
+    "image": "EthanolGas.png"
+  },
+  {
+    "id": "gold_gas",
+    "name": "Gold Gas",
+    "image": "GoldGas.png"
+  },
+  {
+    "id": "hydrogen",
+    "name": "Hydrogen",
+    "image": "Hydrogen.png"
+  },
+  {
+    "id": "iron_gas",
+    "name": "Iron Gas",
+    "image": "IronGas.png"
+  },
+  {
+    "id": "lead_gas",
+    "name": "Lead Gas",
+    "image": "LeadGas.png"
+  },
+  {
+    "id": "zinc_gas",
+    "name": "Zinc Gas",
+    "image": "ZincGas.png"
+  },
+  {
+    "id": "mercury_gas",
+    "name": "Mercury Gas",
+    "image": "MercuryGas.png"
+  },
+  {
+    "id": "natural_gas",
+    "name": "Natural Gas",
+    "image": "NaturalGas.png"
+  },
+  {
+    "id": "niobium_gas",
+    "name": "Niobium Gas",
+    "image": "NiobiumGas.png"
+  },
+  {
+    "id": "oxygen",
+    "name": "Oxygen",
+    "image": "Oxygen.png"
+  },
+  {
+    "id": "phosphorus_gas",
+    "name": "Phosphorus Gas",
+    "image": "PhosphorusGas.png"
+  },
+  {
+    "id": "polluted_oxygen",
+    "name": "Polluted Oxygen",
+    "image": "PollutedOxygen.png"
+  },
+  {
+    "id": "rock_gas",
+    "name": "Rock Gas",
+    "image": "RockGas.png"
+  },
+  {
+    "id": "salt_gas",
+    "name": "Salt Gas",
+    "image": "SaltGas.png"
+  },
+  {
+    "id": "sour_gas",
+    "name": "Sour Gas",
+    "image": "SourGas.png"
+  },
+  {
+    "id": "steam",
+    "name": "Steam",
+    "image": "Steam.png"
+  },
+  {
+    "id": "steel_gas",
+    "name": "Steel Gas",
+    "image": "SteelGas.png"
+  },
+  {
+    "id": "sulfur_gas",
+    "name": "Sulfur Gas",
+    "image": "SulfurGas.png"
+  },
+  {
+    "id": "super_coolant_gas",
+    "name": "Super Coolant Gas",
+    "image": "SuperCoolantGas.png"
+  },
+  {
+    "id": "nuclear_fallout",
+    "name": "Nuclear Fallout",
+    "image": "NuclearFallout.png"
+  },
+  {
+    "id": "tungsten_gas",
+    "name": "Tungsten Gas",
+    "image": "TungstenGas.png"
+  },
+  {
+    "id": "iridium_gas",
+    "name": "Iridium Gas",
+    "image": "Iridium_Gas.png"
+  },
+  {
+    "id": "nickel_gas",
+    "name": "Nickel Gas",
+    "image": "Nickel_Gas.png"
+   }
+]

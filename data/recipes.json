@@ -1742,7 +1742,24 @@
     "source": "molecular_forge",
     "consumed": [
       {
-        "element": "isoresin",
+        "element": "enriched_uranium",
+        "unit": "g",
+        "amount": 10000
+      }
+    ],
+    "produced": [
+      {
+        "element": "atomic_power_bank",
+        "unit": "unit",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "source": "emulsifier",
+    "consumed": [
+      {
+        "element": "isosap",
         "unit": "g",
         "amount": 35000
       },
@@ -1791,7 +1808,7 @@
     "source": "molecular_forge",
     "consumed": [
       {
-        "element": "isoresin",
+        "element": "isosap",
         "unit": "g",
         "amount": 15000
       },
@@ -1802,6 +1819,33 @@
       },
       {
         "element": "reed_fiber",
+        "unit": "g",
+        "amount": 5000
+      }
+    ],
+    "produced": [
+      {
+        "element": "insulation",
+        "unit": "g",
+        "amount": 100000
+      }
+    ]
+  },
+  {
+    "source": "molecular_forge",
+    "consumed": [
+      {
+        "element": "isosap",
+        "unit": "g",
+        "amount": 15000
+      },
+      {
+        "element": "abyssalite",
+        "unit": "g",
+        "amount": 80000
+      },
+      {
+        "element": "feather_fiber",
         "unit": "g",
         "amount": 5000
       }
@@ -3196,6 +3240,28 @@
     ]
   },
   {
+    "source": "clothing_refashionator",
+    "consumed": [
+      {
+        "element": "snazzy_suit",
+        "unit": "unit",
+        "amount": 1
+      },
+      {
+        "element": "feather_fiber",
+        "unit": "g",
+        "amount": 3000
+      }
+    ],
+    "produced": [
+      {
+        "element": "primo_garb",
+        "unit": "unit",
+        "amount": 1
+      }
+    ]
+  },
+  {
     "source": "crafting_station",
     "consumed": [
       {
@@ -3389,6 +3455,50 @@
     "source": "exosuit_forge",
     "consumed": [
       {
+        "element": "nickel",
+        "unit": "g",
+        "amount": 300000
+      },
+      {
+        "element": "reed_fiber",
+        "unit": "g",
+        "amount": 2000
+      }
+    ],
+    "produced": [
+      {
+        "element": "atmo_suit",
+        "unit": "unit",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "source": "exosuit_forge",
+    "consumed": [
+      {
+        "element": "zinc",
+        "unit": "g",
+        "amount": 300000
+      },
+      {
+        "element": "reed_fiber",
+        "unit": "g",
+        "amount": 2000
+      }
+    ],
+    "produced": [
+      {
+        "element": "atmo_suit",
+        "unit": "unit",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "source": "exosuit_forge",
+    "consumed": [
+      {
         "element": "worn_atmo_suit",
         "unit": "unit",
         "amount": 1
@@ -3416,9 +3526,9 @@
         "amount": 200000
       },
       {
-        "element": "petroleum",
+        "element": "reed_fiber",
         "unit": "g",
-        "amount": 25000
+        "amount": 2000
       }
     ],
     "produced": [
@@ -3439,6 +3549,204 @@
       },
       {
         "element": "reed_fiber",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "jet_suit",
+        "unit": "unit",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "source": "exosuit_forge",
+    "consumed": [
+      {
+        "element": "aluminum",
+        "unit": "g",
+        "amount": 300000
+      },
+      {
+        "element": "feather_fiber",
+        "unit": "g",
+        "amount": 2000
+      }
+    ],
+    "produced": [
+      {
+        "element": "atmo_suit",
+        "unit": "unit",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "source": "exosuit_forge",
+    "consumed": [
+      {
+        "element": "cobalt",
+        "unit": "g",
+        "amount": 300000
+      },
+      {
+        "element": "feather_fiber",
+        "unit": "g",
+        "amount": 2000
+      }
+    ],
+    "produced": [
+      {
+        "element": "atmo_suit",
+        "unit": "unit",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "source": "exosuit_forge",
+    "consumed": [
+      {
+        "element": "copper",
+        "unit": "g",
+        "amount": 300000
+      },
+      {
+        "element": "feather_fiber",
+        "unit": "g",
+        "amount": 2000
+      }
+    ],
+    "produced": [
+      {
+        "element": "atmo_suit",
+        "unit": "unit",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "source": "exosuit_forge",
+    "consumed": [
+      {
+        "element": "iron",
+        "unit": "g",
+        "amount": 300000
+      },
+      {
+        "element": "feather_fiber",
+        "unit": "g",
+        "amount": 2000
+      }
+    ],
+    "produced": [
+      {
+        "element": "atmo_suit",
+        "unit": "unit",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "source": "exosuit_forge",
+    "consumed": [
+      {
+        "element": "nickel",
+        "unit": "g",
+        "amount": 300000
+      },
+      {
+        "element": "feather_fiber",
+        "unit": "g",
+        "amount": 2000
+      }
+    ],
+    "produced": [
+      {
+        "element": "atmo_suit",
+        "unit": "unit",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "source": "exosuit_forge",
+    "consumed": [
+      {
+        "element": "zinc",
+        "unit": "g",
+        "amount": 300000
+      },
+      {
+        "element": "feather_fiber",
+        "unit": "g",
+        "amount": 2000
+      }
+    ],
+    "produced": [
+      {
+        "element": "atmo_suit",
+        "unit": "unit",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "source": "exosuit_forge",
+    "consumed": [
+      {
+        "element": "worn_atmo_suit",
+        "unit": "unit",
+        "amount": 1
+      },
+      {
+        "element": "feather_fiber",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "atmo_suit",
+        "unit": "unit",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "source": "exosuit_forge",
+    "consumed": [
+      {
+        "element": "steel",
+        "unit": "g",
+        "amount": 200000
+      },
+      {
+        "element": "feather_fiber",
+        "unit": "g",
+        "amount": 2000
+      }
+    ],
+    "produced": [
+      {
+        "element": "jet_suit",
+        "unit": "unit",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "source": "exosuit_forge",
+    "consumed": [
+      {
+        "element": "worn_jet_suit",
+        "unit": "unit",
+        "amount": 1
+      },
+      {
+        "element": "feather_fiber",
         "unit": "g",
         "amount": 1000
       }
@@ -3710,6 +4018,40 @@
     "consumed": [
       {
         "element": "reed_fiber",
+        "unit": "g",
+        "amount": 4000
+      }
+    ],
+    "produced": [
+      {
+        "element": "warm_coat",
+        "unit": "unit",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "source": "textile_loom",
+    "consumed": [
+      {
+        "element": "feather_fiber",
+        "unit": "g",
+        "amount": 4000
+      }
+    ],
+    "produced": [
+      {
+        "element": "snazzy_suit",
+        "unit": "unit",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "source": "textile_loom",
+    "consumed": [
+      {
+        "element": "feather_fiber",
         "unit": "g",
         "amount": 4000
       }
@@ -4037,3455 +4379,6 @@
         "unit": "g",
         "per": "s",
         "amount": 16.666666
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": 102.75,
-    "consumed": [
-      {
-        "element": "brine",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "steam",
-        "unit": "g",
-        "amount": 700
-      },
-      {
-        "element": "salt",
-        "unit": "g",
-        "amount": 300
-      }
-    ]
-  },
-  {
-    "source": "cool",
-    "temp": -22.5,
-    "consumed": [
-      {
-        "element": "brine",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "brine_ice",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": -34.6,
-    "consumed": [
-      {
-        "element": "liquid_chlorine",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "chlorine_gas",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "cool",
-    "temp": -100.98,
-    "consumed": [
-      {
-        "element": "liquid_chlorine",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "solid_chlorine",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": 399.85,
-    "consumed": [
-      {
-        "element": "crude_oil",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "petroleum",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "cool",
-    "temp": -40.15,
-    "consumed": [
-      {
-        "element": "crude_oil",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "solid_crude_oil",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": 119.35,
-    "consumed": [
-      {
-        "element": "polluted_water",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "steam",
-        "unit": "g",
-        "amount": 990
-      },
-      {
-        "element": "dirt",
-        "unit": "g",
-        "amount": 10
-      }
-    ]
-  },
-  {
-    "source": "cool",
-    "temp": -20.65,
-    "consumed": [
-      {
-        "element": "polluted_water",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "polluted_ice",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": -48.15,
-    "consumed": [
-      {
-        "element": "liquid_carbon_dioxide",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "carbon_dioxide",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "cool",
-    "temp": -56.55,
-    "consumed": [
-      {
-        "element": "liquid_carbon_dioxide",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "solid_carbon_dioxide",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": -252.15,
-    "consumed": [
-      {
-        "element": "liquid_hydrogen",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "hydrogen",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "cool",
-    "temp": -259.15,
-    "consumed": [
-      {
-        "element": "liquid_hydrogen",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "solid_hydrogen",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": -161.5,
-    "consumed": [
-      {
-        "element": "liquid_methane",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "natural_gas",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "cool",
-    "temp": -182.6,
-    "consumed": [
-      {
-        "element": "liquid_methane",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "solid_methane",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": -182.96,
-    "consumed": [
-      {
-        "element": "liquid_oxygen",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "oxygen",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "cool",
-    "temp": -218.79,
-    "consumed": [
-      {
-        "element": "liquid_oxygen",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "solid_oxygen",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": 280.45,
-    "consumed": [
-      {
-        "element": "liquid_phosphorus",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "phosphorus_gas",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "cool",
-    "temp": 44.15,
-    "consumed": [
-      {
-        "element": "liquid_phosphorus",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "refined_phosphorus",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": 337,
-    "consumed": [
-      {
-        "element": "liquid_sulfur",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "sulfur_gas",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "cool",
-    "temp": 115.2,
-    "consumed": [
-      {
-        "element": "liquid_sulfur",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "sulfur",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": 80,
-    "consumed": [
-      {
-        "element": "brackene",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "brine",
-        "unit": "g",
-        "amount": 900
-      },
-      {
-        "element": "brackwax",
-        "unit": "g",
-        "amount": 100
-      }
-    ]
-  },
-  {
-    "source": "cool",
-    "temp": -16.5,
-    "consumed": [
-      {
-        "element": "brackene",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "frozen_brackene",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": 2356.85,
-    "consumed": [
-      {
-        "element": "magma",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "rock_gas",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "cool",
-    "temp": 1409.85,
-    "consumed": [
-      {
-        "element": "magma",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "igneous_rock",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": 356.75,
-    "consumed": [
-      {
-        "element": "mercury",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "mercury_gas",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "cool",
-    "temp": -38.85,
-    "consumed": [
-      {
-        "element": "mercury",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "solid_mercury",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": 2470,
-    "consumed": [
-      {
-        "element": "molten_aluminum",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "aluminum_gas",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "cool",
-    "temp": 660.3,
-    "consumed": [
-      {
-        "element": "molten_aluminum",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "aluminum",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": 4826.85,
-    "consumed": [
-      {
-        "element": "liquid_carbon",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "carbon_gas",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "cool",
-    "temp": 3551.85,
-    "consumed": [
-      {
-        "element": "liquid_carbon",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "refined_carbon",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": 2560.85,
-    "consumed": [
-      {
-        "element": "molten_copper",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "copper_gas",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "cool",
-    "temp": 1083.85,
-    "consumed": [
-      {
-        "element": "molten_copper",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "copper",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": 2356.85,
-    "consumed": [
-      {
-        "element": "molten_glass",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "rock_gas",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "cool",
-    "temp": 1126.85,
-    "consumed": [
-      {
-        "element": "molten_glass",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "glass",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": 2855.85,
-    "consumed": [
-      {
-        "element": "molten_gold",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "gold_gas",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "cool",
-    "temp": 1063.85,
-    "consumed": [
-      {
-        "element": "molten_gold",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "gold",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": 2749.85,
-    "consumed": [
-      {
-        "element": "molten_iron",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "iron_gas",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "cool",
-    "temp": 1534.85,
-    "consumed": [
-      {
-        "element": "molten_iron",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "iron",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": 2926.85,
-    "consumed": [
-      {
-        "element": "molten_cobalt",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "cobalt_gas",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "cool",
-    "temp": 1494.85,
-    "consumed": [
-      {
-        "element": "molten_cobalt",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "cobalt",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": 1749,
-    "consumed": [
-      {
-        "element": "molten_lead",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "lead_gas",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "cool",
-    "temp": 327.5,
-    "consumed": [
-      {
-        "element": "molten_lead",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "lead",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": 4743.85,
-    "consumed": [
-      {
-        "element": "molten_niobium",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "niobium_gas",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "cool",
-    "temp": 2476.85,
-    "consumed": [
-      {
-        "element": "molten_niobium",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "niobium",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": 1464.85,
-    "consumed": [
-      {
-        "element": "molten_salt",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "salt_gas",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "cool",
-    "temp": 799.85,
-    "consumed": [
-      {
-        "element": "molten_salt",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "salt",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": 3826.85,
-    "consumed": [
-      {
-        "element": "molten_steel",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "steel_gas",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "cool",
-    "temp": 1083.85,
-    "consumed": [
-      {
-        "element": "molten_steel",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "steel",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": 5929.85,
-    "consumed": [
-      {
-        "element": "molten_tungsten",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "tungsten_gas",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "cool",
-    "temp": 3421.85,
-    "consumed": [
-      {
-        "element": "molten_tungsten",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "tungsten",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": 4131.85,
-    "consumed": [
-      {
-        "element": "liquid_uranium",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "rock_gas",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "cool",
-    "temp": 132.85,
-    "consumed": [
-      {
-        "element": "liquid_uranium",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "depleted_uranium",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": 538.85,
-    "consumed": [
-      {
-        "element": "liquid_naphtha",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "sour_gas",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "cool",
-    "temp": -50.15,
-    "consumed": [
-      {
-        "element": "liquid_naphtha",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "solid_naphtha",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": 526.85,
-    "consumed": [
-      {
-        "element": "liquid_nuclear_waste",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "nuclear_fallout",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "cool",
-    "temp": 26.85,
-    "consumed": [
-      {
-        "element": "liquid_nuclear_waste",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "solid_nuclear_waste",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": 538.85,
-    "consumed": [
-      {
-        "element": "petroleum",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "sour_gas",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "cool",
-    "temp": -57.15,
-    "consumed": [
-      {
-        "element": "petroleum",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "solid_petroleum",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": 125,
-    "consumed": [
-      {
-        "element": "liquid_resin",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "steam",
-        "unit": "g",
-        "amount": 750
-      },
-      {
-        "element": "isoresin",
-        "unit": "g",
-        "amount": 250
-      }
-    ]
-  },
-  {
-    "source": "cool",
-    "temp": 20,
-    "consumed": [
-      {
-        "element": "liquid_resin",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "solid_resin",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": 99.69,
-    "consumed": [
-      {
-        "element": "salt_water",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "steam",
-        "unit": "g",
-        "amount": 930
-      },
-      {
-        "element": "salt",
-        "unit": "g",
-        "amount": 70
-      }
-    ]
-  },
-  {
-    "source": "cool",
-    "temp": -7.5,
-    "consumed": [
-      {
-        "element": "salt_water",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "brine",
-        "unit": "g",
-        "amount": 230
-      },
-      {
-        "element": "ice",
-        "unit": "g",
-        "amount": 770
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": 160,
-    "consumed": [
-      {
-        "element": "nectar",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "steam",
-        "unit": "g",
-        "amount": 230
-      },
-      {
-        "element": "sucrose",
-        "unit": "g",
-        "amount": 770
-      }
-    ]
-  },
-  {
-    "source": "cool",
-    "temp": -82.5,
-    "consumed": [
-      {
-        "element": "nectar",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "ice",
-        "unit": "g",
-        "amount": 230
-      },
-      {
-        "element": "sucrose",
-        "unit": "g",
-        "amount": 770
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": 436.85,
-    "consumed": [
-      {
-        "element": "super_coolant",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "super_coolant_gas",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "cool",
-    "temp": -271.15,
-    "consumed": [
-      {
-        "element": "super_coolant",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "solid_super_coolant",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": 479.85,
-    "consumed": [
-      {
-        "element": "visco_gel_fluid",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "liquid_naphtha",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "cool",
-    "temp": -30.65,
-    "consumed": [
-      {
-        "element": "visco_gel_fluid",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "solid_visco_gel",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": 99.35,
-    "consumed": [
-      {
-        "element": "water",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "steam",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "cool",
-    "temp": -0.65,
-    "consumed": [
-      {
-        "element": "water",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "ice",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": 78.35,
-    "consumed": [
-      {
-        "element": "ethanol",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "ethanol_gas",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "cool",
-    "temp": -114.05,
-    "consumed": [
-      {
-        "element": "ethanol",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "solid_ethanol",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": 230,
-    "consumed": [
-      {
-        "element": "liquid_sucrose",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "carbon_dioxide",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "cool",
-    "temp": 185.85,
-    "consumed": [
-      {
-        "element": "liquid_sucrose",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "sucrose",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": 125,
-    "consumed": [
-      {
-        "element": "algae",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "dirt",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": 660.3,
-    "consumed": [
-      {
-        "element": "aluminum",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "molten_aluminum",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": 1083.85,
-    "consumed": [
-      {
-        "element": "aluminum_ore",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "molten_aluminum",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": 668.85,
-    "consumed": [
-      {
-        "element": "bleach_stone",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "liquid_chlorine",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": -16.5,
-    "consumed": [
-      {
-        "element": "brine_ice",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "brine",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": -16.5,
-    "consumed": [
-      {
-        "element": "frozen_brackene",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "brackene",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": 276.85,
-    "consumed": [
-      {
-        "element": "coal",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "refined_carbon",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": 1849.85,
-    "consumed": [
-      {
-        "element": "ceramic",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "magma",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": 926.85,
-    "consumed": [
-      {
-        "element": "clay",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "ceramic",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": 1083.85,
-    "consumed": [
-      {
-        "element": "copper",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "molten_copper",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": -0.65,
-    "consumed": [
-      {
-        "element": "crushed_ice",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "water",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": 1409.85,
-    "consumed": [
-      {
-        "element": "crushed_rock",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "magma",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": 1083.85,
-    "consumed": [
-      {
-        "element": "copper_ore",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "molten_copper",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": 132.85,
-    "consumed": [
-      {
-        "element": "depleted_uranium",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "liquid_uranium",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": 3926.85,
-    "consumed": [
-      {
-        "element": "diamond",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "liquid_carbon",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": 326.85,
-    "consumed": [
-      {
-        "element": "dirt",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "sand",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": -20.65,
-    "consumed": [
-      {
-        "element": "polluted_ice",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "polluted_water",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": 1063.85,
-    "consumed": [
-      {
-        "element": "electrum",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "molten_gold",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": 858.85,
-    "consumed": [
-      {
-        "element": "enriched_uranium",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "liquid_uranium",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": 125,
-    "consumed": [
-      {
-        "element": "fertilizer",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "dirt",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": 1083.85,
-    "consumed": [
-      {
-        "element": "pyrite",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "molten_iron",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": 1338.85,
-    "consumed": [
-      {
-        "element": "fossil",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "magma",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": 3926.85,
-    "consumed": [
-      {
-        "element": "fullerene",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "liquid_carbon",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": 1426.85,
-    "consumed": [
-      {
-        "element": "glass",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "molten_glass",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": 1063.85,
-    "consumed": [
-      {
-        "element": "gold",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "molten_gold",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": 1063.85,
-    "consumed": [
-      {
-        "element": "gold_amalgam",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "molten_gold",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": 668.85,
-    "consumed": [
-      {
-        "element": "granite",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "magma",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": -0.65,
-    "consumed": [
-      {
-        "element": "ice",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "water",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": 1409.85,
-    "consumed": [
-      {
-        "element": "igneous_rock",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "magma",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": 1534.85,
-    "consumed": [
-      {
-        "element": "iron",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "molten_iron",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": 1534.85,
-    "consumed": [
-      {
-        "element": "iron_ore",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "molten_iron",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": 1494.85,
-    "consumed": [
-      {
-        "element": "cobalt",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "molten_cobalt",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": 1494.85,
-    "consumed": [
-      {
-        "element": "cobalt_ore",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "molten_cobalt",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": 200,
-    "consumed": [
-      {
-        "element": "isoresin",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "liquid_naphtha",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": 3421.85,
-    "consumed": [
-      {
-        "element": "abyssalite",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "molten_tungsten",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": 327.5,
-    "consumed": [
-      {
-        "element": "lead",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "molten_lead",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": 1056.85,
-    "consumed": [
-      {
-        "element": "lime",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "magma",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": 159.85,
-    "consumed": [
-      {
-        "element": "brackwax",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "liquid_naphtha",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": 1409.85,
-    "consumed": [
-      {
-        "element": "mafic_rock",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "magma",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": 2476.85,
-    "consumed": [
-      {
-        "element": "niobium",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "molten_niobium",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": 626.85,
-    "consumed": [
-      {
-        "element": "corium",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "nuclear_fallout",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": 2726.85,
-    "consumed": [
-      {
-        "element": "obsidian",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "magma",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": 1409.85,
-    "consumed": [
-      {
-        "element": "oxylite",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "magma",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": 243.85,
-    "consumed": [
-      {
-        "element": "phosphorite",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "liquid_phosphorus",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": 44.15,
-    "consumed": [
-      {
-        "element": "refined_phosphorus",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "liquid_phosphorus",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": 1826.85,
-    "consumed": [
-      {
-        "element": "plastium",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "sour_gas",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": 159.85,
-    "consumed": [
-      {
-        "element": "plastic",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "liquid_naphtha",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": 959.85,
-    "consumed": [
-      {
-        "element": "radium",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "magma",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": 4326.85,
-    "consumed": [
-      {
-        "element": "refined_carbon",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "liquid_carbon",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": 1409.85,
-    "consumed": [
-      {
-        "element": "regolith",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "magma",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": 1534.85,
-    "consumed": [
-      {
-        "element": "rust",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "molten_iron",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": 799.85,
-    "consumed": [
-      {
-        "element": "salt",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "molten_salt",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": 1712.85,
-    "consumed": [
-      {
-        "element": "sand",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "molten_glass",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": 926.85,
-    "consumed": [
-      {
-        "element": "sandstone",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "magma",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": 926.85,
-    "consumed": [
-      {
-        "element": "sedimentary_rock",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "magma",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": 125,
-    "consumed": [
-      {
-        "element": "slime",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "dirt",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": -0.65,
-    "consumed": [
-      {
-        "element": "snow",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "water",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": -56.55,
-    "consumed": [
-      {
-        "element": "solid_carbon_dioxide",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "liquid_carbon_dioxide",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": -100.98,
-    "consumed": [
-      {
-        "element": "solid_chlorine",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "liquid_chlorine",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": -40.15,
-    "consumed": [
-      {
-        "element": "solid_crude_oil",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "crude_oil",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": -259.15,
-    "consumed": [
-      {
-        "element": "solid_hydrogen",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "liquid_hydrogen",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": -38.85,
-    "consumed": [
-      {
-        "element": "solid_mercury",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "mercury",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": -182.6,
-    "consumed": [
-      {
-        "element": "solid_methane",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "liquid_methane",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": -50.15,
-    "consumed": [
-      {
-        "element": "solid_naphtha",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "liquid_naphtha",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": -218.79,
-    "consumed": [
-      {
-        "element": "solid_oxygen",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "liquid_oxygen",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": -57.15,
-    "consumed": [
-      {
-        "element": "solid_petroleum",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "petroleum",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": 20,
-    "consumed": [
-      {
-        "element": "solid_resin",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "liquid_resin",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": -271.15,
-    "consumed": [
-      {
-        "element": "solid_super_coolant",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "super_coolant",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": -30.65,
-    "consumed": [
-      {
-        "element": "solid_visco_gel",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "visco_gel_fluid",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": 2426.85,
-    "consumed": [
-      {
-        "element": "steel",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "molten_steel",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": 115.2,
-    "consumed": [
-      {
-        "element": "sulfur",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "liquid_sulfur",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": 3621.85,
-    "consumed": [
-      {
-        "element": "insulite",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "molten_tungsten",
-        "unit": "g",
-        "amount": 850
-      },
-      {
-        "element": "sour_gas",
-        "unit": "g",
-        "amount": 150
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": 2676.85,
-    "consumed": [
-      {
-        "element": "thermium",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "molten_niobium",
-        "unit": "g",
-        "amount": 50
-      },
-      {
-        "element": "tungsten",
-        "unit": "g",
-        "amount": 950
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": 1712.85,
-    "consumed": [
-      {
-        "element": "polluted_dirt",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "molten_glass",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": 3421.85,
-    "consumed": [
-      {
-        "element": "tungsten",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "molten_tungsten",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": 9726.85,
-    "consumed": [
-      {
-        "element": "neutronium",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "neutronium",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": 132.85,
-    "consumed": [
-      {
-        "element": "uranium_ore",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "liquid_uranium",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": 2926.85,
-    "consumed": [
-      {
-        "element": "wolframite",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "molten_tungsten",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": -114.05,
-    "consumed": [
-      {
-        "element": "solid_ethanol",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "ethanol",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": 99.69,
-    "consumed": [
-      {
-        "element": "polluted_mud",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "steam",
-        "unit": "g",
-        "amount": 600
-      },
-      {
-        "element": "polluted_dirt",
-        "unit": "g",
-        "amount": 400
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": 99.69,
-    "consumed": [
-      {
-        "element": "mud",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "steam",
-        "unit": "g",
-        "amount": 600
-      },
-      {
-        "element": "dirt",
-        "unit": "g",
-        "amount": 400
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": 185.85,
-    "consumed": [
-      {
-        "element": "sucrose",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "liquid_sucrose",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": 276.85,
-    "consumed": [
-      {
-        "element": "graphite",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "refined_carbon",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": 26.85,
-    "consumed": [
-      {
-        "element": "solid_nuclear_waste",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "liquid_nuclear_waste",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": 583.5,
-    "consumed": [
-      {
-        "element": "cinnabar_ore",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "mercury_gas",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": 600,
-    "consumed": [
-      {
-        "element": "wood",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "carbon_dioxide",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": 600,
-    "consumed": [
-      {
-        "element": "plywood",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "carbon_dioxide",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": 80,
-    "consumed": [
-      {
-        "element": "tallow",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "biodiesel",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "cool",
-    "temp": 2470,
-    "consumed": [
-      {
-        "element": "aluminum_gas",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "molten_aluminum",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "cool",
-    "temp": -48.15,
-    "consumed": [
-      {
-        "element": "carbon_dioxide",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "liquid_carbon_dioxide",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "cool",
-    "temp": 4826.85,
-    "consumed": [
-      {
-        "element": "carbon_gas",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "liquid_carbon",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "cool",
-    "temp": -34.6,
-    "consumed": [
-      {
-        "element": "chlorine_gas",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "liquid_chlorine",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "cool",
-    "temp": -182.96,
-    "consumed": [
-      {
-        "element": "polluted_oxygen",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "liquid_oxygen",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "cool",
-    "temp": 2560.85,
-    "consumed": [
-      {
-        "element": "copper_gas",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "molten_copper",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "cool",
-    "temp": 2855.85,
-    "consumed": [
-      {
-        "element": "gold_gas",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "molten_gold",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "cool",
-    "temp": -252.15,
-    "consumed": [
-      {
-        "element": "hydrogen",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "liquid_hydrogen",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "cool",
-    "temp": 2749.85,
-    "consumed": [
-      {
-        "element": "iron_gas",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "molten_iron",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "cool",
-    "temp": 2926.85,
-    "consumed": [
-      {
-        "element": "cobalt_gas",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "molten_cobalt",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "cool",
-    "temp": 1749,
-    "consumed": [
-      {
-        "element": "lead_gas",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "molten_lead",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "cool",
-    "temp": 356.75,
-    "consumed": [
-      {
-        "element": "mercury_gas",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "mercury",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "cool",
-    "temp": -161.5,
-    "consumed": [
-      {
-        "element": "natural_gas",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "liquid_methane",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "cool",
-    "temp": 4743.85,
-    "consumed": [
-      {
-        "element": "niobium_gas",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "molten_niobium",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "cool",
-    "temp": 66.85,
-    "consumed": [
-      {
-        "element": "nuclear_fallout",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "liquid_nuclear_waste",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "cool",
-    "temp": -182.96,
-    "consumed": [
-      {
-        "element": "oxygen",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "liquid_oxygen",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "cool",
-    "temp": 280.45,
-    "consumed": [
-      {
-        "element": "phosphorus_gas",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "liquid_phosphorus",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "cool",
-    "temp": 2356.85,
-    "consumed": [
-      {
-        "element": "rock_gas",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "magma",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "cool",
-    "temp": 1464.85,
-    "consumed": [
-      {
-        "element": "salt_gas",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "molten_salt",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "cool",
-    "temp": -161.5,
-    "consumed": [
-      {
-        "element": "sour_gas",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "liquid_methane",
-        "unit": "g",
-        "amount": 670
-      },
-      {
-        "element": "sulfur",
-        "unit": "g",
-        "amount": 330
-      }
-    ]
-  },
-  {
-    "source": "cool",
-    "temp": 99.35,
-    "consumed": [
-      {
-        "element": "steam",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "water",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "cool",
-    "temp": 3826.85,
-    "consumed": [
-      {
-        "element": "steel_gas",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "molten_steel",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "cool",
-    "temp": 337,
-    "consumed": [
-      {
-        "element": "sulfur_gas",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "liquid_sulfur",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "cool",
-    "temp": 436.85,
-    "consumed": [
-      {
-        "element": "super_coolant_gas",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "super_coolant",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "cool",
-    "temp": 5929.85,
-    "consumed": [
-      {
-        "element": "tungsten_gas",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "molten_tungsten",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "cool",
-    "temp": 78.35,
-    "consumed": [
-      {
-        "element": "ethanol_gas",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "ethanol",
-        "unit": "g",
-        "amount": 1000
       }
     ]
   },
@@ -8820,24 +5713,6 @@
     ]
   },
   {
-    "source": "heat",
-    "temp": 71,
-    "consumed": [
-      {
-        "element": "raw_egg",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "omelette",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
     "source": "duplicant",
     "consumed": [
       {
@@ -9425,6 +6300,11 @@
         "element": "egg_shell",
         "unit": "g",
         "amount": 100
+      },
+      {
+        "element": "resin",
+        "unit": "g",
+        "amount": 5000
       }
     ]
   },
@@ -9447,6 +6327,11 @@
         "element": "egg_shell",
         "unit": "g",
         "amount": 100
+      },
+      {
+        "element": "resin",
+        "unit": "g",
+        "amount": 5000
       }
     ]
   },
@@ -9469,6 +6354,11 @@
         "element": "egg_shell",
         "unit": "g",
         "amount": 100
+      },
+      {
+        "element": "resin",
+        "unit": "g",
+        "amount": 5000
       }
     ]
   },
@@ -9573,12 +6463,7 @@
       {
         "element": "raw_egg",
         "unit": "g",
-        "amount": 2000
-      },
-      {
-        "element": "egg_shell",
-        "unit": "g",
-        "amount": 2000
+        "amount": 750
       }
     ]
   },
@@ -9639,12 +6524,7 @@
       {
         "element": "raw_egg",
         "unit": "g",
-        "amount": 2000
-      },
-      {
-        "element": "egg_shell",
-        "unit": "g",
-        "amount": 2000
+        "amount": 750
       }
     ]
   },
@@ -9865,6 +6745,11 @@
         "element": "egg_shell",
         "unit": "g",
         "amount": 100
+      },
+      {
+        "element": "resin",
+        "unit": "g",
+        "amount": 5000
       }
     ]
   },
@@ -9887,6 +6772,11 @@
         "element": "egg_shell",
         "unit": "g",
         "amount": 100
+      },
+      {
+        "element": "resin",
+        "unit": "g",
+        "amount": 5000
       }
     ]
   },
@@ -9953,6 +6843,11 @@
         "element": "egg_shell",
         "unit": "g",
         "amount": 100
+      },
+      {
+        "element": "resin",
+        "unit": "g",
+        "amount": 5000
       }
     ]
   },
@@ -10085,6 +6980,11 @@
         "element": "egg_shell",
         "unit": "g",
         "amount": 100
+      },
+      {
+        "element": "resin",
+        "unit": "g",
+        "amount": 5000
       }
     ]
   },
@@ -10123,12 +7023,7 @@
       {
         "element": "raw_egg",
         "unit": "g",
-        "amount": 2000
-      },
-      {
-        "element": "egg_shell",
-        "unit": "g",
-        "amount": 2000
+        "amount": 750
       }
     ]
   },
@@ -13847,6 +10742,25 @@
   },
   {
     "source": "pacu",
+    "consumed": [
+      {
+        "element": "mimillet",
+        "unit": "g",
+        "per": "s",
+        "amount": 1.6666666667
+      }
+    ],
+    "produced": [
+      {
+        "element": "polluted_dirt",
+        "unit": "g",
+        "per": "s",
+        "amount": 0.8333333333
+      }
+    ]
+  },
+  {
+    "source": "pacu",
     "produced": [
       {
         "element": "pacu_fillet",
@@ -13899,6 +10813,25 @@
     "consumed": [
       {
         "element": "nosh_bean",
+        "unit": "g",
+        "per": "s",
+        "amount": 1.6666666667
+      }
+    ],
+    "produced": [
+      {
+        "element": "polluted_dirt",
+        "unit": "g",
+        "per": "s",
+        "amount": 0.8333333333
+      }
+    ]
+  },
+  {
+    "source": "tropical_pacu",
+    "consumed": [
+      {
+        "element": "mimillet",
         "unit": "g",
         "per": "s",
         "amount": 1.6666666667
@@ -14252,6 +11185,25 @@
     "consumed": [
       {
         "element": "nosh_bean",
+        "unit": "g",
+        "per": "s",
+        "amount": 1.6666666667
+      }
+    ],
+    "produced": [
+      {
+        "element": "polluted_dirt",
+        "unit": "g",
+        "per": "s",
+        "amount": 0.8333333333
+      }
+    ]
+  },
+  {
+    "source": "gulp_fish",
+    "consumed": [
+      {
+        "element": "mimillet",
         "unit": "g",
         "per": "s",
         "amount": 1.6666666667
@@ -17750,78 +14702,6 @@
     ]
   },
   {
-    "source": "heat",
-    "temp": 2445.85,
-    "consumed": [
-      {
-        "element": "iridium",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "molten_iridium",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": 4129.85,
-    "consumed": [
-      {
-        "element": "molten_iridium",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "iridium_gas",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "cool",
-    "temp": 4129.85,
-    "consumed": [
-      {
-        "element": "iridium_gas",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "molten_iridium",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "cool",
-    "temp": 2445.85,
-    "consumed": [
-      {
-        "element": "molten_iridium",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "iridium",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
     "source": "power_control_station",
     "consumed": [
       {
@@ -17903,96 +14783,6 @@
         "element": "microchip",
         "unit": "unit",
         "amount": 1
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": 1454.85,
-    "consumed": [
-      {
-        "element": "nickel",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "molten_nickel",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": 1454.85,
-    "consumed": [
-      {
-        "element": "nickel_ore",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "molten_nickel",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": 2729.85,
-    "consumed": [
-      {
-        "element": "molten_nickel",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "nickel_gas",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "cool",
-    "temp": 2729.85,
-    "consumed": [
-      {
-        "element": "nickel_gas",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "molten_nickel",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "cool",
-    "temp": 1454.85,
-    "consumed": [
-      {
-        "element": "molten_nickel",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "nickel",
-        "unit": "g",
-        "amount": 1000
       }
     ]
   },
@@ -18201,142 +14991,6 @@
     ]
   },
   {
-    "source": "heat",
-    "temp": -8.15,
-    "consumed": [
-      {
-        "element": "solid_gunk",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "gunk",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": 447.85,
-    "consumed": [
-      {
-        "element": "gunk",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "petroleum",
-        "unit": "g",
-        "amount": 920
-      },
-      {
-        "element": "sulfur",
-        "unit": "g",
-        "amount": 80
-      }
-    ]
-  },
-  {
-    "source": "cool",
-    "temp": -8.15,
-    "consumed": [
-      {
-        "element": "gunk",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "solid_gunk",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "cool",
-    "temp": -33.15,
-    "consumed": [
-      {
-        "element": "phyto_oil",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "frozen_phyto_oil",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": -33.15,
-    "consumed": [
-      {
-        "element": "frozen_phyto_oil",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "phyto_oil",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": 75,
-    "consumed": [
-      {
-        "element": "phyto_oil",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "algae",
-        "unit": "g",
-        "amount": 666.6666667
-      },
-      {
-        "element": "carbon_dioxide",
-        "unit": "g",
-        "amount": 333.3333333
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": -33.15,
-    "consumed": [
-      {
-        "element": "frozen_phyto_oil",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "phyto_oil",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
     "source": "bionic_duplicant",
     "consumed": [
       {
@@ -18399,53 +15053,6 @@
         "unit": "unit",
         "per": "s",
         "amount": 0.00166667
-      }
-    ]
-  },
-  {
-    "source": "bionic_duplicant",
-    "consumed": [
-      {
-        "element": "eco_power_bank",
-        "unit": "unit",
-        "per": "s",
-        "amount": 0.00166667
-      }
-    ]
-  },
-  {
-    "source": "heat",
-    "temp": 180,
-    "consumed": [
-      {
-        "element": "biodiesel",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "carbon_dioxide",
-        "unit": "g",
-        "amount": 1000
-      }
-    ]
-  },
-  {
-    "source": "cool",
-    "temp": -10,
-    "consumed": [
-      {
-        "element": "biodiesel",
-        "unit": "g",
-        "amount": 1000
-      }
-    ],
-    "produced": [
-      {
-        "element": "tallow",
-        "unit": "g",
-        "amount": 1000
       }
     ]
   },
@@ -18740,6 +15347,4842 @@
         "element": "tidying_booster",
         "unit": "unit",
         "amount": 1
+      }
+    ]
+  },
+  {
+    "source": "cool",
+    "temp": 2470,
+    "consumed": [
+      {
+        "element": "aluminum_gas",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "molten_aluminum",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "cool",
+    "temp": -48.15,
+    "consumed": [
+      {
+        "element": "carbon_dioxide",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "liquid_carbon_dioxide",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "cool",
+    "temp": 4826.85,
+    "consumed": [
+      {
+        "element": "carbon_gas",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "liquid_carbon",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "cool",
+    "temp": -34.6,
+    "consumed": [
+      {
+        "element": "chlorine_gas",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "liquid_chlorine",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "cool",
+    "temp": -182.96,
+    "consumed": [
+      {
+        "element": "polluted_oxygen",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "liquid_oxygen",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "cool",
+    "temp": 2560.85,
+    "consumed": [
+      {
+        "element": "copper_gas",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "molten_copper",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "cool",
+    "temp": 2855.85,
+    "consumed": [
+      {
+        "element": "gold_gas",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "molten_gold",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "cool",
+    "temp": -252.15,
+    "consumed": [
+      {
+        "element": "hydrogen",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "liquid_hydrogen",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "cool",
+    "temp": 2749.85,
+    "consumed": [
+      {
+        "element": "iron_gas",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "molten_iron",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "cool",
+    "temp": 2926.85,
+    "consumed": [
+      {
+        "element": "cobalt_gas",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "molten_cobalt",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "cool",
+    "temp": 1749,
+    "consumed": [
+      {
+        "element": "lead_gas",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "molten_lead",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "cool",
+    "temp": 356.75,
+    "consumed": [
+      {
+        "element": "mercury_gas",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "mercury",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "cool",
+    "temp": -161.5,
+    "consumed": [
+      {
+        "element": "natural_gas",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "liquid_methane",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "cool",
+    "temp": 4743.85,
+    "consumed": [
+      {
+        "element": "niobium_gas",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "molten_niobium",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "cool",
+    "temp": 66.85,
+    "consumed": [
+      {
+        "element": "nuclear_fallout",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "liquid_nuclear_waste",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "cool",
+    "temp": -182.96,
+    "consumed": [
+      {
+        "element": "oxygen",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "liquid_oxygen",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "cool",
+    "temp": 280.45,
+    "consumed": [
+      {
+        "element": "phosphorus_gas",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "liquid_phosphorus",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "cool",
+    "temp": 2356.85,
+    "consumed": [
+      {
+        "element": "rock_gas",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "magma",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "cool",
+    "temp": 1464.85,
+    "consumed": [
+      {
+        "element": "salt_gas",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "molten_salt",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "cool",
+    "temp": -161.5,
+    "consumed": [
+      {
+        "element": "sour_gas",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "liquid_methane",
+        "unit": "g",
+        "amount": 670
+      },
+      {
+        "element": "sulfur",
+        "unit": "g",
+        "amount": 330
+      }
+    ]
+  },
+  {
+    "source": "cool",
+    "temp": 99.35,
+    "consumed": [
+      {
+        "element": "steam",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "water",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "cool",
+    "temp": 3826.85,
+    "consumed": [
+      {
+        "element": "steel_gas",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "molten_steel",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "cool",
+    "temp": 337,
+    "consumed": [
+      {
+        "element": "sulfur_gas",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "liquid_sulfur",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "cool",
+    "temp": 436.85,
+    "consumed": [
+      {
+        "element": "super_coolant_gas",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "super_coolant",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "cool",
+    "temp": 5929.85,
+    "consumed": [
+      {
+        "element": "tungsten_gas",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "molten_tungsten",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "cool",
+    "temp": 78.35,
+    "consumed": [
+      {
+        "element": "ethanol_gas",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "ethanol",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "cool",
+    "temp": 2729.85,
+    "consumed": [
+      {
+        "element": "nickel_gas",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "molten_nickel",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "cool",
+    "temp": 4129.85,
+    "consumed": [
+      {
+        "element": "iridium_gas",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "molten_iridium",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "cool",
+    "temp": 906.85,
+    "consumed": [
+      {
+        "element": "zinc_gas",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "molten_zinc",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 102.75,
+    "consumed": [
+      {
+        "element": "brine",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "steam",
+        "unit": "g",
+        "amount": 700
+      },
+      {
+        "element": "salt",
+        "unit": "g",
+        "amount": 300
+      }
+    ]
+  },
+  {
+    "source": "cool",
+    "temp": -22.5,
+    "consumed": [
+      {
+        "element": "brine",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "brine_ice",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 106.75,
+    "consumed": [
+      {
+        "element": "murky_brine",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "polluted_water",
+        "unit": "g",
+        "amount": 700
+      },
+      {
+        "element": "salt",
+        "unit": "g",
+        "amount": 300
+      }
+    ]
+  },
+  {
+    "source": "cool",
+    "temp": -25.5,
+    "consumed": [
+      {
+        "element": "murky_brine",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "murky_brine_ice",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": -34.6,
+    "consumed": [
+      {
+        "element": "liquid_chlorine",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "chlorine_gas",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "cool",
+    "temp": -100.98,
+    "consumed": [
+      {
+        "element": "liquid_chlorine",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "solid_chlorine",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 399.85,
+    "consumed": [
+      {
+        "element": "crude_oil",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "petroleum",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "cool",
+    "temp": -40.15,
+    "consumed": [
+      {
+        "element": "crude_oil",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "solid_crude_oil",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 119.35,
+    "consumed": [
+      {
+        "element": "polluted_water",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "steam",
+        "unit": "g",
+        "amount": 990
+      },
+      {
+        "element": "dirt",
+        "unit": "g",
+        "amount": 10
+      }
+    ]
+  },
+  {
+    "source": "cool",
+    "temp": -20.65,
+    "consumed": [
+      {
+        "element": "polluted_water",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "polluted_ice",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": -48.15,
+    "consumed": [
+      {
+        "element": "liquid_carbon_dioxide",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "carbon_dioxide",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "cool",
+    "temp": -56.55,
+    "consumed": [
+      {
+        "element": "liquid_carbon_dioxide",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "solid_carbon_dioxide",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 447.85,
+    "consumed": [
+      {
+        "element": "gunk",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "petroleum",
+        "unit": "g",
+        "amount": 920
+      },
+      {
+        "element": "sulfur",
+        "unit": "g",
+        "amount": 80
+      }
+    ]
+  },
+  {
+    "source": "cool",
+    "temp": -8.15,
+    "consumed": [
+      {
+        "element": "gunk",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "solid_gunk",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": -252.15,
+    "consumed": [
+      {
+        "element": "liquid_hydrogen",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "hydrogen",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "cool",
+    "temp": -259.15,
+    "consumed": [
+      {
+        "element": "liquid_hydrogen",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "solid_hydrogen",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": -161.5,
+    "consumed": [
+      {
+        "element": "liquid_methane",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "natural_gas",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "cool",
+    "temp": -182.6,
+    "consumed": [
+      {
+        "element": "liquid_methane",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "solid_methane",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": -182.96,
+    "consumed": [
+      {
+        "element": "liquid_oxygen",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "oxygen",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "cool",
+    "temp": -218.79,
+    "consumed": [
+      {
+        "element": "liquid_oxygen",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "solid_oxygen",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 280.45,
+    "consumed": [
+      {
+        "element": "liquid_phosphorus",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "phosphorus_gas",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "cool",
+    "temp": 44.15,
+    "consumed": [
+      {
+        "element": "liquid_phosphorus",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "refined_phosphorus",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": -42.15,
+    "consumed": [
+      {
+        "element": "LiquidPropane",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "Propane",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "cool",
+    "temp": -188.15,
+    "consumed": [
+      {
+        "element": "LiquidPropane",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "SolidPropane",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 337,
+    "consumed": [
+      {
+        "element": "liquid_sulfur",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "sulfur_gas",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "cool",
+    "temp": 115.2,
+    "consumed": [
+      {
+        "element": "liquid_sulfur",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "sulfur",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 80,
+    "consumed": [
+      {
+        "element": "brackene",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "brine",
+        "unit": "g",
+        "amount": 900
+      },
+      {
+        "element": "brackwax",
+        "unit": "g",
+        "amount": 100
+      }
+    ]
+  },
+  {
+    "source": "cool",
+    "temp": -16.5,
+    "consumed": [
+      {
+        "element": "brackene",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "frozen_brackene",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 80,
+    "consumed": [
+      {
+        "element": "fish_milk",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "steam",
+        "unit": "g",
+        "amount": 900
+      },
+      {
+        "element": "brackwax",
+        "unit": "g",
+        "amount": 100
+      }
+    ]
+  },
+  {
+    "source": "cool",
+    "temp": -16.5,
+    "consumed": [
+      {
+        "element": "fish_milk",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "fish_milk_ice",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 2356.85,
+    "consumed": [
+      {
+        "element": "magma",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "rock_gas",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "cool",
+    "temp": 1409.85,
+    "consumed": [
+      {
+        "element": "magma",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "igneous_rock",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 356.75,
+    "consumed": [
+      {
+        "element": "mercury",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "mercury_gas",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "cool",
+    "temp": -38.85,
+    "consumed": [
+      {
+        "element": "mercury",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "mercury",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 2470,
+    "consumed": [
+      {
+        "element": "molten_aluminum",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "aluminum_gas",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "cool",
+    "temp": 660.3,
+    "consumed": [
+      {
+        "element": "molten_aluminum",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "aluminum",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 4826.85,
+    "consumed": [
+      {
+        "element": "liquid_carbon",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "carbon_gas",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "cool",
+    "temp": 3551.85,
+    "consumed": [
+      {
+        "element": "liquid_carbon",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "refined_carbon",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 2560.85,
+    "consumed": [
+      {
+        "element": "molten_copper",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "copper_gas",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "cool",
+    "temp": 1083.85,
+    "consumed": [
+      {
+        "element": "molten_copper",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "copper",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 2356.85,
+    "consumed": [
+      {
+        "element": "molten_glass",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "rock_gas",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "cool",
+    "temp": 1126.85,
+    "consumed": [
+      {
+        "element": "molten_glass",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "glass",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 2855.85,
+    "consumed": [
+      {
+        "element": "molten_gold",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "gold_gas",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "cool",
+    "temp": 1063.85,
+    "consumed": [
+      {
+        "element": "molten_gold",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "gold",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 2749.85,
+    "consumed": [
+      {
+        "element": "molten_iron",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "iron_gas",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "cool",
+    "temp": 1534.85,
+    "consumed": [
+      {
+        "element": "molten_iron",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "iron",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 2926.85,
+    "consumed": [
+      {
+        "element": "molten_cobalt",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "cobalt_gas",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "cool",
+    "temp": 1494.85,
+    "consumed": [
+      {
+        "element": "molten_cobalt",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "cobalt",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 1749,
+    "consumed": [
+      {
+        "element": "molten_lead",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "lead_gas",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "cool",
+    "temp": 327.5,
+    "consumed": [
+      {
+        "element": "molten_lead",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "lead",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 4743.85,
+    "consumed": [
+      {
+        "element": "molten_niobium",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "niobium_gas",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "cool",
+    "temp": 2476.85,
+    "consumed": [
+      {
+        "element": "molten_niobium",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "niobium",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 1464.85,
+    "consumed": [
+      {
+        "element": "molten_salt",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "salt_gas",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "cool",
+    "temp": 799.85,
+    "consumed": [
+      {
+        "element": "molten_salt",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "salt",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 3826.85,
+    "consumed": [
+      {
+        "element": "molten_steel",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "steel_gas",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "cool",
+    "temp": 1083.85,
+    "consumed": [
+      {
+        "element": "molten_steel",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "steel",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 5929.85,
+    "consumed": [
+      {
+        "element": "molten_tungsten",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "tungsten_gas",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "cool",
+    "temp": 3421.85,
+    "consumed": [
+      {
+        "element": "molten_tungsten",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "tungsten",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 4131.85,
+    "consumed": [
+      {
+        "element": "liquid_uranium",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "rock_gas",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "cool",
+    "temp": 132.85,
+    "consumed": [
+      {
+        "element": "liquid_uranium",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "depleted_uranium",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 538.85,
+    "consumed": [
+      {
+        "element": "liquid_naphtha",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "sour_gas",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "cool",
+    "temp": -50.15,
+    "consumed": [
+      {
+        "element": "liquid_naphtha",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "solid_naphtha",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 526.85,
+    "consumed": [
+      {
+        "element": "liquid_nuclear_waste",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "nuclear_fallout",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "cool",
+    "temp": 26.85,
+    "consumed": [
+      {
+        "element": "liquid_nuclear_waste",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "solid_nuclear_waste",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 538.85,
+    "consumed": [
+      {
+        "element": "petroleum",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "sour_gas",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "cool",
+    "temp": -57.15,
+    "consumed": [
+      {
+        "element": "petroleum",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "solid_petroleum",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 125,
+    "consumed": [
+      {
+        "element": "resin",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "steam",
+        "unit": "g",
+        "amount": 750
+      },
+      {
+        "element": "refined_carbon",
+        "unit": "g",
+        "amount": 250
+      }
+    ]
+  },
+  {
+    "source": "cool",
+    "temp": 20,
+    "consumed": [
+      {
+        "element": "resin",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "solid_resin",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 125,
+    "consumed": [
+      {
+        "element": "sap",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "steam",
+        "unit": "g",
+        "amount": 750
+      },
+      {
+        "element": "isosap",
+        "unit": "g",
+        "amount": 250
+      }
+    ]
+  },
+  {
+    "source": "cool",
+    "temp": 20,
+    "consumed": [
+      {
+        "element": "sap",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "solid_sap",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 99.69,
+    "consumed": [
+      {
+        "element": "salt_water",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "steam",
+        "unit": "g",
+        "amount": 930
+      },
+      {
+        "element": "salt",
+        "unit": "g",
+        "amount": 70
+      }
+    ]
+  },
+  {
+    "source": "cool",
+    "temp": -7.5,
+    "consumed": [
+      {
+        "element": "salt_water",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "brine",
+        "unit": "g",
+        "amount": 230
+      },
+      {
+        "element": "ice",
+        "unit": "g",
+        "amount": 770
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 160,
+    "consumed": [
+      {
+        "element": "nectar",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "steam",
+        "unit": "g",
+        "amount": 230
+      },
+      {
+        "element": "sucrose",
+        "unit": "g",
+        "amount": 770
+      }
+    ]
+  },
+  {
+    "source": "cool",
+    "temp": -82.5,
+    "consumed": [
+      {
+        "element": "nectar",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "ice",
+        "unit": "g",
+        "amount": 230
+      },
+      {
+        "element": "sucrose",
+        "unit": "g",
+        "amount": 770
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 436.85,
+    "consumed": [
+      {
+        "element": "super_coolant",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "super_coolant_gas",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "cool",
+    "temp": -271.15,
+    "consumed": [
+      {
+        "element": "super_coolant",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "solid_super_coolant",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 479.85,
+    "consumed": [
+      {
+        "element": "visco_gel_fluid",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "liquid_naphtha",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "cool",
+    "temp": -30.65,
+    "consumed": [
+      {
+        "element": "visco_gel_fluid",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "solid_visco_gel",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 99.35,
+    "consumed": [
+      {
+        "element": "water",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "steam",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "cool",
+    "temp": -0.65,
+    "consumed": [
+      {
+        "element": "water",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "ice",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 80,
+    "consumed": [
+      {
+        "element": "ink",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "mucus",
+        "unit": "g",
+        "amount": 900
+      },
+      {
+        "element": "refined_carbon",
+        "unit": "g",
+        "amount": 100
+      }
+    ]
+  },
+  {
+    "source": "cool",
+    "temp": -20.65,
+    "consumed": [
+      {
+        "element": "ink",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "frozen_ink",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 78.35,
+    "consumed": [
+      {
+        "element": "ethanol",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "ethanol_gas",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "cool",
+    "temp": -114.05,
+    "consumed": [
+      {
+        "element": "ethanol",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "solid_ethanol",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 75,
+    "consumed": [
+      {
+        "element": "phyto_oil",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "carbon_dioxide",
+        "unit": "g",
+        "amount": 333
+      },
+      {
+        "element": "algae",
+        "unit": "g",
+        "amount": 667
+      }
+    ]
+  },
+  {
+    "source": "cool",
+    "temp": -33.15,
+    "consumed": [
+      {
+        "element": "phyto_oil",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "frozen_phyto_oil",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 180,
+    "consumed": [
+      {
+        "element": "biodiesel",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "carbon_dioxide",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "cool",
+    "temp": -10,
+    "consumed": [
+      {
+        "element": "biodiesel",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "tallow",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 230,
+    "consumed": [
+      {
+        "element": "liquid_sucrose",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "carbon_dioxide",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "cool",
+    "temp": 185.85,
+    "consumed": [
+      {
+        "element": "liquid_sucrose",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "sucrose",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 2729.85,
+    "consumed": [
+      {
+        "element": "molten_nickel",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "nickel_gas",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "cool",
+    "temp": 1454.85,
+    "consumed": [
+      {
+        "element": "molten_nickel",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "nickel",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 4129.85,
+    "consumed": [
+      {
+        "element": "molten_iridium",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "iridium_gas",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "cool",
+    "temp": 2445.85,
+    "consumed": [
+      {
+        "element": "molten_iridium",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "iridium",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 99.35,
+    "consumed": [
+      {
+        "element": "latex",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "carbon_dioxide",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "cool",
+    "temp": -0.65,
+    "consumed": [
+      {
+        "element": "latex",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "polluted_ice",
+        "unit": "g",
+        "amount": 320
+      },
+      {
+        "element": "sucrose",
+        "unit": "g",
+        "amount": 680
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 90,
+    "consumed": [
+      {
+        "element": "mucus",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "polluted_water",
+        "unit": "g",
+        "amount": 700
+      },
+      {
+        "element": "slime",
+        "unit": "g",
+        "amount": 300
+      }
+    ]
+  },
+  {
+    "source": "cool",
+    "temp": -10,
+    "consumed": [
+      {
+        "element": "mucus",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "solid_mucus",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 906.85,
+    "consumed": [
+      {
+        "element": "molten_zinc",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "zinc_gas",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "cool",
+    "temp": 419.73,
+    "consumed": [
+      {
+        "element": "molten_zinc",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "zinc",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 125,
+    "consumed": [
+      {
+        "element": "algae",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "dirt",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 824.85,
+    "consumed": [
+      {
+        "element": "pearl",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "carbon_dioxide",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 660.3,
+    "consumed": [
+      {
+        "element": "aluminum",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "molten_aluminum",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 1083.85,
+    "consumed": [
+      {
+        "element": "aluminum_ore",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "molten_aluminum",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 538.85,
+    "consumed": [
+      {
+        "element": "Bitumen",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "carbon_dioxide",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 668.85,
+    "consumed": [
+      {
+        "element": "bleach_stone",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "liquid_chlorine",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": -16.5,
+    "consumed": [
+      {
+        "element": "brine_ice",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "brine",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": -25.5,
+    "consumed": [
+      {
+        "element": "murky_brine_ice",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "murky_brine",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": -16.5,
+    "consumed": [
+      {
+        "element": "frozen_brackene",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "brackene",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": -16.5,
+    "consumed": [
+      {
+        "element": "fish_milk_ice",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "fish_milk",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 276.85,
+    "consumed": [
+      {
+        "element": "coal",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "refined_carbon",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 226.85,
+    "consumed": [
+      {
+        "element": "peat",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "coal",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 1849.85,
+    "consumed": [
+      {
+        "element": "ceramic",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "magma",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 926.85,
+    "consumed": [
+      {
+        "element": "clay",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "ceramic",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 1083.85,
+    "consumed": [
+      {
+        "element": "copper",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "molten_copper",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 9726.85,
+    "consumed": [
+      {
+        "element": "Creature",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "Creature",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": -0.65,
+    "consumed": [
+      {
+        "element": "crushed_ice",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "water",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 1409.85,
+    "consumed": [
+      {
+        "element": "crushed_rock",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "magma",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 1083.85,
+    "consumed": [
+      {
+        "element": "copper_ore",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "molten_copper",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 132.85,
+    "consumed": [
+      {
+        "element": "depleted_uranium",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "liquid_uranium",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 3926.85,
+    "consumed": [
+      {
+        "element": "diamond",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "liquid_carbon",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 326.85,
+    "consumed": [
+      {
+        "element": "dirt",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "sand",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": -20.65,
+    "consumed": [
+      {
+        "element": "polluted_ice",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "polluted_water",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 858.85,
+    "consumed": [
+      {
+        "element": "enriched_uranium",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "liquid_uranium",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 125,
+    "consumed": [
+      {
+        "element": "fertilizer",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "dirt",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 1083.85,
+    "consumed": [
+      {
+        "element": "pyrite",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "molten_iron",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 1338.85,
+    "consumed": [
+      {
+        "element": "fossil",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "magma",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": -33.15,
+    "consumed": [
+      {
+        "element": "frozen_phyto_oil",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "phyto_oil",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 3926.85,
+    "consumed": [
+      {
+        "element": "fullerene",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "liquid_carbon",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 1426.85,
+    "consumed": [
+      {
+        "element": "glass",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "molten_glass",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 1063.85,
+    "consumed": [
+      {
+        "element": "gold",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "molten_gold",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 1063.85,
+    "consumed": [
+      {
+        "element": "gold_amalgam",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "molten_gold",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 668.85,
+    "consumed": [
+      {
+        "element": "granite",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "magma",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": -0.65,
+    "consumed": [
+      {
+        "element": "ice",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "water",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": -20.65,
+    "consumed": [
+      {
+        "element": "frozen_ink",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "ink",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 1409.85,
+    "consumed": [
+      {
+        "element": "igneous_rock",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "magma",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 1534.85,
+    "consumed": [
+      {
+        "element": "iron",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "molten_iron",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 1534.85,
+    "consumed": [
+      {
+        "element": "iron_ore",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "molten_iron",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 1494.85,
+    "consumed": [
+      {
+        "element": "cobalt",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "molten_cobalt",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 1494.85,
+    "consumed": [
+      {
+        "element": "cobalt_ore",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "molten_cobalt",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 200,
+    "consumed": [
+      {
+        "element": "isosap",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "liquid_naphtha",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 3421.85,
+    "consumed": [
+      {
+        "element": "abyssalite",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "molten_tungsten",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 327.5,
+    "consumed": [
+      {
+        "element": "lead",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "molten_lead",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 1056.85,
+    "consumed": [
+      {
+        "element": "lime",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "magma",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 159.85,
+    "consumed": [
+      {
+        "element": "brackwax",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "liquid_naphtha",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 1409.85,
+    "consumed": [
+      {
+        "element": "mafic_rock",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "magma",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 2476.85,
+    "consumed": [
+      {
+        "element": "niobium",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "molten_niobium",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 626.85,
+    "consumed": [
+      {
+        "element": "corium",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "nuclear_fallout",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 2726.85,
+    "consumed": [
+      {
+        "element": "obsidian",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "magma",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 1409.85,
+    "consumed": [
+      {
+        "element": "oxylite",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "magma",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 243.85,
+    "consumed": [
+      {
+        "element": "phosphorite",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "liquid_phosphorus",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 44.15,
+    "consumed": [
+      {
+        "element": "refined_phosphorus",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "liquid_phosphorus",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 1826.85,
+    "consumed": [
+      {
+        "element": "plastium",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "sour_gas",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 159.85,
+    "consumed": [
+      {
+        "element": "plastic",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "liquid_naphtha",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 959.85,
+    "consumed": [
+      {
+        "element": "radium",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "magma",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 4326.85,
+    "consumed": [
+      {
+        "element": "refined_carbon",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "liquid_carbon",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 1409.85,
+    "consumed": [
+      {
+        "element": "regolith",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "magma",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 1534.85,
+    "consumed": [
+      {
+        "element": "rust",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "molten_iron",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 177,
+    "consumed": [
+      {
+        "element": "rubber",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "carbon_dioxide",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 799.85,
+    "consumed": [
+      {
+        "element": "salt",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "molten_salt",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 1712.85,
+    "consumed": [
+      {
+        "element": "sand",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "molten_glass",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 926.85,
+    "consumed": [
+      {
+        "element": "sandstone",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "magma",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 926.85,
+    "consumed": [
+      {
+        "element": "sedimentary_rock",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "magma",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 826.85,
+    "consumed": [
+      {
+        "element": "shale",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "magma",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 125,
+    "consumed": [
+      {
+        "element": "slime",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "dirt",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": -0.65,
+    "consumed": [
+      {
+        "element": "snow",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "water",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": -0.65,
+    "consumed": [
+      {
+        "element": "StableSnow",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "water",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": -56.55,
+    "consumed": [
+      {
+        "element": "solid_carbon_dioxide",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "liquid_carbon_dioxide",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": -100.98,
+    "consumed": [
+      {
+        "element": "solid_chlorine",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "liquid_chlorine",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": -40.15,
+    "consumed": [
+      {
+        "element": "solid_crude_oil",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "crude_oil",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": -259.15,
+    "consumed": [
+      {
+        "element": "solid_hydrogen",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "liquid_hydrogen",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": -38.85,
+    "consumed": [
+      {
+        "element": "mercury",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "mercury",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": -182.6,
+    "consumed": [
+      {
+        "element": "solid_methane",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "liquid_methane",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": -50.15,
+    "consumed": [
+      {
+        "element": "solid_naphtha",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "liquid_naphtha",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": -218.79,
+    "consumed": [
+      {
+        "element": "solid_oxygen",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "liquid_oxygen",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": -57.15,
+    "consumed": [
+      {
+        "element": "solid_petroleum",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "petroleum",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": -188.15,
+    "consumed": [
+      {
+        "element": "SolidPropane",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "LiquidPropane",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 20,
+    "consumed": [
+      {
+        "element": "solid_sap",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "sap",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 20,
+    "consumed": [
+      {
+        "element": "solid_resin",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "resin",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 95,
+    "consumed": [
+      {
+        "element": "amber",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "resin",
+        "unit": "g",
+        "amount": 800
+      },
+      {
+        "element": "fossil",
+        "unit": "g",
+        "amount": 200
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": -271.15,
+    "consumed": [
+      {
+        "element": "solid_super_coolant",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "super_coolant",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": -30.65,
+    "consumed": [
+      {
+        "element": "solid_visco_gel",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "visco_gel_fluid",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 2426.85,
+    "consumed": [
+      {
+        "element": "steel",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "molten_steel",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 115.2,
+    "consumed": [
+      {
+        "element": "sulfur",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "liquid_sulfur",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 3621.85,
+    "consumed": [
+      {
+        "element": "insulite",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "molten_tungsten",
+        "unit": "g",
+        "amount": 850
+      },
+      {
+        "element": "sour_gas",
+        "unit": "g",
+        "amount": 150
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 2676.85,
+    "consumed": [
+      {
+        "element": "thermium",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "molten_niobium",
+        "unit": "g",
+        "amount": 50
+      },
+      {
+        "element": "tungsten",
+        "unit": "g",
+        "amount": 950
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 1712.85,
+    "consumed": [
+      {
+        "element": "polluted_dirt",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "molten_glass",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 3421.85,
+    "consumed": [
+      {
+        "element": "tungsten",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "molten_tungsten",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 9726.85,
+    "consumed": [
+      {
+        "element": "neutronium",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "neutronium",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 132.85,
+    "consumed": [
+      {
+        "element": "uranium_ore",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "liquid_uranium",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 2926.85,
+    "consumed": [
+      {
+        "element": "wolframite",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "molten_tungsten",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": -114.05,
+    "consumed": [
+      {
+        "element": "solid_ethanol",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "ethanol",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 99.69,
+    "consumed": [
+      {
+        "element": "polluted_mud",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "steam",
+        "unit": "g",
+        "amount": 600
+      },
+      {
+        "element": "polluted_dirt",
+        "unit": "g",
+        "amount": 400
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 99.69,
+    "consumed": [
+      {
+        "element": "mud",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "steam",
+        "unit": "g",
+        "amount": 600
+      },
+      {
+        "element": "dirt",
+        "unit": "g",
+        "amount": 400
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 185.85,
+    "consumed": [
+      {
+        "element": "sucrose",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "liquid_sucrose",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 276.85,
+    "consumed": [
+      {
+        "element": "graphite",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "refined_carbon",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 26.85,
+    "consumed": [
+      {
+        "element": "solid_nuclear_waste",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "liquid_nuclear_waste",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 583.5,
+    "consumed": [
+      {
+        "element": "cinnabar_ore",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "mercury_gas",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 600,
+    "consumed": [
+      {
+        "element": "WoodLog",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "carbon_dioxide",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 550,
+    "consumed": [
+      {
+        "element": "FabricatedWood",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "carbon_dioxide",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 80,
+    "consumed": [
+      {
+        "element": "tallow",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "biodiesel",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": -8.15,
+    "consumed": [
+      {
+        "element": "solid_gunk",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "gunk",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 1454.85,
+    "consumed": [
+      {
+        "element": "nickel_ore",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "molten_nickel",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 1454.85,
+    "consumed": [
+      {
+        "element": "nickel",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "molten_nickel",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 2445.85,
+    "consumed": [
+      {
+        "element": "iridium",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "molten_iridium",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 926.85,
+    "consumed": [
+      {
+        "element": "silt_stone",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "magma",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": -10,
+    "consumed": [
+      {
+        "element": "solid_mucus",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "mucus",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 419.5,
+    "consumed": [
+      {
+        "element": "zinc_ore",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "molten_zinc",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 419.5,
+    "consumed": [
+      {
+        "element": "zinc",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "molten_zinc",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 125,
+    "consumed": [
+      {
+        "element": "corallium",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "sand",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 926.85,
+    "consumed": [
+      {
+        "element": "coquina",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "magma",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 1256.85,
+    "consumed": [
+      {
+        "element": "basalt",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "magma",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 600,
+    "consumed": [
+      {
+        "element": "gum_wood",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "carbon_dioxide",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "heat",
+    "temp": 1114,
+    "consumed": [
+      {
+        "element": "galena",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "molten_lead",
+        "unit": "g",
+        "amount": 870
+      },
+      {
+        "element": "sulfur",
+        "unit": "g",
+        "amount": 130
+      }
+    ]
+  },
+  {
+    "source": "data_miner",
+    "consumed": [
+      {
+        "element": "plastic",
+        "unit": "g",
+        "amount": 5000
+      }
+    ],
+    "produced": [
+      {
+        "element": "data_bank",
+        "unit": "unit",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "source": "mimika_bud",
+    "consumed": [
+      {
+        "element": "dirt",
+        "unit": "g",
+        "amount": 16.66666667,
+        "per": "s"
+      }
+    ],
+    "produced": [
+      {
+        "element": "mimika",
+        "unit": "unit",
+        "amount": 0.0003333333333,
+        "per": "s"
+      }
+    ]
+  },
+  {
+    "source": "mimika",
+    "produced": [
+      {
+        "element": "mimillet",
+        "unit": "g",
+        "amount": 0.333333333333,
+        "per": "s"
+      }
+    ]
+  },
+  {
+    "source": "electric_grill",
+    "consumed": [
+      {
+        "element": "mimillet",
+        "unit": "g",
+        "amount": 1000
+      }
+    ],
+    "produced": [
+      {
+        "element": "toasted_mimillet",
+        "unit": "g",
+        "amount": 1000
+      }
+    ]
+  },
+  {
+    "source": "sweatcorn_stalk",
+    "consumed": [
+      {
+        "element": "peat",
+        "unit": "g",
+        "amount": 16.66666667,
+        "per": "s"
+      }
+    ],
+    "produced": [
+      {
+        "element": "sweatcorn",
+        "unit": "g",
+        "amount": 0.555555555556,
+        "per": "s"
+      }
+    ]
+  },
+  {
+    "source": "smoker",
+    "consumed": [
+      {
+        "element": "peat",
+        "unit": "g",
+        "amount": 100000
+      },
+      {
+        "element": "sweatcorn",
+        "unit": "g",
+        "amount": 7000
+      }
+    ],
+    "produced": [
+      {
+        "element": "veggie_poppers",
+        "unit": "g",
+        "amount": 4000
+      }
+    ]
+  },
+  {
+    "source": "smoker",
+    "consumed": [
+      {
+        "element": "wood",
+        "unit": "g",
+        "amount": 100000
+      },
+      {
+        "element": "sweatcorn",
+        "unit": "g",
+        "amount": 7000
+      }
+    ],
+    "produced": [
+      {
+        "element": "veggie_poppers",
+        "unit": "g",
+        "amount": 4000
+      }
+    ]
+  },
+  {
+    "source": "smoker",
+    "consumed": [
+      {
+        "element": "plywood",
+        "unit": "g",
+        "amount": 100000
+      },
+      {
+        "element": "sweatcorn",
+        "unit": "g",
+        "amount": 7000
+      }
+    ],
+    "produced": [
+      {
+        "element": "veggie_poppers",
+        "unit": "g",
+        "amount": 4000
+      }
+    ]
+  },
+  {
+    "source": "smoker",
+    "consumed": [
+      {
+        "element": "gum_wood",
+        "unit": "g",
+        "amount": 100000
+      },
+      {
+        "element": "sweatcorn",
+        "unit": "g",
+        "amount": 7000
+      }
+    ],
+    "produced": [
+      {
+        "element": "veggie_poppers",
+        "unit": "g",
+        "amount": 4000
+      }
+    ]
+  },
+  {
+    "source": "smoker",
+    "consumed": [
+      {
+        "element": "peat",
+        "unit": "g",
+        "amount": 100000
+      },
+      {
+        "element": "pikeapple",
+        "unit": "g",
+        "amount": 7000
+      }
+    ],
+    "produced": [
+      {
+        "element": "veggie_poppers",
+        "unit": "g",
+        "amount": 4000
+      }
+    ]
+  },
+  {
+    "source": "smoker",
+    "consumed": [
+      {
+        "element": "wood",
+        "unit": "g",
+        "amount": 100000
+      },
+      {
+        "element": "pikeapple",
+        "unit": "g",
+        "amount": 7000
+      }
+    ],
+    "produced": [
+      {
+        "element": "veggie_poppers",
+        "unit": "g",
+        "amount": 4000
+      }
+    ]
+  },
+  {
+    "source": "smoker",
+    "consumed": [
+      {
+        "element": "plywood",
+        "unit": "g",
+        "amount": 100000
+      },
+      {
+        "element": "pikeapple",
+        "unit": "g",
+        "amount": 7000
+      }
+    ],
+    "produced": [
+      {
+        "element": "veggie_poppers",
+        "unit": "g",
+        "amount": 4000
+      }
+    ]
+  },
+  {
+    "source": "smoker",
+    "consumed": [
+      {
+        "element": "gum_wood",
+        "unit": "g",
+        "amount": 100000
+      },
+      {
+        "element": "pikeapple",
+        "unit": "g",
+        "amount": 7000
+      }
+    ],
+    "produced": [
+      {
+        "element": "veggie_poppers",
+        "unit": "g",
+        "amount": 4000
+      }
+    ]
+  },
+  {
+    "source": "smoker",
+    "consumed": [
+      {
+        "element": "peat",
+        "unit": "g",
+        "amount": 100000
+      },
+      {
+        "element": "spindly_grubfruit",
+        "unit": "g",
+        "amount": 7000
+      }
+    ],
+    "produced": [
+      {
+        "element": "veggie_poppers",
+        "unit": "g",
+        "amount": 4000
+      }
+    ]
+  },
+  {
+    "source": "smoker",
+    "consumed": [
+      {
+        "element": "wood",
+        "unit": "g",
+        "amount": 100000
+      },
+      {
+        "element": "spindly_grubfruit",
+        "unit": "g",
+        "amount": 7000
+      }
+    ],
+    "produced": [
+      {
+        "element": "veggie_poppers",
+        "unit": "g",
+        "amount": 4000
+      }
+    ]
+  },
+  {
+    "source": "smoker",
+    "consumed": [
+      {
+        "element": "plywood",
+        "unit": "g",
+        "amount": 100000
+      },
+      {
+        "element": "spindly_grubfruit",
+        "unit": "g",
+        "amount": 7000
+      }
+    ],
+    "produced": [
+      {
+        "element": "veggie_poppers",
+        "unit": "g",
+        "amount": 4000
+      }
+    ]
+  },
+  {
+    "source": "smoker",
+    "consumed": [
+      {
+        "element": "gum_wood",
+        "unit": "g",
+        "amount": 100000
+      },
+      {
+        "element": "spindly_grubfruit",
+        "unit": "g",
+        "amount": 7000
+      }
+    ],
+    "produced": [
+      {
+        "element": "veggie_poppers",
+        "unit": "g",
+        "amount": 4000
       }
     ]
   }

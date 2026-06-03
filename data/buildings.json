@@ -20,6 +20,11 @@
     "image": "Apothecary.png"
   },
   {
+    "id": "emulsifier",
+    "name": "Emulsifier",
+    "image": "Emulsifier.png"
+  },
+  {
     "id": "biobot_builder",
     "name": "Biobot Builder",
     "image": "BiobotBuilder.png"
@@ -250,6 +255,11 @@
     "image": "OrbitalDataCollectionLab.png"
   },
   {
+    "id": "data_miner",
+    "name": "Data Miner",
+    "image": "Data_Miner.png"
+  },
+  {
     "id": "ore_scrubber",
     "name": "Ore Scrubber",
     "image": "OreScrubber.png"
@@ -448,5 +458,10 @@
     "id": "smoker",
     "name": "Smoker",
     "image": "Smoker.png"
+  },
+  {
+    "id": "peat_burner",
+    "name": "Peat Burner",
+    "image": "Peat_Burner.png"
   }
 ]

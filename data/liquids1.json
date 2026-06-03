@@ -1,0 +1,222 @@
+[
+  {
+    "id": "brackene",
+    "name": "Brackene",
+    "image": "Brackene.png"
+  },
+  {
+    "id": "brine",
+    "name": "Brine",
+    "image": "Brine.png"
+  },
+  {
+    "id": "crude_oil",
+    "name": "Crude Oil",
+    "image": "CrudeOil.png"
+  },
+  {
+    "id": "ethanol",
+    "name": "Ethanol",
+    "image": "Ethanol.png"
+  },
+  {
+    "id": "liquid_carbon",
+    "name": "Liquid Carbon",
+    "image": "LiquidCarbon.png"
+  },
+  {
+    "id": "liquid_carbon_dioxide",
+    "name": "Liquid Carbon Dioxide",
+    "image": "LiquidCarbonDioxide.png"
+  },
+  {
+    "id": "liquid_chlorine",
+    "name": "Liquid Chlorine",
+    "image": "LiquidChlorine.png"
+  },
+  {
+    "id": "liquid_hydrogen",
+    "name": "Liquid Hydrogen",
+    "image": "LiquidHydrogen.png"
+  },
+  {
+    "id": "liquid_methane",
+    "name": "Liquid Methane",
+    "image": "LiquidMethane.png"
+  },
+  {
+    "id": "liquid_naphtha",
+    "name": "Liquid Naphtha",
+    "image": "LiquidNaphtha.png"
+  },
+  {
+    "id": "liquid_nuclear_waste",
+    "name": "Liquid Nuclear Waste",
+    "image": "LiquidNuclearWaste.png"
+  },
+  {
+    "id": "liquid_oxygen",
+    "name": "Liquid Oxygen",
+    "image": "LiquidOxygen.png"
+  },
+  {
+    "id": "liquid_phosphorus",
+    "name": "Liquid Phosphorus",
+    "image": "LiquidPhosphorus.png"
+  },
+  {
+    "id": "sap",
+    "name": "Sap",
+    "image": "LiquidResin.png"
+  },
+  {
+    "id": "liquid_sucrose",
+    "name": "Liquid Sucrose",
+    "image": "LiquidSucrose.png"
+  },
+  {
+    "id": "liquid_sulfur",
+    "name": "Liquid Sulfur",
+    "image": "LiquidSulfur.png"
+  },
+  {
+    "id": "liquid_uranium",
+    "name": "Liquid Uranium",
+    "image": "LiquidUranium.png"
+  },
+  {
+    "id": "magma",
+    "name": "Magma",
+    "image": "Magma.png"
+  },
+  {
+    "id": "molten_aluminum",
+    "name": "Molten Aluminum",
+    "image": "MoltenAluminum.png"
+  },
+  {
+    "id": "molten_cobalt",
+    "name": "Molten Cobalt",
+    "image": "MoltenCobalt.png"
+  },
+  {
+    "id": "molten_copper",
+    "name": "Molten Copper",
+    "image": "MoltenCopper.png"
+  },
+  {
+    "id": "molten_glass",
+    "name": "Molten Glass",
+    "image": "MoltenGlass.png"
+  },
+  {
+    "id": "molten_gold",
+    "name": "Molten Gold",
+    "image": "MoltenGold.png"
+  },
+  {
+    "id": "molten_iron",
+    "name": "Molten Iron",
+    "image": "MoltenIron.png"
+  },
+  {
+    "id": "molten_lead",
+    "name": "Molten Lead",
+    "image": "MoltenLead.png"
+  },
+  {
+    "id": "molten_zinc",
+    "name": "Molten Zinc",
+    "image": "MoltenZinc.png"
+  },
+  {
+    "id": "molten_niobium",
+    "name": "Molten Niobium",
+    "image": "MoltenNiobium.png"
+  },
+  {
+    "id": "molten_salt",
+    "name": "Molten Salt",
+    "image": "MoltenSalt.png"
+  },
+  {
+    "id": "molten_steel",
+    "name": "Molten Steel",
+    "image": "MoltenSteel.png"
+  },
+  {
+    "id": "molten_tungsten",
+    "name": "Molten Tungsten",
+    "image": "MoltenTungsten.png"
+  },
+  {
+    "id": "nectar",
+    "name": "Nectar",
+    "image": "Nectar.png"
+  },
+  {
+    "id": "petroleum",
+    "name": "Petroleum",
+    "image": "Petroleum.png"
+  },
+  {
+    "id": "polluted_water",
+    "name": "Polluted Water",
+    "image": "PollutedWater.png"
+  },
+  {
+    "id": "salt_water",
+    "name": "Salt Water",
+    "image": "SaltWater.png"
+  },
+  {
+    "id": "super_coolant",
+    "name": "Super Coolant",
+    "image": "SuperCoolant.png"
+  },
+  {
+    "id": "visco_gel_fluid",
+    "name": "Visco-Gel Fluid",
+    "image": "ViscoGelFluid.png"
+  },
+  {
+    "id": "mercury",
+    "name": "Mercury",
+    "image": "Mercury.png"
+  },
+  {
+    "id": "nuclear_waste",
+    "name": "Nuclear Waste",
+    "image": "NuclearWaste.png"
+  },
+  {
+    "id": "water",
+    "name": "Water",
+    "image": "Water.png"
+  },
+  {
+    "id": "molten_iridium",
+    "name": "Molten Iridium",
+    "image": "Molten_Iridium.png"
+  },
+  {
+    "id": "molten_nickel",
+    "name": "Molten Nickel",
+    "image": "Molten_Nickel.png"
+  },
+  {
+    "id": "gunk",
+    "name": "Gunk",
+    "image": "Gunk.png"
+  },
+  {
+    "id": "phyto_oil",
+    "name": "Phyto Oil",
+    "image": "Phyto_Oil.png"
+  },
+  {
+    "id": "biodiesel",
+    "name": "Biodiesel",
+    "image": "Biodiesel.png"
+  }
+]
