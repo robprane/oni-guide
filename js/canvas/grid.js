@@ -129,6 +129,59 @@ export class Grid {
         this._notifyChange();
     }
 
+    _meshCells(cells) {
+        cells.sort((a, b) => a.y !== b.y ? a.y - b.y : a.x - b.x);
+
+        const lines = [];
+        let currentLine = null;
+        for (const c of cells) {
+            if (!currentLine) {
+                currentLine = {x1: c.x, x2: c.x, y: c.y};
+            } else if (c.y === currentLine.y && c.x === currentLine.x2 + 1) {
+                currentLine.x2 = c.x;
+            } else {
+                lines.push(currentLine);
+                currentLine = {x1: c.x, x2: c.x, y: c.y};
+            }
+        }
+        if (currentLine) lines.push(currentLine);
+
+        const rects = [];
+        const usedLines = new Set();
+
+        for (let i = 0; i < lines.length; i++) {
+            if (usedLines.has(i)) continue;
+            const line = lines[i];
+            let currentRect = {x1: line.x1, y1: line.y, x2: line.x2, y2: line.y};
+            usedLines.add(i);
+
+            let nextY = line.y + 1;
+            while (true) {
+                let foundMatch = false;
+                for (let j = i + 1; j < lines.length; j++) {
+                    if (usedLines.has(j)) continue;
+                    const nextLine = lines[j];
+                    if (nextLine.y > nextY) break;
+                    if (nextLine.y === nextY && nextLine.x1 === currentRect.x1 && nextLine.x2 === currentRect.x2) {
+                        currentRect.y2 = nextY;
+                        usedLines.add(j);
+                        nextY++;
+                        foundMatch = true;
+                        break;
+                    }
+                }
+                if (!foundMatch) break;
+            }
+
+            if (currentRect.x1 === currentRect.x2 && currentRect.y1 === currentRect.y2) {
+                rects.push([currentRect.x1, currentRect.y1]);
+            } else {
+                rects.push([currentRect.x1, currentRect.y1, currentRect.x2, currentRect.y2]);
+            }
+        }
+        return rects;
+    }
+
     serialize() {
         const data = {};
         const solidCells = [];
@@ -151,56 +204,7 @@ export class Grid {
         }
 
         if (solidCells.length > 0) {
-            solidCells.sort((a, b) => a.y !== b.y ? a.y - b.y : a.x - b.x);
-
-            const lines = [];
-            let currentLine = null;
-            for (const c of solidCells) {
-                if (!currentLine) {
-                    currentLine = {x1: c.x, x2: c.x, y: c.y};
-                } else if (c.y === currentLine.y && c.x === currentLine.x2 + 1) {
-                    currentLine.x2 = c.x;
-                } else {
-                    lines.push(currentLine);
-                    currentLine = {x1: c.x, x2: c.x, y: c.y};
-                }
-            }
-            if (currentLine) lines.push(currentLine);
-
-            const rects = [];
-            const usedLines = new Set();
-
-            for (let i = 0; i < lines.length; i++) {
-                if (usedLines.has(i)) continue;
-                const line = lines[i];
-                let currentRect = {x1: line.x1, y1: line.y, x2: line.x2, y2: line.y};
-                usedLines.add(i);
-
-                let nextY = line.y + 1;
-                while (true) {
-                    let foundMatch = false;
-                    for (let j = i + 1; j < lines.length; j++) {
-                        if (usedLines.has(j)) continue;
-                        const nextLine = lines[j];
-                        if (nextLine.y > nextY) break;
-                        if (nextLine.y === nextY && nextLine.x1 === currentRect.x1 && nextLine.x2 === currentRect.x2) {
-                            currentRect.y2 = nextY;
-                            usedLines.add(j);
-                            nextY++;
-                            foundMatch = true;
-                            break;
-                        }
-                    }
-                    if (!foundMatch) break;
-                }
-
-                if (currentRect.x1 === currentRect.x2 && currentRect.y1 === currentRect.y2) {
-                    rects.push([currentRect.x1, currentRect.y1]);
-                } else {
-                    rects.push([currentRect.x1, currentRect.y1, currentRect.x2, currentRect.y2]);
-                }
-            }
-            data.s = rects;
+            data.s = this._meshCells(solidCells);
         }
 
         if (sweeperCells.length > 0) {
@@ -208,7 +212,23 @@ export class Grid {
         }
 
         if (buildingCells.length > 0) {
-            data.b = buildingCells;
+            // Group by color
+            const colorGroups = {};
+            for (const b of buildingCells) {
+                const colorCode = b[2];
+                if (!colorGroups[colorCode]) colorGroups[colorCode] = [];
+                colorGroups[colorCode].push({x: b[0], y: b[1]});
+            }
+
+            const bData = [];
+            for (const colorCode in colorGroups) {
+                const rects = this._meshCells(colorGroups[colorCode]);
+                for (const r of rects) {
+                    r.push(colorCode);
+                    bData.push(r);
+                }
+            }
+            data.b = bData;
         }
 
         return data;
@@ -260,10 +280,19 @@ export class Grid {
             if (data.b) {
                 const colorMap = { 'r': 'red', 'y': 'yellow', 'g': 'green', 'b': 'blue' };
                 for (const b of data.b) {
-                    const x = b[0];
-                    const y = b[1];
-                    const color = colorMap[b[2]] || 'red';
-                    this.setCell(x, y, 'building', { color });
+                    if (b.length === 3) {
+                        const x = b[0];
+                        const y = b[1];
+                        const color = colorMap[b[2]] || 'red';
+                        this.setCell(x, y, 'building', { color });
+                    } else if (b.length === 5) {
+                        const color = colorMap[b[4]] || 'red';
+                        for (let y = b[1]; y <= b[3]; y++) {
+                            for (let x = b[0]; x <= b[2]; x++) {
+                                this.setCell(x, y, 'building', { color });
+                            }
+                        }
+                    }
                 }
             }
         }
