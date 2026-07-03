@@ -36,6 +36,9 @@ export class Grid {
                 }
             }
             return true;
+        } else if (type === 'building') {
+            const cell = this.getCell(x, y);
+            return !cell || cell.type === 'building';
         } else {
             // For other structures, just check the single cell
             return !this.getCell(x, y);
@@ -130,6 +133,7 @@ export class Grid {
         const data = {};
         const solidCells = [];
         const sweeperCells = [];
+        const buildingCells = [];
 
         for (const [key, cell] of this.cells.entries()) {
             if (cell.type === 'sweeper_part') continue;
@@ -140,6 +144,9 @@ export class Grid {
                 const orientation = cell.meta && cell.meta.orientation === 'vertical' ? 'v' : undefined;
                 if (orientation) sweeperCells.push([x, y, orientation]);
                 else sweeperCells.push([x, y]);
+            } else if (cell.type === 'building') {
+                const colorCode = cell.meta && cell.meta.color ? cell.meta.color[0] : 'r'; // r, y, g, b
+                buildingCells.push([x, y, colorCode]);
             }
         }
 
@@ -200,6 +207,10 @@ export class Grid {
             data.w = sweeperCells;
         }
 
+        if (buildingCells.length > 0) {
+            data.b = buildingCells;
+        }
+
         return data;
     }
 
@@ -244,6 +255,15 @@ export class Grid {
                     const y = sweep[1];
                     const orientation = sweep[2] === 'v' ? 'vertical' : 'horizontal';
                     this.setCell(x, y, 'sweeper', {orientation});
+                }
+            }
+            if (data.b) {
+                const colorMap = { 'r': 'red', 'y': 'yellow', 'g': 'green', 'b': 'blue' };
+                for (const b of data.b) {
+                    const x = b[0];
+                    const y = b[1];
+                    const color = colorMap[b[2]] || 'red';
+                    this.setCell(x, y, 'building', { color });
                 }
             }
         }

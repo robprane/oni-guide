@@ -321,6 +321,11 @@ export class CanvasEngine {
             if (this.grid.canPlace(gridPos.x, gridPos.y, this.currentTool, orientation)) {
                 this.grid.setCell(gridPos.x, gridPos.y, this.currentTool, { orientation });
             }
+        } else if (this.currentTool === 'building') {
+            const color = this.currentBuildingColor || 'red';
+            if (this.grid.canPlace(gridPos.x, gridPos.y, this.currentTool)) {
+                this.grid.setCell(gridPos.x, gridPos.y, this.currentTool, { color });
+            }
         } else {
             if (this.grid.canPlace(gridPos.x, gridPos.y, this.currentTool)) {
                 this.grid.setCell(gridPos.x, gridPos.y, this.currentTool);
@@ -508,7 +513,20 @@ export class CanvasEngine {
             const wx = x * cs;
             const wy = y * cs;
 
-            if (cell.type === 'sweeper') {
+            if (cell.type === 'building') {
+                const colorCode = cell.meta?.color || 'red';
+                const colors = {
+                    'red': '#ff4d4d',
+                    'yellow': '#ffcc00',
+                    'green': '#33cc33',
+                    'blue': '#3399ff'
+                };
+                this.ctx.fillStyle = colors[colorCode] || colors['red'];
+                this.ctx.fillRect(wx, wy, cs, cs);
+                this.ctx.strokeStyle = 'rgba(0,0,0,0.5)';
+                this.ctx.lineWidth = 1;
+                this.ctx.strokeRect(wx, wy, cs, cs);
+            } else if (cell.type === 'sweeper') {
                 const orientation = cell.meta?.orientation || 'horizontal';
                 if (this.images.sweeper && this.images.sweeper.complete) {
                     this.ctx.save();
@@ -539,6 +557,27 @@ export class CanvasEngine {
                 this.ctx.fillStyle = this.config.COLORS.BRIDGE_OUTPUT || '#00FF00';
                 this.ctx.fillRect(wx + cs*0.1, wy + cs*0.1, cs*0.8, cs*0.8);
             }
+        }
+
+        // Draw hover preview for building tool
+        if (this.hoverGridPos && this.currentTool === 'building') {
+            const hx = this.hoverGridPos.x;
+            const hy = this.hoverGridPos.y;
+            const wx = hx * cs;
+            const wy = hy * cs;
+            const colorCode = this.currentBuildingColor || 'red';
+            const colors = {
+                'red': '#ff4d4d',
+                'yellow': '#ffcc00',
+                'green': '#33cc33',
+                'blue': '#3399ff'
+            };
+            const canPlace = this.grid.canPlace(hx, hy, 'building');
+
+            this.ctx.globalAlpha = 0.5;
+            this.ctx.fillStyle = canPlace ? (colors[colorCode] || colors['red']) : 'red';
+            this.ctx.fillRect(wx, wy, cs, cs);
+            this.ctx.globalAlpha = 1.0;
         }
 
         // Draw hover preview for solid tool

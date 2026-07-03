@@ -702,3 +702,29 @@ a.recipe-item-link:hover {
 .oni-canvas.grabbing {
     cursor: grabbing;
 }
+
+.secondary-toolbar {
+    padding-top: 0;
+    min-height: 2.5rem;
+}
+
+.color-picker {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    padding-left: 0.625rem;
+}
+
+.color-btn {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 0.25rem;
+    border: 2px solid transparent;
+    cursor: pointer;
+    padding: 0;
+}
+
+.color-btn.active {
+    border-color: white;
+    box-shadow: 0 0 0 1px black;
+}
