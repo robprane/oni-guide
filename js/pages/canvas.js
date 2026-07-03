@@ -9,12 +9,12 @@ export async function renderCanvas(container, path) {
     const toolbar = createElement('div', { id: 'toolbar', class: 'canvas-toolbar' }, [
         createElement('button', { class: 'tool-btn active', dataset: { tool: 'solid' }, textContent: 'Solid Tile' }),
         createElement('button', { class: 'tool-btn', dataset: { tool: 'sweeper' }, textContent: 'Auto-Sweeper' }),
+        createElement('button', { class: 'tool-btn', dataset: { tool: 'building' }, textContent: 'Building' }),
         // Hidden to focus on Auto-Sweeper
         createElement('button', { class: 'tool-btn hidden', dataset: { tool: 'pipe' }, textContent: 'Pipe' }),
         createElement('button', { class: 'tool-btn hidden', dataset: { tool: 'bridge' }, textContent: 'Bridge' }),
         createElement('button', { class: 'tool-btn hidden', dataset: { tool: 'spawn_liquid' }, textContent: 'Spawn Liquid' }),
         createElement('button', { class: 'tool-btn', dataset: { tool: 'erase' }, textContent: 'Eraser' }),
-        createElement('button', { id: 'orientation-btn', class: 'utility-btn hidden', textContent: 'Rotate' }),
         createElement('div', { class: 'toolbar-spacer', style: 'flex-grow: 1;' }),
         createElement('button', { id: 'copy-link-btn', class: 'utility-btn', textContent: 'Copy Link' })
     ]);
@@ -22,7 +22,17 @@ export async function renderCanvas(container, path) {
     const canvasEl = createElement('canvas', { id: 'oni-canvas', class: 'oni-canvas' });
     const canvasContainer = createElement('div', { class: 'canvas-container' }, [canvasEl]);
 
-    const wrapper = createElement('div', { class: 'canvas-wrapper' }, [toolbar, canvasContainer]);
+
+    const secondaryToolbar = createElement('div', { id: 'secondary-toolbar', class: 'canvas-toolbar secondary-toolbar' }, [
+        createElement('button', { id: 'orientation-btn', class: 'utility-btn hidden', textContent: 'Rotate (Horizontal)' }),
+        createElement('div', { id: 'building-colors', class: 'color-picker hidden' }, [
+            createElement('button', { class: 'color-btn active', dataset: { color: 'red' }, style: 'background-color: #ff4d4d;' }),
+            createElement('button', { class: 'color-btn', dataset: { color: 'yellow' }, style: 'background-color: #ffcc00;' }),
+            createElement('button', { class: 'color-btn', dataset: { color: 'green' }, style: 'background-color: #33cc33;' }),
+            createElement('button', { class: 'color-btn', dataset: { color: 'blue' }, style: 'background-color: #3399ff;' })
+        ])
+    ]);
+    const wrapper = createElement('div', { class: 'canvas-wrapper' }, [toolbar, secondaryToolbar, canvasContainer]);
 
     container.appendChild(wrapper);
 
@@ -32,7 +42,6 @@ export async function renderCanvas(container, path) {
 
     engineInstance = new CanvasEngine(canvasEl, config);
     engineInstance.setTool('solid'); // Default tool
-
     // Setup toolbar
     const btns = container.querySelectorAll('.tool-btn');
     btns.forEach(btn => {
@@ -53,6 +62,10 @@ export async function renderCanvas(container, path) {
     function toggleOrientation() {
         currentOrientation = currentOrientation === 'horizontal' ? 'vertical' : 'horizontal';
         engineInstance.currentOrientation = currentOrientation;
+        const btn = container.querySelector('#orientation-btn');
+        if (btn) {
+            btn.textContent = currentOrientation === 'horizontal' ? 'Rotate (Horizontal)' : 'Rotate (Vertical)';
+        }
     }
 
     orientationBtn.addEventListener('click', toggleOrientation);
@@ -67,7 +80,39 @@ export async function renderCanvas(container, path) {
                 b.classList.remove('active');
             }
         });
+
+        const orientationBtn = container.querySelector('#orientation-btn');
+        const buildingColors = container.querySelector('#building-colors');
+
+        if (orientationBtn && buildingColors) {
+            if (toolName === 'sweeper') {
+                orientationBtn.classList.remove('hidden');
+                buildingColors.classList.add('hidden');
+            } else if (toolName === 'building') {
+                orientationBtn.classList.add('hidden');
+                buildingColors.classList.remove('hidden');
+            } else {
+                orientationBtn.classList.add('hidden');
+                buildingColors.classList.add('hidden');
+            }
+        }
+
     }
+
+    // Setup building color logic
+    const colorBtns = container.querySelectorAll('.color-btn');
+    engineInstance.currentBuildingColor = 'red';
+
+    colorBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            const color = btn.dataset.color;
+            engineInstance.currentBuildingColor = color;
+            colorBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+        });
+    });
+
+    setActiveToolBtn('solid');
 
     function handleKeydown(e) {
         if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
@@ -93,17 +138,7 @@ export async function renderCanvas(container, path) {
 
     engineInstance.currentOrientation = currentOrientation;
 
-    // Extend engineInstance.setTool to show/hide orientation button
-    const originalSetTool = engineInstance.setTool.bind(engineInstance);
-    engineInstance.setTool = function(toolName) {
-        originalSetTool(toolName);
-        if (toolName === 'sweeper') {
-            orientationBtn.classList.remove('hidden');
-        } else {
-            orientationBtn.classList.add('hidden');
-        }
-    };
-    engineInstance.setTool('solid'); // Trigger the UI update for default tool
+
 
     // console.log(path);
 

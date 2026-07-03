@@ -321,6 +321,11 @@ export class CanvasEngine {
             if (this.grid.canPlace(gridPos.x, gridPos.y, this.currentTool, orientation)) {
                 this.grid.setCell(gridPos.x, gridPos.y, this.currentTool, { orientation });
             }
+        } else if (this.currentTool === 'building') {
+            const color = this.currentBuildingColor || 'red';
+            if (this.grid.canPlace(gridPos.x, gridPos.y, this.currentTool)) {
+                this.grid.setCell(gridPos.x, gridPos.y, this.currentTool, { color });
+            }
         } else {
             if (this.grid.canPlace(gridPos.x, gridPos.y, this.currentTool)) {
                 this.grid.setCell(gridPos.x, gridPos.y, this.currentTool);
@@ -445,6 +450,57 @@ export class CanvasEngine {
             15: {cx: 2, cy: 1}
         };
 
+        // Draw entities (other than solid tiles)
+        for (const [key, cell] of this.grid.cells.entries()) {
+            const [x, y] = key.split(',').map(Number);
+            const wx = x * cs;
+            const wy = y * cs;
+
+            if (cell.type === 'building') {
+                const colorCode = cell.meta?.color || 'red';
+                const colors = {
+                    'red': '#ff4d4d',
+                    'yellow': '#ffcc00',
+                    'green': '#33cc33',
+                    'blue': '#3399ff'
+                };
+                this.ctx.fillStyle = colors[colorCode] || colors['red'];
+                this.ctx.fillRect(wx, wy, cs, cs);
+                this.ctx.strokeStyle = 'rgba(0,0,0,0.5)';
+                this.ctx.lineWidth = 1;
+                this.ctx.strokeRect(wx, wy, cs, cs);
+            } else if (cell.type === 'sweeper') {
+                const orientation = cell.meta?.orientation || 'horizontal';
+                if (this.images.sweeper && this.images.sweeper.complete) {
+                    this.ctx.save();
+                    // Move to center of sweeper
+                    this.ctx.translate(wx + cs/2, wy + cs/2);
+                    if (orientation === 'vertical') {
+                        this.ctx.rotate(Math.PI / 2);
+                    }
+                    // The image is 600x600, which corresponds to 3x3 cells.
+                    // We draw it centered. It covers from -1.5*cs to +1.5*cs in X and Y.
+                    this.ctx.drawImage(this.images.sweeper, -cs * 1.5, -cs * 1.5, cs * 3, cs * 3);
+                    this.ctx.restore();
+                } else {
+                    this.ctx.fillStyle = this.config.COLORS.SWEEPER;
+                    if (orientation === 'horizontal') {
+                        this.ctx.fillRect(wx - cs, wy, cs * 3, cs);
+                    } else {
+                        this.ctx.fillRect(wx, wy - cs, cs, cs * 3);
+                    }
+                }
+            } else if (cell.type === 'pipe') {
+                this.ctx.fillStyle = this.config.COLORS.PIPE || '#AAAAAA';
+                this.ctx.fillRect(wx + cs*0.25, wy + cs*0.25, cs*0.5, cs*0.5);
+            } else if (cell.type === 'bridge_in') {
+                this.ctx.fillStyle = this.config.COLORS.BRIDGE_INPUT || '#FFFFFF';
+                this.ctx.fillRect(wx + cs*0.1, wy + cs*0.1, cs*0.8, cs*0.8);
+            } else if (cell.type === 'bridge_out') {
+                this.ctx.fillStyle = this.config.COLORS.BRIDGE_OUTPUT || '#00FF00';
+                this.ctx.fillRect(wx + cs*0.1, wy + cs*0.1, cs*0.8, cs*0.8);
+            }
+        }
 
         // Draw marching squares for solid tiles
         if (this.images.tile && this.images.tile.complete) {
@@ -502,43 +558,25 @@ export class CanvasEngine {
             }
         }
 
-        // Draw entities (other than solid tiles)
-        for (const [key, cell] of this.grid.cells.entries()) {
-            const [x, y] = key.split(',').map(Number);
-            const wx = x * cs;
-            const wy = y * cs;
+        // Draw hover preview for building tool
+        if (this.hoverGridPos && this.currentTool === 'building') {
+            const hx = this.hoverGridPos.x;
+            const hy = this.hoverGridPos.y;
+            const wx = hx * cs;
+            const wy = hy * cs;
+            const colorCode = this.currentBuildingColor || 'red';
+            const colors = {
+                'red': '#ff4d4d',
+                'yellow': '#ffcc00',
+                'green': '#33cc33',
+                'blue': '#3399ff'
+            };
+            const canPlace = this.grid.canPlace(hx, hy, 'building');
 
-            if (cell.type === 'sweeper') {
-                const orientation = cell.meta?.orientation || 'horizontal';
-                if (this.images.sweeper && this.images.sweeper.complete) {
-                    this.ctx.save();
-                    // Move to center of sweeper
-                    this.ctx.translate(wx + cs/2, wy + cs/2);
-                    if (orientation === 'vertical') {
-                        this.ctx.rotate(Math.PI / 2);
-                    }
-                    // The image is 600x600, which corresponds to 3x3 cells.
-                    // We draw it centered. It covers from -1.5*cs to +1.5*cs in X and Y.
-                    this.ctx.drawImage(this.images.sweeper, -cs * 1.5, -cs * 1.5, cs * 3, cs * 3);
-                    this.ctx.restore();
-                } else {
-                    this.ctx.fillStyle = this.config.COLORS.SWEEPER;
-                    if (orientation === 'horizontal') {
-                        this.ctx.fillRect(wx - cs, wy, cs * 3, cs);
-                    } else {
-                        this.ctx.fillRect(wx, wy - cs, cs, cs * 3);
-                    }
-                }
-            } else if (cell.type === 'pipe') {
-                this.ctx.fillStyle = this.config.COLORS.PIPE || '#AAAAAA';
-                this.ctx.fillRect(wx + cs*0.25, wy + cs*0.25, cs*0.5, cs*0.5);
-            } else if (cell.type === 'bridge_in') {
-                this.ctx.fillStyle = this.config.COLORS.BRIDGE_INPUT || '#FFFFFF';
-                this.ctx.fillRect(wx + cs*0.1, wy + cs*0.1, cs*0.8, cs*0.8);
-            } else if (cell.type === 'bridge_out') {
-                this.ctx.fillStyle = this.config.COLORS.BRIDGE_OUTPUT || '#00FF00';
-                this.ctx.fillRect(wx + cs*0.1, wy + cs*0.1, cs*0.8, cs*0.8);
-            }
+            this.ctx.globalAlpha = 0.5;
+            this.ctx.fillStyle = canPlace ? (colors[colorCode] || colors['red']) : 'red';
+            this.ctx.fillRect(wx, wy, cs, cs);
+            this.ctx.globalAlpha = 1.0;
         }
 
         // Draw hover preview for solid tool
