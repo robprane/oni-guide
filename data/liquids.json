@@ -127,7 +127,7 @@
   {
     "id": "molten_zinc",
     "name": "Molten Zinc",
-    "image": "MoltenZinc.png"
+    "image": "Molten_Zinc.png"
   },
   {
     "id": "molten_niobium",
@@ -220,14 +220,14 @@
     "image": "Biodiesel.png"
   },
   {
-    "id": "murky_brine",
+    "id": "polluted_brine",
     "name": "Polluted Brine",
-    "image": "MurkyBrine.png"
+    "image": "Polluted_Brine.png"
   },
   {
-    "id": "fish_milk",
+    "id": "ovolene",
     "name": "Ovolene",
-    "image": "FishMilk.png"
+    "image": "Ovolene.png"
   },
   {
     "id": "resin",
@@ -235,9 +235,9 @@
     "image": "Resin.png"
   },
   {
-    "id": "ink",
+    "id": "squid_ink",
     "name": "Squid Ink",
-    "image": "Ink.png"
+    "image": "Squid_Ink.png"
   },
   {
     "id": "latex",
@@ -245,8 +245,8 @@
     "image": "Latex.png"
   },
   {
-    "id": "mucus",
+    "id": "mucin",
     "name": "Mucin",
-    "image": "Mucus.png"
+    "image": "Mucin.png"
   }
 ]

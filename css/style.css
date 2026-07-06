@@ -2,7 +2,11 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-}   
+}
+
+html {
+    scrollbar-gutter: stable;
+}
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -33,7 +37,7 @@ body {
 }
 
 .nav-brand-logo img {
-    height: 2.5rem;
+    height: 2rem;
     display: block;
     width: auto;
 }
@@ -115,8 +119,14 @@ body {
     font-size: 1.25rem;
 }
 
+.button-group {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+}
+
 #settings-btn > svg {
-    width: 1.5em;
+    width: 1.5rem;
 }
 
 .close-btn {
@@ -488,12 +498,13 @@ dialog {
     background: var(--bg-color);
     padding: 1rem;
     border-radius: 0.5rem;
-    max-width: 90dvw;
-    width: 90%;
-    max-height: 90dvh;
-    border: 1px solid var(--border-color);
+    max-width: 100dvw;
+    width: 100dvw;
+    max-height: 100dvh;
+    border: 0px solid var(--border-color);
     color: var(--text-color);
     margin: auto;
+    scrollbar-gutter: stable;
     /* position: fixed;
     top: 50%;
     left: 50%;

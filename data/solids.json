@@ -221,7 +221,7 @@
   {
     "id": "zinc_ore",
     "name": "Zinc Ore",
-    "image": "ZincOre.png"
+    "image": "Zinc_Ore.png"
   },
   {
     "id": "lime",
@@ -489,14 +489,14 @@
     "image": "Pearl.png"
   },
   {
-    "id": "murky_brine_ice",
+    "id": "polluted_brine_ice",
     "name": "Polluted Brine Ice",
-    "image": "MurkyBrineIce.png"
+    "image": "Polluted_Brine_Ice.png"
   },
   {
-    "id": "fish_milk_ice",
+    "id": "frozen_ovolene",
     "name": "Frozen Ovolene",
-    "image": "FishMilkIce.png"
+    "image": "Frozen_Ovolene.png"
   },
   {
     "id": "peat",
@@ -504,9 +504,9 @@
     "image": "Peat.png"
   },
   {
-    "id": "frozen_ink",
-    "name": "Frozen Ink",
-    "image": "FrozenInk.png"
+    "id": "frozen_squid_ink",
+    "name": "Frozen Squid Ink",
+    "image": "Frozen_Squid_Ink.png"
   },
   {
     "id": "rubber",
@@ -529,9 +529,9 @@
     "image": "SiltStone.png"
   },
   {
-    "id": "solid_mucus",
+    "id": "frozen_mucin",
     "name": "Frozen Mucin",
-    "image": "SolidMucus.png"
+    "image": "Frozen_Mucin.png"
   },
   {
     "id": "corallium",
@@ -551,7 +551,7 @@
   {
     "id": "gum_wood",
     "name": "Gum Wood",
-    "image": "PalmWood.png"
+    "image": "Gum_Wood.png"
   },
   {
     "id": "galena",

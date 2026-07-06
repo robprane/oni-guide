@@ -15923,7 +15923,7 @@
     "temp": 106.75,
     "consumed": [
       {
-        "element": "murky_brine",
+        "element": "polluted_brine",
         "unit": "g",
         "amount": 1000
       }
@@ -15946,14 +15946,14 @@
     "temp": -25.5,
     "consumed": [
       {
-        "element": "murky_brine",
+        "element": "polluted_brine",
         "unit": "g",
         "amount": 1000
       }
     ],
     "produced": [
       {
-        "element": "murky_brine_ice",
+        "element": "polluted_brine_ice",
         "unit": "g",
         "amount": 1000
       }
@@ -16411,7 +16411,7 @@
     "temp": 80,
     "consumed": [
       {
-        "element": "fish_milk",
+        "element": "ovolene",
         "unit": "g",
         "amount": 1000
       }
@@ -16434,14 +16434,14 @@
     "temp": -16.5,
     "consumed": [
       {
-        "element": "fish_milk",
+        "element": "ovolene",
         "unit": "g",
         "amount": 1000
       }
     ],
     "produced": [
       {
-        "element": "fish_milk_ice",
+        "element": "frozen_ovolene",
         "unit": "g",
         "amount": 1000
       }
@@ -17382,14 +17382,14 @@
     "temp": 80,
     "consumed": [
       {
-        "element": "ink",
+        "element": "squid_ink",
         "unit": "g",
         "amount": 1000
       }
     ],
     "produced": [
       {
-        "element": "mucus",
+        "element": "mucin",
         "unit": "g",
         "amount": 900
       },
@@ -17405,14 +17405,14 @@
     "temp": -20.65,
     "consumed": [
       {
-        "element": "ink",
+        "element": "squid_ink",
         "unit": "g",
         "amount": 1000
       }
     ],
     "produced": [
       {
-        "element": "frozen_ink",
+        "element": "frozen_squid_ink",
         "unit": "g",
         "amount": 1000
       }
@@ -17685,7 +17685,7 @@
     "temp": 90,
     "consumed": [
       {
-        "element": "mucus",
+        "element": "mucin",
         "unit": "g",
         "amount": 1000
       }
@@ -17708,14 +17708,14 @@
     "temp": -10,
     "consumed": [
       {
-        "element": "mucus",
+        "element": "mucin",
         "unit": "g",
         "amount": 1000
       }
     ],
     "produced": [
       {
-        "element": "solid_mucus",
+        "element": "frozen_mucin",
         "unit": "g",
         "amount": 1000
       }
@@ -17888,14 +17888,14 @@
     "temp": -25.5,
     "consumed": [
       {
-        "element": "murky_brine_ice",
+        "element": "polluted_brine_ice",
         "unit": "g",
         "amount": 1000
       }
     ],
     "produced": [
       {
-        "element": "murky_brine",
+        "element": "polluted_brine",
         "unit": "g",
         "amount": 1000
       }
@@ -17924,14 +17924,14 @@
     "temp": -16.5,
     "consumed": [
       {
-        "element": "fish_milk_ice",
+        "element": "frozen_ovolene",
         "unit": "g",
         "amount": 1000
       }
     ],
     "produced": [
       {
-        "element": "fish_milk",
+        "element": "ovolene",
         "unit": "g",
         "amount": 1000
       }
@@ -18374,14 +18374,14 @@
     "temp": -20.65,
     "consumed": [
       {
-        "element": "frozen_ink",
+        "element": "frozen_squid_ink",
         "unit": "g",
         "amount": 1000
       }
     ],
     "produced": [
       {
-        "element": "ink",
+        "element": "squid_ink",
         "unit": "g",
         "amount": 1000
       }
@@ -19695,14 +19695,14 @@
     "temp": -10,
     "consumed": [
       {
-        "element": "solid_mucus",
+        "element": "frozen_mucin",
         "unit": "g",
         "amount": 1000
       }
     ],
     "produced": [
       {
-        "element": "mucus",
+        "element": "mucin",
         "unit": "g",
         "amount": 1000
       }
