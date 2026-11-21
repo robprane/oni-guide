@@ -1,12 +1,14 @@
-const CACHE_NAME = 'oni-guide-v3';
+const CACHE_NAME = 'oni-guide-v4';
 const ASSETS = [
     '/',
     '/index.html',
-    '/css/style.css',
-    '/css/themes.css',
-    '/js/main.js',
-    '/js/theme.js',
-    '/js/router.js',
+    '/css/style.css?v=3',
+    '/css/themes.css?v=3',
+    '/js/main.js?v=3',
+    '/js/theme.js?v=3',
+    '/js/router.js?v=3',
+    '/js/pages/recipes.js?v=3',
+    '/js/utils.js?v=3',
     '/manifest.json'
 ];
 
@@ -35,9 +37,17 @@ self.addEventListener('activate', (e) => {
 });
 
 self.addEventListener('fetch', (e) => {
-    // Network First strategy
+    // Network First strategy: revalidate HTML/JS/CSS/JSON against server (ETag/304)
+    // so deploys never mix stale cached scripts with newly deployed JSON data.
+    const url = new URL(e.request.url);
+    const isSameOrigin = url.origin === self.location.origin;
+    const isImage = isSameOrigin && url.pathname.startsWith('/images/');
+    const networkRequest = (isSameOrigin && e.request.method === 'GET' && !isImage)
+        ? new Request(e.request, { cache: 'no-cache' })
+        : e.request;
+
     e.respondWith(
-        fetch(e.request).then((response) => {
+        fetch(networkRequest).then((response) => {
             // Check if we received a valid response
             if (!response || response.status !== 200 || response.type !== 'basic') {
                 return response;

@@ -1,4 +1,6 @@
-import { createElement } from '../utils.js';
+import { createElement } from '../utils.js?v=3';
+
+const DATA_VERSION = '3';
 
 let configData = null;
 let recipesData = null;
@@ -26,18 +28,34 @@ function prettifyId(id) {
 async function loadData() {
     if (!allItems) {
         try {
-            const configRes = await fetch('/data/config.json');
+            const vq = `?v=${DATA_VERSION}`;
+            const configRes = await fetch(`/data/config.json${vq}`);
             configData = await configRes.json();
 
+            const hasTagInConfig = configData.some(c => c.id === 'tag');
             const fetchPromises = configData.map(category =>
-                fetch(`/data/${category.file}`).then(res => res.json())
+                fetch(`/data/${category.file}${vq}`).then(res => res.json())
             );
-            const results = await Promise.all(fetchPromises);
+            const tagsPromise = hasTagInConfig
+                ? Promise.resolve(null)
+                : fetch(`/data/tags.json${vq}`).then(res => (res.ok ? res.json() : [])).catch(() => []);
+
+            const [results, standaloneTags] = await Promise.all([
+                Promise.all(fetchPromises),
+                tagsPromise
+            ]);
 
             allItems = {};
             allTags = {};
             tagToItems = {};
             recipesData = [];
+
+            if (Array.isArray(standaloneTags)) {
+                standaloneTags.forEach(tag => {
+                    allTags[tag.id] = tag;
+                    tagToItems[tag.id] = [];
+                });
+            }
 
             configData.forEach((category, index) => {
                 const dataArray = results[index];

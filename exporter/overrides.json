@@ -222,6 +222,84 @@
       "produced": [
         { "gameId": "MusselTongue", "amount": 1000, "unit": "g" }
       ]
+    },
+    {
+      "sourceGameId": "ElectrobankCharger",
+      "consumed": [
+        { "gameId": "EmptyElectrobank", "amount": 0.0033333333, "unit": "unit", "per": "s" }
+      ],
+      "produced": [
+        { "gameId": "Electrobank", "amount": 0.0033333333, "unit": "unit", "per": "s" }
+      ]
+    },
+    {
+      "sourceGameId": "LargeElectrobankDischarger",
+      "consumed": [
+        { "tag": "disposable_power_bank", "amount": 0.004, "unit": "unit", "per": "s" }
+      ],
+      "produced": []
+    },
+    {
+      "sourceGameId": "LargeElectrobankDischarger",
+      "consumed": [
+        { "gameId": "Electrobank", "amount": 0.004, "unit": "unit", "per": "s" }
+      ],
+      "produced": [
+        { "gameId": "EmptyElectrobank", "amount": 0.004, "unit": "unit", "per": "s" }
+      ]
+    },
+    {
+      "sourceGameId": "LargeElectrobankDischarger",
+      "consumed": [
+        { "gameId": "SelfChargingElectrobank", "amount": 1, "unit": "unit", "per": "150 cycles" }
+      ],
+      "produced": []
+    },
+    {
+      "sourceGameId": "SmallElectrobankDischarger",
+      "consumed": [
+        { "tag": "disposable_power_bank", "amount": 0.0005, "unit": "unit", "per": "s" }
+      ],
+      "produced": []
+    },
+    {
+      "sourceGameId": "SmallElectrobankDischarger",
+      "consumed": [
+        { "gameId": "Electrobank", "amount": 0.0005, "unit": "unit", "per": "s" }
+      ],
+      "produced": [
+        { "gameId": "EmptyElectrobank", "amount": 0.0005, "unit": "unit", "per": "s" }
+      ]
+    },
+    {
+      "sourceGameId": "SmallElectrobankDischarger",
+      "consumed": [
+        { "gameId": "SelfChargingElectrobank", "amount": 1, "unit": "unit", "per": "150 cycles" }
+      ],
+      "produced": []
+    },
+    {
+      "sourceGameId": "FetchDrone",
+      "consumed": [
+        { "tag": "disposable_power_bank", "amount": 0.0004166667, "unit": "unit", "per": "s" }
+      ],
+      "produced": []
+    },
+    {
+      "sourceGameId": "FetchDrone",
+      "consumed": [
+        { "gameId": "Electrobank", "amount": 0.0004166667, "unit": "unit", "per": "s" }
+      ],
+      "produced": [
+        { "gameId": "EmptyElectrobank", "amount": 0.0004166667, "unit": "unit", "per": "s" }
+      ]
+    },
+    {
+      "sourceGameId": "FetchDrone",
+      "consumed": [
+        { "gameId": "SelfChargingElectrobank", "amount": 1, "unit": "unit", "per": "150 cycles" }
+      ],
+      "produced": []
     }
   ]
 }

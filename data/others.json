@@ -587,7 +587,8 @@
       "DLC3_ID"
     ],
     "tags": [
-      "charged_power_bank"
+      "charged_power_bank",
+      "disposable_power_bank"
     ]
   },
   {
@@ -1124,7 +1125,8 @@
       "DLC3_ID"
     ],
     "tags": [
-      "charged_power_bank"
+      "charged_power_bank",
+      "disposable_power_bank"
     ]
   },
   {

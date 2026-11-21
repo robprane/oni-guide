@@ -75,6 +75,11 @@
     "image": "DriedFrostBurger.png"
   },
   {
+    "id": "disposable_power_bank",
+    "name": "Disposable Power Bank",
+    "image": "Metal_Power_Bank.png"
+  },
+  {
     "id": "drecko_diet_phosphorite",
     "name": "Drecko Diet",
     "image": "BalmLily.png"

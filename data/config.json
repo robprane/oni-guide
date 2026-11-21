@@ -78,12 +78,6 @@
     "isFilter": false
   },
   {
-    "id": "tag",
-    "label": "Tags",
-    "file": "tags.json",
-    "isFilter": false
-  },
-  {
     "id": "recipe",
     "label": "Recipes",
     "file": "recipes.json",

@@ -205,6 +205,7 @@ TAG_METADATA = {
     "rocket_liquid_fuel": ("Petroleum / Biodiesel", "Petroleum.png"),
     "fertilizer_or_peat": ("Fertilizer / Peat", "Fertilizer.png"),
     "charged_power_bank": ("Power Bank", "MetalPowerBank.png"),
+    "disposable_power_bank": ("Disposable Power Bank", "MetalPowerBank.png"),
     "lubricating_oil": ("Lubricating Oil", "CrudeOil.png"),
     "solid_lubricant": ("Gear Balm", "GearBalm.png"),
     "critter_walker": ("Walking Critter", "Hatch.png"),
@@ -696,6 +697,8 @@ def main() -> None:
             item_tags[obj["id"]].add("dehydrated_food")
         if "ChargedPortableBattery" in itags:
             item_tags[obj["id"]].add("charged_power_bank")
+        if "DisposablePortableBattery" in itags:
+            item_tags[obj["id"]].add("disposable_power_bank")
         if "SolidLubricant" in itags:
             item_tags[obj["id"]].add("solid_lubricant")
         if "Compostable" in itags:
@@ -747,6 +750,7 @@ def main() -> None:
         "Edible": "edible",
         "Dehydrated": "dehydrated_food",
         "ChargedPortableBattery": "charged_power_bank",
+        "DisposablePortableBattery": "disposable_power_bank",
         "LubricatingOil": "lubricating_oil",
         "SolidLubricant": "solid_lubricant",
         "Walker": "critter_walker",
@@ -1640,12 +1644,24 @@ def main() -> None:
             })
 
         # Bionic Duplicant maintenance (Power Banks + Lubricant -> Liquid Gunk)
+        # Per GameTags.BionicCompatibleBatteries & BionicIncompatibleBatteries:
+        # - Disposable Power Banks (Metal Power Bank, Uranium Ore Power Bank) are consumed completely
+        # - Eco Power Bank is discharged into Empty Eco Power Bank
+        # - Atomic Power Bank (SelfChargingElectrobank) is explicitly incompatible with Bionic Duplicants
         if gid == "BionicMinion":
-            if "charged_power_bank" in tags_registry:
+            if "disposable_power_bank" in tags_registry:
                 add_recipe({
                     "source": src_id,
-                    "consumed": [make_entry("tag", "charged_power_bank", 1.0 / 600.0, "unit", "s")],
+                    "consumed": [make_entry("tag", "disposable_power_bank", 1.0 / 600.0, "unit", "s")],
                     "produced": [],
+                })
+            eco_ref = resolve_ref("Electrobank")
+            empty_eco_ref = resolve_ref("EmptyElectrobank")
+            if eco_ref:
+                add_recipe({
+                    "source": src_id,
+                    "consumed": [make_entry(eco_ref[0], eco_ref[1], 1.0 / 600.0, "unit", "s")],
+                    "produced": [make_entry(empty_eco_ref[0], empty_eco_ref[1], 1.0 / 600.0, "unit", "s")] if empty_eco_ref else [],
                 })
             gunk_ref = resolve_ref("LiquidGunk")
             if "lubricating_oil" in tags_registry and dup.get("oilKgPerSec", 0) > 0:
@@ -1784,7 +1800,6 @@ def main() -> None:
         {"id": "solid", "label": "Solids", "file": "solids.json", "isFilter": True},
         {"id": "other", "label": "Others", "file": "others.json", "isFilter": True},
         {"id": "special", "label": "Special", "file": "special.json", "isFilter": False},
-        {"id": "tag", "label": "Tags", "file": "tags.json", "isFilter": False},
         {"id": "recipe", "label": "Recipes", "file": "recipes.json", "isFilter": False},
     ]
     (DATA_DIR / "config.json").write_text(

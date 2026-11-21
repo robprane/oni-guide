@@ -14502,13 +14502,32 @@
     "source": "bionic_duplicant",
     "consumed": [
       {
-        "tag": "charged_power_bank",
+        "tag": "disposable_power_bank",
         "amount": 0.0016666667,
         "unit": "unit",
         "per": "s"
       }
     ],
     "produced": []
+  },
+  {
+    "source": "bionic_duplicant",
+    "consumed": [
+      {
+        "element": "eco_power_bank",
+        "amount": 0.0016666667,
+        "unit": "unit",
+        "per": "s"
+      }
+    ],
+    "produced": [
+      {
+        "element": "empty_eco_power_bank",
+        "amount": 0.0016666667,
+        "unit": "unit",
+        "per": "s"
+      }
+    ]
   },
   {
     "source": "bionic_duplicant",
@@ -15229,5 +15248,153 @@
         "unit": "g"
       }
     ]
+  },
+  {
+    "source": "power_bank_charger",
+    "consumed": [
+      {
+        "element": "empty_eco_power_bank",
+        "amount": 0.0033333333,
+        "unit": "unit",
+        "per": "s"
+      }
+    ],
+    "produced": [
+      {
+        "element": "eco_power_bank",
+        "amount": 0.0033333333,
+        "unit": "unit",
+        "per": "s"
+      }
+    ]
+  },
+  {
+    "source": "large_discharger",
+    "consumed": [
+      {
+        "tag": "disposable_power_bank",
+        "amount": 0.004,
+        "unit": "unit",
+        "per": "s"
+      }
+    ],
+    "produced": []
+  },
+  {
+    "source": "large_discharger",
+    "consumed": [
+      {
+        "element": "eco_power_bank",
+        "amount": 0.004,
+        "unit": "unit",
+        "per": "s"
+      }
+    ],
+    "produced": [
+      {
+        "element": "empty_eco_power_bank",
+        "amount": 0.004,
+        "unit": "unit",
+        "per": "s"
+      }
+    ]
+  },
+  {
+    "source": "large_discharger",
+    "consumed": [
+      {
+        "element": "atomic_power_bank",
+        "amount": 1.0,
+        "unit": "unit",
+        "per": "150 cycles"
+      }
+    ],
+    "produced": []
+  },
+  {
+    "source": "compact_discharger",
+    "consumed": [
+      {
+        "tag": "disposable_power_bank",
+        "amount": 0.0005,
+        "unit": "unit",
+        "per": "s"
+      }
+    ],
+    "produced": []
+  },
+  {
+    "source": "compact_discharger",
+    "consumed": [
+      {
+        "element": "eco_power_bank",
+        "amount": 0.0005,
+        "unit": "unit",
+        "per": "s"
+      }
+    ],
+    "produced": [
+      {
+        "element": "empty_eco_power_bank",
+        "amount": 0.0005,
+        "unit": "unit",
+        "per": "s"
+      }
+    ]
+  },
+  {
+    "source": "compact_discharger",
+    "consumed": [
+      {
+        "element": "atomic_power_bank",
+        "amount": 1.0,
+        "unit": "unit",
+        "per": "150 cycles"
+      }
+    ],
+    "produced": []
+  },
+  {
+    "source": "flydo",
+    "consumed": [
+      {
+        "tag": "disposable_power_bank",
+        "amount": 0.0004166667,
+        "unit": "unit",
+        "per": "s"
+      }
+    ],
+    "produced": []
+  },
+  {
+    "source": "flydo",
+    "consumed": [
+      {
+        "element": "eco_power_bank",
+        "amount": 0.0004166667,
+        "unit": "unit",
+        "per": "s"
+      }
+    ],
+    "produced": [
+      {
+        "element": "empty_eco_power_bank",
+        "amount": 0.0004166667,
+        "unit": "unit",
+        "per": "s"
+      }
+    ]
+  },
+  {
+    "source": "flydo",
+    "consumed": [
+      {
+        "element": "atomic_power_bank",
+        "amount": 1.0,
+        "unit": "unit",
+        "per": "150 cycles"
+      }
+    ],
+    "produced": []
   }
 ]
