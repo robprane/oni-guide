@@ -359,6 +359,7 @@ dialog {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    max-width: 120rem;
 }
 
 .recipes-container h2 {
