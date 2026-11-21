@@ -645,8 +645,16 @@ def main() -> None:
             continue
         if not g["id"].startswith("GeyserGeneric_") and g.get("geyserTypeId") in generic_geyser_types:
             continue
+        avg_g_s = ((g["minRatePerCycleKg"] + g["maxRatePerCycleKg"]) / 2.0 / 600.0) * ((g["minYearPercent"] + g["maxYearPercent"]) / 2.0) * 1000.0
+        min_g_s = (g["minRatePerCycleKg"] / 600.0) * g["minYearPercent"] * 1000.0
+        max_g_s = (g["maxRatePerCycleKg"] / 600.0) * g["maxYearPercent"] * 1000.0
         extra = {
             "description": g.get("description"),
+            "emission_temp": round_num(g["temperatureC"]) if g.get("temperatureC") is not None else None,
+            "max_pressure": round_num(g["maxPressureKg"]) if g.get("maxPressureKg") is not None else None,
+            "avg_output_g_s": round_num(avg_g_s) if avg_g_s > 0 else None,
+            "min_output_g_s": round_num(min_g_s) if min_g_s > 0 else None,
+            "max_output_g_s": round_num(max_g_s) if max_g_s > 0 else None,
             "dlc": g.get("requiredDlcIds"),
         }
         add_entity("geyser", g["id"], name, extra)
@@ -1685,16 +1693,20 @@ def main() -> None:
         out_ref = resolve_ref(g["element"])
         if not out_ref:
             continue
-        # Average active output rate (midpoint of min/max per cycle * midpoint active fractions)
-        avg_erupt_kg_s = ((g["minRatePerCycleKg"] + g["maxRatePerCycleKg"]) / 2.0) / 600.0
-        avg_iter_frac = (g["minIterationPercent"] + g["maxIterationPercent"]) / 2.0
-        avg_year_frac = (g["minYearPercent"] + g["maxYearPercent"]) / 2.0
-        avg_kg_s = avg_erupt_kg_s * avg_iter_frac * avg_year_frac
-        if avg_kg_s > 0:
+        # Lifetime average emission per GeyserConfigurator.GetAverageEmission():
+        # minRatePerCycle..maxRatePerCycle already includes pauses between eruptions
+        # (iterationPercent cancels out), so lifetime avg = (massPerCycle / 600) * yearPercent.
+        min_g_s = (g["minRatePerCycleKg"] / 600.0) * g["minYearPercent"] * 1000.0
+        max_g_s = (g["maxRatePerCycleKg"] / 600.0) * g["maxYearPercent"] * 1000.0
+        avg_g_s = ((g["minRatePerCycleKg"] + g["maxRatePerCycleKg"]) / 2.0 / 600.0) * ((g["minYearPercent"] + g["maxYearPercent"]) / 2.0) * 1000.0
+        if avg_g_s > 0:
+            entry = make_entry(out_ref[0], out_ref[1], avg_g_s, "g", "s")
+            entry["amountMin"] = round_num(min_g_s)
+            entry["amountMax"] = round_num(max_g_s)
             add_recipe({
                 "source": game_to_site[gid],
                 "consumed": [],
-                "produced": [make_entry(out_ref[0], out_ref[1], avg_kg_s * 1000.0, "g", "s")],
+                "produced": [entry],
             })
 
     # --- H. Manual Overrides (exporter/overrides.json) ---

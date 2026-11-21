@@ -1,6 +1,6 @@
 import { createElement } from '../utils.js?v=3';
 
-const DATA_VERSION = '4';
+const DATA_VERSION = '5';
 
 let configData = null;
 let recipesData = null;
@@ -383,9 +383,20 @@ function formatAmountNumber(num) {
 }
 
 function formatAmount(itemData, isProducedFlag) {
+    const hasRange = itemData.amountMin !== undefined && itemData.amountMax !== undefined;
     let amount = itemData.amount;
+    let amountMin = hasRange ? itemData.amountMin : null;
+    let amountMax = hasRange ? itemData.amountMax : null;
     let unit = itemData.unit || '';
     let per = itemData.per;
+
+    const scaleValues = (factor) => {
+        amount = amount * factor;
+        if (hasRange) {
+            amountMin = amountMin * factor;
+            amountMax = amountMax * factor;
+        }
+    };
 
     if (window.unitSettings) {
         const concreteEl = itemData.element ? allItems[itemData.element] : null;
@@ -393,33 +404,38 @@ function formatAmount(itemData, isProducedFlag) {
         // Food unit conversion: g <-> kcal (only for concrete food items with kcalPerKg)
         if (concreteEl && concreteEl.kcalPerKg > 0) {
             if (window.unitSettings.food === 'kcal' && unit === 'g') {
-                amount = (amount / 1000) * concreteEl.kcalPerKg;
+                scaleValues(concreteEl.kcalPerKg / 1000);
                 unit = 'kcal';
             } else if (window.unitSettings.food === 'mass' && unit === 'kcal') {
-                amount = (amount / concreteEl.kcalPerKg) * 1000;
+                scaleValues(1000 / concreteEl.kcalPerKg);
                 unit = 'g';
             }
         }
 
         // Mass: g -> kg
         if (window.unitSettings.mass === 'kg' && unit === 'g') {
-            amount = amount / 1000;
+            scaleValues(1 / 1000);
             unit = 'kg';
         } else if (window.unitSettings.mass === 'kg' && unit === 'g of stored Nectar') {
-            amount = amount / 1000;
+            scaleValues(1 / 1000);
             unit = 'kg of stored Nectar';
         }
 
         // Time: s -> cycle
         if (window.unitSettings.time === 'cycle' && per === 's') {
-            amount = amount * 600;
+            scaleValues(600);
             per = 'cycle';
         }
     }
 
-    let numStr = formatAmountNumber(amount);
     let sign = isProducedFlag ? '+' : '-';
-    let amountText = amount > 0 ? sign + numStr : (amount < 0 ? numStr : '0');
+    let amountText;
+    if (hasRange) {
+        amountText = `${sign}${formatAmountNumber(amountMin)}–${formatAmountNumber(amountMax)}`;
+    } else {
+        let numStr = formatAmountNumber(amount);
+        amountText = amount > 0 ? sign + numStr : (amount < 0 ? numStr : '0');
+    }
 
     let unitText = unit ? `${unit.includes('%') ? '' : ' '}${unit}` : '';
     if (per) {
@@ -1086,6 +1102,15 @@ function showDetailModal(item) {
     if (item.freezing_point !== undefined) addProp('Freezing Point', `${formatTemperature(item.freezing_point)} (Forms: ${item.freezing_product || '?'})`);
     if (item.melting_point !== undefined) addProp('Melting Point', `${formatTemperature(item.melting_point)} (Forms: ${item.melting_product || '?'})`);
     if (item.boiling_point !== undefined) addProp('Boiling Point', `${formatTemperature(item.boiling_point)} (Forms: ${item.boiling_product || '?'})`);
+    if (item.emission_temp !== undefined) addProp('Output Temperature', formatTemperature(item.emission_temp));
+    if (item.avg_output_g_s !== undefined) {
+        const avgStr = formatAmount({ amount: item.avg_output_g_s, unit: 'g', per: 's' }, true).replace(/^\+/, '');
+        const rangeStr = (item.min_output_g_s !== undefined && item.max_output_g_s !== undefined)
+            ? ` (Range: ${formatAmount({ amountMin: item.min_output_g_s, amountMax: item.max_output_g_s, amount: item.avg_output_g_s, unit: 'g', per: 's' }, true).replace(/^\+/, '')})`
+            : '';
+        addProp('Average Output (incl. dormancy)', `${avgStr}${rangeStr}`);
+    }
+    if (item.max_pressure !== undefined) addProp('Overpressure Limit', `${formatAmountNumber(item.max_pressure)} kg`);
 
     // Render clickable tag chips on the item
     if (Array.isArray(item.tags) && item.tags.length > 0) {

@@ -14573,9 +14573,11 @@
     "produced": [
       {
         "element": "steam",
-        "amount": 750.0,
+        "amount": 1500.0,
         "unit": "g",
-        "per": "s"
+        "per": "s",
+        "amountMin": 666.66667,
+        "amountMax": 2666.6667
       }
     ]
   },
@@ -14585,9 +14587,11 @@
     "produced": [
       {
         "element": "steam",
-        "amount": 375.0,
+        "amount": 750.0,
         "unit": "g",
-        "per": "s"
+        "per": "s",
+        "amountMin": 333.33333,
+        "amountMax": 1333.3333
       }
     ]
   },
@@ -14597,9 +14601,11 @@
     "produced": [
       {
         "element": "water",
-        "amount": 1500.0,
+        "amount": 3000.0,
         "unit": "g",
-        "per": "s"
+        "per": "s",
+        "amountMin": 1333.3333,
+        "amountMax": 5333.3333
       }
     ]
   },
@@ -14609,9 +14615,11 @@
     "produced": [
       {
         "element": "polluted_water",
-        "amount": 750.0,
+        "amount": 1500.0,
         "unit": "g",
-        "per": "s"
+        "per": "s",
+        "amountMin": 666.66667,
+        "amountMax": 2666.6667
       }
     ]
   },
@@ -14621,9 +14629,11 @@
     "produced": [
       {
         "element": "polluted_water",
-        "amount": 1500.0,
+        "amount": 3000.0,
         "unit": "g",
-        "per": "s"
+        "per": "s",
+        "amountMin": 1333.3333,
+        "amountMax": 5333.3333
       }
     ]
   },
@@ -14633,9 +14643,11 @@
     "produced": [
       {
         "element": "brine",
-        "amount": 750.0,
+        "amount": 1500.0,
         "unit": "g",
-        "per": "s"
+        "per": "s",
+        "amountMin": 666.66667,
+        "amountMax": 2666.6667
       }
     ]
   },
@@ -14645,9 +14657,11 @@
     "produced": [
       {
         "element": "salt_water",
-        "amount": 1500.0,
+        "amount": 3000.0,
         "unit": "g",
-        "per": "s"
+        "per": "s",
+        "amountMin": 1333.3333,
+        "amountMax": 5333.3333
       }
     ]
   },
@@ -14657,9 +14671,11 @@
     "produced": [
       {
         "element": "magma",
-        "amount": 4.5,
+        "amount": 600.0,
         "unit": "g",
-        "per": "s"
+        "per": "s",
+        "amountMin": 266.66667,
+        "amountMax": 1066.6667
       }
     ]
   },
@@ -14669,9 +14685,11 @@
     "produced": [
       {
         "element": "magma",
-        "amount": 9.0,
+        "amount": 1200.0,
         "unit": "g",
-        "per": "s"
+        "per": "s",
+        "amountMin": 533.33333,
+        "amountMax": 2133.3333
       }
     ]
   },
@@ -14681,9 +14699,11 @@
     "produced": [
       {
         "element": "liquid_carbon_dioxide",
-        "amount": 75.0,
+        "amount": 150.0,
         "unit": "g",
-        "per": "s"
+        "per": "s",
+        "amountMin": 66.666667,
+        "amountMax": 266.66667
       }
     ]
   },
@@ -14693,9 +14713,11 @@
     "produced": [
       {
         "element": "carbon_dioxide",
-        "amount": 52.5,
+        "amount": 105.0,
         "unit": "g",
-        "per": "s"
+        "per": "s",
+        "amountMin": 46.666667,
+        "amountMax": 186.66667
       }
     ]
   },
@@ -14705,9 +14727,11 @@
     "produced": [
       {
         "element": "hydrogen",
-        "amount": 52.5,
+        "amount": 105.0,
         "unit": "g",
-        "per": "s"
+        "per": "s",
+        "amountMin": 46.666667,
+        "amountMax": 186.66667
       }
     ]
   },
@@ -14717,9 +14741,11 @@
     "produced": [
       {
         "element": "polluted_oxygen",
-        "amount": 52.5,
+        "amount": 105.0,
         "unit": "g",
-        "per": "s"
+        "per": "s",
+        "amountMin": 46.666667,
+        "amountMax": 186.66667
       }
     ]
   },
@@ -14729,9 +14755,11 @@
     "produced": [
       {
         "element": "polluted_oxygen",
-        "amount": 52.5,
+        "amount": 105.0,
         "unit": "g",
-        "per": "s"
+        "per": "s",
+        "amountMin": 46.666667,
+        "amountMax": 186.66667
       }
     ]
   },
@@ -14741,9 +14769,11 @@
     "produced": [
       {
         "element": "chlorine_gas",
-        "amount": 52.5,
+        "amount": 105.0,
         "unit": "g",
-        "per": "s"
+        "per": "s",
+        "amountMin": 46.666667,
+        "amountMax": 186.66667
       }
     ]
   },
@@ -14753,9 +14783,11 @@
     "produced": [
       {
         "element": "chlorine_gas",
-        "amount": 52.5,
+        "amount": 105.0,
         "unit": "g",
-        "per": "s"
+        "per": "s",
+        "amountMin": 46.666667,
+        "amountMax": 186.66667
       }
     ]
   },
@@ -14765,9 +14797,11 @@
     "produced": [
       {
         "element": "natural_gas",
-        "amount": 52.5,
+        "amount": 105.0,
         "unit": "g",
-        "per": "s"
+        "per": "s",
+        "amountMin": 46.666667,
+        "amountMax": 186.66667
       }
     ]
   },
@@ -14777,9 +14811,11 @@
     "produced": [
       {
         "element": "molten_copper",
-        "amount": 17.5,
+        "amount": 300.0,
         "unit": "g",
-        "per": "s"
+        "per": "s",
+        "amountMin": 133.33333,
+        "amountMax": 533.33333
       }
     ]
   },
@@ -14789,9 +14825,11 @@
     "produced": [
       {
         "element": "molten_iron",
-        "amount": 17.5,
+        "amount": 300.0,
         "unit": "g",
-        "per": "s"
+        "per": "s",
+        "amountMin": 133.33333,
+        "amountMax": 533.33333
       }
     ]
   },
@@ -14801,9 +14839,11 @@
     "produced": [
       {
         "element": "molten_gold",
-        "amount": 17.5,
+        "amount": 300.0,
         "unit": "g",
-        "per": "s"
+        "per": "s",
+        "amountMin": 133.33333,
+        "amountMax": 533.33333
       }
     ]
   },
@@ -14815,7 +14855,9 @@
         "element": "crude_oil",
         "amount": 125.5,
         "unit": "g",
-        "per": "s"
+        "per": "s",
+        "amountMin": 0.66666667,
+        "amountMax": 333.33333
       }
     ]
   },
@@ -14825,9 +14867,11 @@
     "produced": [
       {
         "element": "molten_aluminum",
-        "amount": 17.5,
+        "amount": 300.0,
         "unit": "g",
-        "per": "s"
+        "per": "s",
+        "amountMin": 133.33333,
+        "amountMax": 533.33333
       }
     ]
   },
@@ -14837,9 +14881,11 @@
     "produced": [
       {
         "element": "molten_tungsten",
-        "amount": 17.5,
+        "amount": 300.0,
         "unit": "g",
-        "per": "s"
+        "per": "s",
+        "amountMin": 133.33333,
+        "amountMax": 533.33333
       }
     ]
   },
@@ -14849,9 +14895,11 @@
     "produced": [
       {
         "element": "molten_niobium",
-        "amount": 9.0,
+        "amount": 1200.0,
         "unit": "g",
-        "per": "s"
+        "per": "s",
+        "amountMin": 533.33333,
+        "amountMax": 2133.3333
       }
     ]
   },
@@ -14861,9 +14909,11 @@
     "produced": [
       {
         "element": "molten_cobalt",
-        "amount": 17.5,
+        "amount": 300.0,
         "unit": "g",
-        "per": "s"
+        "per": "s",
+        "amountMin": 133.33333,
+        "amountMax": 533.33333
       }
     ]
   },
@@ -14873,9 +14923,11 @@
     "produced": [
       {
         "element": "liquid_sulfur",
-        "amount": 750.0,
+        "amount": 1500.0,
         "unit": "g",
-        "per": "s"
+        "per": "s",
+        "amountMin": 666.66667,
+        "amountMax": 2666.6667
       }
     ]
   },
@@ -14885,9 +14937,11 @@
     "produced": [
       {
         "element": "polluted_brine",
-        "amount": 1500.0,
+        "amount": 3000.0,
         "unit": "g",
-        "per": "s"
+        "per": "s",
+        "amountMin": 1333.3333,
+        "amountMax": 5333.3333
       }
     ]
   },

@@ -5,6 +5,11 @@
     "name": "Aluminum Volcano",
     "image": "AluminumVolcano.png",
     "description": "A large volcano that periodically erupts with Molten Aluminum.",
+    "emission_temp": 1726.85,
+    "max_pressure": 150.0,
+    "avg_output_g_s": 300.0,
+    "min_output_g_s": 133.33333,
+    "max_output_g_s": 533.33333,
     "dlc": [
       "EXPANSION1_ID"
     ]
@@ -14,21 +19,36 @@
     "gameId": "GeyserGeneric_liquid_co2",
     "name": "Carbon Dioxide Geyser",
     "image": "CarbonDioxideGeyser.png",
-    "description": "A highly pressurized geyser that periodically erupts with boiling Liquid Carbon Dioxide."
+    "description": "A highly pressurized geyser that periodically erupts with boiling Liquid Carbon Dioxide.",
+    "emission_temp": -55.15,
+    "max_pressure": 50.0,
+    "avg_output_g_s": 150.0,
+    "min_output_g_s": 66.666667,
+    "max_output_g_s": 266.66667
   },
   {
     "id": "carbon_dioxide_vent",
     "gameId": "GeyserGeneric_hot_co2",
     "name": "Carbon Dioxide Vent",
     "image": "CarbonDioxideVent.png",
-    "description": "A highly pressurized vent that periodically erupts with hot Carbon Dioxide."
+    "description": "A highly pressurized vent that periodically erupts with hot Carbon Dioxide.",
+    "emission_temp": 500.0,
+    "max_pressure": 5.0,
+    "avg_output_g_s": 105.0,
+    "min_output_g_s": 46.666667,
+    "max_output_g_s": 186.66667
   },
   {
     "id": "chlorine_gas_vent",
     "gameId": "GeyserGeneric_chlorine_gas",
     "name": "Chlorine Gas Vent",
     "image": "ChlorineGasVent.png",
-    "description": "A highly pressurized vent that periodically erupts with warm Chlorine Gas."
+    "description": "A highly pressurized vent that periodically erupts with warm Chlorine Gas.",
+    "emission_temp": 60.0,
+    "max_pressure": 5.0,
+    "avg_output_g_s": 105.0,
+    "min_output_g_s": 46.666667,
+    "max_output_g_s": 186.66667
   },
   {
     "id": "cobalt_volcano",
@@ -36,6 +56,11 @@
     "name": "Cobalt Volcano",
     "image": "CobaltVolcano.png",
     "description": "A large volcano that periodically erupts with Molten Cobalt.",
+    "emission_temp": 2226.85,
+    "max_pressure": 150.0,
+    "avg_output_g_s": 300.0,
+    "min_output_g_s": 133.33333,
+    "max_output_g_s": 533.33333,
     "dlc": [
       "EXPANSION1_ID"
     ]
@@ -45,77 +70,132 @@
     "gameId": "GeyserGeneric_chlorine_gas_cool",
     "name": "Cool Chlorine Gas Vent",
     "image": "CoolChlorineGasVent.png",
-    "description": "A highly pressurized vent that periodically erupts with cool Chlorine Gas."
+    "description": "A highly pressurized vent that periodically erupts with cool Chlorine Gas.",
+    "emission_temp": 5.0,
+    "max_pressure": 5.0,
+    "avg_output_g_s": 105.0,
+    "min_output_g_s": 46.666667,
+    "max_output_g_s": 186.66667
   },
   {
     "id": "cool_salt_slush_geyser",
     "gameId": "GeyserGeneric_slush_salt_water",
     "name": "Cool Salt Slush Geyser",
     "image": "CoolSaltSlushGeyser.png",
-    "description": "A highly pressurized geyser that periodically erupts with freezing Brine."
+    "description": "A highly pressurized geyser that periodically erupts with freezing Brine.",
+    "emission_temp": -10.0,
+    "max_pressure": 500.0,
+    "avg_output_g_s": 1500.0,
+    "min_output_g_s": 666.66667,
+    "max_output_g_s": 2666.6667
   },
   {
     "id": "cool_slush_geyser",
     "gameId": "GeyserGeneric_slush_water",
     "name": "Cool Slush Geyser",
     "image": "CoolSlushGeyser.png",
-    "description": "A highly pressurized geyser that periodically erupts with freezing Polluted Water."
+    "description": "A highly pressurized geyser that periodically erupts with freezing Polluted Water.",
+    "emission_temp": -10.0,
+    "max_pressure": 500.0,
+    "avg_output_g_s": 1500.0,
+    "min_output_g_s": 666.66667,
+    "max_output_g_s": 2666.6667
   },
   {
     "id": "cool_steam_vent",
     "gameId": "GeyserGeneric_steam",
     "name": "Cool Steam Vent",
     "image": "CoolSteamVent.png",
-    "description": "A highly pressurized vent that periodically erupts with Steam."
+    "description": "A highly pressurized vent that periodically erupts with Steam.",
+    "emission_temp": 110.0,
+    "max_pressure": 5.0,
+    "avg_output_g_s": 1500.0,
+    "min_output_g_s": 666.66667,
+    "max_output_g_s": 2666.6667
   },
   {
     "id": "copper_volcano",
     "gameId": "GeyserGeneric_molten_copper",
     "name": "Copper Volcano",
     "image": "CopperVolcano.png",
-    "description": "A large volcano that periodically erupts with Molten Copper."
+    "description": "A large volcano that periodically erupts with Molten Copper.",
+    "emission_temp": 2226.85,
+    "max_pressure": 150.0,
+    "avg_output_g_s": 300.0,
+    "min_output_g_s": 133.33333,
+    "max_output_g_s": 533.33333
   },
   {
     "id": "gold_volcano",
     "gameId": "GeyserGeneric_molten_gold",
     "name": "Gold Volcano",
     "image": "GoldVolcano.png",
-    "description": "A large volcano that periodically erupts with Molten Gold."
+    "description": "A large volcano that periodically erupts with Molten Gold.",
+    "emission_temp": 2626.85,
+    "max_pressure": 150.0,
+    "avg_output_g_s": 300.0,
+    "min_output_g_s": 133.33333,
+    "max_output_g_s": 533.33333
   },
   {
     "id": "hot_polluted_oxygen_vent",
     "gameId": "GeyserGeneric_hot_po2",
     "name": "Hot Polluted Oxygen Vent",
     "image": "HotPollutedOxygenVent.png",
-    "description": "A highly pressurized vent that periodically erupts with hot Polluted Oxygen."
+    "description": "A highly pressurized vent that periodically erupts with hot Polluted Oxygen.",
+    "emission_temp": 500.0,
+    "max_pressure": 5.0,
+    "avg_output_g_s": 105.0,
+    "min_output_g_s": 46.666667,
+    "max_output_g_s": 186.66667
   },
   {
     "id": "hydrogen_vent",
     "gameId": "GeyserGeneric_hot_hydrogen",
     "name": "Hydrogen Vent",
     "image": "HydrogenVent.png",
-    "description": "A highly pressurized vent that periodically erupts with hot gaseous Hydrogen."
+    "description": "A highly pressurized vent that periodically erupts with hot gaseous Hydrogen.",
+    "emission_temp": 500.0,
+    "max_pressure": 5.0,
+    "avg_output_g_s": 105.0,
+    "min_output_g_s": 46.666667,
+    "max_output_g_s": 186.66667
   },
   {
     "id": "infectious_polluted_oxygen_vent",
     "gameId": "GeyserGeneric_slimy_po2",
     "name": "Infectious Polluted Oxygen Vent",
     "image": "InfectiousPollutedOxygenVent.png",
-    "description": "A highly pressurized vent that periodically erupts with warm Polluted Oxygen."
+    "description": "A highly pressurized vent that periodically erupts with warm Polluted Oxygen.",
+    "emission_temp": 60.0,
+    "max_pressure": 5.0,
+    "avg_output_g_s": 105.0,
+    "min_output_g_s": 46.666667,
+    "max_output_g_s": 186.66667
   },
   {
     "id": "iron_volcano",
     "gameId": "GeyserGeneric_molten_iron",
     "name": "Iron Volcano",
     "image": "IronVolcano.png",
-    "description": "A large volcano that periodically erupts with Molten Iron."
+    "description": "A large volcano that periodically erupts with Molten Iron.",
+    "emission_temp": 2526.85,
+    "max_pressure": 150.0,
+    "avg_output_g_s": 300.0,
+    "min_output_g_s": 133.33333,
+    "max_output_g_s": 533.33333
   },
   {
     "id": "leaky_oil_fissure",
     "gameId": "GeyserGeneric_oil_drip",
     "name": "Leaky Oil Fissure",
     "image": "LeakyOilFissure.png",
-    "description": "A fissure that periodically erupts with boiling Crude Oil."
+    "description": "A fissure that periodically erupts with boiling Crude Oil.",
+    "emission_temp": 326.85,
+    "max_pressure": 50.0,
+    "avg_output_g_s": 125.5,
+    "min_output_g_s": 0.66666667,
+    "max_output_g_s": 333.33333
   },
   {
     "id": "liquid_sulfur_geyser",
@@ -123,6 +203,11 @@
     "name": "Liquid Sulfur Geyser",
     "image": "LiquidSulfurGeyser.png",
     "description": "A highly pressurized geyser that periodically erupts with boiling Liquid Sulfur.",
+    "emission_temp": 165.2,
+    "max_pressure": 500.0,
+    "avg_output_g_s": 1500.0,
+    "min_output_g_s": 666.66667,
+    "max_output_g_s": 2666.6667,
     "dlc": [
       "EXPANSION1_ID"
     ]
@@ -132,14 +217,24 @@
     "gameId": "GeyserGeneric_small_volcano",
     "name": "Minor Volcano",
     "image": "MinorVolcano.png",
-    "description": "A miniature volcano that periodically erupts with molten Magma."
+    "description": "A miniature volcano that periodically erupts with molten Magma.",
+    "emission_temp": 1726.85,
+    "max_pressure": 150.0,
+    "avg_output_g_s": 600.0,
+    "min_output_g_s": 266.66667,
+    "max_output_g_s": 1066.6667
   },
   {
     "id": "natural_gas_geyser",
     "gameId": "GeyserGeneric_methane",
     "name": "Natural Gas Geyser",
     "image": "NaturalGasGeyser.png",
-    "description": "A highly pressurized geyser that periodically erupts with hot Natural Gas."
+    "description": "A highly pressurized geyser that periodically erupts with hot Natural Gas.",
+    "emission_temp": 150.0,
+    "max_pressure": 5.0,
+    "avg_output_g_s": 105.0,
+    "min_output_g_s": 46.666667,
+    "max_output_g_s": 186.66667
   },
   {
     "id": "niobium_volcano",
@@ -147,6 +242,11 @@
     "name": "Niobium Volcano",
     "image": "NiobiumVolcano.png",
     "description": "A large volcano that periodically erupts with Niobium.",
+    "emission_temp": 3226.85,
+    "max_pressure": 150.0,
+    "avg_output_g_s": 1200.0,
+    "min_output_g_s": 533.33333,
+    "max_output_g_s": 2133.3333,
     "dlc": [
       "EXPANSION1_ID"
     ]
@@ -157,6 +257,11 @@
     "name": "Polluted Brine Vent",
     "image": "PollutedBrineVent.png",
     "description": "A highly pressurized vent that periodically erupts with boiling Polluted Brine.",
+    "emission_temp": 95.0,
+    "max_pressure": 500.0,
+    "avg_output_g_s": 3000.0,
+    "min_output_g_s": 1333.3333,
+    "max_output_g_s": 5333.3333,
     "dlc": [
       "DLC5_ID"
     ]
@@ -166,21 +271,36 @@
     "gameId": "GeyserGeneric_filthy_water",
     "name": "Polluted Water Vent",
     "image": "PollutedWaterVent.png",
-    "description": "A highly pressurized vent that periodically erupts with boiling Polluted Water."
+    "description": "A highly pressurized vent that periodically erupts with boiling Polluted Water.",
+    "emission_temp": 30.0,
+    "max_pressure": 500.0,
+    "avg_output_g_s": 3000.0,
+    "min_output_g_s": 1333.3333,
+    "max_output_g_s": 5333.3333
   },
   {
     "id": "salt_water_geyser",
     "gameId": "GeyserGeneric_salt_water",
     "name": "Salt Water Geyser",
     "image": "SaltWaterGeyser.png",
-    "description": "A highly pressurized geyser that periodically erupts with Salt Water."
+    "description": "A highly pressurized geyser that periodically erupts with Salt Water.",
+    "emission_temp": 95.0,
+    "max_pressure": 500.0,
+    "avg_output_g_s": 3000.0,
+    "min_output_g_s": 1333.3333,
+    "max_output_g_s": 5333.3333
   },
   {
     "id": "steam_vent",
     "gameId": "GeyserGeneric_hot_steam",
     "name": "Steam Vent",
     "image": "SteamVent.png",
-    "description": "A highly pressurized vent that periodically erupts with scalding Steam."
+    "description": "A highly pressurized vent that periodically erupts with scalding Steam.",
+    "emission_temp": 500.0,
+    "max_pressure": 5.0,
+    "avg_output_g_s": 750.0,
+    "min_output_g_s": 333.33333,
+    "max_output_g_s": 1333.3333
   },
   {
     "id": "tungsten_volcano",
@@ -188,6 +308,11 @@
     "name": "Tungsten Volcano",
     "image": "TungstenVolcano.png",
     "description": "A large volcano that periodically erupts with Molten Tungsten.",
+    "emission_temp": 3726.85,
+    "max_pressure": 150.0,
+    "avg_output_g_s": 300.0,
+    "min_output_g_s": 133.33333,
+    "max_output_g_s": 533.33333,
     "dlc": [
       "EXPANSION1_ID"
     ]
@@ -197,13 +322,23 @@
     "gameId": "GeyserGeneric_big_volcano",
     "name": "Volcano",
     "image": "Volcano.png",
-    "description": "A massive volcano that periodically erupts with molten Magma."
+    "description": "A massive volcano that periodically erupts with molten Magma.",
+    "emission_temp": 1726.85,
+    "max_pressure": 150.0,
+    "avg_output_g_s": 1200.0,
+    "min_output_g_s": 533.33333,
+    "max_output_g_s": 2133.3333
   },
   {
     "id": "water_geyser",
     "gameId": "GeyserGeneric_hot_water",
     "name": "Water Geyser",
     "image": "WaterGeyser.png",
-    "description": "A highly pressurized geyser that periodically erupts with hot Water."
+    "description": "A highly pressurized geyser that periodically erupts with hot Water.",
+    "emission_temp": 95.0,
+    "max_pressure": 500.0,
+    "avg_output_g_s": 3000.0,
+    "min_output_g_s": 1333.3333,
+    "max_output_g_s": 5333.3333
   }
 ]

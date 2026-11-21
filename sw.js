@@ -1,13 +1,13 @@
-const CACHE_NAME = 'oni-guide-v6';
+const CACHE_NAME = 'oni-guide-v7';
 const ASSETS = [
     '/',
     '/index.html',
     '/css/style.css?v=4',
     '/css/themes.css?v=3',
-    '/js/main.js?v=4',
+    '/js/main.js?v=5',
     '/js/theme.js?v=3',
-    '/js/router.js?v=4',
-    '/js/pages/recipes.js?v=4',
+    '/js/router.js?v=5',
+    '/js/pages/recipes.js?v=5',
     '/js/utils.js?v=3',
     '/manifest.json'
 ];

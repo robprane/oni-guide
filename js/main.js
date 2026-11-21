@@ -1,4 +1,4 @@
-import { Router } from './router.js?v=4';
+import { Router } from './router.js?v=5';
 
 // Main application entry point
 document.addEventListener('DOMContentLoaded', () => {
