@@ -1,157 +1,292 @@
 [
   {
     "id": "aluminum_gas",
+    "gameId": "AluminumGas",
     "name": "Aluminum Gas",
-    "image": "AluminumGas.png"
+    "image": "AluminumGas.png",
+    "description": "(Al) Aluminum Gas is a low density Metal heated into a Gaseous state.",
+    "category": "Unbreathable",
+    "freezing_point": 2470.0,
+    "freezing_product": "Molten Aluminum"
   },
   {
     "id": "carbon_dioxide",
+    "gameId": "CarbonDioxide",
     "name": "Carbon Dioxide",
-    "image": "CarbonDioxide.png"
+    "image": "CarbonDioxide.png",
+    "description": "(CO2) Carbon Dioxide is an atomically heavy chemical compound in a Gaseous state.\n\nIt tends to sink below other gases.",
+    "category": "Unbreathable",
+    "freezing_point": -48.15,
+    "freezing_product": "Liquid Carbon Dioxide"
   },
   {
     "id": "carbon_gas",
+    "gameId": "CarbonGas",
     "name": "Carbon Gas",
-    "image": "CarbonGas.png"
-  },
-  {
-    "id": "chlorine",
-    "name": "Chlorine",
-    "image": "Chlorine.png"
+    "image": "CarbonGas.png",
+    "description": "(C) Carbon is an abundant, versatile element heated into a Gaseous state.",
+    "category": "Unbreathable",
+    "freezing_point": 4826.85,
+    "freezing_product": "Liquid Carbon"
   },
   {
     "id": "chlorine_gas",
+    "gameId": "ChlorineGas",
     "name": "Chlorine Gas",
-    "image": "ChlorineGas.png"
+    "image": "ChlorineGas.png",
+    "description": "(Cl) Chlorine is a natural Germ-killing element in a Gaseous state.",
+    "category": "Unbreathable",
+    "freezing_point": -34.6,
+    "freezing_product": "Liquid Chlorine"
   },
   {
     "id": "cobalt_gas",
+    "gameId": "CobaltGas",
     "name": "Cobalt Gas",
-    "image": "CobaltGas.png"
+    "image": "CobaltGas.png",
+    "description": "(Co) Cobalt is a Refined Metal, heated into a Gas.",
+    "category": "Unbreathable",
+    "freezing_point": 2926.85,
+    "freezing_product": "Molten Cobalt"
   },
   {
     "id": "copper_gas",
+    "gameId": "CopperGas",
     "name": "Copper Gas",
-    "image": "CopperGas.png"
+    "image": "CopperGas.png",
+    "description": "(Cu) Copper Gas is a conductive Metal heated into a Gas state.",
+    "category": "Unbreathable",
+    "freezing_point": 2560.85,
+    "freezing_product": "Molten Copper"
   },
   {
     "id": "ethanol_gas",
+    "gameId": "EthanolGas",
     "name": "Ethanol Gas",
-    "image": "EthanolGas.png"
+    "image": "EthanolGas.png",
+    "description": "(C2H6O) Ethanol Gas is an advanced chemical compound heated into a Gaseous state.",
+    "category": "Unbreathable",
+    "freezing_point": 78.35,
+    "freezing_product": "Ethanol"
   },
   {
     "id": "gold_gas",
+    "gameId": "GoldGas",
     "name": "Gold Gas",
-    "image": "GoldGas.png"
+    "image": "GoldGas.png",
+    "description": "(Au) Gold Gas is a conductive precious Metal, heated into a Gaseous state.",
+    "category": "Unbreathable",
+    "freezing_point": 2855.85,
+    "freezing_product": "Molten Gold"
   },
   {
     "id": "hydrogen",
-    "name": "Hydrogen",
-    "image": "Hydrogen.png"
-  },
-  {
-    "id": "iron_gas",
-    "name": "Iron Gas",
-    "image": "IronGas.png"
-  },
-  {
-    "id": "lead_gas",
-    "name": "Lead Gas",
-    "image": "LeadGas.png"
-  },
-  {
-    "id": "zinc_gas",
-    "name": "Zinc Gas",
-    "image": "Zinc_Gas.png"
-  },
-  {
-    "id": "mercury_gas",
-    "name": "Mercury Gas",
-    "image": "MercuryGas.png"
-  },
-  {
-    "id": "natural_gas",
-    "name": "Natural Gas",
-    "image": "NaturalGas.png"
-  },
-  {
-    "id": "niobium_gas",
-    "name": "Niobium Gas",
-    "image": "NiobiumGas.png"
-  },
-  {
-    "id": "oxygen",
-    "name": "Oxygen",
-    "image": "Oxygen.png"
-  },
-  {
-    "id": "phosphorus_gas",
-    "name": "Phosphorus Gas",
-    "image": "PhosphorusGas.png"
-  },
-  {
-    "id": "polluted_oxygen",
-    "name": "Polluted Oxygen",
-    "image": "PollutedOxygen.png"
-  },
-  {
-    "id": "rock_gas",
-    "name": "Rock Gas",
-    "image": "RockGas.png"
-  },
-  {
-    "id": "salt_gas",
-    "name": "Salt Gas",
-    "image": "SaltGas.png"
-  },
-  {
-    "id": "sour_gas",
-    "name": "Sour Gas",
-    "image": "SourGas.png"
-  },
-  {
-    "id": "steam",
-    "name": "Steam",
-    "image": "Steam.png"
-  },
-  {
-    "id": "steel_gas",
-    "name": "Steel Gas",
-    "image": "SteelGas.png"
-  },
-  {
-    "id": "sulfur_gas",
-    "name": "Sulfur Gas",
-    "image": "SulfurGas.png"
-  },
-  {
-    "id": "super_coolant_gas",
-    "name": "Super Coolant Gas",
-    "image": "SuperCoolantGas.png"
-  },
-  {
-    "id": "nuclear_fallout",
-    "name": "Nuclear Fallout",
-    "image": "NuclearFallout.png"
-  },
-  {
-    "id": "tungsten_gas",
-    "name": "Tungsten Gas",
-    "image": "TungstenGas.png"
+    "gameId": "Hydrogen",
+    "name": "Hydrogen Gas",
+    "image": "Hydrogen.png",
+    "description": "(H) Hydrogen Gas is the universe's most common and atomically light element in a Gaseous state.",
+    "category": "Unbreathable",
+    "freezing_point": -252.15,
+    "freezing_product": "Liquid Hydrogen"
   },
   {
     "id": "iridium_gas",
+    "gameId": "IridiumGas",
     "name": "Iridium Gas",
-    "image": "Iridium_Gas.png"
+    "image": "Iridium_Gas.png",
+    "description": "(Ir) Iridium Gas is a highly conductive Metal heated into a  Gas state.",
+    "category": "Unbreathable",
+    "freezing_point": 4129.85,
+    "freezing_product": "Molten Iridium"
+  },
+  {
+    "id": "iron_gas",
+    "gameId": "IronGas",
+    "name": "Iron Gas",
+    "image": "IronGas.png",
+    "description": "(Fe) Iron Gas is a common industrial Metal, heated into a Gas.",
+    "category": "Unbreathable",
+    "freezing_point": 2749.85,
+    "freezing_product": "Molten Iron"
+  },
+  {
+    "id": "lead_gas",
+    "gameId": "LeadGas",
+    "name": "Lead Gas",
+    "image": "LeadGas.png",
+    "description": "(Pb) Lead Gas is a soft yet extremely dense Refined Metal heated into a Gaseous.",
+    "category": "Unbreathable",
+    "freezing_point": 1749.0,
+    "freezing_product": "Molten Lead"
+  },
+  {
+    "id": "mercury_gas",
+    "gameId": "MercuryGas",
+    "name": "Mercury Gas",
+    "image": "MercuryGas.png",
+    "description": "(Hg) Mercury Gas is a Metal heated into a Gaseous state.",
+    "category": "Unbreathable",
+    "freezing_point": 356.75,
+    "freezing_product": "Mercury"
+  },
+  {
+    "id": "natural_gas",
+    "gameId": "Methane",
+    "name": "Natural Gas",
+    "image": "NaturalGas.png",
+    "description": "Natural Gas is a mixture of various alkanes in a Gaseous state.\n\nIt is useful in Power production.",
+    "category": "Unbreathable",
+    "freezing_point": -161.5,
+    "freezing_product": "Liquid Methane"
   },
   {
     "id": "nickel_gas",
+    "gameId": "NickelGas",
     "name": "Nickel Gas",
-    "image": "Nickel_Gas.png"
+    "image": "Nickel_Gas.png",
+    "description": "(Ni) Nickel Gas is a conductive Metal heated into a Gas state.",
+    "category": "Unbreathable",
+    "freezing_point": 2729.85,
+    "freezing_product": "Molten Nickel"
   },
   {
-    "id": "hydrogen",
-    "name": "Hydrogen Gas",
-    "image": "Hydrogen.png"
+    "id": "niobium_gas",
+    "gameId": "NiobiumGas",
+    "name": "Niobium Gas",
+    "image": "NiobiumGas.png",
+    "description": "(Nb) Niobium Gas is a rare metal.\n\nThis selection is in a Gaseous state.",
+    "category": "Unbreathable",
+    "freezing_point": 4743.85,
+    "freezing_product": "Molten Niobium"
+  },
+  {
+    "id": "nuclear_fallout",
+    "gameId": "Fallout",
+    "name": "Nuclear Fallout",
+    "image": "NuclearFallout.png",
+    "description": "Nuclear Fallout is a highly toxic gas full of Radioactive Contaminants. Condenses into Liquid Nuclear Waste.",
+    "category": "Unbreathable",
+    "freezing_point": 66.85,
+    "freezing_product": "Liquid Nuclear Waste"
+  },
+  {
+    "id": "oxygen",
+    "gameId": "Oxygen",
+    "name": "Oxygen",
+    "image": "Oxygen.png",
+    "description": "(O2) Oxygen is an atomically lightweight and breathable Gas, necessary for sustaining life.\n\nIt tends to rise above other gases.",
+    "category": "Breathable",
+    "freezing_point": -182.96,
+    "freezing_product": "Liquid Oxygen"
+  },
+  {
+    "id": "phosphorus_gas",
+    "gameId": "PhosphorusGas",
+    "name": "Phosphorus Gas",
+    "image": "PhosphorusGas.png",
+    "description": "(P) Phosphorus Gas is the Gaseous state of Refined Phosphorus.",
+    "category": "Unbreathable",
+    "freezing_point": 280.45,
+    "freezing_product": "Liquid Phosphorus"
+  },
+  {
+    "id": "polluted_oxygen",
+    "gameId": "ContaminatedOxygen",
+    "name": "Polluted Oxygen",
+    "image": "PollutedOxygen.png",
+    "description": "(O2) Polluted Oxygen is dirty, unfiltered air.\n\nIt is breathable.",
+    "category": "Breathable",
+    "freezing_point": -182.96,
+    "freezing_product": "Liquid Oxygen"
+  },
+  {
+    "id": "rock_gas",
+    "gameId": "RockGas",
+    "name": "Rock Gas",
+    "image": "RockGas.png",
+    "description": "Rock Gas is rock that has been superheated into a Gaseous state.",
+    "category": "Unbreathable",
+    "freezing_point": 2356.85,
+    "freezing_product": "Magma"
+  },
+  {
+    "id": "salt_gas",
+    "gameId": "SaltGas",
+    "name": "Salt Gas",
+    "image": "SaltGas.png",
+    "description": "(NaCl) Salt Gas is an edible chemical compound that has been superheated into a Gaseous state.",
+    "category": "Unbreathable",
+    "freezing_point": 1464.85,
+    "freezing_product": "Molten Salt"
+  },
+  {
+    "id": "sour_gas",
+    "gameId": "SourGas",
+    "name": "Sour Gas",
+    "image": "SourGas.png",
+    "description": "Sour Gas is a hydrocarbon Gas containing high concentrations of hydrogen sulfide.\n\nIt is a byproduct of highly heated Petroleum.",
+    "category": "Unbreathable",
+    "freezing_point": -161.5,
+    "freezing_product": "Liquid Methane"
+  },
+  {
+    "id": "steam",
+    "gameId": "Steam",
+    "name": "Steam",
+    "image": "Steam.png",
+    "description": "(H2O) Steam is Water that has been heated into a scalding Gas.",
+    "category": "Unbreathable",
+    "freezing_point": 99.35,
+    "freezing_product": "Water"
+  },
+  {
+    "id": "steel_gas",
+    "gameId": "SteelGas",
+    "name": "Steel Gas",
+    "image": "SteelGas.png",
+    "description": "Steel Gas is a superheated Metal Gas composed of iron and carbon.",
+    "category": "Unbreathable",
+    "freezing_point": 3826.85,
+    "freezing_product": "Molten Steel"
+  },
+  {
+    "id": "sulfur_gas",
+    "gameId": "SulfurGas",
+    "name": "Sulfur Gas",
+    "image": "SulfurGas.png",
+    "description": "(S) Sulfur is a common chemical element and byproduct of Natural Gas production.\n\nThis selection is in a Gaseous state.",
+    "category": "Unbreathable",
+    "freezing_point": 337.0,
+    "freezing_product": "Liquid Sulfur"
+  },
+  {
+    "id": "super_coolant_gas",
+    "gameId": "SuperCoolantGas",
+    "name": "Super Coolant Gas",
+    "image": "SuperCoolantGas.png",
+    "description": "Super Coolant is an industrial-grade Fullerene coolant.\n\nThis selection is in a Gaseous state.",
+    "category": "Unbreathable",
+    "freezing_point": 436.85,
+    "freezing_product": "Super Coolant"
+  },
+  {
+    "id": "tungsten_gas",
+    "gameId": "TungstenGas",
+    "name": "Tungsten Gas",
+    "image": "TungstenGas.png",
+    "description": "(W) Tungsten is a superheated crystalline Metal.\n\nThis selection is in a Gaseous state.",
+    "category": "Unbreathable",
+    "freezing_point": 5929.85,
+    "freezing_product": "Molten Tungsten"
+  },
+  {
+    "id": "zinc_gas",
+    "gameId": "ZincGas",
+    "name": "Zinc Gas",
+    "image": "Zinc_Gas.png",
+    "description": "(Zn) Zinc Gas is Zinc heated into a Gaseous state.",
+    "category": "Unbreathable",
+    "freezing_point": 906.85,
+    "freezing_product": "Molten Zinc"
   }
 ]

@@ -1,0 +1,307 @@
+[
+  {
+    "id": "abyss_bug_diet_eatsolid",
+    "name": "Abyss Bug Diet",
+    "image": "Abyssalite.png"
+  },
+  {
+    "id": "azure_bug_diet_eatsolid",
+    "name": "Azure Bug Diet",
+    "image": "PepperBread.png"
+  },
+  {
+    "id": "building_wood",
+    "name": "Wood",
+    "image": "Wood.png"
+  },
+  {
+    "id": "charged_power_bank",
+    "name": "Power Bank",
+    "image": "Atomic_Power_Bank.png"
+  },
+  {
+    "id": "combustible_liquid",
+    "name": "Combustible Liquid",
+    "image": "Petroleum.png"
+  },
+  {
+    "id": "compostable",
+    "name": "Compostable",
+    "image": "PollutedDirt.png"
+  },
+  {
+    "id": "coral_bug_diet_eatsolid",
+    "name": "Coral Bug Diet",
+    "image": "BristleBerry.png"
+  },
+  {
+    "id": "crackable_egg_2kg",
+    "name": "2 kg Egg",
+    "image": "BlowterEgg.png"
+  },
+  {
+    "id": "crackable_egg_4kg",
+    "name": "4 kg Egg",
+    "image": "Jawbo_Egg.png"
+  },
+  {
+    "id": "crackable_egg_8kg",
+    "name": "8 kg Egg",
+    "image": "BamminiEgg.png"
+  },
+  {
+    "id": "crackable_egg_group_4",
+    "name": "Crackable Egg",
+    "image": "BeakonEgg.png"
+  },
+  {
+    "id": "critter_hoverer",
+    "name": "Hovering Critter",
+    "image": "Slickster.png"
+  },
+  {
+    "id": "critter_walker",
+    "name": "Walking Critter",
+    "image": "Hatch.png"
+  },
+  {
+    "id": "crushable_mineral",
+    "name": "Crushable Mineral",
+    "image": "Sandstone.png"
+  },
+  {
+    "id": "dehydrated_food",
+    "name": "Dehydrated Food",
+    "image": "DriedFrostBurger.png"
+  },
+  {
+    "id": "drecko_diet_phosphorite",
+    "name": "Drecko Diet",
+    "image": "BalmLily.png"
+  },
+  {
+    "id": "edible",
+    "name": "Any Edible Food",
+    "image": "Barbeque.png"
+  },
+  {
+    "id": "egg_lightbug_group",
+    "name": "Shine Bug Egg Variants",
+    "image": "AbyssNymphEgg.png"
+  },
+  {
+    "id": "egg_puft_group",
+    "name": "Puft Egg Variants",
+    "image": "DensePuftletEgg.png"
+  },
+  {
+    "id": "egg_snail_group",
+    "name": "Slogo Egg Variants",
+    "image": "GildgoEgg.png"
+  },
+  {
+    "id": "fertilizer_or_peat",
+    "name": "Fertilizer / Peat",
+    "image": "Fertilizer.png"
+  },
+  {
+    "id": "fiber",
+    "name": "Textile Fiber",
+    "image": "ReedFiber.png"
+  },
+  {
+    "id": "filter",
+    "name": "Filtration Medium",
+    "image": "Sand.png"
+  },
+  {
+    "id": "fish_meat",
+    "name": "Fish Fillet",
+    "image": "PacuFillet.png"
+  },
+  {
+    "id": "flox_diet_dirt",
+    "name": "Flox Diet",
+    "image": "BristleBlossom.png"
+  },
+  {
+    "id": "glossy_drecko_diet_phosphorite",
+    "name": "Glossy Drecko Diet",
+    "image": "BristleBlossom.png"
+  },
+  {
+    "id": "grain",
+    "name": "Grain",
+    "image": "SleetWheatGrain.png"
+  },
+  {
+    "id": "hatch_diet_carbon",
+    "name": "Hatch Diet",
+    "image": "Clay.png"
+  },
+  {
+    "id": "jawbo_diet_rust",
+    "name": "Jawbo Diet",
+    "image": "Beakon.png"
+  },
+  {
+    "id": "jawbo_diet_rust_2",
+    "name": "Jawbo Diet",
+    "image": "CookedSeafood.png"
+  },
+  {
+    "id": "kiln_fuel",
+    "name": "Combustible Fuel",
+    "image": "Coal.png"
+  },
+  {
+    "id": "lubricating_oil",
+    "name": "Lubricating Oil",
+    "image": "CrudeOil.png"
+  },
+  {
+    "id": "merpip_diet_coquina",
+    "name": "Merpip Diet",
+    "image": "GildgoMolt.png"
+  },
+  {
+    "id": "metal_ore",
+    "name": "Metal Ore",
+    "image": "CopperOre.png"
+  },
+  {
+    "id": "metal_ore_electrobank",
+    "name": "Raw Metal Ore",
+    "image": "CopperOre.png"
+  },
+  {
+    "id": "microbemusher_fishfood_input",
+    "name": "Mealwood Seed / Blossom Seed (+4)",
+    "image": "BlossomSeed.png"
+  },
+  {
+    "id": "oakshell_diet_sand",
+    "name": "Oakshell Diet",
+    "image": "PollutedDirt.png"
+  },
+  {
+    "id": "pacu_diet_toxicsand",
+    "name": "Pacu Diet",
+    "image": "AlveoVeraSeed.png"
+  },
+  {
+    "id": "pip_diet_dirt",
+    "name": "Pip Diet",
+    "image": "ArborTree.png"
+  },
+  {
+    "id": "plastifiable_liquid",
+    "name": "Plastic Source Liquid",
+    "image": "Petroleum.png"
+  },
+  {
+    "id": "plug_slug_diet_hydrogen",
+    "name": "Plug Slug Diet",
+    "image": "Aluminum.png"
+  },
+  {
+    "id": "radiant_bug_diet_eatsolid",
+    "name": "Radiant Bug Diet",
+    "image": "Barbeque.png"
+  },
+  {
+    "id": "refined_metal",
+    "name": "Refined Metal",
+    "image": "Copper.png"
+  },
+  {
+    "id": "refined_metal_common",
+    "name": "Common Refined Metal",
+    "image": "Copper.png"
+  },
+  {
+    "id": "rhex_diet_brineice",
+    "name": "Rhex Diet",
+    "image": "Meat.png"
+  },
+  {
+    "id": "rhex_diet_brineice_2",
+    "name": "Rhex Diet",
+    "image": "CuddlePip.png"
+  },
+  {
+    "id": "rocket_liquid_fuel",
+    "name": "Petroleum / Biodiesel",
+    "image": "Petroleum.png"
+  },
+  {
+    "id": "royal_bug_diet_eatsolid",
+    "name": "Royal Bug Diet",
+    "image": "FriedMushroom.png"
+  },
+  {
+    "id": "sage_hatch_diet_carbon",
+    "name": "Sage Hatch Diet",
+    "image": "Algae.png"
+  },
+  {
+    "id": "saturn_trap_prey",
+    "name": "Land / Hovering Critter",
+    "image": "Hatch.png"
+  },
+  {
+    "id": "seafood",
+    "name": "Raw Seafood",
+    "image": "PacuFillet.png"
+  },
+  {
+    "id": "shine_bug_diet_eatsolid",
+    "name": "Shine Bug Diet",
+    "image": "BristleBerry.png"
+  },
+  {
+    "id": "smoker_fuel",
+    "name": "Smoker Fuel",
+    "image": "Wood.png"
+  },
+  {
+    "id": "smoker_veggie",
+    "name": "Smokable Veggie / Fruit",
+    "image": "Pikeapple.png"
+  },
+  {
+    "id": "solid_lubricant",
+    "name": "Gear Balm",
+    "image": "Gear_Balm.png"
+  },
+  {
+    "id": "stone_hatch_diet_carbon",
+    "name": "Stone Hatch Diet",
+    "image": "Basalt.png"
+  },
+  {
+    "id": "stone_hatch_diet_carbon_2",
+    "name": "Stone Hatch Diet",
+    "image": "AluminumOre.png"
+  },
+  {
+    "id": "sun_bug_diet_eatsolid",
+    "name": "Sun Bug Diet",
+    "image": "FriedMushroom.png"
+  },
+  {
+    "id": "transparent_material",
+    "name": "Transparent / Gem",
+    "image": "Glass.png"
+  },
+  {
+    "id": "tublia_irrigation",
+    "name": "Tublia Irrigation",
+    "image": "Brine.png"
+  },
+  {
+    "id": "water_or_mucus",
+    "name": "Water / Mucus",
+    "image": "Water.png"
+  }
+]

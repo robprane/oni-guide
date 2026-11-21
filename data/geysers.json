@@ -1,0 +1,209 @@
+[
+  {
+    "id": "aluminum_volcano",
+    "gameId": "GeyserGeneric_molten_aluminum",
+    "name": "Aluminum Volcano",
+    "image": "AluminumVolcano.png",
+    "description": "A large volcano that periodically erupts with Molten Aluminum.",
+    "dlc": [
+      "EXPANSION1_ID"
+    ]
+  },
+  {
+    "id": "carbon_dioxide_geyser",
+    "gameId": "GeyserGeneric_liquid_co2",
+    "name": "Carbon Dioxide Geyser",
+    "image": "CarbonDioxideGeyser.png",
+    "description": "A highly pressurized geyser that periodically erupts with boiling Liquid Carbon Dioxide."
+  },
+  {
+    "id": "carbon_dioxide_vent",
+    "gameId": "GeyserGeneric_hot_co2",
+    "name": "Carbon Dioxide Vent",
+    "image": "CarbonDioxideVent.png",
+    "description": "A highly pressurized vent that periodically erupts with hot Carbon Dioxide."
+  },
+  {
+    "id": "chlorine_gas_vent",
+    "gameId": "GeyserGeneric_chlorine_gas",
+    "name": "Chlorine Gas Vent",
+    "image": "ChlorineGasVent.png",
+    "description": "A highly pressurized vent that periodically erupts with warm Chlorine Gas."
+  },
+  {
+    "id": "cobalt_volcano",
+    "gameId": "GeyserGeneric_molten_cobalt",
+    "name": "Cobalt Volcano",
+    "image": "CobaltVolcano.png",
+    "description": "A large volcano that periodically erupts with Molten Cobalt.",
+    "dlc": [
+      "EXPANSION1_ID"
+    ]
+  },
+  {
+    "id": "cool_chlorine_gas_vent",
+    "gameId": "GeyserGeneric_chlorine_gas_cool",
+    "name": "Cool Chlorine Gas Vent",
+    "image": "CoolChlorineGasVent.png",
+    "description": "A highly pressurized vent that periodically erupts with cool Chlorine Gas."
+  },
+  {
+    "id": "cool_salt_slush_geyser",
+    "gameId": "GeyserGeneric_slush_salt_water",
+    "name": "Cool Salt Slush Geyser",
+    "image": "CoolSaltSlushGeyser.png",
+    "description": "A highly pressurized geyser that periodically erupts with freezing Brine."
+  },
+  {
+    "id": "cool_slush_geyser",
+    "gameId": "GeyserGeneric_slush_water",
+    "name": "Cool Slush Geyser",
+    "image": "CoolSlushGeyser.png",
+    "description": "A highly pressurized geyser that periodically erupts with freezing Polluted Water."
+  },
+  {
+    "id": "cool_steam_vent",
+    "gameId": "GeyserGeneric_steam",
+    "name": "Cool Steam Vent",
+    "image": "CoolSteamVent.png",
+    "description": "A highly pressurized vent that periodically erupts with Steam."
+  },
+  {
+    "id": "copper_volcano",
+    "gameId": "GeyserGeneric_molten_copper",
+    "name": "Copper Volcano",
+    "image": "CopperVolcano.png",
+    "description": "A large volcano that periodically erupts with Molten Copper."
+  },
+  {
+    "id": "gold_volcano",
+    "gameId": "GeyserGeneric_molten_gold",
+    "name": "Gold Volcano",
+    "image": "GoldVolcano.png",
+    "description": "A large volcano that periodically erupts with Molten Gold."
+  },
+  {
+    "id": "hot_polluted_oxygen_vent",
+    "gameId": "GeyserGeneric_hot_po2",
+    "name": "Hot Polluted Oxygen Vent",
+    "image": "HotPollutedOxygenVent.png",
+    "description": "A highly pressurized vent that periodically erupts with hot Polluted Oxygen."
+  },
+  {
+    "id": "hydrogen_vent",
+    "gameId": "GeyserGeneric_hot_hydrogen",
+    "name": "Hydrogen Vent",
+    "image": "HydrogenVent.png",
+    "description": "A highly pressurized vent that periodically erupts with hot gaseous Hydrogen."
+  },
+  {
+    "id": "infectious_polluted_oxygen_vent",
+    "gameId": "GeyserGeneric_slimy_po2",
+    "name": "Infectious Polluted Oxygen Vent",
+    "image": "InfectiousPollutedOxygenVent.png",
+    "description": "A highly pressurized vent that periodically erupts with warm Polluted Oxygen."
+  },
+  {
+    "id": "iron_volcano",
+    "gameId": "GeyserGeneric_molten_iron",
+    "name": "Iron Volcano",
+    "image": "IronVolcano.png",
+    "description": "A large volcano that periodically erupts with Molten Iron."
+  },
+  {
+    "id": "leaky_oil_fissure",
+    "gameId": "GeyserGeneric_oil_drip",
+    "name": "Leaky Oil Fissure",
+    "image": "LeakyOilFissure.png",
+    "description": "A fissure that periodically erupts with boiling Crude Oil."
+  },
+  {
+    "id": "liquid_sulfur_geyser",
+    "gameId": "GeyserGeneric_liquid_sulfur",
+    "name": "Liquid Sulfur Geyser",
+    "image": "LiquidSulfurGeyser.png",
+    "description": "A highly pressurized geyser that periodically erupts with boiling Liquid Sulfur.",
+    "dlc": [
+      "EXPANSION1_ID"
+    ]
+  },
+  {
+    "id": "minor_volcano",
+    "gameId": "GeyserGeneric_small_volcano",
+    "name": "Minor Volcano",
+    "image": "MinorVolcano.png",
+    "description": "A miniature volcano that periodically erupts with molten Magma."
+  },
+  {
+    "id": "natural_gas_geyser",
+    "gameId": "GeyserGeneric_methane",
+    "name": "Natural Gas Geyser",
+    "image": "NaturalGasGeyser.png",
+    "description": "A highly pressurized geyser that periodically erupts with hot Natural Gas."
+  },
+  {
+    "id": "niobium_volcano",
+    "gameId": "GeyserGeneric_molten_niobium",
+    "name": "Niobium Volcano",
+    "image": "NiobiumVolcano.png",
+    "description": "A large volcano that periodically erupts with Niobium.",
+    "dlc": [
+      "EXPANSION1_ID"
+    ]
+  },
+  {
+    "id": "polluted_brine_vent",
+    "gameId": "GeyserGeneric_murky_brine",
+    "name": "Polluted Brine Vent",
+    "image": "PollutedBrineVent.png",
+    "description": "A highly pressurized vent that periodically erupts with boiling Polluted Brine.",
+    "dlc": [
+      "DLC5_ID"
+    ]
+  },
+  {
+    "id": "polluted_water_vent",
+    "gameId": "GeyserGeneric_filthy_water",
+    "name": "Polluted Water Vent",
+    "image": "PollutedWaterVent.png",
+    "description": "A highly pressurized vent that periodically erupts with boiling Polluted Water."
+  },
+  {
+    "id": "salt_water_geyser",
+    "gameId": "GeyserGeneric_salt_water",
+    "name": "Salt Water Geyser",
+    "image": "SaltWaterGeyser.png",
+    "description": "A highly pressurized geyser that periodically erupts with Salt Water."
+  },
+  {
+    "id": "steam_vent",
+    "gameId": "GeyserGeneric_hot_steam",
+    "name": "Steam Vent",
+    "image": "SteamVent.png",
+    "description": "A highly pressurized vent that periodically erupts with scalding Steam."
+  },
+  {
+    "id": "tungsten_volcano",
+    "gameId": "GeyserGeneric_molten_tungsten",
+    "name": "Tungsten Volcano",
+    "image": "TungstenVolcano.png",
+    "description": "A large volcano that periodically erupts with Molten Tungsten.",
+    "dlc": [
+      "EXPANSION1_ID"
+    ]
+  },
+  {
+    "id": "volcano",
+    "gameId": "GeyserGeneric_big_volcano",
+    "name": "Volcano",
+    "image": "Volcano.png",
+    "description": "A massive volcano that periodically erupts with molten Magma."
+  },
+  {
+    "id": "water_geyser",
+    "gameId": "GeyserGeneric_hot_water",
+    "name": "Water Geyser",
+    "image": "WaterGeyser.png",
+    "description": "A highly pressurized geyser that periodically erupts with hot Water."
+  }
+]

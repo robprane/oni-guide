@@ -1,0 +1,227 @@
+{
+  "extraItems": [
+    {
+      "category": "other",
+      "gameId": "PRESERVING_SPICE",
+      "id": "freshener_spice",
+      "name": "Freshener Spice",
+      "image": "FreshenerSpice.png",
+      "description": "Slows food spoilage when applied at the Spice Grinder."
+    },
+    {
+      "category": "other",
+      "gameId": "PILOTING_SPICE",
+      "id": "rocketeer_spice",
+      "name": "Rocketeer Spice",
+      "image": "RocketeerSpice.png",
+      "description": "Grants +3 Piloting when applied at the Spice Grinder.",
+      "dlc": ["EXPANSION1_ID"]
+    },
+    {
+      "category": "other",
+      "gameId": "STRENGTH_SPICE",
+      "id": "brawny_spice",
+      "name": "Brawny Spice",
+      "image": "BrawnySpice.png",
+      "description": "Grants +3 Strength when applied at the Spice Grinder."
+    },
+    {
+      "category": "other",
+      "gameId": "MACHINERY_SPICE",
+      "id": "machinist_spice",
+      "name": "Machinist Spice",
+      "image": "MachinistSpice.png",
+      "description": "Grants +3 Machinery when applied at the Spice Grinder."
+    }
+  ],
+  "extraRecipes": [
+    {
+      "sourceGameId": "BionicMinion",
+      "consumed": [],
+      "produced": [
+        { "gameId": "PowerStationTools", "amount": 4, "unit": "unit", "per": "cycle" }
+      ]
+    },
+    {
+      "sourceGameId": "SteamTurbine2",
+      "consumed": [
+        { "gameId": "Steam", "amount": 2000, "unit": "g", "per": "s" }
+      ],
+      "produced": [
+        { "gameId": "Water", "amount": 2000, "unit": "g", "per": "s" }
+      ]
+    },
+    {
+      "sourceGameId": "IceMachine",
+      "consumed": [
+        { "gameId": "Water", "amount": 500, "unit": "g", "per": "s" }
+      ],
+      "produced": [
+        { "gameId": "Ice", "amount": 500, "unit": "g", "per": "s" }
+      ]
+    },
+    {
+      "sourceGameId": "IceMachine",
+      "consumed": [
+        { "gameId": "Water", "amount": 500, "unit": "g", "per": "s" }
+      ],
+      "produced": [
+        { "gameId": "Snow", "amount": 500, "unit": "g", "per": "s" }
+      ]
+    },
+    {
+      "sourceGameId": "IceCooledFan",
+      "consumed": [
+        { "gameId": "Ice", "amount": 50000, "unit": "g" }
+      ],
+      "produced": [
+        { "gameId": "Water", "amount": 50000, "unit": "g" }
+      ]
+    },
+    {
+      "sourceGameId": "IceKettle",
+      "consumed": [
+        { "gameId": "Ice", "amount": 100000, "unit": "g" },
+        { "tag": "building_wood", "amount": 15280, "unit": "g" }
+      ],
+      "produced": [
+        { "gameId": "Water", "amount": 100000, "unit": "g" }
+      ]
+    },
+    {
+      "sourceGameId": "Sauna",
+      "consumed": [
+        { "gameId": "Steam", "amount": 25000, "unit": "g", "per": "use" }
+      ],
+      "produced": [
+        { "gameId": "Water", "amount": 25000, "unit": "g", "per": "use" }
+      ]
+    },
+    {
+      "sourceGameId": "MercuryCeilingLight",
+      "consumed": [
+        { "gameId": "Mercury", "amount": 130, "unit": "g", "per": "s" }
+      ],
+      "produced": []
+    },
+    {
+      "sourceGameId": "OreScrubber",
+      "consumed": [
+        { "gameId": "ChlorineGas", "amount": 70, "unit": "g", "per": "use" }
+      ],
+      "produced": []
+    },
+    {
+      "sourceGameId": "NuclearResearchCenter",
+      "consumed": [
+        { "gameId": "HighEnergyParticle", "amount": 10, "unit": "unit", "per": "research point" }
+      ],
+      "produced": []
+    },
+    {
+      "sourceGameId": "AdvancedDoctorStation",
+      "consumed": [
+        { "gameId": "AdvancedCure", "amount": 1, "unit": "unit", "per": "use" }
+      ],
+      "produced": []
+    },
+    {
+      "sourceGameId": "DoctorStation",
+      "consumed": [
+        { "gameId": "IntermediateCure", "amount": 1, "unit": "unit", "per": "use" }
+      ],
+      "produced": []
+    },
+    {
+      "sourceGameId": "SpiceGrinder",
+      "consumed": [
+        { "gameId": "BasicSingleHarvestPlantSeed", "amount": 0.1, "unit": "unit" },
+        { "gameId": "Salt", "amount": 3000, "unit": "g" }
+      ],
+      "produced": [
+        { "gameId": "PRESERVING_SPICE", "amount": 1, "unit": "unit" }
+      ]
+    },
+    {
+      "sourceGameId": "SpiceGrinder",
+      "consumed": [
+        { "gameId": "MushroomSeed", "amount": 0.1, "unit": "unit" },
+        { "gameId": "Sucrose", "amount": 3000, "unit": "g" }
+      ],
+      "produced": [
+        { "gameId": "PILOTING_SPICE", "amount": 1, "unit": "unit" }
+      ]
+    },
+    {
+      "sourceGameId": "SpiceGrinder",
+      "consumed": [
+        { "gameId": "SeaLettuceSeed", "amount": 0.1, "unit": "unit" },
+        { "gameId": "Iron", "amount": 3000, "unit": "g" }
+      ],
+      "produced": [
+        { "gameId": "STRENGTH_SPICE", "amount": 1, "unit": "unit" }
+      ]
+    },
+    {
+      "sourceGameId": "SpiceGrinder",
+      "consumed": [
+        { "gameId": "PrickleFlowerSeed", "amount": 0.1, "unit": "unit" },
+        { "gameId": "SlimeMold", "amount": 3000, "unit": "g" }
+      ],
+      "produced": [
+        { "gameId": "MACHINERY_SPICE", "amount": 1, "unit": "unit" }
+      ]
+    },
+    {
+      "sourceGameId": "SapTree",
+      "consumed": [
+        { "tag": "edible", "amount": 1000, "unit": "kcal" }
+      ],
+      "produced": [
+        { "gameId": "Resin", "amount": 5000, "unit": "g" }
+      ]
+    },
+    {
+      "sourceGameId": "BasicForagePlantPlanted",
+      "consumed": [],
+      "produced": [
+        { "gameId": "BasicForagePlant", "amount": 1000, "unit": "g" }
+      ]
+    },
+    {
+      "sourceGameId": "ForestForagePlantPlanted",
+      "consumed": [],
+      "produced": [
+        { "gameId": "ForestForagePlant", "amount": 1000, "unit": "g" }
+      ]
+    },
+    {
+      "sourceGameId": "SwampForagePlantPlanted",
+      "consumed": [],
+      "produced": [
+        { "gameId": "SwampForagePlant", "amount": 1000, "unit": "g" }
+      ]
+    },
+    {
+      "sourceGameId": "IceCavesForagePlantPlanted",
+      "consumed": [],
+      "produced": [
+        { "gameId": "IceCavesForagePlant", "amount": 1000, "unit": "g" }
+      ]
+    },
+    {
+      "sourceGameId": "GardenForagePlantPlanted",
+      "consumed": [],
+      "produced": [
+        { "gameId": "GardenForagePlant", "amount": 1000, "unit": "g" }
+      ]
+    },
+    {
+      "sourceGameId": "MusselSprout",
+      "consumed": [],
+      "produced": [
+        { "gameId": "MusselTongue", "amount": 1000, "unit": "g" }
+      ]
+    }
+  ]
+}

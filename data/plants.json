@@ -1,177 +1,558 @@
 [
   {
     "id": "alveo_vera",
+    "gameId": "BlueGrass",
     "name": "Alveo Vera",
-    "image": "AlveoVera.png"
+    "image": "AlveoVera.png",
+    "description": "Alveo Veras consume Carbon Dioxide and Ice, and form harvestable Oxylite deposits.",
+    "dlc": [
+      "DLC2_ID"
+    ]
   },
   {
     "id": "arbor_tree",
+    "gameId": "ForestTree",
     "name": "Arbor Tree",
-    "image": "ArborTree.png"
+    "image": "ArborTree.png",
+    "description": "Arbor Trees grow Arbor Tree Branches and can be harvested for Wood.",
+    "tags": [
+      "pip_diet_dirt"
+    ]
   },
   {
     "id": "balm_lily",
+    "gameId": "SwampLily",
     "name": "Balm Lily",
-    "image": "BalmLily.png"
+    "image": "BalmLily.png",
+    "description": "Balm Lilies produce Balm Lily Flower, a lovely bloom with medicinal properties.",
+    "tags": [
+      "drecko_diet_phosphorite"
+    ]
+  },
+  {
+    "id": "bliss_burst",
+    "gameId": "Cylindrica",
+    "name": "Bliss Burst",
+    "image": "BlissBurst.png",
+    "description": "Bliss Bursts release an explosion of Decor into otherwise dull environments.",
+    "dlc": [
+      "EXPANSION1_ID"
+    ]
+  },
+  {
+    "id": "bluff_briar",
+    "gameId": "PrickleGrass",
+    "name": "Bluff Briar",
+    "image": "BluffBriar.png",
+    "description": "Bluff Briars exude pheromones causing critters to view them as especially beautiful."
   },
   {
     "id": "bog_bucket",
+    "gameId": "SwampHarvestPlant",
     "name": "Bog Bucket",
-    "image": "BogBucket.png"
+    "image": "BogBucket.png",
+    "description": "Bog Buckets produce juicy, sweet Bog Jellies for Food.",
+    "dlc": [
+      "EXPANSION1_ID"
+    ]
   },
   {
     "id": "bonbon_tree",
+    "gameId": "SpaceTree",
     "name": "Bonbon Tree",
-    "image": "BonbonTree.png"
+    "image": "BonbonTree.png",
+    "description": "Bonbon Tree branches synthesize Light to produce Nectar.\n\nBranches can be harvested for Wood.\n\nBonbon Trees can shed most environmental debris, and rarely become entombed.",
+    "dlc": [
+      "DLC2_ID"
+    ],
+    "tags": [
+      "pip_diet_dirt"
+    ]
   },
   {
     "id": "bristle_blossom",
+    "gameId": "PrickleFlower",
     "name": "Bristle Blossom",
-    "image": "BristleBlossom.png"
+    "image": "BristleBlossom.png",
+    "description": "Bristle Blossoms produce Bristle Berry, a prickly edible bud.",
+    "tags": [
+      "flox_diet_dirt",
+      "glossy_drecko_diet_phosphorite"
+    ]
+  },
+  {
+    "id": "buddy_bud",
+    "gameId": "BulbPlant",
+    "name": "Buddy Bud",
+    "image": "BuddyBud.png",
+    "description": "Buddy Buds are leafy plants that have a positive effect on Morale, much like a friend."
+  },
+  {
+    "id": "bulbloom",
+    "gameId": "Bulbloom",
+    "name": "Bulbloom",
+    "image": "Bulbloom.png",
+    "description": "Bulblooms emit a bioluminescent Light that enhances Decor.",
+    "dlc": [
+      "DLC5_ID"
+    ]
   },
   {
     "id": "buried_muckroot",
+    "gameId": "BasicForagePlantPlanted",
     "name": "Buried Muckroot",
-    "image": "BuriedMuckroot.png"
+    "image": "BuriedMuckroot.png",
+    "description": "Muckroots are incapable of propagating but can be harvested for a single Food serving."
+  },
+  {
+    "id": "clampum",
+    "gameId": "Clam",
+    "name": "Clampum",
+    "image": "Clampum.png",
+    "description": "Clampums are aquatic bivalves that transform Sand into Pearl.\n\nDue to their size, they can only be planted in a Wide Hydroponic Farm.",
+    "dlc": [
+      "DLC5_ID"
+    ]
   },
   {
     "id": "dasha_saltvine",
+    "gameId": "SaltPlant",
     "name": "Dasha Saltvine",
-    "image": "DashaSaltvine.png"
-  },
-  {
-    "id": "dusk_cap",
-    "name": "Dusk Cap",
-    "image": "DuskCap.png"
-  },
-  {
-    "id": "gas_grass",
-    "name": "Gas Grass",
-    "image": "GasGrass.png"
-  },
-  {
-    "id": "grubfruit_plant",
-    "name": "Grubfruit Plant",
-    "image": "GrubfruitPlant.png"
-  },
-  {
-    "id": "hexalent",
-    "name": "Hexalent",
-    "image": "Hexalent.png"
-  },
-  {
-    "id": "mealwood",
-    "name": "Mealwood",
-    "image": "Mealwood.png"
-  },
-  {
-    "id": "nosh_sprout",
-    "name": "Nosh Sprout",
-    "image": "NoshSprout.png"
-  },
-  {
-    "id": "oxyfern",
-    "name": "Oxyfern",
-    "image": "Oxyfern.png"
-  },
-  {
-    "id": "plume_squash_plant",
-    "name": "Plume Squash Plant",
-    "image": "PlumeSquashPlant.png"
-  },
-  {
-    "id": "saturn_critter_trap",
-    "name": "Saturn Critter Trap",
-    "image": "SaturnCritterTrap.png"
-  },
-  {
-    "id": "sherberry_plant",
-    "name": "Sherberry Plant",
-    "image": "SherberryPlant.png"
-  },
-  {
-    "id": "pikeapple_bush",
-    "name": "Pikeapple Bush",
-    "image": "PikeappleBush.png"
-  },
-  {
-    "id": "pincha_pepperplant",
-    "name": "Pincha Pepperplant",
-    "image": "PinchaPepperplant.png"
-  },
-  {
-    "id": "sleet_wheat",
-    "name": "Sleet Wheat",
-    "image": "SleetWheat.png"
-  },
-  {
-    "id": "spindly_grubfruit_plant",
-    "name": "Spindly Grubfruit Plant",
-    "image": "SpindlyGrubfruitPlant.png"
-  },
-  {
-    "id": "sporechid",
-    "name": "Sporechid",
-    "image": "Sporechid.png"
-  },
-  {
-    "id": "swamp_chard",
-    "name": "Swamp Chard",
-    "image": "SwampChard.png"
-  },
-  {
-    "id": "thimble_reed",
-    "name": "Thimble Reed",
-    "image": "ThimbleReed.png"
-  },
-  {
-    "id": "waterweed",
-    "name": "Waterweed",
-    "image": "Waterweed.png"
-  },
-  {
-    "id": "wheezewort",
-    "name": "Wheezewort",
-    "image": "Wheezewort.png"
-  },
-  {
-    "id": "seakomb",
-    "name": "Seakomb",
-    "image": "Seakomb.png"
-  },
-  {
-    "id": "mimika_bud",
-    "name": "Mimika Bud",
-    "image": "Mimika_Bud.png"
-  },
-  {
-    "id": "sweatcorn_stalk",
-    "name": "Sweatcorn Stalk",
-    "image": "Sweatcorn_Stalk.png"
-  },
-  {
-    "id": "ovagro_node",
-    "name": "Ovagro Node",
-    "image": "Ovagro_Node.png"
-  },
-  {
-    "id": "snactus",
-    "name": "Snactus",
-    "image": "Snactus.png"
+    "image": "DashaSaltvine.png",
+    "description": "Dasha Saltvines consume small amounts of Chlorine Gas and form sodium deposits as they grow, producing harvestable Salt."
   },
   {
     "id": "dew_dripper",
+    "gameId": "DewDripperPlant",
     "name": "Dew Dripper",
-    "image": "Dew_Dripper.png"
+    "image": "Dew_Dripper.png",
+    "description": "Dew Drippers produce Dewdrips that can be crushed into Brackene.",
+    "dlc": [
+      "DLC4_ID"
+    ]
   },
   {
-    "id": "megafrond",
-    "name": "Megafrond",
-    "image": "Megafrond.png"
+    "id": "dusk_cap",
+    "gameId": "MushroomPlant",
+    "name": "Dusk Cap",
+    "image": "DuskCap.png",
+    "description": "Dusk Caps produce Mushrooms, fungal growths that can be harvested for Food."
+  },
+  {
+    "id": "experiment_52b",
+    "gameId": "SapTree",
+    "name": "Experiment 52B",
+    "image": "Experiment52B.png",
+    "description": "A Sap-producing cybernetic tree that shows signs of sentience.\n\nIt is rooted firmly in place, and is waiting for some brave soul to bring it food.",
+    "dlc": [
+      "EXPANSION1_ID"
+    ]
+  },
+  {
+    "id": "flue_coral",
+    "gameId": "OxyCoral",
+    "name": "Flue Coral",
+    "image": "FlueCoral.png",
+    "description": "Flue Corals are aquatic organisms that use Light to produce Oxygen.\n\nDue to their size, they can only be planted in a Wide Hydroponic Farm.",
+    "dlc": [
+      "DLC5_ID"
+    ]
+  },
+  {
+    "id": "gas_grass",
+    "gameId": "GasGrass",
+    "name": "Gas Grass",
+    "image": "GasGrass.png",
+    "description": "Gas Grass is an alien lifeform tentatively categorized as a \"plant.\"\n\nIt can be harvested for Plant Husk or eaten as-is by Moos."
+  },
+  {
+    "id": "grubfruit_plant",
+    "gameId": "SuperWormPlant",
+    "name": "Grubfruit Plant",
+    "image": "GrubfruitPlant.png",
+    "description": "A Grubfruit Plant that has flourished after being tended by a Divergent critter.\n\nIt will produce high quality Grubfruits.",
+    "dlc": [
+      "EXPANSION1_ID"
+    ]
+  },
+  {
+    "id": "gum_palm",
+    "gameId": "DewPalm",
+    "name": "Gum Palm",
+    "image": "GumPalm.png",
+    "description": "Gum Palms can be harvested for Gum Wood, which can be processed into Latex at the Plant Pulverizer.\n\nDue to their size, they can only be planted in a Wide Hydroponic Farm.",
+    "dlc": [
+      "DLC5_ID"
+    ],
+    "tags": [
+      "pip_diet_dirt"
+    ]
+  },
+  {
+    "id": "hexalent",
+    "gameId": "ForestForagePlantPlanted",
+    "name": "Hexalent",
+    "image": "Hexalent.png",
+    "description": "Hexalents are incapable of propagating but can be harvested for a single, calorie dense Food serving."
+  },
+  {
+    "id": "husha_cups",
+    "gameId": "WaterCups",
+    "name": "Husha Cups",
+    "image": "HushaCups.png",
+    "description": "Husha Cups are Decorative Plants with a temper-cooling blue hue.\n\nTheir presence provides a Morale-boosting \"cup half-full\" energy.",
+    "dlc": [
+      "DLC5_ID"
+    ]
+  },
+  {
+    "id": "hydrocactus",
+    "gameId": "FilterPlant",
+    "name": "Hydrocactus",
+    "image": "Hydrocactus.png",
+    "description": "Hydrocacti act as natural Water filters when given access to Sand.",
+    "dlc": [
+      "EXPANSION1_ID"
+    ]
+  },
+  {
+    "id": "idylla_flower",
+    "gameId": "IceFlower",
+    "name": "Idylla Flower",
+    "image": "IdyllaFlower.png",
+    "description": "Idyllas are Decorative Plants with soft, pompom-shaped blossoms.\n\nGazing dreamily at them has a positive effect on Morale.",
+    "dlc": [
+      "DLC2_ID"
+    ]
+  },
+  {
+    "id": "jumping_joya",
+    "gameId": "CactusPlant",
+    "name": "Jumping Joya",
+    "image": "JumpingJoya.png",
+    "description": "Joyas are Decorative Plants that are colloquially said to make gardeners \"jump for joy\"."
   },
   {
     "id": "lura_plant",
+    "gameId": "FlyTrapPlant",
     "name": "Lura Plant",
-    "image": "Lura_Plant.png"
+    "image": "Lura_Plant.png",
+    "description": "Lura plants are carnivorous plants that trap flying critters, such as Gnits.\n\nTheir digestive processes produce harvestable Amber.",
+    "dlc": [
+      "DLC4_ID"
+    ]
+  },
+  {
+    "id": "mealwood",
+    "gameId": "BasicSingleHarvestPlant",
+    "name": "Mealwood",
+    "image": "Mealwood.png",
+    "description": "Mealwoods produce Meal Lice, an oddly wriggly grain that can be harvested for Food.",
+    "tags": [
+      "drecko_diet_phosphorite",
+      "glossy_drecko_diet_phosphorite"
+    ]
+  },
+  {
+    "id": "megafrond",
+    "gameId": "Dinofern",
+    "name": "Megafrond",
+    "image": "Megafrond.png",
+    "description": "Megafronds produce Megafrond Grain, an ancient grain that can be processed into Food.",
+    "dlc": [
+      "DLC4_ID"
+    ]
+  },
+  {
+    "id": "mellow_mallow",
+    "gameId": "WineCups",
+    "name": "Mellow Mallow",
+    "image": "MellowMallow.png",
+    "description": "Mellow Mallows heighten Decor and alleviate Stress with their calming color and cradle shape.",
+    "dlc": [
+      "EXPANSION1_ID"
+    ]
+  },
+  {
+    "id": "mimika_bud",
+    "gameId": "ButterflyPlant",
+    "name": "Mimika Bud",
+    "image": "Mimika_Bud.png",
+    "description": "Mimika Buds are self-harvesting plants that produce airborne Mimikas.\n\nMimikas boost growth for nearby Plants before hardening into Mimillet.",
+    "dlc": [
+      "DLC4_ID"
+    ]
+  },
+  {
+    "id": "mirth_leaf",
+    "gameId": "LeafyPlant",
+    "name": "Mirth Leaf",
+    "image": "MirthLeaf.png",
+    "description": "Mirth Leaves sport a calm green hue known for alleviating Stress and improving Morale."
+  },
+  {
+    "id": "mussel_sprout",
+    "gameId": "MusselSprout",
+    "name": "Mussel Sprout",
+    "image": "MusselSprout.png",
+    "description": "Mussel Sprouts are incapable of propagating but can be harvested for a single low quality Food serving.",
+    "dlc": [
+      "DLC5_ID"
+    ]
+  },
+  {
+    "id": "nosh_sprout",
+    "gameId": "BeanPlant",
+    "name": "Nosh Sprout",
+    "image": "NoshSprout.png",
+    "description": "Nosh Sprouts thrive in colder climates and produce edible Nosh Beans."
+  },
+  {
+    "id": "ovagro_node",
+    "gameId": "VineMother",
+    "name": "Ovagro Node",
+    "image": "Ovagro_Node.png",
+    "description": "Ovagro Nodes are trellis plants that spread onto nearby available surfaces.\n\nA single Ovagro Node can support several Ovagro Vines without any increase in its Water requirements.",
+    "dlc": [
+      "DLC4_ID"
+    ]
+  },
+  {
+    "id": "ovagro_vine",
+    "gameId": "VineBranch",
+    "name": "Ovagro Vine",
+    "image": "OvagroVine.png",
+    "description": "Ovagro Vines are plants that produce edible Ovagro Fig.\n\nIf a vine is cut off from its Ovagro Node, it will perish.",
+    "dlc": [
+      "DLC4_ID"
+    ]
+  },
+  {
+    "id": "oxyfern",
+    "gameId": "Oxyfern",
+    "name": "Oxyfern",
+    "image": "Oxyfern.png",
+    "description": "Oxyferns absorb Carbon Dioxide Gas and exude breathable Oxygen."
+  },
+  {
+    "id": "petta_pouf",
+    "gameId": "FilamentPlant",
+    "name": "Petta Pouf",
+    "image": "PettaPouf.png",
+    "description": "Petta Poufs are Decorative aquatic Plants.\n\nThe gentle touch of their blooms soothes passing Duplicants' nerves.",
+    "dlc": [
+      "DLC5_ID"
+    ]
+  },
+  {
+    "id": "pikeapple_bush",
+    "gameId": "HardSkinBerryPlant",
+    "name": "Pikeapple Bush",
+    "image": "PikeappleBush.png",
+    "description": "Pikeapple bushes produce Pikeapple, a useful yet almost unbearably fragrant Food.",
+    "dlc": [
+      "DLC2_ID"
+    ],
+    "tags": [
+      "flox_diet_dirt"
+    ]
+  },
+  {
+    "id": "pincha_pepperplant",
+    "gameId": "SpiceVine",
+    "name": "Pincha Pepperplant",
+    "image": "PinchaPepperplant.png",
+    "description": "Pincha Pepperplants produce flavorful Pincha Peppernut for spicing Food.",
+    "tags": [
+      "drecko_diet_phosphorite"
+    ]
+  },
+  {
+    "id": "pinpoket",
+    "gameId": "UrchinPlant",
+    "name": "Pinpoket",
+    "image": "Pinpoket.png",
+    "description": "Pinpokets produce Pinpoki, which can be processed into Uni or Diamond.",
+    "dlc": [
+      "DLC5_ID"
+    ]
+  },
+  {
+    "id": "plume_squash_plant",
+    "gameId": "CarrotPlant",
+    "name": "Plume Squash Plant",
+    "image": "PlumeSquashPlant.png",
+    "description": "Plume Squashes are sweet, nutrient-rich tubers that can be harvested for Food.",
+    "dlc": [
+      "DLC2_ID"
+    ]
+  },
+  {
+    "id": "ring_rosebush",
+    "gameId": "GardenDecorPlant",
+    "name": "Ring Rosebush",
+    "image": "Ring_Rosebush.png",
+    "description": "Ring Rosebushes are Decorative Plants that add a touch of whimsy wherever they are planted.",
+    "dlc": [
+      "DLC4_ID"
+    ]
+  },
+  {
+    "id": "saturn_critter_trap",
+    "gameId": "CritterTrapPlant",
+    "name": "Saturn Critter Trap",
+    "image": "SaturnCritterTrap.png",
+    "description": "Critter Traps are carnivorous plants that consume small-to-medium-sized critters and release Hydrogen Gas as waste.",
+    "dlc": [
+      "EXPANSION1_ID"
+    ]
+  },
+  {
+    "id": "seakomb",
+    "gameId": "KelpPlant",
+    "name": "Seakomb",
+    "image": "Seakomb.png",
+    "description": "Seakombs consume Polluted Dirt.\n\nTheir leaves can be processed to extract Phyto Oil.",
+    "dlc": [
+      "DLC4_ID"
+    ]
+  },
+  {
+    "id": "sherberry_plant",
+    "gameId": "IceCavesForagePlantPlanted",
+    "name": "Sherberry Plant",
+    "image": "SherberryPlant.png",
+    "description": "Sherberries are incapable of propagating, but can be harvested for a single Food serving.",
+    "dlc": [
+      "DLC2_ID"
+    ]
+  },
+  {
+    "id": "sleet_wheat",
+    "gameId": "ColdWheat",
+    "name": "Sleet Wheat",
+    "image": "SleetWheat.png",
+    "description": "Sleet Wheat produces Sleet Wheat Grain, a chilly grain that can be processed into Food."
+  },
+  {
+    "id": "snactus",
+    "gameId": "GardenForagePlantPlanted",
+    "name": "Snactus",
+    "image": "Snactus.png",
+    "description": "Snacti are incapable of propagating but can be harvested for a single Food serving.",
+    "dlc": [
+      "DLC4_ID"
+    ]
+  },
+  {
+    "id": "sodicane",
+    "gameId": "SaltySticksPlant",
+    "name": "Sodicane",
+    "image": "Sodicane.png",
+    "description": "Sodicane produces Salty Sticks, a sodium-rich Food that leaves Duplicants feeling quite parched.",
+    "dlc": [
+      "DLC5_ID"
+    ]
+  },
+  {
+    "id": "spindly_grubfruit_plant",
+    "gameId": "WormPlant",
+    "name": "Spindly Grubfruit Plant",
+    "image": "SpindlyGrubfruitPlant.png",
+    "description": "Spindly Grubfruit Plants produce Spindly Grubfruit for Food.\n\nIf it is tended by a Divergent critter, it will produce high quality fruits instead.",
+    "dlc": [
+      "EXPANSION1_ID"
+    ]
+  },
+  {
+    "id": "sporechid",
+    "gameId": "EvilFlower",
+    "name": "Sporechid",
+    "image": "Sporechid.png",
+    "description": "Sporechids have an eerily alluring appearance to mask the fact that they host particularly nasty strain of brain fungus."
+  },
+  {
+    "id": "starnacle",
+    "gameId": "PlanktonCoral",
+    "name": "Starnacle",
+    "image": "Starnacle.png",
+    "description": "Starnacles are aquatic organisms that consume Coquina.\n\n Its Phosphorite build-up can be consumed by Beakons or harvested by Duplicants.",
+    "dlc": [
+      "DLC5_ID"
+    ]
+  },
+  {
+    "id": "swamp_chard",
+    "gameId": "SwampForagePlantPlanted",
+    "name": "Swamp Chard",
+    "image": "SwampChard.png",
+    "description": "Swamp Chards are incapable of propagating but can be harvested for a single low quality and calorie dense Food serving.",
+    "dlc": [
+      "EXPANSION1_ID"
+    ]
+  },
+  {
+    "id": "sweatcorn_stalk",
+    "gameId": "GardenFoodPlant",
+    "name": "Sweatcorn Stalk",
+    "image": "Sweatcorn_Stalk.png",
+    "description": "Sweatcorn Stalks produce Sweatcorn, a crisp vegetable that can be harvested for Food.",
+    "dlc": [
+      "DLC4_ID"
+    ]
+  },
+  {
+    "id": "thimble_reed",
+    "gameId": "BasicFabricPlant",
+    "name": "Thimble Reed",
+    "image": "ThimbleReed.png",
+    "description": "Thimble Reeds produce indescribably soft Reed Fiber for Clothing production.",
+    "tags": [
+      "pip_diet_dirt"
+    ]
+  },
+  {
+    "id": "tower_kelp",
+    "gameId": "SeaTree",
+    "name": "Tower Kelp",
+    "image": "TowerKelp.png",
+    "description": "Tower Kelp is an aquatic plant that grows in temperate pools.\n\nIt can be harvested for Nori.",
+    "dlc": [
+      "DLC5_ID"
+    ]
+  },
+  {
+    "id": "tranquil_toes",
+    "gameId": "ToePlant",
+    "name": "Tranquil Toes",
+    "image": "TranquilToes.png",
+    "description": "Tranquil Toes improve Decor by giving their surroundings the visual equivalent of a foot rub.",
+    "dlc": [
+      "EXPANSION1_ID"
+    ]
+  },
+  {
+    "id": "tublia",
+    "gameId": "TubeWorm",
+    "name": "Tublia",
+    "image": "Tublia.png",
+    "description": "Tublias are aquatic organisms that sprout in Hot liquid environments.\n\nThey can be harvested for Plastic.",
+    "dlc": [
+      "DLC5_ID"
+    ]
+  },
+  {
+    "id": "waterweed",
+    "gameId": "SeaLettuce",
+    "name": "Waterweed",
+    "image": "Waterweed.png",
+    "description": "Waterweeds thrive in liquid environments and can be harvested for fresh, edible Lettuce."
+  },
+  {
+    "id": "wheezewort",
+    "gameId": "ColdBreather",
+    "name": "Wheezewort",
+    "image": "Wheezewort.png",
+    "description": "Wheezeworts can be planted in Planter Boxes, Farm Tiles or Hydroponic Farms, and absorb Heat by respiring through their porous outer membranes."
   }
 ]

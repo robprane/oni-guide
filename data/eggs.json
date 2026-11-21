@@ -1,197 +1,662 @@
 [
   {
-    "id": "abyss_nymph_egg",
-    "name": "Abyss Nymph Egg",
-    "image": "AbyssNymphEgg.png"
+    "id": "abyss_bug_egg",
+    "gameId": "LightBugBlackEgg",
+    "name": "Abyss Bug Egg",
+    "image": "AbyssNymphEgg.png",
+    "description": "This Shine Bug emits no Light, but it makes up for it by having an excellent personality.\n\nTheir eggs contain small amounts of Resin that can be harvested when cracked at the Egg Cracker.",
+    "mass": 1000.0,
+    "tags": [
+      "egg_lightbug_group"
+    ]
   },
   {
-    "id": "azure_nymph_egg",
-    "name": "Azure Nymph Egg",
-    "image": "AzureNymphEgg.png"
+    "id": "azure_bug_egg",
+    "gameId": "LightBugBlueEgg",
+    "name": "Azure Bug Egg",
+    "image": "AzureNymphEgg.png",
+    "description": "Azure Bugs emit a soft blue Light when Happy, in hopes of attracting more of their kind for company.\n\nTheir eggs contain small amounts of Resin that can be harvested when cracked at the Egg Cracker.",
+    "mass": 1000.0,
+    "tags": [
+      "egg_lightbug_group"
+    ]
   },
   {
-    "id": "bammini_egg",
-    "name": "Bammini Egg",
-    "image": "BamminiEgg.png"
+    "id": "bammoth_egg",
+    "gameId": "IceBellyEgg",
+    "name": "Bammoth Egg",
+    "image": "BamminiEgg.png",
+    "description": "Bammoths are lumbering, nonhostile creatures that subsist on Plume Squash, Nosh Beans and Squash Fries.\n\nTheir thick overcoats can be shorn for Reed Fiber used in Clothing production.",
+    "mass": 8000.0,
+    "dlc": [
+      "DLC2_ID"
+    ],
+    "tags": [
+      "crackable_egg_8kg"
+    ]
   },
   {
-    "id": "coral_nymph_egg",
-    "name": "Coral Nymph Egg",
-    "image": "CoralNymphEgg.png"
+    "id": "beakon_egg",
+    "gameId": "ParrotFishEgg",
+    "name": "Beakon Egg",
+    "image": "BeakonEgg.png",
+    "description": "Beakons are aquatic critters who feast on Phosphorite and Starnacle, and excrete Lime.\n\nThey produce Light when Happy, and enjoy consuming Oxygen.",
+    "mass": 750.0,
+    "dlc": [
+      "DLC5_ID"
+    ],
+    "tags": [
+      "crackable_egg_group_4"
+    ]
+  },
+  {
+    "id": "blowter_egg",
+    "gameId": "PufferFishEgg",
+    "name": "Blowter Egg",
+    "image": "BlowterEgg.png",
+    "description": "Blowters are aquatic critters who produce Oxygen after eating leaves from Waterweed plants.",
+    "mass": 2000.0,
+    "dlc": [
+      "DLC5_ID"
+    ],
+    "tags": [
+      "crackable_egg_2kg"
+    ]
+  },
+  {
+    "id": "blum_lumb_egg",
+    "gameId": "AlgaeStegoEgg",
+    "name": "Blum Lumb Egg",
+    "image": "Blum_Lumb_Egg.png",
+    "description": "Blum Lumbs are non-hostile critters that produce Algae.\n\nWhen they stomp heavily near plants, the commotion causes harvestable items to fall to the ground.",
+    "mass": 8000.0,
+    "dlc": [
+      "DLC4_ID"
+    ],
+    "tags": [
+      "crackable_egg_8kg"
+    ]
+  },
+  {
+    "id": "coral_bug_egg",
+    "gameId": "LightBugPinkEgg",
+    "name": "Coral Bug Egg",
+    "image": "CoralNymphEgg.png",
+    "description": "Coral Bugs emit a soft pink Light when Happy, in hopes of attracting more of their kind for company.\n\nTheir eggs contain small amounts of Resin that can be harvested when cracked at the Egg Cracker.",
+    "mass": 1000.0,
+    "tags": [
+      "egg_lightbug_group"
+    ]
   },
   {
     "id": "cuddle_pip_egg",
+    "gameId": "SquirrelHugEgg",
     "name": "Cuddle Pip Egg",
-    "image": "CuddlePipEgg.png"
+    "image": "CuddlePipEgg.png",
+    "description": "Cuddle Pips are affectionate critters who are known to cuddle eggs, increasing their incubation rate.\n\nThis instinct is amplified when these critters are hugged by a passing Duplicant.",
+    "mass": 2000.0,
+    "tags": [
+      "crackable_egg_2kg"
+    ]
+  },
+  {
+    "id": "dartle_egg",
+    "gameId": "ChameleonEgg",
+    "name": "Dartle Egg",
+    "image": "Dartle_Egg.png",
+    "description": "Dartles are non-hostile critters who eat Dewdrips and excrete Bleach Stone and Chlorine Gas.\n\nThey are preyed on by Rhexes.",
+    "mass": 2000.0,
+    "dlc": [
+      "DLC4_ID"
+    ],
+    "tags": [
+      "crackable_egg_2kg"
+    ]
   },
   {
     "id": "delecta_vole_egg",
+    "gameId": "MoleDelicacyEgg",
     "name": "Delecta Vole Egg",
-    "image": "DelectaVoleEgg.png"
+    "image": "DelectaVoleEgg.png",
+    "description": "Delecta Voles are burrowing critters whose bodies sprout shearable Tonic Root when Regolith is ingested at preferred temperatures.\n\nThey cannot burrow through Refined Metals.",
+    "mass": 2000.0,
+    "tags": [
+      "crackable_egg_2kg"
+    ]
   },
   {
-    "id": "dense_puftlet_egg",
-    "name": "Dense Puftlet Egg",
-    "image": "DensePuftletEgg.png"
+    "id": "dense_puft_egg",
+    "gameId": "PuftOxyliteEgg",
+    "name": "Dense Puft Egg",
+    "image": "DensePuftletEgg.png",
+    "description": "Dense Pufts are non-aggressive critters that excrete condensed Oxylite with each breath.",
+    "mass": 500.0,
+    "tags": [
+      "egg_puft_group"
+    ]
   },
   {
-    "id": "drecklet_egg",
-    "name": "Drecklet Egg",
-    "image": "DreckletEgg.png"
+    "id": "drecko_egg",
+    "gameId": "DreckoEgg",
+    "name": "Drecko Egg",
+    "image": "DreckletEgg.png",
+    "description": "Dreckos are nonhostile critters that graze on Pincha Pepperplants, Balm Lily or Mealwood Plants.\n\nTheir backsides are covered in thick woolly fibers that only grow in Hydrogen climates.",
+    "mass": 2000.0,
+    "tags": [
+      "crackable_egg_2kg"
+    ]
   },
   {
-    "id": "flox_fawn_egg",
-    "name": "Flox Fawn Egg",
-    "image": "FloxFawnEgg.png"
+    "id": "flox_egg",
+    "gameId": "WoodDeerEgg",
+    "name": "Flox Egg",
+    "image": "FloxFawnEgg.png",
+    "description": "Floxes are nonhostile critters that graze on Bristle Blossoms and Pikeapples.\n\nWhen Flox antlers are fully grown, they harden into shearable Wood.",
+    "mass": 2000.0,
+    "dlc": [
+      "DLC2_ID"
+    ],
+    "tags": [
+      "crackable_egg_2kg"
+    ]
   },
   {
-    "id": "fry_egg",
-    "name": "Fry Egg",
-    "image": "FryEgg.png"
+    "id": "gildgo_egg",
+    "gameId": "SnailIronEgg",
+    "name": "Gildgo Egg",
+    "image": "GildgoEgg.png",
+    "description": "Gildgos are nonhostile critters that consume Sulfur and excrete Obsidian.\n\nThe shells they leave behind after molting can be crushed into Gold Amalgam.\n\nThey also leave large amounts of Mucin in their wake.",
+    "mass": 500.0,
+    "dlc": [
+      "DLC5_ID"
+    ],
+    "tags": [
+      "egg_snail_group"
+    ]
   },
   {
-    "id": "glossy_drecklet_egg",
-    "name": "Glossy Drecklet Egg",
-    "image": "GlossyDreckletEgg.png"
+    "id": "glo_squid_egg",
+    "gameId": "SquidEgg",
+    "name": "Glo Squid Egg",
+    "image": "GloSquidEgg.png",
+    "description": "Glo Squids are nonhostile critters unless their eggs are nearby.\n\nThey eat Tublia and excrete Abyssalite .\n\nThey can be milked for Squid Ink.",
+    "mass": 2000.0,
+    "dlc": [
+      "DLC5_ID"
+    ]
+  },
+  {
+    "id": "glossy_drecko_egg",
+    "gameId": "DreckoPlasticEgg",
+    "name": "Glossy Drecko Egg",
+    "image": "GlossyDreckletEgg.png",
+    "description": "Glossy Dreckos are nonhostile critters that graze on live Mealwood Plants and Bristle Blossoms.\n\nTheir backsides are covered in bioplastic scales that only grow in Hydrogen Gas climates.",
+    "mass": 2000.0,
+    "tags": [
+      "crackable_egg_2kg"
+    ]
+  },
+  {
+    "id": "gnit_egg",
+    "gameId": "MosquitoEgg",
+    "name": "Gnit Egg",
+    "image": "Gnit_Egg.png",
+    "description": "Gnits are hostile airborne critters primarily bred as food for the carnivorous Lura Plants to produce Amber.\n\nTheir offspring must be exposed to Liquid in order to survive.",
+    "mass": 1000.0,
+    "dlc": [
+      "DLC4_ID"
+    ]
   },
   {
     "id": "grubgrub_egg",
+    "gameId": "DivergentWormEgg",
     "name": "Grubgrub Egg",
-    "image": "GrubgrubEgg.png"
+    "image": "GrubgrubEgg.png",
+    "description": "Grubgrubs form symbiotic relationships with plants, especially Grubfruit Plants, and instinctually tend to them.\n\nGrubgrubs are closely related to Sweetles.",
+    "mass": 2000.0,
+    "dlc": [
+      "EXPANSION1_ID"
+    ],
+    "tags": [
+      "crackable_egg_2kg"
+    ]
   },
   {
-    "id": "gulp_fry_egg",
-    "name": "Gulp Fry Egg",
-    "image": "GulpFryEgg.png"
+    "id": "gulp_fish_egg",
+    "gameId": "PacuCleanerEgg",
+    "name": "Gulp Fish Egg",
+    "image": "GulpFryEgg.png",
+    "description": "Gulp Fishes are aquatic critters who inhabit cold liquid pools.\n\nTheir gills filter Polluted Water into Water.",
+    "mass": 750.0,
+    "tags": [
+      "crackable_egg_group_4"
+    ]
   },
   {
-    "id": "hatchling_egg",
-    "name": "Hatchling Egg",
-    "image": "HatchlingEgg.png"
+    "id": "hatch_egg",
+    "gameId": "HatchEgg",
+    "name": "Hatch Egg",
+    "image": "HatchlingEgg.png",
+    "description": "Hatches excrete solid Coal as waste and may be uncovered by digging up Buried Objects.",
+    "mass": 2000.0,
+    "tags": [
+      "crackable_egg_2kg"
+    ]
   },
   {
-    "id": "larva_egg",
-    "name": "Larva Egg",
-    "image": "LarvaEgg.png"
+    "id": "jawbo_egg",
+    "gameId": "PrehistoricPacuEgg",
+    "name": "Jawbo Egg",
+    "image": "Jawbo_Egg.png",
+    "description": "Jawbos are carnivorous aquatic critters that feed on Pacus and produce Rust.\n\nThey pose no danger to Duplicants.",
+    "mass": 3000.0,
+    "dlc": [
+      "DLC4_ID"
+    ],
+    "tags": [
+      "crackable_egg_4kg"
+    ]
   },
   {
-    "id": "longhair_larva_egg",
-    "name": "Longhair Larva Egg",
-    "image": "LonghairLarvaEgg.png"
+    "id": "longhair_slickster_egg",
+    "gameId": "OilfloaterDecorEgg",
+    "name": "Longhair Slickster Egg",
+    "image": "LonghairLarvaEgg.png",
+    "description": "Longhair Slicksters are friendly critters that consume Oxygen and thrive in close contact with Duplicant companions.\n\nLonghairs have extremely beautiful and luxurious coats.",
+    "mass": 2000.0,
+    "tags": [
+      "crackable_egg_2kg"
+    ]
   },
   {
-    "id": "molten_larva_egg",
-    "name": "Molten Larva Egg",
-    "image": "MoltenLarvaEgg.png"
+    "id": "lumb_egg",
+    "gameId": "StegoEgg",
+    "name": "Lumb Egg",
+    "image": "Lumb_Egg.png",
+    "description": "Lumbs are non-hostile critters that subsist on Ovagro vines and excrete Peat.\n\nWhen they stomp heavily near plants, the commotion causes harvestable items to fall to the ground.",
+    "mass": 8000.0,
+    "dlc": [
+      "DLC4_ID"
+    ],
+    "tags": [
+      "crackable_egg_8kg"
+    ]
   },
   {
-    "id": "oak_pinch_roe",
-    "name": "Oak Pinch Roe",
-    "image": "OakPinchRoe.png"
+    "id": "merpip_egg",
+    "gameId": "SquirrelAquaticEgg",
+    "name": "Merpip Egg",
+    "image": "MerpipEgg.png",
+    "description": "Merpips are nonhostile aquatic critters that subsist on Caviar and Critter Molt.\n\nThey are known to bury aquatic plant Seeds in Liquid environments whenever they can find a suitable area with enough space.",
+    "mass": 2000.0,
+    "dlc": [
+      "DLC5_ID"
+    ],
+    "tags": [
+      "crackable_egg_2kg"
+    ]
   },
   {
-    "id": "pinch_roe",
-    "name": "Pinch Roe",
-    "image": "PinchRoe.png"
+    "id": "molten_slickster_egg",
+    "gameId": "OilfloaterHighTempEgg",
+    "name": "Molten Slickster Egg",
+    "image": "MoltenLarvaEgg.png",
+    "description": "Molten Slicksters are slimy critters that consume Carbon Dioxide and exude Petroleum.",
+    "mass": 2000.0,
+    "tags": [
+      "crackable_egg_2kg"
+    ]
+  },
+  {
+    "id": "oakshell_roe",
+    "gameId": "CrabWoodEgg",
+    "name": "Oakshell Roe",
+    "image": "OakshellRoe.png",
+    "description": "Oakshells are nonhostile critters unless their eggs are nearby.\n\nThey eat Polluted Dirt, Slime and Rot Piles.\n\nThe shells they leave behind after molting can be crushed into Wood.\n\nOakshells thrive in Ethanol.",
+    "mass": 2000.0,
+    "tags": [
+      "crackable_egg_2kg"
+    ]
+  },
+  {
+    "id": "orehull_egg",
+    "gameId": "SeaTurtleEgg",
+    "name": "Orehull Egg",
+    "image": "OrehullEgg.png",
+    "description": "Orehulls are shy aquatic critters that eat Kelpoles and excrete Polluted Mud.\n\nThey can be sheared for Iron Ore.",
+    "mass": 3000.0,
+    "dlc": [
+      "DLC5_ID"
+    ],
+    "tags": [
+      "crackable_egg_4kg"
+    ]
+  },
+  {
+    "id": "pacu_egg",
+    "gameId": "PacuEgg",
+    "name": "Pacu Egg",
+    "image": "PacuEgg.png",
+    "description": "Pacus are aquatic creatures that can live in any liquid, such as Water or Polluted Water.\n\nEvery organism in the known universe finds the Pacu extremely delicious.",
+    "mass": 750.0,
+    "tags": [
+      "crackable_egg_group_4"
+    ]
   },
   {
     "id": "pip_egg",
+    "gameId": "SquirrelEgg",
     "name": "Pip Egg",
-    "image": "PipEgg.png"
+    "image": "PipEgg.png",
+    "description": "Pips are pesky, nonhostile critters that subsist on Thimble Reeds and Arbor Tree branches.\n\nThey are known to bury Seeds in the ground whenever they can find a suitable area with enough space.",
+    "mass": 2000.0,
+    "tags": [
+      "crackable_egg_2kg"
+    ]
   },
   {
-    "id": "puftlet_egg",
-    "name": "Puftlet Egg",
-    "image": "PuftletEgg.png"
+    "id": "plug_slug_egg",
+    "gameId": "StaterpillarEgg",
+    "name": "Plug Slug Egg",
+    "image": "PlugSlugEgg.png",
+    "description": "Plug Slugs are dynamic creatures that generate electrical Power during the night.\n\nTheir power can be harnessed by leaving an exposed wire near areas where they like to sleep.",
+    "mass": 2000.0,
+    "dlc": [
+      "EXPANSION1_ID"
+    ],
+    "tags": [
+      "crackable_egg_2kg"
+    ]
   },
   {
-    "id": "puftlet_prince_egg",
-    "name": "Puftlet Prince Egg",
-    "image": "PuftletPrinceEgg.png"
+    "id": "pokeshell_roe",
+    "gameId": "CrabEgg",
+    "name": "Pokeshell Roe",
+    "image": "PokeshellRoe.png",
+    "description": "Pokeshells are nonhostile critters unless their eggs are nearby.\n\nThey eat Polluted Dirt and Rot Piles.\n\nThe shells they leave behind after molting can be crushed into Lime.",
+    "mass": 2000.0,
+    "tags": [
+      "crackable_egg_2kg"
+    ]
   },
   {
-    "id": "radiant_nymph_egg",
-    "name": "Radiant Nymph Egg",
-    "image": "RadiantNymphEgg.png"
+    "id": "puft_egg",
+    "gameId": "PuftEgg",
+    "name": "Puft Egg",
+    "image": "PuftletEgg.png",
+    "description": "Pufts are non-aggressive critters that excrete lumps of Slime with each breath.",
+    "mass": 500.0,
+    "tags": [
+      "egg_puft_group"
+    ]
   },
   {
-    "id": "regal_bammini_egg",
-    "name": "Regal Bammini Egg",
-    "image": "RegalBamminiEgg.png"
+    "id": "puft_prince_egg",
+    "gameId": "PuftAlphaEgg",
+    "name": "Puft Prince Egg",
+    "image": "PuftletPrinceEgg.png",
+    "description": "The Puft Prince is a lazy critter that excretes little Solid lumps of whatever it has been breathing.",
+    "mass": 500.0,
+    "tags": [
+      "egg_puft_group"
+    ]
   },
   {
-    "id": "royal_nymph_egg",
-    "name": "Royal Nymph Egg",
-    "image": "RoyalNymphEgg.png"
+    "id": "radiant_bug_egg",
+    "gameId": "LightBugCrystalEgg",
+    "name": "Radiant Bug Egg",
+    "image": "RadiantNymphEgg.png",
+    "description": "Radiant Bugs emit an extra-bright Light when Happy, in hopes of attracting more of their kind for company.\n\nTheir eggs contain small amounts of Resin that can be harvested when cracked at the Egg Cracker.",
+    "mass": 1000.0,
+    "tags": [
+      "egg_lightbug_group"
+    ]
   },
   {
-    "id": "sage_hatchling_egg",
-    "name": "Sage Hatchling Egg",
-    "image": "SageHatchlingEgg.png"
+    "id": "regal_bammoth_egg",
+    "gameId": "GoldBellyEgg",
+    "name": "Regal Bammoth Egg",
+    "image": "RegalBamminiEgg.png",
+    "description": "Regal Bammoths are nonhostile creatures that subsist on Plume Squash and Nosh Beans.\n\nTheir ornate crests grow only when they are fed Squash Fries.",
+    "mass": 8000.0,
+    "dlc": [
+      "DLC2_ID"
+    ],
+    "tags": [
+      "crackable_egg_8kg"
+    ]
   },
   {
-    "id": "sani_pinch_roe",
-    "name": "Sani Pinch Roe",
-    "image": "SaniPinchRoe.png"
+    "id": "rhex_egg",
+    "gameId": "RaptorEgg",
+    "name": "Rhex Egg",
+    "image": "Rhex_Egg.png",
+    "description": "Rhexes are carnivorous critters that feed on smaller Critters and produce Brine Ice.\n\nTheir tailfeathers can be shorn for Feather Fiber used in Clothing production.",
+    "mass": 8000.0,
+    "dlc": [
+      "DLC4_ID"
+    ],
+    "tags": [
+      "crackable_egg_8kg"
+    ]
   },
   {
-    "id": "shine_nymph_egg",
-    "name": "Shine Nymph Egg",
-    "image": "ShineNymphEgg.png"
+    "id": "royal_bug_egg",
+    "gameId": "LightBugPurpleEgg",
+    "name": "Royal Bug Egg",
+    "image": "RoyalNymphEgg.png",
+    "description": "Royal Bugs emit a soft purple Light when Happy, in hopes of attracting more of their kind for company.\n\nTheir eggs contain small amounts of Resin that can be harvested when cracked at the Egg Cracker.",
+    "mass": 1000.0,
+    "tags": [
+      "egg_lightbug_group"
+    ]
+  },
+  {
+    "id": "sage_hatch_egg",
+    "gameId": "HatchVeggieEgg",
+    "name": "Sage Hatch Egg",
+    "image": "SageHatchlingEgg.png",
+    "description": "Sage Hatches excrete solid Coal as waste and enjoy burrowing into the ground.",
+    "mass": 2000.0,
+    "tags": [
+      "crackable_egg_2kg"
+    ]
+  },
+  {
+    "id": "sanishell_roe",
+    "gameId": "CrabFreshWaterEgg",
+    "name": "Sanishell Roe",
+    "image": "SanishellRoe.png",
+    "description": "Sanishells are nonhostile critters unless their eggs are nearby.\n\nThey thrive in Water and eliminate Germs from any liquid they inhabit.\n\nThey eat Polluted Dirt, Slime and Rot Piles.",
+    "mass": 2000.0,
+    "tags": [
+      "crackable_egg_2kg"
+    ]
+  },
+  {
+    "id": "seaquine_egg",
+    "gameId": "SeaHorseEgg",
+    "name": "Seaquine Egg",
+    "image": "SeaquineEgg.png",
+    "description": "Seaquines are aquatic critters that live in liquid pools.\n\nThey feed on Pearl and produce Ovolene at the Aquatic Milking Station when Happy.",
+    "mass": 2000.0,
+    "dlc": [
+      "DLC5_ID"
+    ],
+    "tags": [
+      "crackable_egg_2kg"
+    ]
+  },
+  {
+    "id": "shatter_flox_egg",
+    "gameId": "GlassDeerEgg",
+    "name": "Shatter Flox Egg",
+    "image": "ShatterFloxEgg.png",
+    "description": "Shatter Floxes are nonhostile critters that can subsist on Bristle Blossom and Pikeapple Bush.\n\nTheir shearable Glass antlers grow only when they are fed Abyssalite.",
+    "mass": 2000.0,
+    "dlc": [
+      "DLC2_ID"
+    ],
+    "tags": [
+      "crackable_egg_2kg"
+    ]
+  },
+  {
+    "id": "shine_bug_egg",
+    "gameId": "LightBugEgg",
+    "name": "Shine Bug Egg",
+    "image": "ShineNymphEgg.png",
+    "description": "Shine Bugs emit a soft Light when Happy, in hopes of attracting more of their kind for company.\n\nTheir eggs contain small amounts of Resin that can be harvested when cracked at the Egg Cracker.",
+    "mass": 1000.0,
+    "tags": [
+      "egg_lightbug_group"
+    ]
   },
   {
     "id": "shove_vole_egg",
+    "gameId": "MoleEgg",
     "name": "Shove Vole Egg",
-    "image": "ShoveVoleEgg.png"
+    "image": "ShoveVoleEgg.png",
+    "description": "Shove Voles are burrowing critters that eat the Regolith collected on terrestrial surfaces.\n\nThey cannot burrow through Refined Metals.",
+    "mass": 2000.0,
+    "tags": [
+      "crackable_egg_2kg"
+    ]
   },
   {
-    "id": "slug_egg",
-    "name": "Slug Egg",
-    "image": "SlugEgg.png"
+    "id": "slickster_egg",
+    "gameId": "OilfloaterEgg",
+    "name": "Slickster Egg",
+    "image": "SlicksterEgg.png",
+    "description": "Slicksters are slimy critters that consume Carbon Dioxide and exude Crude Oil.",
+    "mass": 2000.0,
+    "tags": [
+      "crackable_egg_2kg"
+    ]
+  },
+  {
+    "id": "slogo_egg",
+    "gameId": "SnailEgg",
+    "name": "Slogo Egg",
+    "image": "SlogoEgg.png",
+    "description": "Slogos are nonhostile critters that consume Salt and excrete Dirt.\n\nThe shells they leave behind after molting can be crushed into Lime.\n\nThey also leave large amounts of Mucin in their wake.",
+    "mass": 500.0,
+    "dlc": [
+      "DLC5_ID"
+    ],
+    "tags": [
+      "egg_snail_group"
+    ]
   },
   {
     "id": "smog_slug_egg",
+    "gameId": "StaterpillarGasEgg",
     "name": "Smog Slug Egg",
-    "image": "SmogSlugEgg.png"
+    "image": "SmogSlugEgg.png",
+    "description": "Smog Slugs are porous creatures that draw in unbreathable Gases during the day.\n\nAt night, they sleep near exposed Gas Pipes, where they deposit their cache.",
+    "mass": 2000.0,
+    "dlc": [
+      "EXPANSION1_ID"
+    ],
+    "tags": [
+      "crackable_egg_2kg"
+    ]
   },
   {
-    "id": "smooth_hatchling_egg",
-    "name": "Smooth Hatchling Egg",
-    "image": "SmoothHatchlingEgg.png"
+    "id": "smooth_hatch_egg",
+    "gameId": "HatchMetalEgg",
+    "name": "Smooth Hatch Egg",
+    "image": "SmoothHatchlingEgg.png",
+    "description": "Smooth Hatches enjoy burrowing into the ground and excrete Refined Metal when fed Metal Ore.",
+    "mass": 2000.0,
+    "tags": [
+      "crackable_egg_2kg"
+    ]
   },
   {
-    "id": "spigot_pup_egg",
-    "name": "Spigot Pup Egg",
-    "image": "SpigotPupEgg.png"
+    "id": "spigot_seal_egg",
+    "gameId": "SealEgg",
+    "name": "Spigot Seal Egg",
+    "image": "SpigotPupEgg.png",
+    "description": "Spigot Seals are charismatic creatures who produce Ethanol.\n\nThey eat Sucrose, and drink Nectar straight from the Bonbon Tree.",
+    "mass": 2000.0,
+    "dlc": [
+      "DLC2_ID"
+    ],
+    "tags": [
+      "crackable_egg_2kg"
+    ]
   },
   {
     "id": "sponge_slug_egg",
+    "gameId": "StaterpillarLiquidEgg",
     "name": "Sponge Slug Egg",
-    "image": "SpongeSlugEgg.png"
+    "image": "SpongeSlugEgg.png",
+    "description": "Sponge Slugs are thirsty creatures that soak up Liquids during the day.\n\nThey deposit their stored Liquids into the exposed Liquid Pipes they sleep next to at night.",
+    "mass": 2000.0,
+    "dlc": [
+      "EXPANSION1_ID"
+    ],
+    "tags": [
+      "crackable_egg_2kg"
+    ]
   },
   {
-    "id": "squeaky_puftlet_egg",
-    "name": "Squeaky Puftlet Egg",
-    "image": "SqueakyPuftletEgg.png"
+    "id": "squeaky_puft_egg",
+    "gameId": "PuftBleachstoneEgg",
+    "name": "Squeaky Puft Egg",
+    "image": "SqueakyPuftletEgg.png",
+    "description": "Squeaky Pufts are non-aggressive critters that excrete lumps of Bleach Stone with each breath.",
+    "mass": 500.0,
+    "tags": [
+      "egg_puft_group"
+    ]
   },
   {
-    "id": "stone_hatchling_egg",
-    "name": "Stone Hatchling Egg",
-    "image": "StoneHatchlingEgg.png"
+    "id": "stone_hatch_egg",
+    "gameId": "HatchHardEgg",
+    "name": "Stone Hatch Egg",
+    "image": "StoneHatchlingEgg.png",
+    "description": "Stone Hatches excrete solid Coal as waste and enjoy burrowing into the ground.",
+    "mass": 2000.0,
+    "tags": [
+      "crackable_egg_2kg"
+    ]
   },
   {
-    "id": "sun_nymph_egg",
-    "name": "Sun Nymph Egg",
-    "image": "SunNymphEgg.png"
+    "id": "sun_bug_egg",
+    "gameId": "LightBugOrangeEgg",
+    "name": "Sun Bug Egg",
+    "image": "SunNymphEgg.png",
+    "description": "Sun Bugs emit a soft orange Light when Happy, in hopes of attracting more of their kind for company.\n\nTheir eggs contain small amounts of Resin that can be harvested when cracked at the Egg Cracker.",
+    "mass": 1000.0,
+    "tags": [
+      "egg_lightbug_group"
+    ]
   },
   {
     "id": "sweetle_egg",
+    "gameId": "DivergentBeetleEgg",
     "name": "Sweetle Egg",
-    "image": "SweetleEgg.png"
+    "image": "SweetleEgg.png",
+    "description": "Sweetles are nonhostile critters that excrete large amounts of Sucrose.\n\nThey are closely related to the Grubgrub and exhibit similar, albeit less effective farming behaviors.",
+    "mass": 2000.0,
+    "dlc": [
+      "EXPANSION1_ID"
+    ],
+    "tags": [
+      "crackable_egg_2kg"
+    ]
   },
   {
-    "id": "tropical_fry_egg",
-    "name": "Tropical Fry Egg",
-    "image": "TropicalFryEgg.png"
+    "id": "tropical_pacu_egg",
+    "gameId": "PacuTropicalEgg",
+    "name": "Tropical Pacu Egg",
+    "image": "TropicalFryEgg.png",
+    "description": "Tropical Pacus are aquatic critters who inhabit warm liquid pools.\n\nTheir vibrant colors provide a significant Decor boost to their environment.",
+    "mass": 750.0,
+    "tags": [
+      "crackable_egg_group_4"
+    ]
   }
 ]

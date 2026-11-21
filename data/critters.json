@@ -1,217 +1,777 @@
 [
   {
     "id": "abyss_bug",
+    "gameId": "LightBugBlack",
     "name": "Abyss Bug",
-    "image": "AbyssBug.png"
+    "image": "AbyssBug.png",
+    "description": "This Shine Bug emits no Light, but it makes up for it by having an excellent personality.\n\nTheir eggs contain small amounts of Resin that can be harvested when cracked at the Egg Cracker.",
+    "species": "LightBugSpecies"
   },
   {
     "id": "azure_bug",
+    "gameId": "LightBugBlue",
     "name": "Azure Bug",
-    "image": "AzureBug.png"
+    "image": "AzureBug.png",
+    "description": "Azure Bugs emit a soft blue Light when Happy, in hopes of attracting more of their kind for company.\n\nTheir eggs contain small amounts of Resin that can be harvested when cracked at the Egg Cracker.",
+    "species": "LightBugSpecies"
   },
   {
     "id": "bammoth",
+    "gameId": "IceBelly",
     "name": "Bammoth",
-    "image": "Bammoth.png"
+    "image": "Bammoth.png",
+    "description": "Bammoths are lumbering, nonhostile creatures that subsist on Plume Squash, Nosh Beans and Squash Fries.\n\nTheir thick overcoats can be shorn for Reed Fiber used in Clothing production.",
+    "species": "BellySpecies",
+    "dlc": [
+      "DLC2_ID"
+    ],
+    "tags": [
+      "critter_walker"
+    ]
+  },
+  {
+    "id": "beakon",
+    "gameId": "ParrotFish",
+    "name": "Beakon",
+    "image": "Beakon.png",
+    "description": "Beakons are aquatic critters who feast on Phosphorite and Starnacle, and excrete Lime.\n\nThey produce Light when Happy, and enjoy consuming Oxygen.",
+    "species": "ParrotFishSpecies",
+    "dlc": [
+      "DLC5_ID"
+    ],
+    "tags": [
+      "jawbo_diet_rust"
+    ]
+  },
+  {
+    "id": "beeta",
+    "gameId": "Bee",
+    "name": "Beeta",
+    "image": "Beeta.png",
+    "description": "Beetas are hostile critters that thrive in Radioactive environments.\n\nThey commonly gather Uranium Ore for their Beeta Hives to produce Enriched Uranium.",
+    "species": "BeetaSpecies",
+    "dlc": [
+      "EXPANSION1_ID"
+    ]
   },
   {
     "id": "beeta_hive",
+    "gameId": "BeeHive",
     "name": "Beeta Hive",
-    "image": "BeetaHive.png"
+    "image": "BeetaHive.png",
+    "description": "A moderately Radioactive nest made by Beetas.\n\nConverts Uranium Ore into Enriched Uranium when worked by a Beeta.\nWill not function if ground below has been destroyed.",
+    "species": "BeetaSpecies",
+    "dlc": [
+      "EXPANSION1_ID"
+    ]
   },
   {
-    "id": "land_critter",
-    "name": "Land Critter",
-    "image": "LandCritter.png"
+    "id": "biobot",
+    "gameId": "MorbRover",
+    "name": "Biobot",
+    "image": "Biobot.png",
+    "description": "A Pathogen-Fueled Extravehicular Geo-Exploratory Guidebot (model Y), aka \"P.E.G.G.Y.\"\n\nIt can be assigned basic building tasks and digging duties in hazardous environments.",
+    "species": "MorbRover"
+  },
+  {
+    "id": "blowter",
+    "gameId": "PufferFish",
+    "name": "Blowter",
+    "image": "Blowter.png",
+    "description": "Blowters are aquatic critters who produce Oxygen after eating leaves from Waterweed plants.",
+    "species": "PufferFishSpecies",
+    "dlc": [
+      "DLC5_ID"
+    ],
+    "tags": [
+      "jawbo_diet_rust"
+    ]
+  },
+  {
+    "id": "blum_lumb",
+    "gameId": "AlgaeStego",
+    "name": "Blum Lumb",
+    "image": "Blum_Lumb.png",
+    "description": "Blum Lumbs are non-hostile critters that produce Algae.\n\nWhen they stomp heavily near plants, the commotion causes harvestable items to fall to the ground.",
+    "species": "StegoSpecies",
+    "dlc": [
+      "DLC4_ID"
+    ],
+    "tags": [
+      "critter_walker"
+    ]
   },
   {
     "id": "coral_bug",
+    "gameId": "LightBugPink",
     "name": "Coral Bug",
-    "image": "CoralBug.png"
+    "image": "CoralBug.png",
+    "description": "Coral Bugs emit a soft pink Light when Happy, in hopes of attracting more of their kind for company.\n\nTheir eggs contain small amounts of Resin that can be harvested when cracked at the Egg Cracker.",
+    "species": "LightBugSpecies"
   },
   {
     "id": "cuddle_pip",
+    "gameId": "SquirrelHug",
     "name": "Cuddle Pip",
-    "image": "CuddlePip.png"
+    "image": "CuddlePip.png",
+    "description": "Cuddle Pips are affectionate critters who are known to cuddle eggs, increasing their incubation rate.\n\nThis instinct is amplified when these critters are hugged by a passing Duplicant.",
+    "species": "SquirrelSpecies",
+    "tags": [
+      "critter_walker",
+      "rhex_diet_brineice_2",
+      "saturn_trap_prey"
+    ]
+  },
+  {
+    "id": "dartle",
+    "gameId": "Chameleon",
+    "name": "Dartle",
+    "image": "Dartle.png",
+    "description": "Dartles are non-hostile critters who eat Dewdrips and excrete Bleach Stone and Chlorine Gas.\n\nThey are preyed on by Rhexes.",
+    "species": "ChameleonSpecies",
+    "dlc": [
+      "DLC4_ID"
+    ],
+    "tags": [
+      "critter_walker",
+      "rhex_diet_brineice_2",
+      "saturn_trap_prey"
+    ]
   },
   {
     "id": "delecta_vole",
+    "gameId": "MoleDelicacy",
     "name": "Delecta Vole",
-    "image": "DelectaVole.png"
+    "image": "DelectaVole.png",
+    "description": "Delecta Voles are burrowing critters whose bodies sprout shearable Tonic Root when Regolith is ingested at preferred temperatures.\n\nThey cannot burrow through Refined Metals.",
+    "species": "MoleSpecies",
+    "tags": [
+      "critter_walker",
+      "rhex_diet_brineice_2",
+      "saturn_trap_prey"
+    ]
   },
   {
     "id": "dense_puft",
+    "gameId": "PuftOxylite",
     "name": "Dense Puft",
-    "image": "DensePuft.png"
+    "image": "DensePuft.png",
+    "description": "Dense Pufts are non-aggressive critters that excrete condensed Oxylite with each breath.",
+    "species": "PuftSpecies"
   },
   {
     "id": "drecko",
+    "gameId": "Drecko",
     "name": "Drecko",
-    "image": "Drecko.png"
+    "image": "Drecko.png",
+    "description": "Dreckos are nonhostile critters that graze on Pincha Pepperplants, Balm Lily or Mealwood Plants.\n\nTheir backsides are covered in thick woolly fibers that only grow in Hydrogen climates.",
+    "species": "DreckoSpecies",
+    "tags": [
+      "critter_walker",
+      "rhex_diet_brineice_2",
+      "saturn_trap_prey"
+    ]
   },
   {
     "id": "flox",
+    "gameId": "WoodDeer",
     "name": "Flox",
-    "image": "Flox.png"
+    "image": "Flox.png",
+    "description": "Floxes are nonhostile critters that graze on Bristle Blossoms and Pikeapples.\n\nWhen Flox antlers are fully grown, they harden into shearable Wood.",
+    "species": "DeerSpecies",
+    "dlc": [
+      "DLC2_ID"
+    ],
+    "tags": [
+      "critter_walker",
+      "rhex_diet_brineice_2",
+      "saturn_trap_prey"
+    ]
+  },
+  {
+    "id": "flydo",
+    "gameId": "FetchDrone",
+    "name": "Flydo",
+    "image": "Flydo.png",
+    "description": "A programmable delivery robot.\n\nPicks up Solid objects for delivery to selected destinations.",
+    "species": "FetchDrone",
+    "dlc": [
+      "DLC3_ID"
+    ]
   },
   {
     "id": "gassy_moo",
+    "gameId": "Moo",
     "name": "Gassy Moo",
-    "image": "GassyMoo.png"
+    "image": "GassyMoo.png",
+    "description": "Moos are extraterrestrial critters that feed on Gas Grass and excrete Natural Gas.\n\nWhen domesticated and fed, they can be milked for Brackene.",
+    "species": "MooSpecies"
+  },
+  {
+    "id": "gildgo",
+    "gameId": "SnailIron",
+    "name": "Gildgo",
+    "image": "Gildgo.png",
+    "description": "Gildgos are nonhostile critters that consume Sulfur and excrete Obsidian.\n\nThe shells they leave behind after molting can be crushed into Gold Amalgam.\n\nThey also leave large amounts of Mucin in their wake.",
+    "species": "SnailSpecies",
+    "dlc": [
+      "DLC5_ID"
+    ],
+    "tags": [
+      "critter_walker",
+      "rhex_diet_brineice_2",
+      "saturn_trap_prey"
+    ]
+  },
+  {
+    "id": "glo_squid",
+    "gameId": "Squid",
+    "name": "Glo Squid",
+    "image": "GloSquid.png",
+    "description": "Glo Squids are nonhostile critters unless their eggs are nearby.\n\nThey eat Tublia and excrete Abyssalite .\n\nThey can be milked for Squid Ink.",
+    "species": "SquidSpecies",
+    "dlc": [
+      "DLC5_ID"
+    ]
   },
   {
     "id": "glossy_drecko",
+    "gameId": "DreckoPlastic",
     "name": "Glossy Drecko",
-    "image": "GlossyDrecko.png"
+    "image": "GlossyDrecko.png",
+    "description": "Glossy Dreckos are nonhostile critters that graze on live Mealwood Plants and Bristle Blossoms.\n\nTheir backsides are covered in bioplastic scales that only grow in Hydrogen Gas climates.",
+    "species": "DreckoSpecies",
+    "tags": [
+      "critter_walker",
+      "rhex_diet_brineice_2",
+      "saturn_trap_prey"
+    ]
+  },
+  {
+    "id": "gnit",
+    "gameId": "Mosquito",
+    "name": "Gnit",
+    "image": "Gnit.png",
+    "description": "Gnits are hostile airborne critters primarily bred as food for the carnivorous Lura Plants to produce Amber.\n\nTheir offspring must be exposed to Liquid in order to survive.",
+    "species": "MosquitoSpecies",
+    "dlc": [
+      "DLC4_ID"
+    ]
   },
   {
     "id": "grubgrub",
+    "gameId": "DivergentWorm",
     "name": "Grubgrub",
-    "image": "Grubgrub.png"
+    "image": "Grubgrub.png",
+    "description": "Grubgrubs form symbiotic relationships with plants, especially Grubfruit Plants, and instinctually tend to them.\n\nGrubgrubs are closely related to Sweetles.",
+    "species": "DivergentSpecies",
+    "dlc": [
+      "EXPANSION1_ID"
+    ],
+    "tags": [
+      "critter_walker",
+      "rhex_diet_brineice_2",
+      "saturn_trap_prey"
+    ]
   },
   {
     "id": "gulp_fish",
+    "gameId": "PacuCleaner",
     "name": "Gulp Fish",
-    "image": "GulpFish.png"
+    "image": "GulpFish.png",
+    "description": "Gulp Fishes are aquatic critters who inhabit cold liquid pools.\n\nTheir gills filter Polluted Water into Water.",
+    "species": "PacuSpecies",
+    "tags": [
+      "jawbo_diet_rust"
+    ]
   },
   {
     "id": "hatch",
+    "gameId": "Hatch",
     "name": "Hatch",
-    "image": "Hatch.png"
-  },
-  {
-    "id": "longhair_slickster",
-    "name": "Longhair Slickster",
-    "image": "LonghairSlickster.png"
-  },
-  {
-    "id": "molten_slickster",
-    "name": "Molten Slickster",
-    "image": "MoltenSlickster.png"
-  },
-  {
-    "id": "oakshell",
-    "name": "Oakshell",
-    "image": "Oakshell.png"
-  },
-  {
-    "id": "pacu",
-    "name": "Pacu",
-    "image": "Pacu.png"
-  },
-  {
-    "id": "pip",
-    "name": "Pip",
-    "image": "Pip.png"
-  },
-  {
-    "id": "plug_slug",
-    "name": "Plug Slug",
-    "image": "PlugSlug.png"
-  },
-  {
-    "id": "pokeshell",
-    "name": "Pokeshell",
-    "image": "Pokeshell.png"
-  },
-  {
-    "id": "puft",
-    "name": "Puft",
-    "image": "Puft.png"
-  },
-  {
-    "id": "puft_prince",
-    "name": "Puft Prince",
-    "image": "PuftPrince.png"
-  },
-  {
-    "id": "radiant_bug",
-    "name": "Radiant Bug",
-    "image": "RadiantBug.png"
-  },
-  {
-    "id": "regal_bammoth",
-    "name": "Regal Bammoth",
-    "image": "RegalBammoth.png"
-  },
-  {
-    "id": "royal_bug",
-    "name": "Royal Bug",
-    "image": "RoyalBug.png"
-  },
-  {
-    "id": "sage_hatch",
-    "name": "Sage Hatch",
-    "image": "SageHatch.png"
-  },
-  {
-    "id": "sanishell",
-    "name": "Sanishell",
-    "image": "Sanishell.png"
-  },
-  {
-    "id": "shine_bug",
-    "name": "Shine Bug",
-    "image": "ShineBug.png"
-  },
-  {
-    "id": "shove_vole",
-    "name": "Shove Vole",
-    "image": "ShoveVole.png"
-  },
-  {
-    "id": "slickster",
-    "name": "Slickster",
-    "image": "Slickster.png"
-  },
-  {
-    "id": "smog_slug",
-    "name": "Smog Slug",
-    "image": "SmogSlug.png"
-  },
-  {
-    "id": "smooth_hatch",
-    "name": "Smooth Hatch",
-    "image": "SmoothHatch.png"
-  },
-  {
-    "id": "spigot_seal",
-    "name": "Spigot Seal",
-    "image": "SpigotSeal.png"
-  },
-  {
-    "id": "sponge_slug",
-    "name": "Sponge Slug",
-    "image": "SpongeSlug.png"
-  },
-  {
-    "id": "squeaky_puft",
-    "name": "Squeaky Puft",
-    "image": "SqueakyPuft.png"
-  },
-  {
-    "id": "stone_hatch",
-    "name": "Stone Hatch",
-    "image": "StoneHatch.png"
-  },
-  {
-    "id": "sun_bug",
-    "name": "Sun Bug",
-    "image": "SunBug.png"
-  },
-  {
-    "id": "sweetle",
-    "name": "Sweetle",
-    "image": "Sweetle.png"
-  },
-  {
-    "id": "tropical_pacu",
-    "name": "Tropical Pacu",
-    "image": "TropicalPacu.png"
+    "image": "Hatch.png",
+    "description": "Hatches excrete solid Coal as waste and may be uncovered by digging up Buried Objects.",
+    "species": "HatchSpecies",
+    "tags": [
+      "critter_walker",
+      "rhex_diet_brineice_2",
+      "saturn_trap_prey"
+    ]
   },
   {
     "id": "husky_moo",
+    "gameId": "DieselMoo",
     "name": "Husky Moo",
-    "image": "Husky_Moo.png"
+    "image": "Husky_Moo.png",
+    "description": "Husky Moos are extraterrestrial critters that feed on Plant Husk and Gas Grass, and excrete Carbon Dioxide.\n\nWhen domesticated and fed, they can be milked for Biodiesel.",
+    "species": "MooSpecies"
+  },
+  {
+    "id": "jawbo",
+    "gameId": "PrehistoricPacu",
+    "name": "Jawbo",
+    "image": "Jawbo.png",
+    "description": "Jawbos are carnivorous aquatic critters that feed on Pacus and produce Rust.\n\nThey pose no danger to Duplicants.",
+    "species": "PrehistoricPacuSpecies",
+    "dlc": [
+      "DLC4_ID"
+    ]
+  },
+  {
+    "id": "kelpole",
+    "gameId": "SeaFairy",
+    "name": "Kelpole",
+    "image": "Kelpole.png",
+    "description": "Kelpoles are non-hostile aquatic critters that spawn along Tower Kelp stalks.\n\nThey can be harvested for Nori.",
+    "species": "SeaFairySpecies",
+    "dlc": [
+      "DLC5_ID"
+    ]
+  },
+  {
+    "id": "longhair_slickster",
+    "gameId": "OilfloaterDecor",
+    "name": "Longhair Slickster",
+    "image": "LonghairSlickster.png",
+    "description": "Longhair Slicksters are friendly critters that consume Oxygen and thrive in close contact with Duplicant companions.\n\nLonghairs have extremely beautiful and luxurious coats.",
+    "species": "OilFloaterSpecies",
+    "tags": [
+      "critter_hoverer",
+      "rhex_diet_brineice_2",
+      "saturn_trap_prey"
+    ]
+  },
+  {
+    "id": "lumb",
+    "gameId": "Stego",
+    "name": "Lumb",
+    "image": "Lumb.png",
+    "description": "Lumbs are non-hostile critters that subsist on Ovagro vines and excrete Peat.\n\nWhen they stomp heavily near plants, the commotion causes harvestable items to fall to the ground.",
+    "species": "StegoSpecies",
+    "dlc": [
+      "DLC4_ID"
+    ],
+    "tags": [
+      "critter_walker"
+    ]
+  },
+  {
+    "id": "merpip",
+    "gameId": "SquirrelAquatic",
+    "name": "Merpip",
+    "image": "Merpip.png",
+    "description": "Merpips are nonhostile aquatic critters that subsist on Caviar and Critter Molt.\n\nThey are known to bury aquatic plant Seeds in Liquid environments whenever they can find a suitable area with enough space.",
+    "species": "SquirrelSpecies",
+    "dlc": [
+      "DLC5_ID"
+    ]
+  },
+  {
+    "id": "mimika",
+    "gameId": "Butterfly",
+    "name": "Mimika",
+    "image": "Mimika.png",
+    "description": "Mimikas are airborne organisms that help nearby Plants grow more quickly.\n\nWhen its leaves dry up, it will harden into Mimillet.",
+    "species": "ButterflySpecies",
+    "dlc": [
+      "DLC4_ID"
+    ]
+  },
+  {
+    "id": "molten_slickster",
+    "gameId": "OilfloaterHighTemp",
+    "name": "Molten Slickster",
+    "image": "MoltenSlickster.png",
+    "description": "Molten Slicksters are slimy critters that consume Carbon Dioxide and exude Petroleum.",
+    "species": "OilFloaterSpecies",
+    "tags": [
+      "critter_hoverer",
+      "rhex_diet_brineice_2",
+      "saturn_trap_prey"
+    ]
+  },
+  {
+    "id": "morb",
+    "gameId": "Glom",
+    "name": "Morb",
+    "image": "Morb.png",
+    "description": "Morbs are attracted to unhygienic conditions and frequently excrete bursts of Polluted Oxygen.",
+    "species": "GlomSpecies",
+    "tags": [
+      "critter_walker",
+      "saturn_trap_prey"
+    ]
+  },
+  {
+    "id": "oakshell",
+    "gameId": "CrabWood",
+    "name": "Oakshell",
+    "image": "Oakshell.png",
+    "description": "Oakshells are nonhostile critters unless their eggs are nearby.\n\nThey eat Polluted Dirt, Slime and Rot Piles.\n\nThe shells they leave behind after molting can be crushed into Wood.\n\nOakshells thrive in Ethanol.",
+    "species": "CrabSpecies",
+    "tags": [
+      "critter_walker",
+      "saturn_trap_prey"
+    ]
+  },
+  {
+    "id": "orehull",
+    "gameId": "SeaTurtle",
+    "name": "Orehull",
+    "image": "Orehull.png",
+    "description": "Orehulls are shy aquatic critters that eat Kelpoles and excrete Polluted Mud.\n\nThey can be sheared for Iron Ore.",
+    "species": "SeaTurtleSpecies",
+    "dlc": [
+      "DLC5_ID"
+    ]
+  },
+  {
+    "id": "pacu",
+    "gameId": "Pacu",
+    "name": "Pacu",
+    "image": "Pacu.png",
+    "description": "Pacus are aquatic creatures that can live in any liquid, such as Water or Polluted Water.\n\nEvery organism in the known universe finds the Pacu extremely delicious.",
+    "species": "PacuSpecies",
+    "tags": [
+      "jawbo_diet_rust"
+    ]
+  },
+  {
+    "id": "pip",
+    "gameId": "Squirrel",
+    "name": "Pip",
+    "image": "Pip.png",
+    "description": "Pips are pesky, nonhostile critters that subsist on Thimble Reeds and Arbor Tree branches.\n\nThey are known to bury Seeds in the ground whenever they can find a suitable area with enough space.",
+    "species": "SquirrelSpecies",
+    "tags": [
+      "critter_walker",
+      "rhex_diet_brineice_2",
+      "saturn_trap_prey"
+    ]
+  },
+  {
+    "id": "plug_slug",
+    "gameId": "Staterpillar",
+    "name": "Plug Slug",
+    "image": "PlugSlug.png",
+    "description": "Plug Slugs are dynamic creatures that generate electrical Power during the night.\n\nTheir power can be harnessed by leaving an exposed wire near areas where they like to sleep.",
+    "species": "StaterpillarSpecies",
+    "dlc": [
+      "EXPANSION1_ID"
+    ],
+    "tags": [
+      "critter_walker",
+      "rhex_diet_brineice_2",
+      "saturn_trap_prey"
+    ]
+  },
+  {
+    "id": "pokeshell",
+    "gameId": "Crab",
+    "name": "Pokeshell",
+    "image": "Pokeshell.png",
+    "description": "Pokeshells are nonhostile critters unless their eggs are nearby.\n\nThey eat Polluted Dirt and Rot Piles.\n\nThe shells they leave behind after molting can be crushed into Lime.",
+    "species": "CrabSpecies",
+    "tags": [
+      "critter_walker",
+      "saturn_trap_prey"
+    ]
+  },
+  {
+    "id": "puft",
+    "gameId": "Puft",
+    "name": "Puft",
+    "image": "Puft.png",
+    "description": "Pufts are non-aggressive critters that excrete lumps of Slime with each breath.",
+    "species": "PuftSpecies"
+  },
+  {
+    "id": "puft_prince",
+    "gameId": "PuftAlpha",
+    "name": "Puft Prince",
+    "image": "PuftPrince.png",
+    "description": "The Puft Prince is a lazy critter that excretes little Solid lumps of whatever it has been breathing.",
+    "species": "PuftSpecies"
+  },
+  {
+    "id": "radiant_bug",
+    "gameId": "LightBugCrystal",
+    "name": "Radiant Bug",
+    "image": "RadiantBug.png",
+    "description": "Radiant Bugs emit an extra-bright Light when Happy, in hopes of attracting more of their kind for company.\n\nTheir eggs contain small amounts of Resin that can be harvested when cracked at the Egg Cracker.",
+    "species": "LightBugSpecies"
+  },
+  {
+    "id": "regal_bammoth",
+    "gameId": "GoldBelly",
+    "name": "Regal Bammoth",
+    "image": "RegalBammoth.png",
+    "description": "Regal Bammoths are nonhostile creatures that subsist on Plume Squash and Nosh Beans.\n\nTheir ornate crests grow only when they are fed Squash Fries.",
+    "species": "BellySpecies",
+    "dlc": [
+      "DLC2_ID"
+    ],
+    "tags": [
+      "critter_walker"
+    ]
+  },
+  {
+    "id": "rhex",
+    "gameId": "Raptor",
+    "name": "Rhex",
+    "image": "Rhex.png",
+    "description": "Rhexes are carnivorous critters that feed on smaller Critters and produce Brine Ice.\n\nTheir tailfeathers can be shorn for Feather Fiber used in Clothing production.",
+    "species": "RaptorSpecies",
+    "dlc": [
+      "DLC4_ID"
+    ],
+    "tags": [
+      "critter_walker"
+    ]
+  },
+  {
+    "id": "rover",
+    "gameId": "ScoutRover",
+    "name": "Rover",
+    "image": "Rover.png",
+    "description": "A curious bot that can remotely explore new Planetoid locations.",
+    "species": "ScoutRover",
+    "dlc": [
+      "EXPANSION1_ID"
+    ]
+  },
+  {
+    "id": "royal_bug",
+    "gameId": "LightBugPurple",
+    "name": "Royal Bug",
+    "image": "RoyalBug.png",
+    "description": "Royal Bugs emit a soft purple Light when Happy, in hopes of attracting more of their kind for company.\n\nTheir eggs contain small amounts of Resin that can be harvested when cracked at the Egg Cracker.",
+    "species": "LightBugSpecies"
+  },
+  {
+    "id": "sage_hatch",
+    "gameId": "HatchVeggie",
+    "name": "Sage Hatch",
+    "image": "SageHatch.png",
+    "description": "Sage Hatches excrete solid Coal as waste and enjoy burrowing into the ground.",
+    "species": "HatchSpecies",
+    "tags": [
+      "critter_walker",
+      "rhex_diet_brineice_2",
+      "saturn_trap_prey"
+    ]
+  },
+  {
+    "id": "sanishell",
+    "gameId": "CrabFreshWater",
+    "name": "Sanishell",
+    "image": "Sanishell.png",
+    "description": "Sanishells are nonhostile critters unless their eggs are nearby.\n\nThey thrive in Water and eliminate Germs from any liquid they inhabit.\n\nThey eat Polluted Dirt, Slime and Rot Piles.",
+    "species": "CrabSpecies",
+    "tags": [
+      "critter_walker",
+      "saturn_trap_prey"
+    ]
+  },
+  {
+    "id": "seaquine",
+    "gameId": "SeaHorse",
+    "name": "Seaquine",
+    "image": "Seaquine.png",
+    "description": "Seaquines are aquatic critters that live in liquid pools.\n\nThey feed on Pearl and produce Ovolene at the Aquatic Milking Station when Happy.",
+    "species": "SeaHorseSpecies",
+    "dlc": [
+      "DLC5_ID"
+    ]
+  },
+  {
+    "id": "shatter_flox",
+    "gameId": "GlassDeer",
+    "name": "Shatter Flox",
+    "image": "ShatterFlox.png",
+    "description": "Shatter Floxes are nonhostile critters that can subsist on Bristle Blossom and Pikeapple Bush.\n\nTheir shearable Glass antlers grow only when they are fed Abyssalite.",
+    "species": "DeerSpecies",
+    "dlc": [
+      "DLC2_ID"
+    ],
+    "tags": [
+      "critter_walker",
+      "rhex_diet_brineice_2",
+      "saturn_trap_prey"
+    ]
+  },
+  {
+    "id": "shine_bug",
+    "gameId": "LightBug",
+    "name": "Shine Bug",
+    "image": "ShineBug.png",
+    "description": "Shine Bugs emit a soft Light when Happy, in hopes of attracting more of their kind for company.\n\nTheir eggs contain small amounts of Resin that can be harvested when cracked at the Egg Cracker.",
+    "species": "LightBugSpecies"
+  },
+  {
+    "id": "shove_vole",
+    "gameId": "Mole",
+    "name": "Shove Vole",
+    "image": "ShoveVole.png",
+    "description": "Shove Voles are burrowing critters that eat the Regolith collected on terrestrial surfaces.\n\nThey cannot burrow through Refined Metals.",
+    "species": "MoleSpecies",
+    "tags": [
+      "critter_walker",
+      "rhex_diet_brineice_2",
+      "saturn_trap_prey"
+    ]
+  },
+  {
+    "id": "slickster",
+    "gameId": "Oilfloater",
+    "name": "Slickster",
+    "image": "Slickster.png",
+    "description": "Slicksters are slimy critters that consume Carbon Dioxide and exude Crude Oil.",
+    "species": "OilFloaterSpecies",
+    "tags": [
+      "critter_hoverer",
+      "rhex_diet_brineice_2",
+      "saturn_trap_prey"
+    ]
+  },
+  {
+    "id": "slogo",
+    "gameId": "Snail",
+    "name": "Slogo",
+    "image": "Slogo.png",
+    "description": "Slogos are nonhostile critters that consume Salt and excrete Dirt.\n\nThe shells they leave behind after molting can be crushed into Lime.\n\nThey also leave large amounts of Mucin in their wake.",
+    "species": "SnailSpecies",
+    "dlc": [
+      "DLC5_ID"
+    ],
+    "tags": [
+      "critter_walker",
+      "rhex_diet_brineice_2",
+      "saturn_trap_prey"
+    ]
+  },
+  {
+    "id": "smog_slug",
+    "gameId": "StaterpillarGas",
+    "name": "Smog Slug",
+    "image": "SmogSlug.png",
+    "description": "Smog Slugs are porous creatures that draw in unbreathable Gases during the day.\n\nAt night, they sleep near exposed Gas Pipes, where they deposit their cache.",
+    "species": "StaterpillarSpecies",
+    "dlc": [
+      "EXPANSION1_ID"
+    ],
+    "tags": [
+      "critter_walker",
+      "rhex_diet_brineice_2",
+      "saturn_trap_prey"
+    ]
+  },
+  {
+    "id": "smooth_hatch",
+    "gameId": "HatchMetal",
+    "name": "Smooth Hatch",
+    "image": "SmoothHatch.png",
+    "description": "Smooth Hatches enjoy burrowing into the ground and excrete Refined Metal when fed Metal Ore.",
+    "species": "HatchSpecies",
+    "tags": [
+      "critter_walker",
+      "rhex_diet_brineice_2",
+      "saturn_trap_prey"
+    ]
+  },
+  {
+    "id": "spigot_seal",
+    "gameId": "Seal",
+    "name": "Spigot Seal",
+    "image": "SpigotSeal.png",
+    "description": "Spigot Seals are charismatic creatures who produce Ethanol.\n\nThey eat Sucrose, and drink Nectar straight from the Bonbon Tree.",
+    "species": "SealSpecies",
+    "dlc": [
+      "DLC2_ID"
+    ],
+    "tags": [
+      "critter_walker",
+      "saturn_trap_prey"
+    ]
+  },
+  {
+    "id": "sponge_slug",
+    "gameId": "StaterpillarLiquid",
+    "name": "Sponge Slug",
+    "image": "SpongeSlug.png",
+    "description": "Sponge Slugs are thirsty creatures that soak up Liquids during the day.\n\nThey deposit their stored Liquids into the exposed Liquid Pipes they sleep next to at night.",
+    "species": "StaterpillarSpecies",
+    "dlc": [
+      "EXPANSION1_ID"
+    ],
+    "tags": [
+      "critter_walker",
+      "rhex_diet_brineice_2",
+      "saturn_trap_prey"
+    ]
+  },
+  {
+    "id": "squeaky_puft",
+    "gameId": "PuftBleachstone",
+    "name": "Squeaky Puft",
+    "image": "SqueakyPuft.png",
+    "description": "Squeaky Pufts are non-aggressive critters that excrete lumps of Bleach Stone with each breath.",
+    "species": "PuftSpecies"
+  },
+  {
+    "id": "stone_hatch",
+    "gameId": "HatchHard",
+    "name": "Stone Hatch",
+    "image": "StoneHatch.png",
+    "description": "Stone Hatches excrete solid Coal as waste and enjoy burrowing into the ground.",
+    "species": "HatchSpecies",
+    "tags": [
+      "critter_walker",
+      "rhex_diet_brineice_2",
+      "saturn_trap_prey"
+    ]
+  },
+  {
+    "id": "sun_bug",
+    "gameId": "LightBugOrange",
+    "name": "Sun Bug",
+    "image": "SunBug.png",
+    "description": "Sun Bugs emit a soft orange Light when Happy, in hopes of attracting more of their kind for company.\n\nTheir eggs contain small amounts of Resin that can be harvested when cracked at the Egg Cracker.",
+    "species": "LightBugSpecies"
+  },
+  {
+    "id": "sweepy",
+    "gameId": "SweepBot",
+    "name": "Sweepy",
+    "image": "Sweepy.png",
+    "description": "An automated sweeping robot.\n\nSweeps up Solid debris and Liquid spills and stores the material back in its Sweepy Dock.",
+    "species": "SweepBot"
+  },
+  {
+    "id": "sweetle",
+    "gameId": "DivergentBeetle",
+    "name": "Sweetle",
+    "image": "Sweetle.png",
+    "description": "Sweetles are nonhostile critters that excrete large amounts of Sucrose.\n\nThey are closely related to the Grubgrub and exhibit similar, albeit less effective farming behaviors.",
+    "species": "DivergentSpecies",
+    "dlc": [
+      "EXPANSION1_ID"
+    ],
+    "tags": [
+      "critter_walker",
+      "rhex_diet_brineice_2",
+      "saturn_trap_prey"
+    ]
+  },
+  {
+    "id": "tropical_pacu",
+    "gameId": "PacuTropical",
+    "name": "Tropical Pacu",
+    "image": "TropicalPacu.png",
+    "description": "Tropical Pacus are aquatic critters who inhabit warm liquid pools.\n\nTheir vibrant colors provide a significant Decor boost to their environment.",
+    "species": "PacuSpecies",
+    "tags": [
+      "jawbo_diet_rust"
+    ]
   }
 ]

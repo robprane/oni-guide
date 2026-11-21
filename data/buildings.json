@@ -1,467 +1,3129 @@
 [
   {
+    "id": "aero_pot",
+    "gameId": "FlowerVaseHangingFancy",
+    "name": "Aero Pot",
+    "image": "AeroPot.png",
+    "description": "Houses a single Plant when sown with a Seed.\n\nIncreases Decor even when empty, contributing to Morale.\n\nMust be hung from a ceiling."
+  },
+  {
+    "id": "airborne_critter_condo",
+    "gameId": "AirBorneCritterCondo",
+    "name": "Airborne Critter Condo",
+    "image": "AirborneCritterCondo.png",
+    "description": "A hanging respite area for adult Pufts, Moos and Shine Bugs."
+  },
+  {
+    "id": "airborne_critter_trap",
+    "gameId": "CreatureAirTrap",
+    "name": "Airborne Critter Trap",
+    "image": "AirborneCritterTrap.png",
+    "description": "Attracts and captures airborne Critters.\n\nOnly Duplicants with the Critter Ranching I skill can arm this trap. It's reusable!"
+  },
+  {
+    "id": "airflow_tile",
+    "gameId": "GasPermeableMembrane",
+    "name": "Airflow Tile",
+    "image": "AirflowTile.png",
+    "description": "Used to build the walls and floors of rooms.\n\nBlocks Liquid flow without obstructing Gas."
+  },
+  {
     "id": "algae_distiller",
+    "gameId": "AlgaeDistillery",
     "name": "Algae Distiller",
-    "image": "AlgaeDistiller.png"
+    "image": "AlgaeDistiller.png",
+    "description": "Refines Slime into Algae.",
+    "power_consumption": 120.0
   },
   {
     "id": "algae_terrarium",
+    "gameId": "AlgaeHabitat",
     "name": "Algae Terrarium",
-    "image": "AlgaeTerrarium.png"
+    "image": "AlgaeTerrarium.png",
+    "description": "Consumes Algae to produce Oxygen and remove some Carbon Dioxide.\n\nGains a 10% efficiency boost in direct Light."
+  },
+  {
+    "id": "ancient_specimen",
+    "gameId": "FossilDig",
+    "name": "Ancient Specimen",
+    "image": "AncientSpecimen.png",
+    "description": "Contains a partial Fossil left behind by a giant critter.\n\nStudying the full skeleton could yield the information required to access a valuable new resource."
+  },
+  {
+    "id": "and_gate",
+    "gameId": "LogicGateAND",
+    "name": "AND Gate",
+    "image": "ANDGate.png",
+    "description": "Outputs a Green Signal when both Input A AND Input B are receiving Green.\n\nOutputs a Red Signal when even one Input is receiving Red."
   },
   {
     "id": "anti_entropy_thermo_nullifier",
+    "gameId": "MassiveHeatSink",
     "name": "Anti Entropy Thermo-Nullifier",
-    "image": "AntiEntropyThermoNullifier.png"
+    "image": "AntiEntropyThermoNullifier.png",
+    "description": "A self-sustaining machine powered by what appears to be refined Neutronium.\n\nAbsorbs and neutralizes Heat energy when provided with piped Hydrogen Gas."
   },
   {
     "id": "apothecary",
+    "gameId": "Apothecary",
     "name": "Apothecary",
-    "image": "Apothecary.png"
+    "image": "Apothecary.png",
+    "description": "Produces Medicine to cure most basic Diseases.\n\nDuplicants must possess the Medicine Compounding Skill to fabricate medicines.\n\nDuplicants will not fabricate items unless recipes are queued."
   },
   {
-    "id": "emulsifier",
-    "name": "Emulsifier",
-    "image": "Emulsifier.png"
+    "id": "aquatic_critter_condo",
+    "gameId": "UnderwaterCritterCondo",
+    "name": "Aquatic Critter Condo",
+    "image": "AquaticCritterCondo.png",
+    "description": "A fancy respite area for adult Critters who live in Liquid pools."
   },
   {
-    "id": "biobot_builder",
-    "name": "Biobot Builder",
-    "image": "BiobotBuilder.png"
+    "id": "aquatic_critter_fountain",
+    "gameId": "UnderwaterMilkFeeder",
+    "name": "Aquatic Critter Fountain",
+    "image": "AquaticCritterFountain.png",
+    "description": "Dispenses Brackene or Squid Ink to aquatic Critters.\n\nAccessing the fountain significantly improves Critters' moods."
+  },
+  {
+    "id": "aquatic_grooming_station",
+    "gameId": "UnderwaterRanchStation",
+    "name": "Aquatic Grooming Station",
+    "image": "AquaticGroomingStation.png",
+    "description": "Allows the assigned Rancher to care for and gradually tame Critters.\n\nAssigned Duplicants must possess both the Critter Ranching and Basic Swimming skills."
+  },
+  {
+    "id": "aquatic_milking_station",
+    "gameId": "UnderwaterMilkingStation",
+    "name": "Aquatic Milking Station",
+    "image": "AquaticMilkingStation.png",
+    "description": "Extracts Ovolene or Squid Ink from eligible aquatic Critters.\n\nAssigned Duplicants must possess both the Critter Ranching II and Basic Swimming skills.",
+    "dlc": [
+      "DLC5_ID"
+    ]
+  },
+  {
+    "id": "aquatic_shearing_station",
+    "gameId": "UnderwaterShearingStation",
+    "name": "Aquatic Shearing Station",
+    "image": "AquaticShearingStation.png",
+    "description": "Allows eligible aquatic Critters to be safely sheared for useful raw materials.\n\nAssigned Duplicants must possess both the Critter Ranching and Basic Swimming skills.",
+    "power_consumption": 60.0,
+    "dlc": [
+      "DLC5_ID"
+    ]
+  },
+  {
+    "id": "arcade_cabinet",
+    "gameId": "ArcadeMachine",
+    "name": "Arcade Cabinet",
+    "image": "ArcadeCabinet.png",
+    "description": "Allows Duplicants to play video games on their breaks.\n\nIncreases Duplicant Morale.",
+    "power_consumption": 1200.0
+  },
+  {
+    "id": "artifact_analysis_station",
+    "gameId": "ArtifactAnalysisStation",
+    "name": "Artifact Analysis Station",
+    "image": "ArtifactAnalysisStation.png",
+    "description": "Analyses and extracts Neutronium from artifacts of interest.",
+    "power_consumption": 480.0,
+    "dlc": [
+      "EXPANSION1_ID"
+    ]
+  },
+  {
+    "id": "atmo_sensor",
+    "gameId": "LogicPressureSensorGas",
+    "name": "Atmo Sensor",
+    "image": "AtmoSensor.png",
+    "description": "Sends a Green Signal or a Red Signal when Gas pressure enters the chosen range."
+  },
+  {
+    "id": "atmo_suit_checkpoint",
+    "gameId": "SuitMarker",
+    "name": "Atmo Suit Checkpoint",
+    "image": "AtmoSuitCheckpoint.png",
+    "description": "Marks a threshold where Duplicants must change into or out of Atmo Suits.\n\nMust be built next to an Atmo Suit Dock.\n\nCan be rotated before construction."
+  },
+  {
+    "id": "atmo_suit_dock",
+    "gameId": "SuitLocker",
+    "name": "Atmo Suit Dock",
+    "image": "AtmoSuitDock.png",
+    "description": "Stores Atmo Suits and refuels them with Oxygen.\n\nEmpties suits of Polluted Water.\n\nBuild next to an Atmo Suit Checkpoint to make Duplicants change into suits when passing by.",
+    "power_consumption": 120.0
+  },
+  {
+    "id": "auto_sweeper",
+    "gameId": "SolidTransferArm",
+    "name": "Auto-Sweeper",
+    "image": "AutoSweeper.png",
+    "description": "Automates Sweeping and Supplying errands by sucking up all nearby Debris.\n\nMaterials are automatically delivered to any Conveyor Loader, Conveyor Receptacle, storage, or buildings within range.",
+    "power_consumption": 120.0
+  },
+  {
+    "id": "automated_notifier",
+    "gameId": "LogicAlarm",
+    "name": "Automated Notifier",
+    "image": "AutomatedNotifier.png",
+    "description": "Attach to sensors to send a notification when certain conditions are met.\n\nNotifications can be customized."
+  },
+  {
+    "id": "automatic_dispenser",
+    "gameId": "ObjectDispenser",
+    "name": "Automatic Dispenser",
+    "image": "AutomaticDispenser.png",
+    "description": "Stores any Solid Materials delivered to it by Duplicants.\n\nDumps stored materials back into the world when it receives a Green Signal.",
+    "power_consumption": 60.0
+  },
+  {
+    "id": "automation_broadcaster",
+    "gameId": "LogicInterasteroidSender",
+    "name": "Automation Broadcaster",
+    "image": "AutomationBroadcaster.png",
+    "description": "Sends a Green Signal or a Red Signal to an Automation Receiver over vast distances in space.\n\nBoth the Automation Broadcaster and the Automation Receiver must be exposed to space to function.",
+    "dlc": [
+      "EXPANSION1_ID"
+    ]
+  },
+  {
+    "id": "automation_receiver",
+    "gameId": "LogicInterasteroidReceiver",
+    "name": "Automation Receiver",
+    "image": "AutomationReceiver.png",
+    "description": "Receives a Green Signal or a Red Signal from an Automation Broadcaster over vast distances in space.\n\nBoth the Automation Receiver and the Automation Broadcaster must be exposed to space to function.",
+    "dlc": [
+      "EXPANSION1_ID"
+    ]
+  },
+  {
+    "id": "automation_ribbon",
+    "gameId": "LogicRibbon",
+    "name": "Automation Ribbon",
+    "image": "AutomationRibbon.png",
+    "description": "A 4-Bit Automation Wire which can carry up to four automation signals.\n\nUse a Ribbon Writer to output to multiple Bits, and a Ribbon Reader to input from multiple Bits."
+  },
+  {
+    "id": "automation_ribbon_bridge",
+    "gameId": "LogicRibbonBridge",
+    "name": "Automation Ribbon Bridge",
+    "image": "AutomationRibbonBridge.png",
+    "description": "Runs one Automation Ribbon section over another without joining them.\n\nCan be run through wall and floor tile."
+  },
+  {
+    "id": "automation_wire",
+    "gameId": "LogicWire",
+    "name": "Automation Wire",
+    "image": "AutomationWire.png",
+    "description": "Connects buildings to Sensors.\n\nCan be run through wall and floor tile."
+  },
+  {
+    "id": "automation_wire_bridge",
+    "gameId": "LogicWireBridge",
+    "name": "Automation Wire Bridge",
+    "image": "AutomationWireBridge.png",
+    "description": "Runs one Automation Wire section over another without joining them.\n\nCan be run through wall and floor tile."
+  },
+  {
+    "id": "battery",
+    "gameId": "Battery",
+    "name": "Battery",
+    "image": "Battery.png",
+    "description": "Stores Power from generators, then provides that power to buildings.\n\nLoses charge over time."
+  },
+  {
+    "id": "beach_chair",
+    "gameId": "BeachChair",
+    "name": "Beach Chair",
+    "image": "BeachChair.png",
+    "description": "Duplicants can relax by lounging in Sunlight.\n\nIncreases Duplicant Morale."
+  },
+  {
+    "id": "biodiesel_engine",
+    "gameId": "BiodieselEngineCluster",
+    "name": "Biodiesel Engine",
+    "image": "BiodieselEngine.png",
+    "description": "Burns Biodiesel to propel rockets for mid-range space exploration.\n\nBiodiesel Engines have generous height restrictions, ideal for hauling many modules.\n\nEngine must be built via Rocket Platform, and requires an oxidizer tank.\n\nOnce the engine has been built, more rocket modules can be added.",
+    "power_generation": 640.0,
+    "dlc": [
+      "EXPANSION1_ID"
+    ]
+  },
+  {
+    "id": "blank_canvas",
+    "gameId": "Canvas",
+    "name": "Blank Canvas",
+    "image": "BlankCanvas.png",
+    "description": "Increases Decor, contributing to Morale.\n\nMust be painted by a Duplicant."
   },
   {
     "id": "blastshot_maker",
+    "gameId": "MissileFabricator",
     "name": "Blastshot Maker",
-    "image": "BlastshotMaker.png"
+    "image": "BlastshotMaker.png",
+    "description": "Produces Blastshot from Refined Metals combined with Petroleum.\n\nDuplicants will not fabricate items unless recipes are queued.",
+    "power_consumption": 960.0
   },
   {
     "id": "bleach_stone_hopper",
+    "gameId": "Chlorinator",
     "name": "Bleach Stone Hopper",
-    "image": "BleachStoneHopper.png"
+    "image": "BleachStoneHopper.png",
+    "description": "Uses Salt and Gold to produce Bleach Stone.",
+    "power_consumption": 480.0
   },
   {
-    "id": "brackwax_gleaner",
-    "name": "Brackwax Gleaner",
-    "image": "BrackwaxGleaner.png"
+    "id": "botanical_analyzer",
+    "gameId": "GeneticAnalysisStation",
+    "name": "Botanical Analyzer",
+    "image": "BotanicalAnalyzer.png",
+    "description": "Identifies new Seed subspecies.",
+    "power_consumption": 480.0,
+    "dlc": [
+      "EXPANSION1_ID"
+    ]
+  },
+  {
+    "id": "bottle_drainer",
+    "gameId": "BottleEmptierConduitLiquid",
+    "name": "Bottle Drainer",
+    "image": "BottleDrainer.png",
+    "description": "Drains bottled Liquids into Liquid Pipes."
+  },
+  {
+    "id": "bottle_emptier",
+    "gameId": "BottleEmptier",
+    "name": "Bottle Emptier",
+    "image": "BottleEmptier.png",
+    "description": "Empties bottled Liquids back into the world."
+  },
+  {
+    "id": "bottle_filler",
+    "gameId": "LiquidBottler",
+    "name": "Bottle Filler",
+    "image": "BottleFiller.png",
+    "description": "Automatically stores piped Liquids into bottles for manual transport."
+  },
+  {
+    "id": "breathing_station",
+    "gameId": "UnderwaterBreathingStation",
+    "name": "Breathing Station",
+    "image": "BreathingStation.png",
+    "description": "Provides breathable Oxygen to Duplicants in suffocating environments via a connected Gas Pipe input.",
+    "power_consumption": 60.0,
+    "dlc": [
+      "DLC5_ID"
+    ]
+  },
+  {
+    "id": "buffer_gate",
+    "gameId": "LogicGateBUFFER",
+    "name": "BUFFER Gate",
+    "image": "BUFFERGate.png",
+    "description": "Outputs a Green Signal if the Input is receiving a Green Signal.\n\nContinues sending a Green Signal for an amount of buffer time after the Input receives a Red Signal."
+  },
+  {
+    "id": "bunker_door",
+    "gameId": "BunkerDoor",
+    "name": "Bunker Door",
+    "image": "BunkerDoor.png",
+    "description": "Blocks Liquid and Gas flow, maintaining pressure between areas.\n\nCan withstand extremely high pressures and impacts.",
+    "power_consumption": 120.0
+  },
+  {
+    "id": "bunker_tile",
+    "gameId": "BunkerTile",
+    "name": "Bunker Tile",
+    "image": "BunkerTile.png",
+    "description": "Used to build the walls and floors of rooms.\n\nCan withstand extreme pressures and impacts."
+  },
+  {
+    "id": "canister_drainer",
+    "gameId": "BottleEmptierConduitGas",
+    "name": "Canister Drainer",
+    "image": "CanisterDrainer.png",
+    "description": "Drains Gas canisters into Gas Pipes."
+  },
+  {
+    "id": "canister_emptier",
+    "gameId": "BottleEmptierGas",
+    "name": "Canister Emptier",
+    "image": "CanisterEmptier.png",
+    "description": "Empties Gas canisters back into the world."
+  },
+  {
+    "id": "canister_filler",
+    "gameId": "GasBottler",
+    "name": "Canister Filler",
+    "image": "CanisterFiller.png",
+    "description": "Automatically stores piped Gases into canisters for manual transport."
+  },
+  {
+    "id": "carbon_dioxide_engine",
+    "gameId": "CO2Engine",
+    "name": "Carbon Dioxide Engine",
+    "image": "CarbonDioxideEngine.png",
+    "description": "Uses pressurized Carbon Dioxide to propel rockets for short range space exploration.\n\nCarbon Dioxide Engines are relatively fast engine for their size but with limited height restrictions.\n\nEngine must be built via Rocket Platform. \n\nOnce the engine has been built, more rocket modules can be added.",
+    "dlc": [
+      "EXPANSION1_ID"
+    ]
   },
   {
     "id": "carbon_skimmer",
+    "gameId": "CO2Scrubber",
     "name": "Carbon Skimmer",
-    "image": "CarbonSkimmer.png"
+    "image": "CarbonSkimmer.png",
+    "description": "Uses Water to filter Carbon Dioxide from the air.",
+    "power_consumption": 120.0
+  },
+  {
+    "id": "carpeted_tile",
+    "gameId": "CarpetTile",
+    "name": "Carpeted Tile",
+    "image": "CarpetedTile.png",
+    "description": "Used to build the walls and floors of rooms.\n\nIncreases Decor, contributing to Morale."
+  },
+  {
+    "id": "ceiling_light",
+    "gameId": "CeilingLight",
+    "name": "Ceiling Light",
+    "image": "CeilingLight.png",
+    "description": "Provides Light when Powered.\n\nIncreases Duplicant workspeed within light radius.",
+    "power_consumption": 10.0
+  },
+  {
+    "id": "ceiling_trim",
+    "gameId": "CrownMoulding",
+    "name": "Ceiling Trim",
+    "image": "CeilingTrim.png",
+    "description": "Used to decorate the ceilings of rooms.\n\nIncreases Decor, contributing to Morale."
   },
   {
     "id": "clothing_refashionator",
+    "gameId": "ClothingAlterationStation",
     "name": "Clothing Refashionator",
-    "image": "ClothingRefashionator.png"
+    "image": "ClothingRefashionator.png",
+    "description": "Upgrades Snazzy Suits into Primo Garb.\n\nDuplicants will not fabricate items unless recipes are queued.",
+    "power_consumption": 240.0
   },
   {
     "id": "coal_generator",
+    "gameId": "Generator",
     "name": "Coal Generator",
-    "image": "CoalGenerator.png"
+    "image": "CoalGenerator.png",
+    "description": "Converts Coal into electrical Power.\n\nProduces Carbon Dioxide.",
+    "power_generation": 600.0
+  },
+  {
+    "id": "comfy_bed",
+    "gameId": "LuxuryBed",
+    "name": "Comfy Bed",
+    "image": "ComfyBed.png",
+    "description": "Provides a sleeping area for one Duplicant and restores additional stamina.\n\nDuplicants will automatically sleep in their assigned beds at night."
+  },
+  {
+    "id": "communal_table",
+    "gameId": "MultiMinionDiningTable",
+    "name": "Communal Table",
+    "image": "CommunalTable.png",
+    "description": "Gives three Duplicants a place to eat.\n\nSharing a meal with one or more companions provides a Morale boost."
+  },
+  {
+    "id": "compact_discharger",
+    "gameId": "SmallElectrobankDischarger",
+    "name": "Compact Discharger",
+    "image": "Compact_Discharger.png",
+    "description": "Converts stored energy from Power Banks into power for connected buildings.",
+    "power_generation": 60.0,
+    "dlc": [
+      "DLC3_ID"
+    ]
   },
   {
     "id": "compost",
+    "gameId": "Compost",
     "name": "Compost",
-    "image": "Compost.png"
+    "image": "Compost.png",
+    "description": "Reduces Polluted Dirt, rotting Foods, and discarded organics down into Dirt."
+  },
+  {
+    "id": "conduction_panel",
+    "gameId": "ContactConductivePipeBridge",
+    "name": "Conduction Panel",
+    "image": "ConductionPanel.png",
+    "description": "Carries Liquid, allowing extreme Temperature exchange with overlapping buildings.\n\nCan function in a vacuum.\n\nCan be run through wall and floor tiles."
+  },
+  {
+    "id": "conductive_wire",
+    "gameId": "WireRefined",
+    "name": "Conductive Wire",
+    "image": "ConductiveWire.png",
+    "description": "Connects buildings to Power sources.\n\nCan be run through wall and floor tile."
+  },
+  {
+    "id": "conductive_wire_bridge",
+    "gameId": "WireRefinedBridge",
+    "name": "Conductive Wire Bridge",
+    "image": "ConductiveWireBridge.png",
+    "description": "Carries more Wattage than a regular Wire Bridge without overloading.\n\nRuns one wire section over another without joining them.\n\nCan be run through wall and floor tile."
+  },
+  {
+    "id": "conveyor_bridge",
+    "gameId": "SolidConduitBridge",
+    "name": "Conveyor Bridge",
+    "image": "ConveyorBridge.png",
+    "description": "Runs one Conveyor Rail section over another without joining them.\n\nCan be run through wall and floor tile."
+  },
+  {
+    "id": "conveyor_chute",
+    "gameId": "SolidVent",
+    "name": "Conveyor Chute",
+    "image": "ConveyorChute.png",
+    "description": "Unloads Solid Materials from a Conveyor Rail onto the floor."
+  },
+  {
+    "id": "conveyor_loader",
+    "gameId": "SolidConduitInbox",
+    "name": "Conveyor Loader",
+    "image": "ConveyorLoader.png",
+    "description": "Loads Solid Materials onto Conveyor Rail for transport.\n\nOnly loads the resources of my choosing.",
+    "power_consumption": 120.0
+  },
+  {
+    "id": "conveyor_loader_fitting",
+    "gameId": "RocketInteriorSolidOutput",
+    "name": "Conveyor Loader Fitting",
+    "image": "ConveyorLoaderFitting.png",
+    "description": "Allows Solid Materials to be moved out of rocket storage via Conveyor Rails.\n\nDraws solid material from the first Rocket Module with the requested material.\n\nMust be built within the interior of a Rocket Module.",
+    "power_consumption": 60.0,
+    "dlc": [
+      "EXPANSION1_ID"
+    ]
+  },
+  {
+    "id": "conveyor_meter",
+    "gameId": "SolidLimitValve",
+    "name": "Conveyor Meter",
+    "image": "ConveyorMeter.png",
+    "description": "Connects to an Automation grid to automatically turn material transfer off when the specified amount has passed through it.",
+    "power_consumption": 10.0
+  },
+  {
+    "id": "conveyor_rail",
+    "gameId": "SolidConduit",
+    "name": "Conveyor Rail",
+    "image": "ConveyorRail.png",
+    "description": "Transports Solid Materials on a track between Conveyor Loader and Conveyor Receptacle.\n\nCan be run through wall and floor tile."
+  },
+  {
+    "id": "conveyor_rail_element_sensor",
+    "gameId": "SolidConduitElementSensor",
+    "name": "Conveyor Rail Element Sensor",
+    "image": "ConveyorRailElementSensor.png",
+    "description": "Sends a Green Signal when the selected item is detected on a rail."
+  },
+  {
+    "id": "conveyor_rail_germ_sensor",
+    "gameId": "SolidConduitDiseaseSensor",
+    "name": "Conveyor Rail Germ Sensor",
+    "image": "ConveyorRailGermSensor.png",
+    "description": "Sends a Green Signal or a Red Signal based on the internal Germ count of the object on the rail."
+  },
+  {
+    "id": "conveyor_rail_thermo_sensor",
+    "gameId": "SolidConduitTemperatureSensor",
+    "name": "Conveyor Rail Thermo Sensor",
+    "image": "ConveyorRailThermoSensor.png",
+    "description": "Sends a Green Signal or a Red Signal when rail contents enter the chosen Temperature range."
+  },
+  {
+    "id": "conveyor_receptacle",
+    "gameId": "SolidConduitOutbox",
+    "name": "Conveyor Receptacle",
+    "image": "ConveyorReceptacle.png",
+    "description": "Unloads Solid Materials from a Conveyor Rail into storage."
+  },
+  {
+    "id": "conveyor_receptacle_fitting",
+    "gameId": "RocketInteriorSolidInput",
+    "name": "Conveyor Receptacle Fitting",
+    "image": "ConveyorReceptacleFitting.png",
+    "description": "Allows Solid Materials to be moved into rocket storage via Conveyor Rails.\n\nSends solid material to the first Rocket Module with available space.\n\nMust be built within the interior of a Rocket Module.",
+    "dlc": [
+      "EXPANSION1_ID"
+    ]
+  },
+  {
+    "id": "conveyor_shutoff",
+    "gameId": "SolidLogicValve",
+    "name": "Conveyor Shutoff",
+    "image": "ConveyorShutoff.png",
+    "description": "Connects to an Automation grid to automatically turn Solid Material transport on or off.",
+    "power_consumption": 10.0
+  },
+  {
+    "id": "cooking_tools",
+    "gameId": "KitchenTools",
+    "name": "Cooking Tools",
+    "image": "CookingTools.png",
+    "description": "Increases the speed at which nearby cooking stations complete orders.\n\nThis building does not require Duplicant operation."
+  },
+  {
+    "id": "corner_trim",
+    "gameId": "CornerMoulding",
+    "name": "Corner Trim",
+    "image": "CornerTrim.png",
+    "description": "Used to decorate the ceiling corners of rooms.\n\nIncreases Decor, contributing to Morale."
+  },
+  {
+    "id": "cot",
+    "gameId": "Bed",
+    "name": "Cot",
+    "image": "Cot.png",
+    "description": "Gives one Duplicant a place to sleep.\n\nDuplicants will automatically return to their cots to sleep at night."
   },
   {
     "id": "crafting_station",
+    "gameId": "CraftingTable",
     "name": "Crafting Station",
-    "image": "CraftingStation.png"
+    "image": "CraftingStation.png",
+    "description": "Produces items and equipment for Duplicant use.\n\nDuplicants will not fabricate items unless recipes are queued.",
+    "power_consumption": 60.0
+  },
+  {
+    "id": "critter_condo",
+    "gameId": "CritterCondo",
+    "name": "Critter Condo",
+    "image": "CritterCondo.png",
+    "description": "Provides a comfortable lounge area that boosts domesticated Critters' happiness."
+  },
+  {
+    "id": "critter_drop_off",
+    "gameId": "CritterDropOff",
+    "name": "Critter Drop-Off",
+    "image": "CritterDropOff.png",
+    "description": "Releases trapped Critters back into the world.\n\nMonitoring and drop-off are limited to the specified species."
+  },
+  {
+    "id": "critter_feeder",
+    "gameId": "CreatureFeeder",
+    "name": "Critter Feeder",
+    "image": "CritterFeeder.png",
+    "description": "Automatically dispenses food for hungry Critters."
   },
   {
     "id": "critter_fountain",
+    "gameId": "MilkFeeder",
     "name": "Critter Fountain",
-    "image": "CritterFountain.png"
+    "image": "CritterFountain.png",
+    "description": "Dispenses Brackene or Squid Ink to a wide variety of Critters.\n\nAccessing the fountain significantly improves Critters' moods."
   },
   {
-    "id": "decontamination_shower",
-    "name": "Decontamination Shower",
-    "image": "DecontaminationShower.png"
+    "id": "critter_pick_up",
+    "gameId": "CritterPickUp",
+    "name": "Critter Pick-Up",
+    "image": "CritterPickUp.png",
+    "description": "Ensures the prompt relocation of Critters that exceed the maximum amount set.\n\nMonitoring and pick-up are limited to the specified species."
   },
   {
-    "id": "deep_fryer",
-    "name": "Deep Fryer",
-    "image": "DeepFryer.png"
+    "id": "critter_sensor",
+    "gameId": "LogicCritterCountSensor",
+    "name": "Critter Sensor",
+    "image": "CritterSensor.png",
+    "description": "Sends a Green Signal or a Red Signal based on the number of eggs and critters in a room."
   },
   {
-    "id": "dehydrator",
-    "name": "Dehydrator",
-    "image": "Dehydrator.png"
+    "id": "critter_trap",
+    "gameId": "CreatureGroundTrap",
+    "name": "Critter Trap",
+    "image": "CritterTrap.png",
+    "description": "Captures a living Critter for transport.\n\nOnly Duplicants with the Critter Ranching I skill can arm this trap. It's reusable!"
   },
   {
-    "id": "deodorizer",
-    "name": "Deodorizer",
-    "image": "Deodorizer.png"
-  },
-  {
-    "id": "desalinator",
-    "name": "Desalinator",
-    "image": "Desalinator.png"
-  },
-  {
-    "id": "diamond_press",
-    "name": "Diamond Press",
-    "image": "DiamondPress.png"
-  },
-  {
-    "id": "disease_clinic",
-    "name": "Disease Clinic",
-    "image": "DiseaseClinic.png"
-  },
-  {
-    "id": "egg_cracker",
-    "name": "Egg Cracker",
-    "image": "EggCracker.png"
-  },
-  {
-    "id": "electric_grill",
-    "name": "Electric Grill",
-    "image": "ElectricGrill.png"
-  },
-  {
-    "id": "electrolyzer",
-    "name": "Electrolyzer",
-    "image": "Electrolyzer.png"
-  },
-  {
-    "id": "espresso_machine",
-    "name": "Espresso Machine",
-    "image": "EspressoMachine.png"
-  },
-  {
-    "id": "ethanol_distiller",
-    "name": "Ethanol Distiller",
-    "image": "EthanolDistiller.png"
-  },
-  {
-    "id": "exosuit_forge",
-    "name": "Exosuit Forge",
-    "image": "ExosuitForge.png"
-  },
-  {
-    "id": "farm_station",
-    "name": "Farm Station",
-    "image": "FarmStation.png"
-  },
-  {
-    "id": "fertilizer_synthesizer",
-    "name": "Fertilizer Synthesizer",
-    "image": "FertilizerSynthesizer.png"
-  },
-  {
-    "id": "fossil_quarry",
-    "name": "Fossil Quarry",
-    "image": "FossilQuarry.png"
-  },
-  {
-    "id": "gas_range",
-    "name": "Gas Range",
-    "image": "GasRange.png"
-  },
-  {
-    "id": "glass_forge",
-    "name": "Glass Forge",
-    "image": "GlassForge.png"
-  },
-  {
-    "id": "hand_sanitizer",
-    "name": "Hand Sanitizer",
-    "image": "HandSanitizer.png"
-  },
-  {
-    "id": "hydrogen_generator",
-    "name": "Hydrogen Generator",
-    "image": "HydrogenGenerator.png"
-  },
-  {
-    "id": "ice_e_fan",
-    "name": "Ice-E Fan",
-    "image": "IceEFan.png"
-  },
-  {
-    "id": "ice_maker",
-    "name": "Ice Maker",
-    "image": "IceMaker.png"
-  },
-  {
-    "id": "juicer",
-    "name": "Juicer",
-    "image": "Juicer.png"
-  },
-  {
-    "id": "kiln",
-    "name": "Kiln",
-    "image": "Kiln.png"
-  },
-  {
-    "id": "lavatory",
-    "name": "Lavatory",
-    "image": "Lavatory.png"
-  },
-  {
-    "id": "manual_radbolt_generator",
-    "name": "Manual Radbolt Generator",
-    "image": "ManualRadboltGenerator.png"
-  },
-  {
-    "id": "materials_study_terminal",
-    "name": "Materials Study Terminal",
-    "image": "MaterialsStudyTerminal.png"
-  },
-  {
-    "id": "mercury_ceiling_light",
-    "name": "Mercury Ceiling Light",
-    "image": "MercuryCeilingLight.png"
-  },
-  {
-    "id": "metal_refinery",
-    "name": "Metal Refinery",
-    "image": "MetalRefinery.png"
-  },
-  {
-    "id": "microbe_musher",
-    "name": "Microbe Musher",
-    "image": "MicrobeMusher.png"
-  },
-  {
-    "id": "milking_station",
-    "name": "Milking Station",
-    "image": "MilkingStation.png"
-  },
-  {
-    "id": "molecular_forge",
-    "name": "Molecular Forge",
-    "image": "MolecularForge.png"
-  },
-  {
-    "id": "natural_gas_generator",
-    "name": "Natural Gas Generator",
-    "image": "NaturalGasGenerator.png"
-  },
-  {
-    "id": "oil_refinery",
-    "name": "Oil Refinery",
-    "image": "OilRefinery.png"
-  },
-  {
-    "id": "oil_well",
-    "name": "Oil Well",
-    "image": "OilWell.png"
-  },
-  {
-    "id": "orbital_data_collection_lab",
-    "name": "Orbital Data Collection Lab",
-    "image": "OrbitalDataCollectionLab.png"
+    "id": "cycle_sensor",
+    "gameId": "LogicTimeOfDaySensor",
+    "name": "Cycle Sensor",
+    "image": "CycleSensor.png",
+    "description": "Sets an automatic Green Signal and Red Signal schedule within one day-night cycle."
   },
   {
     "id": "data_miner",
+    "gameId": "DataMiner",
     "name": "Data Miner",
-    "image": "Data_Miner.png"
+    "image": "Data_Miner.png",
+    "description": "Mass-produces Data Banks that can be processed into Data Analysis Research points.\n\nDuplicants will not fabricate items unless recipes are queued.",
+    "power_consumption": 1000.0,
+    "dlc": [
+      "DLC3_ID"
+    ]
   },
   {
-    "id": "ore_scrubber",
-    "name": "Ore Scrubber",
-    "image": "OreScrubber.png"
+    "id": "decontamination_shower",
+    "gameId": "DecontaminationShower",
+    "name": "Decontamination Shower",
+    "image": "DecontaminationShower.png",
+    "description": "Uses Water to remove Germs and Radiation.\n\nDecontaminates both Duplicants and their Clothing.",
+    "dlc": [
+      "EXPANSION1_ID"
+    ]
   },
   {
-    "id": "outhouse",
-    "name": "Outhouse",
-    "image": "Outhouse.png"
+    "id": "deep_fryer",
+    "gameId": "Deepfryer",
+    "name": "Deep Fryer",
+    "image": "DeepFryer.png",
+    "description": "Uses Tallow to cook a wide variety of improved Foods.\n\nDuplicants will not fabricate items unless recipes are queued.",
+    "power_consumption": 480.0,
+    "dlc": [
+      "DLC2_ID"
+    ]
   },
   {
-    "id": "oxygen_diffuser",
-    "name": "Oxygen Diffuser",
-    "image": "OxygenDiffuser.png"
+    "id": "dehydrator",
+    "gameId": "FoodDehydrator",
+    "name": "Dehydrator",
+    "image": "Dehydrator.png",
+    "description": "Uses low, even heat to eliminate moisture from eligible Foods and render them shelf-stable.\n\nDehydrated meals must be processed at the Rehydrator before they can be eaten."
   },
   {
-    "id": "oxylite_refinery",
-    "name": "Oxylite Refinery",
-    "image": "OxyliteRefinery.png"
+    "id": "deodorizer",
+    "gameId": "AirFilter",
+    "name": "Deodorizer",
+    "image": "Deodorizer.png",
+    "description": "Uses Sand to filter Polluted Oxygen from the air, reducing Disease spread.",
+    "power_consumption": 5.0
   },
   {
-    "id": "petroleum_generator",
-    "name": "Petroleum Generator",
-    "image": "PetroleumGenerator.png"
+    "id": "desalinator",
+    "gameId": "Desalinator",
+    "name": "Desalinator",
+    "image": "Desalinator.png",
+    "description": "Removes Salt from Brine or Salt Water, producing Water.",
+    "power_consumption": 480.0
   },
   {
-    "id": "polymer_press",
-    "name": "Polymer Press",
-    "image": "PolymerPress.png"
+    "id": "dev_generator",
+    "gameId": "DevGenerator",
+    "name": "Dev Generator",
+    "image": "DevGenerator.png",
+    "description": "Generates testing power for late nights.",
+    "power_generation": 100000.0
   },
   {
-    "id": "power_control_station",
-    "name": "Power Control Station",
-    "image": "PowerControlStation.png"
+    "id": "dev_heater",
+    "gameId": "DevHeater",
+    "name": "Dev Heater",
+    "image": "DevHeater.png",
+    "description": "Generates on-demand heat for testing toastiness."
   },
   {
-    "id": "radbolt_generator",
-    "name": "Radbolt Generator",
-    "image": "RadboltGenerator.png"
+    "id": "dev_life_support",
+    "gameId": "DevLifeSupport",
+    "name": "Dev Life Support",
+    "image": "DevLifeSupport.png",
+    "description": "Generates warm, oxygen-rich air."
   },
   {
-    "id": "radiation_lamp",
-    "name": "Radiation Lamp",
-    "image": "RadiationLamp.png"
+    "id": "dev_light_source",
+    "gameId": "DevLightGenerator",
+    "name": "Dev Light Source",
+    "image": "DevLightSource.png",
+    "description": "Generates dimmable light on demand."
   },
   {
-    "id": "rehydrator",
-    "name": "Rehydrator",
-    "image": "Rehydrator.png"
+    "id": "dev_pump_gas",
+    "gameId": "DevPumpGas",
+    "name": "Dev Pump Gas",
+    "image": "DevPumpGas.png",
+    "description": "Draws in Gas and runs it through Pipes.\n\nMust be immersed in Gas."
   },
   {
-    "id": "research_reactor",
-    "name": "Research Reactor",
-    "image": "ResearchReactor.png"
+    "id": "dev_pump_liquid",
+    "gameId": "DevPumpLiquid",
+    "name": "Dev Pump Liquid",
+    "image": "DevPumpLiquid.png",
+    "description": "Draws in Liquid and runs it through Pipes.\n\nMust be submerged in Liquid."
   },
   {
-    "id": "research_station",
-    "name": "Research Station",
-    "image": "ResearchStation.png"
+    "id": "dev_pump_solid",
+    "gameId": "DevPumpSolid",
+    "name": "Dev Pump Solid",
+    "image": "DevPumpSolid.png",
+    "description": "Generates chosen Solid Materials and runs it through Conveyor Rail"
   },
   {
-    "id": "rock_crusher",
-    "name": "Rock Crusher",
-    "image": "RockCrusher.png"
+    "id": "dev_radbolt_generator",
+    "gameId": "DevHEPSpawner",
+    "name": "Dev Radbolt Generator",
+    "image": "DevRadboltGenerator.png",
+    "description": "Generates Radbolts.",
+    "dlc": [
+      "EXPANSION1_ID"
+    ]
   },
   {
-    "id": "rust_deoxidizer",
-    "name": "Rust Deoxidizer",
-    "image": "RustDeoxidizer.png"
+    "id": "dev_radiation_emitter",
+    "gameId": "DevRadiationGenerator",
+    "name": "Dev Radiation Emitter",
+    "image": "DevRadiationEmitter.png",
+    "description": "Generates on-demand radiation to keep things clear. Nu-clear."
   },
   {
-    "id": "sauna",
-    "name": "Sauna",
-    "image": "Sauna.png"
+    "id": "diamond_press",
+    "gameId": "DiamondPress",
+    "name": "Diamond Press",
+    "image": "DiamondPress.png",
+    "description": "Crushes Refined Carbon into Diamond, and Coquina into Pearl.\n\nDuplicants will not fabricate items unless recipes are queued and ingredients have been discovered.",
+    "power_consumption": 240.0,
+    "dlc": [
+      "EXPANSION1_ID"
+    ]
   },
   {
-    "id": "shearing_station",
-    "name": "Shearing Station",
-    "image": "ShearingStation.png"
+    "id": "disease_clinic",
+    "gameId": "AdvancedDoctorStation",
+    "name": "Disease Clinic",
+    "image": "DiseaseClinic.png",
+    "description": "Allows Duplicants to administer powerful treatments to sick Duplicants.\n\nDuplicants must possess the Advanced Medical Care Skill to treat peers.",
+    "power_consumption": 480.0
   },
   {
-    "id": "shower",
-    "name": "Shower",
-    "image": "Shower.png"
+    "id": "display_shelf",
+    "gameId": "Shelf",
+    "name": "Display Shelf",
+    "image": "DisplayShelf.png",
+    "description": "Displays cherished items and increases Decor, contributing to Morale.\n\nMust be installed on a back wall."
   },
   {
-    "id": "sink",
-    "name": "Sink",
-    "image": "Sink.png"
+    "id": "drywall",
+    "gameId": "ExteriorWall",
+    "name": "Drywall",
+    "image": "Drywall.png",
+    "description": "Prevents Gas and Liquid loss in space.\n\nBuilds an insulating backwall behind buildings."
   },
   {
-    "id": "sludge_press",
-    "name": "Sludge Press",
-    "image": "SludgePress.png"
+    "id": "duplicant_checkpoint",
+    "gameId": "Checkpoint",
+    "name": "Duplicant Checkpoint",
+    "image": "DuplicantCheckpoint.png",
+    "description": "Allows Duplicants to pass when receiving a Green Signal.\n\nPrevents Duplicants from passing when receiving a Red Signal.",
+    "power_consumption": 10.0
   },
   {
-    "id": "soda_fountain",
-    "name": "Soda Fountain",
-    "image": "SodaFountain.png"
+    "id": "duplicant_motion_sensor",
+    "gameId": "LogicDuplicantSensor",
+    "name": "Duplicant Motion Sensor",
+    "image": "DuplicantMotionSensor.png",
+    "description": "Sends a Green Signal or a Red Signal based on whether a Duplicant is in the sensor's range."
   },
   {
-    "id": "plant_pulverizer",
-    "name": "Plant Pulverizer",
-    "image": "PlantPulverizer.png"
+    "id": "egg_cracker",
+    "gameId": "EggCracker",
+    "name": "Egg Cracker",
+    "image": "EggCracker.png",
+    "description": "Converts viable Critter eggs into cooking ingredients.\n\nCracked Eggs cannot hatch.\n\nDuplicants will not crack eggs unless tasks are queued."
   },
   {
-    "id": "somnium_synthesizer",
-    "name": "Somnium Synthesizer",
-    "image": "SomniumSynthesizer.png"
+    "id": "electric_grill",
+    "gameId": "CookingStation",
+    "name": "Electric Grill",
+    "image": "ElectricGrill.png",
+    "description": "Cooks a wide variety of improved Foods.\n\nDuplicants will not fabricate items unless recipes are queued.",
+    "power_consumption": 60.0
   },
   {
-    "id": "spice_grinder",
-    "name": "Spice Grinder",
-    "image": "SpiceGrinder.png"
+    "id": "electrolyzer",
+    "gameId": "Electrolyzer",
+    "name": "Electrolyzer",
+    "image": "Electrolyzer.png",
+    "description": "Converts Water into Oxygen and Hydrogen Gas.\n\nBecomes idle when the area reaches maximum pressure capacity.",
+    "power_consumption": 120.0
   },
   {
-    "id": "steam_turbine",
-    "name": "Steam Turbine",
-    "image": "SteamTurbine.png"
+    "id": "emulsifier",
+    "gameId": "ChemicalRefinery",
+    "name": "Emulsifier",
+    "image": "Emulsifier.png",
+    "description": "Combines Liquids and other inputs into fluid compounds.\n\nDuplicants will not fabricate emulsions unless recipes are queued.",
+    "power_consumption": 480.0
   },
   {
-    "id": "sublimation_station",
-    "name": "Sublimation Station",
-    "image": "SublimationStation.png"
+    "id": "enclosed_telescope",
+    "gameId": "ClusterTelescopeEnclosed",
+    "name": "Enclosed Telescope",
+    "image": "EnclosedTelescope.png",
+    "description": "Reveals visitable Planetoids in space and produces Data Banks... in comfort!\n\nAssigned Duplicants must possess the Astronomy skill.\n\nExcellent sunburn protection (100%), partial Radiation protection (50%) .\n\nBuilding must be exposed to space to function.",
+    "power_consumption": 120.0,
+    "dlc": [
+      "EXPANSION1_ID"
+    ]
   },
   {
-    "id": "super_computer",
-    "name": "Super Computer",
-    "image": "SuperComputer.png"
+    "id": "espresso_machine",
+    "gameId": "EspressoMachine",
+    "name": "Espresso Machine",
+    "image": "EspressoMachine.png",
+    "description": "Provides refreshment for Duplicants on their breaks.\n\nIncreases Duplicant Morale.",
+    "power_consumption": 480.0
   },
   {
-    "id": "textile_loom",
-    "name": "Textile Loom",
-    "image": "TextileLoom.png"
+    "id": "ethanol_distiller",
+    "gameId": "EthanolDistillery",
+    "name": "Ethanol Distiller",
+    "image": "EthanolDistiller.png",
+    "description": "Refines Wood into Ethanol.",
+    "power_consumption": 240.0
   },
   {
-    "id": "uranium_centrifuge",
-    "name": "Uranium Centrifuge",
-    "image": "UraniumCentrifuge.png"
+    "id": "exosuit_forge",
+    "gameId": "SuitFabricator",
+    "name": "Exosuit Forge",
+    "image": "ExosuitForge.png",
+    "description": "Forges protective Exosuits for Duplicants to wear.\n\nDuplicants will not fabricate items unless recipes are queued.",
+    "power_consumption": 480.0
   },
   {
-    "id": "virtual_planetarium",
-    "name": "Virtual Planetarium",
-    "image": "VirtualPlanetarium.png"
+    "id": "farm_station",
+    "gameId": "FarmStation",
+    "name": "Farm Station",
+    "image": "FarmStation.png",
+    "description": "Produces Micronutrient Fertilizer to increase Plant growth rates.\n\nAssigned Duplicants must possess the Crop Tending trait.\n\nThis building is a necessary component of the Greenhouse room."
   },
   {
-    "id": "wall_toilet",
-    "name": "Wall Toilet",
-    "image": "WallToilet.png"
+    "id": "farm_tile",
+    "gameId": "FarmTile",
+    "name": "Farm Tile",
+    "image": "FarmTile.png",
+    "description": "Grows one Plant from a Seed.\n\nCan be used as floor tile and rotated before construction."
   },
   {
-    "id": "wash_basin",
-    "name": "Wash Basin",
-    "image": "WashBasin.png"
+    "id": "fertilizer_synthesizer",
+    "gameId": "FertilizerMaker",
+    "name": "Fertilizer Synthesizer",
+    "image": "FertilizerSynthesizer.png",
+    "description": "Uses Polluted Water and Phosphorite to produce Fertilizer.",
+    "power_consumption": 120.0
   },
   {
-    "id": "water_cooler",
-    "name": "Water Cooler",
-    "image": "WaterCooler.png"
+    "id": "filter_gate",
+    "gameId": "LogicGateFILTER",
+    "name": "FILTER Gate",
+    "image": "FILTERGate.png",
+    "description": "Only lets a Green Signal through if the Input has received a Green Signal for longer than the selected filter time.\n\nWill continue outputting a Red Signal if the Green Signal did not last long enough."
   },
   {
-    "id": "water_sieve",
-    "name": "Water Sieve",
-    "image": "WaterSieve.png"
+    "id": "fire_pole",
+    "gameId": "FirePole",
+    "name": "Fire Pole",
+    "image": "FirePole.png",
+    "description": "Allows rapid Duplicant descent.\n\nSignificantly slows upward climbing."
   },
   {
-    "id": "wood_burner",
-    "name": "Wood Burner",
-    "image": "WoodBurner.png"
+    "id": "fish_feeder",
+    "gameId": "FishFeeder",
+    "name": "Fish Feeder",
+    "image": "FishFeeder.png",
+    "description": "Automatically dispenses stored Critter food into the area below.\n\nDispenses continuously as food is consumed."
   },
   {
-    "id": "wood_heater",
-    "name": "Wood Heater",
-    "image": "WoodHeater.png"
+    "id": "fish_pick_up",
+    "gameId": "FishPickUp",
+    "name": "Fish Pick-Up",
+    "image": "FishPickUp.png",
+    "description": "Ensures the prompt capture of aquatic Critters that exceed the maximum amount set.\n\nMonitoring and pick-up are limited to the specified species.\n\nMust be built above a Liquid pool."
   },
   {
-    "id": "power_control_station",
-    "name": "Power Control Station",
-    "image": "Power_Control_Station.png"
+    "id": "fish_release",
+    "gameId": "FishDeliveryPoint",
+    "name": "Fish Release",
+    "image": "FishRelease.png",
+    "description": "Releases trapped aquatic critters back into the world.\n\nCan be used multiple times."
+  },
+  {
+    "id": "fish_trap",
+    "gameId": "WaterTrap",
+    "name": "Fish Trap",
+    "image": "FishTrap.png",
+    "description": "Attracts and traps aquatic Critters.\n\nOnly Duplicants with the Critter Ranching I skill can arm this trap. It's reusable!"
+  },
+  {
+    "id": "flower_pot",
+    "gameId": "FlowerVase",
+    "name": "Flower Pot",
+    "image": "FlowerPot.png",
+    "description": "Houses a single Plant when sown with a Seed.\n\nIncreases Decor when in use, contributing to Morale."
+  },
+  {
+    "id": "forge_tools",
+    "gameId": "ForgeTools",
+    "name": "Forge Tools",
+    "image": "ForgeTools.png",
+    "description": "Increases the fabrication speed for compatible buildings placed nearby.\n\nThis building does not require Duplicant operation."
+  },
+  {
+    "id": "fossil_block",
+    "gameId": "FossilSculpture",
+    "name": "Fossil Block",
+    "image": "FossilBlock.png",
+    "description": "Majorly increases Decor, contributing to Morale.\n\nMust be sculpted by a Duplicant.",
+    "dlc": [
+      "DLC4_ID"
+    ]
+  },
+  {
+    "id": "gantry",
+    "gameId": "Gantry",
+    "name": "Gantry",
+    "image": "Gantry.png",
+    "description": "Provides scaffolding across rocket modules to allow Duplicant access.",
+    "power_consumption": 1200.0
+  },
+  {
+    "id": "gas_bridge",
+    "gameId": "GasConduitBridge",
+    "name": "Gas Bridge",
+    "image": "GasBridge.png",
+    "description": "Runs one Gas Pipe section over another without joining them.\n\nCan be run through wall and floor tile."
+  },
+  {
+    "id": "gas_element_sensor",
+    "gameId": "LogicElementSensorGas",
+    "name": "Gas Element Sensor",
+    "image": "GasElementSensor.png",
+    "description": "Sends a Green Signal when the selected Gas is detected on this sensor's tile.\n\nSends a Red Signal when the selected Gas is not present."
+  },
+  {
+    "id": "gas_filter",
+    "gameId": "GasFilter",
+    "name": "Gas Filter",
+    "image": "GasFilter.png",
+    "description": "Sieves one Gas from the air, sending it into a dedicated Pipe.",
+    "power_consumption": 120.0
+  },
+  {
+    "id": "gas_intake_fitting",
+    "gameId": "RocketInteriorGasInput",
+    "name": "Gas Intake Fitting",
+    "image": "GasIntakeFitting.png",
+    "description": "Allows Gases to be pumped into rocket storage via Pipes.\n\nSends gas to the first Rocket Module with available space.\n\nMust be built within the interior of a Rocket Module.",
+    "dlc": [
+      "EXPANSION1_ID"
+    ]
+  },
+  {
+    "id": "gas_meter_valve",
+    "gameId": "GasLimitValve",
+    "name": "Gas Meter Valve",
+    "image": "GasMeterValve.png",
+    "description": "Connects to an Automation grid to automatically turn Gas flow off when the specified amount has passed through it.",
+    "power_consumption": 10.0
+  },
+  {
+    "id": "gas_output_fitting",
+    "gameId": "RocketInteriorGasOutput",
+    "name": "Gas Output Fitting",
+    "image": "GasOutputFitting.png",
+    "description": "Allows Gases to be drawn from rocket storage via Pipes.\n\nDraws gas from the first Rocket Module with the requested material.\n\nMust be built within the interior of a Rocket Module.",
+    "power_consumption": 60.0,
+    "dlc": [
+      "EXPANSION1_ID"
+    ]
+  },
+  {
+    "id": "gas_pipe",
+    "gameId": "GasConduit",
+    "name": "Gas Pipe",
+    "image": "GasPipe.png",
+    "description": "Carries Gas between Outputs and Intakes.\n\nCan be run through wall and floor tile."
+  },
+  {
+    "id": "gas_pipe_element_sensor",
+    "gameId": "GasConduitElementSensor",
+    "name": "Gas Pipe Element Sensor",
+    "image": "GasPipeElementSensor.png",
+    "description": "Sends a Green Signal when the selected Gas is detected within a pipe."
+  },
+  {
+    "id": "gas_pipe_germ_sensor",
+    "gameId": "GasConduitDiseaseSensor",
+    "name": "Gas Pipe Germ Sensor",
+    "image": "GasPipeGermSensor.png",
+    "description": "Sends a Green Signal or a Red Signal based on the internal Germ count of the pipe."
+  },
+  {
+    "id": "gas_pipe_thermo_sensor",
+    "gameId": "GasConduitTemperatureSensor",
+    "name": "Gas Pipe Thermo Sensor",
+    "image": "GasPipeThermoSensor.png",
+    "description": "Sends a Green Signal or a Red Signal when pipe contents enter the chosen Temperature range."
+  },
+  {
+    "id": "gas_pump",
+    "gameId": "GasPump",
+    "name": "Gas Pump",
+    "image": "GasPump.png",
+    "description": "Draws in Gas and runs it through Pipes.\n\nMust be immersed in Gas.",
+    "power_consumption": 240.0
+  },
+  {
+    "id": "gas_range",
+    "gameId": "GourmetCookingStation",
+    "name": "Gas Range",
+    "image": "GasRange.png",
+    "description": "Cooks a wide variety of quality Foods.\n\nDuplicants will not fabricate items unless recipes are queued.",
+    "power_consumption": 240.0
+  },
+  {
+    "id": "gas_reservoir",
+    "gameId": "GasReservoir",
+    "name": "Gas Reservoir",
+    "image": "GasReservoir.png",
+    "description": "Stores any Gas resources piped into it."
+  },
+  {
+    "id": "gas_rocket_port_loader",
+    "gameId": "ModularLaunchpadPortGas",
+    "name": "Gas Rocket Port Loader",
+    "image": "GasRocketPortLoader.png",
+    "description": "Loads Gases to the storage of a linked rocket.\n\nAutomatically links when built to the side of a Rocket Platform or another Rocket Port.\n\nUses the gas filters set on the rocket's cargo bays.",
+    "power_consumption": 240.0,
+    "dlc": [
+      "EXPANSION1_ID"
+    ]
+  },
+  {
+    "id": "gas_rocket_port_unloader",
+    "gameId": "ModularLaunchpadPortGasUnloader",
+    "name": "Gas Rocket Port Unloader",
+    "image": "GasRocketPortUnloader.png",
+    "description": "Unloads Gases from the storage of a linked rocket.\n\nAutomatically links when built to the side of a Rocket Platform or another Rocket Port.\n\nUses the gas filters set on this unloader.",
+    "power_consumption": 240.0,
+    "dlc": [
+      "EXPANSION1_ID"
+    ]
+  },
+  {
+    "id": "gas_shutoff",
+    "gameId": "GasLogicValve",
+    "name": "Gas Shutoff",
+    "image": "GasShutoff.png",
+    "description": "Connects to an Automation grid to automatically turn Gas flow on or off.",
+    "power_consumption": 10.0
+  },
+  {
+    "id": "gas_valve",
+    "gameId": "GasValve",
+    "name": "Gas Valve",
+    "image": "GasValve.png",
+    "description": "Controls the Gas volume permitted through Pipes."
+  },
+  {
+    "id": "gas_vent",
+    "gameId": "GasVent",
+    "name": "Gas Vent",
+    "image": "GasVent.png",
+    "description": "Releases Gas from Gas Pipes."
+  },
+  {
+    "id": "geotuner",
+    "gameId": "GeoTuner",
+    "name": "Geotuner",
+    "image": "Geotuner.png",
+    "description": "Increases the Temperature and output of an analyzed Geyser.\n\nMultiple Geotuners can be directed at a single Geyser anywhere on an asteroid.",
+    "power_consumption": 120.0
+  },
+  {
+    "id": "germ_sensor",
+    "gameId": "LogicDiseaseSensor",
+    "name": "Germ Sensor",
+    "image": "GermSensor.png",
+    "description": "Sends a Green Signal or a Red Signal based on quantity of surrounding Germs."
+  },
+  {
+    "id": "glass_backwall",
+    "gameId": "GlassExteriorWall",
+    "name": "Glass Backwall",
+    "image": "GlassBackwall.png",
+    "description": "Prevents Gas and Liquid loss in space.\n\nBuilds a transparent backwall behind buildings.\n\nProvides higher Decor than standard drywall.",
+    "dlc": [
+      "DLC5_ID"
+    ]
+  },
+  {
+    "id": "glass_forge",
+    "gameId": "GlassForge",
+    "name": "Glass Forge",
+    "image": "GlassForge.png",
+    "description": "Produces Molten Glass from raw Sand.\n\nOutputs High Temperature Liquid.\n\nDuplicants will not fabricate items unless recipes are queued.",
+    "power_consumption": 1200.0
+  },
+  {
+    "id": "glass_jelly_ceiling_light",
+    "gameId": "GlassCeilingLight",
+    "name": "Glass Jelly Ceiling Light",
+    "image": "GlassJellyCeilingLight.png",
+    "description": "Provides Light when Powered.\n\nIncreases Duplicant workspeed within light radius.",
+    "power_consumption": 50.0,
+    "dlc": [
+      "DLC5_ID"
+    ]
+  },
+  {
+    "id": "brackwax_gleaner",
+    "gameId": "MilkFatSeparator",
+    "name": "Gleaner",
+    "image": "BrackwaxGleaner.png",
+    "description": "Refines Brackene into Brine and Brackwax, and Ovolene into Caviar and Mucin.",
+    "power_consumption": 480.0
+  },
+  {
+    "id": "grooming_station",
+    "gameId": "RanchStation",
+    "name": "Grooming Station",
+    "image": "GroomingStation.png",
+    "description": "Allows the assigned Rancher to care for and gradually tame Critters.\n\nAssigned Duplicants must possess the Critter Ranching skill."
   },
   {
     "id": "gunk_extractor",
+    "gameId": "GunkEmptier",
     "name": "Gunk Extractor",
-    "image": "Gunk_Extractor.png"
+    "image": "Gunk_Extractor.png",
+    "description": "Cleanses stale Gunk build-up from Duplicants' bionic parts.",
+    "dlc": [
+      "DLC3_ID"
+    ]
   },
   {
-    "id": "plywood_press",
-    "name": "Plywood Press",
-    "image": "Plywood_Press.png"
+    "id": "hammer",
+    "gameId": "LogicHammer",
+    "name": "Hammer",
+    "image": "Hammer.png",
+    "description": "In its default orientation, the hammer strikes the building to the left when it receives a Green Signal.\n\nEach building has a unique sound when struck by the hammer.\n\nThe hammer does no damage when it strikes.",
+    "power_consumption": 60.0
   },
   {
-    "id": "soldering_station",
-    "name": "Soldering Station",
-    "image": "Soldering_Station.png"
+    "id": "hand_sanitizer",
+    "gameId": "HandSanitizer",
+    "name": "Hand Sanitizer",
+    "image": "HandSanitizer.png",
+    "description": "Removes most Germs from Duplicants.\n\nGerm-covered Duplicants use Hand Sanitizers when passing by in the selected direction."
   },
   {
-    "id": "smoker",
-    "name": "Smoker",
-    "image": "Smoker.png"
+    "id": "hanging_fossil_block",
+    "gameId": "CeilingFossilSculpture",
+    "name": "Hanging Fossil Block",
+    "image": "HangingFossilBlock.png",
+    "description": "Majorly increases Decor, contributing to Morale.\n\nMust be sculpted by a Duplicant.",
+    "dlc": [
+      "DLC4_ID"
+    ]
+  },
+  {
+    "id": "hanging_pot",
+    "gameId": "FlowerVaseHanging",
+    "name": "Hanging Pot",
+    "image": "HangingPot.png",
+    "description": "Houses a single Plant when sown with a Seed.\n\nIncreases Decor when in use, contributing to Morale.\n\nMust be hung from a ceiling."
+  },
+  {
+    "id": "heavi_watt_conductive_joint_plate",
+    "gameId": "WireRefinedBridgeHighWattage",
+    "name": "Heavi-Watt Conductive Joint Plate",
+    "image": "HeaviWattConductiveJointPlate.png",
+    "description": "Carries more Wattage than a regular Heavi-Watt Joint Plate without overloading.\n\nAllows Heavi-Watt Wire to be run through wall and floor tile."
+  },
+  {
+    "id": "heavi_watt_conductive_wire",
+    "gameId": "WireRefinedHighWattage",
+    "name": "Heavi-Watt Conductive Wire",
+    "image": "HeaviWattConductiveWire.png",
+    "description": "Carries more Wattage than regular Wire without overloading.\n\nCannot be run through wall and floor tile."
+  },
+  {
+    "id": "heavi_watt_joint_plate",
+    "gameId": "WireBridgeHighWattage",
+    "name": "Heavi-Watt Joint Plate",
+    "image": "HeaviWattJointPlate.png",
+    "description": "Allows Heavi-Watt Wire to be run through wall and floor tile.\n\nFunctions as regular tile."
+  },
+  {
+    "id": "heavi_watt_wire",
+    "gameId": "HighWattageWire",
+    "name": "Heavi-Watt Wire",
+    "image": "HeaviWattWire.png",
+    "description": "Carries more Wattage than regular Wire without overloading.\n\nCannot be run through wall and floor tile."
+  },
+  {
+    "id": "high_pressure_gas_vent",
+    "gameId": "GasVentHighPressure",
+    "name": "High Pressure Gas Vent",
+    "image": "HighPressureGasVent.png",
+    "description": "Releases Gas from Gas Pipes into high pressure locations."
+  },
+  {
+    "id": "hot_tub",
+    "gameId": "HotTub",
+    "name": "Hot Tub",
+    "image": "HotTub.png",
+    "description": "Requires Pipes to and from tub and Power to run the jets.\n\nWater must be a comfortable temperature and will cool rapidly.\n\nIncreases Duplicant Morale and leaves them feeling deliciously warm.",
+    "power_consumption": 240.0
+  },
+  {
+    "id": "hydro_sensor",
+    "gameId": "LogicPressureSensorLiquid",
+    "name": "Hydro Sensor",
+    "image": "HydroSensor.png",
+    "description": "Sends a Green Signal or a Red Signal when Liquid pressure enters the chosen range.\n\nMust be submerged in Liquid."
+  },
+  {
+    "id": "hydrogen_engine",
+    "gameId": "HydrogenEngineCluster",
+    "name": "Hydrogen Engine",
+    "image": "HydrogenEngine.png",
+    "description": "Burns Liquid Hydrogen to propel rockets for long-range space exploration.\n\nHydrogen Engines have the same generous height restrictions as Petroleum Engines but are slightly faster.\n\nEngine must be built via Rocket Platform, and requires an oxidizer tank.\n\nOnce the engine has been built, more rocket modules can be added.",
+    "power_generation": 600.0,
+    "dlc": [
+      "EXPANSION1_ID"
+    ]
+  },
+  {
+    "id": "hydrogen_generator",
+    "gameId": "HydrogenGenerator",
+    "name": "Hydrogen Generator",
+    "image": "HydrogenGenerator.png",
+    "description": "Converts Hydrogen Gas into electrical Power.",
+    "power_generation": 800.0
+  },
+  {
+    "id": "hydroponic_farm",
+    "gameId": "HydroponicFarm",
+    "name": "Hydroponic Farm",
+    "image": "HydroponicFarm.png",
+    "description": "Grows one Plant from a Seed.\n\nCan be used as floor tile and rotated before construction.\n\nSome plants must be irrigated through Liquid Piping."
+  },
+  {
+    "id": "ice_block",
+    "gameId": "IceSculpture",
+    "name": "Ice Block",
+    "image": "IceBlock.png",
+    "description": "Majorly increases Decor, contributing to Morale.\n\nMust be sculpted by a Duplicant."
+  },
+  {
+    "id": "ice_liquefier",
+    "gameId": "IceKettle",
+    "name": "Ice Liquefier",
+    "image": "IceLiquefier.png",
+    "description": "Consumes Wood to melt Ice into Water, which can be bottled for transport.",
+    "dlc": [
+      "DLC2_ID"
+    ]
+  },
+  {
+    "id": "ice_maker",
+    "gameId": "IceMachine",
+    "name": "Ice Maker",
+    "image": "IceMaker.png",
+    "description": "Converts Water into Ice or Snow.",
+    "power_consumption": 240.0
+  },
+  {
+    "id": "ice_e_fan",
+    "gameId": "IceCooledFan",
+    "name": "Ice-E Fan",
+    "image": "IceEFan.png",
+    "description": "Uses Ice to dissipate a small amount of the Heat."
+  },
+  {
+    "id": "incubator",
+    "gameId": "EggIncubator",
+    "name": "Incubator",
+    "image": "Incubator.png",
+    "description": "Incubates Critter eggs until ready to hatch.\n\nAssigned Duplicants must possess the Critter Ranching skill.",
+    "power_consumption": 240.0
+  },
+  {
+    "id": "insulated_conductive_wire",
+    "gameId": "WireRubber",
+    "name": "Insulated Conductive Wire",
+    "image": "InsulatedConductiveWire.png",
+    "description": "Carries more Wattage than a regular Conductive Wire without overloading.\n\nCan be run through wall and floor tile."
+  },
+  {
+    "id": "insulated_conductive_wire_bridge",
+    "gameId": "WireRubberBridge",
+    "name": "Insulated Conductive Wire Bridge",
+    "image": "InsulatedConductiveWireBridge.png",
+    "description": "Carries more Wattage than a regular Conductive Wire Bridge without overloading.\n\nRuns one wire section over another without joining them.\n\nCan be run through wall and floor tile."
+  },
+  {
+    "id": "insulated_door",
+    "gameId": "InsulatedDoor",
+    "name": "Insulated Door",
+    "image": "InsulatedDoor.png",
+    "description": "Significantly reduces Temperature exchange between climate-controlled rooms."
+  },
+  {
+    "id": "insulated_gas_pipe",
+    "gameId": "InsulatedGasConduit",
+    "name": "Insulated Gas Pipe",
+    "image": "InsulatedGasPipe.png",
+    "description": "Carries Gas with minimal change in Temperature.\n\nCan be run through wall and floor tile."
+  },
+  {
+    "id": "insulated_liquid_pipe",
+    "gameId": "InsulatedLiquidConduit",
+    "name": "Insulated Liquid Pipe",
+    "image": "InsulatedLiquidPipe.png",
+    "description": "Carries Liquid with minimal change in Temperature.\n\nCan be run through wall and floor tile."
+  },
+  {
+    "id": "insulated_tile",
+    "gameId": "InsulationTile",
+    "name": "Insulated Tile",
+    "image": "InsulatedTile.png",
+    "description": "Used to build the walls and floors of rooms.\n\nReduces Heat transfer between walls, retaining ambient heat in an area."
+  },
+  {
+    "id": "interplanetary_launcher",
+    "gameId": "RailGun",
+    "name": "Interplanetary Launcher",
+    "image": "InterplanetaryLauncher.png",
+    "description": "Launches Interplanetary Payloads between Planetoids.\n\nPayloads can contain Solid, Liquid, or Gas materials.\n\nCannot transport Duplicants.",
+    "power_consumption": 240.0,
+    "dlc": [
+      "EXPANSION1_ID"
+    ]
+  },
+  {
+    "id": "jet_suit_checkpoint",
+    "gameId": "JetSuitMarker",
+    "name": "Jet Suit Checkpoint",
+    "image": "JetSuitCheckpoint.png",
+    "description": "Marks a threshold where Duplicants must change into or out of Jet Suits.\n\nMust be built next to a Jet Suit Dock.\n\nCan be rotated before construction."
+  },
+  {
+    "id": "jet_suit_dock",
+    "gameId": "JetSuitLocker",
+    "name": "Jet Suit Dock",
+    "image": "JetSuitDock.png",
+    "description": "Stores Jet Suits and refuels them with Oxygen and Combustible Liquid.\n\nEmpties suits of Polluted Water.\n\nBuild next to a Jet Suit Checkpoint to make Duplicants change into suits when passing by.",
+    "power_consumption": 120.0
+  },
+  {
+    "id": "juicer",
+    "gameId": "Juicer",
+    "name": "Juicer",
+    "image": "Juicer.png",
+    "description": "Provides refreshment for Duplicants on their breaks.\n\nDrinking juice increases Duplicant Morale.",
+    "power_consumption": 120.0
+  },
+  {
+    "id": "jukebot",
+    "gameId": "Phonobox",
+    "name": "Jukebot",
+    "image": "Jukebot.png",
+    "description": "Plays music for Duplicants to dance to on their breaks.\n\nIncreases Duplicant Morale.",
+    "power_consumption": 960.0
+  },
+  {
+    "id": "jumbo_battery",
+    "gameId": "BatteryMedium",
+    "name": "Jumbo Battery",
+    "image": "JumboBattery.png",
+    "description": "Stores Power from generators, then provides that power to buildings.\n\nSlightly loses charge over time."
+  },
+  {
+    "id": "kiln",
+    "gameId": "Kiln",
+    "name": "Kiln",
+    "image": "Kiln.png",
+    "description": "Fires Clay to produce Ceramic, and Coal or Wood to produce Refined Carbon.\n\nDuplicants will not fabricate items unless recipes are queued."
+  },
+  {
+    "id": "ladder",
+    "gameId": "Ladder",
+    "name": "Ladder",
+    "image": "Ladder.png",
+    "description": "Enables vertical mobility for Duplicants."
+  },
+  {
+    "id": "ladder_bed",
+    "gameId": "LadderBed",
+    "name": "Ladder Bed",
+    "image": "LadderBed.png",
+    "description": "Provides a sleeping area for one Duplicant and also functions as a ladder.\n\nDuplicants will automatically sleep in their assigned beds at night.",
+    "dlc": [
+      "EXPANSION1_ID"
+    ]
+  },
+  {
+    "id": "lamp",
+    "gameId": "FloorLamp",
+    "name": "Lamp",
+    "image": "Lamp.png",
+    "description": "Provides Light when Powered.\n\nIncreases Duplicant workspeed within light radius.",
+    "power_consumption": 8.0
+  },
+  {
+    "id": "landscape_canvas",
+    "gameId": "CanvasWide",
+    "name": "Landscape Canvas",
+    "image": "LandscapeCanvas.png",
+    "description": "Moderately increases Decor, contributing to Morale.\n\nMust be painted by a Duplicant."
+  },
+  {
+    "id": "large_discharger",
+    "gameId": "LargeElectrobankDischarger",
+    "name": "Large Discharger",
+    "image": "Large_Discharger.png",
+    "description": "Efficiently converts stored energy from Power Banks into power for connected buildings.",
+    "power_generation": 480.0,
+    "dlc": [
+      "DLC3_ID"
+    ]
+  },
+  {
+    "id": "large_power_transformer",
+    "gameId": "PowerTransformer",
+    "name": "Large Power Transformer",
+    "image": "LargePowerTransformer.png",
+    "description": "Limits Power flowing through the Transformer to 4 kW.\n\nConnect Batteries on the large side to act as a valve and prevent Wires from drawing more than 4 kW.\n\nCan be rotated before construction.",
+    "power_generation": 4000.0
+  },
+  {
+    "id": "large_sculpting_block",
+    "gameId": "Sculpture",
+    "name": "Large Sculpting Block",
+    "image": "LargeSculptingBlock.png",
+    "description": "Moderately increases Decor, contributing to Morale.\n\nMust be sculpted by a Duplicant."
+  },
+  {
+    "id": "lavatory",
+    "gameId": "FlushToilet",
+    "name": "Lavatory",
+    "image": "Lavatory.png",
+    "description": "Gives Duplicants a place to relieve themselves.\n\nSpreads very few Germs."
+  },
+  {
+    "id": "lead_suit_checkpoint",
+    "gameId": "LeadSuitMarker",
+    "name": "Lead Suit Checkpoint",
+    "image": "LeadSuitCheckpoint.png",
+    "description": "Marks a threshold where Duplicants must change into or out of Lead Suits.\n\nMust be built next to a Lead Suit Dock\n\nCan be rotated before construction.",
+    "dlc": [
+      "EXPANSION1_ID"
+    ]
+  },
+  {
+    "id": "lead_suit_dock",
+    "gameId": "LeadSuitLocker",
+    "name": "Lead Suit Dock",
+    "image": "LeadSuitDock.png",
+    "description": "Stores Lead Suits and refuels them with Oxygen.\n\nEmpties suits of Polluted Water.\n\nBuild next to a Lead Suit Checkpoint to make Duplicants change into suits when passing by.",
+    "power_consumption": 120.0,
+    "dlc": [
+      "EXPANSION1_ID"
+    ]
+  },
+  {
+    "id": "light_sensor",
+    "gameId": "LogicLightSensor",
+    "name": "Light Sensor",
+    "image": "LightSensor.png",
+    "description": "Sends a Green Signal or a Red Signal when ambient Brightness enters the chosen range."
+  },
+  {
+    "id": "liquid_bridge",
+    "gameId": "LiquidConduitBridge",
+    "name": "Liquid Bridge",
+    "image": "LiquidBridge.png",
+    "description": "Runs one Liquid Pipe section over another without joining them.\n\nCan be run through wall and floor tile."
+  },
+  {
+    "id": "liquid_element_sensor",
+    "gameId": "LogicElementSensorLiquid",
+    "name": "Liquid Element Sensor",
+    "image": "LiquidElementSensor.png",
+    "description": "Sends a Green Signal when the selected Liquid is detected on this sensor's tile.\n\nSends a Red Signal when the selected Liquid is not present."
+  },
+  {
+    "id": "liquid_filter",
+    "gameId": "LiquidFilter",
+    "name": "Liquid Filter",
+    "image": "LiquidFilter.png",
+    "description": "Sieves one Liquid out of a mix, sending it into a dedicated Filtered Output Pipe.\n\nCan only filter one liquid type at a time.",
+    "power_consumption": 120.0
+  },
+  {
+    "id": "liquid_intake_fitting",
+    "gameId": "RocketInteriorLiquidInput",
+    "name": "Liquid Intake Fitting",
+    "image": "LiquidIntakeFitting.png",
+    "description": "Allows Liquids to be pumped into rocket storage via Pipes.\n\nSends liquid to the first Rocket Module with available space.\n\nMust be built within the interior of a Rocket Module.",
+    "dlc": [
+      "EXPANSION1_ID"
+    ]
+  },
+  {
+    "id": "liquid_meter_valve",
+    "gameId": "LiquidLimitValve",
+    "name": "Liquid Meter Valve",
+    "image": "LiquidMeterValve.png",
+    "description": "Connects to an Automation grid to automatically turn Liquid flow off when the specified amount has passed through it.",
+    "power_consumption": 10.0
+  },
+  {
+    "id": "liquid_output_fitting",
+    "gameId": "RocketInteriorLiquidOutput",
+    "name": "Liquid Output Fitting",
+    "image": "LiquidOutputFitting.png",
+    "description": "Allows Liquids to be drawn from rocket storage via Pipes.\n\nDraws liquid from the first Rocket Module with the requested material.\n\nMust be built within the interior of a Rocket Module.",
+    "power_consumption": 60.0,
+    "dlc": [
+      "EXPANSION1_ID"
+    ]
+  },
+  {
+    "id": "liquid_pipe",
+    "gameId": "LiquidConduit",
+    "name": "Liquid Pipe",
+    "image": "LiquidPipe.png",
+    "description": "Carries Liquid between Outputs and Intakes.\n\nCan be run through wall and floor tile."
+  },
+  {
+    "id": "liquid_pipe_element_sensor",
+    "gameId": "LiquidConduitElementSensor",
+    "name": "Liquid Pipe Element Sensor",
+    "image": "LiquidPipeElementSensor.png",
+    "description": "Sends a Green Signal when the selected Liquid is detected within a pipe."
+  },
+  {
+    "id": "liquid_pipe_germ_sensor",
+    "gameId": "LiquidConduitDiseaseSensor",
+    "name": "Liquid Pipe Germ Sensor",
+    "image": "LiquidPipeGermSensor.png",
+    "description": "Sends a Green Signal or a Red Signal based on the internal Germ count of the pipe."
+  },
+  {
+    "id": "liquid_pipe_thermo_sensor",
+    "gameId": "LiquidConduitTemperatureSensor",
+    "name": "Liquid Pipe Thermo Sensor",
+    "image": "LiquidPipeThermoSensor.png",
+    "description": "Sends a Green Signal or a Red Signal when pipe contents enter the chosen Temperature range."
+  },
+  {
+    "id": "liquid_pump",
+    "gameId": "LiquidPump",
+    "name": "Liquid Pump",
+    "image": "LiquidPump.png",
+    "description": "Draws in Liquid and runs it through Pipes.\n\nMust be submerged in Liquid.",
+    "power_consumption": 240.0
+  },
+  {
+    "id": "liquid_reservoir",
+    "gameId": "LiquidReservoir",
+    "name": "Liquid Reservoir",
+    "image": "LiquidReservoir.png",
+    "description": "Stores any Liquid resources piped into it."
+  },
+  {
+    "id": "liquid_rocket_port_loader",
+    "gameId": "ModularLaunchpadPortLiquid",
+    "name": "Liquid Rocket Port Loader",
+    "image": "LiquidRocketPortLoader.png",
+    "description": "Loads Liquids to the storage of a linked rocket.\n\nAutomatically links when built to the side of a Rocket Platform or another Rocket Port.\n\nUses the liquid filters set on the rocket's cargo bays.",
+    "power_consumption": 240.0,
+    "dlc": [
+      "EXPANSION1_ID"
+    ]
+  },
+  {
+    "id": "liquid_rocket_port_unloader",
+    "gameId": "ModularLaunchpadPortLiquidUnloader",
+    "name": "Liquid Rocket Port Unloader",
+    "image": "LiquidRocketPortUnloader.png",
+    "description": "Unloads Liquids from the storage of a linked rocket.\n\nAutomatically links when built to the side of a Rocket Platform or another Rocket Port.\n\nUses the liquid filters set on this unloader.",
+    "power_consumption": 240.0,
+    "dlc": [
+      "EXPANSION1_ID"
+    ]
+  },
+  {
+    "id": "liquid_shutoff",
+    "gameId": "LiquidLogicValve",
+    "name": "Liquid Shutoff",
+    "image": "LiquidShutoff.png",
+    "description": "Connects to an Automation grid to automatically turn Liquid flow on or off.",
+    "power_consumption": 10.0
+  },
+  {
+    "id": "liquid_tepidizer",
+    "gameId": "LiquidHeater",
+    "name": "Liquid Tepidizer",
+    "image": "LiquidTepidizer.png",
+    "description": "Warms large bodies of Liquid.\n\nMust be fully submerged.",
+    "power_consumption": 960.0
+  },
+  {
+    "id": "liquid_valve",
+    "gameId": "LiquidValve",
+    "name": "Liquid Valve",
+    "image": "LiquidValve.png",
+    "description": "Controls the Liquid volume permitted through Pipes."
+  },
+  {
+    "id": "liquid_vent",
+    "gameId": "LiquidVent",
+    "name": "Liquid Vent",
+    "image": "LiquidVent.png",
+    "description": "Releases Liquid from Liquid Pipes."
+  },
+  {
+    "id": "lubrication_station",
+    "gameId": "OilChanger",
+    "name": "Lubrication Station",
+    "image": "Lubrication_Station.png",
+    "description": "Uses Gear Oil to keep Duplicants' bionic parts running smoothly.",
+    "power_consumption": 120.0,
+    "dlc": [
+      "DLC3_ID"
+    ]
+  },
+  {
+    "id": "manual_airlock",
+    "gameId": "ManualPressureDoor",
+    "name": "Manual Airlock",
+    "image": "ManualAirlock.png",
+    "description": "Blocks Liquid and Gas flow, maintaining pressure between areas.\n\nWild Critters cannot pass through doors."
+  },
+  {
+    "id": "manual_generator",
+    "gameId": "ManualGenerator",
+    "name": "Manual Generator",
+    "image": "ManualGenerator.png",
+    "description": "Converts manual labor into electrical Power.",
+    "power_generation": 400.0
+  },
+  {
+    "id": "manual_radbolt_generator",
+    "gameId": "ManualHighEnergyParticleSpawner",
+    "name": "Manual Radbolt Generator",
+    "image": "ManualRadboltGenerator.png",
+    "description": "Refines radioactive ores to generate Radbolts.\n\nEmits generated Radbolts in the direction of my choosing.",
+    "dlc": [
+      "EXPANSION1_ID"
+    ]
+  },
+  {
+    "id": "marble_block",
+    "gameId": "MarbleSculpture",
+    "name": "Marble Block",
+    "image": "MarbleBlock.png",
+    "description": "Majorly increases Decor, contributing to Morale.\n\nMust be sculpted by a Duplicant."
+  },
+  {
+    "id": "marine_drill",
+    "gameId": "UnderwaterVentDrill",
+    "name": "Marine Drill",
+    "image": "MarineDrill.png",
+    "description": "Removes mineral build-up from underwater vents to restore the flow of Gases.\n\nMust be built on top of a vent or fissure.",
+    "power_consumption": 960.0,
+    "dlc": [
+      "DLC5_ID"
+    ]
+  },
+  {
+    "id": "massage_table",
+    "gameId": "MassageTable",
+    "name": "Massage Table",
+    "image": "MassageTable.png",
+    "description": "Rapidly reduces Stress for the Duplicant user.\n\nDuplicants will automatically seek a massage table when Stress exceeds breaktime range.",
+    "power_consumption": 240.0
+  },
+  {
+    "id": "materials_study_terminal",
+    "gameId": "NuclearResearchCenter",
+    "name": "Materials Study Terminal",
+    "image": "MaterialsStudyTerminal.png",
+    "description": "Conducts Materials Science Research to unlock new technologies.\n\nConsumes Radbolts.\n\nAssigned Duplicants must possess the Applied Sciences Research skill.",
+    "power_consumption": 120.0,
+    "dlc": [
+      "EXPANSION1_ID"
+    ]
+  },
+  {
+    "id": "mechanical_surfboard",
+    "gameId": "MechanicalSurfboard",
+    "name": "Mechanical Surfboard",
+    "image": "MechanicalSurfboard.png",
+    "description": "Increases Duplicant Morale.\n\nSome Water gets splashed on the floor during use.",
+    "power_consumption": 480.0
+  },
+  {
+    "id": "mechanized_airlock",
+    "gameId": "PressureDoor",
+    "name": "Mechanized Airlock",
+    "image": "MechanizedAirlock.png",
+    "description": "Blocks Liquid and Gas flow, maintaining pressure between areas.\n\nFunctions as a Manual Airlock when no Power is available.\n\nWild Critters cannot pass through doors.",
+    "power_consumption": 120.0
+  },
+  {
+    "id": "memory_toggle",
+    "gameId": "LogicMemory",
+    "name": "Memory Toggle",
+    "image": "MemoryToggle.png",
+    "description": "Contains an internal Memory, and will output whatever signal is stored in that Memory.\n\nSignals sent to the Inputs only affect the Memory, and do not pass through to the Output. \n\nSending a Green Signal to the Set Port (S) will set the memory to Green. \n\nSending a Green Signal to the Reset Port (R) will reset the memory back to Red."
+  },
+  {
+    "id": "mercury_ceiling_light",
+    "gameId": "MercuryCeilingLight",
+    "name": "Mercury Ceiling Light",
+    "image": "MercuryCeilingLight.png",
+    "description": "Uses Mercury and Power to produce Light.\n\nLight reduces Duplicant stress and is required to grow certain plants.",
+    "power_consumption": 60.0,
+    "dlc": [
+      "DLC2_ID"
+    ]
+  },
+  {
+    "id": "mesh_tile",
+    "gameId": "MeshTile",
+    "name": "Mesh Tile",
+    "image": "MeshTile.png",
+    "description": "Used to build the walls and floors of rooms.\n\nDoes not obstruct Liquid or Gas flow."
+  },
+  {
+    "id": "mess_table",
+    "gameId": "DiningTable",
+    "name": "Mess Table",
+    "image": "MessTable.png",
+    "description": "Gives one Duplicant a place to eat.\n\nDuplicants will automatically eat at their assigned table when hungry."
+  },
+  {
+    "id": "metal_block",
+    "gameId": "MetalSculpture",
+    "name": "Metal Block",
+    "image": "MetalBlock.png",
+    "description": "Majorly increases Decor, contributing to Morale.\n\nMust be sculpted by a Duplicant."
+  },
+  {
+    "id": "metal_refinery",
+    "gameId": "MetalRefinery",
+    "name": "Metal Refinery",
+    "image": "MetalRefinery.png",
+    "description": "Produces Refined Metals from raw Metal Ore.\n\nSignificantly Heats and outputs the Liquid piped into it.\n\nDuplicants will not fabricate items unless recipes are queued.",
+    "power_consumption": 1200.0
+  },
+  {
+    "id": "metal_tile",
+    "gameId": "MetalTile",
+    "name": "Metal Tile",
+    "image": "MetalTile.png",
+    "description": "Used to build the walls and floors of rooms.\n\nSignificantly increases Duplicant runspeed."
+  },
+  {
+    "id": "meteor_blaster",
+    "gameId": "MissileLauncher",
+    "name": "Meteor Blaster",
+    "image": "MeteorBlaster.png",
+    "description": "Fires explosive projectiles at incoming space objects to defend the colony from impact-related damage.\n\nProjectiles must be crafted at a Blastshot Maker.\n\nRange: 16 tiles horizontally, 32 tiles vertically.",
+    "power_consumption": 240.0
+  },
+  {
+    "id": "microbe_musher",
+    "gameId": "MicrobeMusher",
+    "name": "Microbe Musher",
+    "image": "MicrobeMusher.png",
+    "description": "Produces low quality Food using common ingredients.\n\nDuplicants will not fabricate items unless recipes are queued.",
+    "power_consumption": 240.0
+  },
+  {
+    "id": "milking_station",
+    "gameId": "MilkingStation",
+    "name": "Milking Station",
+    "image": "MilkingStation.png",
+    "description": "Allows Duplicants with the Critter Ranching II skill to milk Moos for  Brackene or  Biodiesel."
+  },
+  {
+    "id": "mini_fridge",
+    "gameId": "MiniFridge",
+    "name": "Mini Fridge",
+    "image": "MiniFridge.png",
+    "description": "Stores Food at an ideal Temperature to prevent spoilage.",
+    "power_consumption": 60.0,
+    "dlc": [
+      "DLC5_ID"
+    ]
+  },
+  {
+    "id": "mini_gas_pump",
+    "gameId": "GasMiniPump",
+    "name": "Mini Gas Pump",
+    "image": "MiniGasPump.png",
+    "description": "Draws in a small amount of Gas and runs it through Pipes.\n\nMust be immersed in Gas.",
+    "power_consumption": 60.0
+  },
+  {
+    "id": "mini_liquid_pump",
+    "gameId": "LiquidMiniPump",
+    "name": "Mini Liquid Pump",
+    "image": "MiniLiquidPump.png",
+    "description": "Draws in a small amount of Liquid and runs it through Pipes.\n\nMust be submerged in Liquid.",
+    "power_consumption": 60.0
+  },
+  {
+    "id": "mini_pod",
+    "gameId": "ExobaseHeadquarters",
+    "name": "Mini-Pod",
+    "image": "MiniPod.png",
+    "description": "A portable bioprinter that produces new Duplicants or care packages containing resources.\n\nOnly one Printing Pod or Mini-Pod is permitted per Planetoid.",
+    "dlc": [
+      "EXPANSION1_ID"
+    ]
+  },
+  {
+    "id": "mission_control_station",
+    "gameId": "MissionControlCluster",
+    "name": "Mission Control Station",
+    "image": "MissionControlStation.png",
+    "description": "Provides guidance data to rocket pilots within range, to improve rocket speed.\n\nMust be operated by a Duplicant with the Astronomy skill.\n\nRequires a clear line of sight to space in order to function.",
+    "power_consumption": 960.0,
+    "dlc": [
+      "EXPANSION1_ID"
+    ]
+  },
+  {
+    "id": "molecular_forge",
+    "gameId": "SupermaterialRefinery",
+    "name": "Molecular Forge",
+    "image": "MolecularForge.png",
+    "description": "Processes Rare Materials into advanced industrial goods.\n\nRare materials can be retrieved from space missions.\n\nDuplicants will not fabricate items unless recipes are queued.",
+    "power_consumption": 1600.0
+  },
+  {
+    "id": "monument_base",
+    "gameId": "MonumentBottom",
+    "name": "Monument Base",
+    "image": "MonumentBase.png",
+    "description": "Builds the bottom section of a Great Monument.\n\nCan be customized.\n\nA Great Monument must be built to achieve the Colonize Imperative."
+  },
+  {
+    "id": "monument_midsection",
+    "gameId": "MonumentMiddle",
+    "name": "Monument Midsection",
+    "image": "MonumentMidsection.png",
+    "description": "Builds the middle section of a Great Monument.\n\nCan be customized.\n\nA Great Monument must be built to achieve the Colonize Imperative."
+  },
+  {
+    "id": "monument_top",
+    "gameId": "MonumentTop",
+    "name": "Monument Top",
+    "image": "MonumentTop.png",
+    "description": "Builds the top section of a Great Monument.\n\nCan be customized.\n\nA Great Monument must be built to achieve the Colonize Imperative."
+  },
+  {
+    "id": "natural_gas_generator",
+    "gameId": "MethaneGenerator",
+    "name": "Natural Gas Generator",
+    "image": "NaturalGasGenerator.png",
+    "description": "Converts Natural Gas into electrical Power.\n\nProduces Carbon Dioxide and Polluted Water.",
+    "power_generation": 800.0
+  },
+  {
+    "id": "not_gate",
+    "gameId": "LogicGateNOT",
+    "name": "NOT Gate",
+    "image": "NOTGate.png",
+    "description": "Outputs a Green Signal if the Input is receiving a Red Signal.\n\nOutputs a Red Signal when its Input is receiving a Green Signal."
+  },
+  {
+    "id": "oil_refinery",
+    "gameId": "OilRefinery",
+    "name": "Oil Refinery",
+    "image": "OilRefinery.png",
+    "description": "Converts Crude Oil into Petroleum and Natural Gas.",
+    "power_consumption": 480.0
+  },
+  {
+    "id": "oil_well",
+    "gameId": "OilWellCap",
+    "name": "Oil Well",
+    "image": "OilWell.png",
+    "description": "Extracts Crude Oil using clean Water.\n\nMust be built atop an Oil Reservoir.",
+    "power_consumption": 240.0
+  },
+  {
+    "id": "or_gate",
+    "gameId": "LogicGateOR",
+    "name": "OR Gate",
+    "image": "ORGate.png",
+    "description": "Outputs a Green Signal if at least one of Input A OR Input B is receiving Green.\n\nOutputs a Red Signal when neither Input A or Input B are receiving Green."
+  },
+  {
+    "id": "orbital_data_collection_lab",
+    "gameId": "OrbitalResearchCenter",
+    "name": "Orbital Data Collection Lab",
+    "image": "OrbitalDataCollectionLab.png",
+    "description": "Creates Data Banks that can be consumed at a Virtual Planetarium to unlock new technologies.\n\nConsumes Plastic and Power.",
+    "power_consumption": 60.0,
+    "dlc": [
+      "EXPANSION1_ID"
+    ]
+  },
+  {
+    "id": "ore_scrubber",
+    "gameId": "OreScrubber",
+    "name": "Ore Scrubber",
+    "image": "OreScrubber.png",
+    "description": "Kills a significant amount of Germs present on Raw Ore."
+  },
+  {
+    "id": "outhouse",
+    "gameId": "Outhouse",
+    "name": "Outhouse",
+    "image": "Outhouse.png",
+    "description": "Gives Duplicants a place to relieve themselves.\n\nRequires no Piping.\n\nMust be periodically emptied of Polluted Dirt."
+  },
+  {
+    "id": "oxygen_diffuser",
+    "gameId": "MineralDeoxidizer",
+    "name": "Oxygen Diffuser",
+    "image": "OxygenDiffuser.png",
+    "description": "Converts large amounts of Algae into Oxygen.\n\nBecomes idle when the area reaches maximum pressure capacity.",
+    "power_consumption": 120.0
+  },
+  {
+    "id": "oxygen_mask_checkpoint",
+    "gameId": "OxygenMaskMarker",
+    "name": "Oxygen Mask Checkpoint",
+    "image": "OxygenMaskCheckpoint.png",
+    "description": "Marks a threshold where Duplicants must put on or take off an Oxygen Mask.\n\nMust be built next to an Oxygen Mask Dock.\n\nCan be rotated before construction."
+  },
+  {
+    "id": "oxygen_mask_dock",
+    "gameId": "OxygenMaskLocker",
+    "name": "Oxygen Mask Dock",
+    "image": "OxygenMaskDock.png",
+    "description": "Stores Oxygen Masks and refuels them with Oxygen.\n\nBuild next to an Oxygen Mask Checkpoint to make Duplicants put on masks when passing by."
+  },
+  {
+    "id": "oxylite_refinery",
+    "gameId": "OxyliteRefinery",
+    "name": "Oxylite Refinery",
+    "image": "OxyliteRefinery.png",
+    "description": "Synthesizes Oxylite using Oxygen and a small amount of Gold.",
+    "power_consumption": 1200.0
+  },
+  {
+    "id": "oxylite_sconce",
+    "gameId": "Oxysconce",
+    "name": "Oxylite Sconce",
+    "image": "OxyliteSconce.png",
+    "description": "Stores a small chunk of Oxylite which gradually releases Oxygen into the environment.",
+    "dlc": [
+      "DLC2_ID"
+    ]
+  },
+  {
+    "id": "park_sign",
+    "gameId": "ParkSign",
+    "name": "Park Sign",
+    "image": "ParkSign.png",
+    "description": "Classifies an area as a Park or Nature Reserve."
+  },
+  {
+    "id": "party_line_phone",
+    "gameId": "Telephone",
+    "name": "Party Line Phone",
+    "image": "PartyLinePhone.png",
+    "description": "Can be used by one Duplicant to chat with themselves or with other Duplicants in different locations.\n\nChatting increases Duplicant Morale.",
+    "power_consumption": 120.0,
+    "dlc": [
+      "EXPANSION1_ID"
+    ]
+  },
+  {
+    "id": "payload_opener",
+    "gameId": "RailGunPayloadOpener",
+    "name": "Payload Opener",
+    "image": "PayloadOpener.png",
+    "description": "Unpacks Interplanetary Payloads delivered by Duplicants.\n\nAutomatically separates Solid, Liquid, and Gas materials and distributes them to the appropriate systems.",
+    "power_consumption": 120.0,
+    "dlc": [
+      "EXPANSION1_ID"
+    ]
   },
   {
     "id": "peat_burner",
+    "gameId": "PeatGenerator",
     "name": "Peat Burner",
-    "image": "Peat_Burner.png"
+    "image": "Peat_Burner.png",
+    "description": "Burns Peat to produce electrical Power.\n\nProduces a small amount of Carbon Dioxide and Polluted Water.",
+    "power_generation": 480.0,
+    "dlc": [
+      "DLC4_ID"
+    ]
+  },
+  {
+    "id": "pedestal",
+    "gameId": "ItemPedestal",
+    "name": "Pedestal",
+    "image": "Pedestal.png",
+    "description": "Displays a single object, doubling its Decor value.\n\nObjects with negative Decor will gain some positive Decor when displayed."
+  },
+  {
+    "id": "petroleum_engine",
+    "gameId": "KeroseneEngineCluster",
+    "name": "Petroleum Engine",
+    "image": "PetroleumEngine.png",
+    "description": "Burns Petroleum to propel rockets for mid-range space exploration.\n\nPetroleum Engines have generous height restrictions, ideal for hauling many modules.\n\nEngine must be built via Rocket Platform, and requires an oxidizer tank. \n\nOnce the engine has been built, more rocket modules can be added.",
+    "power_generation": 480.0,
+    "dlc": [
+      "EXPANSION1_ID"
+    ]
+  },
+  {
+    "id": "petroleum_generator",
+    "gameId": "PetroleumGenerator",
+    "name": "Petroleum Generator",
+    "image": "PetroleumGenerator.png",
+    "description": "Converts Petroleum, Ethanol or Biodiesel into electrical Power.\n\nProduces Carbon Dioxide and Polluted Water.",
+    "power_generation": 2000.0
+  },
+  {
+    "id": "pitcher_pump",
+    "gameId": "LiquidPumpingStation",
+    "name": "Pitcher Pump",
+    "image": "PitcherPump.png",
+    "description": "Manually pumps Liquid into bottles for transport.\n\nDuplicants can only carry liquids that are bottled."
+  },
+  {
+    "id": "pixel_pack",
+    "gameId": "PixelPack",
+    "name": "Pixel Pack",
+    "image": "PixelPack.png",
+    "description": "Pixels can be designated a color when it receives a Green Signal and a different color when it receives a Red Signal.\n\nInput from an Automation Wire controls the whole strip. Input from an Automation Ribbon can control individual pixels on the strip.",
+    "power_consumption": 10.0
+  },
+  {
+    "id": "plant_pulverizer",
+    "gameId": "MilkPress",
+    "name": "Plant Pulverizer",
+    "image": "PlantPulverizer.png",
+    "description": "Crushes organic materials to extract liquids such as Brackene or Phyto Oil.\n\nBrackene can be used to refill the Critter Fountain."
+  },
+  {
+    "id": "planter_box",
+    "gameId": "PlanterBox",
+    "name": "Planter Box",
+    "image": "PlanterBox.png",
+    "description": "Grows one Plant from a Seed."
+  },
+  {
+    "id": "plastic_ladder",
+    "gameId": "LadderFast",
+    "name": "Plastic Ladder",
+    "image": "PlasticLadder.png",
+    "description": "Increases Duplicant climbing speed."
+  },
+  {
+    "id": "plastic_tile",
+    "gameId": "PlasticTile",
+    "name": "Plastic Tile",
+    "image": "PlasticTile.png",
+    "description": "Used to build the walls and floors of rooms.\n\nSignificantly increases Duplicant runspeed."
+  },
+  {
+    "id": "plywood_press",
+    "gameId": "FabricatedWoodMaker",
+    "name": "Plywood Press",
+    "image": "Plywood_Press.png",
+    "description": "Combines Resin and Plant Husk to create Plywood.",
+    "power_consumption": 480.0
+  },
+  {
+    "id": "pneumatic_door",
+    "gameId": "Door",
+    "name": "Pneumatic Door",
+    "image": "PneumaticDoor.png",
+    "description": "Encloses areas without blocking Liquid or Gas flow.\n\nWild Critters cannot pass through doors."
+  },
+  {
+    "id": "polymer_press",
+    "gameId": "Polymerizer",
+    "name": "Polymer Press",
+    "image": "PolymerPress.png",
+    "description": "Converts Plastic Monomers into raw Plastic.",
+    "power_consumption": 240.0
+  },
+  {
+    "id": "portrait_canvas",
+    "gameId": "CanvasTall",
+    "name": "Portrait Canvas",
+    "image": "PortraitCanvas.png",
+    "description": "Moderately increases Decor, contributing to Morale.\n\nMust be painted by a Duplicant."
+  },
+  {
+    "id": "power_bank_charger",
+    "gameId": "ElectrobankCharger",
+    "name": "Power Bank Charger",
+    "image": "Power_Bank_Charger.png",
+    "description": "Converts empty Eco Power Banks into fully charged units ready for reuse.",
+    "power_consumption": 480.0,
+    "dlc": [
+      "DLC3_ID"
+    ]
+  },
+  {
+    "id": "power_control_station",
+    "gameId": "PowerControlStation",
+    "name": "Power Control Station",
+    "image": "Power_Control_Station.png",
+    "description": "Produces Microchip to increase the Power output of generators.\n\nAssigned Duplicants must possess the Tune Up trait."
+  },
+  {
+    "id": "power_outlet_fitting",
+    "gameId": "RocketInteriorPowerPlug",
+    "name": "Power Outlet Fitting",
+    "image": "PowerOutletFitting.png",
+    "description": "Provides Power to connected buildings.\n\nPulls power from Battery Modules and Rocket Engines.\n\nMust be built within the interior of a Rocket Module.",
+    "dlc": [
+      "EXPANSION1_ID"
+    ]
+  },
+  {
+    "id": "power_shutoff",
+    "gameId": "LogicPowerRelay",
+    "name": "Power Shutoff",
+    "image": "PowerShutoff.png",
+    "description": "Connects to an Automation grid to automatically turn Power on or off.\n\nDoes not affect circuitry preceding the switch."
+  },
+  {
+    "id": "power_transformer",
+    "gameId": "PowerTransformerSmall",
+    "name": "Power Transformer",
+    "image": "PowerTransformer.png",
+    "description": "Limits Power flowing through the Transformer to 1000 W.\n\nConnect Batteries on the large side to act as a valve and prevent Wires from drawing more than 1000 W.\n\nCan be rotated before construction.",
+    "power_generation": 1000.0
+  },
+  {
+    "id": "radbolt_chamber",
+    "gameId": "HEPBattery",
+    "name": "Radbolt Chamber",
+    "image": "RadboltChamber.png",
+    "description": "Stores Radbolts in a high-energy state, ready for transport.\n\nRequires a Green Signal to release radbolts from storage when the Radbolt threshold is reached.\n\nRadbolts in storage will rapidly decay while this building is disabled.",
+    "power_consumption": 120.0,
+    "dlc": [
+      "EXPANSION1_ID"
+    ]
+  },
+  {
+    "id": "radbolt_engine",
+    "gameId": "HEPEngine",
+    "name": "Radbolt Engine",
+    "image": "RadboltEngine.png",
+    "description": "Injects Radbolts into a reaction chamber to propel rockets for long-range space exploration.\n\nRadbolt Engines are faster than Hydrogen Engines but with a more restrictive height allowance.\n\nEngine must be built via Rocket Platform. \n\nOnce the engine has been built, more rocket modules can be added.",
+    "dlc": [
+      "EXPANSION1_ID"
+    ]
+  },
+  {
+    "id": "radbolt_generator",
+    "gameId": "HighEnergyParticleSpawner",
+    "name": "Radbolt Generator",
+    "image": "RadboltGenerator.png",
+    "description": "Attracts nearby Radiation to generate Radbolts.\n\nEmits generated Radbolts in the direction of my choosing when the set Radbolt threshold is reached.\n\nRadbolts collected will gradually decay while this building is disabled.",
+    "power_consumption": 480.0,
+    "dlc": [
+      "EXPANSION1_ID"
+    ]
+  },
+  {
+    "id": "radbolt_joint_plate",
+    "gameId": "HEPBridgeTile",
+    "name": "Radbolt Joint Plate",
+    "image": "RadboltJointPlate.png",
+    "description": "Receives Radbolts from Radbolt Generators and directs them through walls. All other materials and elements will be blocked from passage.",
+    "dlc": [
+      "EXPANSION1_ID"
+    ]
+  },
+  {
+    "id": "radbolt_reflector",
+    "gameId": "HighEnergyParticleRedirector",
+    "name": "Radbolt Reflector",
+    "image": "RadboltReflector.png",
+    "description": "Receives and redirects Radbolts from Radbolt Generators.",
+    "dlc": [
+      "EXPANSION1_ID"
+    ]
+  },
+  {
+    "id": "radbolt_sensor",
+    "gameId": "LogicHEPSensor",
+    "name": "Radbolt Sensor",
+    "image": "RadboltSensor.png",
+    "description": "Sends a Green Signal or a Red Signal when Radbolts detected enters the chosen range.",
+    "dlc": [
+      "EXPANSION1_ID"
+    ]
+  },
+  {
+    "id": "radiant_gas_pipe",
+    "gameId": "GasConduitRadiant",
+    "name": "Radiant Gas Pipe",
+    "image": "RadiantGasPipe.png",
+    "description": "Carries Gas, allowing extreme Temperature exchange with the surrounding environment.\n\nCan be run through wall and floor tile."
+  },
+  {
+    "id": "radiant_liquid_pipe",
+    "gameId": "LiquidConduitRadiant",
+    "name": "Radiant Liquid Pipe",
+    "image": "RadiantLiquidPipe.png",
+    "description": "Carries Liquid, allowing extreme Temperature exchange with the surrounding environment.\n\nCan be run through wall and floor tile."
+  },
+  {
+    "id": "radiation_lamp",
+    "gameId": "RadiationLight",
+    "name": "Radiation Lamp",
+    "image": "RadiationLamp.png",
+    "description": "Emits Radiation when Powered that can be collected by a Radbolt Generator.",
+    "power_consumption": 60.0,
+    "dlc": [
+      "EXPANSION1_ID"
+    ]
+  },
+  {
+    "id": "radiation_sensor",
+    "gameId": "LogicRadiationSensor",
+    "name": "Radiation Sensor",
+    "image": "RadiationSensor.png",
+    "description": "Sends a Green Signal or a Red Signal when ambient Radiation enters the chosen range.",
+    "dlc": [
+      "EXPANSION1_ID"
+    ]
+  },
+  {
+    "id": "ration_box",
+    "gameId": "RationBox",
+    "name": "Ration Box",
+    "image": "RationBox.png",
+    "description": "Stores a small amount of Food.\n\nFood must be delivered to boxes by Duplicants."
+  },
+  {
+    "id": "refrigerator",
+    "gameId": "Refrigerator",
+    "name": "Refrigerator",
+    "image": "Refrigerator.png",
+    "description": "Stores Food at an ideal Temperature to prevent spoilage.",
+    "power_consumption": 120.0
+  },
+  {
+    "id": "rehydrator",
+    "gameId": "FoodRehydrator",
+    "name": "Rehydrator",
+    "image": "Rehydrator.png",
+    "description": "Restores moisture to convert shelf-stable packaged meals into edible Food.",
+    "power_consumption": 60.0
+  },
+  {
+    "id": "remote_controller",
+    "gameId": "RemoteWorkTerminal",
+    "name": "Remote Controller",
+    "image": "Remote_Controller.png",
+    "description": "Enables Duplicants to operate machinery remotely via a connected Remote Worker Dock.",
+    "power_consumption": 120.0,
+    "dlc": [
+      "DLC3_ID"
+    ]
+  },
+  {
+    "id": "remote_worker_dock",
+    "gameId": "RemoteWorkerDock",
+    "name": "Remote Worker Dock",
+    "image": "Remote_Worker_Dock.png",
+    "description": "Remote Worker Docks deploy automatons that operate machinery based on instructions received from a connected Remote Controller.\n\nMust be placed within range of its target building.",
+    "power_consumption": 120.0,
+    "dlc": [
+      "DLC3_ID"
+    ]
+  },
+  {
+    "id": "research_reactor",
+    "gameId": "NuclearReactor",
+    "name": "Research Reactor",
+    "image": "ResearchReactor.png",
+    "description": "Uses Enriched Uranium to produce Radiation for Radbolt production.\n\nGenerates a massive amount of Heat. Overheating will result in an explosive meltdown.",
+    "dlc": [
+      "EXPANSION1_ID"
+    ]
+  },
+  {
+    "id": "research_station",
+    "gameId": "ResearchCenter",
+    "name": "Research Station",
+    "image": "ResearchStation.png",
+    "description": "Conducts Novice Research to unlock new technologies.\n\nConsumes Dirt.",
+    "power_consumption": 60.0
+  },
+  {
+    "id": "ribbon_reader",
+    "gameId": "LogicRibbonReader",
+    "name": "Ribbon Reader",
+    "image": "RibbonReader.png",
+    "description": "Reads a Green Signal or a Red Signal from the specified Bit of an Automation Ribbon onto an Automation Wire."
+  },
+  {
+    "id": "ribbon_writer",
+    "gameId": "LogicRibbonWriter",
+    "name": "Ribbon Writer",
+    "image": "RibbonWriter.png",
+    "description": "Writes a Green Signal or a Red Signal to the specified Bit of an Automation Ribbon\n\nAutomation Ribbon must be used as the output wire to avoid overloading."
+  },
+  {
+    "id": "robo_miner",
+    "gameId": "AutoMiner",
+    "name": "Robo-Miner",
+    "image": "RoboMiner.png",
+    "description": "Automatically digs out all materials in a set range.",
+    "power_consumption": 120.0
+  },
+  {
+    "id": "rock_crusher",
+    "gameId": "RockCrusher",
+    "name": "Rock Crusher",
+    "image": "RockCrusher.png",
+    "description": "Inefficiently produces refined materials from raw resources.\n\nDuplicants will not fabricate items unless recipes are queued.",
+    "power_consumption": 240.0
+  },
+  {
+    "id": "rocket_control_station",
+    "gameId": "RocketControlStation",
+    "name": "Rocket Control Station",
+    "image": "RocketControlStation.png",
+    "description": "Allows Duplicants to use pilot-operated rockets and control access to interior buildings.\n\nAssigned Duplicants must have the Rocket Piloting skill.",
+    "dlc": [
+      "EXPANSION1_ID"
+    ]
+  },
+  {
+    "id": "rocket_platform",
+    "gameId": "LaunchPad",
+    "name": "Rocket Platform",
+    "image": "RocketPlatform.png",
+    "description": "Precursor to construction of all other Rocket modules.\n\nAllows Rockets to launch from or land on the host Planetoid.\n\nAutomatically links up to Rocket Ports built to either side of the platform.",
+    "dlc": [
+      "EXPANSION1_ID"
+    ]
+  },
+  {
+    "id": "rocket_port_extension",
+    "gameId": "ModularLaunchpadPortBridge",
+    "name": "Rocket Port Extension",
+    "image": "RocketPortExtension.png",
+    "description": "Automatically links when built to the side of a Rocket Platform or any Rocket Port.",
+    "dlc": [
+      "EXPANSION1_ID"
+    ]
+  },
+  {
+    "id": "rubber_tile",
+    "gameId": "RubberTile",
+    "name": "Rubber Tile",
+    "image": "RubberTile.png",
+    "description": "Used to build the walls and floors of rooms.\n\nProvides an anti-slip work surface and effective Insulation.",
+    "dlc": [
+      "DLC5_ID"
+    ]
+  },
+  {
+    "id": "rust_deoxidizer",
+    "gameId": "RustDeoxidizer",
+    "name": "Rust Deoxidizer",
+    "image": "RustDeoxidizer.png",
+    "description": "Converts Rust into Oxygen and Chlorine Gas.\n\nBecomes idle when the area reaches maximum pressure capacity.",
+    "power_consumption": 60.0
+  },
+  {
+    "id": "sandpit",
+    "gameId": "SandboxBuilding",
+    "name": "Sandpit",
+    "image": "Sandpit.png",
+    "description": "Allows Duplicants to enjoy a Morale-boosting play session on their breaks.\n\nNo artistic skill is required.",
+    "dlc": [
+      "DLC5_ID"
+    ]
+  },
+  {
+    "id": "sauna",
+    "gameId": "Sauna",
+    "name": "Sauna",
+    "image": "Sauna.png",
+    "description": "Uses Steam to create a relaxing atmosphere.\n\nIncreases Duplicant Morale and provides a lingering sense of warmth.",
+    "power_consumption": 60.0
+  },
+  {
+    "id": "sculpting_block",
+    "gameId": "SmallSculpture",
+    "name": "Sculpting Block",
+    "image": "SculptingBlock.png",
+    "description": "Minorly increases Decor, contributing to Morale.\n\nMust be sculpted by a Duplicant."
+  },
+  {
+    "id": "shearing_station",
+    "gameId": "ShearingStation",
+    "name": "Shearing Station",
+    "image": "ShearingStation.png",
+    "description": "Shearing stations allow eligible Critters to be safely sheared for useful raw materials.\n\nVisiting this building restores Critters' physical and emotional well-being.",
+    "power_consumption": 60.0
+  },
+  {
+    "id": "shower",
+    "gameId": "Shower",
+    "name": "Shower",
+    "image": "Shower.png",
+    "description": "Improves Duplicant Morale and removes surface Germs."
+  },
+  {
+    "id": "sick_bay",
+    "gameId": "DoctorStation",
+    "name": "Sick Bay",
+    "image": "SickBay.png",
+    "description": "Allows Duplicants to administer basic treatments to sick Duplicants.\n\nDuplicants must possess the Bedside Manner Skill to treat peers."
+  },
+  {
+    "id": "signal_counter",
+    "gameId": "LogicCounter",
+    "name": "Signal Counter",
+    "image": "SignalCounter.png",
+    "description": "Counts how many times a Green Signal has been received up to a chosen number.\n\nWhen the chosen number is reached it sends a Green Signal until it receives another Green Signal, when it resets automatically and begins counting again."
+  },
+  {
+    "id": "signal_distributor",
+    "gameId": "LogicGateDemultiplexer",
+    "name": "Signal Distributor",
+    "image": "SignalDistributor.png",
+    "description": "Route a single Input signal out one of four possible Outputs, based on the selection made by the Control Inputs.\n\nSend a Green Signal or a Red Signal to the two Control Inputs to determine which Output is selected."
+  },
+  {
+    "id": "signal_selector",
+    "gameId": "LogicGateMultiplexer",
+    "name": "Signal Selector",
+    "image": "SignalSelector.png",
+    "description": "Select which one of four Input signals should be sent out the Output, using Control Inputs.\n\nSend a Green Signal or a Red Signal to the two Control Inputs to determine which Input is selected."
+  },
+  {
+    "id": "signal_switch",
+    "gameId": "LogicSwitch",
+    "name": "Signal Switch",
+    "image": "SignalSwitch.png",
+    "description": "Sends a Green Signal or a Red Signal on an Automation grid."
+  },
+  {
+    "id": "sink",
+    "gameId": "WashSink",
+    "name": "Sink",
+    "image": "Sink.png",
+    "description": "Removes Germs from Duplicants.\n\nGerm-covered Duplicants use Sinks when passing by in the selected direction."
+  },
+  {
+    "id": "skill_scrubber",
+    "gameId": "ResetSkillsStation",
+    "name": "Skill Scrubber",
+    "image": "SkillScrubber.png",
+    "description": "Refunds a Duplicant's Skill Points for reassignment.\n\nDuplicants will lose all assigned skills in the process.",
+    "power_consumption": 480.0
+  },
+  {
+    "id": "sludge_press",
+    "gameId": "SludgePress",
+    "name": "Sludge Press",
+    "image": "SludgePress.png",
+    "description": "Separates Mud and other sludges into their base elements.\n\nDuplicants will not fabricate items unless recipes are queued.",
+    "power_consumption": 120.0,
+    "dlc": [
+      "EXPANSION1_ID"
+    ]
+  },
+  {
+    "id": "small_petroleum_engine",
+    "gameId": "KeroseneEngineClusterSmall",
+    "name": "Small Petroleum Engine",
+    "image": "SmallPetroleumEngine.png",
+    "description": "Burns Petroleum to propel rockets for mid-range space exploration.\n\nSmall Petroleum Engines possess the same speed as a Petroleum Engines but have smaller height restrictions.\n\nEngine must be built via Rocket Platform, and requires an oxidizer tank.\n\nOnce the engine has been built, more rocket modules can be added.",
+    "power_generation": 240.0,
+    "dlc": [
+      "EXPANSION1_ID"
+    ]
+  },
+  {
+    "id": "smart_battery",
+    "gameId": "BatterySmart",
+    "name": "Smart Battery",
+    "image": "SmartBattery.png",
+    "description": "Stores Power from generators, then provides that power to buildings.\n\nSends a Green Signal or Red Signal based on the configuration of the Logic Activation Parameters.\n\nVery slightly loses charge over time."
+  },
+  {
+    "id": "smart_storage_bin",
+    "gameId": "StorageLockerSmart",
+    "name": "Smart Storage Bin",
+    "image": "SmartStorageBin.png",
+    "description": "Stores the Solid Materials of my choosing.\n\nSends a Green Signal when contents surpass specified thresholds."
+  },
+  {
+    "id": "smoker",
+    "gameId": "Smoker",
+    "name": "Smoker",
+    "image": "Smoker.png",
+    "description": "Cooks improved foods over low, slow heat.\n\nDuplicants will not fabricate items unless recipes are queued.",
+    "dlc": [
+      "DLC4_ID"
+    ]
+  },
+  {
+    "id": "snow_tile",
+    "gameId": "SnowTile",
+    "name": "Snow Tile",
+    "image": "SnowTile.png",
+    "description": "Used to build the walls and floors of rooms.\n\nInsulates rooms to reduce Heat loss in cold climates.",
+    "dlc": [
+      "DLC2_ID"
+    ]
+  },
+  {
+    "id": "soda_fountain",
+    "gameId": "SodaFountain",
+    "name": "Soda Fountain",
+    "image": "SodaFountain.png",
+    "description": "Creates soda from Water and Carbon Dioxide.\n\nConsuming soda water increases Duplicant Morale.",
+    "power_consumption": 480.0
+  },
+  {
+    "id": "solar_panel",
+    "gameId": "SolarPanel",
+    "name": "Solar Panel",
+    "image": "SolarPanel.png",
+    "description": "Converts Sunlight into electrical Power.\n\nMust be exposed to space.",
+    "power_generation": 380.0
+  },
+  {
+    "id": "soldering_station",
+    "gameId": "AdvancedCraftingTable",
+    "name": "Soldering Station",
+    "image": "Soldering_Station.png",
+    "description": "Produces advanced electronics and bionic Boosters.\n\nDuplicants will not fabricate items unless recipes are queued.",
+    "power_consumption": 480.0,
+    "dlc": [
+      "DLC3_ID"
+    ]
+  },
+  {
+    "id": "solid_filter",
+    "gameId": "SolidFilter",
+    "name": "Solid Filter",
+    "image": "SolidFilter.png",
+    "description": "Separates one Solid Material from the conveyor, sending it into a dedicated Conveyor Rail.",
+    "power_consumption": 120.0
+  },
+  {
+    "id": "solid_rocket_port_loader",
+    "gameId": "ModularLaunchpadPortSolid",
+    "name": "Solid Rocket Port Loader",
+    "image": "SolidRocketPortLoader.png",
+    "description": "Loads Solids to the storage of a linked rocket.\n\nAutomatically links when built to the side of a Rocket Platform or another Rocket Port.\n\nUses the solid material filters set on the rocket's cargo bays.",
+    "power_consumption": 240.0,
+    "dlc": [
+      "EXPANSION1_ID"
+    ]
+  },
+  {
+    "id": "solid_rocket_port_unloader",
+    "gameId": "ModularLaunchpadPortSolidUnloader",
+    "name": "Solid Rocket Port Unloader",
+    "image": "SolidRocketPortUnloader.png",
+    "description": "Unloads Solids from the storage of a linked rocket.\n\nAutomatically links when built to the side of a Rocket Platform or another Rocket Port.\n\nUses the solid material filters set on this unloader.",
+    "power_consumption": 240.0,
+    "dlc": [
+      "EXPANSION1_ID"
+    ]
+  },
+  {
+    "id": "somnium_synthesizer",
+    "gameId": "MegaBrainTank",
+    "name": "Somnium Synthesizer",
+    "image": "SomniumSynthesizer.png",
+    "description": "An organic multi-cortex repository and processing system fuelled by Oxygen.\n\nAnalyzes Dream Journals produced by Duplicants wearing Pajamas.\n\nProvides a sustainable boost to Duplicant skills and abilities throughout the colony."
+  },
+  {
+    "id": "space_heater",
+    "gameId": "SpaceHeater",
+    "name": "Space Heater",
+    "image": "SpaceHeater.png",
+    "description": "Radiates a moderate amount of Heat.\n\nRequires Power in order to function.",
+    "power_consumption": 120.0
+  },
+  {
+    "id": "space_racer",
+    "gameId": "AstronautTrainingCenter",
+    "name": "Space Racer",
+    "image": "SpaceRacer.png",
+    "description": "Must be connected to a Power source.\n\nIncreases Duplicant Morale.",
+    "power_consumption": 1200.0
+  },
+  {
+    "id": "space_scanner",
+    "gameId": "CometDetector",
+    "name": "Space Scanner",
+    "image": "SpaceScanner.png",
+    "description": "Sends a Green Signal to its automation circuit when it detects incoming objects from space.\n\nCan be configured to detect incoming meteor showers or returning space rockets.",
+    "power_consumption": 120.0
+  },
+  {
+    "id": "spice_grinder",
+    "gameId": "SpiceGrinder",
+    "name": "Spice Grinder",
+    "image": "SpiceGrinder.png",
+    "description": "Produces ingredients that add benefits to foods prepared at skilled cooking stations."
+  },
+  {
+    "id": "starmap_location_sensor",
+    "gameId": "LogicClusterLocationSensor",
+    "name": "Starmap Location Sensor",
+    "image": "StarmapLocationSensor.png",
+    "description": "Send Green Signals at the chosen Starmap locations and Red Signals everywhere else.",
+    "dlc": [
+      "EXPANSION1_ID"
+    ]
+  },
+  {
+    "id": "steam_engine",
+    "gameId": "SteamEngineCluster",
+    "name": "Steam Engine",
+    "image": "SteamEngine.png",
+    "description": "Utilizes Steam to propel rockets for space exploration.\n\nEngine must be built via Rocket Platform. \n\nOnce the engine has been built, more rocket modules can be added.",
+    "power_generation": 600.0,
+    "dlc": [
+      "EXPANSION1_ID"
+    ]
+  },
+  {
+    "id": "steam_turbine",
+    "gameId": "SteamTurbine2",
+    "name": "Steam Turbine",
+    "image": "SteamTurbine.png",
+    "description": "Draws in Steam from the tiles directly below the machine's foundation and uses it to generate electrical Power.\n\nOutputs Water.",
+    "power_generation": 850.0
+  },
+  {
+    "id": "storage_bin",
+    "gameId": "StorageLocker",
+    "name": "Storage Bin",
+    "image": "StorageBin.png",
+    "description": "Stores the Solid Materials of my choosing."
+  },
+  {
+    "id": "storage_tile",
+    "gameId": "StorageTile",
+    "name": "Storage Tile",
+    "image": "StorageTile.png",
+    "description": "Used to build the walls and floors of rooms.\n\nProvides built-in storage for small spaces."
+  },
+  {
+    "id": "study_tools",
+    "gameId": "ResearchArchives",
+    "name": "Study Tools",
+    "image": "StudyTools.png",
+    "description": "Provides a small increase to Research speed at compatible buildings.\n\nThis building does not require Duplicant operation."
+  },
+  {
+    "id": "sublimation_station",
+    "gameId": "SublimationStation",
+    "name": "Sublimation Station",
+    "image": "SublimationStation.png",
+    "description": "Speeds up the conversion of Polluted Dirt into Polluted Oxygen.\n\nBecomes idle when the area reaches maximum pressure capacity.",
+    "power_consumption": 60.0,
+    "dlc": [
+      "EXPANSION1_ID"
+    ]
+  },
+  {
+    "id": "sugar_engine",
+    "gameId": "SugarEngine",
+    "name": "Sugar Engine",
+    "image": "SugarEngine.png",
+    "description": "Burns Sucrose to propel rockets for short range space exploration.\n\nSugar Engines have higher height restrictions than Carbon Dioxide Engines, but move slower.\n\nEngine must be built via Rocket Platform, and requires a Large Solid Oxidizer Tank. \n\nOnce the engine has been built, more rocket modules can be added.",
+    "power_generation": 60.0,
+    "dlc": [
+      "EXPANSION1_ID"
+    ]
+  },
+  {
+    "id": "sun_lamp",
+    "gameId": "SunLamp",
+    "name": "Sun Lamp",
+    "image": "SunLamp.png",
+    "description": "Gives off Sunlight level Lux.\n\nCan be paired with Beach Chairs.",
+    "power_consumption": 960.0
+  },
+  {
+    "id": "super_computer",
+    "gameId": "AdvancedResearchCenter",
+    "name": "Super Computer",
+    "image": "SuperComputer.png",
+    "description": "Conducts Advanced Research to unlock new technologies.\n\nConsumes Water.\n\nAssigned Duplicants must possess the Advanced Research skill.",
+    "power_consumption": 120.0
+  },
+  {
+    "id": "sushi_bar",
+    "gameId": "SushiBar",
+    "name": "Sushi Bar",
+    "image": "Sushi_Bar.png",
+    "description": "Prepares a variety of Uncooked Seafood.\n\nDuplicants will not fabricate items unless recipes are queued.",
+    "dlc": [
+      "DLC5_ID"
+    ]
+  },
+  {
+    "id": "sweepys_dock",
+    "gameId": "SweepBotStation",
+    "name": "Sweepy's Dock",
+    "image": "SweepysDock.png",
+    "description": "Deploys an automated Sweepy Bot to sweep up Solid debris and Liquid spills.\n\nDock stores Liquids and Solids gathered by the Sweepy.\n\nUses Power to recharge the Sweepy.\n\nDuplicants will empty Dock storage into available storage bins.",
+    "power_consumption": 240.0
+  },
+  {
+    "id": "switch",
+    "gameId": "Switch",
+    "name": "Switch",
+    "image": "Switch.png",
+    "description": "Turns Power on or off.\n\nDoes not affect circuitry preceding the switch."
+  },
+  {
+    "id": "targeting_beacon",
+    "gameId": "LandingBeacon",
+    "name": "Targeting Beacon",
+    "image": "TargetingBeacon.png",
+    "description": "Guides Interplanetary Payloads and Orbital Cargo Modules to land nearby.\n\nInterplanetary Payloads must be launched from a Interplanetary Launcher.",
+    "power_consumption": 60.0,
+    "dlc": [
+      "EXPANSION1_ID"
+    ]
+  },
+  {
+    "id": "tasteful_memorial",
+    "gameId": "Grave",
+    "name": "Tasteful Memorial",
+    "image": "TastefulMemorial.png",
+    "description": "Provides a final resting place for deceased Duplicants.\n\nLiving Duplicants will automatically place an unburied corpse inside."
+  },
+  {
+    "id": "telescope",
+    "gameId": "ClusterTelescope",
+    "name": "Telescope",
+    "image": "Telescope.png",
+    "description": "Reveals visitable Planetoids in space, producing Data Banks in the process.\n\nAssigned Duplicants must possess the Astronomy skill.\n\nBuilding must be exposed to space to function.",
+    "power_consumption": 120.0,
+    "dlc": [
+      "EXPANSION1_ID"
+    ]
+  },
+  {
+    "id": "tempshift_plate",
+    "gameId": "ThermalBlock",
+    "name": "Tempshift Plate",
+    "image": "TempshiftPlate.png",
+    "description": "Accelerates or buffers Heat dispersal based on the construction material used.\n\nHas a small area of effect."
+  },
+  {
+    "id": "textile_loom",
+    "gameId": "ClothingFabricator",
+    "name": "Textile Loom",
+    "image": "TextileLoom.png",
+    "description": "Tailors Duplicant Clothing items.\n\nDuplicants will not fabricate items unless recipes are queued.",
+    "power_consumption": 240.0
+  },
+  {
+    "id": "thermo_aquatuner",
+    "gameId": "LiquidConditioner",
+    "name": "Thermo Aquatuner",
+    "image": "ThermoAquatuner.png",
+    "description": "Cools the Liquid piped through it, but outputs Heat in its immediate vicinity.",
+    "power_consumption": 1200.0
+  },
+  {
+    "id": "thermo_regulator",
+    "gameId": "AirConditioner",
+    "name": "Thermo Regulator",
+    "image": "ThermoRegulator.png",
+    "description": "Cools the Gas piped through it, but outputs Heat in its immediate vicinity.",
+    "power_consumption": 240.0
+  },
+  {
+    "id": "thermo_sensor",
+    "gameId": "LogicTemperatureSensor",
+    "name": "Thermo Sensor",
+    "image": "ThermoSensor.png",
+    "description": "Sends a Green Signal or a Red Signal when ambient Temperature enters the chosen range."
+  },
+  {
+    "id": "tidal_turbine",
+    "gameId": "ReefGenerator",
+    "name": "Tidal Turbine",
+    "image": "TidalTurbine.png",
+    "description": "Converts the kinetic energy from a Tidal Spring below it into electrical Power.",
+    "power_generation": 300.0,
+    "dlc": [
+      "DLC5_ID"
+    ]
+  },
+  {
+    "id": "tile",
+    "gameId": "Tile",
+    "name": "Tile",
+    "image": "Tile.png",
+    "description": "Used to build the walls and floors of rooms.\n\nIncreases Duplicant runspeed."
+  },
+  {
+    "id": "timer_sensor",
+    "gameId": "LogicTimerSensor",
+    "name": "Timer Sensor",
+    "image": "TimerSensor.png",
+    "description": "Creates a timer to send Green Signals and Red Signals for specific amounts of time."
+  },
+  {
+    "id": "trampoline",
+    "gameId": "Trampoline",
+    "name": "Trampoline",
+    "image": "Trampoline.png",
+    "description": "Uses Rubber to help Duplicants rebound from the stress of colony life.\n\nIncreases Duplicant Morale and improves their athleticism.",
+    "dlc": [
+      "DLC5_ID"
+    ]
+  },
+  {
+    "id": "transit_tube",
+    "gameId": "TravelTube",
+    "name": "Transit Tube",
+    "image": "TransitTube.png",
+    "description": "Quickly transports Duplicants from a Transit Tube Access to the tube's end.\n\nOnly transports Duplicants."
+  },
+  {
+    "id": "transit_tube_access",
+    "gameId": "TravelTubeEntrance",
+    "name": "Transit Tube Access",
+    "image": "TransitTubeAccess.png",
+    "description": "Allows Duplicants to enter the connected Transit Tube system.\n\nStops drawing Power once fully charged.",
+    "power_consumption": 960.0
+  },
+  {
+    "id": "transit_tube_crossing",
+    "gameId": "TravelTubeWallBridge",
+    "name": "Transit Tube Crossing",
+    "image": "TransitTubeCrossing.png",
+    "description": "Allows Transit Tubes to be run through wall and floor tile.\n\nFunctions as regular tile."
+  },
+  {
+    "id": "triage_cot",
+    "gameId": "MedicalCot",
+    "name": "Triage Cot",
+    "image": "TriageCot.png",
+    "description": "Accelerates Health restoration and the healing of physical injuries.\n\nRevives incapacitated Duplicants."
+  },
+  {
+    "id": "uranium_centrifuge",
+    "gameId": "UraniumCentrifuge",
+    "name": "Uranium Centrifuge",
+    "image": "UraniumCentrifuge.png",
+    "description": "Extracts Enriched Uranium from Uranium Ore.\n\nOutputs Depleted Uranium in molten form.",
+    "power_consumption": 480.0,
+    "dlc": [
+      "EXPANSION1_ID"
+    ]
+  },
+  {
+    "id": "vertical_wind_tunnel",
+    "gameId": "VerticalWindTunnel",
+    "name": "Vertical Wind Tunnel",
+    "image": "VerticalWindTunnel.png",
+    "description": "Must be connected to a Power Source. To properly function, the area under this building must be left vacant.\n\nIncreases Duplicants Morale.",
+    "power_consumption": 1200.0
+  },
+  {
+    "id": "virtual_planetarium",
+    "gameId": "DLC1CosmicResearchCenter",
+    "name": "Virtual Planetarium",
+    "image": "VirtualPlanetarium.png",
+    "description": "Conducts Data Analysis Research to unlock new technologies.\n\nConsumes Data Banks generated by exploration.",
+    "power_consumption": 120.0,
+    "dlc": [
+      "EXPANSION1_ID"
+    ]
+  },
+  {
+    "id": "vulcanizer",
+    "gameId": "RubberMaker",
+    "name": "Vulcanizer",
+    "image": "Vulcanizer.png",
+    "description": "Converts Latex into Rubber.\n\nLatex must be delivered via Liquid Pipes.",
+    "power_consumption": 480.0,
+    "dlc": [
+      "DLC5_ID"
+    ]
+  },
+  {
+    "id": "wall_planter",
+    "gameId": "LargeBackwallFarm",
+    "name": "Wall Planter",
+    "image": "WallPlanter.png",
+    "description": "Grows one extra-large aquatic Plant from a Seed.\n\nIt also doubles as a wall tile.",
+    "dlc": [
+      "DLC5_ID"
+    ]
+  },
+  {
+    "id": "wall_pot",
+    "gameId": "FlowerVaseWall",
+    "name": "Wall Pot",
+    "image": "WallPot.png",
+    "description": "Houses a single Plant when sown with a Seed.\n\nIncreases Decor when in use, contributing to Morale.\n\nMust be hung from a wall."
+  },
+  {
+    "id": "wall_toilet",
+    "gameId": "WallToilet",
+    "name": "Wall Toilet",
+    "image": "WallToilet.png",
+    "description": "Gives Duplicants a place to relieve themselves. Empties directly on the other side of the wall.\n\nSpreads very few Germs.",
+    "dlc": [
+      "EXPANSION1_ID"
+    ]
+  },
+  {
+    "id": "wash_basin",
+    "gameId": "WashBasin",
+    "name": "Wash Basin",
+    "image": "WashBasin.png",
+    "description": "Removes some Germs from Duplicants.\n\nGerm-covered Duplicants use Wash Basins when passing by in the selected direction."
+  },
+  {
+    "id": "water_cooler",
+    "gameId": "WaterCooler",
+    "name": "Water Cooler",
+    "image": "WaterCooler.png",
+    "description": "Provides a gathering place for Duplicants during Downtime.\n\nImproves Duplicant Morale and relieves Thirst."
+  },
+  {
+    "id": "water_sieve",
+    "gameId": "WaterPurifier",
+    "name": "Water Sieve",
+    "image": "WaterSieve.png",
+    "description": "Produces clean Water from Polluted Water using Sand.\n\nProduces Polluted Dirt.",
+    "power_consumption": 120.0
+  },
+  {
+    "id": "wattage_sensor",
+    "gameId": "LogicWattageSensor",
+    "name": "Wattage Sensor",
+    "image": "WattageSensor.png",
+    "description": "Sends a Green Signal or a Red Signal when Wattage consumed enters the chosen range."
+  },
+  {
+    "id": "weight_plate",
+    "gameId": "FloorSwitch",
+    "name": "Weight Plate",
+    "image": "WeightPlate.png",
+    "description": "Sends a Green Signal when an object or Duplicant is placed atop of it.\n\nCannot be triggered by Gas or Liquids."
+  },
+  {
+    "id": "wicker_door",
+    "gameId": "WoodenDoor",
+    "name": "Wicker Door",
+    "image": "WickerDoor.png",
+    "description": "Encloses areas without blocking Liquid or Gas flow.\n\nWild Critters cannot pass through doors.",
+    "dlc": [
+      "DLC2_ID"
+    ]
+  },
+  {
+    "id": "wide_hydroponic_farm",
+    "gameId": "WideFarmTile",
+    "name": "Wide Hydroponic Farm",
+    "image": "WideHydroponicFarm.png",
+    "description": "Grows one extra-large Plant from a Seed.\n\nCan be used as floor tile.\n\nSome plants must be irrigated through Liquid Piping.",
+    "dlc": [
+      "DLC5_ID"
+    ]
+  },
+  {
+    "id": "window_tile",
+    "gameId": "GlassTile",
+    "name": "Window Tile",
+    "image": "WindowTile.png",
+    "description": "Used to build the walls and floors of rooms.\n\nAllows Light and Decor to pass through."
+  },
+  {
+    "id": "wire",
+    "gameId": "Wire",
+    "name": "Wire",
+    "image": "Wire.png",
+    "description": "Connects buildings to Power sources.\n\nCan be run through wall and floor tile."
+  },
+  {
+    "id": "wire_bridge",
+    "gameId": "WireBridge",
+    "name": "Wire Bridge",
+    "image": "WireBridge.png",
+    "description": "Runs one wire section over another without joining them.\n\nCan be run through wall and floor tile."
+  },
+  {
+    "id": "wood_block",
+    "gameId": "WoodSculpture",
+    "name": "Wood Block",
+    "image": "WoodBlock.png",
+    "description": "Moderately increases Decor, contributing to Morale.\n\nMust be sculpted by a Duplicant.",
+    "dlc": [
+      "DLC2_ID"
+    ]
+  },
+  {
+    "id": "wood_burner",
+    "gameId": "WoodGasGenerator",
+    "name": "Wood Burner",
+    "image": "WoodBurner.png",
+    "description": "Burns Lumber to produce electrical Power.\n\nProduces Carbon Dioxide and Heat.",
+    "power_generation": 300.0
+  },
+  {
+    "id": "wood_heater",
+    "gameId": "Campfire",
+    "name": "Wood Heater",
+    "image": "WoodHeater.png",
+    "description": "Consumes Wood in order to Heat chilly surroundings.",
+    "dlc": [
+      "DLC2_ID"
+    ]
+  },
+  {
+    "id": "wood_tile",
+    "gameId": "WoodTile",
+    "name": "Wood Tile",
+    "image": "WoodTile.png",
+    "description": "Used to build the walls and floors of rooms.\n\nProvides good insulation and boosts Decor, contributing to Morale.",
+    "dlc": [
+      "DLC2_ID"
+    ]
+  },
+  {
+    "id": "workshop_tools",
+    "gameId": "WorkshopTools",
+    "name": "Workshop Tools",
+    "image": "WorkshopTools.png",
+    "description": "Increases the fabrication speed for compatible buildings placed nearby.\n\nThis building does not require Duplicant operation."
+  },
+  {
+    "id": "xor_gate",
+    "gameId": "LogicGateXOR",
+    "name": "XOR Gate",
+    "image": "XORGate.png",
+    "description": "Outputs a Green Signal if exactly one of its Inputs is receiving Green.\n\nOutputs a Red Signal if both or neither Inputs are receiving a Green Signal."
   }
 ]

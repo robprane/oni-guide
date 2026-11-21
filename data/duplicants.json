@@ -1,12 +1,17 @@
 [
   {
-    "id": "duplicant",
-    "name": "Duplicant",
-    "image": "Duplicant.png"
+    "id": "bionic_duplicant",
+    "gameId": "BionicMinion",
+    "name": "Bionic Duplicant",
+    "image": "BionicDuplicant.png",
+    "dlc": [
+      "DLC3_ID"
+    ]
   },
   {
-    "id": "bionic_duplicant",
-    "name": "Bionic Duplicant",
-    "image": "BionicDuplicant.png"
+    "id": "duplicant",
+    "gameId": "Minion",
+    "name": "Standard Duplicant",
+    "image": "Duplicant.png"
   }
 ]

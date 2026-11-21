@@ -5,3 +5,7 @@ env/
 scraped_data/
 scraped_images/
 *.py
+!exporter/*.py
+exporter/bin/
+exporter/obj/
+exporter/out/

@@ -1,92 +1,497 @@
 [
   {
     "id": "alveo_vera_seed",
+    "gameId": "BlueGrassSeed",
     "name": "Alveo Vera Seed",
-    "image": "AlveoVeraSeed.png"
+    "image": "AlveoVeraSeed.png",
+    "description": "The Seed of a Alveo Vera.\n\nDigging up Buried Objects may uncover an Alveo Vera Seed.",
+    "dlc": [
+      "DLC2_ID"
+    ],
+    "tags": [
+      "pacu_diet_toxicsand"
+    ]
+  },
+  {
+    "id": "arbor_acorn",
+    "gameId": "ForestTreeSeed",
+    "name": "Arbor Acorn",
+    "image": "ArborAcorn.png",
+    "description": "The Seed of an Arbor Tree.\n\nDigging up Buried Objects may uncover an Arbor Acorn."
   },
   {
     "id": "balm_lily_seed",
+    "gameId": "SwampLilySeed",
     "name": "Balm Lily Seed",
-    "image": "BalmLilySeed.png"
+    "image": "BalmLilySeed.png",
+    "description": "The Seed of a Balm Lily.\n\nDigging up Buried Objects may uncover a Balm Lily Seed.",
+    "tags": [
+      "pacu_diet_toxicsand"
+    ]
+  },
+  {
+    "id": "bliss_burst_seed",
+    "gameId": "CylindricaSeed",
+    "name": "Bliss Burst Seed",
+    "image": "BlissBurstSeed.png",
+    "description": "The Seed of a Bliss Burst.\n\nDigging up Buried Objects may uncover a Bliss Burst Seed.",
+    "dlc": [
+      "EXPANSION1_ID"
+    ]
   },
   {
     "id": "blossom_seed",
+    "gameId": "PrickleFlowerSeed",
     "name": "Blossom Seed",
-    "image": "BlossomSeed.png"
+    "image": "BlossomSeed.png",
+    "description": "The Seed of a Bristle Blossom.\n\nDigging up Buried Objects may uncover a Blossom Seed.",
+    "tags": [
+      "microbemusher_fishfood_input",
+      "pacu_diet_toxicsand"
+    ]
   },
   {
     "id": "bog_bucket_seed",
+    "gameId": "SwampHarvestPlantSeed",
     "name": "Bog Bucket Seed",
-    "image": "BogBucketSeed.png"
+    "image": "BogBucketSeed.png",
+    "description": "The Seed of a Bog Bucket.\n\nDigging up Buried Objects may uncover a Bog Bucket Seed.",
+    "dlc": [
+      "EXPANSION1_ID"
+    ],
+    "tags": [
+      "pacu_diet_toxicsand"
+    ]
   },
   {
     "id": "bonbon_tree_seed",
+    "gameId": "SpaceTreeSeed",
     "name": "Bonbon Tree Seed",
-    "image": "BonbonTreeSeed.png"
+    "image": "BonbonTreeSeed.png",
+    "description": "The Seed of a Bonbon Tree.\n\nDigging up Buried Objects may uncover a Bonbon Tree Seed.",
+    "dlc": [
+      "DLC2_ID"
+    ],
+    "tags": [
+      "pacu_diet_toxicsand"
+    ]
+  },
+  {
+    "id": "briar_seed",
+    "gameId": "PrickleGrassSeed",
+    "name": "Briar Seed",
+    "image": "BriarSeed.png",
+    "description": "The Seed of a Bluff Briar.\n\nDigging up Buried Objects may uncover a Briar Seed."
+  },
+  {
+    "id": "buddy_bud_seed",
+    "gameId": "BulbPlantSeed",
+    "name": "Buddy Bud Seed",
+    "image": "BuddyBudSeed.png",
+    "description": "The Seed of a Buddy Bud.\n\nDigging up Buried Objects may uncover a Buddy Bud Seed."
+  },
+  {
+    "id": "bulbloom_seed",
+    "gameId": "BulbloomSeed",
+    "name": "Bulbloom Seed",
+    "image": "BulbloomSeed.png",
+    "description": "The Seed of a Bulbloom.\n\nDigging up Buried Objects may uncover a Bulbloom Seed.",
+    "dlc": [
+      "DLC5_ID"
+    ]
+  },
+  {
+    "id": "clampum_seed",
+    "gameId": "ClamSeed",
+    "name": "Clampum Seed",
+    "image": "ClampumSeed.png",
+    "description": "The Seed of a Clampum.",
+    "dlc": [
+      "DLC5_ID"
+    ],
+    "tags": [
+      "pacu_diet_toxicsand"
+    ]
   },
   {
     "id": "dasha_saltvine_seed",
+    "gameId": "SaltPlantSeed",
     "name": "Dasha Saltvine Seed",
-    "image": "DashaSaltvineSeed.png"
+    "image": "DashaSaltvineSeed.png",
+    "description": "The Seed of a Dasha Saltvine.\n\nDigging up Buried Objects may uncover a Dasha Saltvine Seed.",
+    "tags": [
+      "pacu_diet_toxicsand"
+    ]
   },
   {
-    "id": "gas_grass_seed",
-    "name": "Gas Grass Seed",
-    "image": "GasGrassSeed.png"
+    "id": "dew_seed",
+    "gameId": "DewDripperPlantSeed",
+    "name": "Dew Seed",
+    "image": "Dew_Seed.png",
+    "description": "The Seed of a Dew Dripper plant.",
+    "dlc": [
+      "DLC4_ID"
+    ],
+    "tags": [
+      "pacu_diet_toxicsand"
+    ]
   },
   {
-    "id": "grubfruit_seed",
-    "name": "Grubfruit Seed",
-    "image": "GrubfruitSeed.png"
-  },
-  {
-    "id": "mealwood_seed",
-    "name": "Mealwood Seed",
-    "image": "MealwoodSeed.png"
-  },
-  {
-    "id": "pikeapple_bush_seed",
-    "name": "Pikeapple Bush Seed",
-    "image": "PikeappleBushSeed.png"
-  },
-  {
-    "id": "pincha_pepper_seed",
-    "name": "Pincha Pepper Seed",
-    "image": "PinchaPepperSeed.png"
-  },
-  {
-    "id": "plant_seeds",
-    "name": "Plant seeds",
-    "image": "Plantseeds.png"
-  },
-  {
-    "id": "plume_squash_seed",
-    "name": "Plume Squash Seed",
-    "image": "PlumeSquashSeed.png"
-  },
-  {
-    "id": "sleet_wheat_grain",
-    "name": "Sleet Wheat Grain",
-    "image": "SleetWheatGrain.png"
+    "id": "flue_coral_seed",
+    "gameId": "OxyCoralSeed",
+    "name": "Flue Coral Seed",
+    "image": "FlueCoralSeed.png",
+    "description": "The Seed of a Flue Coral.",
+    "dlc": [
+      "DLC5_ID"
+    ]
   },
   {
     "id": "fungal_spore",
+    "gameId": "MushroomSeed",
     "name": "Fungal Spore",
-    "image": "FungalSpore.png"
+    "image": "FungalSpore.png",
+    "description": "The Seed of a Dusk Cap.\n\nDigging up Buried Objects may uncover a Fungal Spore.",
+    "tags": [
+      "microbemusher_fishfood_input",
+      "pacu_diet_toxicsand"
+    ]
+  },
+  {
+    "id": "gas_grass_seed",
+    "gameId": "GasGrassSeed",
+    "name": "Gas Grass Seed",
+    "image": "GasGrassSeed.png",
+    "description": "The Seed of a Gas Grass plant.",
+    "tags": [
+      "pacu_diet_toxicsand"
+    ]
+  },
+  {
+    "id": "grubfruit_seed",
+    "gameId": "WormPlantSeed",
+    "name": "Grubfruit Seed",
+    "image": "GrubfruitSeed.png",
+    "description": "The Seed of a Spindly Grubfruit Plant.\n\nDigging up Buried Objects may uncover a Grubfruit Seed.",
+    "dlc": [
+      "EXPANSION1_ID"
+    ],
+    "tags": [
+      "pacu_diet_toxicsand"
+    ]
+  },
+  {
+    "id": "gum_palm_seed",
+    "gameId": "DewPalmSeed",
+    "name": "Gum Palm Seed",
+    "image": "GumPalmSeed.png",
+    "description": "The Seed of a Gum Palm plant.",
+    "dlc": [
+      "DLC5_ID"
+    ],
+    "tags": [
+      "pacu_diet_toxicsand"
+    ]
+  },
+  {
+    "id": "husha_cups_seed",
+    "gameId": "WaterCupsSeed",
+    "name": "Husha Cups Seed",
+    "image": "HushaCupsSeed.png",
+    "description": "The Seed of a Husha Cups plant.",
+    "dlc": [
+      "DLC5_ID"
+    ]
+  },
+  {
+    "id": "hydrocactus_seed",
+    "gameId": "FilterPlantSeed",
+    "name": "Hydrocactus Seed",
+    "image": "HydrocactusSeed.png",
+    "description": "The Seed of a Hydrocactus.\n\nDigging up Buried Objects may uncover a Hydrocactus Seed.",
+    "dlc": [
+      "EXPANSION1_ID"
+    ]
+  },
+  {
+    "id": "idylla_seed",
+    "gameId": "IceFlowerSeed",
+    "name": "Idylla Seed",
+    "image": "IdyllaSeed.png",
+    "description": "The Seed of an Idylla Flower.\n\nDigging up Buried Objects may uncover an Idylla Seed.",
+    "dlc": [
+      "DLC2_ID"
+    ]
+  },
+  {
+    "id": "joya_seed",
+    "gameId": "CactusPlantSeed",
+    "name": "Joya Seed",
+    "image": "JoyaSeed.png",
+    "description": "The Seed of a Jumping Joya.\n\nDigging up Buried Objects may uncover a Joya Seed."
+  },
+  {
+    "id": "lura_seed",
+    "gameId": "FlyTrapPlantSeed",
+    "name": "Lura Seed",
+    "image": "LuraSeed.png",
+    "description": "The Seed of a Lura Plant.\n\nDigging up Buried Objects may uncover a Lura Seed.",
+    "dlc": [
+      "DLC4_ID"
+    ],
+    "tags": [
+      "pacu_diet_toxicsand"
+    ]
+  },
+  {
+    "id": "mallow_seed",
+    "gameId": "WineCupsSeed",
+    "name": "Mallow Seed",
+    "image": "MallowSeed.png",
+    "description": "The Seed of a Mellow Mallow.\n\nDigging up Buried Objects may uncover a Mallow Seed.",
+    "dlc": [
+      "EXPANSION1_ID"
+    ]
+  },
+  {
+    "id": "mealwood_seed",
+    "gameId": "BasicSingleHarvestPlantSeed",
+    "name": "Mealwood Seed",
+    "image": "MealwoodSeed.png",
+    "description": "The Seed of a Mealwood.\n\nDigging up Buried Objects may uncover a Mealwood Seed.",
+    "tags": [
+      "microbemusher_fishfood_input",
+      "pacu_diet_toxicsand"
+    ]
+  },
+  {
+    "id": "megafrond_spore",
+    "gameId": "DinofernSeed",
+    "name": "Megafrond Spore",
+    "image": "MegafrondSpore.png",
+    "description": "The Seed of a Megafrond plant.",
+    "dlc": [
+      "DLC4_ID"
+    ]
+  },
+  {
+    "id": "mirth_leaf_seed",
+    "gameId": "LeafyPlantSeed",
+    "name": "Mirth Leaf Seed",
+    "image": "MirthLeafSeed.png",
+    "description": "The Seed of a Mirth Leaf.\n\nDigging up Buried Objects may uncover a Mirth Leaf Seed."
+  },
+  {
+    "id": "ovagro_node_seed",
+    "gameId": "VineMotherSeed",
+    "name": "Ovagro Node Seed",
+    "image": "OvagroNodeSeed.png",
+    "description": "The Seed of an Ovagro Node.\n\nDigging up Buried Objects may uncover an Ovagro Node Seed.",
+    "dlc": [
+      "DLC4_ID"
+    ]
+  },
+  {
+    "id": "oxyfern_seed",
+    "gameId": "OxyfernSeed",
+    "name": "Oxyfern Seed",
+    "image": "OxyfernSeed.png",
+    "description": "The Seed of an Oxyfern plant."
+  },
+  {
+    "id": "petta_pouf_seed",
+    "gameId": "FilamentPlantSeed",
+    "name": "Petta Pouf Seed",
+    "image": "PettaPoufSeed.png",
+    "description": "The Seed of a Petta Pouf plant.",
+    "dlc": [
+      "DLC5_ID"
+    ]
+  },
+  {
+    "id": "pikeapple_bush_seed",
+    "gameId": "HardSkinBerryPlantSeed",
+    "name": "Pikeapple Bush Seed",
+    "image": "PikeappleBushSeed.png",
+    "description": "The Seed of a Pikeapple Bush.\n\nDigging up Buried Objects may uncover a Pikeapple Bush Seed.",
+    "dlc": [
+      "DLC2_ID"
+    ],
+    "tags": [
+      "pacu_diet_toxicsand"
+    ]
+  },
+  {
+    "id": "pincha_pepper_seed",
+    "gameId": "SpiceVineSeed",
+    "name": "Pincha Pepper Seed",
+    "image": "PinchaPepperSeed.png",
+    "description": "The Seed of a Pincha Pepperplant.\n\nDigging up Buried Objects may uncover a Pincha Pepper Seed.",
+    "tags": [
+      "pacu_diet_toxicsand"
+    ]
+  },
+  {
+    "id": "pinpoket_seed",
+    "gameId": "UrchinPlantSeed",
+    "name": "Pinpoket Seed",
+    "image": "PinpoketSeed.png",
+    "description": "The Seed of a Pinpoket.",
+    "dlc": [
+      "DLC5_ID"
+    ],
+    "tags": [
+      "pacu_diet_toxicsand"
+    ]
+  },
+  {
+    "id": "plume_squash_seed",
+    "gameId": "CarrotPlantSeed",
+    "name": "Plume Squash Seed",
+    "image": "PlumeSquashSeed.png",
+    "description": "The Seed of a Plume Squash Plant.\n\nDigging up Buried Objects may uncover a Plume Squash Seed.",
+    "dlc": [
+      "DLC2_ID"
+    ],
+    "tags": [
+      "pacu_diet_toxicsand"
+    ]
+  },
+  {
+    "id": "rosebush_seed",
+    "gameId": "GardenDecorPlantSeed",
+    "name": "Rosebush Seed",
+    "image": "Rosebush_Seed.png",
+    "description": "The Seed of a Ring Rosebush.\n\nDigging up Buried Objects may uncover a Rosebush Seed.",
+    "dlc": [
+      "DLC4_ID"
+    ]
+  },
+  {
+    "id": "saturn_critter_trap_seed",
+    "gameId": "CritterTrapPlantSeed",
+    "name": "Saturn Critter Trap Seed",
+    "image": "SaturnCritterTrapSeed.png",
+    "description": "The Seed of a Saturn Critter Trap.\n\nDigging up Buried Objects may uncover a Saturn Critter Trap Seed.",
+    "dlc": [
+      "EXPANSION1_ID"
+    ]
+  },
+  {
+    "id": "seakomb_seed",
+    "gameId": "KelpPlantSeed",
+    "name": "Seakomb Seed",
+    "image": "Seakomb_Seed.png",
+    "description": "The Seed of a Seakomb.\n\nDigging up Buried Objects may uncover a Seakomb Seed.",
+    "dlc": [
+      "DLC4_ID"
+    ]
+  },
+  {
+    "id": "sodicane_seed",
+    "gameId": "SaltySticksPlantSeed",
+    "name": "Sodicane Seed",
+    "image": "SodicaneSeed.png",
+    "description": "The Seed of a Sodicane plant.",
+    "dlc": [
+      "DLC5_ID"
+    ],
+    "tags": [
+      "pacu_diet_toxicsand"
+    ]
+  },
+  {
+    "id": "sporechid_seed",
+    "gameId": "EvilFlowerSeed",
+    "name": "Sporechid Seed",
+    "image": "SporechidSeed.png",
+    "description": "The Seed of a Sporechid.\n\nDigging up Buried Objects may uncover a Sporechid Seed."
+  },
+  {
+    "id": "starnacle_seed",
+    "gameId": "PlanktonCoralSeed",
+    "name": "Starnacle Seed",
+    "image": "StarnacleSeed.png",
+    "description": "The Seed of a Starnacle.",
+    "dlc": [
+      "DLC5_ID"
+    ],
+    "tags": [
+      "pacu_diet_toxicsand"
+    ]
+  },
+  {
+    "id": "sweatcorn_seed",
+    "gameId": "GardenFoodPlantSeed",
+    "name": "Sweatcorn Seed",
+    "image": "SweatcornSeed.png",
+    "description": "The Seed of a Sweatcorn Stalk.\n\nDigging up Buried Objects may uncover a Sweatcorn Seed.",
+    "dlc": [
+      "DLC4_ID"
+    ],
+    "tags": [
+      "pacu_diet_toxicsand"
+    ]
   },
   {
     "id": "thimble_reed_seed",
+    "gameId": "BasicFabricMaterialPlantSeed",
     "name": "Thimble Reed Seed",
-    "image": "ThimbleReedSeed.png"
+    "image": "ThimbleReedSeed.png",
+    "description": "The Seed of a Thimble Reed.\n\nDigging up Buried Objects may uncover a Thimble Reed Seed.",
+    "tags": [
+      "pacu_diet_toxicsand"
+    ]
   },
   {
-    "id": "nosh_bean",
-    "name": "Nosh Bean",
-    "image": "NoshBean.png"
+    "id": "tower_kelp_seed",
+    "gameId": "SeaTreeSeed",
+    "name": "Tower Kelp Seed",
+    "image": "TowerKelpSeed.png",
+    "description": "The Seed of a Tower Kelp.\n\nDigging up Buried Objects may uncover a Tower Kelp Seed.",
+    "dlc": [
+      "DLC5_ID"
+    ]
+  },
+  {
+    "id": "tranquil_toe_seed",
+    "gameId": "ToePlantSeed",
+    "name": "Tranquil Toe Seed",
+    "image": "TranquilToeSeed.png",
+    "description": "The Seed of a Tranquil Toes.\n\nDigging up Buried Objects may uncover a Tranquil Toe Seed.",
+    "dlc": [
+      "EXPANSION1_ID"
+    ]
+  },
+  {
+    "id": "tublia_seed",
+    "gameId": "TubeWormSeed",
+    "name": "Tublia Seed",
+    "image": "TubliaSeed.png",
+    "description": "The Seed of a Tublia.",
+    "dlc": [
+      "DLC5_ID"
+    ],
+    "tags": [
+      "pacu_diet_toxicsand"
+    ]
   },
   {
     "id": "waterweed_seed",
+    "gameId": "SeaLettuceSeed",
     "name": "Waterweed Seed",
-    "image": "WaterweedSeed.png"
+    "image": "WaterweedSeed.png",
+    "description": "The Seed of a Waterweed.\n\nDigging up Buried Objects may uncover a Waterweed Seed.",
+    "tags": [
+      "microbemusher_fishfood_input",
+      "pacu_diet_toxicsand"
+    ]
+  },
+  {
+    "id": "wort_seed",
+    "gameId": "ColdBreatherSeed",
+    "name": "Wort Seed",
+    "image": "WortSeed.png",
+    "description": "The Seed of a Wheezewort.\n\nDigging up Buried Objects may uncover a Wort Seed."
   }
 ]

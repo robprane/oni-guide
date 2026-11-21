@@ -1,4 +1,4 @@
-const CACHE_NAME = 'oni-guide-v2';
+const CACHE_NAME = 'oni-guide-v3';
 const ASSETS = [
     '/',
     '/index.html',

@@ -1,369 +1,1042 @@
 [
   {
     "id": "barbeque",
+    "gameId": "CookedMeat",
     "name": "Barbeque",
     "image": "Barbeque.png",
-    "kcalPerKg": 4000
+    "description": "The cooked meat of a defeated critter.\n\nIt has a delightful smoky aftertaste.",
+    "quality": 3,
+    "kcalPerKg": 4000.0,
+    "tags": [
+      "abyss_bug_diet_eatsolid",
+      "edible",
+      "radiant_bug_diet_eatsolid"
+    ]
   },
   {
     "id": "berry_sludge",
+    "gameId": "FruitCake",
     "name": "Berry Sludge",
     "image": "BerrySludge.png",
-    "kcalPerKg": 4000
+    "description": "A mashed up Bristle Berry sludge with an exceptionally long shelf life.\n\nIts aggressive, overbearing sweetness can leave the tongue feeling temporarily numb.",
+    "quality": 3,
+    "kcalPerKg": 4000.0,
+    "tags": [
+      "edible"
+    ]
   },
   {
     "id": "bog_jelly",
+    "gameId": "SwampFruit",
     "name": "Bog Jelly",
     "image": "BogJelly.png",
-    "kcalPerKg": 1840
-  },
-  {
-    "id": "cooked_seafood",
-    "name": "Cooked Seafood",
-    "image": "CookedSeafood.png",
-    "kcalPerKg": 1600
-  },
-  {
-    "id": "curried_beans",
-    "name": "Curried Beans",
-    "image": "CurriedBeans.png",
-    "kcalPerKg": 5000
-  },
-  {
-    "id": "dried_berry_pie",
-    "name": "Dried Berry Pie",
-    "image": "DriedBerryPie.png"
-  },
-  {
-    "id": "dried_curried_beans",
-    "name": "Dried Curried Beans",
-    "image": "DriedCurriedBeans.png"
-  },
-  {
-    "id": "dried_frost_burger",
-    "name": "Dried Frost Burger",
-    "image": "DriedFrostBurger.png"
-  },
-  {
-    "id": "dried_mushroom_quiche",
-    "name": "Dried Mushroom Quiche",
-    "image": "DriedMushroomQuiche.png"
-  },
-  {
-    "id": "dried_pepper_bread",
-    "name": "Dried Pepper Bread",
-    "image": "DriedPepperBread.png"
-  },
-  {
-    "id": "dried_spicy_tofu",
-    "name": "Dried Spicy Tofu",
-    "image": "DriedSpicyTofu.png"
-  },
-  {
-    "id": "dried_surf_n_turf",
-    "name": "Dried Surf'n'Turf",
-    "image": "DriedSurfnTurf.png"
-  },
-  {
-    "id": "dried_mushroom_wrap",
-    "name": "Dried Mushroom Wrap",
-    "image": "DriedMushroomWrap.png"
-  },
-  {
-    "id": "dried_stuffed_berry",
-    "name": "Dried Stuffed Berry",
-    "image": "DriedStuffedBerry.png"
+    "description": "A fruit with an outer film that contains chewy gelatinous cubes.",
+    "quality": 0,
+    "dlc": [
+      "EXPANSION1_ID"
+    ],
+    "kcalPerKg": 1840.0,
+    "tags": [
+      "edible"
+    ]
   },
   {
     "id": "bristle_berry",
+    "gameId": "PrickleFruit",
     "name": "Bristle Berry",
     "image": "BristleBerry.png",
-    "kcalPerKg": 1600
+    "description": "A sweet, mostly pleasant-tasting fruit covered in prickly barbs.",
+    "quality": 0,
+    "kcalPerKg": 1600.0,
+    "tags": [
+      "coral_bug_diet_eatsolid",
+      "edible",
+      "shine_bug_diet_eatsolid"
+    ]
   },
   {
-    "id": "fried_mushroom",
-    "name": "Fried Mushroom",
-    "image": "FriedMushroom.png",
-    "kcalPerKg": 2800
+    "id": "calamari",
+    "gameId": "SquidMeat",
+    "name": "Calamari",
+    "image": "Calamari.png",
+    "description": "Uncooked meat from a very dead Glo Squid.\n\nIt's a little slippery.",
+    "quality": 2,
+    "dlc": [
+      "DLC5_ID"
+    ],
+    "kcalPerKg": 800.0,
+    "tags": [
+      "edible"
+    ]
   },
   {
-    "id": "gristle_berry",
-    "name": "Gristle Berry",
-    "image": "GristleBerry.png",
-    "kcalPerKg": 2000
+    "id": "caviar",
+    "gameId": "Caviar",
+    "name": "Caviar",
+    "image": "Caviar.png",
+    "description": "Shelf-stable eggs from an aquatic critter.\n\nIt can be added to Food at a Mess Table to boost Morale.\n\nDuplicants will automatically use Caviar while sitting at a Mess Table during mealtime.",
+    "quality": 2,
+    "dlc": [
+      "DLC5_ID"
+    ]
   },
   {
-    "id": "grubfruit",
-    "name": "Grubfruit",
-    "image": "Grubfruit.png",
-    "kcalPerKg": 250
+    "id": "cooked_seafood",
+    "gameId": "CookedFish",
+    "name": "Cooked Seafood",
+    "image": "CookedSeafood.png",
+    "description": "A cooked piece of freshly caught aquatic critter.\n\nUnsurprisingly, it tastes a bit fishy.",
+    "quality": 3,
+    "kcalPerKg": 1600.0,
+    "tags": [
+      "edible",
+      "jawbo_diet_rust_2"
+    ]
   },
   {
-    "id": "grubfruit_preserve",
-    "name": "Grubfruit Preserve",
-    "image": "GrubfruitPreserve.png",
-    "kcalPerKg": 2400
+    "id": "curried_beans",
+    "gameId": "Curry",
+    "name": "Curried Beans",
+    "image": "CurriedBeans.png",
+    "description": "Chewy Nosh Beans simmered with chunks of Tonic Root.\n\nIt's so spicy!",
+    "quality": 4,
+    "kcalPerKg": 5000.0,
+    "tags": [
+      "edible"
+    ]
   },
   {
-    "id": "hexalent_fruit",
-    "name": "Hexalent Fruit",
-    "image": "HexalentFruit.png",
-    "kcalPerKg": 6400
+    "id": "deep_fried_steak",
+    "gameId": "DeepFriedMeat",
+    "name": "Deep Fried Steak",
+    "image": "DeepFriedSteak.png",
+    "description": "A juicy slab of meat with a crunchy deep-fried upper layer.",
+    "quality": 3,
+    "dlc": [
+      "DLC2_ID"
+    ],
+    "kcalPerKg": 4000.0,
+    "tags": [
+      "edible"
+    ]
   },
   {
-    "id": "mushroom",
-    "name": "Mushroom",
-    "image": "Mushroom.png",
-    "kcalPerKg": 2400
+    "id": "edamame",
+    "gameId": "Edamame",
+    "name": "Edamame",
+    "image": "Edamame.png",
+    "description": "Raw Nosh Beans sprinkled with Sodicane shavings.\n\nSimple and satisfying.",
+    "quality": 3,
+    "dlc": [
+      "DLC5_ID"
+    ],
+    "kcalPerKg": 1450.0,
+    "tags": [
+      "edible"
+    ]
   },
   {
-    "id": "mushroom_wrap",
-    "name": "Mushroom Wrap",
-    "image": "MushroomWrap.png",
-    "kcalPerKg": 4800
+    "id": "fish_fillet",
+    "gameId": "FishMeat",
+    "name": "Fish Fillet",
+    "image": "FishFillet.png",
+    "description": "An uncooked fillet from a very dead aquatic critter. Yum!",
+    "quality": 2,
+    "kcalPerKg": 1000.0,
+    "tags": [
+      "edible",
+      "fish_meat",
+      "jawbo_diet_rust_2",
+      "seafood"
+    ]
   },
   {
     "id": "fish_taco",
+    "gameId": "DeepFriedFish",
     "name": "Fish Taco",
     "image": "FishTaco.png",
-    "kcalPerKg": 4200
+    "description": "Deep-fried fish cradled in a crunchy fin.",
+    "quality": 4,
+    "dlc": [
+      "DLC2_ID"
+    ],
+    "kcalPerKg": 4200.0,
+    "tags": [
+      "edible"
+    ]
   },
   {
-    "id": "food",
-    "name": "Food",
-    "image": "Food.png"
+    "id": "fried_mushroom",
+    "gameId": "FriedMushroom",
+    "name": "Fried Mushroom",
+    "image": "FriedMushroom.png",
+    "description": "A pan-fried dish made with a fruiting Dusk Cap.\n\nIt has a thick, savory flavor with subtle earthy undertones.",
+    "quality": 1,
+    "kcalPerKg": 2800.0,
+    "tags": [
+      "coral_bug_diet_eatsolid",
+      "edible",
+      "royal_bug_diet_eatsolid",
+      "sun_bug_diet_eatsolid"
+    ]
   },
   {
     "id": "frost_bun",
+    "gameId": "ColdWheatBread",
     "name": "Frost Bun",
     "image": "FrostBun.png",
-    "kcalPerKg": 1200
+    "description": "A simple bun baked from Sleet Wheat Grain.\n\nEach bite leaves a mild cooling sensation in one's mouth, even when the bun itself is warm.",
+    "quality": 2,
+    "kcalPerKg": 1200.0,
+    "tags": [
+      "edible"
+    ]
   },
   {
     "id": "frost_burger",
+    "gameId": "Burger",
     "name": "Frost Burger",
     "image": "FrostBurger.png",
-    "kcalPerKg": 6000
+    "description": "Meat and Lettuce on a chilled Frost Bun.\n\nIt's the only burger best served cold.",
+    "quality": 6,
+    "kcalPerKg": 6000.0,
+    "tags": [
+      "edible"
+    ]
+  },
+  {
+    "id": "gamma_mush",
+    "gameId": "GammaMush",
+    "name": "Gamma Mush",
+    "image": "GammaMush.png",
+    "description": "A disturbingly delicious mixture of irradiated dirt and water.",
+    "quality": 1,
+    "kcalPerKg": 1050.0,
+    "tags": [
+      "edible"
+    ]
+  },
+  {
+    "id": "gristle_berry",
+    "gameId": "GrilledPrickleFruit",
+    "name": "Gristle Berry",
+    "image": "GristleBerry.png",
+    "description": "The grilled bud of a Bristle Berry.\n\nHeat unlocked an exquisite taste in the fruit, though the burnt spines leave something to be desired.",
+    "quality": 1,
+    "kcalPerKg": 2000.0,
+    "tags": [
+      "coral_bug_diet_eatsolid",
+      "edible",
+      "royal_bug_diet_eatsolid",
+      "shine_bug_diet_eatsolid",
+      "sun_bug_diet_eatsolid"
+    ]
+  },
+  {
+    "id": "grubfruit",
+    "gameId": "WormSuperFruit",
+    "name": "Grubfruit",
+    "image": "Grubfruit.png",
+    "description": "A plump, healthy fruit with a honey-like taste.",
+    "quality": 1,
+    "dlc": [
+      "EXPANSION1_ID"
+    ],
+    "kcalPerKg": 250.0,
+    "tags": [
+      "edible"
+    ]
+  },
+  {
+    "id": "grubfruit_preserve",
+    "gameId": "WormSuperFood",
+    "name": "Grubfruit Preserve",
+    "image": "GrubfruitPreserve.png",
+    "description": "A long lasting Grubfruit jam preserved in Sucrose.\n\nThe thick, goopy jam retains the shape of the jar when poured out, but the sweet taste can't be matched.",
+    "quality": 3,
+    "dlc": [
+      "EXPANSION1_ID"
+    ],
+    "kcalPerKg": 2400.0,
+    "tags": [
+      "edible"
+    ]
+  },
+  {
+    "id": "hexalent_fruit",
+    "gameId": "ForestForagePlant",
+    "name": "Hexalent Fruit",
+    "image": "HexalentFruit.png",
+    "description": "A seedless fruit with an unusual rubbery texture.\n\nIt cannot be replanted.\n\nHexalent fruit is much more calorie dense than Muckroot fruit.",
+    "quality": -1,
+    "kcalPerKg": 6400.0,
+    "tags": [
+      "edible"
+    ]
+  },
+  {
+    "id": "jawbo_fillet",
+    "gameId": "PrehistoricPacuFillet",
+    "name": "Jawbo Fillet",
+    "image": "Jawbo_Fillet.png",
+    "description": "An uncooked fillet from a very dead Jawbo. It has a silky texture.",
+    "quality": 3,
+    "dlc": [
+      "DLC4_ID"
+    ],
+    "kcalPerKg": 1000.0,
+    "tags": [
+      "edible",
+      "fish_meat"
+    ]
   },
   {
     "id": "lettuce",
+    "gameId": "Lettuce",
     "name": "Lettuce",
     "image": "Lettuce.png",
-    "kcalPerKg": 400
+    "description": "Crunchy, slightly salty leaves from a Waterweed plant.",
+    "quality": 0,
+    "kcalPerKg": 400.0,
+    "tags": [
+      "edible"
+    ]
   },
   {
     "id": "liceloaf",
+    "gameId": "BasicPlantBar",
     "name": "Liceloaf",
     "image": "Liceloaf.png",
-    "kcalPerKg": 1700
+    "description": "Meal Lice compacted into a dense, immobile loaf.",
+    "quality": 0,
+    "kcalPerKg": 1700.0,
+    "tags": [
+      "edible"
+    ]
   },
   {
     "id": "meal_lice",
+    "gameId": "BasicPlantFood",
     "name": "Meal Lice",
     "image": "MealLice.png",
-    "kcalPerKg": 600
+    "description": "A flavorless grain that almost never wiggles on its own.",
+    "quality": -1,
+    "kcalPerKg": 600.0,
+    "tags": [
+      "edible"
+    ]
   },
   {
     "id": "meat",
+    "gameId": "Meat",
     "name": "Meat",
     "image": "Meat.png",
-    "kcalPerKg": 1600
+    "description": "Uncooked meat from a very dead critter. Yum!",
+    "quality": -1,
+    "kcalPerKg": 1600.0,
+    "tags": [
+      "abyss_bug_diet_eatsolid",
+      "edible",
+      "rhex_diet_brineice"
+    ]
+  },
+  {
+    "id": "megafrond_grain",
+    "gameId": "FernFood",
+    "name": "Megafrond Grain",
+    "image": "MegafrondGrain.png",
+    "description": "An ancient grain that can be processed into Food.",
+    "quality": 2,
+    "dlc": [
+      "DLC4_ID"
+    ],
+    "tags": [
+      "grain"
+    ]
+  },
+  {
+    "id": "mimillet",
+    "gameId": "ButterflyPlantSeed",
+    "name": "Mimillet",
+    "image": "Mimillet.png",
+    "description": "An inedible seed from a Mimika Bud.\n\nIt can be sown to cultivate more plants, or processed into Food.\n\nDigging up Buried Objects may uncover a Mimillet Seed.",
+    "quality": 2,
+    "dlc": [
+      "DLC4_ID"
+    ],
+    "tags": [
+      "pacu_diet_toxicsand"
+    ]
   },
   {
     "id": "mixed_berry_pie",
+    "gameId": "BerryPie",
     "name": "Mixed Berry Pie",
     "image": "MixedBerryPie.png",
-    "kcalPerKg": 4200
+    "description": "A pie made primarily of Grubfruit and Gristle Berries.\n\nThe mixture of berries creates a fragrant, colorful filling that packs a sweet punch.",
+    "quality": 5,
+    "dlc": [
+      "EXPANSION1_ID"
+    ],
+    "kcalPerKg": 4200.0,
+    "tags": [
+      "edible"
+    ]
   },
   {
     "id": "muckroot",
+    "gameId": "BasicForagePlant",
     "name": "Muckroot",
     "image": "Muckroot.png",
-    "kcalPerKg": 800
+    "description": "A seedless fruit with an upsettingly bland aftertaste.\n\nIt cannot be replanted.\n\nDigging up Buried Objects may uncover a Muckroot.",
+    "quality": -1,
+    "kcalPerKg": 800.0,
+    "tags": [
+      "edible"
+    ]
   },
   {
     "id": "mush_bar",
+    "gameId": "MushBar",
     "name": "Mush Bar",
     "image": "MushBar.png",
-    "kcalPerKg": 800
+    "description": "An edible, putrefied mudslop.\n\nMush Bars are preferable to starvation, but only just barely.",
+    "quality": -1,
+    "kcalPerKg": 800.0,
+    "tags": [
+      "edible"
+    ]
   },
   {
     "id": "mush_fry",
+    "gameId": "FriedMushBar",
     "name": "Mush Fry",
     "image": "MushFry.png",
-    "kcalPerKg": 1050
+    "description": "Pan-fried, solidified mudslop.\n\nThe inside is almost completely uncooked, despite the crunch on the outside.",
+    "quality": 0,
+    "kcalPerKg": 1050.0,
+    "tags": [
+      "edible"
+    ]
+  },
+  {
+    "id": "mushroom",
+    "gameId": "Mushroom",
+    "name": "Mushroom",
+    "image": "Mushroom.png",
+    "description": "An edible, flavorless fungus that grew in the dark.",
+    "quality": 0,
+    "kcalPerKg": 2400.0,
+    "tags": [
+      "edible",
+      "sun_bug_diet_eatsolid"
+    ]
   },
   {
     "id": "mushroom_quiche",
+    "gameId": "Quiche",
     "name": "Mushroom Quiche",
     "image": "MushroomQuiche.png",
-    "kcalPerKg": 6400
+    "description": "Omelette, Fried Mushroom and Lettuce piled onto a yummy crust.\n\nSomehow, it's both soggy and crispy.",
+    "quality": 5,
+    "kcalPerKg": 6400.0,
+    "tags": [
+      "edible"
+    ]
   },
   {
-    "id": "nutrient_bar",
-    "name": "Nutrient Bar",
-    "image": "NutrientBar.png",
-    "kcalPerKg": 800
+    "id": "mushroom_wrap",
+    "gameId": "MushroomWrap",
+    "name": "Mushroom Wrap",
+    "image": "MushroomWrap.png",
+    "description": "Flavorful Mushrooms wrapped in Lettuce.\n\nIt has an earthy flavor punctuated by a refreshing crunch.",
+    "quality": 4,
+    "kcalPerKg": 4800.0,
+    "tags": [
+      "edible"
+    ]
   },
   {
-    "id": "omelette",
-    "name": "Omelette",
-    "image": "Omelette.png",
-    "kcalPerKg": 2800
+    "id": "mussel_tongue",
+    "gameId": "MusselTongue",
+    "name": "Mussel Tongue",
+    "image": "MusselTongue.png",
+    "description": "Edible tongue of a Mussel Sprout.\n\nIt's bitter and chewy, but better than starvation.",
+    "quality": -1,
+    "dlc": [
+      "DLC5_ID"
+    ],
+    "kcalPerKg": 2800.0,
+    "tags": [
+      "edible"
+    ]
   },
   {
-    "id": "pacu_fillet",
-    "name": "Pacu Fillet",
-    "image": "PacuFillet.png",
-    "kcalPerKg": 1000
+    "id": "nigiri",
+    "gameId": "Nigiri",
+    "name": "Nigiri",
+    "image": "Nigiri.png",
+    "description": "Tenderized Calamari and Liceloaf wrapped in Nori.\n\nExpert preparation highlights the meat's delicate sweetness and soft, chewy texture.",
+    "quality": 5,
+    "dlc": [
+      "DLC5_ID"
+    ],
+    "kcalPerKg": 3600.0,
+    "tags": [
+      "edible"
+    ]
   },
   {
-    "id": "pemmican",
-    "name": "Pemmican",
-    "image": "Pemmican.png",
-    "kcalPerKg": 2600
+    "id": "nori",
+    "gameId": "Nori",
+    "name": "Nori",
+    "image": "Nori.png",
+    "description": "A bundle of slightly salty dried greenery from a Tower Kelp or Kelpole.\n\nIt's most commonly used as an ingredient in higher-tier dishes.",
+    "quality": 2,
+    "dlc": [
+      "DLC5_ID"
+    ]
   },
   {
-    "id": "pepper_bread",
-    "name": "Pepper Bread",
-    "image": "PepperBread.png",
-    "kcalPerKg": 4000
-  },
-  {
-    "id": "pickled_meal",
-    "name": "Pickled Meal",
-    "image": "PickledMeal.png",
-    "kcalPerKg": 1800
+    "id": "nosh_bean",
+    "gameId": "BeanPlantSeed",
+    "name": "Nosh Bean",
+    "image": "NoshBean.png",
+    "description": "An inedible bean that can be processed into delicious foods.",
+    "quality": 3,
+    "tags": [
+      "microbemusher_fishfood_input",
+      "pacu_diet_toxicsand"
+    ]
   },
   {
     "id": "nosh_noms",
+    "gameId": "DeepFriedNosh",
     "name": "Nosh Noms",
     "image": "NoshNoms.png",
-    "kcalPerKg": 5000
+    "description": "A snackable handful of crunchy beans.",
+    "quality": 3,
+    "dlc": [
+      "DLC2_ID"
+    ],
+    "kcalPerKg": 5000.0,
+    "tags": [
+      "edible"
+    ]
+  },
+  {
+    "id": "nutrient_bar",
+    "gameId": "FieldRation",
+    "name": "Nutrient Bar",
+    "image": "NutrientBar.png",
+    "description": "A nourishing nutrient paste, sandwiched between thin wafer layers.",
+    "quality": -1,
+    "kcalPerKg": 800.0,
+    "tags": [
+      "edible"
+    ]
+  },
+  {
+    "id": "omelette",
+    "gameId": "CookedEgg",
+    "name": "Omelette",
+    "image": "Omelette.png",
+    "description": "Fluffed and folded Egg innards.\n\nIt turns out you do, in fact, have to break a few eggs to make it.",
+    "quality": 2,
+    "kcalPerKg": 2800.0,
+    "tags": [
+      "edible"
+    ]
+  },
+  {
+    "id": "ovagro_fig",
+    "gameId": "VineFruit",
+    "name": "Ovagro Fig",
+    "image": "Ovagro_Fig.png",
+    "description": "The fruit from an Ovagro Vine.\n\nIt's fun to squeeze as many as possible into a single mouthful.",
+    "quality": 0,
+    "dlc": [
+      "DLC4_ID"
+    ],
+    "kcalPerKg": 325.0,
+    "tags": [
+      "edible"
+    ]
+  },
+  {
+    "id": "pemmican",
+    "gameId": "Pemmican",
+    "name": "Pemmican",
+    "image": "Pemmican.png",
+    "description": "Meat and Tallow pounded into a calorie-dense brick with an exceptionally long shelf life.\n\nSurvival never tasted so good.",
+    "quality": 2,
+    "dlc": [
+      "DLC2_ID"
+    ],
+    "kcalPerKg": 2600.0,
+    "tags": [
+      "edible"
+    ]
+  },
+  {
+    "id": "pepper_bread",
+    "gameId": "SpiceBread",
+    "name": "Pepper Bread",
+    "image": "PepperBread.png",
+    "description": "A loaf of bread, lightly spiced with Pincha Peppernut for a mild bite.\n\nThere's a simple joy to be had in pulling it apart in one's fingers.",
+    "quality": 5,
+    "kcalPerKg": 4000.0,
+    "tags": [
+      "azure_bug_diet_eatsolid",
+      "coral_bug_diet_eatsolid",
+      "edible",
+      "royal_bug_diet_eatsolid"
+    ]
+  },
+  {
+    "id": "pickled_meal",
+    "gameId": "PickledMeal",
+    "name": "Pickled Meal",
+    "image": "PickledMeal.png",
+    "description": "Meal Lice preserved in vinegar.\n\nIt's a rarely acquired taste.",
+    "quality": -1,
+    "kcalPerKg": 1800.0,
+    "tags": [
+      "edible"
+    ]
   },
   {
     "id": "pikeapple",
+    "gameId": "HardSkinBerry",
     "name": "Pikeapple",
     "image": "Pikeapple.png",
-    "kcalPerKg": 800
+    "description": "An edible fruit encased in a thorny husk.",
+    "quality": -1,
+    "dlc": [
+      "DLC2_ID"
+    ],
+    "kcalPerKg": 800.0,
+    "tags": [
+      "edible",
+      "shine_bug_diet_eatsolid",
+      "smoker_veggie"
+    ]
   },
   {
     "id": "pikeapple_skewer",
+    "gameId": "CookedPikeapple",
     "name": "Pikeapple Skewer",
     "image": "PikeappleSkewer.png",
-    "kcalPerKg": 1200
+    "description": "Grilling a Pikeapple softens its spikes, making it slighly less awkward to eat.\n\nIt does not diminish the smell.",
+    "quality": 1,
+    "dlc": [
+      "DLC2_ID"
+    ],
+    "kcalPerKg": 1200.0,
+    "tags": [
+      "coral_bug_diet_eatsolid",
+      "edible",
+      "royal_bug_diet_eatsolid",
+      "shine_bug_diet_eatsolid",
+      "sun_bug_diet_eatsolid"
+    ]
   },
   {
     "id": "pincha_peppernut",
+    "gameId": "SpiceNut",
     "name": "Pincha Peppernut",
-    "image": "PinchaPeppernut.png"
+    "image": "PinchaPeppernut.png",
+    "description": "The flavorful nut of a Pincha Pepperplant.\n\nThe bitter outer rind hides a rich, peppery core that is useful in cooking.",
+    "quality": 0,
+    "tags": [
+      "royal_bug_diet_eatsolid"
+    ]
   },
   {
     "id": "plant_meat",
+    "gameId": "PlantMeat",
     "name": "Plant Meat",
     "image": "PlantMeat.png",
-    "kcalPerKg": 1200
-  },
-  {
-    "id": "stuffed_berry",
-    "name": "Stuffed Berry",
-    "image": "StuffedBerry.png",
-    "kcalPerKg": 4400
-  },
-  {
-    "id": "spindly_grubfruit",
-    "name": "Spindly Grubfruit",
-    "image": "SpindlyGrubfruit.png",
-    "kcalPerKg": 800
+    "description": "Planty plant meat from a plant. How nice!",
+    "quality": 1,
+    "dlc": [
+      "EXPANSION1_ID"
+    ],
+    "kcalPerKg": 1200.0,
+    "tags": [
+      "edible"
+    ]
   },
   {
     "id": "plume_squash",
+    "gameId": "Carrot",
     "name": "Plume Squash",
     "image": "PlumeSquash.png",
-    "kcalPerKg": 4000
+    "description": "An edible tuber with an earthy, elegant flavor.",
+    "quality": 0,
+    "dlc": [
+      "DLC2_ID"
+    ],
+    "kcalPerKg": 4000.0,
+    "tags": [
+      "edible"
+    ]
   },
   {
     "id": "raw_egg",
+    "gameId": "RawEgg",
     "name": "Raw Egg",
     "image": "RawEgg.png",
-    "kcalPerKg": 1600
+    "description": "A raw Egg that has been cracked open for use in Food preparation.\n\nIt will never hatch.",
+    "quality": -1,
+    "kcalPerKg": 1600.0,
+    "tags": [
+      "edible"
+    ]
   },
   {
     "id": "raw_shellfish",
+    "gameId": "ShellfishMeat",
     "name": "Raw Shellfish",
     "image": "RawShellfish.png",
-    "kcalPerKg": 1000
+    "description": "An uncooked chunk of very dead Sanishell. Yum!",
+    "quality": 2,
+    "kcalPerKg": 1000.0,
+    "tags": [
+      "edible",
+      "seafood"
+    ]
   },
   {
     "id": "roast_grubfruit_nut",
+    "gameId": "WormBasicFood",
     "name": "Roast Grubfruit Nut",
     "image": "RoastGrubfruitNut.png",
-    "kcalPerKg": 1200
+    "description": "Slow roasted Spindly Grubfruit.\n\nIt has a smoky aroma and tastes of coziness.",
+    "quality": 1,
+    "dlc": [
+      "EXPANSION1_ID"
+    ],
+    "kcalPerKg": 1200.0,
+    "tags": [
+      "edible"
+    ]
+  },
+  {
+    "id": "salty_sticks",
+    "gameId": "SaltySticksFood",
+    "name": "Salty Sticks",
+    "image": "Salty_Sticks.png",
+    "description": "An extremely salty snack harvested from a Sodicane.\n\nVisiting a Water Cooler will counteract the Thirst caused by eating Salty Sticks.",
+    "quality": -1,
+    "dlc": [
+      "DLC5_ID"
+    ],
+    "kcalPerKg": 600.0,
+    "tags": [
+      "edible"
+    ]
   },
   {
     "id": "shellfish_tempura",
+    "gameId": "DeepFriedShellfish",
     "name": "Shellfish Tempura",
     "image": "ShellfishTempura.png",
-    "kcalPerKg": 4200
+    "description": "A crispy deep-fried critter claw.",
+    "quality": 4,
+    "dlc": [
+      "DLC2_ID"
+    ],
+    "kcalPerKg": 4200.0,
+    "tags": [
+      "edible"
+    ]
   },
   {
     "id": "sherberry",
+    "gameId": "IceCavesForagePlant",
     "name": "Sherberry",
     "image": "Sherberry.png",
-    "kcalPerKg": 800
+    "description": "A cold seedless fruit that triggers mild brain freeze.\n\nIt cannot be replanted.",
+    "quality": -1,
+    "dlc": [
+      "DLC2_ID"
+    ],
+    "kcalPerKg": 800.0,
+    "tags": [
+      "edible"
+    ]
+  },
+  {
+    "id": "sleet_wheat_grain",
+    "gameId": "ColdWheatSeed",
+    "name": "Sleet Wheat Grain",
+    "image": "SleetWheatGrain.png",
+    "description": "An edible grain that leaves a cool taste on the tongue.",
+    "quality": 0,
+    "tags": [
+      "grain",
+      "microbemusher_fishfood_input",
+      "pacu_diet_toxicsand"
+    ]
+  },
+  {
+    "id": "smoked_fish",
+    "gameId": "SmokedFish",
+    "name": "Smoked Fish",
+    "image": "Smoked_Fish.png",
+    "description": "A buttery smoked fish fillet.\n\nIt flakes nicely when pulled apart with a fork.",
+    "quality": 3,
+    "dlc": [
+      "DLC4_ID"
+    ],
+    "kcalPerKg": 2800.0,
+    "tags": [
+      "edible"
+    ]
+  },
+  {
+    "id": "snac_fruit",
+    "gameId": "GardenForagePlant",
+    "name": "Snac Fruit",
+    "image": "Snac_Fruit.png",
+    "description": "A seedless fruit that loses its flavor long before it is fully chewed.\n\nIt cannot be replanted.\n\nDigging up Buried Objects may uncover a Snac Fruit.",
+    "quality": -1,
+    "dlc": [
+      "DLC4_ID"
+    ],
+    "kcalPerKg": 800.0,
+    "tags": [
+      "edible"
+    ]
   },
   {
     "id": "souffl_pancakes",
+    "gameId": "Pancakes",
     "name": "Soufflé Pancakes",
     "image": "SoufflPancakes.png",
-    "kcalPerKg": 3600
+    "description": "Sweet discs made from Raw Egg and Sleet Wheat Grain.\n\nThey're so thick!",
+    "quality": 3,
+    "kcalPerKg": 3600.0,
+    "tags": [
+      "edible"
+    ]
   },
   {
     "id": "spicy_tofu",
+    "gameId": "SpicyTofu",
     "name": "Spicy Tofu",
     "image": "SpicyTofu.png",
-    "kcalPerKg": 4000
+    "description": "Tofu marinated in a flavorful Pincha Peppernut sauce.\n\nIt packs a delightful punch.",
+    "quality": 5,
+    "kcalPerKg": 4000.0,
+    "tags": [
+      "edible"
+    ]
+  },
+  {
+    "id": "spindly_grubfruit",
+    "gameId": "WormBasicFruit",
+    "name": "Spindly Grubfruit",
+    "image": "SpindlyGrubfruit.png",
+    "description": "A Grubfruit that failed to develop properly.\n\nIt is nonetheless edible, and vaguely tasty.",
+    "quality": 0,
+    "dlc": [
+      "EXPANSION1_ID"
+    ],
+    "kcalPerKg": 800.0,
+    "tags": [
+      "edible",
+      "smoker_veggie"
+    ]
   },
   {
     "id": "squash_fries",
+    "gameId": "FriesCarrot",
     "name": "Squash Fries",
     "image": "SquashFries.png",
-    "kcalPerKg": 5400
+    "description": "Irresistibly crunchy.\n\nBest eaten hot.",
+    "quality": 3,
+    "dlc": [
+      "DLC2_ID"
+    ],
+    "kcalPerKg": 5400.0,
+    "tags": [
+      "edible"
+    ]
+  },
+  {
+    "id": "stuffed_berry",
+    "gameId": "Salsa",
+    "name": "Stuffed Berry",
+    "image": "StuffedBerry.png",
+    "description": "A baked Bristle Berry stuffed with delectable spices and vibrantly flavored.",
+    "quality": 4,
+    "kcalPerKg": 4400.0,
+    "tags": [
+      "abyss_bug_diet_eatsolid",
+      "azure_bug_diet_eatsolid",
+      "coral_bug_diet_eatsolid",
+      "edible"
+    ]
   },
   {
     "id": "surf_n_turf",
+    "gameId": "SurfAndTurf",
     "name": "Surf'n'Turf",
     "image": "SurfnTurf.png",
-    "kcalPerKg": 6000
+    "description": "A bit of Meat from the land and Cooked Seafood from the sea.\n\nIt's hearty and satisfying.",
+    "quality": 4,
+    "kcalPerKg": 6000.0,
+    "tags": [
+      "edible"
+    ]
+  },
+  {
+    "id": "sushi_roll",
+    "gameId": "Maki",
+    "name": "Sushi Roll",
+    "image": "SushiRoll.png",
+    "description": "Raw Fish Fillet paired with Liceloaf and wrapped in Nori.\n\nThe salty, crispy wrap balances perfectly with the juicy proteins inside.",
+    "quality": 4,
+    "dlc": [
+      "DLC5_ID"
+    ],
+    "kcalPerKg": 3600.0,
+    "tags": [
+      "edible"
+    ]
   },
   {
     "id": "swamp_chard_heart",
+    "gameId": "SwampForagePlant",
     "name": "Swamp Chard Heart",
     "image": "SwampChardHeart.png",
-    "kcalPerKg": 2400
+    "description": "A seedless plant with a squishy, juicy center and an awful smell.\n\nIt cannot be replanted.",
+    "quality": -1,
+    "dlc": [
+      "EXPANSION1_ID"
+    ],
+    "kcalPerKg": 2400.0,
+    "tags": [
+      "edible"
+    ]
   },
   {
     "id": "swampy_delights",
+    "gameId": "SwampDelights",
     "name": "Swampy Delights",
     "image": "SwampyDelights.png",
-    "kcalPerKg": 2240
-  },
-  {
-    "id": "tofu",
-    "name": "Tofu",
-    "image": "Tofu.png",
-    "kcalPerKg": 3600
+    "description": "Dried gelatinous cubes from a Bog Jelly.\n\nEach cube has a wonderfully chewy texture and is lightly coated in a delicate powder.",
+    "quality": 1,
+    "dlc": [
+      "EXPANSION1_ID"
+    ],
+    "kcalPerKg": 2240.0,
+    "tags": [
+      "edible"
+    ]
   },
   {
     "id": "sweatcorn",
+    "gameId": "GardenFoodPlantFood",
     "name": "Sweatcorn",
     "image": "Sweatcorn.png",
-    "kcalPerKg": 800
+    "description": "The sugary vegetable produced by Sweatcorn Stalks.\n\nIt tastes a lot better deep-fried.",
+    "quality": -1,
+    "dlc": [
+      "DLC4_ID"
+    ],
+    "kcalPerKg": 800.0,
+    "tags": [
+      "edible",
+      "smoker_veggie"
+    ]
+  },
+  {
+    "id": "tender_brisket",
+    "gameId": "SmokedDinosaurMeat",
+    "name": "Tender Brisket",
+    "image": "Tender_Brisket.png",
+    "description": "A cooked stack of tough meat that's been marinated and slow-smoked to tender perfection.",
+    "quality": 3,
+    "dlc": [
+      "DLC4_ID"
+    ],
+    "kcalPerKg": 5000.0,
+    "tags": [
+      "edible"
+    ]
+  },
+  {
+    "id": "toasted_mimillet",
+    "gameId": "ButterflyFood",
+    "name": "Toasted Mimillet",
+    "image": "Toasted_Mimillet.png",
+    "description": "A lightly toasted Mimillet.\n\nIt makes the tummy feel a bit fluttery.",
+    "quality": 1,
+    "dlc": [
+      "DLC4_ID"
+    ],
+    "kcalPerKg": 1500.0,
+    "tags": [
+      "edible"
+    ]
+  },
+  {
+    "id": "tofu",
+    "gameId": "Tofu",
+    "name": "Tofu",
+    "image": "Tofu.png",
+    "description": "A bland curd made from Nosh Beans.\n\nIt has an unusual but pleasant consistency.",
+    "quality": 2,
+    "kcalPerKg": 3600.0,
+    "tags": [
+      "edible"
+    ]
+  },
+  {
+    "id": "tough_meat",
+    "gameId": "DinosaurMeat",
+    "name": "Tough Meat",
+    "image": "Tough_Meat.png",
+    "description": "Uncooked meat from a very dead critter.\n\nIt's inedible until cooked in the Smoker.",
+    "quality": -1,
+    "dlc": [
+      "DLC4_ID"
+    ],
+    "tags": [
+      "rhex_diet_brineice"
+    ]
+  },
+  {
+    "id": "uni",
+    "gameId": "UrchinMeat",
+    "name": "Uni",
+    "image": "Uni.png",
+    "description": "The edible flesh of a Pinpoki.\n\nA rare delicacy whose safe preparation involves destroying the valuable outer spikes.",
+    "quality": 3,
+    "dlc": [
+      "DLC5_ID"
+    ],
+    "kcalPerKg": 7200.0,
+    "tags": [
+      "edible"
+    ]
   },
   {
     "id": "veggie_poppers",
+    "gameId": "SmokedVegetables",
     "name": "Veggie Poppers",
     "image": "Veggie_Poppers.png",
-    "kcalPerKg": 2862.5
+    "description": "Crisp vegetables stuffed with herbs and smoked for hours.",
+    "quality": 2,
+    "dlc": [
+      "DLC4_ID"
+    ],
+    "kcalPerKg": 2862.5,
+    "tags": [
+      "edible"
+    ]
   }
 ]

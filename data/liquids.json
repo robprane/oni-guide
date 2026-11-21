@@ -1,252 +1,638 @@
 [
   {
+    "id": "biodiesel",
+    "gameId": "RefinedLipid",
+    "name": "Biodiesel",
+    "image": "Biodiesel.png",
+    "description": "Biodiesel is a Liquid composed of highly processed fatty acids derived from purified natural oils.\n\nIts combustibility makes it useful for Power production.",
+    "category": "Liquid",
+    "freezing_point": -10.0,
+    "freezing_product": "Tallow",
+    "boiling_point": 180.0,
+    "boiling_product": "Carbon Dioxide",
+    "tags": [
+      "combustible_liquid",
+      "rocket_liquid_fuel"
+    ]
+  },
+  {
     "id": "brackene",
+    "gameId": "Milk",
     "name": "Brackene",
-    "image": "Brackene.png"
+    "image": "Brackene.png",
+    "description": "Brackene is a sodium-rich Liquid.\n\nIt is useful in Ranching.",
+    "category": "Liquid",
+    "freezing_point": -16.5,
+    "freezing_product": "Frozen Brackene",
+    "boiling_point": 80.0,
+    "boiling_product": "Brine"
   },
   {
     "id": "brine",
+    "gameId": "Brine",
     "name": "Brine",
-    "image": "Brine.png"
+    "image": "Brine.png",
+    "description": "Brine is a natural, highly concentrated solution of Salt dissolved in Water.\n\nIt can be used in desalination processes, separating out usable salt.",
+    "category": "Liquid",
+    "freezing_point": -22.5,
+    "freezing_product": "Brine Ice",
+    "boiling_point": 102.75,
+    "boiling_product": "Steam",
+    "tags": [
+      "tublia_irrigation"
+    ]
   },
   {
     "id": "crude_oil",
+    "gameId": "CrudeOil",
     "name": "Crude Oil",
-    "image": "CrudeOil.png"
+    "image": "CrudeOil.png",
+    "description": "Crude Oil is a raw potential Power source composed of billions of dead, primordial organisms.\n\nIt is also a useful lubricant for certain types of machinery.",
+    "category": "Liquid",
+    "freezing_point": -40.15,
+    "freezing_product": "Solid Crude Oil",
+    "boiling_point": 399.85,
+    "boiling_product": "Petroleum",
+    "tags": [
+      "lubricating_oil"
+    ]
   },
   {
     "id": "ethanol",
+    "gameId": "Ethanol",
     "name": "Ethanol",
-    "image": "Ethanol.png"
-  },
-  {
-    "id": "liquid_carbon",
-    "name": "Liquid Carbon",
-    "image": "LiquidCarbon.png"
-  },
-  {
-    "id": "liquid_carbon_dioxide",
-    "name": "Liquid Carbon Dioxide",
-    "image": "LiquidCarbonDioxide.png"
-  },
-  {
-    "id": "liquid_chlorine",
-    "name": "Liquid Chlorine",
-    "image": "LiquidChlorine.png"
-  },
-  {
-    "id": "liquid_hydrogen",
-    "name": "Liquid Hydrogen",
-    "image": "LiquidHydrogen.png"
-  },
-  {
-    "id": "liquid_methane",
-    "name": "Liquid Methane",
-    "image": "LiquidMethane.png"
-  },
-  {
-    "id": "liquid_naphtha",
-    "name": "Liquid Naphtha",
-    "image": "LiquidNaphtha.png"
-  },
-  {
-    "id": "liquid_nuclear_waste",
-    "name": "Liquid Nuclear Waste",
-    "image": "LiquidNuclearWaste.png"
-  },
-  {
-    "id": "liquid_oxygen",
-    "name": "Liquid Oxygen",
-    "image": "LiquidOxygen.png"
-  },
-  {
-    "id": "liquid_phosphorus",
-    "name": "Liquid Phosphorus",
-    "image": "LiquidPhosphorus.png"
-  },
-  {
-    "id": "sap",
-    "name": "Sap",
-    "image": "LiquidResin.png"
-  },
-  {
-    "id": "liquid_sucrose",
-    "name": "Liquid Sucrose",
-    "image": "LiquidSucrose.png"
-  },
-  {
-    "id": "liquid_sulfur",
-    "name": "Liquid Sulfur",
-    "image": "LiquidSulfur.png"
-  },
-  {
-    "id": "liquid_uranium",
-    "name": "Liquid Uranium",
-    "image": "LiquidUranium.png"
-  },
-  {
-    "id": "magma",
-    "name": "Magma",
-    "image": "Magma.png"
-  },
-  {
-    "id": "molten_aluminum",
-    "name": "Molten Aluminum",
-    "image": "MoltenAluminum.png"
-  },
-  {
-    "id": "molten_cobalt",
-    "name": "Molten Cobalt",
-    "image": "MoltenCobalt.png"
-  },
-  {
-    "id": "molten_copper",
-    "name": "Molten Copper",
-    "image": "MoltenCopper.png"
-  },
-  {
-    "id": "molten_glass",
-    "name": "Molten Glass",
-    "image": "MoltenGlass.png"
-  },
-  {
-    "id": "molten_gold",
-    "name": "Molten Gold",
-    "image": "MoltenGold.png"
-  },
-  {
-    "id": "molten_iron",
-    "name": "Molten Iron",
-    "image": "MoltenIron.png"
-  },
-  {
-    "id": "molten_lead",
-    "name": "Molten Lead",
-    "image": "MoltenLead.png"
-  },
-  {
-    "id": "molten_zinc",
-    "name": "Molten Zinc",
-    "image": "Molten_Zinc.png"
-  },
-  {
-    "id": "molten_niobium",
-    "name": "Molten Niobium",
-    "image": "MoltenNiobium.png"
-  },
-  {
-    "id": "molten_salt",
-    "name": "Molten Salt",
-    "image": "MoltenSalt.png"
-  },
-  {
-    "id": "molten_steel",
-    "name": "Molten Steel",
-    "image": "MoltenSteel.png"
-  },
-  {
-    "id": "molten_tungsten",
-    "name": "Molten Tungsten",
-    "image": "MoltenTungsten.png"
-  },
-  {
-    "id": "nectar",
-    "name": "Nectar",
-    "image": "Nectar.png"
-  },
-  {
-    "id": "petroleum",
-    "name": "Petroleum",
-    "image": "Petroleum.png"
-  },
-  {
-    "id": "polluted_water",
-    "name": "Polluted Water",
-    "image": "PollutedWater.png"
-  },
-  {
-    "id": "salt_water",
-    "name": "Salt Water",
-    "image": "SaltWater.png"
-  },
-  {
-    "id": "super_coolant",
-    "name": "Super Coolant",
-    "image": "SuperCoolant.png"
-  },
-  {
-    "id": "visco_gel_fluid",
-    "name": "Visco-Gel Fluid",
-    "image": "ViscoGelFluid.png"
-  },
-  {
-    "id": "mercury",
-    "name": "Mercury",
-    "image": "Mercury.png"
-  },
-  {
-    "id": "nuclear_waste",
-    "name": "Nuclear Waste",
-    "image": "NuclearWaste.png"
-  },
-  {
-    "id": "water",
-    "name": "Water",
-    "image": "Water.png"
-  },
-  {
-    "id": "molten_iridium",
-    "name": "Molten Iridium",
-    "image": "Molten_Iridium.png"
-  },
-  {
-    "id": "molten_nickel",
-    "name": "Molten Nickel",
-    "image": "Molten_Nickel.png"
+    "image": "Ethanol.png",
+    "description": "(C2H6O) Ethanol is an advanced chemical compound in a Liquid state.\n\nIt can be used as a highly effective fuel source when burned.",
+    "category": "Liquid",
+    "freezing_point": -114.05,
+    "freezing_product": "Solid Ethanol",
+    "boiling_point": 78.35,
+    "boiling_product": "Ethanol Gas",
+    "tags": [
+      "combustible_liquid"
+    ]
   },
   {
     "id": "gunk",
+    "gameId": "LiquidGunk",
     "name": "Gunk",
-    "image": "Gunk.png"
-  },
-  {
-    "id": "phyto_oil",
-    "name": "Phyto Oil",
-    "image": "Phyto_Oil.png"
-  },
-  {
-    "id": "biodiesel",
-    "name": "Biodiesel",
-    "image": "Biodiesel.png"
-  },
-  {
-    "id": "polluted_brine",
-    "name": "Polluted Brine",
-    "image": "Polluted_Brine.png"
-  },
-  {
-    "id": "ovolene",
-    "name": "Ovolene",
-    "image": "Ovolene.png"
-  },
-  {
-    "id": "resin",
-    "name": "Resin",
-    "image": "Resin.png"
-  },
-  {
-    "id": "squid_ink",
-    "name": "Squid Ink",
-    "image": "Squid_Ink.png"
+    "image": "Gunk.png",
+    "description": "Gunk is the built-up grime and grit produced by Duplicants' bionic mechanisms.\n\nIt is unpleasantly viscous.",
+    "category": "Liquid",
+    "freezing_point": -8.15,
+    "freezing_product": "Solid Gunk",
+    "boiling_point": 447.85,
+    "boiling_product": "Petroleum"
   },
   {
     "id": "latex",
+    "gameId": "Latex",
     "name": "Latex",
-    "image": "Latex.png"
+    "image": "Latex.png",
+    "description": "Latex is a naturally derived colloidal dispersion of polymer particles in Liquid.\n\nIt can be used to produce Rubber.",
+    "category": "Liquid",
+    "freezing_point": -0.65,
+    "freezing_product": "Polluted Ice",
+    "boiling_point": 99.35,
+    "boiling_product": "Carbon Dioxide"
+  },
+  {
+    "id": "liquid_carbon",
+    "gameId": "MoltenCarbon",
+    "name": "Liquid Carbon",
+    "image": "LiquidCarbon.png",
+    "description": "(C) Liquid Carbon is an abundant, versatile element heated into a Liquid state.",
+    "category": "Liquid",
+    "freezing_point": 3551.85,
+    "freezing_product": "Refined Carbon",
+    "boiling_point": 4826.85,
+    "boiling_product": "Carbon Gas"
+  },
+  {
+    "id": "liquid_carbon_dioxide",
+    "gameId": "LiquidCarbonDioxide",
+    "name": "Liquid Carbon Dioxide",
+    "image": "LiquidCarbonDioxide.png",
+    "description": "(CO2) Carbon Dioxide is an unbreathable chemical compound.\n\nThis selection is currently in a Liquid state.",
+    "category": "Liquid",
+    "freezing_point": -56.55,
+    "freezing_product": "Solid Carbon Dioxide",
+    "boiling_point": -48.15,
+    "boiling_product": "Carbon Dioxide"
+  },
+  {
+    "id": "liquid_chlorine",
+    "gameId": "Chlorine",
+    "name": "Liquid Chlorine",
+    "image": "LiquidChlorine.png",
+    "description": "(Cl) Chlorine is a natural Germ-killing element in a Liquid state.",
+    "category": "Liquid",
+    "freezing_point": -100.98,
+    "freezing_product": "Solid Chlorine",
+    "boiling_point": -34.6,
+    "boiling_product": "Chlorine Gas"
+  },
+  {
+    "id": "liquid_hydrogen",
+    "gameId": "LiquidHydrogen",
+    "name": "Liquid Hydrogen",
+    "image": "LiquidHydrogen.png",
+    "description": "(H) Hydrogen in its Liquid state.\n\nIt freezes most substances that come into contact with it.",
+    "category": "Liquid",
+    "freezing_point": -259.15,
+    "freezing_product": "Solid Hydrogen",
+    "boiling_point": -252.15,
+    "boiling_product": "Hydrogen Gas"
+  },
+  {
+    "id": "liquid_methane",
+    "gameId": "LiquidMethane",
+    "name": "Liquid Methane",
+    "image": "LiquidMethane.png",
+    "description": "(CH4) Methane is an alkane.\n\nThis selection is in a Liquid state.",
+    "category": "Liquid",
+    "freezing_point": -182.6,
+    "freezing_product": "Solid Methane",
+    "boiling_point": -161.5,
+    "boiling_product": "Natural Gas"
+  },
+  {
+    "id": "liquid_naphtha",
+    "gameId": "Naphtha",
+    "name": "Liquid Naphtha",
+    "image": "LiquidNaphtha.png",
+    "description": "Naphtha a distilled hydrocarbon mixture produced from the burning of Plastic.",
+    "category": "Liquid",
+    "freezing_point": -50.15,
+    "freezing_product": "Solid Naphtha",
+    "boiling_point": 538.85,
+    "boiling_product": "Sour Gas"
+  },
+  {
+    "id": "liquid_nuclear_waste",
+    "gameId": "NuclearWaste",
+    "name": "Liquid Nuclear Waste",
+    "image": "LiquidNuclearWaste.png",
+    "description": "Highly toxic liquid full of Radioactive Contaminants which emit Radiation that can be absorbed by Radbolt Generators.",
+    "category": "Liquid",
+    "freezing_point": 26.85,
+    "freezing_product": "Solid Nuclear Waste",
+    "boiling_point": 526.85,
+    "boiling_product": "Nuclear Fallout"
+  },
+  {
+    "id": "liquid_oxygen",
+    "gameId": "LiquidOxygen",
+    "name": "Liquid Oxygen",
+    "image": "LiquidOxygen.png",
+    "description": "(O2) Oxygen is a breathable chemical.\n\nThis selection is in a Liquid state.",
+    "category": "Liquid",
+    "freezing_point": -218.79,
+    "freezing_product": "Solid Oxygen",
+    "boiling_point": -182.96,
+    "boiling_product": "Oxygen"
+  },
+  {
+    "id": "liquid_phosphorus",
+    "gameId": "LiquidPhosphorus",
+    "name": "Liquid Phosphorus",
+    "image": "LiquidPhosphorus.png",
+    "description": "(P) Phosphorus is a chemical element.\n\nThis selection is in a Liquid state.",
+    "category": "Liquid",
+    "freezing_point": 44.15,
+    "freezing_product": "Refined Phosphorus",
+    "boiling_point": 280.45,
+    "boiling_product": "Phosphorus Gas"
+  },
+  {
+    "id": "liquid_propane",
+    "gameId": "LiquidPropane",
+    "name": "Liquid Propane",
+    "image": "LiquidPropane.png",
+    "description": "(C3H8) Propane is an alkane.\n\nThis selection is in a Liquid state.\n\nIt is useful in Power production.",
+    "category": "Liquid",
+    "freezing_point": -188.15,
+    "freezing_product": "Solid Propane",
+    "boiling_point": -42.15,
+    "boiling_product": "Propane"
+  },
+  {
+    "id": "liquid_sucrose",
+    "gameId": "MoltenSucrose",
+    "name": "Liquid Sucrose",
+    "image": "LiquidSucrose.png",
+    "description": "(C12H22O11) Liquid Sucrose is the raw form of sugar, heated into a Liquid state.",
+    "category": "Liquid",
+    "freezing_point": 185.85,
+    "freezing_product": "Sucrose",
+    "boiling_point": 230.0,
+    "boiling_product": "Carbon Dioxide"
+  },
+  {
+    "id": "liquid_sulfur",
+    "gameId": "LiquidSulfur",
+    "name": "Liquid Sulfur",
+    "image": "LiquidSulfur.png",
+    "description": "(S) Sulfur is a common chemical element and byproduct of Natural Gas production.\n\nThis selection is in a Liquid state.",
+    "category": "Liquid",
+    "freezing_point": 115.2,
+    "freezing_product": "Sulfur",
+    "boiling_point": 337.0,
+    "boiling_product": "Sulfur Gas"
+  },
+  {
+    "id": "liquid_uranium",
+    "gameId": "MoltenUranium",
+    "name": "Liquid Uranium",
+    "image": "LiquidUranium.png",
+    "description": "(U) Liquid Uranium is a highly Radioactive substance, heated into a hazardous Liquid state.\n\nIt is a byproduct of Enriched Uranium.",
+    "category": "Liquid",
+    "freezing_point": 132.85,
+    "freezing_product": "Depleted Uranium",
+    "boiling_point": 4131.85,
+    "boiling_product": "Rock Gas"
+  },
+  {
+    "id": "magma",
+    "gameId": "Magma",
+    "name": "Magma",
+    "image": "Magma.png",
+    "description": "Magma is a composite of Igneous Rock heated into a molten, Liquid state.",
+    "category": "Liquid",
+    "freezing_point": 1409.85,
+    "freezing_product": "Igneous Rock",
+    "boiling_point": 2356.85,
+    "boiling_product": "Rock Gas"
+  },
+  {
+    "id": "mercury",
+    "gameId": "Mercury",
+    "name": "Mercury",
+    "image": "Mercury.png",
+    "description": "(Hg) Mercury is a metallic Liquid.",
+    "category": "Liquid",
+    "freezing_point": -38.85,
+    "freezing_product": "Solid Mercury",
+    "boiling_point": 356.75,
+    "boiling_product": "Mercury Gas"
+  },
+  {
+    "id": "molten_aluminum",
+    "gameId": "MoltenAluminum",
+    "name": "Molten Aluminum",
+    "image": "MoltenAluminum.png",
+    "description": "(Al) Molten Aluminum is a low density Metal heated into a Liquid state.",
+    "category": "Liquid",
+    "freezing_point": 660.3,
+    "freezing_product": "Aluminum",
+    "boiling_point": 2470.0,
+    "boiling_product": "Aluminum Gas"
+  },
+  {
+    "id": "molten_cobalt",
+    "gameId": "MoltenCobalt",
+    "name": "Molten Cobalt",
+    "image": "MoltenCobalt.png",
+    "description": "(Co) Molten Cobalt is a Refined Metal heated into a Liquid state.",
+    "category": "Liquid",
+    "freezing_point": 1494.85,
+    "freezing_product": "Cobalt",
+    "boiling_point": 2926.85,
+    "boiling_product": "Cobalt Gas"
+  },
+  {
+    "id": "molten_copper",
+    "gameId": "MoltenCopper",
+    "name": "Molten Copper",
+    "image": "MoltenCopper.png",
+    "description": "(Cu) Molten Copper is a conductive Metal heated into a Liquid state.",
+    "category": "Liquid",
+    "freezing_point": 1083.85,
+    "freezing_product": "Copper",
+    "boiling_point": 2560.85,
+    "boiling_product": "Copper Gas"
+  },
+  {
+    "id": "molten_glass",
+    "gameId": "MoltenGlass",
+    "name": "Molten Glass",
+    "image": "MoltenGlass.png",
+    "description": "Molten Glass is a composite of granular rock, heated into a Liquid state.",
+    "category": "Liquid",
+    "freezing_point": 1126.85,
+    "freezing_product": "Glass",
+    "boiling_point": 2356.85,
+    "boiling_product": "Rock Gas"
+  },
+  {
+    "id": "molten_gold",
+    "gameId": "MoltenGold",
+    "name": "Molten Gold",
+    "image": "MoltenGold.png",
+    "description": "(Au) Gold, a conductive precious Metal, heated into a Liquid state.",
+    "category": "Liquid",
+    "freezing_point": 1063.85,
+    "freezing_product": "Gold",
+    "boiling_point": 2855.85,
+    "boiling_product": "Gold Gas"
+  },
+  {
+    "id": "molten_iridium",
+    "gameId": "MoltenIridium",
+    "name": "Molten Iridium",
+    "image": "Molten_Iridium.png",
+    "description": "(Ir) Molten Iridium is a highly conductive Metal heated to a Liquid state.",
+    "category": "Liquid",
+    "freezing_point": 2445.85,
+    "freezing_product": "Iridium",
+    "boiling_point": 4129.85,
+    "boiling_product": "Iridium Gas"
+  },
+  {
+    "id": "molten_iron",
+    "gameId": "MoltenIron",
+    "name": "Molten Iron",
+    "image": "MoltenIron.png",
+    "description": "(Fe) Molten Iron is a common industrial Metal heated into a Liquid state.",
+    "category": "Liquid",
+    "freezing_point": 1534.85,
+    "freezing_product": "Iron",
+    "boiling_point": 2749.85,
+    "boiling_product": "Iron Gas"
+  },
+  {
+    "id": "molten_lead",
+    "gameId": "MoltenLead",
+    "name": "Molten Lead",
+    "image": "MoltenLead.png",
+    "description": "(Pb) Lead is an extremely dense Refined Metal heated into a Liquid state.",
+    "category": "Liquid",
+    "freezing_point": 327.5,
+    "freezing_product": "Lead",
+    "boiling_point": 1749.0,
+    "boiling_product": "Lead Gas"
+  },
+  {
+    "id": "molten_nickel",
+    "gameId": "MoltenNickel",
+    "name": "Molten Nickel",
+    "image": "Molten_Nickel.png",
+    "description": "(Ni) Molten Nickel is a conductive Metal heated into a Liquid state.",
+    "category": "Liquid",
+    "freezing_point": 1454.85,
+    "freezing_product": "Nickel",
+    "boiling_point": 2729.85,
+    "boiling_product": "Nickel Gas"
+  },
+  {
+    "id": "molten_niobium",
+    "gameId": "MoltenNiobium",
+    "name": "Molten Niobium",
+    "image": "MoltenNiobium.png",
+    "description": "(Nb) Molten Niobium is a rare metal heated into a Liquid state.",
+    "category": "Liquid",
+    "freezing_point": 2476.85,
+    "freezing_product": "Niobium",
+    "boiling_point": 4743.85,
+    "boiling_product": "Niobium Gas"
+  },
+  {
+    "id": "molten_salt",
+    "gameId": "MoltenSalt",
+    "name": "Molten Salt",
+    "image": "MoltenSalt.png",
+    "description": "(NaCl) Molten Salt is an edible chemical compound that has been heated into a Liquid state.",
+    "category": "Liquid",
+    "freezing_point": 799.85,
+    "freezing_product": "Salt",
+    "boiling_point": 1464.85,
+    "boiling_product": "Salt Gas"
+  },
+  {
+    "id": "molten_steel",
+    "gameId": "MoltenSteel",
+    "name": "Molten Steel",
+    "image": "MoltenSteel.png",
+    "description": "Molten Steel is a Metal alloy of iron and carbon, heated into a hazardous Liquid state.",
+    "category": "Liquid",
+    "freezing_point": 1083.85,
+    "freezing_product": "Steel",
+    "boiling_point": 3826.85,
+    "boiling_product": "Steel Gas"
+  },
+  {
+    "id": "molten_tungsten",
+    "gameId": "MoltenTungsten",
+    "name": "Molten Tungsten",
+    "image": "MoltenTungsten.png",
+    "description": "(W) Molten Tungsten is a crystalline Metal heated into a Liquid state.",
+    "category": "Liquid",
+    "freezing_point": 3421.85,
+    "freezing_product": "Tungsten",
+    "boiling_point": 5929.85,
+    "boiling_product": "Tungsten Gas"
+  },
+  {
+    "id": "molten_zinc",
+    "gameId": "MoltenZinc",
+    "name": "Molten Zinc",
+    "image": "Molten_Zinc.png",
+    "description": "Molten Zinc is Zinc heated into Liquid state.",
+    "category": "Liquid",
+    "freezing_point": 419.73,
+    "freezing_product": "Zinc",
+    "boiling_point": 906.85,
+    "boiling_product": "Zinc Gas"
   },
   {
     "id": "mucin",
+    "gameId": "Mucus",
     "name": "Mucin",
-    "image": "Mucin.png"
+    "image": "Mucin.png",
+    "description": "Mucin is an extremely viscous Liquid gel composed of natural enzymes and polysaccharides.\n\nIts unusually thick consistency can result in formations atypical of most liquids.",
+    "category": "Liquid",
+    "freezing_point": -10.0,
+    "freezing_product": "Frozen Mucin",
+    "boiling_point": 90.0,
+    "boiling_product": "Polluted Water",
+    "tags": [
+      "water_or_mucus"
+    ]
+  },
+  {
+    "id": "nectar",
+    "gameId": "SugarWater",
+    "name": "Nectar",
+    "image": "Nectar.png",
+    "description": "Nectar is a natural, lightly concentrated solution of Sucrose dissolved in Water.",
+    "category": "Liquid",
+    "freezing_point": -82.5,
+    "freezing_product": "Ice",
+    "boiling_point": 160.0,
+    "boiling_product": "Steam",
+    "tags": [
+      "plastifiable_liquid"
+    ]
+  },
+  {
+    "id": "ovolene",
+    "gameId": "FishMilk",
+    "name": "Ovolene",
+    "image": "Ovolene.png",
+    "description": "Ovolene is a protein-rich Liquid produced by aquatic critters.\n\nIt can be processed into Caviar and Mucin.",
+    "category": "Liquid",
+    "freezing_point": -16.5,
+    "freezing_product": "Frozen Ovolene",
+    "boiling_point": 80.0,
+    "boiling_product": "Steam"
+  },
+  {
+    "id": "petroleum",
+    "gameId": "Petroleum",
+    "name": "Petroleum",
+    "image": "Petroleum.png",
+    "description": "Petroleum is a Power source refined from Crude Oil.\n\nIt is also an essential ingredient in the production of Plastic.",
+    "category": "Liquid",
+    "freezing_point": -57.15,
+    "freezing_product": "Solid Petroleum",
+    "boiling_point": 538.85,
+    "boiling_product": "Sour Gas",
+    "tags": [
+      "combustible_liquid",
+      "plastifiable_liquid",
+      "rocket_liquid_fuel"
+    ]
+  },
+  {
+    "id": "phyto_oil",
+    "gameId": "PhytoOil",
+    "name": "Phyto Oil",
+    "image": "Phyto_Oil.png",
+    "description": "Phyto Oil is a thick, slippery Liquid extracted from pureed Slime.",
+    "category": "Liquid",
+    "freezing_point": -33.15,
+    "freezing_product": "Frozen Phyto Oil",
+    "boiling_point": 75.0,
+    "boiling_product": "Carbon Dioxide",
+    "tags": [
+      "lubricating_oil"
+    ]
+  },
+  {
+    "id": "polluted_brine",
+    "gameId": "MurkyBrine",
+    "name": "Polluted Brine",
+    "image": "Polluted_Brine.png",
+    "description": "Polluted Brine is a murky, concentrated solution of Salt dissolved in Polluted Water.\n\nIt can be used in desalination processes, separating out usable salt.",
+    "category": "Liquid",
+    "freezing_point": -25.5,
+    "freezing_product": "Polluted Brine Ice",
+    "boiling_point": 106.75,
+    "boiling_product": "Polluted Water",
+    "tags": [
+      "tublia_irrigation"
+    ]
+  },
+  {
+    "id": "polluted_water",
+    "gameId": "DirtyWater",
+    "name": "Polluted Water",
+    "image": "PollutedWater.png",
+    "description": "Polluted Water is dirty, unfiltered Water.\n\nIt is not fit for consumption.",
+    "category": "Liquid",
+    "freezing_point": -20.65,
+    "freezing_product": "Polluted Ice",
+    "boiling_point": 119.35,
+    "boiling_product": "Steam"
+  },
+  {
+    "id": "resin",
+    "gameId": "NaturalResin",
+    "name": "Resin",
+    "image": "Resin.png",
+    "description": "Resin is a viscous organic Liquid.\n\nIt can be treated to become Plastic in the Polymer Press.",
+    "category": "Liquid",
+    "freezing_point": 20.0,
+    "freezing_product": "Solid Resin",
+    "boiling_point": 125.0,
+    "boiling_product": "Steam",
+    "tags": [
+      "plastifiable_liquid"
+    ]
+  },
+  {
+    "id": "salt_water",
+    "gameId": "SaltWater",
+    "name": "Salt Water",
+    "image": "SaltWater.png",
+    "description": "Salt Water is a natural, lightly concentrated solution of Salt dissolved in Water.\n\nIt can be used in desalination processes, separating out usable salt.",
+    "category": "Liquid",
+    "freezing_point": -7.5,
+    "freezing_product": "Brine",
+    "boiling_point": 99.69,
+    "boiling_product": "Steam"
+  },
+  {
+    "id": "sap",
+    "gameId": "Resin",
+    "name": "Sap",
+    "image": "LiquidResin.png",
+    "description": "Sticky goo harvested from a grumpy tree.\n\nIt can be polymerized into Isosap by boiling away its excess moisture.",
+    "category": "Liquid",
+    "freezing_point": 20.0,
+    "freezing_product": "Solid Sap",
+    "boiling_point": 125.0,
+    "boiling_product": "Steam"
+  },
+  {
+    "id": "squid_ink",
+    "gameId": "Ink",
+    "name": "Squid Ink",
+    "image": "Squid_Ink.png",
+    "description": "Squid Ink is a heavily pigmented organic Liquid composed of Mucin, melanin, and Refined Carbon.\n\nIt possesses useful Radiation absorption properties.",
+    "category": "Liquid",
+    "freezing_point": -20.65,
+    "freezing_product": "Frozen Squid Ink",
+    "boiling_point": 80.0,
+    "boiling_product": "Mucin"
+  },
+  {
+    "id": "super_coolant",
+    "gameId": "SuperCoolant",
+    "name": "Super Coolant",
+    "image": "SuperCoolant.png",
+    "description": "Super Coolant is an industrial-grade coolant that utilizes the unusual energy states of Fullerene.\n\nThis selection is in a Liquid state.",
+    "category": "Liquid",
+    "freezing_point": -271.15,
+    "freezing_product": "Solid Super Coolant",
+    "boiling_point": 436.85,
+    "boiling_product": "Super Coolant Gas"
+  },
+  {
+    "id": "visco_gel",
+    "gameId": "ViscoGel",
+    "name": "Visco-Gel Fluid",
+    "image": "ViscoGelFluid.png",
+    "description": "Visco-Gel Fluid is a Liquid polymer with high surface tension, preventing typical liquid flow and allowing for unusual configurations.",
+    "category": "Liquid",
+    "freezing_point": -30.65,
+    "freezing_product": "Solid Visco-Gel",
+    "boiling_point": 479.85,
+    "boiling_product": "Liquid Naphtha"
+  },
+  {
+    "id": "water",
+    "gameId": "Water",
+    "name": "Water",
+    "image": "Water.png",
+    "description": "(H2O) Clean Water, suitable for consumption.",
+    "category": "Liquid",
+    "freezing_point": -0.65,
+    "freezing_product": "Ice",
+    "boiling_point": 99.35,
+    "boiling_product": "Steam",
+    "tags": [
+      "water_or_mucus"
+    ]
   }
 ]

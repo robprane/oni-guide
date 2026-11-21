@@ -1,0 +1,3 @@
+title: "ONI.guide Data Exporter"
+description: "Exports live game elements, tags, buildings, critters, plants, foods, duplicants, geysers, and recipes to JSON on Main Menu load."
+staticID: "OniGuide.DataExporter"

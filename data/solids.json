@@ -1,561 +1,1401 @@
 [
   {
     "id": "abyssalite",
+    "gameId": "Katairite",
     "name": "Abyssalite",
-    "image": "Abyssalite.png"
+    "image": "Abyssalite.png",
+    "description": "(Ab) Abyssalite is a resilient, crystalline element.",
+    "category": "Other",
+    "melting_point": 3421.85,
+    "melting_product": "Molten Tungsten",
+    "tags": [
+      "abyss_bug_diet_eatsolid"
+    ]
   },
   {
     "id": "algae",
+    "gameId": "Algae",
     "name": "Algae",
-    "image": "Algae.png"
+    "image": "Algae.png",
+    "description": "Algae is a cluster of non-motile, single-celled lifeforms.\n\nIt can be used to produce Oxygen when used in an Oxygen Diffuser.",
+    "category": "Organics",
+    "melting_point": 125.0,
+    "melting_product": "Dirt",
+    "tags": [
+      "sage_hatch_diet_carbon"
+    ]
   },
   {
     "id": "aluminum",
+    "gameId": "Aluminum",
     "name": "Aluminum",
-    "image": "Aluminum.png"
+    "image": "Aluminum.png",
+    "description": "(Al) Aluminum is a low density Metal.\n\nIt has high Thermal Conductivity and is suitable for building Power systems.",
+    "category": "RefinedMetal",
+    "melting_point": 660.3,
+    "melting_product": "Molten Aluminum",
+    "tags": [
+      "plug_slug_diet_hydrogen",
+      "refined_metal",
+      "refined_metal_common"
+    ]
   },
   {
     "id": "aluminum_ore",
+    "gameId": "AluminumOre",
     "name": "Aluminum Ore",
-    "image": "AluminumOre.png"
-  },
-  {
-    "id": "bleach_stone",
-    "name": "Bleach Stone",
-    "image": "BleachStone.png"
-  },
-  {
-    "id": "brackwax",
-    "name": "Brackwax",
-    "image": "Brackwax.png"
-  },
-  {
-    "id": "brine_ice",
-    "name": "Brine Ice",
-    "image": "BrineIce.png"
-  },
-  {
-    "id": "ceramic",
-    "name": "Ceramic",
-    "image": "Ceramic.png"
-  },
-  {
-    "id": "cinnabar_ore",
-    "name": "Cinnabar Ore",
-    "image": "CinnabarOre.png"
-  },
-  {
-    "id": "clay",
-    "name": "Clay",
-    "image": "Clay.png"
-  },
-  {
-    "id": "coal",
-    "name": "Coal",
-    "image": "Coal.png"
-  },
-  {
-    "id": "cobalt",
-    "name": "Cobalt",
-    "image": "Cobalt.png"
-  },
-  {
-    "id": "cobalt_ore",
-    "name": "Cobalt Ore",
-    "image": "CobaltOre.png"
-  },
-  {
-    "id": "copper",
-    "name": "Copper",
-    "image": "Copper.png"
-  },
-  {
-    "id": "copper_ore",
-    "name": "Copper Ore",
-    "image": "CopperOre.png"
-  },
-  {
-    "id": "corium",
-    "name": "Corium",
-    "image": "Corium.png"
-  },
-  {
-    "id": "crashed_rock",
-    "name": "Crashed Rock",
-    "image": "CrashedRock.png"
-  },
-  {
-    "id": "crushed_ice",
-    "name": "Crushed Ice",
-    "image": "CrushedIce.png"
-  },
-  {
-    "id": "crushed_rock",
-    "name": "Crushed Rock",
-    "image": "CrushedRock.png"
-  },
-  {
-    "id": "depleted_uranium",
-    "name": "Depleted Uranium",
-    "image": "DepletedUranium.png"
-  },
-  {
-    "id": "diamond",
-    "name": "Diamond",
-    "image": "Diamond.png"
-  },
-  {
-    "id": "dirt",
-    "name": "Dirt",
-    "image": "Dirt.png",
-    "type": "Solid",
-    "melting_point": 326.8,
-    "melting_product": "sand",
-    "description": "Basic soil."
-  },
-  {
-    "id": "electrum",
-    "name": "Electrum",
-    "image": "Electrum.png"
-  },
-  {
-    "id": "enriched_uranium",
-    "name": "Enriched Uranium",
-    "image": "EnrichedUranium.png"
-  },
-  {
-    "id": "fertilizer",
-    "name": "Fertilizer",
-    "image": "Fertilizer.png"
-  },
-  {
-    "id": "fossil",
-    "name": "Fossil",
-    "image": "Fossil.png"
-  },
-  {
-    "id": "frozen_brackene",
-    "name": "Frozen Brackene",
-    "image": "FrozenBrackene.png"
-  },
-  {
-    "id": "fullerene",
-    "name": "Fullerene",
-    "image": "Fullerene.png"
-  },
-  {
-    "id": "glass",
-    "name": "Glass",
-    "image": "Glass.png"
-  },
-  {
-    "id": "gold",
-    "name": "Gold",
-    "image": "Gold.png"
-  },
-  {
-    "id": "gold_amalgam",
-    "name": "Gold Amalgam",
-    "image": "GoldAmalgam.png"
-  },
-  {
-    "id": "granite",
-    "name": "Granite",
-    "image": "Granite.png"
-  },
-  {
-    "id": "graphite",
-    "name": "Graphite",
-    "image": "Graphite.png"
-  },
-  {
-    "id": "ice",
-    "name": "Ice",
-    "image": "Ice.png"
-  },
-  {
-    "id": "igneous_rock",
-    "name": "Igneous Rock",
-    "image": "IgneousRock.png"
-  },
-  {
-    "id": "insulation",
-    "name": "Insulation",
-    "image": "Insulation.png"
-  },
-  {
-    "id": "insulite",
-    "name": "Insulite",
-    "image": "Insulite.png"
-  },
-  {
-    "id": "iron",
-    "name": "Iron",
-    "image": "Iron.png"
-  },
-  {
-    "id": "iron_ore",
-    "name": "Iron Ore",
-    "image": "IronOre.png"
-  },
-  {
-    "id": "isosap",
-    "name": "Isosap",
-    "image": "Isosap.png"
-  },
-  {
-    "id": "solid_sap",
-    "name": "Solid Sap",
-    "image": "Isosap.png"
-  },
-  {
-    "id": "lead",
-    "name": "Lead",
-    "image": "Lead.png"
-  },
-  {
-    "id": "zinc",
-    "name": "Zinc",
-    "image": "Zinc.png"
-  },
-  {
-    "id": "zinc_ore",
-    "name": "Zinc Ore",
-    "image": "Zinc_Ore.png"
-  },
-  {
-    "id": "lime",
-    "name": "Lime",
-    "image": "Lime.png"
-  },
-  {
-    "id": "mafic_rock",
-    "name": "Mafic Rock",
-    "image": "MaficRock.png"
-  },
-  {
-    "id": "mud",
-    "name": "Mud",
-    "image": "Mud.png"
-  },
-  {
-    "id": "neutronium",
-    "name": "Neutronium",
-    "image": "Neutronium.png"
-  },
-  {
-    "id": "niobium",
-    "name": "Niobium",
-    "image": "Niobium.png"
-  },
-  {
-    "id": "obsidian",
-    "name": "Obsidian",
-    "image": "Obsidian.png"
-  },
-  {
-    "id": "oxylite",
-    "name": "Oxylite",
-    "image": "Oxylite.png"
-  },
-  {
-    "id": "phosphorite",
-    "name": "Phosphorite",
-    "image": "Phosphorite.png"
-  },
-  {
-    "id": "plastic",
-    "name": "Plastic",
-    "image": "Plastic.png"
-  },
-  {
-    "id": "plastium",
-    "name": "Plastium",
-    "image": "Plastium.png"
-  },
-  {
-    "id": "polluted_dirt",
-    "name": "Polluted Dirt",
-    "image": "PollutedDirt.png"
-  },
-  {
-    "id": "polluted_ice",
-    "name": "Polluted Ice",
-    "image": "PollutedIce.png"
-  },
-  {
-    "id": "polluted_mud",
-    "name": "Polluted Mud",
-    "image": "PollutedMud.png"
-  },
-  {
-    "id": "pyrite",
-    "name": "Pyrite",
-    "image": "Pyrite.png"
-  },
-  {
-    "id": "radium",
-    "name": "Radium",
-    "image": "Radium.png"
-  },
-  {
-    "id": "refined_carbon",
-    "name": "Refined Carbon",
-    "image": "RefinedCarbon.png"
-  },
-  {
-    "id": "refined_phosphorus",
-    "name": "Refined Phosphorus",
-    "image": "RefinedPhosphorus.png"
-  },
-  {
-    "id": "regolith",
-    "name": "Regolith",
-    "image": "Regolith.png"
-  },
-  {
-    "id": "rust",
-    "name": "Rust",
-    "image": "Rust.png"
-  },
-  {
-    "id": "salt",
-    "name": "Salt",
-    "image": "Salt.png"
-  },
-  {
-    "id": "sand",
-    "name": "Sand",
-    "image": "Sand.png"
-  },
-  {
-    "id": "sandstone",
-    "name": "Sandstone",
-    "image": "Sandstone.png"
-  },
-  {
-    "id": "sedimentary_rock",
-    "name": "Sedimentary Rock",
-    "image": "SedimentaryRock.png"
-  },
-  {
-    "id": "slime",
-    "name": "Slime",
-    "image": "Slime.png"
-  },
-  {
-    "id": "snow",
-    "name": "Snow",
-    "image": "Snow.png"
-  },
-  {
-    "id": "solid_carbon_dioxide",
-    "name": "Solid Carbon Dioxide",
-    "image": "SolidCarbonDioxide.png"
-  },
-  {
-    "id": "solid_chlorine",
-    "name": "Solid Chlorine",
-    "image": "SolidChlorine.png"
-  },
-  {
-    "id": "solid_crude_oil",
-    "name": "Solid Crude Oil",
-    "image": "SolidCrudeOil.png"
-  },
-  {
-    "id": "solid_ethanol",
-    "name": "Solid Ethanol",
-    "image": "SolidEthanol.png"
-  },
-  {
-    "id": "solid_hydrogen",
-    "name": "Solid Hydrogen",
-    "image": "SolidHydrogen.png"
-  },
-  {
-    "id": "solid_mercury",
-    "name": "Solid Mercury",
-    "image": "SolidMercury.png"
-  },
-  {
-    "id": "solid_methane",
-    "name": "Solid Methane",
-    "image": "SolidMethane.png"
-  },
-  {
-    "id": "solid_naphtha",
-    "name": "Solid Naphtha",
-    "image": "SolidNaphtha.png"
-  },
-  {
-    "id": "solid_nuclear_waste",
-    "name": "Solid Nuclear Waste",
-    "image": "SolidNuclearWaste.png"
-  },
-  {
-    "id": "solid_oxygen",
-    "name": "Solid Oxygen",
-    "image": "SolidOxygen.png"
-  },
-  {
-    "id": "solid_petroleum",
-    "name": "Solid Petroleum",
-    "image": "SolidPetroleum.png"
-  },
-  {
-    "id": "solid_resin",
-    "name": "Solid Resin",
-    "image": "SolidResin.png"
-  },
-  {
-    "id": "solid_super_coolant",
-    "name": "Solid Super Coolant",
-    "image": "SolidSuperCoolant.png"
-  },
-  {
-    "id": "solid_visco_gel",
-    "name": "Solid Visco-Gel",
-    "image": "SolidViscoGel.png"
-  },
-  {
-    "id": "steel",
-    "name": "Steel",
-    "image": "Steel.png"
-  },
-  {
-    "id": "sucrose",
-    "name": "Sucrose",
-    "image": "Sucrose.png"
-  },
-  {
-    "id": "sulfur",
-    "name": "Sulfur",
-    "image": "Sulfur.png"
-  },
-  {
-    "id": "tallow",
-    "name": "Tallow",
-    "image": "Tallow.png"
-  },
-  {
-    "id": "thermium",
-    "name": "Thermium",
-    "image": "Thermium.png"
-  },
-  {
-    "id": "tungsten",
-    "name": "Tungsten",
-    "image": "Tungsten.png"
-  },
-  {
-    "id": "uranium_ore",
-    "name": "Uranium Ore",
-    "image": "UraniumOre.png"
-  },
-  {
-    "id": "wolframite",
-    "name": "Wolframite",
-    "image": "Wolframite.png"
-  },
-  {
-    "id": "iridium",
-    "name": "Iridium",
-    "image": "Iridium.png"
-  },
-  {
-    "id": "nickel",
-    "name": "Nickel",
-    "image": "Nickel.png"
-  },
-  {
-    "id": "nickel_ore",
-    "name": "Nickel Ore",
-    "image": "Nickel_Ore.png"
-  },
-  {
-    "id": "solid_gunk",
-    "name": "Solid Gunk",
-    "image": "Solid_Gunk.png"
-  },
-  {
-    "id": "frozen_phyto_oil",
-    "name": "Frozen Phyto Oil",
-    "image": "Frozen_Phyto_Oil.png"
-  },
-  {
-    "id": "pearl",
-    "name": "Pearl",
-    "image": "Pearl.png"
-  },
-  {
-    "id": "polluted_brine_ice",
-    "name": "Polluted Brine Ice",
-    "image": "Polluted_Brine_Ice.png"
-  },
-  {
-    "id": "frozen_ovolene",
-    "name": "Frozen Ovolene",
-    "image": "Frozen_Ovolene.png"
-  },
-  {
-    "id": "peat",
-    "name": "Peat",
-    "image": "Peat.png"
-  },
-  {
-    "id": "frozen_squid_ink",
-    "name": "Frozen Squid Ink",
-    "image": "Frozen_Squid_Ink.png"
-  },
-  {
-    "id": "rubber",
-    "name": "Rubber",
-    "image": "Rubber.png"
-  },
-  {
-    "id": "shale",
-    "name": "Shale",
-    "image": "Shale.png"
+    "image": "AluminumOre.png",
+    "description": "Aluminum ore, also known as Bauxite, is a sedimentary rock high in metal content.\n\nIt can be refined into Aluminum.",
+    "category": "Metal",
+    "melting_point": 1083.85,
+    "melting_product": "Molten Aluminum",
+    "tags": [
+      "metal_ore",
+      "metal_ore_electrobank",
+      "plug_slug_diet_hydrogen",
+      "stone_hatch_diet_carbon_2"
+    ]
   },
   {
     "id": "amber",
+    "gameId": "Amber",
     "name": "Amber",
-    "image": "Amber.png"
-  },
-  {
-    "id": "silt_stone",
-    "name": "Siltstone",
-    "image": "SiltStone.png"
-  },
-  {
-    "id": "frozen_mucin",
-    "name": "Frozen Mucin",
-    "image": "Frozen_Mucin.png"
-  },
-  {
-    "id": "corallium",
-    "name": "Corallium",
-    "image": "Corallium.png"
-  },
-  {
-    "id": "coquina",
-    "name": "Coquina",
-    "image": "Coquina.png"
+    "image": "Amber.png",
+    "description": "Amber is a Solid organic composite of Resin and Fossil.",
+    "category": "Organics",
+    "melting_point": 95.0,
+    "melting_product": "Resin",
+    "tags": [
+      "transparent_material"
+    ]
   },
   {
     "id": "basalt",
+    "gameId": "Basalt",
     "name": "Basalt",
-    "image": "Basalt.png"
+    "image": "Basalt.png",
+    "description": "Basalt is a natural volcanic rock that forms when Magma cools rapidly.",
+    "category": "BuildableRaw",
+    "melting_point": 1256.85,
+    "melting_product": "Magma",
+    "tags": [
+      "crushable_mineral",
+      "stone_hatch_diet_carbon"
+    ]
   },
   {
-    "id": "gum_wood",
-    "name": "Gum Wood",
-    "image": "Gum_Wood.png"
+    "id": "bitumen",
+    "gameId": "Bitumen",
+    "name": "Bitumen",
+    "image": "Bitumen.png",
+    "description": "Bitumen is a sticky viscous residue left behind from Petroleum production.",
+    "category": "Solid",
+    "melting_point": 538.85,
+    "melting_product": "Carbon Dioxide"
+  },
+  {
+    "id": "bleach_stone",
+    "gameId": "BleachStone",
+    "name": "Bleach Stone",
+    "image": "BleachStone.png",
+    "description": "Bleach stone is an unstable compound that emits unbreathable Chlorine Gas.\n\nIt is often used in Hygienic processes.",
+    "category": "Sublimating",
+    "melting_point": 668.85,
+    "melting_product": "Liquid Chlorine"
+  },
+  {
+    "id": "brackwax",
+    "gameId": "MilkFat",
+    "name": "Brackwax",
+    "image": "Brackwax.png",
+    "description": "Brackwax is a Solid byproduct of Brackene.",
+    "category": "ConsumableOre",
+    "melting_point": 159.85,
+    "melting_product": "Liquid Naphtha"
+  },
+  {
+    "id": "brine_ice",
+    "gameId": "BrineIce",
+    "name": "Brine Ice",
+    "image": "BrineIce.png",
+    "description": "Brine Ice is a natural, highly concentrated solution of Salt dissolved in Water and frozen into a Solid state.\n\nIt can be used in desalination processes, separating out usable salt.",
+    "category": "Liquifiable",
+    "melting_point": -16.5,
+    "melting_product": "Brine"
+  },
+  {
+    "id": "ceramic",
+    "gameId": "Ceramic",
+    "name": "Ceramic",
+    "image": "Ceramic.png",
+    "description": "Ceramic is a hard, brittle material formed from heated Clay.\n\nIt is a reliable Construction Material.",
+    "category": "BuildableRaw",
+    "melting_point": 1849.85,
+    "melting_product": "Magma",
+    "tags": [
+      "crushable_mineral"
+    ]
+  },
+  {
+    "id": "cinnabar_ore",
+    "gameId": "Cinnabar",
+    "name": "Cinnabar Ore",
+    "image": "CinnabarOre.png",
+    "description": "(HgS) Cinnabar Ore, also known as mercury sulfide, is a conductive Metal that can be refined into Mercury.\n\nIt is suitable for building Power systems.",
+    "category": "Metal",
+    "melting_point": 583.5,
+    "melting_product": "Mercury Gas",
+    "tags": [
+      "metal_ore",
+      "metal_ore_electrobank",
+      "plug_slug_diet_hydrogen",
+      "stone_hatch_diet_carbon_2"
+    ]
+  },
+  {
+    "id": "clay",
+    "gameId": "Clay",
+    "name": "Clay",
+    "image": "Clay.png",
+    "description": "Clay is a soft, naturally occurring composite of stone and soil that hardens at high Temperatures.\n\nIt is a reliable Construction Material.",
+    "category": "Farmable",
+    "melting_point": 926.85,
+    "melting_product": "Ceramic",
+    "tags": [
+      "hatch_diet_carbon"
+    ]
+  },
+  {
+    "id": "coal",
+    "gameId": "Carbon",
+    "name": "Coal",
+    "image": "Coal.png",
+    "description": "(C) Coal is a combustible fossil fuel composed of carbon.\n\nIt is useful in Power production.",
+    "category": "ConsumableOre",
+    "melting_point": 276.85,
+    "melting_product": "Refined Carbon",
+    "tags": [
+      "kiln_fuel"
+    ]
+  },
+  {
+    "id": "cobalt",
+    "gameId": "Cobalt",
+    "name": "Cobalt",
+    "image": "Cobalt.png",
+    "description": "(Co) Cobalt is a Refined Metal made from Cobalt Ore.",
+    "category": "RefinedMetal",
+    "melting_point": 1494.85,
+    "melting_product": "Molten Cobalt",
+    "tags": [
+      "plug_slug_diet_hydrogen",
+      "refined_metal",
+      "refined_metal_common"
+    ]
+  },
+  {
+    "id": "cobalt_ore",
+    "gameId": "Cobaltite",
+    "name": "Cobalt Ore",
+    "image": "CobaltOre.png",
+    "description": "(Co) Cobalt Ore is a blue-hued Metal.\n\nIt is suitable for building Power systems.",
+    "category": "Metal",
+    "melting_point": 1494.85,
+    "melting_product": "Molten Cobalt",
+    "tags": [
+      "metal_ore",
+      "metal_ore_electrobank",
+      "plug_slug_diet_hydrogen",
+      "stone_hatch_diet_carbon_2"
+    ]
+  },
+  {
+    "id": "copper",
+    "gameId": "Copper",
+    "name": "Copper",
+    "image": "Copper.png",
+    "description": "(Cu) Copper is a conductive Metal.\n\nIt is suitable for building Power systems.",
+    "category": "RefinedMetal",
+    "melting_point": 1083.85,
+    "melting_product": "Molten Copper",
+    "tags": [
+      "plug_slug_diet_hydrogen",
+      "refined_metal",
+      "refined_metal_common"
+    ]
+  },
+  {
+    "id": "copper_ore",
+    "gameId": "Cuprite",
+    "name": "Copper Ore",
+    "image": "CopperOre.png",
+    "description": "(Cu2O) Copper Ore is a conductive Metal.\n\nIt is suitable for building Power systems.",
+    "category": "Metal",
+    "melting_point": 1083.85,
+    "melting_product": "Molten Copper",
+    "tags": [
+      "metal_ore",
+      "metal_ore_electrobank",
+      "plug_slug_diet_hydrogen",
+      "stone_hatch_diet_carbon_2"
+    ]
+  },
+  {
+    "id": "coquina",
+    "gameId": "Coquina",
+    "name": "Coquina",
+    "image": "Coquina.png",
+    "description": "Coquina is a brittle Solid mineral made up of the calcified remains of aquatic invertebrates.\n\nIt is useful as a Construction Material.",
+    "category": "BuildableRaw",
+    "melting_point": 926.85,
+    "melting_product": "Magma",
+    "tags": [
+      "crushable_mineral",
+      "hatch_diet_carbon"
+    ]
+  },
+  {
+    "id": "corallium",
+    "gameId": "Corallium",
+    "name": "Corallium",
+    "image": "Corallium.png",
+    "description": "Corallium is a dense coral primarily composed of (CaCO3) Lime.\n\nIt is useful as a Construction Material.",
+    "category": "Organics",
+    "melting_point": 125.0,
+    "melting_product": "Sand",
+    "tags": [
+      "sage_hatch_diet_carbon"
+    ]
+  },
+  {
+    "id": "corium",
+    "gameId": "Corium",
+    "name": "Corium",
+    "image": "Corium.png",
+    "description": "A radioactive mixture of nuclear waste and melted reactor materials.\n\nReleases Nuclear Fallout gas.",
+    "category": "Other",
+    "melting_point": 626.85,
+    "melting_product": "Nuclear Fallout"
+  },
+  {
+    "id": "crushed_ice",
+    "gameId": "CrushedIce",
+    "name": "Crushed Ice",
+    "image": "CrushedIce.png",
+    "description": "(H2O) A slush of crushed, semi-solid ice.",
+    "category": "Liquifiable",
+    "melting_point": -0.65,
+    "melting_product": "Water"
+  },
+  {
+    "id": "crushed_rock",
+    "gameId": "CrushedRock",
+    "name": "Crushed Rock",
+    "image": "CrushedRock.png",
+    "description": "Crushed Rock is Igneous Rock crushed into a mechanical mixture.",
+    "category": "BuildableProcessed",
+    "melting_point": 1409.85,
+    "melting_product": "Magma",
+    "tags": [
+      "hatch_diet_carbon"
+    ]
+  },
+  {
+    "id": "depleted_uranium",
+    "gameId": "DepletedUranium",
+    "name": "Depleted Uranium",
+    "image": "DepletedUranium.png",
+    "description": "(U) Depleted Uranium is Uranium with a low U-235 content.\n\nIt is created as a byproduct of Enriched Uranium and is no longer suitable as fuel.",
+    "category": "RefinedMetal",
+    "melting_point": 132.85,
+    "melting_product": "Liquid Uranium",
+    "tags": [
+      "plug_slug_diet_hydrogen",
+      "refined_metal"
+    ]
+  },
+  {
+    "id": "diamond",
+    "gameId": "Diamond",
+    "name": "Diamond",
+    "image": "Diamond.png",
+    "description": "(C) Diamond is industrial-grade, high density carbon.\n\nIt is very difficult to excavate.",
+    "category": "Other",
+    "melting_point": 3926.85,
+    "melting_product": "Liquid Carbon",
+    "tags": [
+      "radiant_bug_diet_eatsolid",
+      "transparent_material"
+    ]
+  },
+  {
+    "id": "dirt",
+    "gameId": "Dirt",
+    "name": "Dirt",
+    "image": "Dirt.png",
+    "description": "Dirt is a soft, nutrient-rich substance capable of supporting life.\n\nIt is necessary in some forms of Food production.",
+    "category": "Farmable",
+    "melting_point": 326.85,
+    "melting_product": "Sand",
+    "tags": [
+      "hatch_diet_carbon",
+      "sage_hatch_diet_carbon"
+    ]
+  },
+  {
+    "id": "enriched_uranium",
+    "gameId": "EnrichedUranium",
+    "name": "Enriched Uranium",
+    "image": "EnrichedUranium.png",
+    "description": "(U) Enriched Uranium is a refined substance primarily used to Power potent research reactors.\n\nIt becomes highly Radioactive when consumed.",
+    "category": "ManufacturedMaterial",
+    "melting_point": 858.85,
+    "melting_product": "Liquid Uranium"
+  },
+  {
+    "id": "fertilizer",
+    "gameId": "Fertilizer",
+    "name": "Fertilizer",
+    "image": "Fertilizer.png",
+    "description": "Fertilizer is a processed mixture of biological nutrients.\n\nIt aids in the growth of certain Plants.",
+    "category": "Agriculture",
+    "melting_point": 125.0,
+    "melting_product": "Dirt",
+    "tags": [
+      "fertilizer_or_peat",
+      "sage_hatch_diet_carbon"
+    ]
+  },
+  {
+    "id": "fossil",
+    "gameId": "Fossil",
+    "name": "Fossil",
+    "image": "Fossil.png",
+    "description": "Fossil is organic matter, highly compressed and hardened into a mineral state.\n\nIt is useful as a Construction Material.",
+    "category": "BuildableRaw",
+    "melting_point": 1338.85,
+    "melting_product": "Magma"
+  },
+  {
+    "id": "frozen_brackene",
+    "gameId": "MilkIce",
+    "name": "Frozen Brackene",
+    "image": "FrozenBrackene.png",
+    "description": "Frozen Brackene is Brackene frozen into a Solid state.",
+    "category": "Liquifiable",
+    "melting_point": -16.5,
+    "melting_product": "Brackene"
+  },
+  {
+    "id": "frozen_mucin",
+    "gameId": "SolidMucus",
+    "name": "Frozen Mucin",
+    "image": "Frozen_Mucin.png",
+    "description": "Frozen Mucin is a chunk of Mucin cooled to a Solid state.",
+    "category": "Organics",
+    "melting_point": -10.0,
+    "melting_product": "Mucin"
+  },
+  {
+    "id": "frozen_ovolene",
+    "gameId": "FishMilkIce",
+    "name": "Frozen Ovolene",
+    "image": "Frozen_Ovolene.png",
+    "description": "Frozen Ovolene is Ovolene frozen into a Solid state.",
+    "category": "Liquifiable",
+    "melting_point": -16.5,
+    "melting_product": "Ovolene"
+  },
+  {
+    "id": "frozen_phyto_oil",
+    "gameId": "FrozenPhytoOil",
+    "name": "Frozen Phyto Oil",
+    "image": "Frozen_Phyto_Oil.png",
+    "description": "Frozen Phyto Oil is thick, slippery Slime extract, frozen into a Solid state.",
+    "category": "Liquifiable",
+    "melting_point": -33.15,
+    "melting_product": "Phyto Oil"
+  },
+  {
+    "id": "frozen_squid_ink",
+    "gameId": "FrozenInk",
+    "name": "Frozen Squid Ink",
+    "image": "Frozen_Squid_Ink.png",
+    "description": "Frozen Ink is Squid Ink cooled to a Solid state.",
+    "category": "Liquifiable",
+    "melting_point": -20.65,
+    "melting_product": "Squid Ink"
+  },
+  {
+    "id": "fullerene",
+    "gameId": "Fullerene",
+    "name": "Fullerene",
+    "image": "Fullerene.png",
+    "description": "(C60) Fullerene is a form of Coal consisting of spherical molecules.",
+    "category": "RareMaterials",
+    "melting_point": 3926.85,
+    "melting_product": "Liquid Carbon"
   },
   {
     "id": "galena",
+    "gameId": "Galena",
     "name": "Galena",
-    "image": "Galena.png"
+    "image": "Galena.png",
+    "description": "(PbS) Galena is a raw Metal Ore primarily composed of Lead with Sulfur impurities.",
+    "category": "Metal",
+    "melting_point": 1114.0,
+    "melting_product": "Molten Lead",
+    "tags": [
+      "metal_ore",
+      "plug_slug_diet_hydrogen"
+    ]
+  },
+  {
+    "id": "genetic_ooze",
+    "gameId": "Creature",
+    "name": "Genetic Ooze",
+    "image": "GeneticOoze.png",
+    "description": "(DuPe) Ooze is a slurry of water, carbon, and dozens and dozens of trace elements.\n\nDuplicants are printed from pure Ooze.",
+    "category": "Solid",
+    "melting_point": 9726.85,
+    "melting_product": "Genetic Ooze"
+  },
+  {
+    "id": "glass",
+    "gameId": "Glass",
+    "name": "Glass",
+    "image": "Glass.png",
+    "description": "Glass is a brittle, transparent substance formed from Sand fired at high temperatures.",
+    "category": "ManufacturedMaterial",
+    "melting_point": 1426.85,
+    "melting_product": "Molten Glass",
+    "tags": [
+      "transparent_material"
+    ]
+  },
+  {
+    "id": "gold",
+    "gameId": "Gold",
+    "name": "Gold",
+    "image": "Gold.png",
+    "description": "(Au) Gold is a conductive precious Metal.\n\nIt is suitable for building Power systems.",
+    "category": "RefinedMetal",
+    "melting_point": 1063.85,
+    "melting_product": "Molten Gold",
+    "tags": [
+      "plug_slug_diet_hydrogen",
+      "refined_metal"
+    ]
+  },
+  {
+    "id": "gold_amalgam",
+    "gameId": "GoldAmalgam",
+    "name": "Gold Amalgam",
+    "image": "GoldAmalgam.png",
+    "description": "Gold Amalgam is a conductive amalgam of gold and mercury.\n\nIt is suitable for building Power systems.",
+    "category": "Metal",
+    "melting_point": 1063.85,
+    "melting_product": "Molten Gold",
+    "tags": [
+      "metal_ore",
+      "plug_slug_diet_hydrogen",
+      "stone_hatch_diet_carbon_2"
+    ]
+  },
+  {
+    "id": "granite",
+    "gameId": "Granite",
+    "name": "Granite",
+    "image": "Granite.png",
+    "description": "Granite is a dense composite of Igneous Rock.\n\nIt is useful as a Construction Material.",
+    "category": "BuildableRaw",
+    "melting_point": 668.85,
+    "melting_product": "Magma",
+    "tags": [
+      "crushable_mineral",
+      "stone_hatch_diet_carbon"
+    ]
+  },
+  {
+    "id": "graphite",
+    "gameId": "Graphite",
+    "name": "Graphite",
+    "image": "Graphite.png",
+    "description": "(C) Graphite is the most stable form of carbon.\n\nIt has high thermal conductivity and is useful as a Construction Material.",
+    "category": "BuildableRaw",
+    "melting_point": 276.85,
+    "melting_product": "Refined Carbon"
+  },
+  {
+    "id": "gum_wood",
+    "gameId": "PalmWood",
+    "name": "Gum Wood",
+    "image": "Gum_Wood.png",
+    "description": "Gum Wood can be processed at the Plant Pulverizer to yield Latex, which is essential for Rubber production.\n\nIt can also be used for Heat and Power, or as a Construction Material.",
+    "category": "Organics",
+    "melting_point": 600.0,
+    "melting_product": "Carbon Dioxide",
+    "tags": [
+      "building_wood",
+      "kiln_fuel",
+      "smoker_fuel"
+    ]
+  },
+  {
+    "id": "ice",
+    "gameId": "Ice",
+    "name": "Ice",
+    "image": "Ice.png",
+    "description": "(H2O) Ice is clean water frozen into a Solid state.",
+    "category": "Liquifiable",
+    "melting_point": -0.65,
+    "melting_product": "Water"
+  },
+  {
+    "id": "igneous_rock",
+    "gameId": "IgneousRock",
+    "name": "Igneous Rock",
+    "image": "IgneousRock.png",
+    "description": "Igneous Rock is a composite of solidified volcanic rock.\n\nIt is useful as a Construction Material.",
+    "category": "BuildableRaw",
+    "melting_point": 1409.85,
+    "melting_product": "Magma",
+    "tags": [
+      "crushable_mineral",
+      "stone_hatch_diet_carbon"
+    ]
+  },
+  {
+    "id": "insulation",
+    "gameId": "SuperInsulator",
+    "name": "Insulite",
+    "image": "Insulation.png",
+    "description": "Insulite reduces Heat Transfer and is composed of recrystallized Abyssalite.",
+    "category": "ManufacturedMaterial",
+    "melting_point": 3621.85,
+    "melting_product": "Molten Tungsten",
+    "tags": [
+      "crushable_mineral"
+    ]
+  },
+  {
+    "id": "iridium",
+    "gameId": "Iridium",
+    "name": "Iridium",
+    "image": "Iridium.png",
+    "description": "(Ir) Iridium is a firm and highly conductive Metal that can withstand extreme  Heat.",
+    "category": "RefinedMetal",
+    "melting_point": 2445.85,
+    "melting_product": "Molten Iridium",
+    "tags": [
+      "metal_ore",
+      "plug_slug_diet_hydrogen",
+      "refined_metal"
+    ]
+  },
+  {
+    "id": "iron",
+    "gameId": "Iron",
+    "name": "Iron",
+    "image": "Iron.png",
+    "description": "(Fe) Iron is a common industrial Metal.",
+    "category": "RefinedMetal",
+    "melting_point": 1534.85,
+    "melting_product": "Molten Iron",
+    "tags": [
+      "plug_slug_diet_hydrogen",
+      "refined_metal",
+      "refined_metal_common"
+    ]
+  },
+  {
+    "id": "iron_ore",
+    "gameId": "IronOre",
+    "name": "Iron Ore",
+    "image": "IronOre.png",
+    "description": "(Fe) Iron Ore is a soft Metal.\n\nIt is suitable for building Power systems.",
+    "category": "Metal",
+    "melting_point": 1534.85,
+    "melting_product": "Molten Iron",
+    "tags": [
+      "metal_ore",
+      "metal_ore_electrobank",
+      "plug_slug_diet_hydrogen",
+      "stone_hatch_diet_carbon_2"
+    ]
+  },
+  {
+    "id": "isosap",
+    "gameId": "Isoresin",
+    "name": "Isosap",
+    "image": "Isosap.png",
+    "description": "Isosap is a crystallized sap composed of long-chain polymers.\n\nIt is used in the production of rare, high grade materials.",
+    "category": "RareMaterials",
+    "melting_point": 200.0,
+    "melting_product": "Liquid Naphtha"
+  },
+  {
+    "id": "lead",
+    "gameId": "Lead",
+    "name": "Lead",
+    "image": "Lead.png",
+    "description": "(Pb) Lead is a soft yet extremely dense Refined Metal.\n\nIt has a low Overheat Temperature and is suitable for building Power systems.",
+    "category": "RefinedMetal",
+    "melting_point": 327.5,
+    "melting_product": "Molten Lead",
+    "tags": [
+      "plug_slug_diet_hydrogen",
+      "refined_metal"
+    ]
+  },
+  {
+    "id": "lime",
+    "gameId": "Lime",
+    "name": "Lime",
+    "image": "Lime.png",
+    "description": "(CaCO3) Lime is a mineral commonly found in Critter egg shells.\n\nIt is useful as a Construction Material.",
+    "category": "ConsumableOre",
+    "melting_point": 1056.85,
+    "melting_product": "Magma"
+  },
+  {
+    "id": "mafic_rock",
+    "gameId": "MaficRock",
+    "name": "Mafic Rock",
+    "image": "MaficRock.png",
+    "description": "Mafic Rock is a variation of Igneous Rock that is rich in Iron.\n\nIt is useful as a Construction Material.",
+    "category": "BuildableRaw",
+    "melting_point": 1409.85,
+    "melting_product": "Magma"
+  },
+  {
+    "id": "mud",
+    "gameId": "Mud",
+    "name": "Mud",
+    "image": "Mud.png",
+    "description": "A mixture of Dirt and Water.\n\nCan be separated into its base elements using a Sludge Press.",
+    "category": "Organics",
+    "melting_point": 99.69,
+    "melting_product": "Steam"
+  },
+  {
+    "id": "neutronium",
+    "gameId": "Unobtanium",
+    "name": "Neutronium",
+    "image": "Neutronium.png",
+    "description": "(Nt) Neutronium is a mysterious and extremely resilient element.\n\nIt cannot be excavated by any Duplicant mining tool.",
+    "category": "Special",
+    "melting_point": 9726.85,
+    "melting_product": "Neutronium"
+  },
+  {
+    "id": "nickel",
+    "gameId": "Nickel",
+    "name": "Nickel",
+    "image": "Nickel.png",
+    "description": "(Ni) Nickel is a conductive Metal.\n\nIt is suitable for building Power systems.",
+    "category": "RefinedMetal",
+    "melting_point": 1454.85,
+    "melting_product": "Molten Nickel",
+    "tags": [
+      "plug_slug_diet_hydrogen",
+      "refined_metal",
+      "refined_metal_common"
+    ]
+  },
+  {
+    "id": "nickel_ore",
+    "gameId": "NickelOre",
+    "name": "Nickel Ore",
+    "image": "Nickel_Ore.png",
+    "description": "(Ni) Nickel Ore is a conductive Metal.\n\nIt can be refined into Nickel and is suitable for building Power systems.",
+    "category": "Metal",
+    "melting_point": 1454.85,
+    "melting_product": "Molten Nickel",
+    "tags": [
+      "metal_ore",
+      "metal_ore_electrobank",
+      "plug_slug_diet_hydrogen",
+      "stone_hatch_diet_carbon_2"
+    ]
+  },
+  {
+    "id": "niobium",
+    "gameId": "Niobium",
+    "name": "Niobium",
+    "image": "Niobium.png",
+    "description": "(Nb) Niobium is a rare metal with many practical applications in metallurgy and superconductor Research.",
+    "category": "RareMaterials",
+    "melting_point": 2476.85,
+    "melting_product": "Molten Niobium",
+    "tags": [
+      "metal_ore",
+      "refined_metal"
+    ]
+  },
+  {
+    "id": "obsidian",
+    "gameId": "Obsidian",
+    "name": "Obsidian",
+    "image": "Obsidian.png",
+    "description": "Obsidian is a brittle composite of volcanic Glass.",
+    "category": "BuildableRaw",
+    "melting_point": 2726.85,
+    "melting_product": "Magma",
+    "tags": [
+      "crushable_mineral",
+      "stone_hatch_diet_carbon"
+    ]
+  },
+  {
+    "id": "oxylite",
+    "gameId": "OxyRock",
+    "name": "Oxylite",
+    "image": "Oxylite.png",
+    "description": "(Ir3O2) Oxylite is a chemical compound that slowly emits breathable Oxygen.\n\nExcavating Oxylite increases its emission rate, but depletes the ore more rapidly.",
+    "category": "Sublimating",
+    "melting_point": 1409.85,
+    "melting_product": "Magma"
+  },
+  {
+    "id": "packed_snow",
+    "gameId": "StableSnow",
+    "name": "Packed Snow",
+    "image": "PackedSnow.png",
+    "description": "(H2O) Snow is a mass of loose, crystalline ice particles.\n\nIt becomes Water when melted.",
+    "category": "Liquifiable",
+    "melting_point": -0.65,
+    "melting_product": "Water"
+  },
+  {
+    "id": "pearl",
+    "gameId": "Pearl",
+    "name": "Pearl",
+    "image": "Pearl.png",
+    "description": "A perfectly smooth gem.\n\nIt can be eaten by Seaquines or used as an attractive Construction Material.",
+    "category": "Other",
+    "melting_point": 824.85,
+    "melting_product": "Carbon Dioxide",
+    "tags": [
+      "transparent_material"
+    ]
+  },
+  {
+    "id": "peat",
+    "gameId": "Peat",
+    "name": "Peat",
+    "image": "Peat.png",
+    "description": "Peat is a densely packed material made up of partially decomposed organic matter.\n\nIt is a combustible fuel, useful in Power production.",
+    "category": "ConsumableOre",
+    "melting_point": 226.85,
+    "melting_product": "Coal",
+    "tags": [
+      "fertilizer_or_peat",
+      "kiln_fuel",
+      "smoker_fuel"
+    ]
+  },
+  {
+    "id": "phosphorite",
+    "gameId": "Phosphorite",
+    "name": "Phosphorite",
+    "image": "Phosphorite.png",
+    "description": "Phosphorite is a composite of sedimentary rock, saturated with phosphate.",
+    "category": "Agriculture",
+    "melting_point": 243.85,
+    "melting_product": "Liquid Phosphorus",
+    "tags": [
+      "azure_bug_diet_eatsolid",
+      "coral_bug_diet_eatsolid",
+      "royal_bug_diet_eatsolid",
+      "shine_bug_diet_eatsolid",
+      "sun_bug_diet_eatsolid"
+    ]
+  },
+  {
+    "id": "plastic",
+    "gameId": "Polypropylene",
+    "name": "Plastic",
+    "image": "Plastic.png",
+    "description": "(C3H6)n Plastic is a thermoplastic polymer.\n\nIt is useful for constructing a variety of advanced buildings and equipment.",
+    "category": "ManufacturedMaterial",
+    "melting_point": 159.85,
+    "melting_product": "Liquid Naphtha"
+  },
+  {
+    "id": "plastium",
+    "gameId": "HardPolypropylene",
+    "name": "Plastium",
+    "image": "Plastium.png",
+    "description": "Plastium is an advanced thermoplastic polymer made from Thermium, Plastic and Brackwax.\n\nIt is highly heat-resistant and suitable for use in space buildings.",
+    "category": "ManufacturedMaterial",
+    "melting_point": 1826.85,
+    "melting_product": "Sour Gas"
+  },
+  {
+    "id": "plywood",
+    "gameId": "FabricatedWood",
+    "name": "Plywood",
+    "image": "Plywood.png",
+    "description": "Plywood is a good source of Heat and Power.\n\nIts insulation properties make it a useful Construction Material.",
+    "category": "Organics",
+    "melting_point": 550.0,
+    "melting_product": "Carbon Dioxide",
+    "tags": [
+      "building_wood",
+      "kiln_fuel",
+      "smoker_fuel"
+    ]
+  },
+  {
+    "id": "polluted_brine_ice",
+    "gameId": "MurkyBrineIce",
+    "name": "Polluted Brine Ice",
+    "image": "Polluted_Brine_Ice.png",
+    "description": "Polluted Brine Ice is a murky, concentrated solution of Salt dissolved in Polluted Water and frozen into a Solid state.",
+    "category": "Liquifiable",
+    "melting_point": -25.5,
+    "melting_product": "Polluted Brine"
+  },
+  {
+    "id": "polluted_dirt",
+    "gameId": "ToxicSand",
+    "name": "Polluted Dirt",
+    "image": "PollutedDirt.png",
+    "description": "Polluted Dirt is unprocessed biological waste.\n\nIt emits Polluted Oxygen over time.",
+    "category": "Organics",
+    "melting_point": 1712.85,
+    "melting_product": "Molten Glass",
+    "tags": [
+      "compostable",
+      "oakshell_diet_sand",
+      "sage_hatch_diet_carbon"
+    ]
+  },
+  {
+    "id": "polluted_ice",
+    "gameId": "DirtyIce",
+    "name": "Polluted Ice",
+    "image": "PollutedIce.png",
+    "description": "Polluted Ice is dirty, unfiltered water frozen into a Solid state.",
+    "category": "Liquifiable",
+    "melting_point": -20.65,
+    "melting_product": "Polluted Water"
+  },
+  {
+    "id": "polluted_mud",
+    "gameId": "ToxicMud",
+    "name": "Polluted Mud",
+    "image": "PollutedMud.png",
+    "description": "A mixture of Polluted Dirt and Polluted Water.\n\nCan be separated into its base elements using a Sludge Press.",
+    "category": "Organics",
+    "melting_point": 99.69,
+    "melting_product": "Steam",
+    "tags": [
+      "sage_hatch_diet_carbon"
+    ]
+  },
+  {
+    "id": "pyrite",
+    "gameId": "FoolsGold",
+    "name": "Pyrite",
+    "image": "Pyrite.png",
+    "description": "(FeS2) Pyrite is a conductive Metal.\n\nAlso known as \"Fool's Gold\", is suitable for building Power systems.",
+    "category": "Metal",
+    "melting_point": 1083.85,
+    "melting_product": "Molten Iron",
+    "tags": [
+      "metal_ore"
+    ]
+  },
+  {
+    "id": "radium",
+    "gameId": "Radium",
+    "name": "Radium",
+    "image": "Radium.png",
+    "description": "(Ra) Radium is a Light emitting radioactive substance.\n\nIt is useful as a Power source.",
+    "category": "Solid",
+    "melting_point": 959.85,
+    "melting_product": "Magma"
+  },
+  {
+    "id": "refined_carbon",
+    "gameId": "RefinedCarbon",
+    "name": "Refined Carbon",
+    "image": "RefinedCarbon.png",
+    "description": "(C) Refined carbon is solid element purified from raw Coal.",
+    "category": "ConsumableOre",
+    "melting_point": 4326.85,
+    "melting_product": "Liquid Carbon"
+  },
+  {
+    "id": "refined_phosphorus",
+    "gameId": "Phosphorus",
+    "name": "Refined Phosphorus",
+    "image": "RefinedPhosphorus.png",
+    "description": "(P) Refined Phosphorus is a chemical element in its Solid state.",
+    "category": "ConsumableOre",
+    "melting_point": 44.15,
+    "melting_product": "Liquid Phosphorus",
+    "tags": [
+      "abyss_bug_diet_eatsolid",
+      "azure_bug_diet_eatsolid"
+    ]
+  },
+  {
+    "id": "regolith",
+    "gameId": "Regolith",
+    "name": "Regolith",
+    "image": "Regolith.png",
+    "description": "Regolith is a sandy substance composed of the various particles that collect atop terrestrial objects.\n\nIt is useful as a Filtration Medium.",
+    "category": "Filter",
+    "melting_point": 1409.85,
+    "melting_product": "Magma",
+    "tags": [
+      "filter"
+    ]
+  },
+  {
+    "id": "rubber",
+    "gameId": "Rubber",
+    "name": "Rubber",
+    "image": "Rubber.png",
+    "description": "Rubber is a viscoelastic Solid made from vulcanized Latex.\n\nIt can be used to make Gaskets.",
+    "category": "Other",
+    "melting_point": 220.0,
+    "melting_product": "Carbon Dioxide"
+  },
+  {
+    "id": "rust",
+    "gameId": "Rust",
+    "name": "Rust",
+    "image": "Rust.png",
+    "description": "Rust is an iron oxide that forms from the breakdown of Iron.\n\nIt is useful in some Oxygen production processes.",
+    "category": "ConsumableOre",
+    "melting_point": 1534.85,
+    "melting_product": "Molten Iron"
+  },
+  {
+    "id": "salt",
+    "gameId": "Salt",
+    "name": "Salt",
+    "image": "Salt.png",
+    "description": "(NaCl) Salt, also known as sodium chloride, is an edible chemical compound.\n\nWhen refined, it can be eaten with meals to increase Duplicant Morale.",
+    "category": "ConsumableOre",
+    "melting_point": 799.85,
+    "melting_product": "Molten Salt"
+  },
+  {
+    "id": "sand",
+    "gameId": "Sand",
+    "name": "Sand",
+    "image": "Sand.png",
+    "description": "Sand is a composite of granular rock.\n\nIt is useful as a Filtration Medium.",
+    "category": "Filter",
+    "melting_point": 1712.85,
+    "melting_product": "Molten Glass",
+    "tags": [
+      "filter",
+      "hatch_diet_carbon"
+    ]
+  },
+  {
+    "id": "sandstone",
+    "gameId": "SandStone",
+    "name": "Sandstone",
+    "image": "Sandstone.png",
+    "description": "Sandstone is a composite of relatively soft sedimentary rock.\n\nIt is useful as a Construction Material.",
+    "category": "BuildableRaw",
+    "melting_point": 926.85,
+    "melting_product": "Magma",
+    "tags": [
+      "crushable_mineral",
+      "hatch_diet_carbon"
+    ]
+  },
+  {
+    "id": "sedimentary_rock",
+    "gameId": "SedimentaryRock",
+    "name": "Sedimentary Rock",
+    "image": "SedimentaryRock.png",
+    "description": "Sedimentary Rock is a hardened composite of sediment layers.\n\nIt is useful as a Construction Material.",
+    "category": "BuildableRaw",
+    "melting_point": 926.85,
+    "melting_product": "Magma",
+    "tags": [
+      "crushable_mineral",
+      "hatch_diet_carbon",
+      "stone_hatch_diet_carbon"
+    ]
+  },
+  {
+    "id": "shale",
+    "gameId": "Shale",
+    "name": "Shale",
+    "image": "Shale.png",
+    "description": "Shale is a brittle composite of sediment layers.\n\nIt is useful as a Construction Material.",
+    "category": "BuildableRaw",
+    "melting_point": 826.85,
+    "melting_product": "Magma",
+    "tags": [
+      "crushable_mineral",
+      "hatch_diet_carbon"
+    ]
+  },
+  {
+    "id": "silt_stone",
+    "gameId": "SiltStone",
+    "name": "Siltstone",
+    "image": "SiltStone.png",
+    "description": "Siltstone is a chalky mudrock made primarily of compressed silt.\n\nIt is useful as a Construction Material.",
+    "category": "BuildableRaw",
+    "melting_point": 926.85,
+    "melting_product": "Magma",
+    "tags": [
+      "crushable_mineral",
+      "hatch_diet_carbon"
+    ]
+  },
+  {
+    "id": "slime",
+    "gameId": "SlimeMold",
+    "name": "Slime",
+    "image": "Slime.png",
+    "description": "Slime is a thick biomixture of algae, fungi, and mucopolysaccharides.\n\nIt can be distilled into Algae and emits Polluted Oxygen once dug up.",
+    "category": "Organics",
+    "melting_point": 125.0,
+    "melting_product": "Dirt",
+    "tags": [
+      "oakshell_diet_sand",
+      "sage_hatch_diet_carbon"
+    ]
+  },
+  {
+    "id": "snow",
+    "gameId": "Snow",
+    "name": "Snow",
+    "image": "Snow.png",
+    "description": "(H2O) Snow is a mass of loose, crystalline ice particles.\n\nIt becomes Water when melted.",
+    "category": "Liquifiable",
+    "melting_point": -0.65,
+    "melting_product": "Water"
+  },
+  {
+    "id": "solid_carbon_dioxide",
+    "gameId": "SolidCarbonDioxide",
+    "name": "Solid Carbon Dioxide",
+    "image": "SolidCarbonDioxide.png",
+    "description": "(CO2) Carbon Dioxide is an unbreathable compound in a Solid state.",
+    "category": "Liquifiable",
+    "melting_point": -56.55,
+    "melting_product": "Liquid Carbon Dioxide"
+  },
+  {
+    "id": "solid_chlorine",
+    "gameId": "SolidChlorine",
+    "name": "Solid Chlorine",
+    "image": "SolidChlorine.png",
+    "description": "(Cl) Chlorine is a natural Germ-killing element in a Solid state.",
+    "category": "Liquifiable",
+    "melting_point": -100.98,
+    "melting_product": "Liquid Chlorine"
+  },
+  {
+    "id": "solid_crude_oil",
+    "gameId": "SolidCrudeOil",
+    "name": "Solid Crude Oil",
+    "image": "SolidCrudeOil.png",
+    "category": "Liquifiable",
+    "melting_point": -40.15,
+    "melting_product": "Crude Oil"
+  },
+  {
+    "id": "solid_ethanol",
+    "gameId": "SolidEthanol",
+    "name": "Solid Ethanol",
+    "image": "SolidEthanol.png",
+    "description": "(C2H6O) Solid Ethanol is an advanced chemical compound.\n\nIt can be used as a highly effective fuel source when burned.",
+    "category": "Liquifiable",
+    "melting_point": -114.05,
+    "melting_product": "Ethanol"
+  },
+  {
+    "id": "solid_gunk",
+    "gameId": "Gunk",
+    "name": "Solid Gunk",
+    "image": "Solid_Gunk.png",
+    "description": "Solid Gunk is the built-up grime and grit produced by Duplicants' bionic mechanisms, which has been frozen into a Solid state.",
+    "category": "Organics",
+    "melting_point": -8.15,
+    "melting_product": "Gunk"
+  },
+  {
+    "id": "solid_hydrogen",
+    "gameId": "SolidHydrogen",
+    "name": "Solid Hydrogen",
+    "image": "SolidHydrogen.png",
+    "description": "(H) Solid Hydrogen is the universe's most common element in a Solid state.",
+    "category": "Liquifiable",
+    "melting_point": -259.15,
+    "melting_product": "Liquid Hydrogen"
+  },
+  {
+    "id": "solid_mercury",
+    "gameId": "SolidMercury",
+    "name": "Solid Mercury",
+    "image": "SolidMercury.png",
+    "description": "(Hg) Mercury is a rare Metal in a Solid state.",
+    "category": "RefinedMetal",
+    "melting_point": -38.85,
+    "melting_product": "Mercury",
+    "tags": [
+      "plug_slug_diet_hydrogen",
+      "refined_metal"
+    ]
+  },
+  {
+    "id": "solid_methane",
+    "gameId": "SolidMethane",
+    "name": "Solid Methane",
+    "image": "SolidMethane.png",
+    "description": "(CH4) Methane is an alkane in a Solid state.",
+    "category": "ConsumableOre",
+    "melting_point": -182.6,
+    "melting_product": "Liquid Methane"
+  },
+  {
+    "id": "solid_naphtha",
+    "gameId": "SolidNaphtha",
+    "name": "Solid Naphtha",
+    "image": "SolidNaphtha.png",
+    "description": "Naphtha is a distilled hydrocarbon mixture in a Solid state.",
+    "category": "Liquifiable",
+    "melting_point": -50.15,
+    "melting_product": "Liquid Naphtha"
+  },
+  {
+    "id": "solid_nuclear_waste",
+    "gameId": "SolidNuclearWaste",
+    "name": "Solid Nuclear Waste",
+    "image": "SolidNuclearWaste.png",
+    "description": "Highly toxic solid full of Radioactive Contaminants.",
+    "category": "Other",
+    "melting_point": 26.85,
+    "melting_product": "Liquid Nuclear Waste"
+  },
+  {
+    "id": "solid_oxygen",
+    "gameId": "SolidOxygen",
+    "name": "Solid Oxygen",
+    "image": "SolidOxygen.png",
+    "description": "(O2) Solid Oxygen is a breathable element in a Solid state.",
+    "category": "Liquifiable",
+    "melting_point": -218.79,
+    "melting_product": "Liquid Oxygen"
+  },
+  {
+    "id": "solid_petroleum",
+    "gameId": "SolidPetroleum",
+    "name": "Solid Petroleum",
+    "image": "SolidPetroleum.png",
+    "description": "Petroleum is a Power source.\n\nThis selection is in a Solid state.",
+    "category": "Liquifiable",
+    "melting_point": -57.15,
+    "melting_product": "Petroleum"
+  },
+  {
+    "id": "solid_propane",
+    "gameId": "SolidPropane",
+    "name": "Solid Propane",
+    "image": "SolidPropane.png",
+    "description": "(C3H8) Solid Propane is a natural gas in a Solid state.",
+    "category": "Liquifiable",
+    "melting_point": -188.15,
+    "melting_product": "Liquid Propane"
+  },
+  {
+    "id": "solid_resin",
+    "gameId": "NaturalSolidResin",
+    "name": "Solid Resin",
+    "image": "SolidResin.png",
+    "description": "Resin that has been cooled to a Solid state.\n\nIt can be treated to become Plastic in the Polymer Press.",
+    "category": "Organics",
+    "melting_point": 20.0,
+    "melting_product": "Resin"
+  },
+  {
+    "id": "solid_sap",
+    "gameId": "SolidResin",
+    "name": "Solid Sap",
+    "image": "SolidSap.png",
+    "description": "Solidified goo harvested from a grumpy tree.\n\nIt is used in the production of Isosap.",
+    "category": "Organics",
+    "melting_point": 20.0,
+    "melting_product": "Sap"
+  },
+  {
+    "id": "solid_super_coolant",
+    "gameId": "SolidSuperCoolant",
+    "name": "Solid Super Coolant",
+    "image": "SolidSuperCoolant.png",
+    "description": "Super Coolant is an industrial-grade Fullerene coolant.\n\nThis selection is in a Solid state.",
+    "category": "ManufacturedMaterial",
+    "melting_point": -271.15,
+    "melting_product": "Super Coolant"
+  },
+  {
+    "id": "solid_visco_gel",
+    "gameId": "SolidViscoGel",
+    "name": "Solid Visco-Gel",
+    "image": "SolidViscoGel.png",
+    "description": "Visco-Gel is a polymer that has high surface tension when in Liquid form.\n\nThis selection is in a Solid state.",
+    "category": "ManufacturedMaterial",
+    "melting_point": -30.65,
+    "melting_product": "Visco-Gel Fluid"
+  },
+  {
+    "id": "steel",
+    "gameId": "Steel",
+    "name": "Steel",
+    "image": "Steel.png",
+    "description": "Steel is a Metal Alloy composed of iron and carbon.",
+    "category": "ManufacturedMaterial",
+    "melting_point": 2426.85,
+    "melting_product": "Molten Steel",
+    "tags": [
+      "metal_ore",
+      "refined_metal"
+    ]
+  },
+  {
+    "id": "sucrose",
+    "gameId": "Sucrose",
+    "name": "Sucrose",
+    "image": "Sucrose.png",
+    "description": "(C12H22O11) Sucrose is the raw form of sugar.\n\nIt can be used for cooking higher-quality Food.",
+    "category": "ConsumableOre",
+    "melting_point": 185.85,
+    "melting_product": "Liquid Sucrose"
+  },
+  {
+    "id": "sulfur",
+    "gameId": "Sulfur",
+    "name": "Sulfur",
+    "image": "Sulfur.png",
+    "description": "(S) Sulfur is a common chemical element and byproduct of Natural Gas production.\n\nThis selection is in a Solid state.",
+    "category": "Other",
+    "melting_point": 115.2,
+    "melting_product": "Liquid Sulfur"
+  },
+  {
+    "id": "tallow",
+    "gameId": "Tallow",
+    "name": "Tallow",
+    "image": "Tallow.png",
+    "description": "A chunk of raw grease that can be used in Food production or industrial processes.",
+    "category": "Liquifiable",
+    "melting_point": 80.0,
+    "melting_product": "Biodiesel"
+  },
+  {
+    "id": "thermium",
+    "gameId": "TempConductorSolid",
+    "name": "Thermium",
+    "image": "Thermium.png",
+    "description": "Thermium is an industrial metal alloy formulated to maximize Heat Transfer and thermal dispersion.",
+    "category": "ManufacturedMaterial",
+    "melting_point": 2676.85,
+    "melting_product": "Molten Niobium",
+    "tags": [
+      "metal_ore",
+      "refined_metal"
+    ]
+  },
+  {
+    "id": "tungsten",
+    "gameId": "Tungsten",
+    "name": "Tungsten",
+    "image": "Tungsten.png",
+    "description": "(W) Tungsten is an extremely tough crystalline Metal.\n\nIt is suitable for building Power systems.",
+    "category": "RefinedMetal",
+    "melting_point": 3421.85,
+    "melting_product": "Molten Tungsten",
+    "tags": [
+      "plug_slug_diet_hydrogen",
+      "refined_metal"
+    ]
+  },
+  {
+    "id": "uranium_ore",
+    "gameId": "UraniumOre",
+    "name": "Uranium Ore",
+    "image": "UraniumOre.png",
+    "description": "(U) Uranium Ore is a highly Radioactive substance.\n\nIt can be refined into fuel for research reactors.",
+    "category": "Metal",
+    "melting_point": 132.85,
+    "melting_product": "Liquid Uranium",
+    "tags": [
+      "metal_ore"
+    ]
+  },
+  {
+    "id": "wolframite",
+    "gameId": "Wolframite",
+    "name": "Wolframite",
+    "image": "Wolframite.png",
+    "description": "((Fe,Mn)WO4) Wolframite is a dense Metallic element in a Solid state.\n\nIt is a source of Tungsten and is suitable for building Power systems.",
+    "category": "Metal",
+    "melting_point": 2926.85,
+    "melting_product": "Molten Tungsten",
+    "tags": [
+      "metal_ore",
+      "stone_hatch_diet_carbon_2"
+    ]
+  },
+  {
+    "id": "wood",
+    "gameId": "WoodLog",
+    "name": "Wood",
+    "image": "Wood.png",
+    "description": "Wood is a good source of Heat and Power.\n\nIts insulation properties and positive Decor also make it a useful Construction Material.",
+    "category": "Organics",
+    "melting_point": 600.0,
+    "melting_product": "Carbon Dioxide",
+    "tags": [
+      "building_wood",
+      "kiln_fuel",
+      "smoker_fuel"
+    ]
+  },
+  {
+    "id": "zinc",
+    "gameId": "Zinc",
+    "name": "Zinc",
+    "image": "Zinc.png",
+    "description": "(Zn) Zinc is a very malleable Metal Alloy.",
+    "category": "RefinedMetal",
+    "melting_point": 419.5,
+    "melting_product": "Molten Zinc",
+    "tags": [
+      "plug_slug_diet_hydrogen",
+      "refined_metal",
+      "refined_metal_common"
+    ]
+  },
+  {
+    "id": "zinc_ore",
+    "gameId": "ZincOre",
+    "name": "Zinc Ore",
+    "image": "Zinc_Ore.png",
+    "description": "(Zn) Zinc Ore is a malleable raw Metal.\n\nIt is suitable for building Power systems.",
+    "category": "Metal",
+    "melting_point": 419.5,
+    "melting_product": "Molten Zinc",
+    "tags": [
+      "metal_ore",
+      "metal_ore_electrobank",
+      "plug_slug_diet_hydrogen",
+      "stone_hatch_diet_carbon_2"
+    ]
   }
 ]
