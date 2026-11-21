@@ -66,14 +66,6 @@
     ]
   },
   {
-    "id": "biobot",
-    "gameId": "MorbRover",
-    "name": "Biobot",
-    "image": "Biobot.png",
-    "description": "A Pathogen-Fueled Extravehicular Geo-Exploratory Guidebot (model Y), aka \"P.E.G.G.Y.\"\n\nIt can be assigned basic building tasks and digging duties in hazardous environments.",
-    "species": "MorbRover"
-  },
-  {
     "id": "blowter",
     "gameId": "PufferFish",
     "name": "Blowter",
@@ -186,17 +178,6 @@
       "critter_walker",
       "rhex_diet_brineice_2",
       "saturn_trap_prey"
-    ]
-  },
-  {
-    "id": "flydo",
-    "gameId": "FetchDrone",
-    "name": "Flydo",
-    "image": "Flydo.png",
-    "description": "A programmable delivery robot.\n\nPicks up Solid objects for delivery to selected destinations.",
-    "species": "FetchDrone",
-    "dlc": [
-      "DLC3_ID"
     ]
   },
   {
@@ -530,17 +511,6 @@
     ]
   },
   {
-    "id": "rover",
-    "gameId": "ScoutRover",
-    "name": "Rover",
-    "image": "Rover.png",
-    "description": "A curious bot that can remotely explore new Planetoid locations.",
-    "species": "ScoutRover",
-    "dlc": [
-      "EXPANSION1_ID"
-    ]
-  },
-  {
     "id": "royal_bug",
     "gameId": "LightBugPurple",
     "name": "Royal Bug",
@@ -738,14 +708,6 @@
     "image": "SunBug.png",
     "description": "Sun Bugs emit a soft orange Light when Happy, in hopes of attracting more of their kind for company.\n\nTheir eggs contain small amounts of Resin that can be harvested when cracked at the Egg Cracker.",
     "species": "LightBugSpecies"
-  },
-  {
-    "id": "sweepy",
-    "gameId": "SweepBot",
-    "name": "Sweepy",
-    "image": "Sweepy.png",
-    "description": "An automated sweeping robot.\n\nSweeps up Solid debris and Liquid spills and stores the material back in its Sweepy Dock.",
-    "species": "SweepBot"
   },
   {
     "id": "sweetle",

@@ -1,6 +1,6 @@
 import { createElement } from '../utils.js?v=3';
 
-const DATA_VERSION = '3';
+const DATA_VERSION = '4';
 
 let configData = null;
 let recipesData = null;

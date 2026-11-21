@@ -108,6 +108,13 @@
     ]
   },
   {
+    "id": "biobot",
+    "gameId": "MorbRover",
+    "name": "Biobot",
+    "image": "Biobot.png",
+    "description": "A Pathogen-Fueled Extravehicular Geo-Exploratory Guidebot (model Y), aka \"P.E.G.G.Y.\"\n\nIt can be assigned basic building tasks and digging duties in hazardous environments."
+  },
+  {
     "id": "bioluminescent_rock",
     "gameId": "artifact_bioluminescentrock",
     "name": "Bioluminescent Rock",
@@ -412,6 +419,16 @@
     ],
     "tags": [
       "fiber"
+    ]
+  },
+  {
+    "id": "flydo",
+    "gameId": "FetchDrone",
+    "name": "Flydo",
+    "image": "Flydo.png",
+    "description": "A programmable delivery robot.\n\nPicks up Solid objects for delivery to selected destinations.",
+    "dlc": [
+      "DLC3_ID"
     ]
   },
   {
@@ -873,6 +890,16 @@
     ]
   },
   {
+    "id": "rover",
+    "gameId": "ScoutRover",
+    "name": "Rover",
+    "image": "Rover.png",
+    "description": "A curious bot that can remotely explore new Planetoid locations.",
+    "dlc": [
+      "EXPANSION1_ID"
+    ]
+  },
+  {
     "id": "rubber_boots",
     "gameId": "RubberBoots",
     "name": "Rubber Boots",
@@ -1045,6 +1072,13 @@
     "dlc": [
       "DLC3_ID"
     ]
+  },
+  {
+    "id": "sweepy",
+    "gameId": "SweepBot",
+    "name": "Sweepy",
+    "image": "Sweepy.png",
+    "description": "An automated sweeping robot.\n\nSweeps up Solid debris and Liquid spills and stores the material back in its Sweepy Dock."
   },
   {
     "id": "swim_hack_booster",

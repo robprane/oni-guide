@@ -552,15 +552,15 @@ def main() -> None:
         name = c.get("name") or ""
         if name.startswith("MISSING."):
             continue
+        ctags = set(c.get("tags") or [])
+        # Robots (Sweepy, Biobot, Rover, Flydo) belong in "other", not "critter"
+        is_robot = "Robot" in ctags
         extra = {
             "description": c.get("description"),
-            "species": c.get("species"),
+            "species": None if is_robot else c.get("species"),
             "dlc": c.get("requiredDlcIds"),
         }
-        obj = add_entity("critter", c["id"], name, extra)
-        ctags = set(c.get("tags") or [])
-        # Robots (Sweepy, Biobot, Rover, Flydo) do not have Trappable and cannot be eaten by Saturn Critter Trap
-        is_robot = "Robot" in ctags
+        obj = add_entity("other" if is_robot else "critter", c["id"], name, extra)
         is_trappable_critter = (not is_robot) and ("BagableCreature" in ctags) and ("LargeCreature" not in ctags)
         if "Walker" in ctags and not is_robot:
             item_tags[obj["id"]].add("critter_walker")
