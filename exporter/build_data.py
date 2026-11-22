@@ -919,6 +919,17 @@ def main() -> None:
                     })
 
     # --- B. Complex Recipes (Fabricators — using preProcessRecipes to preserve tag groups!) ---
+    # Fabricators whose ElementConverter runs ONLY while actively executing a timed recipe
+    # (fold fuel/exhaust directly into each operation: kgPerSec * timeSec).
+    FOLD_CONVERTER_FABRICATORS = {"FoodDehydrator", "GourmetCookingStation", "Smoker"}
+    raw_buildings_by_id = {b["id"]: b for b in raw.get("buildings", [])}
+
+    def snap_clean_grams(val_g: float) -> float:
+        nearest = round(val_g)
+        if abs(val_g - nearest) < 0.01:
+            return float(nearest)
+        return round_num(val_g)
+
     dehydrated_to_food: dict[str, str] = {}
 
     for cr in raw.get("complexRecipesPreProcess", []):
@@ -939,7 +950,9 @@ def main() -> None:
 
         valid_recipe = True
         for ing in cr.get("ingredients") or []:
-            if ing.get("doNotConsume"):
+            # FoodDehydrator marks its input food with doNotConsume=True internally only because
+            # the entity is packed inside DehydratedFoodPackage instead of destroyed; it IS consumed as input.
+            if ing.get("doNotConsume") and "FoodDehydrator" not in fabs:
                 continue
             pm = [m for m in (ing.get("possibleMaterials") or []) if m in game_to_site]
             pma = ing.get("possibleMaterialAmounts") or []
@@ -1045,16 +1058,31 @@ def main() -> None:
         if hep_out > 0 and "HighEnergyParticle" in game_to_site:
             prod_entries.append(make_entry("element", game_to_site["HighEnergyParticle"], hep_out, "unit"))
 
+        time_sec = cr.get("timeSec") or 0.0
         for fab in fabs:
             src_id = game_to_site[fab]
+            extra_cons: list[dict[str, Any]] = []
+            extra_prod: list[dict[str, Any]] = []
+            if fab in FOLD_CONVERTER_FABRICATORS and time_sec > 0:
+                b_obj = raw_buildings_by_id.get(fab)
+                for ec in (b_obj.get("elementConverters") or []) if b_obj else []:
+                    for c in ec.get("consumed") or []:
+                        ref = resolve_ref(c["tag"])
+                        if ref and c.get("kgPerSec", 0) > 0:
+                            extra_cons.append(make_entry(ref[0], ref[1], snap_clean_grams(c["kgPerSec"] * time_sec * 1000.0), "g"))
+                    for o in ec.get("produced") or []:
+                        ref = resolve_ref(o["element"])
+                        if ref and o.get("kgPerSec", 0) > 0:
+                            extra_prod.append(make_entry(ref[0], ref[1], snap_clean_grams(o["kgPerSec"] * time_sec * 1000.0), "g"))
+
             for cons_entries in ing_variants_list:
                 rec: dict[str, Any] = {
                     "source": src_id,
-                    "consumed": cons_entries,
-                    "produced": prod_entries,
+                    "consumed": cons_entries + extra_cons,
+                    "produced": prod_entries + extra_prod,
                 }
-                if cr.get("timeSec") and cr["timeSec"] > 0:
-                    rec["time"] = round_num(cr["timeSec"])
+                if time_sec > 0:
+                    rec["time"] = round_num(time_sec)
                 add_recipe(rec)
 
     # Collapse EggCracker species groups that have IDENTICAL output (e.g. all 2kg standard eggs -> 1kg Raw Egg + 1kg Egg Shell)
@@ -1151,31 +1179,32 @@ def main() -> None:
                 })
             continue
 
-        # ElementConverters
-        for ec in b.get("elementConverters") or []:
-            cons = []
-            prod = []
-            ok = True
-            for c in ec["consumed"]:
-                ref = resolve_ref(c["tag"])
-                if not ref:
-                    ok = False
-                    break
-                cons.append(make_entry(ref[0], ref[1], c["kgPerSec"] * 1000.0, "g", "s"))
-            for o in ec["produced"]:
-                ref = resolve_ref(o["element"])
-                if not ref:
-                    ok = False
-                    break
-                prod.append(make_entry(ref[0], ref[1], o["kgPerSec"] * 1000.0, "g", "s"))
-            # OilWellCap also produces Methane gas from OilWellCap component!
-            if gid == "OilWellCap" and b.get("oilWellCap"):
-                ow = b["oilWellCap"]
-                gref = resolve_ref(ow["gasElement"])
-                if gref and ow.get("addGasRateKgPerSec", 0) > 0:
-                    prod.append(make_entry(gref[0], gref[1], ow["addGasRateKgPerSec"] * 1000.0, "g", "s"))
-            if ok and (cons or prod):
-                add_recipe({"source": src_id, "consumed": cons, "produced": prod})
+        # ElementConverters (skip fabricators whose active fuel/exhaust is folded into each craft recipe)
+        if gid not in FOLD_CONVERTER_FABRICATORS:
+            for ec in b.get("elementConverters") or []:
+                cons = []
+                prod = []
+                ok = True
+                for c in ec["consumed"]:
+                    ref = resolve_ref(c["tag"])
+                    if not ref:
+                        ok = False
+                        break
+                    cons.append(make_entry(ref[0], ref[1], c["kgPerSec"] * 1000.0, "g", "s"))
+                for o in ec["produced"]:
+                    ref = resolve_ref(o["element"])
+                    if not ref:
+                        ok = False
+                        break
+                    prod.append(make_entry(ref[0], ref[1], o["kgPerSec"] * 1000.0, "g", "s"))
+                # OilWellCap also produces Methane gas from OilWellCap component!
+                if gid == "OilWellCap" and b.get("oilWellCap"):
+                    ow = b["oilWellCap"]
+                    gref = resolve_ref(ow["gasElement"])
+                    if gref and ow.get("addGasRateKgPerSec", 0) > 0:
+                        prod.append(make_entry(gref[0], gref[1], ow["addGasRateKgPerSec"] * 1000.0, "g", "s"))
+                if ok and (cons or prod):
+                    add_recipe({"source": src_id, "consumed": cons, "produced": prod})
 
         # EnergyGenerator
         if b.get("energyGenerator"):
