@@ -1,22 +1,49 @@
 import { CanvasEngine } from '../canvas/engine.js';
-import { createElement } from '../utils.js';
+import { createElement } from '../utils.js?v=6';
+import { createSvgIcon } from '../icons.js?v=6';
 
 let engineInstance = null;
+
+function createToolButton(tool, label, iconNode, isActive = false, isHidden = false) {
+    const cls = `tool-btn${isActive ? ' active' : ''}${isHidden ? ' hidden' : ''}`;
+    return createElement('button', {
+        type: 'button',
+        class: cls,
+        dataset: { tool },
+        title: label,
+        'aria-label': label
+    }, [
+        iconNode,
+        createElement('span', { class: 'tool-btn-label', textContent: label })
+    ]);
+}
+
+function createToolSprite(src, alt) {
+    return createElement('img', { src, alt, class: 'tool-btn-img' });
+}
 
 export async function renderCanvas(container, path) {
     container.textContent = ''; // Clear container
 
+    const copyLinkBtn = createElement('button', {
+        type: 'button',
+        id: 'copy-link-btn',
+        class: 'utility-btn icon-only-btn',
+        title: 'Copy link',
+        'aria-label': 'Copy link'
+    }, [createSvgIcon('link', 'btn-svg-icon')]);
+
     const toolbar = createElement('div', { id: 'toolbar', class: 'canvas-toolbar' }, [
-        createElement('button', { class: 'tool-btn active', dataset: { tool: 'solid' }, textContent: 'Solid Tile' }),
-        createElement('button', { class: 'tool-btn', dataset: { tool: 'sweeper' }, textContent: 'Auto-Sweeper' }),
-        createElement('button', { class: 'tool-btn', dataset: { tool: 'building' }, textContent: 'Building' }),
+        createToolButton('solid', 'Solid Tile', createToolSprite('/images/Tile.png', 'Solid Tile'), true),
+        createToolButton('sweeper', 'Auto-Sweeper', createToolSprite('/images/AutoSweeper.png', 'Auto-Sweeper')),
+        createToolButton('building', 'Building', createToolSprite('/images/StorageBin.png', 'Building')),
         // Hidden to focus on Auto-Sweeper
-        createElement('button', { class: 'tool-btn hidden', dataset: { tool: 'pipe' }, textContent: 'Pipe' }),
-        createElement('button', { class: 'tool-btn hidden', dataset: { tool: 'bridge' }, textContent: 'Bridge' }),
-        createElement('button', { class: 'tool-btn hidden', dataset: { tool: 'spawn_liquid' }, textContent: 'Spawn Liquid' }),
-        createElement('button', { class: 'tool-btn', dataset: { tool: 'erase' }, textContent: 'Eraser' }),
+        createToolButton('pipe', 'Pipe', createToolSprite('/images/LiquidPipe.png', 'Pipe'), false, true),
+        createToolButton('bridge', 'Bridge', createToolSprite('/images/LiquidBridge.png', 'Bridge'), false, true),
+        createToolButton('spawn_liquid', 'Spawn Liquid', createToolSprite('/images/Water.png', 'Spawn Liquid'), false, true),
+        createToolButton('erase', 'Eraser', createSvgIcon('eraser', 'tool-btn-svg')),
         createElement('div', { class: 'toolbar-spacer', style: 'flex-grow: 1;' }),
-        createElement('button', { id: 'copy-link-btn', class: 'utility-btn', textContent: 'Copy Link' })
+        copyLinkBtn
     ]);
 
     const canvasEl = createElement('canvas', { id: 'oni-canvas', class: 'oni-canvas' });
@@ -183,15 +210,22 @@ export async function renderCanvas(container, path) {
     }
     canvasEl.addEventListener('grid-updated', handleGridUpdated);
 
-    // Setup Copy Link button
+    // Setup Copy Link button (icon-only with checkmark feedback)
     const copyBtn = toolbar.querySelector('#copy-link-btn');
+    let copyResetTimer = null;
     if (copyBtn) {
         copyBtn.addEventListener('click', () => {
             navigator.clipboard.writeText(window.location.href).then(() => {
-                const originalText = copyBtn.textContent;
-                copyBtn.textContent = 'Copied!';
-                setTimeout(() => {
-                    copyBtn.textContent = originalText;
+                copyBtn.textContent = '';
+                copyBtn.appendChild(createSvgIcon('check', 'btn-svg-icon'));
+                copyBtn.classList.add('is-copied');
+                copyBtn.title = 'Copied!';
+                if (copyResetTimer) clearTimeout(copyResetTimer);
+                copyResetTimer = setTimeout(() => {
+                    copyBtn.textContent = '';
+                    copyBtn.appendChild(createSvgIcon('link', 'btn-svg-icon'));
+                    copyBtn.classList.remove('is-copied');
+                    copyBtn.title = 'Copy link';
                 }, 2000);
             }).catch(err => {
                 console.error("Failed to copy link", err);
@@ -204,6 +238,7 @@ export async function renderCanvas(container, path) {
         window.removeEventListener('keydown', handleKeydown);
         canvasEl.removeEventListener('grid-updated', handleGridUpdated);
         if (updateUrlTimeout) clearTimeout(updateUrlTimeout);
+        if (copyResetTimer) clearTimeout(copyResetTimer);
         if (engineInstance) {
             engineInstance.destroy();
             engineInstance = null;

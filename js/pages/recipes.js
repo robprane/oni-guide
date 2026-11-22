@@ -1,465 +1,97 @@
-import { createElement } from '../utils.js?v=3';
+import { createElement } from '../utils.js?v=6';
+import { createSvgIcon } from '../icons.js?v=6';
+import {
+    attachImgFallback,
+    entryMatchesItem,
+    evaluateQuery,
+    expandGroupedRecipe,
+    formatAmount,
+    formatAmountNumber,
+    formatTemperature,
+    getData,
+    getExpandedRecipeCount,
+    getRecipeKey,
+    getTagMembers,
+    loadData,
+    materializeRecipeForItem,
+    prettifyId,
+    recipeHasTag
+} from '../data-store.js?v=6';
+import {
+    addCalculatorRecipe,
+    extractTagSelectionsFromRecipe,
+    findCalculatorRow,
+    getCalculatorRowCount
+} from '../calculator-state.js?v=6';
 
-const DATA_VERSION = '5';
-
-let configData = null;
-let recipesData = null;
-let allItems = null;
-let allTags = null;
-let tagToItems = null;
-
-const FALLBACK_IMG_SVG = "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='64' height='64'><rect width='64' height='64' rx='8' fill='%23333'/><text x='32' y='34' fill='%23ccc' font-size='28' font-family='sans-serif' text-anchor='middle' dominant-baseline='middle'>?</text></svg>";
-
-function attachImgFallback(img) {
-    img.onerror = () => {
-        if (img.src !== FALLBACK_IMG_SVG) {
-            img.src = FALLBACK_IMG_SVG;
-        }
-    };
-    return img;
-}
-
-function prettifyId(id) {
-    return String(id || '')
-        .replace(/_/g, ' ')
-        .replace(/\b\w/g, ch => ch.toUpperCase());
-}
-
-async function loadData() {
-    if (!allItems) {
-        try {
-            const vq = `?v=${DATA_VERSION}`;
-            const configRes = await fetch(`/data/config.json${vq}`);
-            configData = await configRes.json();
-
-            const hasTagInConfig = configData.some(c => c.id === 'tag');
-            const fetchPromises = configData.map(category =>
-                fetch(`/data/${category.file}${vq}`).then(res => res.json())
-            );
-            const tagsPromise = hasTagInConfig
-                ? Promise.resolve(null)
-                : fetch(`/data/tags.json${vq}`).then(res => (res.ok ? res.json() : [])).catch(() => []);
-
-            const [results, standaloneTags] = await Promise.all([
-                Promise.all(fetchPromises),
-                tagsPromise
-            ]);
-
-            allItems = {};
-            allTags = {};
-            tagToItems = {};
-            recipesData = [];
-
-            if (Array.isArray(standaloneTags)) {
-                standaloneTags.forEach(tag => {
-                    allTags[tag.id] = tag;
-                    tagToItems[tag.id] = [];
-                });
-            }
-
-            configData.forEach((category, index) => {
-                const dataArray = results[index];
-                if (category.id === 'recipe') {
-                    recipesData = dataArray || [];
-                } else if (category.id === 'tag') {
-                    (dataArray || []).forEach(tag => {
-                        allTags[tag.id] = tag;
-                        tagToItems[tag.id] = [];
-                    });
-                } else {
-                    (dataArray || []).forEach(item => {
-                        item._type = category.id;
-                        allItems[item.id] = item;
-                    });
-                }
-            });
-
-            // Build live tag -> items index directly from each item's `tags` array.
-            // Adding a new object with `"tags": ["filter"]` automatically populates
-            // every recipe referencing `"tag": "filter"` with zero changes to recipes.json.
-            Object.values(allItems).forEach(item => {
-                if (item.is_disabled === true || item.is_hidden === true) return;
-                (item.tags || []).forEach(tagId => {
-                    if (!allTags[tagId]) {
-                        allTags[tagId] = {
-                            id: tagId,
-                            name: prettifyId(tagId),
-                            image: item.image || ''
-                        };
-                    }
-                    if (!tagToItems[tagId]) {
-                        tagToItems[tagId] = [];
-                    }
-                    tagToItems[tagId].push(item);
-                });
-            });
-
-            Object.keys(tagToItems).forEach(tagId => {
-                tagToItems[tagId].sort((a, b) => a.name.localeCompare(b.name));
-            });
-
-        } catch (error) {
-            console.error("Failed to load data:", error);
-        }
-    }
-}
-
-function getTagMembers(tagId) {
-    return tagToItems[tagId] || [];
-}
-
-function entryMatchesItem(entry, item) {
-    if (!entry || !item) return false;
-    if (entry.element === item.id) return true;
-    if (entry.tag && Array.isArray(item.tags) && item.tags.includes(entry.tag)) return true;
-    return false;
-}
-
-function recipeHasTag(recipe) {
-    return (recipe.consumed || []).some(c => Boolean(c.tag)) ||
-        (recipe.produced || []).some(p => Boolean(p.tag));
-}
-
-function getRecipeConcreteItemIds(recipe) {
-    const ids = new Set();
-    if (recipe.source && allItems[recipe.source]) ids.add(recipe.source);
-    const collect = (list) => {
-        (list || []).forEach(entry => {
-            if (entry.element && allItems[entry.element]) {
-                ids.add(entry.element);
-            } else if (entry.tag) {
-                getTagMembers(entry.tag).forEach(m => ids.add(m.id));
-            }
-        });
-    };
-    collect(recipe.consumed);
-    collect(recipe.produced);
-    return ids;
-}
-
-function levenshtein(a, b) {
-    if (a.length === 0) return b.length;
-    if (b.length === 0) return a.length;
-    let matrix = [];
-    for (let i = 0; i <= b.length; i++) {
-        matrix[i] = [i];
-    }
-    for (let j = 0; j <= a.length; j++) {
-        matrix[0][j] = j;
-    }
-    for (let i = 1; i <= b.length; i++) {
-        for (let j = 1; j <= a.length; j++) {
-            if (b.charAt(i - 1) === a.charAt(j - 1)) {
-                matrix[i][j] = matrix[i - 1][j - 1];
-            } else {
-                matrix[i][j] = Math.min(
-                    matrix[i - 1][j - 1] + 1,
-                    matrix[i][j - 1] + 1,
-                    matrix[i - 1][j] + 1
-                );
-            }
-        }
-    }
-    return matrix[b.length][a.length];
-}
-
-function getMatchLevel(q, t) {
-    q = q.toLowerCase();
-    t = t.toLowerCase();
-    if (q === t) return 1;
-    if (t.includes(q)) return 2;
-    if (q.length >= 3) {
-        let maxDist = q.length <= 5 ? 1 : 2;
-        if (levenshtein(q, t) <= maxDist) return 3;
-        let tWords = t.split(/\s+/);
-        for (let word of tWords) {
-            if (word.length >= 3 && levenshtein(q, word) <= maxDist) return 3;
-        }
-    }
-    return Infinity;
-}
-
-function evaluateQuery(q) {
-    let scores = {};
-    let directMatch = {};
-    let tagDirectMatch = {};
-
-    Object.values(allTags).forEach(tag => {
-        tagDirectMatch[tag.id] = getMatchLevel(q, tag.name);
-    });
-
-    Object.values(allItems).forEach(item => {
-        let lvl = getMatchLevel(q, item.name);
-        (item.tags || []).forEach(tid => {
-            const tlvl = tagDirectMatch[tid];
-            if (tlvl !== undefined && tlvl + 1 < lvl) {
-                lvl = tlvl + 1;
-            }
-        });
-        directMatch[item.id] = lvl;
-        scores[item.id] = lvl;
-    });
-
-    recipesData.forEach(recipe => {
-        let bestLvl = Infinity;
-        const itemIds = getRecipeConcreteItemIds(recipe);
-
-        itemIds.forEach(id => {
-            if (directMatch[id] < bestLvl) bestLvl = directMatch[id];
-        });
-
-        // Check direct match on any tag referenced by the recipe
-        (recipe.consumed || []).concat(recipe.produced || []).forEach(entry => {
-            if (entry.tag && tagDirectMatch[entry.tag] < bestLvl) {
-                bestLvl = tagDirectMatch[entry.tag];
-            }
-        });
-
-        if (bestLvl <= 3) {
-            let rLvl = bestLvl + 3;
-            if (recipe.source && allItems[recipe.source] && rLvl < scores[recipe.source]) {
-                scores[recipe.source] = rLvl;
-            }
-            (recipe.consumed || []).concat(recipe.produced || []).forEach(entry => {
-                if (entry.element && allItems[entry.element] && rLvl < scores[entry.element]) {
-                    scores[entry.element] = rLvl;
-                } else if (entry.tag) {
-                    getTagMembers(entry.tag).forEach(m => {
-                        if (rLvl < scores[m.id]) scores[m.id] = rLvl;
-                    });
-                }
-            });
-        }
-    });
-
-    return scores;
-}
-
-// Compute mass in grams of a concrete consumed entry (used for amountRatioFromConsumed)
-function getEntryMassInGrams(entry) {
-    if (!entry) return null;
-    if (entry.unit === 'g') return entry.amount;
-    if (entry.unit === 'kg') return entry.amount * 1000;
-    if (entry.unit === 'kcal' && entry.element) {
-        const el = allItems[entry.element];
-        if (el && el.kcalPerKg > 0) {
-            return (entry.amount / el.kcalPerKg) * 1000;
-        }
-    }
-    return null;
-}
-
-// Resolve dynamic amount fields (e.g. amountRatioFromConsumed) given current consumed entries
-function resolveRecipeEntries(recipe) {
-    const consumed = (recipe.consumed || []).map(c => ({ ...c }));
-    const firstConsumedMassG = consumed.length > 0 ? getEntryMassInGrams(consumed[0]) : null;
-
-    const produced = (recipe.produced || []).map(p => {
-        if (p.amountRatioFromConsumed !== undefined) {
-            const baseUnit = p._baseUnit || (p.unit && p.unit !== '% mass' ? p.unit : 'g');
-            const basePer = p._basePer !== undefined ? p._basePer : p.per;
-            if (firstConsumedMassG !== null) {
-                return {
-                    ...p,
-                    _baseUnit: baseUnit,
-                    _basePer: basePer,
-                    amount: firstConsumedMassG * p.amountRatioFromConsumed,
-                    unit: baseUnit,
-                    per: basePer || consumed[0].per
-                };
-            }
-            return {
-                ...p,
-                _baseUnit: baseUnit,
-                _basePer: basePer,
-                amount: p.amountRatioFromConsumed * 100,
-                unit: '% mass',
-                per: undefined
-            };
-        }
-        return { ...p };
-    });
-
-    return {
-        ...recipe,
-        consumed,
-        produced
-    };
-}
-
-// When viewing a specific item (e.g. Sand or Barbeque), materialize matching tag slots to that item
-function materializeRecipeForItem(recipe, contextItem) {
-    if (!contextItem || recipe.source === contextItem.id) {
-        return resolveRecipeEntries(recipe);
-    }
-
-    const mapEntry = (entry) => {
-        if (entry.tag && Array.isArray(contextItem.tags) && contextItem.tags.includes(entry.tag)) {
-            const copy = { ...entry, element: contextItem.id, _fromTag: entry.tag };
-            delete copy.tag;
-            return copy;
-        }
-        return { ...entry };
-    };
-
-    return resolveRecipeEntries({
-        ...recipe,
-        consumed: (recipe.consumed || []).map(mapEntry),
-        produced: (recipe.produced || []).map(mapEntry)
-    });
-}
-
-// Expand 1 tag-grouped JSON recipe into concrete recipes
-function expandGroupedRecipe(recipe, maxCombinations = 150) {
-    const slots = [];
-    (recipe.consumed || []).forEach((c, idx) => {
-        if (c.tag) slots.push({ side: 'consumed', idx, tagId: c.tag, members: getTagMembers(c.tag) });
-    });
-    (recipe.produced || []).forEach((p, idx) => {
-        if (p.tag) slots.push({ side: 'produced', idx, tagId: p.tag, members: getTagMembers(p.tag) });
-    });
-
-    if (slots.length === 0) return [resolveRecipeEntries(recipe)];
-
-    let totalCombos = 1;
-    for (const s of slots) {
-        totalCombos *= Math.max(s.members.length, 1);
-    }
-
-    const results = [];
-    const expandSlot = (slotIdx, currentRecipe) => {
-        if (results.length >= maxCombinations) return;
-        if (slotIdx >= slots.length) {
-            results.push(resolveRecipeEntries(currentRecipe));
-            return;
-        }
-        const slot = slots[slotIdx];
-        const members = slot.members;
-        if (members.length === 0) {
-            expandSlot(slotIdx + 1, currentRecipe);
-            return;
-        }
-        for (const member of members) {
-            if (results.length >= maxCombinations) break;
-            const next = {
-                ...currentRecipe,
-                consumed: currentRecipe.consumed.map(x => ({ ...x })),
-                produced: currentRecipe.produced.map(x => ({ ...x }))
-            };
-            const target = next[slot.side][slot.idx];
-            delete target.tag;
-            target.element = member.id;
-            target._fromTag = slot.tagId;
-            expandSlot(slotIdx + 1, next);
-        }
-    };
-
-    expandSlot(0, {
-        ...recipe,
-        consumed: (recipe.consumed || []).map(x => ({ ...x })),
-        produced: (recipe.produced || []).map(x => ({ ...x }))
-    });
-
-    return { items: results, totalCount: totalCombos, truncated: totalCombos > results.length };
-}
-
-function getExpandedRecipeCount(recipe) {
-    let total = 1;
-    (recipe.consumed || []).concat(recipe.produced || []).forEach(entry => {
-        if (entry.tag) {
-            total *= Math.max(getTagMembers(entry.tag).length, 1);
-        }
-    });
-    return total;
-}
-
-function formatAmountNumber(num) {
-    if (num === 0) return '0';
-    let absNum = Math.abs(num);
-    if (absNum < 0.01) {
-        return Number(Number(num).toPrecision(2)).toString();
-    }
-    return (Math.round((num + Math.sign(num) * Number.EPSILON) * 100) / 100).toString();
-}
-
-function formatAmount(itemData, isProducedFlag) {
-    const hasRange = itemData.amountMin !== undefined && itemData.amountMax !== undefined;
-    let amount = itemData.amount;
-    let amountMin = hasRange ? itemData.amountMin : null;
-    let amountMax = hasRange ? itemData.amountMax : null;
-    let unit = itemData.unit || '';
-    let per = itemData.per;
-
-    const scaleValues = (factor) => {
-        amount = amount * factor;
-        if (hasRange) {
-            amountMin = amountMin * factor;
-            amountMax = amountMax * factor;
-        }
-    };
-
-    if (window.unitSettings) {
-        const concreteEl = itemData.element ? allItems[itemData.element] : null;
-
-        // Food unit conversion: g <-> kcal (only for concrete food items with kcalPerKg)
-        if (concreteEl && concreteEl.kcalPerKg > 0) {
-            if (window.unitSettings.food === 'kcal' && unit === 'g') {
-                scaleValues(concreteEl.kcalPerKg / 1000);
-                unit = 'kcal';
-            } else if (window.unitSettings.food === 'mass' && unit === 'kcal') {
-                scaleValues(1000 / concreteEl.kcalPerKg);
-                unit = 'g';
-            }
-        }
-
-        // Mass: g -> kg
-        if (window.unitSettings.mass === 'kg' && unit === 'g') {
-            scaleValues(1 / 1000);
-            unit = 'kg';
-        } else if (window.unitSettings.mass === 'kg' && unit === 'g of stored Nectar') {
-            scaleValues(1 / 1000);
-            unit = 'kg of stored Nectar';
-        }
-
-        // Time: s -> cycle
-        if (window.unitSettings.time === 'cycle' && per === 's') {
-            scaleValues(600);
-            per = 'cycle';
-        }
-    }
-
-    let sign = isProducedFlag ? '+' : '-';
-    let amountText;
-    if (hasRange) {
-        amountText = `${sign}${formatAmountNumber(amountMin)}–${formatAmountNumber(amountMax)}`;
+function updateCalcButtonLabel(btn, recipeKey, tagSelections) {
+    const existing = findCalculatorRow(recipeKey, tagSelections);
+    btn.textContent = '';
+    btn.appendChild(createSvgIcon('calculator', 'recipe-calc-icon'));
+    if (existing) {
+        btn.classList.add('is-in-calc');
+        btn.appendChild(createElement('span', { class: 'recipe-calc-label', textContent: `×${existing.multiplier}` }));
+        btn.title = `In calculator (×${existing.multiplier}) — click to add +1`;
     } else {
-        let numStr = formatAmountNumber(amount);
-        amountText = amount > 0 ? sign + numStr : (amount < 0 ? numStr : '0');
+        btn.classList.remove('is-in-calc');
+        btn.appendChild(createElement('span', { class: 'recipe-calc-label', textContent: '+' }));
+        btn.title = 'Add recipe to calculator';
     }
-
-    let unitText = unit ? `${unit.includes('%') ? '' : ' '}${unit}` : '';
-    if (per) {
-        if (unit.includes(' ') || per.includes(' ')) {
-            unitText += ` per ${per}`;
-        } else {
-            unitText += `/${per}`;
-        }
-    }
-    return `${amountText}${unitText}`;
 }
 
-function formatTemperature(tempC) {
-    let displayTemp = tempC;
-    let unit = '°C';
-    if (window.unitSettings && window.unitSettings.temp === 'F') {
-        displayTemp = (displayTemp * 9 / 5) + 32;
-        unit = '°F';
+function createAddToCalcButton(rawRecipe, resolvedRecipe) {
+    const recipeKey = getRecipeKey(rawRecipe);
+    const tagSelections = extractTagSelectionsFromRecipe(resolvedRecipe);
+
+    const btn = createElement('button', {
+        type: 'button',
+        class: 'recipe-calc-btn',
+        dataset: {
+            recipeKey,
+            tagSelections: JSON.stringify(tagSelections)
+        },
+        'aria-label': 'Add recipe to calculator'
+    });
+    updateCalcButtonLabel(btn, recipeKey, tagSelections);
+
+    btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        addCalculatorRecipe(recipeKey, tagSelections, 1);
+        updateCalcButtonLabel(btn, recipeKey, tagSelections);
+        btn.classList.add('just-added');
+        setTimeout(() => btn.classList.remove('just-added'), 600);
+    });
+
+    return btn;
+}
+
+function syncModalCalcIndicators() {
+    const dialog = document.getElementById('detail-dialog');
+    if (!dialog) return;
+    const buttons = dialog.querySelectorAll('.recipe-calc-btn');
+    buttons.forEach(btn => {
+        const key = btn.dataset.recipeKey;
+        if (!key) return;
+        let tags = {};
+        try {
+            tags = btn.dataset.tagSelections ? JSON.parse(btn.dataset.tagSelections) : {};
+        } catch {
+            tags = {};
+        }
+        updateCalcButtonLabel(btn, key, tags);
+    });
+
+    const modalCalcBadge = dialog.querySelector('.modal-calc-badge');
+    if (modalCalcBadge) {
+        const count = getCalculatorRowCount();
+        modalCalcBadge.textContent = count > 0 ? String(count) : '';
+        modalCalcBadge.classList.toggle('hidden', count === 0);
     }
-    return `${(Math.round(displayTemp * 10) / 10).toString()} ${unit}`;
 }
 
 export async function renderRecipes(container, currentPath) {
     await loadData();
+    const { configData, allItems, allTags } = getData();
 
     container.textContent = '';
 
@@ -651,7 +283,6 @@ export async function renderRecipes(container, currentPath) {
     // Deep links: #/recipes/<item_id> OR #/recipes/tag/<tag_id>
     const handlePath = (path) => {
         const pathParts = path.split('/').filter(Boolean);
-        // pathParts[0] === 'recipes'
         if (pathParts.length >= 3 && pathParts[1] === 'tag') {
             const tagId = pathParts[2];
             const tag = allTags[tagId];
@@ -692,9 +323,15 @@ export async function renderRecipes(container, currentPath) {
     };
     window.addEventListener('settingsupdated', onSettingsUpdate);
 
+    const onCalculatorUpdate = () => {
+        syncModalCalcIndicators();
+    };
+    window.addEventListener('calculatorupdated', onCalculatorUpdate);
+
     return () => {
         window.removeEventListener('routeupdate', onRouteUpdate);
         window.removeEventListener('settingsupdated', onSettingsUpdate);
+        window.removeEventListener('calculatorupdated', onCalculatorUpdate);
 
         const dialog = document.getElementById('detail-dialog');
         if (dialog) {
@@ -730,7 +367,31 @@ function getOrCreateDetailDialog() {
 }
 
 function createModalHeaderButtons() {
+    const calcCount = getCalculatorRowCount();
+    const calcBtn = createElement('a', {
+        href: '#/calculator',
+        class: 'nav-btn modal-calc-link',
+        'aria-label': 'Open Calculator',
+        title: 'Open Calculator'
+    }, [
+        createElement('svg', {
+            class: 'icon',
+            xmlns: 'http://www.w3.org/2000/svg',
+            viewBox: '0 0 384 512'
+        }, [
+            createElement('path', {
+                fill: 'currentColor',
+                d: 'M64 0C28.7 0 0 28.7 0 64V448c0 35.3 28.7 64 64 64H320c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64H64zM96 64H288c17.7 0 32 14.3 32 32v32c0 17.7-14.3 32-32 32H96c-17.7 0-32-14.3-32-32V96c0-17.7 14.3-32 32-32zm32 160a32 32 0 1 1 -64 0 32 32 0 1 1 64 0zM96 352a32 32 0 1 1 0-64 32 32 0 1 1 0 64zM64 416c0-17.7 14.3-32 32-32h96c17.7 0 32 14.3 32 32s-14.3 32-32 32H96c-17.7 0-32-14.3-32-32zM192 256a32 32 0 1 1 0-64 32 32 0 1 1 0 64zm32 64a32 32 0 1 1 -64 0 32 32 0 1 1 64 0zm64-64a32 32 0 1 1 0-64 32 32 0 1 1 0 64zm32 64a32 32 0 1 1 -64 0 32 32 0 1 1 64 0zM288 448a32 32 0 1 1 0-64 32 32 0 1 1 0 64z'
+            })
+        ]),
+        createElement('span', {
+            class: `nav-badge modal-calc-badge${calcCount > 0 ? '' : ' hidden'}`,
+            textContent: calcCount > 0 ? String(calcCount) : ''
+        })
+    ]);
+
     return createElement('div', { class: 'button-group' }, [
+        calcBtn,
         createElement('button', {
             class: 'nav-btn',
             'aria-label': 'Settings',
@@ -771,6 +432,7 @@ function createArrow() {
 }
 
 function renderTagMosaic(tagId) {
+    const { allTags } = getData();
     const members = getTagMembers(tagId);
     const preview = members.slice(0, 4);
     if (preview.length >= 2) {
@@ -798,6 +460,7 @@ function renderTagMosaic(tagId) {
 }
 
 function renderRecipeItem(data, isProducedFlag, onTagToggle) {
+    const { allItems, allTags } = getData();
     const amountStr = formatAmount(data, isProducedFlag);
     const amountClass = isProducedFlag ? 'amount-positive' : 'amount-negative';
 
@@ -849,7 +512,6 @@ function renderRecipeItem(data, isProducedFlag, onTagToggle) {
             createElement('span', { class: `recipe-item-amount ${amountClass}`, textContent: amountStr })
         ]);
 
-        // If materialized from a tag on an item's modal, show subtle "via #Tag (+N)" badge
         if (data._fromTag && !data._inExpandedRow) {
             const tag = allTags[data._fromTag];
             const memberCount = getTagMembers(data._fromTag).length;
@@ -876,7 +538,8 @@ function renderRecipeItem(data, isProducedFlag, onTagToggle) {
     ]);
 }
 
-function renderRecipeRowLayout(r, onTagToggle) {
+function renderRecipeRowLayout(r, onTagToggle, rawRecipe = r) {
+    const { allItems } = getData();
     const layoutChildren = [];
 
     // Left: Consumed
@@ -929,16 +592,20 @@ function renderRecipeRowLayout(r, onTagToggle) {
         layoutChildren.push(createElement('div', { class: 'recipe-items-block' }, producedItems));
     }
 
+    // Overlay Add-to-Calculator button in the top-right corner of the recipe row
+    layoutChildren.push(createAddToCalcButton(rawRecipe, r));
+
     return createElement('div', { class: 'recipe-layout' }, layoutChildren);
 }
 
 function renderRecipeCard(rawRecipe, contextItem = null) {
+    const { allItems } = getData();
     const r = materializeRecipeForItem(rawRecipe, contextItem);
     const hasTag = recipeHasTag(r);
 
     if (!hasTag) {
         return createElement('div', { class: 'recipe-container' }, [
-            renderRecipeRowLayout(r, null)
+            renderRecipeRowLayout(r, null, rawRecipe)
         ]);
     }
 
@@ -990,7 +657,7 @@ function renderRecipeCard(rawRecipe, contextItem = null) {
                     produced: cr.produced.map(x => ({ ...x, _inExpandedRow: true }))
                 };
                 const row = createElement('div', { class: 'recipe-group-subrow' }, [
-                    renderRecipeRowLayout(tagged, null)
+                    renderRecipeRowLayout(tagged, null, rawRecipe)
                 ]);
                 frag.appendChild(row);
             });
@@ -1036,7 +703,7 @@ function renderRecipeCard(rawRecipe, contextItem = null) {
 
     toggleBtn.addEventListener('click', toggleExpand);
 
-    container.appendChild(renderRecipeRowLayout(r, toggleExpand));
+    container.appendChild(renderRecipeRowLayout(r, toggleExpand, rawRecipe));
     container.appendChild(toggleBtn);
     container.appendChild(drawer);
 
@@ -1059,6 +726,7 @@ function renderRecipeCategory(title, recipes, contextItem = null) {
 }
 
 function showDetailModal(item) {
+    const { recipesData, allTags } = getData();
     if (window.location.hash !== '#/recipes/' + item.id) {
         window.location.hash = '#/recipes/' + item.id;
     }
@@ -1180,6 +848,7 @@ function showDetailModal(item) {
 }
 
 function showTagModal(tag) {
+    const { recipesData } = getData();
     if (window.location.hash !== '#/recipes/tag/' + tag.id) {
         window.location.hash = '#/recipes/tag/' + tag.id;
     }
@@ -1203,7 +872,6 @@ function showTagModal(tag) {
 
     container.appendChild(header);
 
-    // Members grid
     if (members.length > 0) {
         const membersList = createElement('div', { class: 'tag-members-grid' }, members.map(m =>
             createElement('a', { href: `#/recipes/${m.id}`, class: 'tag-member-pill' }, [
@@ -1218,7 +886,6 @@ function showTagModal(tag) {
         ]));
     }
 
-    // Recipes referencing this tag
     const producedByTag = recipesData.filter(r => (r.produced || []).some(p => p.tag === tag.id));
     const consumedByTag = recipesData.filter(r => (r.consumed || []).some(c => c.tag === tag.id));
 

@@ -1,9 +1,27 @@
-import { Router } from './router.js?v=5';
+import { Router } from './router.js?v=6';
+import { getCalculatorRowCount } from './calculator-state.js?v=6';
+
+function updateNavCalcBadge() {
+    const badge = document.getElementById('nav-calc-badge');
+    if (!badge) return;
+    const count = getCalculatorRowCount();
+    if (count > 0) {
+        badge.textContent = String(count);
+        badge.classList.remove('hidden');
+    } else {
+        badge.textContent = '';
+        badge.classList.add('hidden');
+    }
+}
 
 // Main application entry point
 document.addEventListener('DOMContentLoaded', () => {
     // Initialize Router
     const router = new Router();
+
+    // Keep calculator badge in navbar synced
+    updateNavCalcBadge();
+    window.addEventListener('calculatorupdated', updateNavCalcBadge);
 
     // Register Service Worker
     if ('serviceWorker' in navigator) {
