@@ -302,8 +302,10 @@
       "produced": []
     },
     {
-      "sourceGameId": "SleepClinicPajamas",
-      "consumed": [],
+      "sourceGameId": "Minion",
+      "consumed": [
+        { "gameId": "SleepClinicPajamas", "amount": 1, "unit": "unit" }
+      ],
       "produced": [
         { "gameId": "DreamJournal", "amount": 0.0033333333, "unit": "unit", "per": "s" }
       ]

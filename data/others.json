@@ -7,6 +7,9 @@
     "description": "Grants a Bionic Duplicant mastery of infrastructural construction skills.",
     "dlc": [
       "DLC3_ID"
+    ],
+    "tags": [
+      "advanced_booster"
     ]
   },
   {
@@ -17,6 +20,9 @@
     "description": "Grants a Bionic Duplicant the ability to perform all doctoring errands.",
     "dlc": [
       "DLC3_ID"
+    ],
+    "tags": [
+      "basic_booster"
     ]
   },
   {
@@ -34,14 +40,10 @@
     "description": "Grants a Bionic Duplicant a deeply pragmatic approach to scientific research.",
     "dlc": [
       "DLC3_ID"
+    ],
+    "tags": [
+      "advanced_booster"
     ]
-  },
-  {
-    "id": "archaic_tech",
-    "gameId": "artifact_vhs",
-    "name": "Archaic Tech",
-    "image": "ArchaicTech.png",
-    "description": "Be kind when you handle it. It's very fragile."
   },
   {
     "id": "astronomy_booster",
@@ -51,6 +53,9 @@
     "description": "Grants a Bionic Duplicant a keen grasp of science and usage of space-research buildings.",
     "dlc": [
       "DLC3_ID"
+    ],
+    "tags": [
+      "advanced_booster"
     ]
   },
   {
@@ -115,25 +120,11 @@
     "description": "A Pathogen-Fueled Extravehicular Geo-Exploratory Guidebot (model Y), aka \"P.E.G.G.Y.\"\n\nIt can be assigned basic building tasks and digging duties in hazardous environments."
   },
   {
-    "id": "bioluminescent_rock",
-    "gameId": "artifact_bioluminescentrock",
-    "name": "Bioluminescent Rock",
-    "image": "BioluminescentRock.png",
-    "description": "A thriving colony of tiny, microscopic organisms is responsible for giving it its bluish glow."
-  },
-  {
     "id": "blastshot",
     "gameId": "MissileBasic",
     "name": "Blastshot",
     "image": "Blastshot.png",
     "description": "An explosive projectile designed to defend against meteor showers.\n\nMust be launched by a Meteor Blaster."
-  },
-  {
-    "id": "blender",
-    "gameId": "artifact_blender",
-    "name": "Blender",
-    "image": "Blender.png",
-    "description": "Equipment used to conduct experiments answering the age-old question, \"Could that blend\"?"
   },
   {
     "id": "brawny_spice",
@@ -153,13 +144,6 @@
     ]
   },
   {
-    "id": "ceramic_morb",
-    "gameId": "keepsake_crittermanipulator",
-    "name": "Ceramic Morb",
-    "image": "CeramicMorb.png",
-    "description": "A pottery project produced in an HR-mandated art therapy class.\n\nIt's glazed with a substance that once landed a curious lab technician in the ER."
-  },
-  {
     "id": "construction_booster",
     "gameId": "Booster_Construct1",
     "name": "Construction Booster",
@@ -167,14 +151,10 @@
     "description": "Grants a Bionic Duplicant the ability to build fast, and demolish buildings that others cannot.",
     "dlc": [
       "DLC3_ID"
+    ],
+    "tags": [
+      "basic_booster"
     ]
-  },
-  {
-    "id": "critter_collar",
-    "gameId": "keepsake_fossilhunt",
-    "name": "Critter Collar",
-    "image": "CritterCollar.png",
-    "description": "The tag reads \"Molly\".\n\nOn the reverse is \"Designed by B363\" stamped above what appears to be an unusually shaped pawprint."
   },
   {
     "id": "crop_tending_booster",
@@ -184,6 +164,9 @@
     "description": "Grants a Bionic Duplicant unparalleled farming and botanical analysis skills.",
     "dlc": [
       "DLC3_ID"
+    ],
+    "tags": [
+      "advanced_booster"
     ]
   },
   {
@@ -228,14 +211,10 @@
     "description": "Grants a Bionic Duplicant the skill required to dig hard things.",
     "dlc": [
       "DLC3_ID"
+    ],
+    "tags": [
+      "basic_booster"
     ]
-  },
-  {
-    "id": "double_helix_model",
-    "gameId": "artifact_dnamodel",
-    "name": "Double Helix Model",
-    "image": "DoubleHelixModel.png",
-    "description": "An educational model of genetic information."
   },
   {
     "id": "dream_journal",
@@ -358,20 +337,6 @@
     "description": "Can be crushed to produce Lime."
   },
   {
-    "id": "egg_shaped_rock",
-    "gameId": "artifact_eggrock",
-    "name": "Egg-Shaped Rock",
-    "image": "EggShapedRock.png",
-    "description": "It's unclear whether this is its naturally occurring shape, or if its appearance has been sculpted."
-  },
-  {
-    "id": "egg_shaped_rock_other",
-    "gameId": "artifact_rainboweggrock",
-    "name": "Egg-Shaped Rock (Iridescent)",
-    "image": "EggShapedRockIridescent.png",
-    "description": "It's unclear whether this is its naturally occurring shape, or if its appearance has been sculpted.\n\nThis one is rainbow colored."
-  },
-  {
     "id": "empty_eco_power_bank",
     "gameId": "EmptyElectrobank",
     "name": "Empty Eco Power Bank",
@@ -382,13 +347,6 @@
     ]
   },
   {
-    "id": "encrusted_teapot",
-    "gameId": "artifact_teapot",
-    "name": "Encrusted Teapot",
-    "image": "EncrustedTeapot.png",
-    "description": "A teapot from the depths of space, coated in a thick layer of Neutronium."
-  },
-  {
     "id": "engineering_booster",
     "gameId": "Booster_Op1",
     "name": "Engineering Booster",
@@ -396,6 +354,9 @@
     "description": "Grants a Bionic Duplicant the skills requried to tinker and solder to their heart's content.",
     "dlc": [
       "DLC3_ID"
+    ],
+    "tags": [
+      "advanced_booster"
     ]
   },
   {
@@ -406,6 +367,9 @@
     "description": "Grants a Bionic Duplicant the digging skill required to get through anything.",
     "dlc": [
       "DLC3_ID"
+    ],
+    "tags": [
+      "advanced_booster"
     ]
   },
   {
@@ -472,24 +436,10 @@
     "description": "Grants a Bionic Duplicant deliciously professional culinary skills.",
     "dlc": [
       "DLC3_ID"
+    ],
+    "tags": [
+      "advanced_booster"
     ]
-  },
-  {
-    "id": "grubgrub_statue",
-    "gameId": "artifact_grubstatue",
-    "name": "Grubgrub Statue",
-    "image": "GrubgrubStatue.png",
-    "description": "A moving tribute to a tiny plant hugger.",
-    "dlc": [
-      "EXPANSION1_ID"
-    ]
-  },
-  {
-    "id": "hair_dryer",
-    "gameId": "keepsake_hijackheadquarters",
-    "name": "Hair Dryer",
-    "image": "HairDryer.png",
-    "description": "A vintage follicle styling tool.\n\nThe handle bears a small engraving that reads: \"To N.T., from N.T.\""
   },
   {
     "id": "heat_cube",
@@ -497,16 +447,6 @@
     "name": "Heat Cube",
     "image": "HeatCube.png",
     "description": "A cube that holds heat."
-  },
-  {
-    "id": "honey_jar",
-    "gameId": "artifact_honeyjar",
-    "name": "Honey Jar",
-    "image": "HoneyJar.png",
-    "description": "Sweet golden liquid with just a touch of uranium.",
-    "dlc": [
-      "EXPANSION1_ID"
-    ]
   },
   {
     "id": "immuno_booster",
@@ -564,20 +504,6 @@
     "description": "Grants +3 Machinery when applied at the Spice Grinder."
   },
   {
-    "id": "magma_lamp",
-    "gameId": "artifact_magmalamp",
-    "name": "Magma Lamp",
-    "image": "MagmaLamp.png",
-    "description": "The sequel to \"Lava Lamp\"."
-  },
-  {
-    "id": "mangled_saxophone",
-    "gameId": "artifact_saxophone",
-    "name": "Mangled Saxophone",
-    "image": "MangledSaxophone.png",
-    "description": "The name \"Pesquet\" is barely legible on the inside."
-  },
-  {
     "id": "masterworks_art_booster",
     "gameId": "Booster_Art1",
     "name": "Masterworks Art Booster",
@@ -585,6 +511,9 @@
     "description": "Grants a Bionic Duplicant flawless decorating skills.",
     "dlc": [
       "DLC3_ID"
+    ],
+    "tags": [
+      "advanced_booster"
     ]
   },
   {
@@ -623,44 +552,6 @@
     "description": "Specialized Fertilizer mixed by a Duplicant with the Crop Tending Skill.\n\nIncreases the Growth Rate of one Plant."
   },
   {
-    "id": "model_nuclear_power_plant",
-    "gameId": "artifact_reactormodel",
-    "name": "Model Nuclear Power Plant",
-    "image": "ModelNuclearPowerPlant.png",
-    "description": "It's pronounced nu-clear.",
-    "dlc": [
-      "EXPANSION1_ID"
-    ]
-  },
-  {
-    "id": "model_plane",
-    "gameId": "keepsake_megabrain",
-    "name": "Model Plane",
-    "image": "ModelPlane.png",
-    "description": "A treasured souvenir that was once a common accompaniment to children's meals during commercial flights. There's a hole in the bottom from when Dr. Holland had it mounted on a stand."
-  },
-  {
-    "id": "modern_art",
-    "gameId": "artifact_modernart",
-    "name": "Modern Art",
-    "image": "ModernArt.png",
-    "description": "I don't get it."
-  },
-  {
-    "id": "moldavite",
-    "gameId": "artifact_moldavite",
-    "name": "Moldavite",
-    "image": "Moldavite.png",
-    "description": "A unique green stone formed from the impact of a meteorite."
-  },
-  {
-    "id": "moonmoonmoon",
-    "gameId": "artifact_moonmoonmoon",
-    "name": "Moonmoonmoon",
-    "image": "Moonmoonmoon.png",
-    "description": "A moon's moon's moon. It's very small."
-  },
-  {
     "id": "oakshell_molt",
     "gameId": "CrabWoodShell",
     "name": "Oakshell Molt",
@@ -669,20 +560,6 @@
     "tags": [
       "merpip_diet_coquina"
     ]
-  },
-  {
-    "id": "office_mug",
-    "gameId": "artifact_officemug",
-    "name": "Office Mug",
-    "image": "OfficeMug.png",
-    "description": "An intermediary place to store espresso before you move it to your mouth."
-  },
-  {
-    "id": "old_x_ray",
-    "gameId": "artifact_okayxray",
-    "name": "Old X-Ray",
-    "image": "OldXRay.png",
-    "description": "Ew, weird. It has five fingers!"
   },
   {
     "id": "oxygen_mask",
@@ -706,13 +583,6 @@
     "description": "A soft, fleecy ticket to dreamland.\n\nHelps Duplicants fall asleep by reducing Stamina.\n\nEnables the wearer to dream and produce Dream Journals."
   },
   {
-    "id": "percolator",
-    "gameId": "artifact_pacupercolator",
-    "name": "Percolator",
-    "image": "Percolator.png",
-    "description": "Don't drink from it! There was a pacu... IN the percolator!"
-  },
-  {
     "id": "piloting_booster",
     "gameId": "Booster_Pilot1",
     "name": "Piloting Booster",
@@ -720,6 +590,9 @@
     "description": "Grants a Bionic Duplicant the expertise required to explore the skies in person.",
     "dlc": [
       "DLC3_ID"
+    ],
+    "tags": [
+      "advanced_booster"
     ]
   },
   {
@@ -738,13 +611,6 @@
     "name": "Plant Husk",
     "image": "Plant_Husk.png",
     "description": "A bundle of dried plant matter.\n\nIt can be eaten by Moos, or processed into fuel or building materials."
-  },
-  {
-    "id": "plasma_lamp",
-    "gameId": "artifact_plasmalamp",
-    "name": "Plasma Lamp",
-    "image": "PlasmaLamp.png",
-    "description": "No space colony is complete without one."
   },
   {
     "id": "plastic_gasket",
@@ -778,28 +644,11 @@
     "description": "Increases Decor in a small area effect around the wearer"
   },
   {
-    "id": "pristine_fossil",
-    "gameId": "artifact_hatchfossil",
-    "name": "Pristine Fossil",
-    "image": "PristineFossil.png",
-    "description": "The preserved bones of an early species of Hatch."
-  },
-  {
     "id": "radbolts",
     "gameId": "HighEnergyParticle",
     "name": "Radbolts",
     "image": "Radbolt.png",
     "description": "High-energy particles used by radbolt buildings and engines."
-  },
-  {
-    "id": "radiation_mood_ring",
-    "gameId": "artifact_moodring",
-    "name": "Radiation Mood Ring",
-    "image": "RadiationMoodRing.png",
-    "description": "How radioactive are you feeling?",
-    "dlc": [
-      "EXPANSION1_ID"
-    ]
   },
   {
     "id": "ranching_booster",
@@ -809,6 +658,9 @@
     "description": "Grants a Bionic Duplicant the skills required to care for Critters in every way.",
     "dlc": [
       "DLC3_ID"
+    ],
+    "tags": [
+      "advanced_booster"
     ]
   },
   {
@@ -849,14 +701,10 @@
     "description": "Grants a Bionic Duplicant the expertise required to study geysers and other advanced topics.",
     "dlc": [
       "DLC3_ID"
+    ],
+    "tags": [
+      "basic_booster"
     ]
-  },
-  {
-    "id": "robot_arm",
-    "gameId": "artifact_robotarm",
-    "name": "Robot Arm",
-    "image": "RobotArm.png",
-    "description": "It's not functional. Just cool."
   },
   {
     "id": "rocket_debris",
@@ -917,27 +765,6 @@
     ]
   },
   {
-    "id": "rubiks_cube",
-    "gameId": "artifact_rubikscube",
-    "name": "Rubik's Cube",
-    "image": "RubiksCube.png",
-    "description": "This mystery of the universe has already been solved."
-  },
-  {
-    "id": "rusty_toolbox",
-    "gameId": "keepsake_lonelyminion",
-    "name": "Rusty Toolbox",
-    "image": "RustyToolbox.png",
-    "description": "On the inside of the lid, someone used a screwdriver to carve a drawing of a group of smiling Duplicants gathered around a massive crater."
-  },
-  {
-    "id": "sandstone_other",
-    "gameId": "artifact_sandstone",
-    "name": "Sandstone (Artifact)",
-    "image": "SandstoneArtifact.png",
-    "description": "A beautiful rock composed of multiple layers of sediment."
-  },
-  {
     "id": "seakomb_leaf",
     "gameId": "Kelp",
     "name": "Seakomb Leaf",
@@ -948,49 +775,11 @@
     ]
   },
   {
-    "id": "self_contained_system",
-    "gameId": "artifact_solarsystem",
-    "name": "Self-Contained System",
-    "image": "SelfContainedSystem.png",
-    "description": "A marvel of the cosmos, inside this display is an entirely self-contained solar system."
-  },
-  {
     "id": "serum_vial",
     "gameId": "AdvancedCure",
     "name": "Serum Vial",
     "image": "SerumVial.png",
     "description": "A doctor-administered cure for severe ailments."
-  },
-  {
-    "id": "shield_generator",
-    "gameId": "artifact_shieldgenerator",
-    "name": "Shield Generator",
-    "image": "ShieldGenerator.png",
-    "description": "A mechanical prototype capable of producing a small section of shielding."
-  },
-  {
-    "id": "shiny_coprolite",
-    "gameId": "keepsake_geothermalplant",
-    "name": "Shiny Coprolite",
-    "image": "ShinyCoprolite.png",
-    "description": "A spectacular sample of organic material fossilized into lead.\n\nSome things really do get better with age.",
-    "dlc": [
-      "DLC2_ID"
-    ]
-  },
-  {
-    "id": "shockworm",
-    "gameId": "ShockWorm",
-    "name": "Shockworm",
-    "image": "Shockworm.png",
-    "description": "Shockworms are exceptionally aggressive and discharge electrical shocks to stun their prey."
-  },
-  {
-    "id": "sink_other",
-    "gameId": "artifact_sink",
-    "name": "Sink (Artifact)",
-    "image": "SinkArtifact.png",
-    "description": "No collection is complete without it."
   },
   {
     "id": "slogo_molt",
@@ -1006,52 +795,11 @@
     ]
   },
   {
-    "id": "small_obelisk",
-    "gameId": "artifact_obelisk",
-    "name": "Small Obelisk",
-    "image": "SmallObelisk.png",
-    "description": "A rectangular stone piece.\n\nIts function is unclear."
-  },
-  {
     "id": "snazzy_suit",
     "gameId": "Funky_Vest",
     "name": "Snazzy Suit",
     "image": "SnazzySuit.png",
     "description": "Increases Decor in a small area effect around the wearer. Can be upgraded to Primo Garb at the Clothing Refashionator"
-  },
-  {
-    "id": "snow_globe",
-    "gameId": "keepsake_findingminnow",
-    "name": "Snow Globe",
-    "image": "SnowGlobe.png",
-    "description": "A whimsical souvenir made with tempered glass.\n\nIt bears a few small scratches from being hurled across a lab.",
-    "dlc": [
-      "DLC5_ID"
-    ]
-  },
-  {
-    "id": "stereoscope",
-    "gameId": "keepsake_largeimpactor",
-    "name": "Stereoscope",
-    "image": "Stereoscope.png",
-    "description": "A tool used to gaze into frozen moments of time.\n\nOne of the images is of a child standing in a field, waving a huge piece of blackened titanium.",
-    "dlc": [
-      "DLC4_ID"
-    ]
-  },
-  {
-    "id": "stethoscope",
-    "gameId": "artifact_stethoscope",
-    "name": "Stethoscope",
-    "image": "Stethoscope.png",
-    "description": "Listens to Duplicant heartbeats, or gurgly tummies."
-  },
-  {
-    "id": "strange_brick",
-    "gameId": "artifact_brickphone",
-    "name": "Strange Brick",
-    "image": "StrangeBrick.png",
-    "description": "It still works."
   },
   {
     "id": "strength_booster",
@@ -1061,6 +809,9 @@
     "description": "Grants a Bionic Duplicant increased carrying capacity and athletic prowess.",
     "dlc": [
       "DLC3_ID"
+    ],
+    "tags": [
+      "basic_booster"
     ]
   },
   {
@@ -1071,6 +822,9 @@
     "description": "Enables a Bionic Duplicant to maximize durability of equipped Exosuits and maintain their runspeed.",
     "dlc": [
       "DLC3_ID"
+    ],
+    "tags": [
+      "advanced_booster"
     ]
   },
   {
@@ -1125,6 +879,9 @@
     "description": "Grants a Bionic Duplicant the full range of tidying skills, including blasting unwanted meteors out of the sky.",
     "dlc": [
       "DLC3_ID"
+    ],
+    "tags": [
+      "advanced_booster"
     ]
   },
   {
@@ -1133,20 +890,6 @@
     "name": "Tonic Root",
     "image": "TonicRoot.png",
     "description": "A chewy, fibrous rhizome with a fiery aftertaste."
-  },
-  {
-    "id": "tornado_rock",
-    "gameId": "artifact_rocktornado",
-    "name": "Tornado Rock",
-    "image": "TornadoRock.png",
-    "description": "It's unclear how it formed, although I'm glad it did."
-  },
-  {
-    "id": "toy_bot",
-    "gameId": "keepsake_morbrovermaker",
-    "name": "Toy Bot",
-    "image": "ToyBot.png",
-    "description": "A custom-made robot programmed to deliver puns in a variety of celebrity voices.\n\nIt is also a paper shredder."
   },
   {
     "id": "uranium_ore_power_bank",
@@ -1161,16 +904,6 @@
     "tags": [
       "charged_power_bank",
       "disposable_power_bank"
-    ]
-  },
-  {
-    "id": "useless_machine",
-    "gameId": "artifact_oracle",
-    "name": "Useless Machine",
-    "image": "UselessMachine.png",
-    "description": "What does it do?",
-    "dlc": [
-      "EXPANSION1_ID"
     ]
   },
   {
@@ -1221,12 +954,5 @@
     "name": "Worn Oxygen Mask",
     "image": "WornOxygenMask.png",
     "description": "A worn out Oxygen Mask.\n\nMasks can be repaired at a Crafting Station."
-  },
-  {
-    "id": "wrist_watch",
-    "gameId": "artifact_ameliaswatch",
-    "name": "Wrist Watch",
-    "image": "WristWatch.png",
-    "description": "It was discovered in a package labeled \"To be entrusted to Dr. Walker\"."
   }
 ]

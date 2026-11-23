@@ -5,9 +5,19 @@
     "image": "Abyssalite.png"
   },
   {
+    "id": "advanced_booster",
+    "name": "Advanced Booster",
+    "image": "AdvancedConstructionBooster.png"
+  },
+  {
     "id": "azure_bug_diet_eatsolid",
     "name": "Azure Bug Diet",
     "image": "PepperBread.png"
+  },
+  {
+    "id": "basic_booster",
+    "name": "Basic Booster",
+    "image": "Advanced_Medical_Booster.png"
   },
   {
     "id": "building_wood",

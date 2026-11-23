@@ -212,6 +212,8 @@ TAG_METADATA = {
     "critter_hoverer": ("Hovering Critter", "Slickster.png"),
     "saturn_trap_prey": ("Land / Hovering Critter", "Hatch.png"),
     "smoker_veggie": ("Smokable Veggie / Fruit", "Pikeapple.png"),
+    "basic_booster": ("Basic Booster", None),
+    "advanced_booster": ("Advanced Booster", None),
 }
 
 # Well-known exact member sets -> semantic tag ID
@@ -367,6 +369,7 @@ def main() -> None:
         "gas": [],
         "liquid": [],
         "solid": [],
+        "artifact": [],
         "other": [],
     }
     site_items: dict[str, dict[str, Any]] = {}
@@ -680,7 +683,7 @@ def main() -> None:
         if ei.get("image") and ei["image"].lower() in img_index:
             obj["image"] = img_index[ei["image"].lower()]
 
-    skip_item_ids = {"ResearchDatabank", "GasGrassHarvested"}
+    skip_item_ids = {"ResearchDatabank", "GasGrassHarvested", "ShockWorm"}
     for it in raw.get("items", []):
         gid = it["id"]
         if gid in game_items or gid in skip_item_ids or gid.startswith("Compost"):
@@ -695,12 +698,12 @@ def main() -> None:
         elif gid == "artifact_sandstone" and name == "Sandstone":
             name = "Sandstone (Artifact)"
         itags = set(it.get("tags") or [])
-        # Skip raw artifacts unless user wants them? Wait: artifacts are real active items in game, keep all non-internal!
+        is_artifact = ("Artifact" in itags) or ("Keepsake" in itags)
         extra = {
             "description": it.get("description"),
             "dlc": it.get("requiredDlcIds"),
         }
-        obj = add_entity("other", gid, name, extra)
+        obj = add_entity("artifact" if is_artifact else "other", gid, name, extra)
         if "Dehydrated" in itags:
             item_tags[obj["id"]].add("dehydrated_food")
         if "ChargedPortableBattery" in itags:
@@ -1134,6 +1137,53 @@ def main() -> None:
                 "time": group[0].get("time", 5),
             })
         recipes = other_recipes + merged_ec
+        seen_recipe_sigs = {json.dumps(r, sort_keys=True, ensure_ascii=False) for r in recipes}
+
+    # Collapse BionicUpgrade booster recipes that have identical (source, consumed, time) into tags
+    bionic_booster_sids = {
+        game_to_site[it["id"]]
+        for it in raw.get("items", [])
+        if it["id"] in game_to_site and "BionicUpgrade" in (it.get("tags") or [])
+    }
+    if bionic_booster_sids:
+        booster_groups: dict[tuple[str, str, Any], list[dict[str, Any]]] = defaultdict(list)
+        non_booster_recipes: list[dict[str, Any]] = []
+        for r in recipes:
+            prod = r.get("produced") or []
+            if len(prod) == 1 and prod[0].get("element") in bionic_booster_sids:
+                gkey = (r["source"], json.dumps(r.get("consumed") or [], sort_keys=True), r.get("time"))
+                booster_groups[gkey].append(r)
+            else:
+                non_booster_recipes.append(r)
+
+        merged_boosters: list[dict[str, Any]] = []
+        microchip_sid = game_to_site.get("PowerStationTools")
+        for (src_id, _csig, r_time), group in booster_groups.items():
+            if len(group) == 1:
+                merged_boosters.append(group[0])
+                continue
+            member_sids = sorted({r["produced"][0]["element"] for r in group})
+            cons = group[0].get("consumed") or []
+            mc_amt = next((c["amount"] for c in cons if c.get("element") == microchip_sid), 0)
+            if len(cons) == 1 and mc_amt == 2:
+                tid, tname = "basic_booster", "Basic Booster"
+            elif len(cons) == 1 and mc_amt == 8:
+                tid, tname = "advanced_booster", "Advanced Booster"
+            else:
+                tid = f"booster_{slugify(src_id)}_{int(mc_amt) if mc_amt else len(merged_boosters) + 1}"
+                tname = f"Booster ({int(mc_amt)} Microchips)" if mc_amt else "Booster"
+            ensure_tag(tid, name=tname, members_site_ids=member_sids)
+            first_p = group[0]["produced"][0]
+            rec: dict[str, Any] = {
+                "source": src_id,
+                "consumed": cons,
+                "produced": [make_entry("tag", tid, first_p["amount"], first_p["unit"], first_p.get("per"))],
+            }
+            if r_time is not None:
+                rec["time"] = r_time
+            merged_boosters.append(rec)
+
+        recipes = non_booster_recipes + merged_boosters
         seen_recipe_sigs = {json.dumps(r, sort_keys=True, ensure_ascii=False) for r in recipes}
 
     # --- C. Building Converters, Generators, Toilets, Research, Tinker, Reactor, Rehydrator, Recreation ---
@@ -1825,6 +1875,7 @@ def main() -> None:
         "gas": "gases.json",
         "liquid": "liquids.json",
         "solid": "solids.json",
+        "artifact": "artifacts.json",
         "other": "others.json",
     }
 
@@ -1856,6 +1907,7 @@ def main() -> None:
         {"id": "gas", "label": "Gases", "file": "gases.json", "isFilter": True},
         {"id": "liquid", "label": "Liquids", "file": "liquids.json", "isFilter": True},
         {"id": "solid", "label": "Solids", "file": "solids.json", "isFilter": True},
+        {"id": "artifact", "label": "Artifacts", "file": "artifacts.json", "isFilter": True},
         {"id": "other", "label": "Others", "file": "others.json", "isFilter": True},
         {"id": "special", "label": "Special", "file": "special.json", "isFilter": False},
         {"id": "recipe", "label": "Recipes", "file": "recipes.json", "isFilter": False},

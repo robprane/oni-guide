@@ -8260,335 +8260,6 @@
     "time": 50.0
   },
   {
-    "source": "crafting_station",
-    "consumed": [
-      {
-        "element": "microchip",
-        "amount": 2.0,
-        "unit": "unit"
-      }
-    ],
-    "produced": [
-      {
-        "element": "digging_booster",
-        "amount": 1.0,
-        "unit": "unit"
-      }
-    ],
-    "time": 60.0
-  },
-  {
-    "source": "crafting_station",
-    "consumed": [
-      {
-        "element": "microchip",
-        "amount": 2.0,
-        "unit": "unit"
-      }
-    ],
-    "produced": [
-      {
-        "element": "construction_booster",
-        "amount": 1.0,
-        "unit": "unit"
-      }
-    ],
-    "time": 60.0
-  },
-  {
-    "source": "crafting_station",
-    "consumed": [
-      {
-        "element": "microchip",
-        "amount": 2.0,
-        "unit": "unit"
-      }
-    ],
-    "produced": [
-      {
-        "element": "strength_booster",
-        "amount": 1.0,
-        "unit": "unit"
-      }
-    ],
-    "time": 60.0
-  },
-  {
-    "source": "crafting_station",
-    "consumed": [
-      {
-        "element": "microchip",
-        "amount": 2.0,
-        "unit": "unit"
-      }
-    ],
-    "produced": [
-      {
-        "element": "researching_booster",
-        "amount": 1.0,
-        "unit": "unit"
-      }
-    ],
-    "time": 60.0
-  },
-  {
-    "source": "crafting_station",
-    "consumed": [
-      {
-        "element": "microchip",
-        "amount": 2.0,
-        "unit": "unit"
-      }
-    ],
-    "produced": [
-      {
-        "element": "advanced_medical_booster",
-        "amount": 1.0,
-        "unit": "unit"
-      }
-    ],
-    "time": 60.0
-  },
-  {
-    "source": "soldering_station",
-    "consumed": [
-      {
-        "element": "microchip",
-        "amount": 8.0,
-        "unit": "unit"
-      }
-    ],
-    "produced": [
-      {
-        "element": "extreme_digging_booster",
-        "amount": 1.0,
-        "unit": "unit"
-      }
-    ],
-    "time": 30.0
-  },
-  {
-    "source": "soldering_station",
-    "consumed": [
-      {
-        "element": "microchip",
-        "amount": 8.0,
-        "unit": "unit"
-      }
-    ],
-    "produced": [
-      {
-        "element": "crop_tending_booster",
-        "amount": 1.0,
-        "unit": "unit"
-      }
-    ],
-    "time": 30.0
-  },
-  {
-    "source": "soldering_station",
-    "consumed": [
-      {
-        "element": "microchip",
-        "amount": 8.0,
-        "unit": "unit"
-      }
-    ],
-    "produced": [
-      {
-        "element": "ranching_booster",
-        "amount": 1.0,
-        "unit": "unit"
-      }
-    ],
-    "time": 30.0
-  },
-  {
-    "source": "soldering_station",
-    "consumed": [
-      {
-        "element": "microchip",
-        "amount": 8.0,
-        "unit": "unit"
-      }
-    ],
-    "produced": [
-      {
-        "element": "grilling_booster",
-        "amount": 1.0,
-        "unit": "unit"
-      }
-    ],
-    "time": 30.0
-  },
-  {
-    "source": "soldering_station",
-    "consumed": [
-      {
-        "element": "microchip",
-        "amount": 8.0,
-        "unit": "unit"
-      }
-    ],
-    "produced": [
-      {
-        "element": "masterworks_art_booster",
-        "amount": 1.0,
-        "unit": "unit"
-      }
-    ],
-    "time": 30.0
-  },
-  {
-    "source": "soldering_station",
-    "consumed": [
-      {
-        "element": "microchip",
-        "amount": 8.0,
-        "unit": "unit"
-      }
-    ],
-    "produced": [
-      {
-        "element": "astronomy_booster",
-        "amount": 1.0,
-        "unit": "unit"
-      }
-    ],
-    "time": 30.0
-  },
-  {
-    "source": "soldering_station",
-    "consumed": [
-      {
-        "element": "microchip",
-        "amount": 8.0,
-        "unit": "unit"
-      }
-    ],
-    "produced": [
-      {
-        "element": "applied_sciences_booster",
-        "amount": 1.0,
-        "unit": "unit"
-      }
-    ],
-    "time": 30.0
-  },
-  {
-    "source": "soldering_station",
-    "consumed": [
-      {
-        "element": "microchip",
-        "amount": 8.0,
-        "unit": "unit"
-      }
-    ],
-    "produced": [
-      {
-        "element": "piloting_booster",
-        "amount": 1.0,
-        "unit": "unit"
-      }
-    ],
-    "time": 30.0
-  },
-  {
-    "source": "soldering_station",
-    "consumed": [
-      {
-        "element": "microchip",
-        "amount": 8.0,
-        "unit": "unit"
-      }
-    ],
-    "produced": [
-      {
-        "element": "suit_training_booster",
-        "amount": 1.0,
-        "unit": "unit"
-      }
-    ],
-    "time": 30.0
-  },
-  {
-    "source": "soldering_station",
-    "consumed": [
-      {
-        "element": "microchip",
-        "amount": 8.0,
-        "unit": "unit"
-      }
-    ],
-    "produced": [
-      {
-        "element": "tidying_booster",
-        "amount": 1.0,
-        "unit": "unit"
-      }
-    ],
-    "time": 30.0
-  },
-  {
-    "source": "soldering_station",
-    "consumed": [
-      {
-        "element": "microchip",
-        "amount": 8.0,
-        "unit": "unit"
-      }
-    ],
-    "produced": [
-      {
-        "element": "engineering_booster",
-        "amount": 1.0,
-        "unit": "unit"
-      }
-    ],
-    "time": 30.0
-  },
-  {
-    "source": "soldering_station",
-    "consumed": [
-      {
-        "element": "microchip",
-        "amount": 8.0,
-        "unit": "unit"
-      }
-    ],
-    "produced": [
-      {
-        "element": "advanced_construction_booster",
-        "amount": 1.0,
-        "unit": "unit"
-      }
-    ],
-    "time": 30.0
-  },
-  {
-    "source": "soldering_station",
-    "consumed": [
-      {
-        "element": "suit_training_booster",
-        "amount": 1.0,
-        "unit": "unit"
-      },
-      {
-        "element": "microchip",
-        "amount": 4.0,
-        "unit": "unit"
-      }
-    ],
-    "produced": [
-      {
-        "element": "swim_hack_booster",
-        "amount": 1.0,
-        "unit": "unit"
-      }
-    ],
-    "time": 30.0
-  },
-  {
     "source": "egg_cracker",
     "consumed": [
       {
@@ -8761,6 +8432,65 @@
       }
     ],
     "time": 5.0
+  },
+  {
+    "source": "crafting_station",
+    "consumed": [
+      {
+        "element": "microchip",
+        "amount": 2.0,
+        "unit": "unit"
+      }
+    ],
+    "produced": [
+      {
+        "tag": "basic_booster",
+        "amount": 1.0,
+        "unit": "unit"
+      }
+    ],
+    "time": 60.0
+  },
+  {
+    "source": "soldering_station",
+    "consumed": [
+      {
+        "element": "microchip",
+        "amount": 8.0,
+        "unit": "unit"
+      }
+    ],
+    "produced": [
+      {
+        "tag": "advanced_booster",
+        "amount": 1.0,
+        "unit": "unit"
+      }
+    ],
+    "time": 30.0
+  },
+  {
+    "source": "soldering_station",
+    "consumed": [
+      {
+        "element": "suit_training_booster",
+        "amount": 1.0,
+        "unit": "unit"
+      },
+      {
+        "element": "microchip",
+        "amount": 4.0,
+        "unit": "unit"
+      }
+    ],
+    "produced": [
+      {
+        "element": "swim_hack_booster",
+        "amount": 1.0,
+        "unit": "unit"
+      }
+    ],
+    "time": 30.0
   },
   {
     "source": "super_computer",
@@ -15714,8 +15444,14 @@
     "produced": []
   },
   {
-    "source": "pajamas",
-    "consumed": [],
+    "source": "duplicant",
+    "consumed": [
+      {
+        "element": "pajamas",
+        "amount": 1.0,
+        "unit": "unit"
+      }
+    ],
     "produced": [
       {
         "element": "dream_journal",

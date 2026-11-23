@@ -1,0 +1,320 @@
+[
+  {
+    "id": "archaic_tech",
+    "gameId": "artifact_vhs",
+    "name": "Archaic Tech",
+    "image": "ArchaicTech.png",
+    "description": "Be kind when you handle it. It's very fragile."
+  },
+  {
+    "id": "bioluminescent_rock",
+    "gameId": "artifact_bioluminescentrock",
+    "name": "Bioluminescent Rock",
+    "image": "BioluminescentRock.png",
+    "description": "A thriving colony of tiny, microscopic organisms is responsible for giving it its bluish glow."
+  },
+  {
+    "id": "blender",
+    "gameId": "artifact_blender",
+    "name": "Blender",
+    "image": "Blender.png",
+    "description": "Equipment used to conduct experiments answering the age-old question, \"Could that blend\"?"
+  },
+  {
+    "id": "ceramic_morb",
+    "gameId": "keepsake_crittermanipulator",
+    "name": "Ceramic Morb",
+    "image": "CeramicMorb.png",
+    "description": "A pottery project produced in an HR-mandated art therapy class.\n\nIt's glazed with a substance that once landed a curious lab technician in the ER."
+  },
+  {
+    "id": "critter_collar",
+    "gameId": "keepsake_fossilhunt",
+    "name": "Critter Collar",
+    "image": "CritterCollar.png",
+    "description": "The tag reads \"Molly\".\n\nOn the reverse is \"Designed by B363\" stamped above what appears to be an unusually shaped pawprint."
+  },
+  {
+    "id": "double_helix_model",
+    "gameId": "artifact_dnamodel",
+    "name": "Double Helix Model",
+    "image": "DoubleHelixModel.png",
+    "description": "An educational model of genetic information."
+  },
+  {
+    "id": "egg_shaped_rock",
+    "gameId": "artifact_eggrock",
+    "name": "Egg-Shaped Rock",
+    "image": "EggShapedRock.png",
+    "description": "It's unclear whether this is its naturally occurring shape, or if its appearance has been sculpted."
+  },
+  {
+    "id": "egg_shaped_rock_other",
+    "gameId": "artifact_rainboweggrock",
+    "name": "Egg-Shaped Rock (Iridescent)",
+    "image": "EggShapedRockIridescent.png",
+    "description": "It's unclear whether this is its naturally occurring shape, or if its appearance has been sculpted.\n\nThis one is rainbow colored."
+  },
+  {
+    "id": "encrusted_teapot",
+    "gameId": "artifact_teapot",
+    "name": "Encrusted Teapot",
+    "image": "EncrustedTeapot.png",
+    "description": "A teapot from the depths of space, coated in a thick layer of Neutronium."
+  },
+  {
+    "id": "grubgrub_statue",
+    "gameId": "artifact_grubstatue",
+    "name": "Grubgrub Statue",
+    "image": "GrubgrubStatue.png",
+    "description": "A moving tribute to a tiny plant hugger.",
+    "dlc": [
+      "EXPANSION1_ID"
+    ]
+  },
+  {
+    "id": "hair_dryer",
+    "gameId": "keepsake_hijackheadquarters",
+    "name": "Hair Dryer",
+    "image": "HairDryer.png",
+    "description": "A vintage follicle styling tool.\n\nThe handle bears a small engraving that reads: \"To N.T., from N.T.\""
+  },
+  {
+    "id": "honey_jar",
+    "gameId": "artifact_honeyjar",
+    "name": "Honey Jar",
+    "image": "HoneyJar.png",
+    "description": "Sweet golden liquid with just a touch of uranium.",
+    "dlc": [
+      "EXPANSION1_ID"
+    ]
+  },
+  {
+    "id": "magma_lamp",
+    "gameId": "artifact_magmalamp",
+    "name": "Magma Lamp",
+    "image": "MagmaLamp.png",
+    "description": "The sequel to \"Lava Lamp\"."
+  },
+  {
+    "id": "mangled_saxophone",
+    "gameId": "artifact_saxophone",
+    "name": "Mangled Saxophone",
+    "image": "MangledSaxophone.png",
+    "description": "The name \"Pesquet\" is barely legible on the inside."
+  },
+  {
+    "id": "model_nuclear_power_plant",
+    "gameId": "artifact_reactormodel",
+    "name": "Model Nuclear Power Plant",
+    "image": "ModelNuclearPowerPlant.png",
+    "description": "It's pronounced nu-clear.",
+    "dlc": [
+      "EXPANSION1_ID"
+    ]
+  },
+  {
+    "id": "model_plane",
+    "gameId": "keepsake_megabrain",
+    "name": "Model Plane",
+    "image": "ModelPlane.png",
+    "description": "A treasured souvenir that was once a common accompaniment to children's meals during commercial flights. There's a hole in the bottom from when Dr. Holland had it mounted on a stand."
+  },
+  {
+    "id": "modern_art",
+    "gameId": "artifact_modernart",
+    "name": "Modern Art",
+    "image": "ModernArt.png",
+    "description": "I don't get it."
+  },
+  {
+    "id": "moldavite",
+    "gameId": "artifact_moldavite",
+    "name": "Moldavite",
+    "image": "Moldavite.png",
+    "description": "A unique green stone formed from the impact of a meteorite."
+  },
+  {
+    "id": "moonmoonmoon",
+    "gameId": "artifact_moonmoonmoon",
+    "name": "Moonmoonmoon",
+    "image": "Moonmoonmoon.png",
+    "description": "A moon's moon's moon. It's very small."
+  },
+  {
+    "id": "office_mug",
+    "gameId": "artifact_officemug",
+    "name": "Office Mug",
+    "image": "OfficeMug.png",
+    "description": "An intermediary place to store espresso before you move it to your mouth."
+  },
+  {
+    "id": "old_x_ray",
+    "gameId": "artifact_okayxray",
+    "name": "Old X-Ray",
+    "image": "OldXRay.png",
+    "description": "Ew, weird. It has five fingers!"
+  },
+  {
+    "id": "percolator",
+    "gameId": "artifact_pacupercolator",
+    "name": "Percolator",
+    "image": "Percolator.png",
+    "description": "Don't drink from it! There was a pacu... IN the percolator!"
+  },
+  {
+    "id": "plasma_lamp",
+    "gameId": "artifact_plasmalamp",
+    "name": "Plasma Lamp",
+    "image": "PlasmaLamp.png",
+    "description": "No space colony is complete without one."
+  },
+  {
+    "id": "pristine_fossil",
+    "gameId": "artifact_hatchfossil",
+    "name": "Pristine Fossil",
+    "image": "PristineFossil.png",
+    "description": "The preserved bones of an early species of Hatch."
+  },
+  {
+    "id": "radiation_mood_ring",
+    "gameId": "artifact_moodring",
+    "name": "Radiation Mood Ring",
+    "image": "RadiationMoodRing.png",
+    "description": "How radioactive are you feeling?",
+    "dlc": [
+      "EXPANSION1_ID"
+    ]
+  },
+  {
+    "id": "robot_arm",
+    "gameId": "artifact_robotarm",
+    "name": "Robot Arm",
+    "image": "RobotArm.png",
+    "description": "It's not functional. Just cool."
+  },
+  {
+    "id": "rubiks_cube",
+    "gameId": "artifact_rubikscube",
+    "name": "Rubik's Cube",
+    "image": "RubiksCube.png",
+    "description": "This mystery of the universe has already been solved."
+  },
+  {
+    "id": "rusty_toolbox",
+    "gameId": "keepsake_lonelyminion",
+    "name": "Rusty Toolbox",
+    "image": "RustyToolbox.png",
+    "description": "On the inside of the lid, someone used a screwdriver to carve a drawing of a group of smiling Duplicants gathered around a massive crater."
+  },
+  {
+    "id": "sandstone_other",
+    "gameId": "artifact_sandstone",
+    "name": "Sandstone (Artifact)",
+    "image": "SandstoneArtifact.png",
+    "description": "A beautiful rock composed of multiple layers of sediment."
+  },
+  {
+    "id": "self_contained_system",
+    "gameId": "artifact_solarsystem",
+    "name": "Self-Contained System",
+    "image": "SelfContainedSystem.png",
+    "description": "A marvel of the cosmos, inside this display is an entirely self-contained solar system."
+  },
+  {
+    "id": "shield_generator",
+    "gameId": "artifact_shieldgenerator",
+    "name": "Shield Generator",
+    "image": "ShieldGenerator.png",
+    "description": "A mechanical prototype capable of producing a small section of shielding."
+  },
+  {
+    "id": "shiny_coprolite",
+    "gameId": "keepsake_geothermalplant",
+    "name": "Shiny Coprolite",
+    "image": "ShinyCoprolite.png",
+    "description": "A spectacular sample of organic material fossilized into lead.\n\nSome things really do get better with age.",
+    "dlc": [
+      "DLC2_ID"
+    ]
+  },
+  {
+    "id": "sink_other",
+    "gameId": "artifact_sink",
+    "name": "Sink (Artifact)",
+    "image": "SinkArtifact.png",
+    "description": "No collection is complete without it."
+  },
+  {
+    "id": "small_obelisk",
+    "gameId": "artifact_obelisk",
+    "name": "Small Obelisk",
+    "image": "SmallObelisk.png",
+    "description": "A rectangular stone piece.\n\nIts function is unclear."
+  },
+  {
+    "id": "snow_globe",
+    "gameId": "keepsake_findingminnow",
+    "name": "Snow Globe",
+    "image": "SnowGlobe.png",
+    "description": "A whimsical souvenir made with tempered glass.\n\nIt bears a few small scratches from being hurled across a lab.",
+    "dlc": [
+      "DLC5_ID"
+    ]
+  },
+  {
+    "id": "stereoscope",
+    "gameId": "keepsake_largeimpactor",
+    "name": "Stereoscope",
+    "image": "Stereoscope.png",
+    "description": "A tool used to gaze into frozen moments of time.\n\nOne of the images is of a child standing in a field, waving a huge piece of blackened titanium.",
+    "dlc": [
+      "DLC4_ID"
+    ]
+  },
+  {
+    "id": "stethoscope",
+    "gameId": "artifact_stethoscope",
+    "name": "Stethoscope",
+    "image": "Stethoscope.png",
+    "description": "Listens to Duplicant heartbeats, or gurgly tummies."
+  },
+  {
+    "id": "strange_brick",
+    "gameId": "artifact_brickphone",
+    "name": "Strange Brick",
+    "image": "StrangeBrick.png",
+    "description": "It still works."
+  },
+  {
+    "id": "tornado_rock",
+    "gameId": "artifact_rocktornado",
+    "name": "Tornado Rock",
+    "image": "TornadoRock.png",
+    "description": "It's unclear how it formed, although I'm glad it did."
+  },
+  {
+    "id": "toy_bot",
+    "gameId": "keepsake_morbrovermaker",
+    "name": "Toy Bot",
+    "image": "ToyBot.png",
+    "description": "A custom-made robot programmed to deliver puns in a variety of celebrity voices.\n\nIt is also a paper shredder."
+  },
+  {
+    "id": "useless_machine",
+    "gameId": "artifact_oracle",
+    "name": "Useless Machine",
+    "image": "UselessMachine.png",
+    "description": "What does it do?",
+    "dlc": [
+      "EXPANSION1_ID"
+    ]
+  },
+  {
+    "id": "wrist_watch",
+    "gameId": "artifact_ameliaswatch",
+    "name": "Wrist Watch",
+    "image": "WristWatch.png",
+    "description": "It was discovered in a package labeled \"To be entrusted to Dr. Walker\"."
+  }
+]

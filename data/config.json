@@ -66,6 +66,12 @@
     "isFilter": true
   },
   {
+    "id": "artifact",
+    "label": "Artifacts",
+    "file": "artifacts.json",
+    "isFilter": true
+  },
+  {
     "id": "other",
     "label": "Others",
     "file": "others.json",
