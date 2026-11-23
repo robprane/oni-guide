@@ -1193,6 +1193,360 @@ a.recipe-item-link:hover {
     filter: none;
 }
 
+.calc-saved-btn {
+    position: relative;
+}
+
+.calc-saved-badge {
+    position: absolute;
+    top: -0.35rem;
+    right: -0.35rem;
+    min-width: 1.1rem;
+    height: 1.1rem;
+    padding: 0 0.25rem;
+    border-radius: 999px;
+    background: var(--primary-color);
+    color: #fff;
+    font-size: 0.68rem;
+    font-weight: 700;
+    line-height: 1.1rem;
+    text-align: center;
+    pointer-events: none;
+}
+
+/* Active / Shared Build Banner */
+.calc-build-banner {
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+    padding: 0.7rem 0.9rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--border-color);
+    background: var(--card-bg);
+}
+
+.calc-build-banner-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+}
+
+.calc-build-banner-title-wrap {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    min-width: 0;
+    flex: 1;
+}
+
+.calc-build-banner-title {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.3;
+    word-break: break-word;
+}
+
+.calc-build-status-pill {
+    padding: 0.1rem 0.45rem;
+    border-radius: 999px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    border: 1px solid var(--border-color);
+    background: var(--nav-bg);
+    color: var(--text-muted, #888);
+    white-space: nowrap;
+}
+
+.calc-build-status-pill.is-dirty {
+    border-color: rgba(245, 158, 11, 0.5);
+    background: rgba(245, 158, 11, 0.14);
+    color: #f59e0b;
+}
+
+.calc-build-banner-actions {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    flex-shrink: 0;
+}
+
+.calc-build-action-btn {
+    padding: 0.25rem 0.6rem;
+    border-radius: 0.35rem;
+    border: 1px solid var(--border-color);
+    background: var(--nav-bg);
+    color: var(--text-color);
+    font: inherit;
+    font-size: 0.78rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    transition: border-color 0.15s, background 0.15s;
+}
+
+.calc-build-action-btn:hover {
+    border-color: var(--primary-color);
+    background: var(--active-bg);
+}
+
+.calc-build-action-btn.is-primary {
+    border-color: var(--primary-color);
+    background: var(--primary-color);
+    color: #fff;
+}
+
+.calc-build-action-btn.is-primary:hover {
+    filter: brightness(1.08);
+}
+
+.calc-build-action-btn .btn-svg-icon {
+    width: 0.85rem;
+    height: 0.85rem;
+}
+
+.calc-build-banner-desc {
+    margin: 0;
+    font-size: 0.86rem;
+    line-height: 1.45;
+    color: var(--text-color);
+    opacity: 0.9;
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
+.calc-build-banner-desc.is-clamped {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.calc-desc-toggle-btn {
+    align-self: flex-start;
+    padding: 0;
+    border: none;
+    background: transparent;
+    color: var(--primary-color);
+    font: inherit;
+    font-size: 0.78rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.calc-desc-toggle-btn:hover {
+    text-decoration: underline;
+}
+
+/* Saved Builds Modal */
+.calc-saved-modal {
+    max-width: 34rem;
+    width: calc(100% - 2rem);
+}
+
+.calc-saved-body {
+    padding: 1rem 1.25rem 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-height: 75vh;
+    overflow-y: auto;
+}
+
+.calc-save-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+    padding: 0.85rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--border-color);
+    background: var(--nav-bg);
+}
+
+.calc-save-form-title {
+    margin: 0;
+    font-size: 0.86rem;
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+.calc-save-input,
+.calc-save-textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.5rem 0.65rem;
+    border-radius: 0.375rem;
+    border: 1px solid var(--input-border);
+    background: var(--input-bg);
+    color: var(--input-text);
+    font: inherit;
+    font-size: 0.88rem;
+}
+
+.calc-save-textarea {
+    resize: vertical;
+    min-height: 4.5rem;
+    line-height: 1.4;
+}
+
+.calc-save-input:focus,
+.calc-save-textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.calc-save-form-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.calc-desc-counter {
+    font-size: 0.76rem;
+    font-variant-numeric: tabular-nums;
+}
+
+.calc-save-form-buttons {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+}
+
+.calc-saved-section-title {
+    margin: 0;
+    font-size: 0.84rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--text-muted, #888);
+}
+
+.calc-saved-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+}
+
+.calc-saved-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    padding: 0.7rem 0.8rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--border-color);
+    background: var(--card-bg);
+    transition: border-color 0.15s;
+}
+
+.calc-saved-card.is-active {
+    border-color: var(--active-border);
+    background: var(--active-bg);
+}
+
+.calc-saved-card-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 0.5rem;
+}
+
+.calc-saved-card-info {
+    min-width: 0;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+}
+
+.calc-saved-card-name-row {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    flex-wrap: wrap;
+}
+
+.calc-saved-card-name {
+    font-weight: 700;
+    font-size: 0.92rem;
+    word-break: break-word;
+}
+
+.calc-saved-card-meta {
+    font-size: 0.76rem;
+}
+
+.calc-saved-card-desc {
+    margin: 0;
+    font-size: 0.82rem;
+    line-height: 1.38;
+    opacity: 0.85;
+    white-space: pre-wrap;
+    word-break: break-word;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.calc-saved-card-actions {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    flex-shrink: 0;
+}
+
+.calc-saved-card-btn {
+    height: 1.85rem;
+    padding: 0 0.55rem;
+    border-radius: 0.35rem;
+    border: 1px solid var(--border-color);
+    background: var(--nav-bg);
+    color: var(--text-color);
+    font: inherit;
+    font-size: 0.78rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.25rem;
+    transition: border-color 0.15s, background 0.15s, color 0.15s;
+}
+
+.calc-saved-card-btn:hover {
+    border-color: var(--primary-color);
+    background: var(--active-bg);
+}
+
+.calc-saved-card-btn.is-icon {
+    width: 1.85rem;
+    padding: 0;
+}
+
+.calc-saved-card-btn.is-danger:hover,
+.calc-saved-card-btn.is-confirm-delete {
+    border-color: #f44336;
+    background: rgba(244, 67, 54, 0.15);
+    color: #f44336;
+}
+
+.calc-saved-card-btn .btn-svg-icon {
+    width: 0.85rem;
+    height: 0.85rem;
+}
+
+.calc-saved-empty {
+    margin: 0.5rem 0;
+    font-size: 0.86rem;
+    text-align: center;
+}
+
 .calc-toolbar .utility-btn:not(.icon-only-btn),
 .calc-confirm-actions .utility-btn {
     width: auto;
@@ -1528,6 +1882,34 @@ a.calc-source-link:hover .calc-source-name {
 .calc-auto-pill:hover {
     background: rgba(59, 130, 246, 0.24);
     border-color: var(--primary-color);
+}
+
+.calc-auto-pill.is-off {
+    border-style: dashed;
+    border-color: var(--border-color);
+    background: transparent;
+    color: var(--text-muted, #888);
+    opacity: 0.85;
+}
+
+.calc-auto-pill.is-off:hover {
+    opacity: 1;
+    border-style: solid;
+    border-color: rgba(59, 130, 246, 0.6);
+    background: rgba(59, 130, 246, 0.1);
+    color: var(--primary-color);
+}
+
+.calc-choice-select.is-unselected {
+    border-color: rgba(245, 158, 11, 0.65);
+}
+
+.recipe-item-note {
+    font-size: 0.68rem;
+    line-height: 1.2;
+    text-align: center;
+    max-width: 7.5rem;
+    opacity: 0.85;
 }
 
 .calc-mult-input::-webkit-inner-spin-button,

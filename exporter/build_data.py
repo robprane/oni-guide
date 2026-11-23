@@ -406,9 +406,10 @@ def main() -> None:
         item_categories[sid] = category
         return obj
 
-    # Pre-index elements/foods/critters/plants by gameId
+    # Pre-index elements/foods/seeds/critters/plants by gameId
     raw_elements_by_id = {e["id"]: e for e in raw.get("elements", [])}
     raw_foods_by_id = {f["id"]: f for f in raw.get("foods", [])}
+    raw_seeds_by_id = {s["id"]: s for s in raw.get("seeds", [])}
     raw_critters_by_id = {c["id"]: c for c in raw.get("critters", [])}
     raw_plants_by_id = {p["id"]: p for p in raw.get("plants", [])}
 
@@ -607,6 +608,8 @@ def main() -> None:
             continue
         if p["id"] == "SeaTree" and not p.get("crop") and sea_tree_branch and sea_tree_branch.get("crop"):
             p["crop"] = sea_tree_branch["crop"]
+            if sea_tree_branch.get("seedProducer"):
+                p["seedProducer"] = sea_tree_branch["seedProducer"]
         extra = {
             "description": p.get("description"),
             "dlc": p.get("requiredDlcIds"),
@@ -721,8 +724,15 @@ def main() -> None:
             return True
         if game_id in raw_foods_by_id:
             return True
+        # Every ONI plant seed has PrimaryElement.Mass = 1 kg (1000 g)
+        if game_id in raw_seeds_by_id:
+            return True
         # Note: in ONI ComplexRecipes, RawEgg/Meat/PlantFiber/WoodLog/etc.
-        if game_id in {"RawEgg", "EggShell", "PlantFiber", "Kelp", "MilkFat", "Tallow", "Fossil", "Lime", "TableSalt", "RotPile", "Amber"}:
+        if game_id in {
+            "RawEgg", "EggShell", "PlantFiber", "Kelp", "MilkFat", "Tallow",
+            "Fossil", "Lime", "TableSalt", "RotPile", "Amber",
+            "IceBellyPoop", "CrabShell", "CrabWoodShell", "SnailShell", "SnailIronShell",
+        }:
             return True
         return False
 
@@ -977,26 +987,26 @@ def main() -> None:
                     valid_recipe = False
                     break
 
-            # Group pm by identical amount
-            by_amt: dict[float, list[str]] = defaultdict(list)
+            # Group pm by (amount, is_mass_entity) so unit items and mass items never share one tag
+            by_amt_kind: dict[tuple[float, bool], list[str]] = defaultdict(list)
             raw_pm = ing.get("possibleMaterials") or []
             if pma and len(pma) == len(raw_pm):
                 for m, a in zip(raw_pm, pma):
                     if m in game_to_site:
-                        by_amt[round_num(a)].append(m)
+                        by_amt_kind[(round_num(a), is_mass_entity(m))].append(m)
             else:
                 amt = round_num(ing.get("amount") or 0.0)
                 for m in pm:
-                    by_amt[amt].append(m)
+                    by_amt_kind[(amt, is_mass_entity(m))].append(m)
 
             options_entries: list[dict[str, Any]] = []
-            for amt, mats in by_amt.items():
+            for (amt, grp_is_mass), mats in by_amt_kind.items():
                 if amt <= 0:
                     continue
+                unit = "g" if grp_is_mass else "unit"
+                val = amt * 1000.0 if unit == "g" else amt
                 if len(mats) == 1:
                     m = mats[0]
-                    unit = "g" if is_mass_entity(m) else "unit"
-                    val = amt * 1000.0 if unit == "g" else amt
                     options_entries.append(make_entry("element", game_to_site[m], val, unit))
                 else:
                     # Determine tag for this group
@@ -1010,14 +1020,14 @@ def main() -> None:
                     elif first_fab == "RockCrusher" and len(mats) >= 8:
                         sugg_id = "crushable_mineral"
                         sugg_name = "Crushable Mineral"
+                    elif first_fab == "MicrobeMusher" and first_res == "FishFood":
+                        sugg_id = "pacu_treat_seed"
+                        sugg_name = "Pacu Treat Seed"
                     else:
                         sugg_id = f"{slugify(first_fab)}_{slugify(first_res)}_input"
                         sugg_name = " / ".join(game_items[m]["name"] for m in mats[:2]) + (f" (+{len(mats)-2})" if len(mats) > 2 else "")
 
                     tid = get_or_create_group_tag(mats, sugg_id, sugg_name)
-                    all_mass = all(is_mass_entity(m) for m in mats)
-                    unit = "g" if all_mass else "unit"
-                    val = amt * 1000.0 if unit == "g" else amt
                     if tid:
                         options_entries.append(make_entry("tag", tid, val, unit))
                     else:
@@ -1079,11 +1089,20 @@ def main() -> None:
                             extra_prod.append(make_entry(ref[0], ref[1], snap_clean_grams(o["kgPerSec"] * time_sec * 1000.0), "g"))
 
             for cons_entries in ing_variants_list:
-                rec: dict[str, Any] = {
-                    "source": src_id,
-                    "consumed": cons_entries + extra_cons,
-                    "produced": prod_entries + extra_prod,
-                }
+                if fab == "FoodDehydrator":
+                    cons_per = [{**e, "per": "use"} for e in (cons_entries + extra_cons)]
+                    prod_per = [{**e, "per": "use"} for e in (prod_entries + extra_prod)]
+                    rec: dict[str, Any] = {
+                        "source": src_id,
+                        "consumed": cons_per,
+                        "produced": prod_per,
+                    }
+                else:
+                    rec = {
+                        "source": src_id,
+                        "consumed": cons_entries + extra_cons,
+                        "produced": prod_entries + extra_prod,
+                    }
                 if time_sec > 0:
                     rec["time"] = round_num(time_sec)
                 add_recipe(rec)
@@ -1240,8 +1259,8 @@ def main() -> None:
                     if not ref:
                         ok = False
                         break
-                    if c["tag"] == "DreamJournal":
-                        # 1 DreamJournal has 1 kg mass in game (1/60 unit/s = 10 unit/cycle)
+                    if ref[0] == "element" and not is_mass_entity(c["tag"]):
+                        # Non-mass items (DreamJournal, OrbitalResearchDatabank) have 1 kg/unit in ElementConverter
                         cons.append(make_entry(ref[0], ref[1], c["kgPerSec"], "unit", "s"))
                     else:
                         cons.append(make_entry(ref[0], ref[1], c["kgPerSec"] * 1000.0, "g", "s"))
@@ -1293,7 +1312,7 @@ def main() -> None:
                     "produced": [make_entry(oref[0], oref[1], 1, "unit", "use")] if oref else [],
                 })
 
-        # FlushToilet (Lavatory)
+        # FlushToilet (Lavatory, Wall Toilet)
         if b.get("flushToilet"):
             ft = b["flushToilet"]
             w = resolve_ref("Water")
@@ -1317,7 +1336,7 @@ def main() -> None:
                     "produced": [make_entry(waste[0], waste[1], oh["solidWasteMassKg"] * 1000.0, "g", "use")],
                 })
 
-        # HandSanitizer / WashSink / WashBasin
+        # HandSanitizer / WashSink / WashBasin / DecontaminationShower
         if b.get("handSanitizer"):
             hs = b["handSanitizer"]
             cref = resolve_ref(hs["consumedElement"])
@@ -1361,7 +1380,6 @@ def main() -> None:
 
         # Per-use recreation & critter feeder recipes
         if b.get("perUseRecipes"):
-            # Group WaterCooler / MilkFeeder single-choice alternatives cleanly if identical mass
             for pur in b["perUseRecipes"]:
                 cons = []
                 ok = True
@@ -1451,6 +1469,31 @@ def main() -> None:
                 else:
                     rate_u_s = qty / dur_s
                     prod.append(make_entry("element", game_to_site[cid], rate_u_s, "unit", "s"))
+
+            # Bonus seed drop on harvest (SeedProducer.CropPickedInternal):
+            # Only Harvest / HarvestOnly plants roll seedDropChances (0.1 base, modified by branch multiplier).
+            # Exclude SpaceTree (Bonbon Tree): its 0.25-cycle sugar water harvest does NOT invoke SeedProducer.CropPicked.
+            sp = p.get("seedProducer")
+            if (
+                gid != "SpaceTree"
+                and sp
+                and sp.get("productionType") in ("Harvest", "HarvestOnly")
+                and sp.get("seedId") in game_to_site
+            ):
+                seed_gid = sp["seedId"]
+                base_chance = sp.get("seedDropChance") or 0.1
+                chance_mult = 0.125 if gid == "SeaTree" else ((1.0 / 6.0) if gid == "VineBranch" else 1.0)
+                eff_chance = base_chance * chance_mult
+                if eff_chance > 0:
+                    pct_str = f"{eff_chance * 100.0:.2f}".rstrip("0").rstrip(".")
+                    # 1 seed = 1 kg (1000 g) in ONI
+                    seed_entry = make_entry("element", game_to_site[seed_gid], (eff_chance * 1000.0) / dur_s, "g", "s")
+                    seed_entry["note"] = (
+                        f"{pct_str}% base chance / branch"
+                        if chance_mult < 1.0
+                        else f"{pct_str}% base chance / harvest"
+                    )
+                    prod.append(seed_entry)
 
         if cons or prod:
             add_recipe({"source": src_id, "consumed": cons, "produced": prod})
@@ -1551,7 +1594,43 @@ def main() -> None:
             if not c_gids or kcal_per_cycle <= 0 or dkcal <= 0:
                 continue
 
-            # Resolve input ref (concrete if 1, tag if >=2)
+            if ftype == "EatSolid":
+                cons_kg_cyc = kcal_per_cycle / dkcal
+                prod_entries = []
+                if prod_el and prod_el in game_to_site and conv_rate > 0:
+                    prod_kg_cyc = cons_kg_cyc * conv_rate
+                    prod_entries.append(make_entry("element", game_to_site[prod_el], prod_kg_cyc * 1000.0 / 600.0, "g", "s"))
+
+                # Partition solid diet items by mass vs unit entities so unit-based items
+                # (e.g. Pacu Treat, Dewdrip) never mix with mass-based items (e.g. elements, foods, seeds).
+                unit_gids = [g for g in c_gids if not is_mass_entity(g)]
+                mass_gids = [g for g in c_gids if is_mass_entity(g)]
+
+                for grp, grp_is_mass in ((unit_gids, False), (mass_gids, True)):
+                    if not grp:
+                        continue
+                    if len(grp) == 1:
+                        in_kind, in_id = "element", game_to_site[grp[0]]
+                    else:
+                        if all(g in raw_seeds_by_id for g in grp):
+                            sugg_id = f"{slugify(c['name'])}_seed_diet"
+                            sugg_name = f"{c['name']} Seed Diet"
+                        else:
+                            sugg_id = f"{slugify(c['name'])}_diet_{slugify(prod_el or ftype or 'items')}"
+                            sugg_name = f"{c['name']} Diet"
+                        tid = get_or_create_group_tag(grp, sugg_id, sugg_name)
+                        if not tid:
+                            continue
+                        in_kind, in_id = "tag", tid
+
+                    if grp_is_mass:
+                        cons_entry = make_entry(in_kind, in_id, cons_kg_cyc * 1000.0 / 600.0, "g", "s")
+                    else:
+                        cons_entry = make_entry(in_kind, in_id, cons_kg_cyc / 600.0, "unit", "s")
+                    add_recipe({"source": src_id, "consumed": [cons_entry], "produced": list(prod_entries)})
+                continue
+
+            # Resolve input ref (concrete if 1, tag if >=2) for non-EatSolid diets
             if len(c_gids) == 1:
                 in_kind, in_id = "element", game_to_site[c_gids[0]]
             else:
@@ -1565,19 +1644,7 @@ def main() -> None:
                 in_kind, in_id = "tag", tid
 
             prod_entries = []
-            if ftype == "EatSolid":
-                cons_kg_cyc = kcal_per_cycle / dkcal
-                all_seeds = all(item_categories.get(game_to_site[g]) == "seed" for g in c_gids)
-                if all_seeds:
-                    cons_entry = make_entry(in_kind, in_id, cons_kg_cyc / 600.0, "unit", "s")
-                else:
-                    cons_entry = make_entry(in_kind, in_id, cons_kg_cyc * 1000.0 / 600.0, "g", "s")
-                if prod_el and prod_el in game_to_site and conv_rate > 0:
-                    prod_kg_cyc = cons_kg_cyc * conv_rate
-                    prod_entries.append(make_entry("element", game_to_site[prod_el], prod_kg_cyc * 1000.0 / 600.0, "g", "s"))
-                add_recipe({"source": src_id, "consumed": [cons_entry], "produced": prod_entries})
-
-            elif ftype == "EatPlantDirectly":
+            if ftype == "EatPlantDirectly":
                 growth_per_cyc = kcal_per_cycle / dkcal  # 1.0 = 100% growth
                 cons_entry = make_entry(in_kind, in_id, (growth_per_cyc * 100.0) / 600.0, "% growth", "s")
                 if prod_el and prod_el in game_to_site and conv_rate > 0:
@@ -1807,9 +1874,13 @@ def main() -> None:
 
     # --- H. Manual Overrides (exporter/overrides.json) ---
     for ov in overrides.get("extraRecipes", []):
-        sgid = ov.get("sourceGameId")
-        if not sgid or sgid not in game_to_site:
-            continue
+        if ov.get("source") in ("heat", "cool", "emit"):
+            src_id = ov["source"]
+        else:
+            sgid = ov.get("sourceGameId")
+            if not sgid or sgid not in game_to_site:
+                continue
+            src_id = game_to_site[sgid]
         cons = []
         prod = []
         for x in ov.get("consumed") or []:
@@ -1822,7 +1893,12 @@ def main() -> None:
                 prod.append(make_entry("element", game_to_site[x["gameId"]], x["amount"], x["unit"], x.get("per")))
             elif "tag" in x and x["tag"] in tags_registry:
                 prod.append(make_entry("tag", x["tag"], x["amount"], x["unit"], x.get("per")))
-        add_recipe({"source": game_to_site[sgid], "consumed": cons, "produced": prod})
+        rec: dict[str, Any] = {"source": src_id, "consumed": cons, "produced": prod}
+        if ov.get("temp") is not None:
+            rec["temp"] = round_num(ov["temp"])
+        if ov.get("time") is not None:
+            rec["time"] = round_num(ov["time"])
+        add_recipe(rec)
 
     # =========================================================================
     # PRUNE UNUSED TAGS & ATTACH FINAL TAGS TO ITEMS

@@ -365,7 +365,7 @@
       "DLC4_ID"
     ],
     "tags": [
-      "pacu_diet_toxicsand"
+      "pacu_seed_diet"
     ]
   },
   {
@@ -505,8 +505,8 @@
     "description": "An inedible bean that can be processed into delicious foods.",
     "quality": 3,
     "tags": [
-      "microbemusher_fishfood_input",
-      "pacu_diet_toxicsand"
+      "pacu_seed_diet",
+      "pacu_treat_seed"
     ]
   },
   {
@@ -776,8 +776,8 @@
     "quality": 0,
     "tags": [
       "grain",
-      "microbemusher_fishfood_input",
-      "pacu_diet_toxicsand"
+      "pacu_seed_diet",
+      "pacu_treat_seed"
     ]
   },
   {

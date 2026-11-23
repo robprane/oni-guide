@@ -135,7 +135,7 @@
     {
       "sourceGameId": "SpiceGrinder",
       "consumed": [
-        { "gameId": "BasicSingleHarvestPlantSeed", "amount": 0.1, "unit": "unit" },
+        { "gameId": "BasicSingleHarvestPlantSeed", "amount": 100, "unit": "g" },
         { "gameId": "Salt", "amount": 3000, "unit": "g" }
       ],
       "produced": [
@@ -145,7 +145,7 @@
     {
       "sourceGameId": "SpiceGrinder",
       "consumed": [
-        { "gameId": "MushroomSeed", "amount": 0.1, "unit": "unit" },
+        { "gameId": "MushroomSeed", "amount": 100, "unit": "g" },
         { "gameId": "Sucrose", "amount": 3000, "unit": "g" }
       ],
       "produced": [
@@ -155,7 +155,7 @@
     {
       "sourceGameId": "SpiceGrinder",
       "consumed": [
-        { "gameId": "SeaLettuceSeed", "amount": 0.1, "unit": "unit" },
+        { "gameId": "SeaLettuceSeed", "amount": 100, "unit": "g" },
         { "gameId": "Iron", "amount": 3000, "unit": "g" }
       ],
       "produced": [
@@ -165,7 +165,7 @@
     {
       "sourceGameId": "SpiceGrinder",
       "consumed": [
-        { "gameId": "PrickleFlowerSeed", "amount": 0.1, "unit": "unit" },
+        { "gameId": "PrickleFlowerSeed", "amount": 100, "unit": "g" },
         { "gameId": "SlimeMold", "amount": 3000, "unit": "g" }
       ],
       "produced": [
@@ -308,6 +308,16 @@
       ],
       "produced": [
         { "gameId": "DreamJournal", "amount": 0.0033333333, "unit": "unit", "per": "s" }
+      ]
+    },
+    {
+      "source": "heat",
+      "temp": 71.0,
+      "consumed": [
+        { "gameId": "RawEgg", "amount": 1000, "unit": "g" }
+      ],
+      "produced": [
+        { "gameId": "CookedEgg", "amount": 1000, "unit": "g" }
       ]
     }
   ]

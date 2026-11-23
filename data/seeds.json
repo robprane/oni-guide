@@ -9,7 +9,7 @@
       "DLC2_ID"
     ],
     "tags": [
-      "pacu_diet_toxicsand"
+      "pacu_seed_diet"
     ]
   },
   {
@@ -26,7 +26,7 @@
     "image": "BalmLilySeed.png",
     "description": "The Seed of a Balm Lily.\n\nDigging up Buried Objects may uncover a Balm Lily Seed.",
     "tags": [
-      "pacu_diet_toxicsand"
+      "pacu_seed_diet"
     ]
   },
   {
@@ -46,8 +46,8 @@
     "image": "BlossomSeed.png",
     "description": "The Seed of a Bristle Blossom.\n\nDigging up Buried Objects may uncover a Blossom Seed.",
     "tags": [
-      "microbemusher_fishfood_input",
-      "pacu_diet_toxicsand"
+      "pacu_seed_diet",
+      "pacu_treat_seed"
     ]
   },
   {
@@ -60,7 +60,7 @@
       "EXPANSION1_ID"
     ],
     "tags": [
-      "pacu_diet_toxicsand"
+      "pacu_seed_diet"
     ]
   },
   {
@@ -73,7 +73,7 @@
       "DLC2_ID"
     ],
     "tags": [
-      "pacu_diet_toxicsand"
+      "pacu_seed_diet"
     ]
   },
   {
@@ -110,7 +110,7 @@
       "DLC5_ID"
     ],
     "tags": [
-      "pacu_diet_toxicsand"
+      "pacu_seed_diet"
     ]
   },
   {
@@ -120,7 +120,7 @@
     "image": "DashaSaltvineSeed.png",
     "description": "The Seed of a Dasha Saltvine.\n\nDigging up Buried Objects may uncover a Dasha Saltvine Seed.",
     "tags": [
-      "pacu_diet_toxicsand"
+      "pacu_seed_diet"
     ]
   },
   {
@@ -133,7 +133,7 @@
       "DLC4_ID"
     ],
     "tags": [
-      "pacu_diet_toxicsand"
+      "pacu_seed_diet"
     ]
   },
   {
@@ -153,8 +153,8 @@
     "image": "FungalSpore.png",
     "description": "The Seed of a Dusk Cap.\n\nDigging up Buried Objects may uncover a Fungal Spore.",
     "tags": [
-      "microbemusher_fishfood_input",
-      "pacu_diet_toxicsand"
+      "pacu_seed_diet",
+      "pacu_treat_seed"
     ]
   },
   {
@@ -164,7 +164,7 @@
     "image": "GasGrassSeed.png",
     "description": "The Seed of a Gas Grass plant.",
     "tags": [
-      "pacu_diet_toxicsand"
+      "pacu_seed_diet"
     ]
   },
   {
@@ -177,7 +177,7 @@
       "EXPANSION1_ID"
     ],
     "tags": [
-      "pacu_diet_toxicsand"
+      "pacu_seed_diet"
     ]
   },
   {
@@ -190,7 +190,7 @@
       "DLC5_ID"
     ],
     "tags": [
-      "pacu_diet_toxicsand"
+      "pacu_seed_diet"
     ]
   },
   {
@@ -240,7 +240,7 @@
       "DLC4_ID"
     ],
     "tags": [
-      "pacu_diet_toxicsand"
+      "pacu_seed_diet"
     ]
   },
   {
@@ -260,8 +260,8 @@
     "image": "MealwoodSeed.png",
     "description": "The Seed of a Mealwood.\n\nDigging up Buried Objects may uncover a Mealwood Seed.",
     "tags": [
-      "microbemusher_fishfood_input",
-      "pacu_diet_toxicsand"
+      "pacu_seed_diet",
+      "pacu_treat_seed"
     ]
   },
   {
@@ -318,7 +318,7 @@
       "DLC2_ID"
     ],
     "tags": [
-      "pacu_diet_toxicsand"
+      "pacu_seed_diet"
     ]
   },
   {
@@ -328,7 +328,7 @@
     "image": "PinchaPepperSeed.png",
     "description": "The Seed of a Pincha Pepperplant.\n\nDigging up Buried Objects may uncover a Pincha Pepper Seed.",
     "tags": [
-      "pacu_diet_toxicsand"
+      "pacu_seed_diet"
     ]
   },
   {
@@ -341,7 +341,7 @@
       "DLC5_ID"
     ],
     "tags": [
-      "pacu_diet_toxicsand"
+      "pacu_seed_diet"
     ]
   },
   {
@@ -354,7 +354,7 @@
       "DLC2_ID"
     ],
     "tags": [
-      "pacu_diet_toxicsand"
+      "pacu_seed_diet"
     ]
   },
   {
@@ -397,7 +397,7 @@
       "DLC5_ID"
     ],
     "tags": [
-      "pacu_diet_toxicsand"
+      "pacu_seed_diet"
     ]
   },
   {
@@ -417,7 +417,7 @@
       "DLC5_ID"
     ],
     "tags": [
-      "pacu_diet_toxicsand"
+      "pacu_seed_diet"
     ]
   },
   {
@@ -430,7 +430,7 @@
       "DLC4_ID"
     ],
     "tags": [
-      "pacu_diet_toxicsand"
+      "pacu_seed_diet"
     ]
   },
   {
@@ -440,7 +440,7 @@
     "image": "ThimbleReedSeed.png",
     "description": "The Seed of a Thimble Reed.\n\nDigging up Buried Objects may uncover a Thimble Reed Seed.",
     "tags": [
-      "pacu_diet_toxicsand"
+      "pacu_seed_diet"
     ]
   },
   {
@@ -473,7 +473,7 @@
       "DLC5_ID"
     ],
     "tags": [
-      "pacu_diet_toxicsand"
+      "pacu_seed_diet"
     ]
   },
   {
@@ -483,8 +483,8 @@
     "image": "WaterweedSeed.png",
     "description": "The Seed of a Waterweed.\n\nDigging up Buried Objects may uncover a Waterweed Seed.",
     "tags": [
-      "microbemusher_fishfood_input",
-      "pacu_diet_toxicsand"
+      "pacu_seed_diet",
+      "pacu_treat_seed"
     ]
   },
   {

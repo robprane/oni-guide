@@ -5409,34 +5409,40 @@
       {
         "element": "stuffed_berry",
         "amount": 1363.6364,
-        "unit": "g"
+        "unit": "g",
+        "per": "use"
       },
       {
         "element": "plastic",
         "amount": 12000.0,
-        "unit": "g"
+        "unit": "g",
+        "per": "use"
       },
       {
         "element": "natural_gas",
         "amount": 5000.0,
-        "unit": "g"
+        "unit": "g",
+        "per": "use"
       }
     ],
     "produced": [
       {
         "element": "dried_stuffed_berry",
         "amount": 6.0,
-        "unit": "unit"
+        "unit": "unit",
+        "per": "use"
       },
       {
         "element": "water",
         "amount": 6000.0,
-        "unit": "g"
+        "unit": "g",
+        "per": "use"
       },
       {
         "element": "carbon_dioxide",
         "amount": 1250.0,
-        "unit": "g"
+        "unit": "g",
+        "per": "use"
       }
     ],
     "time": 250.0
@@ -5447,34 +5453,40 @@
       {
         "element": "mushroom_wrap",
         "amount": 1250.0,
-        "unit": "g"
+        "unit": "g",
+        "per": "use"
       },
       {
         "element": "plastic",
         "amount": 12000.0,
-        "unit": "g"
+        "unit": "g",
+        "per": "use"
       },
       {
         "element": "natural_gas",
         "amount": 5000.0,
-        "unit": "g"
+        "unit": "g",
+        "per": "use"
       }
     ],
     "produced": [
       {
         "element": "dried_mushroom_wrap",
         "amount": 6.0,
-        "unit": "unit"
+        "unit": "unit",
+        "per": "use"
       },
       {
         "element": "water",
         "amount": 6000.0,
-        "unit": "g"
+        "unit": "g",
+        "per": "use"
       },
       {
         "element": "carbon_dioxide",
         "amount": 1250.0,
-        "unit": "g"
+        "unit": "g",
+        "per": "use"
       }
     ],
     "time": 250.0
@@ -5485,34 +5497,40 @@
       {
         "element": "surf_n_turf",
         "amount": 1000.0,
-        "unit": "g"
+        "unit": "g",
+        "per": "use"
       },
       {
         "element": "plastic",
         "amount": 12000.0,
-        "unit": "g"
+        "unit": "g",
+        "per": "use"
       },
       {
         "element": "natural_gas",
         "amount": 5000.0,
-        "unit": "g"
+        "unit": "g",
+        "per": "use"
       }
     ],
     "produced": [
       {
         "element": "dried_surf_n_turf",
         "amount": 6.0,
-        "unit": "unit"
+        "unit": "unit",
+        "per": "use"
       },
       {
         "element": "water",
         "amount": 6000.0,
-        "unit": "g"
+        "unit": "g",
+        "per": "use"
       },
       {
         "element": "carbon_dioxide",
         "amount": 1250.0,
-        "unit": "g"
+        "unit": "g",
+        "per": "use"
       }
     ],
     "time": 250.0
@@ -5523,34 +5541,40 @@
       {
         "element": "pepper_bread",
         "amount": 1500.0,
-        "unit": "g"
+        "unit": "g",
+        "per": "use"
       },
       {
         "element": "plastic",
         "amount": 12000.0,
-        "unit": "g"
+        "unit": "g",
+        "per": "use"
       },
       {
         "element": "natural_gas",
         "amount": 5000.0,
-        "unit": "g"
+        "unit": "g",
+        "per": "use"
       }
     ],
     "produced": [
       {
         "element": "dried_pepper_bread",
         "amount": 6.0,
-        "unit": "unit"
+        "unit": "unit",
+        "per": "use"
       },
       {
         "element": "water",
         "amount": 6000.0,
-        "unit": "g"
+        "unit": "g",
+        "per": "use"
       },
       {
         "element": "carbon_dioxide",
         "amount": 1250.0,
-        "unit": "g"
+        "unit": "g",
+        "per": "use"
       }
     ],
     "time": 250.0
@@ -5561,34 +5585,40 @@
       {
         "element": "mushroom_quiche",
         "amount": 937.5,
-        "unit": "g"
+        "unit": "g",
+        "per": "use"
       },
       {
         "element": "plastic",
         "amount": 12000.0,
-        "unit": "g"
+        "unit": "g",
+        "per": "use"
       },
       {
         "element": "natural_gas",
         "amount": 5000.0,
-        "unit": "g"
+        "unit": "g",
+        "per": "use"
       }
     ],
     "produced": [
       {
         "element": "dried_mushroom_quiche",
         "amount": 6.0,
-        "unit": "unit"
+        "unit": "unit",
+        "per": "use"
       },
       {
         "element": "water",
         "amount": 6000.0,
-        "unit": "g"
+        "unit": "g",
+        "per": "use"
       },
       {
         "element": "carbon_dioxide",
         "amount": 1250.0,
-        "unit": "g"
+        "unit": "g",
+        "per": "use"
       }
     ],
     "time": 250.0
@@ -5599,34 +5629,40 @@
       {
         "element": "curried_beans",
         "amount": 1200.0,
-        "unit": "g"
+        "unit": "g",
+        "per": "use"
       },
       {
         "element": "plastic",
         "amount": 12000.0,
-        "unit": "g"
+        "unit": "g",
+        "per": "use"
       },
       {
         "element": "natural_gas",
         "amount": 5000.0,
-        "unit": "g"
+        "unit": "g",
+        "per": "use"
       }
     ],
     "produced": [
       {
         "element": "dried_curried_beans",
         "amount": 6.0,
-        "unit": "unit"
+        "unit": "unit",
+        "per": "use"
       },
       {
         "element": "water",
         "amount": 6000.0,
-        "unit": "g"
+        "unit": "g",
+        "per": "use"
       },
       {
         "element": "carbon_dioxide",
         "amount": 1250.0,
-        "unit": "g"
+        "unit": "g",
+        "per": "use"
       }
     ],
     "time": 250.0
@@ -5637,34 +5673,40 @@
       {
         "element": "spicy_tofu",
         "amount": 1500.0,
-        "unit": "g"
+        "unit": "g",
+        "per": "use"
       },
       {
         "element": "plastic",
         "amount": 12000.0,
-        "unit": "g"
+        "unit": "g",
+        "per": "use"
       },
       {
         "element": "natural_gas",
         "amount": 5000.0,
-        "unit": "g"
+        "unit": "g",
+        "per": "use"
       }
     ],
     "produced": [
       {
         "element": "dried_spicy_tofu",
         "amount": 6.0,
-        "unit": "unit"
+        "unit": "unit",
+        "per": "use"
       },
       {
         "element": "water",
         "amount": 6000.0,
-        "unit": "g"
+        "unit": "g",
+        "per": "use"
       },
       {
         "element": "carbon_dioxide",
         "amount": 1250.0,
-        "unit": "g"
+        "unit": "g",
+        "per": "use"
       }
     ],
     "time": 250.0
@@ -5675,34 +5717,40 @@
       {
         "element": "frost_burger",
         "amount": 1000.0,
-        "unit": "g"
+        "unit": "g",
+        "per": "use"
       },
       {
         "element": "plastic",
         "amount": 12000.0,
-        "unit": "g"
+        "unit": "g",
+        "per": "use"
       },
       {
         "element": "natural_gas",
         "amount": 5000.0,
-        "unit": "g"
+        "unit": "g",
+        "per": "use"
       }
     ],
     "produced": [
       {
         "element": "dried_frost_burger",
         "amount": 6.0,
-        "unit": "unit"
+        "unit": "unit",
+        "per": "use"
       },
       {
         "element": "water",
         "amount": 6000.0,
-        "unit": "g"
+        "unit": "g",
+        "per": "use"
       },
       {
         "element": "carbon_dioxide",
         "amount": 1250.0,
-        "unit": "g"
+        "unit": "g",
+        "per": "use"
       }
     ],
     "time": 250.0
@@ -5713,34 +5761,40 @@
       {
         "element": "mixed_berry_pie",
         "amount": 1428.5715,
-        "unit": "g"
+        "unit": "g",
+        "per": "use"
       },
       {
         "element": "plastic",
         "amount": 12000.0,
-        "unit": "g"
+        "unit": "g",
+        "per": "use"
       },
       {
         "element": "natural_gas",
         "amount": 5000.0,
-        "unit": "g"
+        "unit": "g",
+        "per": "use"
       }
     ],
     "produced": [
       {
         "element": "dried_berry_pie",
         "amount": 6.0,
-        "unit": "unit"
+        "unit": "unit",
+        "per": "use"
       },
       {
         "element": "water",
         "amount": 6000.0,
-        "unit": "g"
+        "unit": "g",
+        "per": "use"
       },
       {
         "element": "carbon_dioxide",
         "amount": 1250.0,
-        "unit": "g"
+        "unit": "g",
+        "per": "use"
       }
     ],
     "time": 250.0
@@ -6683,9 +6737,9 @@
     "source": "microbe_musher",
     "consumed": [
       {
-        "tag": "microbemusher_fishfood_input",
-        "amount": 6.0,
-        "unit": "unit"
+        "tag": "pacu_treat_seed",
+        "amount": 6000.0,
+        "unit": "g"
       },
       {
         "tag": "water_or_mucus",
@@ -7272,8 +7326,8 @@
     "consumed": [
       {
         "element": "pokeshell_molt",
-        "amount": 60.0,
-        "unit": "unit"
+        "amount": 60000.0,
+        "unit": "g"
       }
     ],
     "produced": [
@@ -7290,8 +7344,8 @@
     "consumed": [
       {
         "element": "oakshell_molt",
-        "amount": 500.0,
-        "unit": "unit"
+        "amount": 500000.0,
+        "unit": "g"
       }
     ],
     "produced": [
@@ -7308,8 +7362,8 @@
     "consumed": [
       {
         "element": "slogo_molt",
-        "amount": 10.0,
-        "unit": "unit"
+        "amount": 10000.0,
+        "unit": "g"
       }
     ],
     "produced": [
@@ -7326,8 +7380,8 @@
     "consumed": [
       {
         "element": "gildgo_molt",
-        "amount": 10.0,
-        "unit": "unit"
+        "amount": 10000.0,
+        "unit": "g"
       }
     ],
     "produced": [
@@ -7454,8 +7508,8 @@
     "consumed": [
       {
         "element": "bammoth_patty",
-        "amount": 120.0,
-        "unit": "unit"
+        "amount": 120000.0,
+        "unit": "g"
       }
     ],
     "produced": [
@@ -8177,8 +8231,8 @@
     "consumed": [
       {
         "element": "blossom_seed",
-        "amount": 1.0,
-        "unit": "unit"
+        "amount": 1000.0,
+        "unit": "g"
       },
       {
         "element": "dirt",
@@ -9523,8 +9577,8 @@
     "consumed": [
       {
         "element": "data_bank",
-        "amount": 13.333334,
-        "unit": "g",
+        "amount": 0.013333334,
+        "unit": "unit",
         "per": "s"
       }
     ],
@@ -9961,6 +10015,13 @@
         "amount": 166.66667,
         "unit": "g",
         "per": "s"
+      },
+      {
+        "element": "gas_grass_seed",
+        "amount": 0.041666667,
+        "unit": "g",
+        "per": "s",
+        "note": "10% base chance / harvest"
       }
     ]
   },
@@ -10005,6 +10066,13 @@
         "amount": 0.55555556,
         "unit": "g",
         "per": "s"
+      },
+      {
+        "element": "mealwood_seed",
+        "amount": 0.055555556,
+        "unit": "g",
+        "per": "s",
+        "note": "10% base chance / harvest"
       }
     ]
   },
@@ -10024,6 +10092,13 @@
         "amount": 0.00083333333,
         "unit": "unit",
         "per": "s"
+      },
+      {
+        "element": "thimble_reed_seed",
+        "amount": 0.083333333,
+        "unit": "g",
+        "per": "s",
+        "note": "10% base chance / harvest"
       }
     ]
   },
@@ -10043,6 +10118,13 @@
         "amount": 0.22222222,
         "unit": "g",
         "per": "s"
+      },
+      {
+        "element": "fungal_spore",
+        "amount": 0.022222222,
+        "unit": "g",
+        "per": "s",
+        "note": "10% base chance / harvest"
       }
     ]
   },
@@ -10068,6 +10150,13 @@
         "amount": 18.055556,
         "unit": "g",
         "per": "s"
+      },
+      {
+        "element": "dasha_saltvine_seed",
+        "amount": 0.027777778,
+        "unit": "g",
+        "per": "s",
+        "note": "10% base chance / harvest"
       }
     ]
   },
@@ -10093,6 +10182,13 @@
         "amount": 0.83333333,
         "unit": "g",
         "per": "s"
+      },
+      {
+        "element": "pincha_pepper_seed",
+        "amount": 0.020833333,
+        "unit": "g",
+        "per": "s",
+        "note": "10% base chance / harvest"
       }
     ]
   },
@@ -10143,6 +10239,13 @@
         "amount": 1.6666667,
         "unit": "g",
         "per": "s"
+      },
+      {
+        "element": "waterweed_seed",
+        "amount": 0.013888889,
+        "unit": "g",
+        "per": "s",
+        "note": "10% base chance / harvest"
       }
     ]
   },
@@ -10162,6 +10265,13 @@
         "amount": 0.27777778,
         "unit": "g",
         "per": "s"
+      },
+      {
+        "element": "blossom_seed",
+        "amount": 0.027777778,
+        "unit": "g",
+        "per": "s",
+        "note": "10% base chance / harvest"
       }
     ]
   },
@@ -10174,6 +10284,13 @@
         "amount": 0.00027777778,
         "unit": "unit",
         "per": "s"
+      },
+      {
+        "element": "balm_lily_seed",
+        "amount": 0.013888889,
+        "unit": "g",
+        "per": "s",
+        "note": "10% base chance / harvest"
       }
     ]
   },
@@ -10205,6 +10322,13 @@
         "amount": 58.333333,
         "unit": "g",
         "per": "s"
+      },
+      {
+        "element": "hydrocactus_seed",
+        "amount": 0.016666667,
+        "unit": "g",
+        "per": "s",
+        "note": "10% base chance / harvest"
       }
     ]
   },
@@ -10261,6 +10385,13 @@
         "amount": 0.41666667,
         "unit": "g",
         "per": "s"
+      },
+      {
+        "element": "grubfruit_seed",
+        "amount": 0.041666667,
+        "unit": "g",
+        "per": "s",
+        "note": "10% base chance / harvest"
       }
     ]
   },
@@ -10280,6 +10411,13 @@
         "amount": 1.6666667,
         "unit": "g",
         "per": "s"
+      },
+      {
+        "element": "grubfruit_seed",
+        "amount": 0.020833333,
+        "unit": "g",
+        "per": "s",
+        "note": "10% base chance / harvest"
       }
     ]
   },
@@ -10299,6 +10437,13 @@
         "amount": 0.25252525,
         "unit": "g",
         "per": "s"
+      },
+      {
+        "element": "bog_bucket_seed",
+        "amount": 0.025252525,
+        "unit": "g",
+        "per": "s",
+        "note": "10% base chance / harvest"
       }
     ]
   },
@@ -10318,6 +10463,13 @@
         "amount": 0.55555556,
         "unit": "g",
         "per": "s"
+      },
+      {
+        "element": "pikeapple_bush_seed",
+        "amount": 0.055555556,
+        "unit": "g",
+        "per": "s",
+        "note": "10% base chance / harvest"
       }
     ]
   },
@@ -10337,6 +10489,13 @@
         "amount": 0.18518519,
         "unit": "g",
         "per": "s"
+      },
+      {
+        "element": "plume_squash_seed",
+        "amount": 0.018518519,
+        "unit": "g",
+        "per": "s",
+        "note": "10% base chance / harvest"
       }
     ]
   },
@@ -10362,6 +10521,13 @@
         "amount": 30.0,
         "unit": "g",
         "per": "s"
+      },
+      {
+        "element": "alveo_vera_seed",
+        "amount": 0.083333333,
+        "unit": "g",
+        "per": "s",
+        "note": "10% base chance / harvest"
       }
     ]
   },
@@ -10393,6 +10559,13 @@
         "amount": 36.666667,
         "unit": "g",
         "per": "s"
+      },
+      {
+        "element": "lura_seed",
+        "amount": 0.013888889,
+        "unit": "g",
+        "per": "s",
+        "note": "10% base chance / harvest"
       }
     ]
   },
@@ -10431,6 +10604,13 @@
         "amount": 0.00083333333,
         "unit": "unit",
         "per": "s"
+      },
+      {
+        "element": "dew_seed",
+        "amount": 0.083333333,
+        "unit": "g",
+        "per": "s",
+        "note": "10% base chance / harvest"
       }
     ]
   },
@@ -10450,6 +10630,13 @@
         "amount": 0.55555556,
         "unit": "g",
         "per": "s"
+      },
+      {
+        "element": "sweatcorn_seed",
+        "amount": 0.055555556,
+        "unit": "g",
+        "per": "s",
+        "note": "10% base chance / harvest"
       }
     ]
   },
@@ -10488,6 +10675,13 @@
         "amount": 16.666667,
         "unit": "g",
         "per": "s"
+      },
+      {
+        "element": "seakomb_seed",
+        "amount": 0.033333333,
+        "unit": "g",
+        "per": "s",
+        "note": "10% base chance / harvest"
       }
     ]
   },
@@ -10512,6 +10706,13 @@
         "amount": 0.55555556,
         "unit": "g",
         "per": "s"
+      },
+      {
+        "element": "ovagro_node_seed",
+        "amount": 0.0092592593,
+        "unit": "g",
+        "per": "s",
+        "note": "1.67% base chance / branch"
       }
     ]
   },
@@ -10531,6 +10732,13 @@
         "amount": 116.66667,
         "unit": "g",
         "per": "s"
+      },
+      {
+        "element": "gum_palm_seed",
+        "amount": 0.016666667,
+        "unit": "g",
+        "per": "s",
+        "note": "10% base chance / harvest"
       }
     ]
   },
@@ -10550,6 +10758,13 @@
         "amount": 10.416667,
         "unit": "g",
         "per": "s"
+      },
+      {
+        "element": "clampum_seed",
+        "amount": 0.020833333,
+        "unit": "g",
+        "per": "s",
+        "note": "10% base chance / harvest"
       }
     ]
   },
@@ -10593,6 +10808,13 @@
         "amount": 0.00055555556,
         "unit": "unit",
         "per": "s"
+      },
+      {
+        "element": "tower_kelp_seed",
+        "amount": 0.0069444444,
+        "unit": "g",
+        "per": "s",
+        "note": "1.25% base chance / branch"
       }
     ]
   },
@@ -10612,6 +10834,13 @@
         "amount": 33.333333,
         "unit": "g",
         "per": "s"
+      },
+      {
+        "element": "starnacle_seed",
+        "amount": 0.041666667,
+        "unit": "g",
+        "per": "s",
+        "note": "10% base chance / harvest"
       }
     ]
   },
@@ -10631,6 +10860,13 @@
         "amount": 0.41666667,
         "unit": "g",
         "per": "s"
+      },
+      {
+        "element": "sodicane_seed",
+        "amount": 0.041666667,
+        "unit": "g",
+        "per": "s",
+        "note": "10% base chance / harvest"
       }
     ]
   },
@@ -10650,6 +10886,13 @@
         "amount": 0.00010416667,
         "unit": "unit",
         "per": "s"
+      },
+      {
+        "element": "pinpoket_seed",
+        "amount": 0.010416667,
+        "unit": "g",
+        "per": "s",
+        "note": "10% base chance / harvest"
       }
     ]
   },
@@ -10675,6 +10918,13 @@
         "amount": 41.666667,
         "unit": "g",
         "per": "s"
+      },
+      {
+        "element": "tublia_seed",
+        "amount": 0.020833333,
+        "unit": "g",
+        "per": "s",
+        "note": "10% base chance / harvest"
       }
     ]
   },
@@ -11219,7 +11469,7 @@
     "source": "pacu",
     "consumed": [
       {
-        "tag": "pacu_diet_toxicsand",
+        "tag": "pacu_seed_diet",
         "amount": 1.6666667,
         "unit": "g",
         "per": "s"
@@ -11239,8 +11489,8 @@
     "consumed": [
       {
         "element": "pacu_treat",
-        "amount": 1.6666667,
-        "unit": "g",
+        "amount": 0.0016666667,
+        "unit": "unit",
         "per": "s"
       }
     ],
@@ -11302,8 +11552,8 @@
     "produced": [
       {
         "element": "pokeshell_molt",
-        "amount": 0.016666666,
-        "unit": "unit",
+        "amount": 16.666666,
+        "unit": "g",
         "per": "s"
       },
       {
@@ -12080,8 +12330,8 @@
     "produced": [
       {
         "element": "oakshell_molt",
-        "amount": 0.13888888,
-        "unit": "unit",
+        "amount": 138.88888,
+        "unit": "g",
         "per": "s"
       },
       {
@@ -12208,7 +12458,7 @@
     "source": "gulp_fish",
     "consumed": [
       {
-        "tag": "pacu_diet_toxicsand",
+        "tag": "pacu_seed_diet",
         "amount": 1.6666667,
         "unit": "g",
         "per": "s"
@@ -12228,8 +12478,8 @@
     "consumed": [
       {
         "element": "pacu_treat",
-        "amount": 1.6666667,
-        "unit": "g",
+        "amount": 0.0016666667,
+        "unit": "unit",
         "per": "s"
       }
     ],
@@ -12419,7 +12669,7 @@
     "source": "tropical_pacu",
     "consumed": [
       {
-        "tag": "pacu_diet_toxicsand",
+        "tag": "pacu_seed_diet",
         "amount": 1.6666667,
         "unit": "g",
         "per": "s"
@@ -12439,8 +12689,8 @@
     "consumed": [
       {
         "element": "pacu_treat",
-        "amount": 1.6666667,
-        "unit": "g",
+        "amount": 0.0016666667,
+        "unit": "unit",
         "per": "s"
       }
     ],
@@ -13539,8 +13789,8 @@
     "consumed": [
       {
         "element": "dewdrip",
-        "amount": 1.6666667,
-        "unit": "g",
+        "amount": 0.0016666667,
+        "unit": "unit",
         "per": "s"
       }
     ],
@@ -15129,8 +15379,8 @@
     "consumed": [
       {
         "element": "mealwood_seed",
-        "amount": 0.1,
-        "unit": "unit"
+        "amount": 100.0,
+        "unit": "g"
       },
       {
         "element": "salt",
@@ -15151,8 +15401,8 @@
     "consumed": [
       {
         "element": "fungal_spore",
-        "amount": 0.1,
-        "unit": "unit"
+        "amount": 100.0,
+        "unit": "g"
       },
       {
         "element": "sucrose",
@@ -15173,8 +15423,8 @@
     "consumed": [
       {
         "element": "waterweed_seed",
-        "amount": 0.1,
-        "unit": "unit"
+        "amount": 100.0,
+        "unit": "g"
       },
       {
         "element": "iron",
@@ -15195,8 +15445,8 @@
     "consumed": [
       {
         "element": "blossom_seed",
-        "amount": 0.1,
-        "unit": "unit"
+        "amount": 100.0,
+        "unit": "g"
       },
       {
         "element": "slime",
@@ -15460,5 +15710,23 @@
         "per": "s"
       }
     ]
+  },
+  {
+    "source": "heat",
+    "consumed": [
+      {
+        "element": "raw_egg",
+        "amount": 1000.0,
+        "unit": "g"
+      }
+    ],
+    "produced": [
+      {
+        "element": "omelette",
+        "amount": 1000.0,
+        "unit": "g"
+      }
+    ],
+    "temp": 71.0
   }
 ]

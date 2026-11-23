@@ -1,5 +1,5 @@
 import { createElement } from '../utils.js?v=6';
-import { createSvgIcon } from '../icons.js?v=6';
+import { createSvgIcon } from '../icons.js?v=8';
 import {
     attachImgFallback,
     formatTemperature,
@@ -8,29 +8,68 @@ import {
     getTagMembers,
     loadData,
     prettifyId
-} from '../data-store.js?v=6';
+} from '../data-store.js?v=7';
 import {
+    MAX_BUILD_DESC_LEN,
+    MAX_BUILD_NAME_LEN,
     addCalculatorRecipe,
     computeCalculatorTable,
+    deleteSavedBuild,
     encodeCalculatorState,
+    encodeCalculatorStateAsync,
+    expandUnambiguousForElement,
+    findAutoLinkCandidatesForRow,
     findCalculatorRow,
     findProducersForColumn,
     formatMultiplierDisplay,
     getCalculatorState,
+    getChoiceSelectGroups,
     getLastSyncedEncoded,
+    getSavedBuilds,
+    getSavedBuildsCount,
+    getSwitchableChoiceGroup,
     getUnambiguousProducer,
-    loadCalculatorStateFromEncoded,
+    inferTagSelectionsFromSurplus,
+    isActiveBuildDirty,
+    loadCalculatorStateFromEncodedAsync,
+    loadSavedBuild,
     materializeTagColumn,
     recomputeAutoMultipliers,
     removeCalculatorRow,
     resetCalculatorState,
+    resolveChoiceRow,
     resolveDeficitWithProducer,
-    setCalculatorMultiplier,
-    setCalculatorRowAutoTarget,
+    saveCurrentBuild,
+    setCalculatorMultiplierAndSolve,
     setCalculatorShowPower,
     setLastSyncedEncoded,
+    toggleRowAuto,
     updateCalculatorRowTag
-} from '../calculator-state.js?v=7';
+} from '../calculator-state.js?v=12';
+
+function renderPreviewMosaic(previewIds, data) {
+    const allItems = data.allItems || {};
+    const items = (previewIds || []).map(id => allItems[id]).filter(Boolean).slice(0, 4);
+    if (items.length >= 2) {
+        return createElement(
+            'div',
+            { class: `calc-tag-mosaic count-${items.length}` },
+            items.map(m => attachImgFallback(createElement('img', {
+                src: `/images/${m.image}`,
+                alt: m.name,
+                class: 'calc-tag-mosaic-img'
+            })))
+        );
+    }
+    if (items[0]?.image) {
+        return attachImgFallback(createElement('img', {
+            src: `/images/${items[0].image}`,
+            alt: items[0].name,
+            class: 'calc-col-img'
+        }));
+    }
+    return createElement('div', { class: 'calc-img-placeholder' });
+}
 
 function renderSmallTagMosaic(tagId, data) {
     const members = getTagMembers(tagId);
@@ -96,6 +135,9 @@ function getRecipeBriefSummary(resolvedRecipe, data) {
     const allItems = data.allItems || {};
     const allTags = data.allTags || {};
     const labelEntry = (e) => {
+        if (e.choiceCol) {
+            return `#${e.choiceName || prettifyId(e.choiceCol)}`;
+        }
         if (e.tag) {
             return `#${allTags[e.tag]?.name || prettifyId(e.tag)}`;
         }
@@ -287,36 +329,50 @@ export async function renderCalculator(container, currentPath) {
 
     // Load from URL if it's a fresh/shared link; if it matches our own previous URL
     // (e.g. Browser Back after adding a recipe from Recipes), preserve the newer localStorage state.
-    const applyPathState = (path) => {
+    const applyPathState = async (path) => {
         if (path && path.startsWith('/calculator/')) {
             const encoded = path.substring('/calculator/'.length);
             if (encoded && encoded !== getLastSyncedEncoded()) {
-                loadCalculatorStateFromEncoded(encoded, { persist: true });
+                await loadCalculatorStateFromEncodedAsync(encoded, { persist: true });
             }
         }
         recomputeAutoMultipliers(data);
     };
-    applyPathState(currentPath);
+    await applyPathState(currentPath);
 
     container.textContent = '';
 
     let urlSyncTimeout = null;
-    const syncUrlNow = () => {
+    let urlSyncSeq = 0;
+    const syncUrlNow = async () => {
         if (urlSyncTimeout) {
             clearTimeout(urlSyncTimeout);
             urlSyncTimeout = null;
         }
-        const encoded = encodeCalculatorState(getCalculatorState());
+        const seq = ++urlSyncSeq;
+        const st = getCalculatorState();
+        if (!st.rows || st.rows.length === 0) {
+            setLastSyncedEncoded('');
+            if (window.location.hash !== '#/calculator') {
+                history.replaceState(null, '', '#/calculator');
+            }
+            return '';
+        }
+        const encoded = await encodeCalculatorStateAsync(st);
+        if (seq !== urlSyncSeq) return encoded;
         setLastSyncedEncoded(encoded);
         const targetHash = encoded ? `#/calculator/${encoded}` : '#/calculator';
         if (window.location.hash !== targetHash) {
             history.replaceState(null, '', targetHash);
         }
+        return encoded;
     };
 
     const scheduleUrlSync = () => {
         if (urlSyncTimeout) clearTimeout(urlSyncTimeout);
-        urlSyncTimeout = setTimeout(syncUrlNow, 300);
+        urlSyncTimeout = setTimeout(() => {
+            syncUrlNow();
+        }, 250);
     };
 
     // Header & Toolbar
@@ -337,6 +393,15 @@ export async function renderCalculator(container, currentPath) {
             class: 'calc-power-toggle-icon'
         }))
     ]);
+
+    const savedBadge = createElement('span', { class: 'calc-saved-badge hidden' });
+    const savedBuildsBtn = createElement('button', {
+        type: 'button',
+        id: 'calc-saved-btn',
+        class: 'utility-btn icon-only-btn calc-saved-btn',
+        title: 'Saved builds',
+        'aria-label': 'Saved builds'
+    }, [createSvgIcon('bookmark', 'btn-svg-icon'), savedBadge]);
 
     const copyLinkBtn = createElement('button', {
         type: 'button',
@@ -360,10 +425,17 @@ export async function renderCalculator(container, currentPath) {
         ]),
         createElement('div', { class: 'calc-toolbar' }, [
             powerLabel,
+            savedBuildsBtn,
             copyLinkBtn,
             resetBtn
         ])
     ]);
+
+    // Active / Shared Build Banner (hidden when build has no name or description)
+    const buildBanner = createElement('div', {
+        id: 'calc-build-banner',
+        class: 'calc-build-banner hidden'
+    });
 
     const tableWrapper = createElement('div', { class: 'calc-table-wrapper' });
     const emptyHint = createElement('p', {
@@ -391,6 +463,27 @@ export async function renderCalculator(container, currentPath) {
         role: 'status',
         'aria-live': 'polite'
     });
+
+    // Saved Builds Dialog
+    const savedDialogBody = createElement('div', { class: 'calc-saved-body' });
+    const savedDialogCloseBtn = createElement('button', {
+        type: 'button',
+        class: 'calc-popover-close',
+        'aria-label': 'Close saved builds',
+        textContent: '×'
+    });
+    const savedDialog = createElement('dialog', {
+        id: 'calc-saved-dialog',
+        class: 'modal calc-saved-modal'
+    }, [
+        createElement('div', { class: 'modal-content' }, [
+            createElement('div', { class: 'modal-header' }, [
+                createElement('h2', { textContent: 'Saved Builds' }),
+                savedDialogCloseBtn
+            ]),
+            savedDialogBody
+        ])
+    ]);
 
     // Confirmation dialog for Reset
     const resetDialogMsg = createElement('p', { class: 'calc-confirm-msg' });
@@ -425,11 +518,13 @@ export async function renderCalculator(container, currentPath) {
 
     const layout = createElement('div', { class: 'container calculator-container' }, [
         header,
+        buildBanner,
         tableWrapper,
         emptyHint,
         searchDropdown,
         deficitPopover,
         statusToast,
+        savedDialog,
         resetDialog
     ]);
     container.appendChild(layout);
@@ -453,6 +548,359 @@ export async function renderCalculator(container, currentPath) {
     let highlightedIndex = -1;
     let activeDeficitAnchor = null;
     let activePopoverNav = null;
+    let bannerDescExpanded = false;
+
+    const formatShortDate = (ts) => {
+        if (!ts) return '';
+        try {
+            return new Date(ts).toLocaleDateString(undefined, { month: 'short', day: 'numeric' });
+        } catch {
+            return '';
+        }
+    };
+
+    const syncSavedBadge = () => {
+        const cnt = getSavedBuildsCount();
+        savedBadge.textContent = cnt > 0 ? String(cnt) : '';
+        savedBadge.classList.toggle('hidden', cnt === 0);
+    };
+
+    const closeSavedDialog = () => {
+        if (savedDialog.open) savedDialog.close();
+    };
+
+    const renderBuildBanner = () => {
+        const st = getCalculatorState();
+        syncSavedBadge();
+        const hasTitle = Boolean(st.name);
+        const hasDesc = Boolean(st.description);
+
+        if (!hasTitle && !hasDesc) {
+            buildBanner.classList.add('hidden');
+            buildBanner.textContent = '';
+            return;
+        }
+
+        const dirty = isActiveBuildDirty();
+        const isSavedActive = Boolean(st.activeBuildId) && getSavedBuilds().some(b => b.id === st.activeBuildId);
+
+        buildBanner.textContent = '';
+        buildBanner.classList.remove('hidden');
+
+        const titleWrapChildren = [
+            createElement('h3', {
+                class: 'calc-build-banner-title',
+                textContent: st.name || 'Untitled Build'
+            })
+        ];
+        if (isSavedActive && dirty) {
+            titleWrapChildren.push(createElement('span', {
+                class: 'calc-build-status-pill is-dirty',
+                textContent: 'Modified'
+            }));
+        } else if (!isSavedActive && st.rows.length > 0) {
+            titleWrapChildren.push(createElement('span', {
+                class: 'calc-build-status-pill',
+                textContent: 'Not saved'
+            }));
+        }
+
+        const actions = [];
+        if (isSavedActive && dirty && st.rows.length > 0) {
+            const quickSaveBtn = createElement('button', {
+                type: 'button',
+                id: 'calc-quick-save-btn',
+                class: 'calc-build-action-btn is-primary',
+                textContent: 'Save'
+            });
+            quickSaveBtn.addEventListener('click', () => {
+                saveCurrentBuild({ name: st.name, description: st.description, overwriteId: st.activeBuildId });
+                renderBuildBanner();
+                syncUrlNow();
+                showToast(`Updated "${st.name}"`);
+            });
+            actions.push(quickSaveBtn);
+        } else if (!isSavedActive && st.rows.length > 0) {
+            const saveSharedBtn = createElement('button', {
+                type: 'button',
+                id: 'calc-save-shared-btn',
+                class: 'calc-build-action-btn is-primary',
+                textContent: 'Save build'
+            });
+            saveSharedBtn.addEventListener('click', () => openSavedDialog(true));
+            actions.push(saveSharedBtn);
+        }
+
+        const editBtn = createElement('button', {
+            type: 'button',
+            class: 'calc-build-action-btn',
+            title: 'Edit build title & notes',
+            'aria-label': 'Edit build title and notes'
+        }, [createSvgIcon('edit', 'btn-svg-icon')]);
+        editBtn.addEventListener('click', () => openSavedDialog(true));
+        actions.push(editBtn);
+
+        buildBanner.appendChild(createElement('div', { class: 'calc-build-banner-top' }, [
+            createElement('div', { class: 'calc-build-banner-title-wrap' }, titleWrapChildren),
+            createElement('div', { class: 'calc-build-banner-actions' }, actions)
+        ]));
+
+        if (hasDesc) {
+            const isLong = st.description.length > 240 || st.description.split('\n').length > 3;
+            const descEl = createElement('p', {
+                class: `calc-build-banner-desc${isLong && !bannerDescExpanded ? ' is-clamped' : ''}`,
+                textContent: st.description
+            });
+            buildBanner.appendChild(descEl);
+
+            if (isLong) {
+                const toggleBtn = createElement('button', {
+                    type: 'button',
+                    class: 'calc-desc-toggle-btn',
+                    textContent: bannerDescExpanded ? 'Show less' : 'Show more'
+                });
+                toggleBtn.addEventListener('click', () => {
+                    bannerDescExpanded = !bannerDescExpanded;
+                    renderBuildBanner();
+                });
+                buildBanner.appendChild(toggleBtn);
+            }
+        }
+    };
+
+    const renderSavedDialogContent = (focusName = false) => {
+        const st = getCalculatorState();
+        const builds = getSavedBuilds();
+        const activeSaved = st.activeBuildId ? builds.find(b => b.id === st.activeBuildId) : null;
+
+        savedDialogBody.textContent = '';
+
+        // Section 1: Save / Update Current Build
+        if (st.rows.length > 0) {
+            const nameInput = createElement('input', {
+                type: 'text',
+                id: 'calc-build-name-input',
+                class: 'calc-save-input',
+                maxlength: String(MAX_BUILD_NAME_LEN),
+                placeholder: 'Build name (e.g. Sushi Rolls for 16 dupes)',
+                value: st.name || ''
+            });
+            const descInput = createElement('textarea', {
+                id: 'calc-build-desc-input',
+                class: 'calc-save-textarea',
+                maxlength: String(MAX_BUILD_DESC_LEN),
+                rows: '3',
+                placeholder: 'Optional description or notes (up to 1000 chars)...'
+            });
+            descInput.value = st.description || '';
+
+            const counterEl = createElement('span', {
+                class: 'calc-desc-counter muted',
+                textContent: `${descInput.value.length} / ${MAX_BUILD_DESC_LEN}`
+            });
+            descInput.addEventListener('input', () => {
+                counterEl.textContent = `${descInput.value.length} / ${MAX_BUILD_DESC_LEN}`;
+            });
+
+            const doSave = (overwriteId) => {
+                const res = saveCurrentBuild({
+                    name: nameInput.value,
+                    description: descInput.value,
+                    overwriteId
+                });
+                bannerDescExpanded = false;
+                renderBuildBanner();
+                renderSavedDialogContent(false);
+                syncUrlNow();
+                showToast(res.isNew ? `Saved "${res.build.name}"` : `Updated "${res.build.name}"`);
+            };
+
+            const btnGroup = [];
+            if (activeSaved) {
+                const updateBtn = createElement('button', {
+                    type: 'button',
+                    id: 'calc-save-build-btn',
+                    class: 'calc-build-action-btn is-primary',
+                    textContent: 'Update Build'
+                });
+                updateBtn.addEventListener('click', () => doSave(activeSaved.id));
+
+                const saveNewBtn = createElement('button', {
+                    type: 'button',
+                    id: 'calc-save-as-new-btn',
+                    class: 'calc-build-action-btn',
+                    textContent: 'Save as New'
+                });
+                saveNewBtn.addEventListener('click', () => doSave(null));
+                btnGroup.push(saveNewBtn, updateBtn);
+            } else {
+                const saveBtn = createElement('button', {
+                    type: 'button',
+                    id: 'calc-save-build-btn',
+                    class: 'calc-build-action-btn is-primary',
+                    textContent: 'Save Build'
+                });
+                saveBtn.addEventListener('click', () => doSave(null));
+                btnGroup.push(saveBtn);
+            }
+
+            nameInput.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter') {
+                    e.preventDefault();
+                    doSave(activeSaved ? activeSaved.id : null);
+                }
+            });
+
+            savedDialogBody.appendChild(createElement('div', { class: 'calc-save-form' }, [
+                createElement('h3', {
+                    class: 'calc-save-form-title',
+                    textContent: activeSaved ? `Editing "${activeSaved.name}"` : `Save Current Build (${st.rows.length} ${st.rows.length === 1 ? 'recipe' : 'recipes'})`
+                }),
+                nameInput,
+                descInput,
+                createElement('div', { class: 'calc-save-form-footer' }, [
+                    counterEl,
+                    createElement('div', { class: 'calc-save-form-buttons' }, btnGroup)
+                ])
+            ]));
+
+            if (focusName && typeof nameInput.focus === 'function') {
+                setTimeout(() => {
+                    try { nameInput.focus(); } catch { /* ignore */ }
+                }, 0);
+            }
+        } else {
+            savedDialogBody.appendChild(createElement('p', {
+                class: 'calc-saved-empty muted',
+                textContent: 'Add recipes to the table first to save a new build.'
+            }));
+        }
+
+        // Section 2: Saved Builds List
+        savedDialogBody.appendChild(createElement('h3', {
+            class: 'calc-saved-section-title',
+            textContent: `Your Saved Builds (${builds.length})`
+        }));
+
+        if (builds.length === 0) {
+            savedDialogBody.appendChild(createElement('p', {
+                class: 'calc-saved-empty muted',
+                textContent: 'No saved builds yet.'
+            }));
+            return;
+        }
+
+        const listEl = createElement('div', { class: 'calc-saved-list' });
+        builds.forEach(b => {
+            const isCurrent = b.id === st.activeBuildId;
+            const loadBtn = createElement('button', {
+                type: 'button',
+                class: 'calc-saved-card-btn calc-saved-load-btn',
+                textContent: isCurrent ? 'Reload' : 'Load'
+            });
+            loadBtn.addEventListener('click', () => {
+                loadSavedBuild(b.id);
+                recomputeAutoMultipliers(data);
+                bannerDescExpanded = false;
+                closeSavedDialog();
+                closeDeficitPopover();
+                renderTable();
+                syncUrlNow();
+                showToast(`Loaded "${b.name}"`);
+            });
+
+            const linkBtn = createElement('button', {
+                type: 'button',
+                class: 'calc-saved-card-btn is-icon calc-saved-link-btn',
+                title: 'Copy share link',
+                'aria-label': `Copy link for ${b.name}`
+            }, [createSvgIcon('link', 'btn-svg-icon')]);
+            linkBtn.addEventListener('click', async () => {
+                const encoded = await encodeCalculatorStateAsync(b);
+                const origin = (window.location && window.location.origin) ? window.location.origin : window.location.href.split('#')[0].replace(/\/$/, '');
+                const shareUrl = `${origin}/#/calculator/${encoded}`;
+                if (navigator.clipboard && navigator.clipboard.writeText) {
+                    navigator.clipboard.writeText(shareUrl).then(() => {
+                        showToast(`Link copied for "${b.name}"`);
+                    }).catch(() => showToast('Failed to copy link'));
+                } else {
+                    showToast('Clipboard unavailable');
+                }
+            });
+
+            let confirmDeleteArmed = false;
+            let confirmTimer = null;
+            const delBtn = createElement('button', {
+                type: 'button',
+                class: 'calc-saved-card-btn is-icon is-danger calc-saved-delete-btn',
+                title: 'Delete saved build',
+                'aria-label': `Delete ${b.name}`
+            }, [createSvgIcon('trash', 'btn-svg-icon')]);
+            delBtn.addEventListener('click', () => {
+                if (!confirmDeleteArmed) {
+                    confirmDeleteArmed = true;
+                    delBtn.classList.remove('is-icon');
+                    delBtn.classList.add('is-confirm-delete');
+                    delBtn.textContent = 'Delete?';
+                    confirmTimer = setTimeout(() => {
+                        confirmDeleteArmed = false;
+                        delBtn.classList.add('is-icon');
+                        delBtn.classList.remove('is-confirm-delete');
+                        delBtn.textContent = '';
+                        delBtn.appendChild(createSvgIcon('trash', 'btn-svg-icon'));
+                    }, 3000);
+                    return;
+                }
+                if (confirmTimer) clearTimeout(confirmTimer);
+                deleteSavedBuild(b.id);
+                renderBuildBanner();
+                renderSavedDialogContent(false);
+                showToast(`Deleted "${b.name}"`);
+            });
+
+            const nameRowChildren = [
+                createElement('span', { class: 'calc-saved-card-name', textContent: b.name })
+            ];
+            if (isCurrent) {
+                nameRowChildren.push(createElement('span', {
+                    class: 'calc-option-badge is-added',
+                    textContent: 'Active'
+                }));
+            }
+
+            const dateStr = formatShortDate(b.updatedAt);
+            const metaText = `${b.rows.length} ${b.rows.length === 1 ? 'recipe' : 'recipes'}${dateStr ? ` · ${dateStr}` : ''}`;
+
+            const cardChildren = [
+                createElement('div', { class: 'calc-saved-card-top' }, [
+                    createElement('div', { class: 'calc-saved-card-info' }, [
+                        createElement('div', { class: 'calc-saved-card-name-row' }, nameRowChildren),
+                        createElement('div', { class: 'calc-saved-card-meta muted', textContent: metaText })
+                    ]),
+                    createElement('div', { class: 'calc-saved-card-actions' }, [loadBtn, linkBtn, delBtn])
+                ])
+            ];
+            if (b.description) {
+                cardChildren.push(createElement('p', {
+                    class: 'calc-saved-card-desc',
+                    textContent: b.description
+                }));
+            }
+
+            listEl.appendChild(createElement('div', {
+                class: `calc-saved-card${isCurrent ? ' is-active' : ''}`,
+                dataset: { buildId: b.id }
+            }, cardChildren));
+        });
+        savedDialogBody.appendChild(listEl);
+    };
+
+    const openSavedDialog = (focusName = false) => {
+        closeDropdown();
+        closeDeficitPopover();
+        renderSavedDialogContent(focusName);
+        if (!savedDialog.open) savedDialog.showModal();
+    };
 
     const closeDropdown = () => {
         searchDropdown.classList.add('hidden');
@@ -515,14 +963,14 @@ export async function renderCalculator(container, currentPath) {
         });
         headerClose.addEventListener('click', closeDeficitPopover);
 
-        const titleText = deficit.isTag
+        const titleText = (deficit.isTag || deficit.isChoice)
             ? `Pick ${deficit.name}`
             : `Produce ${deficit.name}`;
 
         const headerEl = createElement('div', { class: 'calc-popover-header' }, [
             createElement('div', { class: 'calc-popover-title-wrap' }, [
                 createElement('strong', { class: 'calc-popover-title', textContent: titleText }),
-                createElement('span', { class: 'calc-popover-deficit amount-negative', textContent: deficit.formattedText })
+                createElement('span', { class: `calc-popover-deficit ${deficit.isChoice ? 'amount-mixed' : 'amount-negative'}`, textContent: deficit.formattedText })
             ]),
             headerClose
         ]);
@@ -590,6 +1038,69 @@ export async function renderCalculator(container, currentPath) {
                 input.focus();
             }
         };
+
+        if (deficit.isChoice && deficit.choiceKey) {
+            const { flatOptions } = getChoiceSelectGroups(deficit.choiceKey, data);
+            const renderChoiceOptions = (filterText = '') => {
+                listEl.textContent = '';
+                const q = filterText.trim().toLowerCase();
+                const filtered = q ? flatOptions.filter(o => o.searchText.includes(q)) : flatOptions;
+                if (filtered.length === 0) {
+                    popHighlightIdx = -1;
+                    listEl.appendChild(createElement('div', { class: 'calc-search-empty muted', textContent: 'No matching options' }));
+                    return;
+                }
+                filtered.forEach((opt, idx) => {
+                    const btn = createElement('button', {
+                        type: 'button',
+                        class: 'calc-search-option calc-deficit-option'
+                    }, [
+                        opt.image
+                            ? attachImgFallback(createElement('img', { src: `/images/${opt.image}`, alt: opt.label, class: 'calc-option-img' }))
+                            : createElement('div', { class: 'calc-option-img-placeholder' }),
+                        createElement('div', { class: 'calc-option-text' }, [
+                            createElement('div', { class: 'calc-option-title' }, [
+                                createElement('span', { textContent: opt.label })
+                            ])
+                        ])
+                    ]);
+                    btn.addEventListener('mouseenter', () => {
+                        popHighlightIdx = idx;
+                        syncPopHighlight(false);
+                    });
+                    btn.addEventListener('click', () => {
+                        const targetRow = getCalculatorState().rows.find(r => r.recipeKey === deficit.choiceKey);
+                        if (targetRow) {
+                            const res = resolveChoiceRow(targetRow.id, {
+                                recipeKey: opt.recipeKey,
+                                tagSelections: opt.tagSelections
+                            }, data, { autoExpand: true });
+                            closeDeficitPopover();
+                            renderTable();
+                            scheduleUrlSync();
+                            const extra = res.addedNames.length > 0 ? ` → +${res.addedNames.join(', ')}` : '';
+                            showToast(`Selected ${opt.label}${extra}`);
+                        }
+                    });
+                    listEl.appendChild(btn);
+                });
+                popHighlightIdx = 0;
+                syncPopHighlight(false);
+            };
+
+            let filterInput = null;
+            if (flatOptions.length > 6) {
+                filterInput = createFilterInput(`Filter ${flatOptions.length} options...`, renderChoiceOptions);
+                deficitPopover.appendChild(filterInput);
+            }
+
+            renderChoiceOptions('');
+            deficitPopover.appendChild(listEl);
+            deficitPopover.classList.remove('hidden');
+            positionDeficitPopover();
+            focusFilter(filterInput);
+            return;
+        }
 
         if (deficit.isTag) {
             const members = getTagMembers(deficit.id);
@@ -742,7 +1253,11 @@ export async function renderCalculator(container, currentPath) {
                     closeDeficitPopover();
                     renderTable();
                     scheduleUrlSync();
-                    showToast(formatChainToast('Added', res.addedNames, res.updatedNames));
+                    if (res.loopFallback) {
+                        showToast(`Closed loop — added ${res.loopRowName} ×${formatMultiplierDisplay(res.loopMult)} as Manual`);
+                    } else {
+                        showToast(formatChainToast('Added', res.addedNames, res.updatedNames));
+                    }
                 });
 
                 listEl.appendChild(optEl);
@@ -766,19 +1281,148 @@ export async function renderCalculator(container, currentPath) {
 
     const handleDeficitAction = (deficit, anchorBtn) => {
         if (!deficit) return;
-        if (!deficit.isTag) {
-            const unique = getUnambiguousProducer(deficit.colKey, deficit.bucketKey, data);
-            const canDirectAuto = unique && !(unique.existingRow && unique.existingRow.autoTarget && unique.existingRow.autoTarget !== deficit.colKey);
-            if (canDirectAuto) {
-                closeDeficitPopover();
-                const res = resolveDeficitWithProducer(deficit.colKey, unique, data, { autoExpand: true });
-                renderTable();
-                scheduleUrlSync();
-                showToast(formatChainToast('Auto-built', res.addedNames, res.updatedNames));
-                return;
+        if (!deficit.isTag && !deficit.isChoice) {
+            const info = findProducersForColumn(deficit.colKey, deficit.bucketKey, deficit.amount, data);
+            // Ignore repackagers (Rehydrator) when deciding 1-click auto-add, while keeping Phase changes selectable!
+            const allProducers = info.producers.filter(p => !p.isRepackage);
+            // Skip popover when ALL producers are non-geyser, non-phase-change and come from ONE source
+            // (so items with both a building and a Heat/Cool option like Omelette still let the user choose!)
+            const allNonSpecial = allProducers.length > 0 && allProducers.every(p => !p.isGeyser && !p.isPhaseChange);
+            const distinctSources = new Set(allProducers.map(p => p.rawRecipe.source));
+            if (allNonSpecial && distinctSources.size === 1) {
+                const unique = allProducers.length === 1
+                    ? allProducers[0]
+                    : getUnambiguousProducer(deficit.colKey, deficit.bucketKey, data);
+                if (unique) {
+                    const canDirectAuto = !(unique.existingRow && unique.existingRow.autoTarget && unique.existingRow.autoTarget !== deficit.colKey);
+                    if (canDirectAuto) {
+                        closeDeficitPopover();
+                        const res = resolveDeficitWithProducer(deficit.colKey, unique, data, { autoExpand: true });
+                        renderTable();
+                        scheduleUrlSync();
+                        if (res.loopFallback) {
+                            showToast(`Closed loop — added ${res.loopRowName} ×${formatMultiplierDisplay(res.loopMult)} as Manual`);
+                        } else {
+                            showToast(formatChainToast('Auto-built', res.addedNames, res.updatedNames));
+                        }
+                        return;
+                    }
+                }
             }
         }
         openDeficitPopover(deficit, anchorBtn);
+    };
+
+    const openAutoLinkPopover = (row, srcDisplay, candidates, anchorBtn) => {
+        closeDropdown();
+        activeDeficitAnchor = anchorBtn;
+        deficitPopover.textContent = '';
+
+        const headerClose = createElement('button', {
+            type: 'button',
+            class: 'calc-popover-close',
+            'aria-label': 'Close',
+            textContent: '×'
+        });
+        headerClose.addEventListener('click', closeDeficitPopover);
+
+        deficitPopover.appendChild(createElement('div', { class: 'calc-popover-header' }, [
+            createElement('div', { class: 'calc-popover-title-wrap' }, [
+                createElement('strong', { class: 'calc-popover-title', textContent: `Auto-balance ${srcDisplay.name}` }),
+                createElement('span', { class: 'calc-popover-deficit muted', textContent: 'Pick resource to balance' })
+            ]),
+            headerClose
+        ]));
+
+        const listEl = createElement('div', { class: 'calc-popover-list' });
+        let popHighlightIdx = 0;
+
+        const syncPopHighlight = (shouldScroll = true) => {
+            const nodes = listEl.querySelectorAll('.calc-deficit-option');
+            if (nodes.length === 0) return;
+            if (popHighlightIdx < 0 || popHighlightIdx >= nodes.length) popHighlightIdx = 0;
+            nodes.forEach((node, i) => {
+                if (i === popHighlightIdx) {
+                    node.classList.add('highlighted');
+                    if (shouldScroll && typeof node.scrollIntoView === 'function') {
+                        node.scrollIntoView({ block: 'nearest' });
+                    }
+                } else {
+                    node.classList.remove('highlighted');
+                }
+            });
+        };
+
+        activePopoverNav = {
+            move(delta) {
+                const nodes = listEl.querySelectorAll('.calc-deficit-option');
+                if (nodes.length === 0) return;
+                popHighlightIdx = (popHighlightIdx + delta + nodes.length) % nodes.length;
+                syncPopHighlight(true);
+            },
+            confirm() {
+                const nodes = listEl.querySelectorAll('.calc-deficit-option');
+                if (nodes.length === 0) return;
+                nodes[popHighlightIdx >= 0 && popHighlightIdx < nodes.length ? popHighlightIdx : 0].click();
+            }
+        };
+
+        candidates.forEach((cand, idx) => {
+            let iconEl = createElement('div', { class: 'calc-option-img-placeholder' });
+            if (cand.autoTarget.startsWith('el:')) {
+                const elObj = data.allItems[cand.autoTarget.slice(3)];
+                if (elObj?.image) {
+                    iconEl = attachImgFallback(createElement('img', {
+                        src: `/images/${elObj.image}`,
+                        alt: elObj.name,
+                        class: 'calc-option-img'
+                    }));
+                }
+            } else if (cand.autoTarget.startsWith('tag:')) {
+                iconEl = renderSmallTagMosaic(cand.autoTarget.slice(4), data);
+            } else if (srcDisplay.image) {
+                iconEl = attachImgFallback(createElement('img', {
+                    src: `/images/${srcDisplay.image}`,
+                    alt: srcDisplay.name,
+                    class: 'calc-option-img'
+                }));
+            }
+
+            const optEl = createElement('button', {
+                type: 'button',
+                class: 'calc-search-option calc-deficit-option'
+            }, [
+                iconEl,
+                createElement('div', { class: 'calc-option-text' }, [
+                    createElement('div', { class: 'calc-option-title' }, [
+                        createElement('span', { textContent: cand.label })
+                    ])
+                ])
+            ]);
+
+            optEl.addEventListener('mouseenter', () => {
+                popHighlightIdx = idx;
+                syncPopHighlight(false);
+            });
+            optEl.addEventListener('click', () => {
+                const res = toggleRowAuto(row.id, data, cand.autoTarget);
+                closeDeficitPopover();
+                renderTable();
+                scheduleUrlSync();
+                if (res.singularLoop) {
+                    showToast('Closed loop — keep at least one row Manual');
+                } else {
+                    showToast(`${srcDisplay.name} → Auto (${cand.label})`);
+                }
+            });
+
+            listEl.appendChild(optEl);
+        });
+
+        syncPopHighlight(false);
+        deficitPopover.appendChild(listEl);
+        deficitPopover.classList.remove('hidden');
+        positionDeficitPopover();
     };
 
     const renderTotalCellContent = (td, totalData, col) => {
@@ -787,23 +1431,26 @@ export async function renderCalculator(container, currentPath) {
         if (!deficit) return;
 
         let canResolve = false;
-        if (deficit.isTag) {
+        if (deficit.isChoice) {
+            canResolve = Boolean(deficit.choiceKey);
+        } else if (deficit.isTag) {
             canResolve = getTagMembers(deficit.id).length > 0;
         } else {
             canResolve = findProducersForColumn(deficit.colKey, deficit.bucketKey, deficit.amount, data).producers.length > 0;
         }
         if (!canResolve) return;
 
+        const isPick = deficit.isTag || deficit.isChoice;
         const btn = createElement('button', {
             type: 'button',
             class: 'calc-deficit-btn',
-            title: deficit.isTag
-                ? `Pick a specific item for #${col.name}`
+            title: isPick
+                ? `Pick a specific option for #${col.name}`
                 : `Add producer to cover ${col.name} deficit`,
-            'aria-label': deficit.isTag
-                ? `Pick item for ${col.name}`
+            'aria-label': isPick
+                ? `Pick option for ${col.name}`
                 : `Resolve ${col.name} deficit`,
-            textContent: deficit.isTag ? '+ Pick' : '+ Add'
+            textContent: isPick ? '+ Pick' : '+ Add'
         });
         btn.addEventListener('click', (e) => {
             e.stopPropagation();
@@ -850,7 +1497,8 @@ export async function renderCalculator(container, currentPath) {
 
     const selectSearchOption = (opt) => {
         if (!opt) return;
-        const res = addCalculatorRecipe(opt.rawRecipe._key, opt.tagSelections, 1);
+        const inferred = inferTagSelectionsFromSurplus(opt.rawRecipe, opt.tagSelections, data);
+        const res = addCalculatorRecipe(opt.rawRecipe._key, inferred.tagSelections, 1);
         recomputeAutoMultipliers(data);
         closeDropdown();
         closeDeficitPopover();
@@ -859,6 +1507,8 @@ export async function renderCalculator(container, currentPath) {
         const srcName = getSourceDisplay(opt.rawRecipe, data).name;
         if (res.merged) {
             showToast(`${srcName} multiplier increased to ×${res.row.multiplier}`);
+        } else if (inferred.autoPickedNames.length > 0) {
+            showToast(`Added ${srcName} (${inferred.autoPickedNames.join(', ')})`);
         } else {
             showToast(`Added ${srcName}`);
         }
@@ -983,6 +1633,7 @@ export async function renderCalculator(container, currentPath) {
                 renderTotalCellContent(td, model.totals[col.key], col);
             }
         });
+        renderBuildBanner();
     };
 
     const renderTable = () => {
@@ -991,6 +1642,7 @@ export async function renderCalculator(container, currentPath) {
 
         powerCheckbox.checked = st.showPower;
         powerLabel.classList.toggle('is-active', Boolean(st.showPower));
+        renderBuildBanner();
         const n = model.rows.length;
         countBadge.textContent = `${n} ${n === 1 ? 'recipe' : 'recipes'}`;
         resetBtn.disabled = n === 0;
@@ -1030,6 +1682,20 @@ export async function renderCalculator(container, currentPath) {
         }
 
         model.columns.forEach(col => {
+            if (col.isChoiceCol) {
+                const iconEl = renderPreviewMosaic(col.previewIds, data);
+                const labelText = `#${col.name}`;
+                headCells.push(createElement('th', { class: 'calc-col-material is-tag-col is-choice-col' }, [
+                    createElement('div', {
+                        class: 'calc-col-header-inner',
+                        title: labelText
+                    }, [
+                        iconEl,
+                        createElement('span', { class: 'calc-col-name', textContent: labelText })
+                    ])
+                ]));
+                return;
+            }
             const href = col.isTag ? `#/recipes/tag/${col.id}` : `#/recipes/${col.id}`;
             const iconEl = col.isTag
                 ? renderSmallTagMosaic(col.id, data)
@@ -1114,19 +1780,21 @@ export async function renderCalculator(container, currentPath) {
 
             const applyMult = (val, updateInputEl = false) => {
                 const clean = Math.max(0, Math.round(val * 1e6) / 1e6);
-                setCalculatorMultiplier(row.id, clean, { unlockAuto: true });
-                if (multControlEl && multControlEl.classList.contains('is-auto')) {
-                    multControlEl.classList.remove('is-auto');
+                const res = setCalculatorMultiplierAndSolve(row.id, clean, data);
+                if (!res.stayedAuto) {
+                    if (multControlEl && multControlEl.classList.contains('is-auto')) {
+                        multControlEl.classList.remove('is-auto');
+                    }
+                    if (trEl && trEl.classList.contains('is-auto-row')) {
+                        trEl.classList.remove('is-auto-row');
+                    }
+                    if (autoPillEl) {
+                        autoPillEl.classList.add('is-off');
+                        autoPillEl.textContent = 'Auto';
+                        autoPillEl.title = 'Manual count (click to enable Auto-balance)';
+                    }
+                    multInput.removeAttribute('title');
                 }
-                if (trEl && trEl.classList.contains('is-auto-row')) {
-                    trEl.classList.remove('is-auto-row');
-                }
-                if (autoPillEl) {
-                    autoPillEl.remove();
-                    autoPillEl = null;
-                }
-                multInput.removeAttribute('title');
-                recomputeAutoMultipliers(data);
                 if (updateInputEl) {
                     multInput.value = String(clean);
                 }
@@ -1199,22 +1867,70 @@ export async function renderCalculator(container, currentPath) {
 
             const metaChildren = [];
             if (isAutoRow) {
-                const targetIsTag = row.autoTarget.startsWith('tag:');
-                const targetId = row.autoTarget.slice(row.autoTarget.indexOf(':') + 1);
-                const targetName = targetIsTag
-                    ? `#${data.allTags[targetId]?.name || prettifyId(targetId)}`
-                    : (data.allItems[targetId]?.name || prettifyId(targetId));
+                let pillText = 'Auto';
+                let pillTitle = 'Auto-linked with chain (edit Count to rescale all linked rows, or click to lock Manual)';
+                if (row.autoTarget === 'root') {
+                    pillText = 'Auto';
+                } else if (row.autoTarget.startsWith('row:')) {
+                    const parentId = row.autoTarget.slice(4);
+                    const parentRow = model.rows.find(r => r.id === parentId);
+                    const targetName = parentRow ? getSourceDisplay(parentRow.rawRecipe, data).name : srcDisplay.name;
+                    pillText = `Auto → ${targetName}`;
+                    pillTitle = `Count synced with ${targetName} (edit Count to rescale chain, or click to lock Manual)`;
+                } else {
+                    const targetIsTag = row.autoTarget.startsWith('tag:');
+                    const targetId = row.autoTarget.slice(row.autoTarget.indexOf(':') + 1);
+                    const targetName = targetIsTag
+                        ? `#${data.allTags[targetId]?.name || prettifyId(targetId)}`
+                        : (data.allItems[targetId]?.name || prettifyId(targetId));
+                    pillText = `Auto → ${targetName}`;
+                    pillTitle = `Auto-balanced for ${targetName} (edit Count to rescale chain, or click to lock Manual)`;
+                }
                 autoPillEl = createElement('button', {
                     type: 'button',
                     class: 'calc-auto-pill',
-                    title: `Auto-balanced to cover ${targetName} (click to switch to manual)`,
-                    textContent: `Auto → ${targetName}`
+                    title: pillTitle,
+                    textContent: pillText
                 });
-                autoPillEl.addEventListener('click', () => {
-                    setCalculatorRowAutoTarget(row.id, null);
+                autoPillEl.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    const res = toggleRowAuto(row.id, data);
+                    if (res.needsChoice) {
+                        openAutoLinkPopover(row, srcDisplay, res.candidates, autoPillEl);
+                        return;
+                    }
+                    closeDeficitPopover();
                     renderTable();
                     scheduleUrlSync();
-                    showToast(`${srcDisplay.name} switched to manual`);
+                    showToast(res.enabled ? `${srcDisplay.name} → Auto` : `${srcDisplay.name} switched to manual`);
+                });
+                metaChildren.push(autoPillEl);
+            } else if (model.rows.length > 1 && findAutoLinkCandidatesForRow(row.id, data).length > 0) {
+                autoPillEl = createElement('button', {
+                    type: 'button',
+                    class: 'calc-auto-pill is-off',
+                    title: 'Manual count — click to enable Auto-balance',
+                    textContent: 'Auto'
+                });
+                autoPillEl.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    const res = toggleRowAuto(row.id, data);
+                    if (res.needsChoice) {
+                        openAutoLinkPopover(row, srcDisplay, res.candidates, autoPillEl);
+                        return;
+                    }
+                    if (res.singularLoop) {
+                        showToast('Closed loop — keep at least one row Manual');
+                        return;
+                    }
+                    if (res.noCandidates) {
+                        showToast('No connected recipes to auto-balance with');
+                        return;
+                    }
+                    closeDeficitPopover();
+                    renderTable();
+                    scheduleUrlSync();
+                    showToast(res.label && !res.label.startsWith('Join') ? `${srcDisplay.name} → Auto (${res.label})` : `${srcDisplay.name} → Auto`);
                 });
                 metaChildren.push(autoPillEl);
             }
@@ -1227,7 +1943,8 @@ export async function renderCalculator(container, currentPath) {
 
             if (needsSubtitle) {
                 const brief = getRecipeBriefSummary(row.resolvedRecipe, data);
-                const timeNote = row.rawRecipe.time ? ` (${row.rawRecipe.time}s → rate)` : '';
+                const hasExplicitPer = (row.rawRecipe.consumed || []).concat(row.rawRecipe.produced || []).some(e => Boolean(e.per));
+                const timeNote = (row.rawRecipe.time && !hasExplicitPer) ? ` (${row.rawRecipe.time}s → rate)` : '';
                 if (brief || timeNote) {
                     metaChildren.push(createElement('div', {
                         class: 'calc-source-subtitle muted',
@@ -1237,10 +1954,65 @@ export async function renderCalculator(container, currentPath) {
                 }
             }
 
-            // Inline tag variant selectors (User Choice A3!)
-            if (row.tagSlots && row.tagSlots.length > 0) {
+            // Unified variant switcher (for multi-diet critters & single-source multi-recipes) + remaining inline tag selectors
+            const switchGroup = getSwitchableChoiceGroup(row, data);
+            const remainingTagSlots = (row.tagSlots || []).filter(slot => !(switchGroup && switchGroup.coveredTagIds.has(slot.tagId)));
+
+            if (switchGroup || remainingTagSlots.length > 0) {
                 const selectsRow = createElement('div', { class: 'calc-tag-selects' });
-                row.tagSlots.forEach(slot => {
+
+                if (switchGroup) {
+                    const selectEl = createElement('select', {
+                        class: `calc-tag-select calc-choice-select${!switchGroup.currentValue ? ' is-unselected' : ''}`,
+                        'aria-label': `Select option for ${srcDisplay.name}`
+                    });
+                    selectEl.appendChild(createElement('option', {
+                        value: '',
+                        textContent: switchGroup.anyLabel
+                    }));
+                    switchGroup.groups.forEach(grp => {
+                        const targetParent = grp.label
+                            ? createElement('optgroup', { label: grp.label })
+                            : selectEl;
+                        grp.options.forEach(opt => {
+                            targetParent.appendChild(createElement('option', {
+                                value: opt.value,
+                                textContent: opt.label
+                            }));
+                        });
+                        if (grp.label) {
+                            selectEl.appendChild(targetParent);
+                        }
+                    });
+                    selectEl.value = switchGroup.currentValue || '';
+
+                    selectEl.addEventListener('change', () => {
+                        const val = selectEl.value;
+                        let spec;
+                        if (!val) {
+                            spec = { recipeKey: switchGroup.choiceKey, tagSelections: {} };
+                        } else if (val.startsWith('concrete::')) {
+                            const parts = val.split('::');
+                            spec = { recipeKey: parts[1], tagSelections: { [parts[2]]: parts[3] } };
+                        } else if (val.startsWith('recipe::')) {
+                            spec = { recipeKey: val.slice('recipe::'.length), tagSelections: {} };
+                        } else {
+                            return;
+                        }
+                        const res = resolveChoiceRow(row.id, spec, data, { autoExpand: true });
+                        closeDeficitPopover();
+                        renderTable();
+                        scheduleUrlSync();
+                        if (res.addedNames && res.addedNames.length > 0) {
+                            showToast(formatChainToast('Auto-built', res.addedNames, []));
+                        } else if (res.merged) {
+                            showToast('Merged into existing matching recipe row');
+                        }
+                    });
+                    selectsRow.appendChild(selectEl);
+                }
+
+                remainingTagSlots.forEach(slot => {
                     const selectEl = createElement('select', {
                         class: 'calc-tag-select',
                         'aria-label': `Select ${slot.tagName}`
@@ -1259,12 +2031,19 @@ export async function renderCalculator(container, currentPath) {
                     selectEl.value = slot.selectedItemId || '';
 
                     selectEl.addEventListener('change', () => {
-                        const res = updateCalculatorRowTag(row.id, slot.tagId, selectEl.value || null);
+                        const chosenId = selectEl.value || null;
+                        const res = updateCalculatorRowTag(row.id, slot.tagId, chosenId);
                         recomputeAutoMultipliers(data);
+                        let expandedNames = [];
+                        if (isAutoRow && chosenId) {
+                            expandedNames = expandUnambiguousForElement(chosenId, data);
+                        }
                         closeDeficitPopover();
                         renderTable();
                         scheduleUrlSync();
-                        if (res && res.merged) {
+                        if (expandedNames.length > 0) {
+                            showToast(formatChainToast('Auto-built', expandedNames, []));
+                        } else if (res && res.merged) {
                             showToast('Merged into existing matching recipe row');
                         }
                     });
@@ -1435,10 +2214,19 @@ export async function renderCalculator(container, currentPath) {
         scheduleUrlSync();
     });
 
+    savedBuildsBtn.addEventListener('click', () => {
+        openSavedDialog(getCalculatorState().rows.length > 0 && !getCalculatorState().activeBuildId);
+    });
+    savedDialogCloseBtn.addEventListener('click', closeSavedDialog);
+    savedDialog.addEventListener('click', (e) => {
+        const rect = savedDialog.getBoundingClientRect();
+        const inDialog = rect.top <= e.clientY && e.clientY <= rect.top + rect.height &&
+            rect.left <= e.clientX && e.clientX <= rect.left + rect.width;
+        if (!inDialog) closeSavedDialog();
+    });
+
     let copyIconTimer = null;
-    copyLinkBtn.addEventListener('click', () => {
-        syncUrlNow();
-        const urlToCopy = window.location.href;
+    copyLinkBtn.addEventListener('click', async () => {
         const flashCopied = () => {
             copyLinkBtn.textContent = '';
             copyLinkBtn.appendChild(createSvgIcon('check', 'btn-svg-icon'));
@@ -1454,13 +2242,23 @@ export async function renderCalculator(container, currentPath) {
             }, 2000);
         };
 
-        if (navigator.clipboard && navigator.clipboard.writeText) {
-            navigator.clipboard.writeText(urlToCopy).then(flashCopied).catch(() => {
-                showToast('Failed to copy link');
-            });
-        } else {
-            showToast('Clipboard unavailable');
+        const doCopy = (urlToCopy) => {
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(urlToCopy).then(flashCopied).catch(() => {
+                    showToast('Failed to copy link');
+                });
+            } else {
+                showToast('Clipboard unavailable');
+            }
+        };
+
+        // If URL is already up to date, copy synchronously inside the user gesture (iOS Safari safe)
+        if (!urlSyncTimeout && getLastSyncedEncoded() && window.location.hash.startsWith('#/calculator/')) {
+            doCopy(window.location.href);
+            return;
         }
+        await syncUrlNow();
+        doCopy(window.location.href);
     });
 
     const closeResetDialog = () => {
@@ -1470,13 +2268,16 @@ export async function renderCalculator(container, currentPath) {
     resetBtn.addEventListener('click', () => {
         const count = getCalculatorState().rows.length;
         if (count === 0) return;
-        resetDialogMsg.textContent = `Remove all ${count} ${count === 1 ? 'recipe' : 'recipes'} from the calculator? This will clear your saved table.`;
+        const savedCnt = getSavedBuildsCount();
+        const savedNote = savedCnt > 0 ? ' Your saved builds will not be deleted.' : '';
+        resetDialogMsg.textContent = `Remove all ${count} ${count === 1 ? 'recipe' : 'recipes'} from the calculator?${savedNote}`;
         resetDialog.showModal();
     });
 
     cancelResetBtn.addEventListener('click', closeResetDialog);
     confirmResetBtn.addEventListener('click', () => {
         resetCalculatorState();
+        bannerDescExpanded = false;
         closeResetDialog();
         closeDeficitPopover();
         renderTable();
@@ -1497,12 +2298,14 @@ export async function renderCalculator(container, currentPath) {
     };
     window.addEventListener('settingsupdated', onSettingsUpdate);
 
-    const onRouteUpdate = (e) => {
+    const onRouteUpdate = async (e) => {
         if (e.detail && e.detail.path && e.detail.path.startsWith('/calculator')) {
-            applyPathState(e.detail.path);
+            await applyPathState(e.detail.path);
+            bannerDescExpanded = false;
             closeDeficitPopover();
+            closeSavedDialog();
             renderTable();
-            syncUrlNow();
+            await syncUrlNow();
         }
     };
     window.addEventListener('routeupdate', onRouteUpdate);
@@ -1543,7 +2346,7 @@ export async function renderCalculator(container, currentPath) {
     window.addEventListener('keydown', onGlobalKeyDown);
 
     renderTable();
-    syncUrlNow();
+    await syncUrlNow();
 
     return () => {
         window.removeEventListener('settingsupdated', onSettingsUpdate);
@@ -1556,6 +2359,7 @@ export async function renderCalculator(container, currentPath) {
         if (toastTimer) clearTimeout(toastTimer);
         if (copyIconTimer) clearTimeout(copyIconTimer);
         closeResetDialog();
+        closeSavedDialog();
         closeDeficitPopover();
     };
 }

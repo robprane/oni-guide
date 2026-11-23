@@ -1,5 +1,5 @@
 import { createElement } from '../utils.js?v=6';
-import { createSvgIcon } from '../icons.js?v=6';
+import { createSvgIcon } from '../icons.js?v=8';
 import {
     attachImgFallback,
     entryMatchesItem,
@@ -16,13 +16,13 @@ import {
     materializeRecipeForItem,
     prettifyId,
     recipeHasTag
-} from '../data-store.js?v=6';
+} from '../data-store.js?v=7';
 import {
     addCalculatorRecipe,
     extractTagSelectionsFromRecipe,
     findCalculatorRow,
     getCalculatorRowCount
-} from '../calculator-state.js?v=7';
+} from '../calculator-state.js?v=12';
 
 function updateCalcButtonLabel(btn, recipeKey, tagSelections) {
     const existing = findCalculatorRow(recipeKey, tagSelections);
@@ -473,14 +473,17 @@ function renderRecipeItem(data, isProducedFlag, onTagToggle) {
         const slotBtn = createElement('button', {
             type: 'button',
             class: 'recipe-item-link recipe-tag-slot',
-            title: `Click to expand ${tag.name} (${members.length} items)`
+            title: data.note
+                ? `${data.note} · Click to expand ${tag.name} (${members.length} items)`
+                : `Click to expand ${tag.name} (${members.length} items)`
         }, [
             renderTagMosaic(data.tag),
             createElement('span', { class: 'recipe-item-name recipe-tag-name' }, [
                 tag.name,
                 createElement('span', { class: 'recipe-tag-count', textContent: String(members.length) })
             ]),
-            createElement('span', { class: `recipe-item-amount ${amountClass}`, textContent: amountStr })
+            createElement('span', { class: `recipe-item-amount ${amountClass}`, textContent: amountStr }),
+            ...(data.note ? [createElement('span', { class: 'recipe-item-note muted', textContent: data.note, title: data.note })] : [])
         ]);
 
         if (onTagToggle) {
@@ -506,10 +509,15 @@ function renderRecipeItem(data, isProducedFlag, onTagToggle) {
     // Concrete item slot
     const el = allItems[data.element];
     if (el) {
-        const link = createElement('a', { href: `#/recipes/${el.id}`, class: 'recipe-item-link' }, [
+        const link = createElement('a', {
+            href: `#/recipes/${el.id}`,
+            class: 'recipe-item-link',
+            title: data.note ? `${el.name} — ${data.note}` : undefined
+        }, [
             attachImgFallback(createElement('img', { src: `/images/${el.image}`, class: 'recipe-item-img', title: el.name, alt: el.name })),
             createElement('span', { class: 'recipe-item-name muted', textContent: el.name }),
-            createElement('span', { class: `recipe-item-amount ${amountClass}`, textContent: amountStr })
+            createElement('span', { class: `recipe-item-amount ${amountClass}`, textContent: amountStr }),
+            ...(data.note ? [createElement('span', { class: 'recipe-item-note muted', textContent: data.note, title: data.note })] : [])
         ]);
 
         if (data._fromTag && !data._inExpandedRow) {

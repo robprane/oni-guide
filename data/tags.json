@@ -190,19 +190,19 @@
     "image": "CopperOre.png"
   },
   {
-    "id": "microbemusher_fishfood_input",
-    "name": "Mealwood Seed / Blossom Seed (+4)",
-    "image": "BlossomSeed.png"
-  },
-  {
     "id": "oakshell_diet_sand",
     "name": "Oakshell Diet",
     "image": "PollutedDirt.png"
   },
   {
-    "id": "pacu_diet_toxicsand",
-    "name": "Pacu Diet",
+    "id": "pacu_seed_diet",
+    "name": "Pacu Seed Diet",
     "image": "AlveoVeraSeed.png"
+  },
+  {
+    "id": "pacu_treat_seed",
+    "name": "Pacu Treat Seed",
+    "image": "BlossomSeed.png"
   },
   {
     "id": "pip_diet_dirt",
