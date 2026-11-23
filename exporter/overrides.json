@@ -300,6 +300,13 @@
         { "gameId": "SelfChargingElectrobank", "amount": 1, "unit": "unit", "per": "150 cycles" }
       ],
       "produced": []
+    },
+    {
+      "sourceGameId": "SleepClinicPajamas",
+      "consumed": [],
+      "produced": [
+        { "gameId": "DreamJournal", "amount": 0.0033333333, "unit": "unit", "per": "s" }
+      ]
     }
   ]
 }

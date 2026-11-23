@@ -9425,8 +9425,8 @@
       },
       {
         "element": "dream_journal",
-        "amount": 16.666667,
-        "unit": "g",
+        "amount": 0.016666667,
+        "unit": "unit",
         "per": "s"
       }
     ],
@@ -10973,8 +10973,9 @@
     "produced": [
       {
         "element": "meat",
-        "amount": 1000.0,
-        "unit": "g"
+        "amount": 0.37037037,
+        "unit": "g",
+        "per": "s"
       }
     ]
   },
@@ -10984,7 +10985,7 @@
     "produced": [
       {
         "element": "puft_egg",
-        "amount": 3.7037037e-05,
+        "amount": 0.00037037037,
         "unit": "unit",
         "per": "s"
       }
@@ -11015,8 +11016,9 @@
     "produced": [
       {
         "element": "meat",
-        "amount": 2000.0,
-        "unit": "g"
+        "amount": 0.55555552,
+        "unit": "g",
+        "per": "s"
       }
     ]
   },
@@ -11026,7 +11028,7 @@
     "produced": [
       {
         "element": "slickster_egg",
-        "amount": 2.7777776e-05,
+        "amount": 0.00027777776,
         "unit": "unit",
         "per": "s"
       }
@@ -11106,8 +11108,9 @@
     "produced": [
       {
         "element": "meat",
-        "amount": 10000.0,
-        "unit": "g"
+        "amount": 0.22222222,
+        "unit": "g",
+        "per": "s"
       }
     ]
   },
@@ -11174,8 +11177,9 @@
     "produced": [
       {
         "element": "meat",
-        "amount": 10000.0,
-        "unit": "g"
+        "amount": 2.7777776,
+        "unit": "g",
+        "per": "s"
       }
     ]
   },
@@ -11185,7 +11189,7 @@
     "produced": [
       {
         "element": "shove_vole_egg",
-        "amount": 2.7777776e-05,
+        "amount": 0.00027777776,
         "unit": "unit",
         "per": "s"
       }
@@ -11209,7 +11213,7 @@
     "produced": [
       {
         "element": "shine_bug_egg",
-        "amount": 0.0001111111,
+        "amount": 0.001111111,
         "unit": "unit",
         "per": "s"
       }
@@ -11282,8 +11286,9 @@
     "produced": [
       {
         "element": "meat",
-        "amount": 2000.0,
-        "unit": "g"
+        "amount": 0.37037037,
+        "unit": "g",
+        "per": "s"
       }
     ]
   },
@@ -11293,7 +11298,7 @@
     "produced": [
       {
         "element": "drecko_egg",
-        "amount": 1.8518519e-05,
+        "amount": 0.00018518519,
         "unit": "unit",
         "per": "s"
       }
@@ -11343,8 +11348,9 @@
     "produced": [
       {
         "element": "meat",
-        "amount": 1000.0,
-        "unit": "g"
+        "amount": 0.27777776,
+        "unit": "g",
+        "per": "s"
       }
     ]
   },
@@ -11354,7 +11360,7 @@
     "produced": [
       {
         "element": "pip_egg",
-        "amount": 2.7777776e-05,
+        "amount": 0.00027777776,
         "unit": "unit",
         "per": "s"
       }
@@ -11404,8 +11410,9 @@
     "produced": [
       {
         "element": "meat",
-        "amount": 2000.0,
-        "unit": "g"
+        "amount": 0.55555552,
+        "unit": "g",
+        "per": "s"
       }
     ]
   },
@@ -11415,7 +11422,7 @@
     "produced": [
       {
         "element": "hatch_egg",
-        "amount": 2.7777776e-05,
+        "amount": 0.00027777776,
         "unit": "unit",
         "per": "s"
       }
@@ -11522,8 +11529,9 @@
     "produced": [
       {
         "element": "fish_fillet",
-        "amount": 1000.0,
-        "unit": "g"
+        "amount": 1.111111,
+        "unit": "g",
+        "per": "s"
       }
     ]
   },
@@ -11533,7 +11541,7 @@
     "produced": [
       {
         "element": "pacu_egg",
-        "amount": 0.0001111111,
+        "amount": 0.001111111,
         "unit": "unit",
         "per": "s"
       }
@@ -11564,13 +11572,15 @@
     "produced": [
       {
         "element": "pokeshell_molt",
-        "amount": 60.0,
-        "unit": "unit"
+        "amount": 0.016666666,
+        "unit": "unit",
+        "per": "s"
       },
       {
         "element": "raw_shellfish",
-        "amount": 1200.0,
-        "unit": "g"
+        "amount": 0.33333331,
+        "unit": "g",
+        "per": "s"
       }
     ]
   },
@@ -11580,7 +11590,7 @@
     "produced": [
       {
         "element": "pokeshell_roe",
-        "amount": 2.7777776e-05,
+        "amount": 0.00027777776,
         "unit": "unit",
         "per": "s"
       }
@@ -11604,7 +11614,7 @@
     "produced": [
       {
         "element": "coral_bug_egg",
-        "amount": 0.0001111111,
+        "amount": 0.001111111,
         "unit": "unit",
         "per": "s"
       }
@@ -11628,7 +11638,7 @@
     "produced": [
       {
         "element": "radiant_bug_egg",
-        "amount": 3.7037037e-05,
+        "amount": 0.00037037037,
         "unit": "unit",
         "per": "s"
       }
@@ -11678,8 +11688,9 @@
     "produced": [
       {
         "element": "meat",
-        "amount": 1000.0,
-        "unit": "g"
+        "amount": 0.27777776,
+        "unit": "g",
+        "per": "s"
       }
     ]
   },
@@ -11689,7 +11700,7 @@
     "produced": [
       {
         "element": "cuddle_pip_egg",
-        "amount": 2.7777776e-05,
+        "amount": 0.00027777776,
         "unit": "unit",
         "per": "s"
       }
@@ -11739,8 +11750,9 @@
     "produced": [
       {
         "element": "meat",
-        "amount": 2000.0,
-        "unit": "g"
+        "amount": 0.55555552,
+        "unit": "g",
+        "per": "s"
       }
     ]
   },
@@ -11750,7 +11762,7 @@
     "produced": [
       {
         "element": "stone_hatch_egg",
-        "amount": 2.7777776e-05,
+        "amount": 0.00027777776,
         "unit": "unit",
         "per": "s"
       }
@@ -11819,8 +11831,9 @@
     "produced": [
       {
         "element": "meat",
-        "amount": 5000.0,
-        "unit": "g"
+        "amount": 1.3888888,
+        "unit": "g",
+        "per": "s"
       }
     ]
   },
@@ -11830,7 +11843,7 @@
     "produced": [
       {
         "element": "delecta_vole_egg",
-        "amount": 2.7777776e-05,
+        "amount": 0.00027777776,
         "unit": "unit",
         "per": "s"
       }
@@ -12013,8 +12026,9 @@
     "produced": [
       {
         "element": "meat",
-        "amount": 2000.0,
-        "unit": "g"
+        "amount": 0.55555552,
+        "unit": "g",
+        "per": "s"
       }
     ]
   },
@@ -12024,7 +12038,7 @@
     "produced": [
       {
         "element": "smooth_hatch_egg",
-        "amount": 2.7777776e-05,
+        "amount": 0.00027777776,
         "unit": "unit",
         "per": "s"
       }
@@ -12048,7 +12062,7 @@
     "produced": [
       {
         "element": "azure_bug_egg",
-        "amount": 0.0001111111,
+        "amount": 0.001111111,
         "unit": "unit",
         "per": "s"
       }
@@ -12098,8 +12112,9 @@
     "produced": [
       {
         "element": "meat",
-        "amount": 2000.0,
-        "unit": "g"
+        "amount": 0.55555552,
+        "unit": "g",
+        "per": "s"
       }
     ]
   },
@@ -12109,7 +12124,7 @@
     "produced": [
       {
         "element": "sage_hatch_egg",
-        "amount": 2.7777776e-05,
+        "amount": 0.00027777776,
         "unit": "unit",
         "per": "s"
       }
@@ -12133,7 +12148,7 @@
     "produced": [
       {
         "element": "royal_bug_egg",
-        "amount": 0.0001111111,
+        "amount": 0.001111111,
         "unit": "unit",
         "per": "s"
       }
@@ -12157,7 +12172,7 @@
     "produced": [
       {
         "element": "abyss_bug_egg",
-        "amount": 3.7037037e-05,
+        "amount": 0.00037037037,
         "unit": "unit",
         "per": "s"
       }
@@ -12181,7 +12196,7 @@
     "produced": [
       {
         "element": "sun_bug_egg",
-        "amount": 0.0001111111,
+        "amount": 0.001111111,
         "unit": "unit",
         "per": "s"
       }
@@ -12261,8 +12276,9 @@
     "produced": [
       {
         "element": "meat",
-        "amount": 10000.0,
-        "unit": "g"
+        "amount": 0.22222222,
+        "unit": "g",
+        "per": "s"
       }
     ]
   },
@@ -12291,8 +12307,9 @@
     "produced": [
       {
         "element": "meat",
-        "amount": 2000.0,
-        "unit": "g"
+        "amount": 0.55555552,
+        "unit": "g",
+        "per": "s"
       }
     ]
   },
@@ -12302,7 +12319,7 @@
     "produced": [
       {
         "element": "molten_slickster_egg",
-        "amount": 2.7777776e-05,
+        "amount": 0.00027777776,
         "unit": "unit",
         "per": "s"
       }
@@ -12333,13 +12350,15 @@
     "produced": [
       {
         "element": "oakshell_molt",
-        "amount": 500.0,
-        "unit": "unit"
+        "amount": 0.13888888,
+        "unit": "unit",
+        "per": "s"
       },
       {
         "element": "raw_shellfish",
-        "amount": 1200.0,
-        "unit": "g"
+        "amount": 0.33333331,
+        "unit": "g",
+        "per": "s"
       }
     ]
   },
@@ -12349,7 +12368,7 @@
     "produced": [
       {
         "element": "oakshell_roe",
-        "amount": 2.7777776e-05,
+        "amount": 0.00027777776,
         "unit": "unit",
         "per": "s"
       }
@@ -12380,8 +12399,9 @@
     "produced": [
       {
         "element": "meat",
-        "amount": 1000.0,
-        "unit": "g"
+        "amount": 0.37037037,
+        "unit": "g",
+        "per": "s"
       }
     ]
   },
@@ -12391,7 +12411,7 @@
     "produced": [
       {
         "element": "dense_puft_egg",
-        "amount": 3.7037037e-05,
+        "amount": 0.00037037037,
         "unit": "unit",
         "per": "s"
       }
@@ -12517,8 +12537,9 @@
     "produced": [
       {
         "element": "fish_fillet",
-        "amount": 1000.0,
-        "unit": "g"
+        "amount": 1.111111,
+        "unit": "g",
+        "per": "s"
       }
     ]
   },
@@ -12528,7 +12549,7 @@
     "produced": [
       {
         "element": "gulp_fish_egg",
-        "amount": 0.0001111111,
+        "amount": 0.001111111,
         "unit": "unit",
         "per": "s"
       }
@@ -12589,8 +12610,9 @@
     "produced": [
       {
         "element": "meat",
-        "amount": 2000.0,
-        "unit": "g"
+        "amount": 0.37037037,
+        "unit": "g",
+        "per": "s"
       }
     ]
   },
@@ -12600,7 +12622,7 @@
     "produced": [
       {
         "element": "glossy_drecko_egg",
-        "amount": 1.8518519e-05,
+        "amount": 0.00018518519,
         "unit": "unit",
         "per": "s"
       }
@@ -12707,8 +12729,9 @@
     "produced": [
       {
         "element": "fish_fillet",
-        "amount": 1000.0,
-        "unit": "g"
+        "amount": 1.111111,
+        "unit": "g",
+        "per": "s"
       }
     ]
   },
@@ -12718,7 +12741,7 @@
     "produced": [
       {
         "element": "tropical_pacu_egg",
-        "amount": 0.0001111111,
+        "amount": 0.001111111,
         "unit": "unit",
         "per": "s"
       }
@@ -12749,8 +12772,9 @@
     "produced": [
       {
         "element": "raw_shellfish",
-        "amount": 4000.0,
-        "unit": "g"
+        "amount": 1.111111,
+        "unit": "g",
+        "per": "s"
       }
     ]
   },
@@ -12760,7 +12784,7 @@
     "produced": [
       {
         "element": "sanishell_roe",
-        "amount": 2.7777776e-05,
+        "amount": 0.00027777776,
         "unit": "unit",
         "per": "s"
       }
@@ -12784,8 +12808,9 @@
     "produced": [
       {
         "element": "meat",
-        "amount": 2000.0,
-        "unit": "g"
+        "amount": 0.37037037,
+        "unit": "g",
+        "per": "s"
       }
     ]
   },
@@ -12795,7 +12820,7 @@
     "produced": [
       {
         "element": "longhair_slickster_egg",
-        "amount": 1.8518519e-05,
+        "amount": 0.00018518519,
         "unit": "unit",
         "per": "s"
       }
@@ -12826,8 +12851,9 @@
     "produced": [
       {
         "element": "meat",
-        "amount": 1000.0,
-        "unit": "g"
+        "amount": 0.37037037,
+        "unit": "g",
+        "per": "s"
       }
     ]
   },
@@ -12837,7 +12863,7 @@
     "produced": [
       {
         "element": "squeaky_puft_egg",
-        "amount": 3.7037037e-05,
+        "amount": 0.00037037037,
         "unit": "unit",
         "per": "s"
       }
@@ -12906,8 +12932,9 @@
     "produced": [
       {
         "element": "meat",
-        "amount": 1000.0,
-        "unit": "g"
+        "amount": 0.37037037,
+        "unit": "g",
+        "per": "s"
       }
     ]
   },
@@ -12917,7 +12944,7 @@
     "produced": [
       {
         "element": "puft_egg",
-        "amount": 3.7037037e-05,
+        "amount": 0.00037037037,
         "unit": "unit",
         "per": "s"
       }
@@ -12948,8 +12975,9 @@
     "produced": [
       {
         "element": "meat",
-        "amount": 2000.0,
-        "unit": "g"
+        "amount": 0.55555552,
+        "unit": "g",
+        "per": "s"
       }
     ]
   },
@@ -12959,7 +12987,7 @@
     "produced": [
       {
         "element": "plug_slug_egg",
-        "amount": 2.7777776e-05,
+        "amount": 0.00027777776,
         "unit": "unit",
         "per": "s"
       }
@@ -13009,8 +13037,9 @@
     "produced": [
       {
         "element": "meat",
-        "amount": 3000.0,
-        "unit": "g"
+        "amount": 0.55555556,
+        "unit": "g",
+        "per": "s"
       }
     ]
   },
@@ -13020,7 +13049,7 @@
     "produced": [
       {
         "element": "grubgrub_egg",
-        "amount": 1.8518519e-05,
+        "amount": 0.00018518519,
         "unit": "unit",
         "per": "s"
       }
@@ -13051,8 +13080,9 @@
     "produced": [
       {
         "element": "meat",
-        "amount": 1000.0,
-        "unit": "g"
+        "amount": 0.37037037,
+        "unit": "g",
+        "per": "s"
       }
     ]
   },
@@ -13062,7 +13092,7 @@
     "produced": [
       {
         "element": "sweetle_egg",
-        "amount": 3.7037037e-05,
+        "amount": 0.00037037037,
         "unit": "unit",
         "per": "s"
       }
@@ -13093,8 +13123,9 @@
     "produced": [
       {
         "element": "meat",
-        "amount": 2000.0,
-        "unit": "g"
+        "amount": 0.55555552,
+        "unit": "g",
+        "per": "s"
       }
     ]
   },
@@ -13104,7 +13135,7 @@
     "produced": [
       {
         "element": "smog_slug_egg",
-        "amount": 2.7777776e-05,
+        "amount": 0.00027777776,
         "unit": "unit",
         "per": "s"
       }
@@ -13135,8 +13166,9 @@
     "produced": [
       {
         "element": "meat",
-        "amount": 2000.0,
-        "unit": "g"
+        "amount": 0.55555552,
+        "unit": "g",
+        "per": "s"
       }
     ]
   },
@@ -13146,7 +13178,7 @@
     "produced": [
       {
         "element": "sponge_slug_egg",
-        "amount": 2.7777776e-05,
+        "amount": 0.00027777776,
         "unit": "unit",
         "per": "s"
       }
@@ -13215,8 +13247,9 @@
     "produced": [
       {
         "element": "tallow",
-        "amount": 50000.0,
-        "unit": "g"
+        "amount": 13.888888,
+        "unit": "g",
+        "per": "s"
       }
     ]
   },
@@ -13226,7 +13259,7 @@
     "produced": [
       {
         "element": "spigot_seal_egg",
-        "amount": 2.7777776e-05,
+        "amount": 0.00027777776,
         "unit": "unit",
         "per": "s"
       }
@@ -13325,8 +13358,9 @@
     "produced": [
       {
         "element": "meat",
-        "amount": 1000.0,
-        "unit": "g"
+        "amount": 0.27777776,
+        "unit": "g",
+        "per": "s"
       }
     ]
   },
@@ -13336,7 +13370,7 @@
     "produced": [
       {
         "element": "flox_egg",
-        "amount": 2.7777776e-05,
+        "amount": 0.00027777776,
         "unit": "unit",
         "per": "s"
       }
@@ -13473,8 +13507,9 @@
     "produced": [
       {
         "element": "meat",
-        "amount": 14000.0,
-        "unit": "g"
+        "amount": 1.9444443,
+        "unit": "g",
+        "per": "s"
       }
     ]
   },
@@ -13484,7 +13519,7 @@
     "produced": [
       {
         "element": "bammoth_egg",
-        "amount": 1.3888888e-05,
+        "amount": 0.00013888888,
         "unit": "unit",
         "per": "s"
       }
@@ -13621,8 +13656,9 @@
     "produced": [
       {
         "element": "meat",
-        "amount": 14000.0,
-        "unit": "g"
+        "amount": 1.9444443,
+        "unit": "g",
+        "per": "s"
       }
     ]
   },
@@ -13632,7 +13668,7 @@
     "produced": [
       {
         "element": "regal_bammoth_egg",
-        "amount": 1.3888888e-05,
+        "amount": 0.00013888888,
         "unit": "unit",
         "per": "s"
       }
@@ -13750,8 +13786,9 @@
     "produced": [
       {
         "element": "meat",
-        "amount": 1000.0,
-        "unit": "g"
+        "amount": 0.27777776,
+        "unit": "g",
+        "per": "s"
       }
     ]
   },
@@ -13761,7 +13798,7 @@
     "produced": [
       {
         "element": "shatter_flox_egg",
-        "amount": 2.7777776e-05,
+        "amount": 0.00027777776,
         "unit": "unit",
         "per": "s"
       }
@@ -13792,8 +13829,9 @@
     "produced": [
       {
         "element": "meat",
-        "amount": 500.0,
-        "unit": "g"
+        "amount": 0.27777776,
+        "unit": "g",
+        "per": "s"
       }
     ]
   },
@@ -13803,7 +13841,7 @@
     "produced": [
       {
         "element": "dartle_egg",
-        "amount": 5.5555552e-05,
+        "amount": 0.00055555552,
         "unit": "unit",
         "per": "s"
       }
@@ -13872,8 +13910,9 @@
     "produced": [
       {
         "element": "jawbo_fillet",
-        "amount": 12000.0,
-        "unit": "g"
+        "amount": 3.3333331,
+        "unit": "g",
+        "per": "s"
       }
     ]
   },
@@ -13883,7 +13922,7 @@
     "produced": [
       {
         "element": "jawbo_egg",
-        "amount": 2.7777776e-05,
+        "amount": 0.00027777776,
         "unit": "unit",
         "per": "s"
       }
@@ -13895,7 +13934,7 @@
     "produced": [
       {
         "element": "gnit_egg",
-        "amount": 0.00037037037,
+        "amount": 0.0037037037,
         "unit": "unit",
         "per": "s"
       }
@@ -13975,8 +14014,9 @@
     "produced": [
       {
         "element": "tough_meat",
-        "amount": 5000.0,
-        "unit": "g"
+        "amount": 0.6944444,
+        "unit": "g",
+        "per": "s"
       }
     ]
   },
@@ -13986,7 +14026,7 @@
     "produced": [
       {
         "element": "rhex_egg",
-        "amount": 1.3888888e-05,
+        "amount": 0.00013888888,
         "unit": "unit",
         "per": "s"
       }
@@ -14055,8 +14095,9 @@
     "produced": [
       {
         "element": "tough_meat",
-        "amount": 12000.0,
-        "unit": "g"
+        "amount": 1.6666666,
+        "unit": "g",
+        "per": "s"
       }
     ]
   },
@@ -14066,7 +14107,7 @@
     "produced": [
       {
         "element": "lumb_egg",
-        "amount": 1.3888888e-05,
+        "amount": 0.00013888888,
         "unit": "unit",
         "per": "s"
       }
@@ -14078,8 +14119,9 @@
     "produced": [
       {
         "element": "mimillet",
-        "amount": 1000.0,
-        "unit": "g"
+        "amount": 0.33333333,
+        "unit": "g",
+        "per": "s"
       }
     ]
   },
@@ -14146,8 +14188,9 @@
     "produced": [
       {
         "element": "tough_meat",
-        "amount": 12000.0,
-        "unit": "g"
+        "amount": 1.6666666,
+        "unit": "g",
+        "per": "s"
       }
     ]
   },
@@ -14157,7 +14200,7 @@
     "produced": [
       {
         "element": "blum_lumb_egg",
-        "amount": 1.3888888e-05,
+        "amount": 0.00013888888,
         "unit": "unit",
         "per": "s"
       }
@@ -14226,8 +14269,9 @@
     "produced": [
       {
         "element": "fish_fillet",
-        "amount": 2000.0,
-        "unit": "g"
+        "amount": 0.55555552,
+        "unit": "g",
+        "per": "s"
       }
     ]
   },
@@ -14237,7 +14281,7 @@
     "produced": [
       {
         "element": "merpip_egg",
-        "amount": 2.7777776e-05,
+        "amount": 0.00027777776,
         "unit": "unit",
         "per": "s"
       }
@@ -14287,8 +14331,9 @@
     "produced": [
       {
         "element": "fish_fillet",
-        "amount": 1000.0,
-        "unit": "g"
+        "amount": 1.111111,
+        "unit": "g",
+        "per": "s"
       }
     ]
   },
@@ -14298,7 +14343,7 @@
     "produced": [
       {
         "element": "beakon_egg",
-        "amount": 0.0001111111,
+        "amount": 0.001111111,
         "unit": "unit",
         "per": "s"
       }
@@ -14348,8 +14393,9 @@
     "produced": [
       {
         "element": "fish_fillet",
-        "amount": 1000.0,
-        "unit": "g"
+        "amount": 1.111111,
+        "unit": "g",
+        "per": "s"
       }
     ]
   },
@@ -14359,7 +14405,7 @@
     "produced": [
       {
         "element": "blowter_egg",
-        "amount": 0.0001111111,
+        "amount": 0.001111111,
         "unit": "unit",
         "per": "s"
       }
@@ -14420,8 +14466,9 @@
     "produced": [
       {
         "element": "calamari",
-        "amount": 12000.0,
-        "unit": "g"
+        "amount": 3.3333331,
+        "unit": "g",
+        "per": "s"
       }
     ]
   },
@@ -14431,7 +14478,7 @@
     "produced": [
       {
         "element": "glo_squid_egg",
-        "amount": 2.7777776e-05,
+        "amount": 0.00027777776,
         "unit": "unit",
         "per": "s"
       }
@@ -14462,8 +14509,9 @@
     "produced": [
       {
         "element": "meat",
-        "amount": 500.0,
-        "unit": "g"
+        "amount": 0.55555552,
+        "unit": "g",
+        "per": "s"
       }
     ]
   },
@@ -14473,7 +14521,7 @@
     "produced": [
       {
         "element": "slogo_egg",
-        "amount": 0.0001111111,
+        "amount": 0.001111111,
         "unit": "unit",
         "per": "s"
       }
@@ -14553,8 +14601,9 @@
     "produced": [
       {
         "element": "raw_shellfish",
-        "amount": 6000.0,
-        "unit": "g"
+        "amount": 1.6666666,
+        "unit": "g",
+        "per": "s"
       }
     ]
   },
@@ -14564,7 +14613,7 @@
     "produced": [
       {
         "element": "orehull_egg",
-        "amount": 2.7777776e-05,
+        "amount": 0.00027777776,
         "unit": "unit",
         "per": "s"
       }
@@ -14595,8 +14644,9 @@
     "produced": [
       {
         "element": "fish_fillet",
-        "amount": 1000.0,
-        "unit": "g"
+        "amount": 0.27777776,
+        "unit": "g",
+        "per": "s"
       }
     ]
   },
@@ -14606,7 +14656,7 @@
     "produced": [
       {
         "element": "seaquine_egg",
-        "amount": 2.7777776e-05,
+        "amount": 0.00027777776,
         "unit": "unit",
         "per": "s"
       }
@@ -14618,8 +14668,9 @@
     "produced": [
       {
         "element": "nori",
-        "amount": 10000.0,
-        "unit": "g"
+        "amount": 3.3333333,
+        "unit": "g",
+        "per": "s"
       }
     ]
   },
@@ -14648,8 +14699,9 @@
     "produced": [
       {
         "element": "meat",
-        "amount": 500.0,
-        "unit": "g"
+        "amount": 0.55555552,
+        "unit": "g",
+        "per": "s"
       }
     ]
   },
@@ -14659,7 +14711,7 @@
     "produced": [
       {
         "element": "gildgo_egg",
-        "amount": 0.0001111111,
+        "amount": 0.001111111,
         "unit": "unit",
         "per": "s"
       }
@@ -15660,5 +15712,17 @@
       }
     ],
     "produced": []
+  },
+  {
+    "source": "pajamas",
+    "consumed": [],
+    "produced": [
+      {
+        "element": "dream_journal",
+        "amount": 0.0033333333,
+        "unit": "unit",
+        "per": "s"
+      }
+    ]
   }
 ]

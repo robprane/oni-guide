@@ -1,4 +1,4 @@
-export const DATA_VERSION = '7';
+export const DATA_VERSION = '8';
 
 export const FALLBACK_IMG_SVG = "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='64' height='64'><rect width='64' height='64' rx='8' fill='%23333'/><text x='32' y='34' fill='%23ccc' font-size='28' font-family='sans-serif' text-anchor='middle' dominant-baseline='middle'>?</text></svg>";
 

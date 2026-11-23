@@ -1190,7 +1190,11 @@ def main() -> None:
                     if not ref:
                         ok = False
                         break
-                    cons.append(make_entry(ref[0], ref[1], c["kgPerSec"] * 1000.0, "g", "s"))
+                    if c["tag"] == "DreamJournal":
+                        # 1 DreamJournal has 1 kg mass in game (1/60 unit/s = 10 unit/cycle)
+                        cons.append(make_entry(ref[0], ref[1], c["kgPerSec"], "unit", "s"))
+                    else:
+                        cons.append(make_entry(ref[0], ref[1], c["kgPerSec"] * 1000.0, "g", "s"))
                 for o in ec["produced"]:
                     ref = resolve_ref(o["element"])
                     if not ref:
@@ -1626,30 +1630,43 @@ def main() -> None:
                 "produced": [make_entry("element", game_to_site[edrop["element"]], edrop["massPerDropKg"] * 1000.0, "g", "use")],
             })
 
-        # 6. Butcher drops (Meat / Fish Meat / Tough Meat / Tallow / Shellfish Meat on death)
+        # 6. Butcher drops (Variant B: tame happy reproduction rate = baseFertileCycles / 10;
+        #    for non-egg-laying critters without fertility, use Age.max lifespan from Assembly-CSharp.dll)
+        NO_EGG_CRITTER_LIFESPAN = {
+            "Moo": 75.0,
+            "DieselMoo": 75.0,
+            "Butterfly": 5.0,
+            "SeaFairy": 5.0,
+        }
+        fert = c.get("fertility")
+        tame_egg_cycles = (fert["baseFertileCycles"] / 10.0) if (fert and fert.get("baseFertileCycles", 0) > 0) else 0.0
+        drop_cycles = tame_egg_cycles if tame_egg_cycles > 0 else NO_EGG_CRITTER_LIFESPAN.get(gid, 0.0)
         drops = c.get("butcherDrops") or {}
         if drops:
             prod = []
             for d_gid, qty in drops.items():
                 if d_gid in game_to_site and qty > 0:
                     is_m = is_mass_entity(d_gid)
-                    prod.append(make_entry("element", game_to_site[d_gid], qty * (1000.0 if is_m else 1.0), "g" if is_m else "unit"))
+                    base_val = qty * (1000.0 if is_m else 1.0)
+                    unit = "g" if is_m else "unit"
+                    if drop_cycles > 0:
+                        prod.append(make_entry("element", game_to_site[d_gid], base_val / (drop_cycles * 600.0), unit, "s"))
+                    else:
+                        prod.append(make_entry("element", game_to_site[d_gid], base_val, unit))
             if prod:
                 add_recipe({"source": src_id, "consumed": [], "produced": prod})
 
-        # 7. Egg laying (FertilityMonitor)
-        fert = c.get("fertility")
-        if fert and fert.get("baseFertileCycles", 0) > 0:
+        # 7. Egg laying (FertilityMonitor — tame happy rate = baseFertileCycles / 10, matching ranching rates)
+        if tame_egg_cycles > 0:
             egg_gids = [bw["eggId"] for bw in (fert.get("breedingWeights") or []) if bw["eggId"] in game_to_site]
             if egg_gids:
                 # Primary egg (first in list / highest weight)
                 primary_egg = max(fert["breedingWeights"], key=lambda x: x["weight"])["eggId"]
                 if primary_egg in game_to_site:
-                    # Tame happy critter lays egg at ~10x wild rate; show base wild or tame rate? Show 1 egg per baseFertileCycles (wild) or per cycle
                     add_recipe({
                         "source": src_id,
                         "consumed": [],
-                        "produced": [make_entry("element", game_to_site[primary_egg], 1.0 / (fert["baseFertileCycles"] * 600.0), "unit", "s")],
+                        "produced": [make_entry("element", game_to_site[primary_egg], 1.0 / (tame_egg_cycles * 600.0), "unit", "s")],
                     })
 
     # --- F. Duplicants & Bionic Duplicants ---
