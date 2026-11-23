@@ -1193,6 +1193,12 @@ a.recipe-item-link:hover {
     filter: none;
 }
 
+.calc-transpose-btn.is-active {
+    border-color: var(--active-border);
+    background: var(--active-bg);
+    color: var(--primary-color);
+}
+
 .calc-saved-btn {
     position: relative;
 }
@@ -2095,6 +2101,208 @@ a.calc-source-link:hover .calc-source-name {
     color: #fff;
 }
 
+/* Transposed Calculator Table (Resources as rows, Recipes as columns) */
+.calc-table-wrapper.is-transposed {
+    overflow: hidden;
+}
+
+.calc-transposed-search-bar {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    padding: 0.5rem 0.75rem;
+    background: var(--input-bg);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.calc-table-wrapper.is-transposed .calc-transposed-search-bar:last-child {
+    border-bottom: none;
+}
+
+.calc-transposed-search-bar .calc-search-plus-btn {
+    flex-shrink: 0;
+}
+
+.calc-transposed-search-bar .calc-inline-search {
+    flex: 1;
+    min-width: 0;
+}
+
+.calc-table-scroll {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.calc-table.is-transposed thead th {
+    position: static;
+    top: auto;
+}
+
+.calc-table.is-transposed th.calc-col-icon,
+.calc-table.is-transposed td.calc-icon-cell {
+    position: sticky;
+    left: 0;
+    z-index: 3;
+}
+
+.calc-table.is-transposed th.calc-col-source,
+.calc-table.is-transposed td.calc-name-cell {
+    position: sticky;
+    left: 3.25rem;
+    z-index: 3;
+    min-width: 9.5rem;
+    max-width: 14rem;
+    border-right: 2px solid var(--border-color);
+}
+
+.calc-table.is-transposed thead th.calc-col-icon,
+.calc-table.is-transposed thead th.calc-col-source {
+    background: var(--nav-bg);
+    z-index: 5;
+}
+
+.calc-table.is-transposed td.calc-icon-cell .calc-tag-mosaic {
+    width: 2rem;
+    height: 2rem;
+}
+
+.calc-table.is-transposed th.calc-col-recipe {
+    position: relative;
+    vertical-align: top;
+    min-width: 10.5rem;
+    max-width: 14.5rem;
+    padding: 0.6rem 0.65rem 0.55rem;
+    background: var(--nav-bg);
+}
+
+.calc-table.is-transposed th.calc-col-recipe .calc-remove-btn {
+    position: absolute;
+    top: 0.25rem;
+    right: 0.25rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    font-size: 1rem;
+}
+
+.calc-recipe-col-head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0 0.75rem;
+}
+
+.calc-col-recipe-meta {
+    margin-top: 0.1rem;
+    width: 100%;
+    align-items: center;
+}
+
+.calc-col-recipe-meta .calc-auto-pill {
+    align-self: center;
+}
+
+.calc-col-recipe-meta .calc-source-subtitle {
+    max-width: 12.5rem;
+    text-align: center;
+}
+
+.calc-col-recipe-meta .calc-tag-selects {
+    width: 100%;
+    justify-content: center;
+}
+
+.calc-col-recipe-meta .calc-tag-select {
+    width: 100%;
+    max-width: 12.5rem;
+}
+
+.calc-table.is-transposed tr.calc-transposed-count-row th {
+    background: color-mix(in srgb, var(--nav-bg) 82%, var(--card-bg));
+    padding: 0.45rem 0.6rem;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.calc-table.is-transposed th.calc-transposed-count-label {
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--text-muted, #888);
+    text-align: left;
+}
+
+.calc-table.is-transposed th.calc-col-recipe-count {
+    text-align: center;
+    white-space: nowrap;
+}
+
+.calc-table.is-transposed .calc-col-total-sticky {
+    position: sticky;
+    right: 0;
+    z-index: 3;
+    min-width: 7.5rem;
+    background: var(--nav-bg);
+    border-left: 2px solid var(--border-color);
+    border-right: none;
+}
+
+.calc-table.is-transposed thead th.calc-col-total-sticky {
+    z-index: 5;
+    vertical-align: middle;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.calc-transposed-total-head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    font-size: 0.85rem;
+}
+
+.calc-total-sigma {
+    font-size: 1.15rem;
+    line-height: 1;
+}
+
+.calc-table.is-transposed tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.calc-resource-row.calc-power-row .calc-icon-cell,
+.calc-resource-row.calc-power-row .calc-name-cell {
+    background: color-mix(in srgb, var(--card-bg) 96%, #ffc107);
+}
+
+.calc-resource-row.is-tag-row .calc-icon-cell,
+.calc-resource-row.is-tag-row .calc-name-cell,
+.calc-resource-row.is-tag-row .calc-cell:not(.calc-total-cell) {
+    background: color-mix(in srgb, var(--card-bg) 92%, #0078d7);
+}
+
+.calc-resource-row:nth-child(even):not(.is-tag-row):not(.calc-power-row) .calc-icon-cell,
+.calc-resource-row:nth-child(even):not(.is-tag-row):not(.calc-power-row) .calc-name-cell,
+.calc-resource-row:nth-child(even):not(.is-tag-row):not(.calc-power-row) .calc-cell:not(.calc-total-cell) {
+    background: color-mix(in srgb, var(--card-bg) 92%, var(--nav-bg));
+}
+
+.calc-resource-row:hover .calc-icon-cell,
+.calc-resource-row:hover .calc-name-cell,
+.calc-resource-row:hover .calc-cell:not(.calc-total-cell) {
+    background: var(--nav-hover);
+}
+
+.calc-resource-row:hover .calc-total-cell {
+    background: color-mix(in srgb, var(--nav-bg) 82%, var(--nav-hover));
+}
+
+.calc-table.is-transposed .calc-total-cell {
+    font-weight: 700;
+}
+
 /* Floating Producer Picker Popover */
 .calc-deficit-popover {
     position: fixed;
@@ -2246,6 +2454,22 @@ a.calc-source-link:hover .calc-source-name {
     .calc-table td.calc-name-cell {
         min-width: 10.5rem;
         max-width: 14rem;
+    }
+
+    .calc-table.is-transposed th.calc-col-source,
+    .calc-table.is-transposed td.calc-name-cell {
+        position: static;
+        left: auto;
+        z-index: auto;
+        min-width: 8.5rem;
+        max-width: 12rem;
+        border-right: 1px solid var(--border-color);
+    }
+
+    .calc-table.is-transposed .calc-col-total-sticky {
+        position: static;
+        right: auto;
+        z-index: auto;
     }
 }
 

@@ -1,18 +1,18 @@
-const CACHE_NAME = 'oni-guide-v22';
+const CACHE_NAME = 'oni-guide-v23';
 const ASSETS = [
     '/',
     '/index.html',
-    '/css/style.css?v=9',
+    '/css/style.css?v=10',
     '/css/themes.css?v=3',
-    '/js/main.js?v=13',
+    '/js/main.js?v=14',
     '/js/theme.js?v=3',
-    '/js/router.js?v=13',
+    '/js/router.js?v=14',
     '/js/data-store.js?v=7',
-    '/js/icons.js?v=8',
+    '/js/icons.js?v=9',
     '/js/calculator-state.js?v=12',
-    '/js/pages/recipes.js?v=12',
-    '/js/pages/calculator.js?v=12',
-    '/js/pages/canvas.js?v=8',
+    '/js/pages/recipes.js?v=13',
+    '/js/pages/calculator.js?v=13',
+    '/js/pages/canvas.js?v=9',
     '/js/utils.js?v=6',
     '/manifest.json'
 ];

@@ -1,6 +1,6 @@
 import { CanvasEngine } from '../canvas/engine.js';
 import { createElement } from '../utils.js?v=6';
-import { createSvgIcon } from '../icons.js?v=8';
+import { createSvgIcon } from '../icons.js?v=9';
 
 let engineInstance = null;
 
