@@ -1,4 +1,4 @@
-import { Router } from './router.js?v=12';
+import { Router } from './router.js?v=13';
 import { getCalculatorRowCount } from './calculator-state.js?v=12';
 
 function updateNavCalcBadge() {

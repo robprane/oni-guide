@@ -1,4 +1,3 @@
-import { renderHome } from './pages/home.js?v=3';
 import { renderCanvas } from './pages/canvas.js?v=8';
 import { renderRecipes } from './pages/recipes.js?v=12';
 import { renderCalculator } from './pages/calculator.js?v=12';

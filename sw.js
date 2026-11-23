@@ -1,12 +1,12 @@
-const CACHE_NAME = 'oni-guide-v21';
+const CACHE_NAME = 'oni-guide-v22';
 const ASSETS = [
     '/',
     '/index.html',
     '/css/style.css?v=9',
     '/css/themes.css?v=3',
-    '/js/main.js?v=12',
+    '/js/main.js?v=13',
     '/js/theme.js?v=3',
-    '/js/router.js?v=12',
+    '/js/router.js?v=13',
     '/js/data-store.js?v=7',
     '/js/icons.js?v=8',
     '/js/calculator-state.js?v=12',
