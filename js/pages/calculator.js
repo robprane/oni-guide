@@ -14,16 +14,23 @@ import {
     computeCalculatorTable,
     encodeCalculatorState,
     findCalculatorRow,
+    findProducersForColumn,
+    formatMultiplierDisplay,
     getCalculatorState,
     getLastSyncedEncoded,
+    getUnambiguousProducer,
     loadCalculatorStateFromEncoded,
+    materializeTagColumn,
+    recomputeAutoMultipliers,
     removeCalculatorRow,
     resetCalculatorState,
+    resolveDeficitWithProducer,
     setCalculatorMultiplier,
+    setCalculatorRowAutoTarget,
     setCalculatorShowPower,
     setLastSyncedEncoded,
     updateCalculatorRowTag
-} from '../calculator-state.js?v=6';
+} from '../calculator-state.js?v=7';
 
 function renderSmallTagMosaic(tagId, data) {
     const members = getTagMembers(tagId);
@@ -141,28 +148,27 @@ function searchRecipesForCalculator(query, data, limit = 18) {
     const allTags = data.allTags || {};
 
     if (!q) {
-        // Return a curated set of common starter recipes when focused with empty query
-        const starterSources = [
-            'electrolyzer',
-            'duplicant',
-            'bionic_duplicant',
-            'oxygen_diffuser',
-            'deodorizer',
-            'water_sieve',
-            'carbon_skimmer',
-            'coal_generator',
-            'hydrogen_generator',
-            'natural_gas_generator',
-            'hatch',
-            'mealwood',
-            'electric_grill',
-            'rock_crusher',
-            'water_geyser'
+        // Curated set of common starter recipes when focused with empty query
+        const starterRules = [
+            r => r.source === 'duplicant' && (r.consumed || []).some(c => c.tag === 'edible'),
+            r => r.source === 'duplicant' && (r.consumed || []).some(c => c.element === 'oxygen'),
+            r => r.source === 'electrolyzer',
+            r => r.source === 'bionic_duplicant',
+            r => r.source === 'oxygen_diffuser',
+            r => r.source === 'deodorizer',
+            r => r.source === 'water_sieve',
+            r => r.source === 'carbon_skimmer',
+            r => r.source === 'coal_generator',
+            r => r.source === 'hydrogen_generator',
+            r => r.source === 'natural_gas_generator',
+            r => r.source === 'hatch'
         ];
         const picks = [];
-        for (const srcId of starterSources) {
-            const match = recipesData.find(r => r.source === srcId);
+        const seenKeys = new Set();
+        for (const matchFn of starterRules) {
+            const match = recipesData.find(r => !seenKeys.has(r._key) && matchFn(r));
             if (match) {
+                seenKeys.add(match._key);
                 picks.push({ rawRecipe: match, tagSelections: {}, score: 0 });
             }
             if (picks.length >= 12) break;
@@ -288,6 +294,7 @@ export async function renderCalculator(container, currentPath) {
                 loadCalculatorStateFromEncoded(encoded, { persist: true });
             }
         }
+        recomputeAutoMultipliers(data);
     };
     applyPathState(currentPath);
 
@@ -314,10 +321,21 @@ export async function renderCalculator(container, currentPath) {
 
     // Header & Toolbar
     const countBadge = createElement('span', { class: 'calc-count-pill', textContent: '0 recipes' });
-    const powerCheckbox = createElement('input', { type: 'checkbox', id: 'calc-power-toggle' });
-    const powerLabel = createElement('label', { class: 'calc-power-toggle' }, [
+    const powerCheckbox = createElement('input', {
+        type: 'checkbox',
+        id: 'calc-power-toggle',
+        'aria-label': 'Toggle Power (W) column'
+    });
+    const powerLabel = createElement('label', {
+        class: 'calc-power-toggle',
+        title: 'Show/hide Power (W) column'
+    }, [
         powerCheckbox,
-        createElement('span', { textContent: 'Power (W)' })
+        attachImgFallback(createElement('img', {
+            src: '/images/PowerMenu.png',
+            alt: 'Power (W)',
+            class: 'calc-power-toggle-icon'
+        }))
     ]);
 
     const copyLinkBtn = createElement('button', {
@@ -358,6 +376,14 @@ export async function renderCalculator(container, currentPath) {
         id: 'calc-search-dropdown',
         class: 'calc-search-dropdown hidden',
         role: 'listbox'
+    });
+
+    // Floating popover for resolving material deficits / picking tag members
+    const deficitPopover = createElement('div', {
+        id: 'calc-deficit-popover',
+        class: 'calc-deficit-popover hidden',
+        role: 'dialog',
+        'aria-label': 'Resolve material deficit'
     });
 
     const statusToast = createElement('div', {
@@ -402,6 +428,7 @@ export async function renderCalculator(container, currentPath) {
         tableWrapper,
         emptyHint,
         searchDropdown,
+        deficitPopover,
         statusToast,
         resetDialog
     ]);
@@ -424,12 +451,365 @@ export async function renderCalculator(container, currentPath) {
     let activeSearchInput = null;
     let dropdownItems = [];
     let highlightedIndex = -1;
+    let activeDeficitAnchor = null;
+    let activePopoverNav = null;
 
     const closeDropdown = () => {
         searchDropdown.classList.add('hidden');
         searchDropdown.textContent = '';
         dropdownItems = [];
         highlightedIndex = -1;
+    };
+
+    const closeDeficitPopover = () => {
+        deficitPopover.classList.add('hidden');
+        deficitPopover.textContent = '';
+        activeDeficitAnchor = null;
+        activePopoverNav = null;
+    };
+
+    const positionDeficitPopover = () => {
+        if (!activeDeficitAnchor || deficitPopover.classList.contains('hidden')) return;
+        const rect = activeDeficitAnchor.getBoundingClientRect();
+        const width = Math.min(340, window.innerWidth - 24);
+        const left = Math.min(Math.max(rect.left + rect.width / 2 - width / 2, 12), window.innerWidth - width - 12);
+        const spaceAbove = rect.top - 12;
+        const spaceBelow = window.innerHeight - rect.bottom - 12;
+
+        deficitPopover.style.width = `${width}px`;
+        deficitPopover.style.left = `${left}px`;
+
+        if (spaceAbove >= 220 || spaceAbove >= spaceBelow) {
+            deficitPopover.style.top = 'auto';
+            deficitPopover.style.bottom = `${window.innerHeight - rect.top + 6}px`;
+            deficitPopover.style.maxHeight = `${Math.min(380, Math.max(160, spaceAbove))}px`;
+        } else {
+            deficitPopover.style.top = `${rect.bottom + 6}px`;
+            deficitPopover.style.bottom = 'auto';
+            deficitPopover.style.maxHeight = `${Math.min(380, Math.max(160, spaceBelow))}px`;
+        }
+    };
+
+    const formatChainToast = (prefix, addedNames, updatedNames = []) => {
+        const parts = [];
+        if (addedNames.length > 0) {
+            const shown = addedNames.slice(0, 4).join(', ');
+            const extra = addedNames.length > 4 ? ` +${addedNames.length - 4}` : '';
+            parts.push(`${prefix}: ${shown}${extra}`);
+        } else if (updatedNames.length > 0) {
+            parts.push(`Auto-balanced ${updatedNames.join(', ')}`);
+        }
+        return parts.join(' · ') || 'Updated chain';
+    };
+
+    const openDeficitPopover = (deficit, anchorBtn) => {
+        closeDropdown();
+        activeDeficitAnchor = anchorBtn;
+        deficitPopover.textContent = '';
+
+        const headerClose = createElement('button', {
+            type: 'button',
+            class: 'calc-popover-close',
+            'aria-label': 'Close',
+            textContent: '×'
+        });
+        headerClose.addEventListener('click', closeDeficitPopover);
+
+        const titleText = deficit.isTag
+            ? `Pick ${deficit.name}`
+            : `Produce ${deficit.name}`;
+
+        const headerEl = createElement('div', { class: 'calc-popover-header' }, [
+            createElement('div', { class: 'calc-popover-title-wrap' }, [
+                createElement('strong', { class: 'calc-popover-title', textContent: titleText }),
+                createElement('span', { class: 'calc-popover-deficit amount-negative', textContent: deficit.formattedText })
+            ]),
+            headerClose
+        ]);
+        deficitPopover.appendChild(headerEl);
+
+        const listEl = createElement('div', { class: 'calc-popover-list' });
+        let popHighlightIdx = -1;
+
+        const syncPopHighlight = (shouldScroll = true) => {
+            const nodes = listEl.querySelectorAll('.calc-deficit-option');
+            if (nodes.length === 0) {
+                popHighlightIdx = -1;
+                return;
+            }
+            if (popHighlightIdx < 0 || popHighlightIdx >= nodes.length) {
+                popHighlightIdx = 0;
+            }
+            nodes.forEach((node, i) => {
+                if (i === popHighlightIdx) {
+                    node.classList.add('highlighted');
+                    if (shouldScroll && typeof node.scrollIntoView === 'function') {
+                        node.scrollIntoView({ block: 'nearest' });
+                    }
+                } else {
+                    node.classList.remove('highlighted');
+                }
+            });
+        };
+
+        activePopoverNav = {
+            move(delta) {
+                const nodes = listEl.querySelectorAll('.calc-deficit-option');
+                if (nodes.length === 0) return;
+                if (popHighlightIdx < 0) {
+                    popHighlightIdx = delta > 0 ? 0 : nodes.length - 1;
+                } else {
+                    popHighlightIdx = (popHighlightIdx + delta + nodes.length) % nodes.length;
+                }
+                syncPopHighlight(true);
+            },
+            confirm() {
+                const nodes = listEl.querySelectorAll('.calc-deficit-option');
+                if (nodes.length === 0) return;
+                const idx = (popHighlightIdx >= 0 && popHighlightIdx < nodes.length) ? popHighlightIdx : 0;
+                nodes[idx].click();
+            }
+        };
+
+        const createFilterInput = (placeholder, onInput) => {
+            const input = createElement('input', {
+                type: 'search',
+                class: 'recipe-search-input calc-popover-filter',
+                placeholder,
+                autocomplete: 'off'
+            });
+            input.addEventListener('input', () => onInput(input.value));
+            return input;
+        };
+
+        const focusFilter = (input) => {
+            if (!input || typeof input.focus !== 'function') return;
+            try {
+                input.focus({ preventScroll: true });
+            } catch {
+                input.focus();
+            }
+        };
+
+        if (deficit.isTag) {
+            const members = getTagMembers(deficit.id);
+            const renderMembers = (filterText = '') => {
+                listEl.textContent = '';
+                const q = filterText.trim().toLowerCase();
+                const filtered = q ? members.filter(m => m.name.toLowerCase().includes(q)) : members;
+                if (filtered.length === 0) {
+                    popHighlightIdx = -1;
+                    listEl.appendChild(createElement('div', { class: 'calc-search-empty muted', textContent: 'No matching items' }));
+                    return;
+                }
+                filtered.forEach((m, idx) => {
+                    const btn = createElement('button', {
+                        type: 'button',
+                        class: 'calc-search-option calc-deficit-option'
+                    }, [
+                        m.image
+                            ? attachImgFallback(createElement('img', { src: `/images/${m.image}`, alt: m.name, class: 'calc-option-img' }))
+                            : createElement('div', { class: 'calc-option-img-placeholder' }),
+                        createElement('div', { class: 'calc-option-text' }, [
+                            createElement('div', { class: 'calc-option-title' }, [
+                                createElement('span', { textContent: m.name })
+                            ])
+                        ])
+                    ]);
+                    btn.addEventListener('mouseenter', () => {
+                        popHighlightIdx = idx;
+                        syncPopHighlight(false);
+                    });
+                    btn.addEventListener('click', () => {
+                        const res = materializeTagColumn(deficit.id, m.id, data, { autoExpand: true });
+                        closeDeficitPopover();
+                        renderTable();
+                        scheduleUrlSync();
+                        const extra = res.addedNames.length > 0 ? ` → +${res.addedNames.join(', ')}` : '';
+                        showToast(`Selected ${m.name}${extra}`);
+                    });
+                    listEl.appendChild(btn);
+                });
+                popHighlightIdx = 0;
+                syncPopHighlight(false);
+            };
+
+            let filterInput = null;
+            if (members.length > 6) {
+                filterInput = createFilterInput(`Filter ${members.length} options...`, renderMembers);
+                deficitPopover.appendChild(filterInput);
+            }
+
+            renderMembers('');
+            deficitPopover.appendChild(listEl);
+            deficitPopover.classList.remove('hidden');
+            positionDeficitPopover();
+            focusFilter(filterInput);
+            return;
+        }
+
+        const info = findProducersForColumn(deficit.colKey, deficit.bucketKey, deficit.amount, data);
+        const allProducers = info.producers;
+
+        const renderProducers = (filterText = '') => {
+            listEl.textContent = '';
+            const q = filterText.trim().toLowerCase();
+            const filtered = q
+                ? allProducers.filter(p => {
+                    const srcName = getSourceDisplay(p.rawRecipe, data).name.toLowerCase();
+                    const sum = getRecipeBriefSummary(p.rawRecipe, data).toLowerCase();
+                    return srcName.includes(q) || sum.includes(q);
+                })
+                : allProducers;
+
+            if (filtered.length === 0) {
+                popHighlightIdx = -1;
+                listEl.appendChild(createElement('div', { class: 'calc-search-empty muted', textContent: 'No matching producers' }));
+                return;
+            }
+
+            let addedPhaseDivider = false;
+            filtered.forEach((p, idx) => {
+                if (p.isPhaseChange && !addedPhaseDivider) {
+                    addedPhaseDivider = true;
+                    listEl.appendChild(createElement('div', {
+                        class: 'calc-popover-divider muted',
+                        textContent: 'Phase changes'
+                    }));
+                }
+
+                const srcDisplay = getSourceDisplay(p.rawRecipe, data);
+                const resolvedPreview = {
+                    ...p.rawRecipe,
+                    consumed: (p.rawRecipe.consumed || []).map(e => (
+                        e.tag && p.tagSelections[e.tag]
+                            ? { ...e, element: p.tagSelections[e.tag], tag: undefined }
+                            : e
+                    )),
+                    produced: (p.rawRecipe.produced || []).map(e => (
+                        e.tag && p.tagSelections[e.tag]
+                            ? { ...e, element: p.tagSelections[e.tag], tag: undefined }
+                            : e
+                    ))
+                };
+                const summary = getRecipeBriefSummary(resolvedPreview, data);
+                const badges = [];
+                if (p.alreadyInTable) {
+                    badges.push(createElement('span', {
+                        class: 'calc-option-badge is-added',
+                        textContent: `→ ×${formatMultiplierDisplay(p.neededMult)}`
+                    }));
+                } else {
+                    badges.push(createElement('span', {
+                        class: 'calc-option-badge is-needed',
+                        textContent: `×${formatMultiplierDisplay(p.neededMult)}`
+                    }));
+                }
+                if (p.isGeyser) {
+                    badges.push(createElement('span', {
+                        class: 'calc-option-badge',
+                        textContent: 'avg'
+                    }));
+                }
+
+                const optEl = createElement('button', {
+                    type: 'button',
+                    class: 'calc-search-option calc-deficit-option'
+                }, [
+                    srcDisplay.image
+                        ? attachImgFallback(createElement('img', {
+                            src: `/images/${srcDisplay.image}`,
+                            alt: srcDisplay.name,
+                            class: 'calc-option-img'
+                        }))
+                        : createElement('div', { class: 'calc-option-img-placeholder' }),
+                    createElement('div', { class: 'calc-option-text' }, [
+                        createElement('div', { class: 'calc-option-title' }, [
+                            createElement('span', { textContent: srcDisplay.name }),
+                            ...badges
+                        ]),
+                        createElement('div', { class: 'calc-option-summary muted', textContent: summary })
+                    ])
+                ]);
+
+                optEl.addEventListener('mouseenter', () => {
+                    popHighlightIdx = idx;
+                    syncPopHighlight(false);
+                });
+
+                optEl.addEventListener('click', () => {
+                    const res = resolveDeficitWithProducer(deficit.colKey, p, data, { autoExpand: true });
+                    closeDeficitPopover();
+                    renderTable();
+                    scheduleUrlSync();
+                    showToast(formatChainToast('Added', res.addedNames, res.updatedNames));
+                });
+
+                listEl.appendChild(optEl);
+            });
+            popHighlightIdx = 0;
+            syncPopHighlight(false);
+        };
+
+        let filterInput = null;
+        if (allProducers.length > 6) {
+            filterInput = createFilterInput(`Filter ${allProducers.length} producers...`, renderProducers);
+            deficitPopover.appendChild(filterInput);
+        }
+
+        renderProducers('');
+        deficitPopover.appendChild(listEl);
+        deficitPopover.classList.remove('hidden');
+        positionDeficitPopover();
+        focusFilter(filterInput);
+    };
+
+    const handleDeficitAction = (deficit, anchorBtn) => {
+        if (!deficit) return;
+        if (!deficit.isTag) {
+            const unique = getUnambiguousProducer(deficit.colKey, deficit.bucketKey, data);
+            const canDirectAuto = unique && !(unique.existingRow && unique.existingRow.autoTarget && unique.existingRow.autoTarget !== deficit.colKey);
+            if (canDirectAuto) {
+                closeDeficitPopover();
+                const res = resolveDeficitWithProducer(deficit.colKey, unique, data, { autoExpand: true });
+                renderTable();
+                scheduleUrlSync();
+                showToast(formatChainToast('Auto-built', res.addedNames, res.updatedNames));
+                return;
+            }
+        }
+        openDeficitPopover(deficit, anchorBtn);
+    };
+
+    const renderTotalCellContent = (td, totalData, col) => {
+        renderFlowCellContent(td, totalData);
+        const deficit = totalData && totalData.deficit;
+        if (!deficit) return;
+
+        let canResolve = false;
+        if (deficit.isTag) {
+            canResolve = getTagMembers(deficit.id).length > 0;
+        } else {
+            canResolve = findProducersForColumn(deficit.colKey, deficit.bucketKey, deficit.amount, data).producers.length > 0;
+        }
+        if (!canResolve) return;
+
+        const btn = createElement('button', {
+            type: 'button',
+            class: 'calc-deficit-btn',
+            title: deficit.isTag
+                ? `Pick a specific item for #${col.name}`
+                : `Add producer to cover ${col.name} deficit`,
+            'aria-label': deficit.isTag
+                ? `Pick item for ${col.name}`
+                : `Resolve ${col.name} deficit`,
+            textContent: deficit.isTag ? '+ Pick' : '+ Add'
+        });
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            handleDeficitAction(deficit, btn);
+        });
+        td.appendChild(btn);
     };
 
     const positionDropdown = () => {
@@ -471,7 +851,9 @@ export async function renderCalculator(container, currentPath) {
     const selectSearchOption = (opt) => {
         if (!opt) return;
         const res = addCalculatorRecipe(opt.rawRecipe._key, opt.tagSelections, 1);
+        recomputeAutoMultipliers(data);
         closeDropdown();
+        closeDeficitPopover();
         renderTable();
         scheduleUrlSync();
         const srcName = getSourceDisplay(opt.rawRecipe, data).name;
@@ -571,12 +953,16 @@ export async function renderCalculator(container, currentPath) {
         positionDropdown();
     };
 
-    const updateNumbersInPlace = () => {
+    const updateNumbersInPlace = (editedRowId = null) => {
         const model = computeCalculatorTable(getCalculatorState(), data, window.unitSettings);
 
         model.rows.forEach(row => {
             const refs = activeRowRefs.get(row.id);
             if (!refs) return;
+            if (refs.multInput && row.autoTarget && row.id !== editedRowId) {
+                refs.multInput.value = formatMultiplierDisplay(row.multiplier);
+                refs.multInput.title = `Auto-balanced: ${row.multiplier}`;
+            }
             if (refs.powerCell) {
                 renderPowerCellContent(refs.powerCell, row.power);
             }
@@ -594,7 +980,7 @@ export async function renderCalculator(container, currentPath) {
         model.columns.forEach(col => {
             const td = activeTotalRefs.get(col.key);
             if (td) {
-                renderFlowCellContent(td, model.totals[col.key]);
+                renderTotalCellContent(td, model.totals[col.key], col);
             }
         });
     };
@@ -604,6 +990,7 @@ export async function renderCalculator(container, currentPath) {
         const model = computeCalculatorTable(st, data, window.unitSettings);
 
         powerCheckbox.checked = st.showPower;
+        powerLabel.classList.toggle('is-active', Boolean(st.showPower));
         const n = model.rows.length;
         countBadge.textContent = `${n} ${n === 1 ? 'recipe' : 'recipes'}`;
         resetBtn.disabled = n === 0;
@@ -632,7 +1019,11 @@ export async function renderCalculator(container, currentPath) {
         if (model.showPowerColumn) {
             headCells.push(createElement('th', { class: 'calc-col-power' }, [
                 createElement('div', { class: 'calc-col-header-inner' }, [
-                    createElement('span', { class: 'calc-power-bolt', textContent: '⚡' }),
+                    attachImgFallback(createElement('img', {
+                        src: '/images/PowerMenu.png',
+                        alt: 'Power',
+                        class: 'calc-col-img'
+                    })),
                     createElement('span', { class: 'calc-col-name', textContent: 'Power' })
                 ])
             ]));
@@ -706,22 +1097,40 @@ export async function renderCalculator(container, currentPath) {
                 ]);
 
             // Multiplier controls
+            const isAutoRow = Boolean(row.autoTarget);
             const multInput = createElement('input', {
                 type: 'number',
                 class: 'calc-mult-input',
                 min: '0',
                 step: 'any',
-                value: String(row.multiplier),
+                value: isAutoRow ? formatMultiplierDisplay(row.multiplier) : String(row.multiplier),
+                title: isAutoRow ? `Auto-balanced: ${row.multiplier}` : undefined,
                 'aria-label': `Multiplier for ${srcDisplay.name}`
             });
 
+            let multControlEl = null;
+            let autoPillEl = null;
+            let trEl = null;
+
             const applyMult = (val, updateInputEl = false) => {
                 const clean = Math.max(0, Math.round(val * 1e6) / 1e6);
-                setCalculatorMultiplier(row.id, clean);
+                setCalculatorMultiplier(row.id, clean, { unlockAuto: true });
+                if (multControlEl && multControlEl.classList.contains('is-auto')) {
+                    multControlEl.classList.remove('is-auto');
+                }
+                if (trEl && trEl.classList.contains('is-auto-row')) {
+                    trEl.classList.remove('is-auto-row');
+                }
+                if (autoPillEl) {
+                    autoPillEl.remove();
+                    autoPillEl = null;
+                }
+                multInput.removeAttribute('title');
+                recomputeAutoMultipliers(data);
                 if (updateInputEl) {
                     multInput.value = String(clean);
                 }
-                updateNumbersInPlace();
+                updateNumbersInPlace(row.id);
                 scheduleUrlSync();
             };
 
@@ -782,11 +1191,34 @@ export async function renderCalculator(container, currentPath) {
             });
             removeBtn.addEventListener('click', () => {
                 removeCalculatorRow(row.id);
+                recomputeAutoMultipliers(data);
+                closeDeficitPopover();
                 renderTable();
                 scheduleUrlSync();
             });
 
             const metaChildren = [];
+            if (isAutoRow) {
+                const targetIsTag = row.autoTarget.startsWith('tag:');
+                const targetId = row.autoTarget.slice(row.autoTarget.indexOf(':') + 1);
+                const targetName = targetIsTag
+                    ? `#${data.allTags[targetId]?.name || prettifyId(targetId)}`
+                    : (data.allItems[targetId]?.name || prettifyId(targetId));
+                autoPillEl = createElement('button', {
+                    type: 'button',
+                    class: 'calc-auto-pill',
+                    title: `Auto-balanced to cover ${targetName} (click to switch to manual)`,
+                    textContent: `Auto → ${targetName}`
+                });
+                autoPillEl.addEventListener('click', () => {
+                    setCalculatorRowAutoTarget(row.id, null);
+                    renderTable();
+                    scheduleUrlSync();
+                    showToast(`${srcDisplay.name} switched to manual`);
+                });
+                metaChildren.push(autoPillEl);
+            }
+
             const needsSubtitle = (sourceCounts.get(row.rawRecipe.source) || 0) > 1 ||
                 row.rawRecipe.source === 'heat' ||
                 row.rawRecipe.source === 'cool' ||
@@ -828,6 +1260,8 @@ export async function renderCalculator(container, currentPath) {
 
                     selectEl.addEventListener('change', () => {
                         const res = updateCalculatorRowTag(row.id, slot.tagId, selectEl.value || null);
+                        recomputeAutoMultipliers(data);
+                        closeDeficitPopover();
                         renderTable();
                         scheduleUrlSync();
                         if (res && res.merged) {
@@ -839,6 +1273,10 @@ export async function renderCalculator(container, currentPath) {
                 metaChildren.push(selectsRow);
             }
 
+            multControlEl = createElement('div', {
+                class: `calc-mult-control${isAutoRow ? ' is-auto' : ''}`
+            }, [decBtn, multInput, incBtn]);
+
             const iconCell = createElement('td', { class: 'calc-icon-cell' }, [srcIconNode]);
             const nameCell = createElement('td', { class: 'calc-name-cell' }, [
                 srcNameNode,
@@ -846,13 +1284,13 @@ export async function renderCalculator(container, currentPath) {
             ]);
             const countCell = createElement('td', { class: 'calc-count-cell' }, [
                 createElement('div', { class: 'calc-row-controls' }, [
-                    createElement('div', { class: 'calc-mult-control' }, [decBtn, multInput, incBtn]),
+                    multControlEl,
                     removeBtn
                 ])
             ]);
 
             const trCells = [iconCell, nameCell, countCell];
-            const rowRef = { powerCell: null, materialCells: new Map() };
+            const rowRef = { multInput, powerCell: null, materialCells: new Map() };
 
             if (model.showPowerColumn) {
                 const powerTd = createElement('td', { class: 'calc-cell calc-power-cell' });
@@ -869,7 +1307,11 @@ export async function renderCalculator(container, currentPath) {
             });
 
             activeRowRefs.set(row.id, rowRef);
-            bodyRows.push(createElement('tr', { class: 'calc-recipe-row', dataset: { rowId: row.id } }, trCells));
+            trEl = createElement('tr', {
+                class: `calc-recipe-row${isAutoRow ? ' is-auto-row' : ''}`,
+                dataset: { rowId: row.id }
+            }, trCells);
+            bodyRows.push(trEl);
         });
 
         // Inline empty search row inside tbody
@@ -972,7 +1414,7 @@ export async function renderCalculator(container, currentPath) {
 
             model.columns.forEach(col => {
                 const td = createElement('td', { class: 'calc-cell calc-total-cell' });
-                renderFlowCellContent(td, model.totals[col.key]);
+                renderTotalCellContent(td, model.totals[col.key], col);
                 activeTotalRefs.set(col.key, td);
                 totalCells.push(td);
             });
@@ -1036,6 +1478,7 @@ export async function renderCalculator(container, currentPath) {
     confirmResetBtn.addEventListener('click', () => {
         resetCalculatorState();
         closeResetDialog();
+        closeDeficitPopover();
         renderTable();
         syncUrlNow();
         showToast('Calculator cleared');
@@ -1049,6 +1492,7 @@ export async function renderCalculator(container, currentPath) {
     });
 
     const onSettingsUpdate = () => {
+        closeDeficitPopover();
         renderTable();
     };
     window.addEventListener('settingsupdated', onSettingsUpdate);
@@ -1056,15 +1500,47 @@ export async function renderCalculator(container, currentPath) {
     const onRouteUpdate = (e) => {
         if (e.detail && e.detail.path && e.detail.path.startsWith('/calculator')) {
             applyPathState(e.detail.path);
+            closeDeficitPopover();
             renderTable();
             syncUrlNow();
         }
     };
     window.addEventListener('routeupdate', onRouteUpdate);
 
-    const onViewportChange = () => positionDropdown();
+    const onViewportChange = () => {
+        positionDropdown();
+        positionDeficitPopover();
+    };
     window.addEventListener('resize', onViewportChange);
     window.addEventListener('scroll', onViewportChange, true);
+
+    const onOutsideClick = (e) => {
+        if (deficitPopover.classList.contains('hidden')) return;
+        const t = e.target;
+        if (deficitPopover.contains && deficitPopover.contains(t)) return;
+        if (activeDeficitAnchor && (t === activeDeficitAnchor || (activeDeficitAnchor.contains && activeDeficitAnchor.contains(t)))) return;
+        closeDeficitPopover();
+    };
+    const onGlobalKeyDown = (e) => {
+        if (deficitPopover.classList.contains('hidden')) return;
+        if (e.key === 'Escape') {
+            e.preventDefault();
+            closeDeficitPopover();
+        } else if (activePopoverNav) {
+            if (e.key === 'ArrowDown') {
+                e.preventDefault();
+                activePopoverNav.move(1);
+            } else if (e.key === 'ArrowUp') {
+                e.preventDefault();
+                activePopoverNav.move(-1);
+            } else if (e.key === 'Enter') {
+                e.preventDefault();
+                activePopoverNav.confirm();
+            }
+        }
+    };
+    window.addEventListener('mousedown', onOutsideClick);
+    window.addEventListener('keydown', onGlobalKeyDown);
 
     renderTable();
     syncUrlNow();
@@ -1074,9 +1550,12 @@ export async function renderCalculator(container, currentPath) {
         window.removeEventListener('routeupdate', onRouteUpdate);
         window.removeEventListener('resize', onViewportChange);
         window.removeEventListener('scroll', onViewportChange, true);
+        window.removeEventListener('mousedown', onOutsideClick);
+        window.removeEventListener('keydown', onGlobalKeyDown);
         if (urlSyncTimeout) clearTimeout(urlSyncTimeout);
         if (toastTimer) clearTimeout(toastTimer);
         if (copyIconTimer) clearTimeout(copyIconTimer);
         closeResetDialog();
+        closeDeficitPopover();
     };
 }

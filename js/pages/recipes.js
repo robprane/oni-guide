@@ -22,7 +22,7 @@ import {
     extractTagSelectionsFromRecipe,
     findCalculatorRow,
     getCalculatorRowCount
-} from '../calculator-state.js?v=6';
+} from '../calculator-state.js?v=7';
 
 function updateCalcButtonLabel(btn, recipeKey, tagSelections) {
     const existing = findCalculatorRow(recipeKey, tagSelections);

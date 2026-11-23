@@ -1,7 +1,7 @@
 import { renderHome } from './pages/home.js?v=3';
 import { renderCanvas } from './pages/canvas.js?v=6';
-import { renderRecipes } from './pages/recipes.js?v=6';
-import { renderCalculator } from './pages/calculator.js?v=6';
+import { renderRecipes } from './pages/recipes.js?v=7';
+import { renderCalculator } from './pages/calculator.js?v=7';
 
 const routes = {
     '/': renderRecipes,
