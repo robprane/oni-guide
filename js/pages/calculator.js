@@ -8,7 +8,7 @@ import {
     getTagMembers,
     loadData,
     prettifyId
-} from '../data-store.js?v=7';
+} from '../data-store.js?v=8';
 import {
     MAX_BUILD_DESC_LEN,
     MAX_BUILD_NAME_LEN,
@@ -45,7 +45,7 @@ import {
     setLastSyncedEncoded,
     toggleRowAuto,
     updateCalculatorRowTag
-} from '../calculator-state.js?v=12';
+} from '../calculator-state.js?v=13';
 
 function renderPreviewMosaic(previewIds, data) {
     const allItems = data.allItems || {};

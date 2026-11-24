@@ -16,13 +16,13 @@ import {
     materializeRecipeForItem,
     prettifyId,
     recipeHasTag
-} from '../data-store.js?v=7';
+} from '../data-store.js?v=8';
 import {
     addCalculatorRecipe,
     extractTagSelectionsFromRecipe,
     findCalculatorRow,
     getCalculatorRowCount
-} from '../calculator-state.js?v=12';
+} from '../calculator-state.js?v=13';
 
 function updateCalcButtonLabel(btn, recipeKey, tagSelections) {
     const existing = findCalculatorRow(recipeKey, tagSelections);

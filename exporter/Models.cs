@@ -228,6 +228,7 @@ namespace OniGuideExporter
         [JsonProperty("forbiddenDlcIds")] public string[] ForbiddenDlcIds { get; set; }
 
         [JsonProperty("elementConverters")] public List<ElementConverterDto> ElementConverters { get; set; }
+        [JsonProperty("converterByproducts")] public List<ConverterByproductDto> ConverterByproducts { get; set; }
         [JsonProperty("energyGenerator")] public EnergyGeneratorDto EnergyGenerator { get; set; }
         [JsonProperty("elementConsumers")] public List<ElementConsumerDto> ElementConsumers { get; set; }
         [JsonProperty("elementEmitters")] public List<ElementEmitterDto> ElementEmitters { get; set; }
@@ -243,6 +244,14 @@ namespace OniGuideExporter
         [JsonProperty("perUseRecipes")] public List<PerUseRecipeDto> PerUseRecipes { get; set; }
         [JsonProperty("manualDeliveries")] public List<ManualDeliveryDto> ManualDeliveries { get; set; }
         [JsonProperty("sublimates")] public SublimatesDto Sublimates { get; set; }
+    }
+
+    public class ConverterByproductDto
+    {
+        [JsonProperty("associatedInputTag")] public string AssociatedInputTag { get; set; }
+        [JsonProperty("byproductTag")] public string ByproductTag { get; set; }
+        [JsonProperty("kgPerSec")] public float KgPerSec { get; set; }
+        [JsonProperty("isContinuous")] public bool IsContinuous { get; set; }
     }
 
     public class NuclearReactorDto
@@ -345,6 +354,20 @@ namespace OniGuideExporter
         [JsonProperty("caloriesPerCycle")] public float CaloriesPerCycle { get; set; }
     }
 
+    public class FertilityMilkDto
+    {
+        [JsonProperty("element")] public string Element { get; set; }
+        [JsonProperty("dropMassKg")] public float DropMassKg { get; set; }
+        [JsonProperty("minimumFertility")] public float MinimumFertility { get; set; }
+        [JsonProperty("percentFertilityConsumed")] public float PercentFertilityConsumed { get; set; }
+    }
+
+    public class MoltDropperDto
+    {
+        [JsonProperty("itemDropped")] public string ItemDropped { get; set; }
+        [JsonProperty("massToDropKg")] public float MassToDropKg { get; set; }
+    }
+
     public class ElementDropperDto
     {
         [JsonProperty("element")] public string Element { get; set; }
@@ -374,6 +397,8 @@ namespace OniGuideExporter
         [JsonProperty("fertility")] public FertilityDto Fertility { get; set; }
         [JsonProperty("shearables")] public List<ShearableDto> Shearables { get; set; }
         [JsonProperty("milkProduction")] public MilkProductionDto MilkProduction { get; set; }
+        [JsonProperty("fertilityMilk")] public FertilityMilkDto FertilityMilk { get; set; }
+        [JsonProperty("moltDropper")] public MoltDropperDto MoltDropper { get; set; }
         [JsonProperty("butcherDrops")] public Dictionary<string, float> ButcherDrops { get; set; }
         [JsonProperty("elementConverters")] public List<ElementConverterDto> ElementConverters { get; set; }
         [JsonProperty("elementConsumers")] public List<ElementConsumerDto> ElementConsumers { get; set; }

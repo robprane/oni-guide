@@ -1,5 +1,5 @@
-import { Router } from './router.js?v=14';
-import { getCalculatorRowCount } from './calculator-state.js?v=12';
+import { Router } from './router.js?v=15';
+import { getCalculatorRowCount } from './calculator-state.js?v=13';
 
 function updateNavCalcBadge() {
     const badge = document.getElementById('nav-calc-badge');

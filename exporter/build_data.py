@@ -1270,6 +1270,29 @@ def main() -> None:
                         ok = False
                         break
                     prod.append(make_entry(ref[0], ref[1], o["kgPerSec"] * 1000.0, "g", "s"))
+                # Attach IConverterByproduct outputs (e.g. Gleaner / MilkFatSeparator: FishMilk -> Caviar 90 g/s)
+                consumed_tags = {c["tag"] for c in ec["consumed"]}
+                byproducts = b.get("converterByproducts")
+                if not byproducts and gid == "MilkFatSeparator":
+                    byproducts = [{
+                        "associatedInputTag": "FishMilk",
+                        "byproductTag": "Caviar",
+                        "kgPerSec": 0.089999996,
+                        "isContinuous": True,
+                    }]
+                for bp in byproducts or []:
+                    assoc = bp.get("associatedInputTag")
+                    if assoc and assoc not in consumed_tags:
+                        continue
+                    bp_tag = bp.get("byproductTag")
+                    bp_rate = bp.get("kgPerSec") or 0.0
+                    if bp_tag and bp_rate > 0:
+                        bref = resolve_ref(bp_tag)
+                        if bref:
+                            if bref[0] == "element" and not is_mass_entity(bp_tag):
+                                prod.insert(0, make_entry(bref[0], bref[1], bp_rate, "unit", "s"))
+                            else:
+                                prod.insert(0, make_entry(bref[0], bref[1], bp_rate * 1000.0, "g", "s"))
                 # OilWellCap also produces Methane gas from OilWellCap component!
                 if gid == "OilWellCap" and b.get("oilWellCap"):
                     ow = b["oilWellCap"]
@@ -1721,7 +1744,7 @@ def main() -> None:
                         "produced": [make_entry("element", game_to_site[item_gid], rate, "g" if is_m else "unit", "s")],
                     })
 
-        # 4. Milk / Ink production (Gassy Moo, Glo Squid)
+        # 4. Milk / Ink / Ovolene production (Gassy Moo, Husky Moo, Glo Squid, Seaquine)
         milk_station_gid = "UnderwaterMilkingStation" if is_swimmer else "MilkingStation"
         milk = c.get("milkProduction")
         if milk and milk.get("element") in game_to_site and milk.get("capacityKg", 0) > 0:
@@ -1738,6 +1761,34 @@ def main() -> None:
                     "produced": [make_entry("element", game_to_site[milk["element"]], milk_rate, "g", "s")],
                 })
 
+        # 4b. FertilityShearable milking (Seaquine -> Ovolene / FishMilk: 100 kg per 50% tame fertility = 3 cycles)
+        fert_milk = c.get("fertilityMilk")
+        if not fert_milk and gid == "SeaHorse":
+            fert_milk = {
+                "element": "FishMilk",
+                "dropMassKg": 100.0,
+                "minimumFertility": 75.0,
+                "percentFertilityConsumed": 0.5,
+            }
+        fert_for_milk = c.get("fertility")
+        if fert_milk and fert_milk.get("element") in game_to_site and fert_milk.get("dropMassKg", 0) > 0:
+            base_fert = (fert_for_milk or {}).get("baseFertileCycles") or 0.0
+            pct_consumed = fert_milk.get("percentFertilityConsumed") or 1.0
+            cycles_per_milk = (base_fert / 10.0) * pct_consumed if base_fert > 0 else 0.0
+            if cycles_per_milk > 0:
+                fm_rate = (fert_milk["dropMassKg"] * 1000.0) / (cycles_per_milk * 600.0)
+                add_recipe({
+                    "source": src_id,
+                    "consumed": [],
+                    "produced": [make_entry("element", game_to_site[fert_milk["element"]], fm_rate, "g", "s")],
+                })
+                if milk_station_gid in game_to_site:
+                    add_recipe({
+                        "source": game_to_site[milk_station_gid],
+                        "consumed": [make_entry("element", src_id, 1, "unit")],
+                        "produced": [make_entry("element", game_to_site[fert_milk["element"]], fm_rate, "g", "s")],
+                    })
+
         # 5. ElementDropperMonitor (Morb -> Polluted Oxygen)
         edrop = c.get("elementDropper")
         if edrop and edrop.get("element") in game_to_site and edrop.get("massPerDropKg", 0) > 0:
@@ -1745,6 +1796,30 @@ def main() -> None:
                 "source": src_id,
                 "consumed": [],
                 "produced": [make_entry("element", game_to_site[edrop["element"]], edrop["massPerDropKg"] * 1000.0, "g", "use")],
+            })
+
+        # 5b. MoltDropperMonitor (Slogo -> Slogo Molt, Gildgo -> Gildgo Molt: 10 kg/cycle when happy)
+        molt = c.get("moltDropper")
+        if not molt and gid == "Snail":
+            molt = {"itemDropped": "SnailShell", "massToDropKg": 10.0}
+        elif not molt and gid == "SnailIron":
+            molt = {"itemDropped": "SnailIronShell", "massToDropKg": 10.0}
+        if molt and molt.get("itemDropped") in game_to_site and molt.get("massToDropKg", 0) > 0:
+            molt_gid = molt["itemDropped"]
+            is_m = is_mass_entity(molt_gid)
+            molt_rate = (molt["massToDropKg"] * (1000.0 if is_m else 1.0)) / 600.0
+            add_recipe({
+                "source": src_id,
+                "consumed": [],
+                "produced": [make_entry("element", game_to_site[molt_gid], molt_rate, "g" if is_m else "unit", "s")],
+            })
+
+        # 5c. MoistureMonitor mucus secretion (Slogo & Gildgo: 15 kg/cycle base, 30 kg/cycle on dry land)
+        if gid in ("Snail", "SnailIron") and "Mucus" in game_to_site:
+            add_recipe({
+                "source": src_id,
+                "consumed": [],
+                "produced": [make_entry("element", game_to_site["Mucus"], 15000.0 / 600.0, "g", "s", {"note": "up to 30 kg/cycle on dry land"})],
             })
 
         # 6. Butcher drops (Variant B: tame happy reproduction rate = baseFertileCycles / 10;
@@ -1884,15 +1959,17 @@ def main() -> None:
         cons = []
         prod = []
         for x in ov.get("consumed") or []:
+            extra = {"note": x["note"]} if x.get("note") else None
             if "gameId" in x and x["gameId"] in game_to_site:
-                cons.append(make_entry("element", game_to_site[x["gameId"]], x["amount"], x["unit"], x.get("per")))
+                cons.append(make_entry("element", game_to_site[x["gameId"]], x["amount"], x["unit"], x.get("per"), extra))
             elif "tag" in x and x["tag"] in tags_registry:
-                cons.append(make_entry("tag", x["tag"], x["amount"], x["unit"], x.get("per")))
+                cons.append(make_entry("tag", x["tag"], x["amount"], x["unit"], x.get("per"), extra))
         for x in ov.get("produced") or []:
+            extra = {"note": x["note"]} if x.get("note") else None
             if "gameId" in x and x["gameId"] in game_to_site:
-                prod.append(make_entry("element", game_to_site[x["gameId"]], x["amount"], x["unit"], x.get("per")))
+                prod.append(make_entry("element", game_to_site[x["gameId"]], x["amount"], x["unit"], x.get("per"), extra))
             elif "tag" in x and x["tag"] in tags_registry:
-                prod.append(make_entry("tag", x["tag"], x["amount"], x["unit"], x.get("per")))
+                prod.append(make_entry("tag", x["tag"], x["amount"], x["unit"], x.get("per"), extra))
         rec: dict[str, Any] = {"source": src_id, "consumed": cons, "produced": prod}
         if ov.get("temp") is not None:
             rec["temp"] = round_num(ov["temp"])

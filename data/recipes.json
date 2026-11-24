@@ -9284,6 +9284,12 @@
     ],
     "produced": [
       {
+        "element": "caviar",
+        "amount": 89.999996,
+        "unit": "g",
+        "per": "s"
+      },
+      {
         "element": "mucin",
         "amount": 809.99994,
         "unit": "g",
@@ -14488,6 +14494,31 @@
     "consumed": [],
     "produced": [
       {
+        "element": "slogo_molt",
+        "amount": 16.666667,
+        "unit": "g",
+        "per": "s"
+      }
+    ]
+  },
+  {
+    "source": "slogo",
+    "consumed": [],
+    "produced": [
+      {
+        "element": "mucin",
+        "amount": 25.0,
+        "unit": "g",
+        "per": "s",
+        "note": "up to 30 kg/cycle on dry land"
+      }
+    ]
+  },
+  {
+    "source": "slogo",
+    "consumed": [],
+    "produced": [
+      {
         "element": "meat",
         "amount": 0.55555552,
         "unit": "g",
@@ -14623,6 +14654,36 @@
     "consumed": [],
     "produced": [
       {
+        "element": "ovolene",
+        "amount": 55.555552,
+        "unit": "g",
+        "per": "s"
+      }
+    ]
+  },
+  {
+    "source": "aquatic_milking_station",
+    "consumed": [
+      {
+        "element": "seaquine",
+        "amount": 1.0,
+        "unit": "unit"
+      }
+    ],
+    "produced": [
+      {
+        "element": "ovolene",
+        "amount": 55.555552,
+        "unit": "g",
+        "per": "s"
+      }
+    ]
+  },
+  {
+    "source": "seaquine",
+    "consumed": [],
+    "produced": [
+      {
         "element": "fish_fillet",
         "amount": 0.27777776,
         "unit": "g",
@@ -14670,6 +14731,31 @@
         "amount": 83.333333,
         "unit": "g",
         "per": "s"
+      }
+    ]
+  },
+  {
+    "source": "gildgo",
+    "consumed": [],
+    "produced": [
+      {
+        "element": "gildgo_molt",
+        "amount": 16.666667,
+        "unit": "g",
+        "per": "s"
+      }
+    ]
+  },
+  {
+    "source": "gildgo",
+    "consumed": [],
+    "produced": [
+      {
+        "element": "mucin",
+        "amount": 25.0,
+        "unit": "g",
+        "per": "s",
+        "note": "up to 30 kg/cycle on dry land"
       }
     ]
   },
@@ -15728,5 +15814,81 @@
       }
     ],
     "temp": 71.0
+  },
+  {
+    "source": "mess_table",
+    "consumed": [
+      {
+        "element": "caviar",
+        "amount": 200.0,
+        "unit": "g",
+        "per": "use"
+      }
+    ],
+    "produced": []
+  },
+  {
+    "source": "mess_table",
+    "consumed": [
+      {
+        "element": "table_salt",
+        "amount": 1.0,
+        "unit": "g",
+        "per": "use"
+      }
+    ],
+    "produced": []
+  },
+  {
+    "source": "communal_table",
+    "consumed": [
+      {
+        "element": "caviar",
+        "amount": 200.0,
+        "unit": "g",
+        "per": "use"
+      }
+    ],
+    "produced": []
+  },
+  {
+    "source": "communal_table",
+    "consumed": [
+      {
+        "element": "table_salt",
+        "amount": 1.0,
+        "unit": "g",
+        "per": "use"
+      }
+    ],
+    "produced": []
+  },
+  {
+    "source": "marine_drill",
+    "consumed": [
+      {
+        "element": "diamond",
+        "amount": 76.923077,
+        "unit": "g",
+        "per": "s",
+        "note": "100 kg / 1300 s (100 s drill @ 1 kg/s)"
+      }
+    ],
+    "produced": [
+      {
+        "element": "natural_gas",
+        "amount": 76.923077,
+        "unit": "g",
+        "per": "s",
+        "note": "100 kg / 1300 s (1200 s @ 83.33 g/s)"
+      },
+      {
+        "element": "sulfur",
+        "amount": 769.23077,
+        "unit": "g",
+        "per": "s",
+        "note": "1000 kg / 1300 s (dropped after drill)"
+      }
+    ]
   }
 ]

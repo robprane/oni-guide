@@ -319,6 +319,44 @@
       "produced": [
         { "gameId": "CookedEgg", "amount": 1000, "unit": "g" }
       ]
+    },
+    {
+      "sourceGameId": "DiningTable",
+      "consumed": [
+        { "gameId": "Caviar", "amount": 200, "unit": "g", "per": "use" }
+      ],
+      "produced": []
+    },
+    {
+      "sourceGameId": "DiningTable",
+      "consumed": [
+        { "gameId": "TableSalt", "amount": 1, "unit": "g", "per": "use" }
+      ],
+      "produced": []
+    },
+    {
+      "sourceGameId": "MultiMinionDiningTable",
+      "consumed": [
+        { "gameId": "Caviar", "amount": 200, "unit": "g", "per": "use" }
+      ],
+      "produced": []
+    },
+    {
+      "sourceGameId": "MultiMinionDiningTable",
+      "consumed": [
+        { "gameId": "TableSalt", "amount": 1, "unit": "g", "per": "use" }
+      ],
+      "produced": []
+    },
+    {
+      "sourceGameId": "UnderwaterVentDrill",
+      "consumed": [
+        { "gameId": "Diamond", "amount": 76.923077, "unit": "g", "per": "s", "note": "100 kg / 1300 s (100 s drill @ 1 kg/s)" }
+      ],
+      "produced": [
+        { "gameId": "Methane", "amount": 76.923077, "unit": "g", "per": "s", "note": "100 kg / 1300 s (1200 s @ 83.33 g/s)" },
+        { "gameId": "Sulfur", "amount": 769.23077, "unit": "g", "per": "s", "note": "1000 kg / 1300 s (dropped after drill)" }
+      ]
     }
   ]
 }

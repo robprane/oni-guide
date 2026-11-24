@@ -528,6 +528,28 @@ namespace OniGuideExporter
                                         foreach (var c in ec.Consumed) RegisterTag(c.Tag);
                                 }
 
+                                var bSmc = go.GetComponent<StateMachineController>();
+                                if (bSmc != null)
+                                {
+                                    var milkSepDef = bSmc.GetDef<MilkSeparator.Def>();
+                                    if (milkSepDef != null && milkSepDef.ByproductRate > 0f && milkSepDef.ByproductTag.IsValid)
+                                    {
+                                        RegisterTag(milkSepDef.ByproductTag.Name);
+                                        if (milkSepDef.ByproductAssociatedInputTag.IsValid)
+                                            RegisterTag(milkSepDef.ByproductAssociatedInputTag.Name);
+                                        bDto.ConverterByproducts = new List<ConverterByproductDto>
+                                        {
+                                            new ConverterByproductDto
+                                            {
+                                                AssociatedInputTag = milkSepDef.ByproductAssociatedInputTag.IsValid ? milkSepDef.ByproductAssociatedInputTag.Name : null,
+                                                ByproductTag = milkSepDef.ByproductTag.Name,
+                                                KgPerSec = milkSepDef.ByproductRate,
+                                                IsContinuous = milkSepDef.ByproductIsContinuous
+                                            }
+                                        };
+                                    }
+                                }
+
                                 var gen = go.GetComponent<EnergyGenerator>();
                                 if (gen != null)
                                 {
@@ -1117,6 +1139,30 @@ namespace OniGuideExporter
                                     };
                                 }
 
+                                FertilityMilkDto fertilityMilkDto = null;
+                                var fertShearDef = smc != null ? smc.GetDef<FertilityShearable.Def>() : null;
+                                if (fertShearDef != null && fertShearDef.milkElement != SimHashes.Vacuum && fertShearDef.dropMass > 0f)
+                                {
+                                    fertilityMilkDto = new FertilityMilkDto
+                                    {
+                                        Element = fertShearDef.milkElement.ToString(),
+                                        DropMassKg = fertShearDef.dropMass,
+                                        MinimumFertility = fertShearDef.minimumFertility,
+                                        PercentFertilityConsumed = fertShearDef.percentFertilityConsumedPerMilking
+                                    };
+                                }
+
+                                MoltDropperDto moltDropperDto = null;
+                                var moltDef = smc != null ? smc.GetDef<MoltDropperMonitor.Def>() : null;
+                                if (moltDef != null && !string.IsNullOrEmpty(moltDef.onGrowDropID) && moltDef.massToDrop > 0f)
+                                {
+                                    moltDropperDto = new MoltDropperDto
+                                    {
+                                        ItemDropped = moltDef.onGrowDropID,
+                                        MassToDropKg = moltDef.massToDrop
+                                    };
+                                }
+
                                 Dictionary<string, float> butcherDrops = null;
                                 var butcherable = go.GetComponent<Butcherable>();
                                 if (butcherable != null && butcherable.drops != null && butcherable.drops.Count > 0)
@@ -1157,6 +1203,8 @@ namespace OniGuideExporter
                                     Fertility = fertilityDto,
                                     Shearables = shearables.Count > 0 ? shearables : null,
                                     MilkProduction = milkDto,
+                                    FertilityMilk = fertilityMilkDto,
+                                    MoltDropper = moltDropperDto,
                                     ButcherDrops = butcherDrops,
                                     ElementConverters = CollectElementConverters(go),
                                     ElementConsumers = CollectElementConsumers(go),
