@@ -1419,6 +1419,41 @@ def main() -> None:
                     add_recipe({"source": src_id, "consumed": cons, "produced": []})
 
     # --- D. Plants ---
+    raw_plants_by_id = {p["id"]: p for p in raw.get("plants", [])}
+
+    # Discover all plants directly grazed by critters (EatPlantDirectly & EatPlantStorage)
+    grazed_growth_plant_gids: set[str] = set()
+    grazed_storage_plant_gids: set[str] = set()
+    for _c in raw.get("critters", []):
+        if _c.get("isBaby"):
+            continue
+        for _d in _c.get("diet") or []:
+            _ft = _d.get("foodType")
+            if _ft == "EatPlantDirectly":
+                for _t in _d.get("consumedTags") or []:
+                    if _t in raw_plants_by_id:
+                        grazed_growth_plant_gids.add(_t)
+            elif _ft == "EatPlantStorage":
+                for _t in _d.get("consumedTags") or []:
+                    if _t in raw_plants_by_id:
+                        grazed_storage_plant_gids.add(_t)
+
+    def get_plant_grazing_growth_info(plant_gid: str) -> tuple[float, int] | None:
+        """Returns (single_stem_duration_sec, num_growing_stems) for a directly-grazed domestic plant."""
+        rp = raw_plants_by_id.get(plant_gid)
+        if not rp:
+            return None
+        bg = rp.get("branchGrower")
+        if bg and bg.get("branchPrefabName"):
+            bp = raw_plants_by_id.get(bg["branchPrefabName"])
+            bcrop = bp.get("crop") if bp else None
+            if bcrop and bcrop.get("cropDurationSec", 0) > 0:
+                return (float(bcrop["cropDurationSec"]), int(bg.get("maxBranchCount") or 1))
+        crop = rp.get("crop")
+        if crop and crop.get("cropDurationSec", 0) > 0:
+            return (float(crop["cropDurationSec"]), 1)
+        return None
+
     for p in raw.get("plants", []):
         gid = p["id"]
         if gid not in game_to_site:
@@ -1520,6 +1555,41 @@ def main() -> None:
 
         if cons or prod:
             add_recipe({"source": src_id, "consumed": cons, "produced": prod})
+
+        # Live-growth grazing recipe for plants eaten directly by critters (EatPlantDirectly):
+        # Connects critter `% growth/s` consumption to exact domestic plant count (no harvest yield when grazed).
+        if gid in grazed_growth_plant_gids:
+            g_info = get_plant_grazing_growth_info(gid)
+            if g_info:
+                stem_dur_s, num_stems = g_info
+                dur_cyc_str = f"{stem_dur_s / 600.0:.2f}".rstrip("0").rstrip(".")
+                growth_pct_per_s = (num_stems * 100.0) / stem_dur_s
+                growth_note = (
+                    f"{num_stems} branches × {dur_cyc_str} cycles"
+                    if num_stems > 1
+                    else f"domestic growth ({dur_cyc_str} cycles)"
+                )
+                add_recipe({
+                    "source": src_id,
+                    "consumed": list(cons),
+                    "produced": [make_entry("element", src_id, growth_pct_per_s, "% growth", "s", {"note": growth_note})],
+                })
+
+        # Stored-element grazing recipe (e.g. Bonbon Tree / SpaceTree -> stored Nectar for Spigot Seal)
+        if gid in grazed_storage_plant_gids and p.get("spaceTree"):
+            st_info = p["spaceTree"]
+            st_crop = p.get("crop") or {}
+            st_dur_s = st_info.get("optimalProductionDurationSec") or st_crop.get("cropDurationSec") or 0.0
+            st_prods = st_crop.get("products") or []
+            st_kg = st_prods[0]["quantity"] if st_prods else 20.0
+            if st_dur_s > 0 and st_kg > 0:
+                nectar_g_s = (st_kg * 1000.0) / st_dur_s
+                nectar_kg_cyc = f"{nectar_g_s * 0.6:.2f}".rstrip("0").rstrip(".")
+                add_recipe({
+                    "source": src_id,
+                    "consumed": list(cons),
+                    "produced": [make_entry("element", src_id, nectar_g_s, "g of stored Nectar", "s", {"note": f"stored Nectar ({nectar_kg_cyc} kg/cycle)"})],
+                })
 
         # Saturn Critter Trap (eats Walker/Hoverer critters -> emits Hydrogen!)
         if p.get("critterTrap"):
@@ -1653,7 +1723,25 @@ def main() -> None:
                     add_recipe({"source": src_id, "consumed": [cons_entry], "produced": list(prod_entries)})
                 continue
 
-            # Resolve input ref (concrete if 1, tag if >=2) for non-EatSolid diets
+            if ftype == "EatPlantDirectly":
+                # In ONI (DirectlyEdiblePlant_Growth / DirectlyEdiblePlant_TreeBranches):
+                # `growth_days_per_cyc = kcal_per_cycle / dkcal` is the number of domestic growth-days eaten per cycle.
+                # Actual `% growth / s` = (growth_days_per_cyc * 100) / stem_duration_sec,
+                # matching the in-game Codex `% / cycle` tooltip and connecting 1:1 with each plant's live-growth recipe!
+                growth_days_per_cyc = kcal_per_cycle / dkcal
+                prod_entries = []
+                if prod_el and prod_el in game_to_site and conv_rate > 0:
+                    prod_kg_cyc = growth_days_per_cyc * conv_rate
+                    prod_entries.append(make_entry("element", game_to_site[prod_el], prod_kg_cyc * 1000.0 / 600.0, "g", "s"))
+                for pgid in c_gids:
+                    g_info = get_plant_grazing_growth_info(pgid)
+                    stem_dur_s = g_info[0] if g_info else 600.0
+                    pct_per_s = (growth_days_per_cyc * 100.0) / stem_dur_s
+                    cons_entry = make_entry("element", game_to_site[pgid], pct_per_s, "% growth", "s")
+                    add_recipe({"source": src_id, "consumed": [cons_entry], "produced": list(prod_entries)})
+                continue
+
+            # Resolve input ref (concrete if 1, tag if >=2) for non-EatSolid / non-EatPlantDirectly diets
             if len(c_gids) == 1:
                 in_kind, in_id = "element", game_to_site[c_gids[0]]
             else:
@@ -1667,15 +1755,7 @@ def main() -> None:
                 in_kind, in_id = "tag", tid
 
             prod_entries = []
-            if ftype == "EatPlantDirectly":
-                growth_per_cyc = kcal_per_cycle / dkcal  # 1.0 = 100% growth
-                cons_entry = make_entry(in_kind, in_id, (growth_per_cyc * 100.0) / 600.0, "% growth", "s")
-                if prod_el and prod_el in game_to_site and conv_rate > 0:
-                    prod_kg_cyc = growth_per_cyc * conv_rate
-                    prod_entries.append(make_entry("element", game_to_site[prod_el], prod_kg_cyc * 1000.0 / 600.0, "g", "s"))
-                add_recipe({"source": src_id, "consumed": [cons_entry], "produced": prod_entries})
-
-            elif ftype == "EatPlantStorage":
+            if ftype == "EatPlantStorage":
                 kg_per_cyc = kcal_per_cycle / dkcal
                 cons_entry = make_entry(in_kind, in_id, kg_per_cyc * 1000.0 / 600.0, "g of stored Nectar", "s")
                 if prod_el and prod_el in game_to_site and conv_rate > 0:

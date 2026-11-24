@@ -1,6 +1,6 @@
 import { renderCanvas } from './pages/canvas.js?v=9';
-import { renderRecipes } from './pages/recipes.js?v=14';
-import { renderCalculator } from './pages/calculator.js?v=14';
+import { renderRecipes } from './pages/recipes.js?v=15';
+import { renderCalculator } from './pages/calculator.js?v=15';
 
 const routes = {
     '/': renderRecipes,

@@ -10000,6 +10000,32 @@
     ]
   },
   {
+    "source": "arbor_tree",
+    "consumed": [
+      {
+        "element": "dirt",
+        "amount": 16.666667,
+        "unit": "g",
+        "per": "s"
+      },
+      {
+        "element": "polluted_water",
+        "amount": 116.66667,
+        "unit": "g",
+        "per": "s"
+      }
+    ],
+    "produced": [
+      {
+        "element": "arbor_tree",
+        "amount": 0.18518519,
+        "unit": "% growth",
+        "per": "s",
+        "note": "5 branches × 4.5 cycles"
+      }
+    ]
+  },
+  {
     "source": "gas_grass",
     "consumed": [
       {
@@ -10032,6 +10058,32 @@
     ]
   },
   {
+    "source": "gas_grass",
+    "consumed": [
+      {
+        "element": "dirt",
+        "amount": 41.666668,
+        "unit": "g",
+        "per": "s"
+      },
+      {
+        "element": "liquid_chlorine",
+        "amount": 0.83333335,
+        "unit": "g",
+        "per": "s"
+      }
+    ],
+    "produced": [
+      {
+        "element": "gas_grass",
+        "amount": 0.041666667,
+        "unit": "% growth",
+        "per": "s",
+        "note": "domestic growth (4 cycles)"
+      }
+    ]
+  },
+  {
     "source": "nosh_sprout",
     "consumed": [
       {
@@ -10053,6 +10105,32 @@
         "amount": 0.95238095,
         "unit": "g",
         "per": "s"
+      }
+    ]
+  },
+  {
+    "source": "nosh_sprout",
+    "consumed": [
+      {
+        "element": "dirt",
+        "amount": 8.333334,
+        "unit": "g",
+        "per": "s"
+      },
+      {
+        "element": "ethanol",
+        "amount": 33.333335,
+        "unit": "g",
+        "per": "s"
+      }
+    ],
+    "produced": [
+      {
+        "element": "nosh_sprout",
+        "amount": 0.0079365079,
+        "unit": "% growth",
+        "per": "s",
+        "note": "domestic growth (21 cycles)"
       }
     ]
   },
@@ -10083,6 +10161,26 @@
     ]
   },
   {
+    "source": "mealwood",
+    "consumed": [
+      {
+        "element": "dirt",
+        "amount": 16.666667,
+        "unit": "g",
+        "per": "s"
+      }
+    ],
+    "produced": [
+      {
+        "element": "mealwood",
+        "amount": 0.055555556,
+        "unit": "% growth",
+        "per": "s",
+        "note": "domestic growth (3 cycles)"
+      }
+    ]
+  },
+  {
     "source": "thimble_reed",
     "consumed": [
       {
@@ -10105,6 +10203,26 @@
         "unit": "g",
         "per": "s",
         "note": "10% base chance / harvest"
+      }
+    ]
+  },
+  {
+    "source": "thimble_reed",
+    "consumed": [
+      {
+        "element": "polluted_water",
+        "amount": 266.66668,
+        "unit": "g",
+        "per": "s"
+      }
+    ],
+    "produced": [
+      {
+        "element": "thimble_reed",
+        "amount": 0.083333333,
+        "unit": "% growth",
+        "per": "s",
+        "note": "domestic growth (2 cycles)"
       }
     ]
   },
@@ -10199,6 +10317,32 @@
     ]
   },
   {
+    "source": "pincha_pepperplant",
+    "consumed": [
+      {
+        "element": "phosphorite",
+        "amount": 1.6666667,
+        "unit": "g",
+        "per": "s"
+      },
+      {
+        "element": "polluted_water",
+        "amount": 58.333334,
+        "unit": "g",
+        "per": "s"
+      }
+    ],
+    "produced": [
+      {
+        "element": "pincha_pepperplant",
+        "amount": 0.020833333,
+        "unit": "% growth",
+        "per": "s",
+        "note": "domestic growth (8 cycles)"
+      }
+    ]
+  },
+  {
     "source": "oxyfern",
     "consumed": [
       {
@@ -10256,6 +10400,26 @@
     ]
   },
   {
+    "source": "waterweed",
+    "consumed": [
+      {
+        "element": "salt_water",
+        "amount": 33.333335,
+        "unit": "g",
+        "per": "s"
+      }
+    ],
+    "produced": [
+      {
+        "element": "waterweed",
+        "amount": 0.013888889,
+        "unit": "% growth",
+        "per": "s",
+        "note": "domestic growth (12 cycles)"
+      }
+    ]
+  },
+  {
     "source": "bristle_blossom",
     "consumed": [
       {
@@ -10282,6 +10446,26 @@
     ]
   },
   {
+    "source": "bristle_blossom",
+    "consumed": [
+      {
+        "element": "water",
+        "amount": 33.333335,
+        "unit": "g",
+        "per": "s"
+      }
+    ],
+    "produced": [
+      {
+        "element": "bristle_blossom",
+        "amount": 0.027777778,
+        "unit": "% growth",
+        "per": "s",
+        "note": "domestic growth (6 cycles)"
+      }
+    ]
+  },
+  {
     "source": "balm_lily",
     "consumed": [],
     "produced": [
@@ -10297,6 +10481,19 @@
         "unit": "g",
         "per": "s",
         "note": "10% base chance / harvest"
+      }
+    ]
+  },
+  {
+    "source": "balm_lily",
+    "consumed": [],
+    "produced": [
+      {
+        "element": "balm_lily",
+        "amount": 0.013888889,
+        "unit": "% growth",
+        "per": "s",
+        "note": "domestic growth (12 cycles)"
       }
     ]
   },
@@ -10480,6 +10677,26 @@
     ]
   },
   {
+    "source": "pikeapple_bush",
+    "consumed": [
+      {
+        "element": "phosphorite",
+        "amount": 8.333334,
+        "unit": "g",
+        "per": "s"
+      }
+    ],
+    "produced": [
+      {
+        "element": "pikeapple_bush",
+        "amount": 0.055555556,
+        "unit": "% growth",
+        "per": "s",
+        "note": "domestic growth (3 cycles)"
+      }
+    ]
+  },
+  {
     "source": "plume_squash_plant",
     "consumed": [
       {
@@ -10502,6 +10719,26 @@
         "unit": "g",
         "per": "s",
         "note": "10% base chance / harvest"
+      }
+    ]
+  },
+  {
+    "source": "plume_squash_plant",
+    "consumed": [
+      {
+        "element": "ethanol",
+        "amount": 25.0,
+        "unit": "g",
+        "per": "s"
+      }
+    ],
+    "produced": [
+      {
+        "element": "plume_squash_plant",
+        "amount": 0.018518519,
+        "unit": "% growth",
+        "per": "s",
+        "note": "domestic growth (9 cycles)"
       }
     ]
   },
@@ -10553,6 +10790,46 @@
         "amount": 133.33333,
         "unit": "g",
         "per": "s"
+      }
+    ]
+  },
+  {
+    "source": "bonbon_tree",
+    "consumed": [
+      {
+        "element": "snow",
+        "amount": 166.66667,
+        "unit": "g",
+        "per": "s"
+      }
+    ],
+    "produced": [
+      {
+        "element": "bonbon_tree",
+        "amount": 0.18518519,
+        "unit": "% growth",
+        "per": "s",
+        "note": "5 branches × 4.5 cycles"
+      }
+    ]
+  },
+  {
+    "source": "bonbon_tree",
+    "consumed": [
+      {
+        "element": "snow",
+        "amount": 166.66667,
+        "unit": "g",
+        "per": "s"
+      }
+    ],
+    "produced": [
+      {
+        "element": "bonbon_tree",
+        "amount": 133.33333,
+        "unit": "g of stored Nectar",
+        "per": "s",
+        "note": "stored Nectar (80 kg/cycle)"
       }
     ]
   },
@@ -10692,6 +10969,26 @@
     ]
   },
   {
+    "source": "seakomb",
+    "consumed": [
+      {
+        "element": "polluted_dirt",
+        "amount": 16.666667,
+        "unit": "g",
+        "per": "s"
+      }
+    ],
+    "produced": [
+      {
+        "element": "seakomb",
+        "amount": 0.033333333,
+        "unit": "% growth",
+        "per": "s",
+        "note": "domestic growth (5 cycles)"
+      }
+    ]
+  },
+  {
     "source": "ovagro_node",
     "consumed": [
       {
@@ -10745,6 +11042,26 @@
         "unit": "g",
         "per": "s",
         "note": "10% base chance / harvest"
+      }
+    ]
+  },
+  {
+    "source": "gum_palm",
+    "consumed": [
+      {
+        "element": "sulfur",
+        "amount": 33.333335,
+        "unit": "g",
+        "per": "s"
+      }
+    ],
+    "produced": [
+      {
+        "element": "gum_palm",
+        "amount": 0.016666667,
+        "unit": "% growth",
+        "per": "s",
+        "note": "domestic growth (10 cycles)"
       }
     ]
   },
@@ -10851,6 +11168,26 @@
     ]
   },
   {
+    "source": "starnacle",
+    "consumed": [
+      {
+        "element": "coquina",
+        "amount": 33.333335,
+        "unit": "g",
+        "per": "s"
+      }
+    ],
+    "produced": [
+      {
+        "element": "starnacle",
+        "amount": 0.041666667,
+        "unit": "% growth",
+        "per": "s",
+        "note": "domestic growth (4 cycles)"
+      }
+    ]
+  },
+  {
     "source": "sodicane",
     "consumed": [
       {
@@ -10931,6 +11268,32 @@
         "unit": "g",
         "per": "s",
         "note": "10% base chance / harvest"
+      }
+    ]
+  },
+  {
+    "source": "tublia",
+    "consumed": [
+      {
+        "element": "sulfur",
+        "amount": 33.333335,
+        "unit": "g",
+        "per": "s"
+      },
+      {
+        "tag": "tublia_irrigation",
+        "amount": 50.0,
+        "unit": "g",
+        "per": "s"
+      }
+    ],
+    "produced": [
+      {
+        "element": "tublia",
+        "amount": 0.020833333,
+        "unit": "% growth",
+        "per": "s",
+        "note": "domestic growth (8 cycles)"
       }
     ]
   },
@@ -11025,7 +11388,7 @@
     "consumed": [
       {
         "element": "gas_grass",
-        "amount": 0.33333333,
+        "amount": 0.083333333,
         "unit": "% growth",
         "per": "s"
       }
@@ -11221,8 +11584,46 @@
     "source": "drecko",
     "consumed": [
       {
-        "tag": "drecko_diet_phosphorite",
-        "amount": 0.125,
+        "element": "mealwood",
+        "amount": 0.041666666,
+        "unit": "% growth",
+        "per": "s"
+      }
+    ],
+    "produced": [
+      {
+        "element": "phosphorite",
+        "amount": 16.6625,
+        "unit": "g",
+        "per": "s"
+      }
+    ]
+  },
+  {
+    "source": "drecko",
+    "consumed": [
+      {
+        "element": "pincha_pepperplant",
+        "amount": 0.015625,
+        "unit": "% growth",
+        "per": "s"
+      }
+    ],
+    "produced": [
+      {
+        "element": "phosphorite",
+        "amount": 16.6625,
+        "unit": "g",
+        "per": "s"
+      }
+    ]
+  },
+  {
+    "source": "drecko",
+    "consumed": [
+      {
+        "element": "balm_lily",
+        "amount": 0.010416667,
         "unit": "% growth",
         "per": "s"
       }
@@ -11294,8 +11695,65 @@
     "source": "pip",
     "consumed": [
       {
-        "tag": "pip_diet_dirt",
-        "amount": 0.066666667,
+        "element": "thimble_reed",
+        "amount": 0.033333333,
+        "unit": "% growth",
+        "per": "s"
+      }
+    ],
+    "produced": [
+      {
+        "element": "dirt",
+        "amount": 33.333333,
+        "unit": "g",
+        "per": "s"
+      }
+    ]
+  },
+  {
+    "source": "pip",
+    "consumed": [
+      {
+        "element": "gum_palm",
+        "amount": 0.0066666667,
+        "unit": "% growth",
+        "per": "s"
+      }
+    ],
+    "produced": [
+      {
+        "element": "dirt",
+        "amount": 33.333333,
+        "unit": "g",
+        "per": "s"
+      }
+    ]
+  },
+  {
+    "source": "pip",
+    "consumed": [
+      {
+        "element": "arbor_tree",
+        "amount": 0.014814815,
+        "unit": "% growth",
+        "per": "s"
+      }
+    ],
+    "produced": [
+      {
+        "element": "dirt",
+        "amount": 33.333333,
+        "unit": "g",
+        "per": "s"
+      }
+    ]
+  },
+  {
+    "source": "pip",
+    "consumed": [
+      {
+        "element": "bonbon_tree",
+        "amount": 0.014814815,
         "unit": "% growth",
         "per": "s"
       }
@@ -11457,7 +11915,7 @@
     "consumed": [
       {
         "element": "seakomb",
-        "amount": 0.33333333,
+        "amount": 0.066666667,
         "unit": "% growth",
         "per": "s"
       }
@@ -11634,8 +12092,65 @@
     "source": "cuddle_pip",
     "consumed": [
       {
-        "tag": "pip_diet_dirt",
-        "amount": 0.083333333,
+        "element": "thimble_reed",
+        "amount": 0.041666667,
+        "unit": "% growth",
+        "per": "s"
+      }
+    ],
+    "produced": [
+      {
+        "element": "dirt",
+        "amount": 20.833333,
+        "unit": "g",
+        "per": "s"
+      }
+    ]
+  },
+  {
+    "source": "cuddle_pip",
+    "consumed": [
+      {
+        "element": "gum_palm",
+        "amount": 0.0083333333,
+        "unit": "% growth",
+        "per": "s"
+      }
+    ],
+    "produced": [
+      {
+        "element": "dirt",
+        "amount": 20.833333,
+        "unit": "g",
+        "per": "s"
+      }
+    ]
+  },
+  {
+    "source": "cuddle_pip",
+    "consumed": [
+      {
+        "element": "arbor_tree",
+        "amount": 0.018518519,
+        "unit": "% growth",
+        "per": "s"
+      }
+    ],
+    "produced": [
+      {
+        "element": "dirt",
+        "amount": 20.833333,
+        "unit": "g",
+        "per": "s"
+      }
+    ]
+  },
+  {
+    "source": "cuddle_pip",
+    "consumed": [
+      {
+        "element": "bonbon_tree",
+        "amount": 0.018518519,
         "unit": "% growth",
         "per": "s"
       }
@@ -12193,7 +12708,7 @@
     "consumed": [
       {
         "element": "gas_grass",
-        "amount": 0.33333333,
+        "amount": 0.083333333,
         "unit": "% growth",
         "per": "s"
       }
@@ -12446,7 +12961,7 @@
     "consumed": [
       {
         "element": "seakomb",
-        "amount": 0.33333333,
+        "amount": 0.066666667,
         "unit": "% growth",
         "per": "s"
       }
@@ -12545,8 +13060,27 @@
     "source": "glossy_drecko",
     "consumed": [
       {
-        "tag": "glossy_drecko_diet_phosphorite",
-        "amount": 0.16666667,
+        "element": "mealwood",
+        "amount": 0.055555556,
+        "unit": "% growth",
+        "per": "s"
+      }
+    ],
+    "produced": [
+      {
+        "element": "phosphorite",
+        "amount": 15.0,
+        "unit": "g",
+        "per": "s"
+      }
+    ]
+  },
+  {
+    "source": "glossy_drecko",
+    "consumed": [
+      {
+        "element": "bristle_blossom",
+        "amount": 0.027777778,
         "unit": "% growth",
         "per": "s"
       }
@@ -12657,7 +13191,7 @@
     "consumed": [
       {
         "element": "seakomb",
-        "amount": 0.33333333,
+        "amount": 0.066666667,
         "unit": "% growth",
         "per": "s"
       }
@@ -13255,8 +13789,27 @@
     "source": "flox",
     "consumed": [
       {
-        "tag": "flox_diet_dirt",
-        "amount": 0.1,
+        "element": "pikeapple_bush",
+        "amount": 0.033333335,
+        "unit": "% growth",
+        "per": "s"
+      }
+    ],
+    "produced": [
+      {
+        "element": "dirt",
+        "amount": 8.3333343,
+        "unit": "g",
+        "per": "s"
+      }
+    ]
+  },
+  {
+    "source": "flox",
+    "consumed": [
+      {
+        "element": "bristle_blossom",
+        "amount": 0.016666667,
         "unit": "% growth",
         "per": "s"
       }
@@ -13386,7 +13939,7 @@
     "consumed": [
       {
         "element": "plume_squash_plant",
-        "amount": 0.66666677,
+        "amount": 0.074074086,
         "unit": "% growth",
         "per": "s"
       }
@@ -13424,7 +13977,7 @@
     "consumed": [
       {
         "element": "nosh_sprout",
-        "amount": 0.49600003,
+        "amount": 0.023619049,
         "unit": "% growth",
         "per": "s"
       }
@@ -13535,7 +14088,7 @@
     "consumed": [
       {
         "element": "plume_squash_plant",
-        "amount": 0.66666677,
+        "amount": 0.074074086,
         "unit": "% growth",
         "per": "s"
       }
@@ -13573,7 +14126,7 @@
     "consumed": [
       {
         "element": "nosh_sprout",
-        "amount": 0.49600003,
+        "amount": 0.023619049,
         "unit": "% growth",
         "per": "s"
       }
@@ -13664,8 +14217,27 @@
     "source": "shatter_flox",
     "consumed": [
       {
-        "tag": "flox_diet_dirt",
-        "amount": 0.1,
+        "element": "pikeapple_bush",
+        "amount": 0.033333335,
+        "unit": "% growth",
+        "per": "s"
+      }
+    ],
+    "produced": [
+      {
+        "element": "dirt",
+        "amount": 8.3333343,
+        "unit": "g",
+        "per": "s"
+      }
+    ]
+  },
+  {
+    "source": "shatter_flox",
+    "consumed": [
+      {
+        "element": "bristle_blossom",
+        "amount": 0.016666667,
         "unit": "% growth",
         "per": "s"
       }
@@ -14297,7 +14869,7 @@
     "consumed": [
       {
         "element": "starnacle",
-        "amount": 0.083333333,
+        "amount": 0.020833333,
         "unit": "% growth",
         "per": "s"
       }
@@ -14359,7 +14931,7 @@
     "consumed": [
       {
         "element": "waterweed",
-        "amount": 0.16666667,
+        "amount": 0.013888889,
         "unit": "% growth",
         "per": "s"
       }
@@ -14402,7 +14974,7 @@
     "consumed": [
       {
         "element": "tublia",
-        "amount": 0.33333333,
+        "amount": 0.041666667,
         "unit": "% growth",
         "per": "s"
       }

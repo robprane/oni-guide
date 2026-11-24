@@ -3,7 +3,7 @@ import {
     formatAmountNumber,
     getTagMembers,
     prettifyId
-} from './data-store.js?v=8';
+} from './data-store.js?v=9';
 
 export const CALC_STORAGE_KEY = 'oni_calculator_state_v1';
 export const CALC_SAVED_BUILDS_KEY = 'oni_calculator_saved_v1';

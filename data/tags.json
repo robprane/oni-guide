@@ -90,11 +90,6 @@
     "image": "Metal_Power_Bank.png"
   },
   {
-    "id": "drecko_diet_phosphorite",
-    "name": "Drecko Diet",
-    "image": "BalmLily.png"
-  },
-  {
     "id": "edible",
     "name": "Any Edible Food",
     "image": "Barbeque.png"
@@ -133,16 +128,6 @@
     "id": "fish_meat",
     "name": "Fish Fillet",
     "image": "PacuFillet.png"
-  },
-  {
-    "id": "flox_diet_dirt",
-    "name": "Flox Diet",
-    "image": "BristleBlossom.png"
-  },
-  {
-    "id": "glossy_drecko_diet_phosphorite",
-    "name": "Glossy Drecko Diet",
-    "image": "BristleBlossom.png"
   },
   {
     "id": "grain",
@@ -203,11 +188,6 @@
     "id": "pacu_treat_seed",
     "name": "Pacu Treat Seed",
     "image": "BlossomSeed.png"
-  },
-  {
-    "id": "pip_diet_dirt",
-    "name": "Pip Diet",
-    "image": "ArborTree.png"
   },
   {
     "id": "plastifiable_liquid",

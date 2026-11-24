@@ -14,20 +14,14 @@
     "gameId": "ForestTree",
     "name": "Arbor Tree",
     "image": "ArborTree.png",
-    "description": "Arbor Trees grow Arbor Tree Branches and can be harvested for Wood.",
-    "tags": [
-      "pip_diet_dirt"
-    ]
+    "description": "Arbor Trees grow Arbor Tree Branches and can be harvested for Wood."
   },
   {
     "id": "balm_lily",
     "gameId": "SwampLily",
     "name": "Balm Lily",
     "image": "BalmLily.png",
-    "description": "Balm Lilies produce Balm Lily Flower, a lovely bloom with medicinal properties.",
-    "tags": [
-      "drecko_diet_phosphorite"
-    ]
+    "description": "Balm Lilies produce Balm Lily Flower, a lovely bloom with medicinal properties."
   },
   {
     "id": "bliss_burst",
@@ -64,9 +58,6 @@
     "description": "Bonbon Tree branches synthesize Light to produce Nectar.\n\nBranches can be harvested for Wood.\n\nBonbon Trees can shed most environmental debris, and rarely become entombed.",
     "dlc": [
       "DLC2_ID"
-    ],
-    "tags": [
-      "pip_diet_dirt"
     ]
   },
   {
@@ -74,11 +65,7 @@
     "gameId": "PrickleFlower",
     "name": "Bristle Blossom",
     "image": "BristleBlossom.png",
-    "description": "Bristle Blossoms produce Bristle Berry, a prickly edible bud.",
-    "tags": [
-      "flox_diet_dirt",
-      "glossy_drecko_diet_phosphorite"
-    ]
+    "description": "Bristle Blossoms produce Bristle Berry, a prickly edible bud."
   },
   {
     "id": "buddy_bud",
@@ -183,9 +170,6 @@
     "description": "Gum Palms can be harvested for Gum Wood, which can be processed into Latex at the Plant Pulverizer.\n\nDue to their size, they can only be planted in a Wide Hydroponic Farm.",
     "dlc": [
       "DLC5_ID"
-    ],
-    "tags": [
-      "pip_diet_dirt"
     ]
   },
   {
@@ -247,11 +231,7 @@
     "gameId": "BasicSingleHarvestPlant",
     "name": "Mealwood",
     "image": "Mealwood.png",
-    "description": "Mealwoods produce Meal Lice, an oddly wriggly grain that can be harvested for Food.",
-    "tags": [
-      "drecko_diet_phosphorite",
-      "glossy_drecko_diet_phosphorite"
-    ]
+    "description": "Mealwoods produce Meal Lice, an oddly wriggly grain that can be harvested for Food."
   },
   {
     "id": "megafrond",
@@ -352,9 +332,6 @@
     "description": "Pikeapple bushes produce Pikeapple, a useful yet almost unbearably fragrant Food.",
     "dlc": [
       "DLC2_ID"
-    ],
-    "tags": [
-      "flox_diet_dirt"
     ]
   },
   {
@@ -362,10 +339,7 @@
     "gameId": "SpiceVine",
     "name": "Pincha Pepperplant",
     "image": "PinchaPepperplant.png",
-    "description": "Pincha Pepperplants produce flavorful Pincha Peppernut for spicing Food.",
-    "tags": [
-      "drecko_diet_phosphorite"
-    ]
+    "description": "Pincha Pepperplants produce flavorful Pincha Peppernut for spicing Food."
   },
   {
     "id": "pinpoket",
@@ -506,10 +480,7 @@
     "gameId": "BasicFabricPlant",
     "name": "Thimble Reed",
     "image": "ThimbleReed.png",
-    "description": "Thimble Reeds produce indescribably soft Reed Fiber for Clothing production.",
-    "tags": [
-      "pip_diet_dirt"
-    ]
+    "description": "Thimble Reeds produce indescribably soft Reed Fiber for Clothing production."
   },
   {
     "id": "tower_kelp",
